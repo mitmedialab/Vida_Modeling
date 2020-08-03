@@ -19,13 +19,12 @@ from matplotlib import style
 style.use('ggplot')
 import matplotlib.pyplot as plt
 # from PyQt5 import QtGui    # or PySide
-import math
+
 from tkinter import Widget
 import numpy as np
 import SDlib_v1_4 as SDlib
 import shapefile
 
-import sys
 import MapWindow_v4 as MapWindow
 
         
