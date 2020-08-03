@@ -1,0 +1,11 @@
+FieldName,LongName,Category
+Operacione,Operaciones Mean Anomaly,
+Pasajeros,Pasajeros Mean Anomaly,
+JulyOperac,Operaciones de Julio ,
+JulyPasaje,Pasajeros de Julio,
+Population,Población,
+CurrentICU,UCI Actual,
+AccmCases,Casos Acumulados,
+TotalPCR,PCR Acumulados,
+TotalDeaths,Fallecidos Acumulados,
+Estado,Estado,
