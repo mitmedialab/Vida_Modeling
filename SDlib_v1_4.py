@@ -715,6 +715,17 @@ class SD_System:
                               maxval = lambda: 10000000,
                               minval = lambda: 0,
                               category = 'Economic')
+
+        elif location == 'Indonesia':
+            
+                        self.AirPass = SD_object('Gross Domestic Product',
+                              units = 'Rp Million',
+                              init_value = lambda: self.historical_data('GDP', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.AirPass.value(ind=tind),
+                              maxval = lambda: 10000000,
+                              minval = lambda: 0,
+                              category = 'Economic')                              
             
         
     # =============================================================================
@@ -889,6 +900,15 @@ class SD_System:
                             'Paso 2': 0.4,
                             'Paso 1': 0.3,
                             'Lockdown': 0.2}
+        elif location == 'Indonesia':
+            ClosureDictOut = {'No Closures' : 1,
+                            'Placeholder 5': 0.8,
+                            'Placeholder 4' : 0.7,
+                            'Placeholder 3': 0.5,
+                            'Placeholder 2': 0.4,
+                            'Placeholder 1': 0.3,
+                            'Lockdown': 0.2}
+        
         
         return ClosureDictOut
     

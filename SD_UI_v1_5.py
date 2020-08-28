@@ -89,6 +89,13 @@ class SD_UI(tk.Tk):
             self.map_loc = [-35.0, -50.0, 0.0001]
             self.data_filepath = './Data/Chile/Chile_Data.csv'
             self.shp_fields =  './Data/Chile/shp_fields.csv'
+        elif self.location == 'Indonesia':
+            self.shpfilepath = './Data/Indonesia/Shapefiles/Regions_data.shp'
+            # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
+            self.color_range =  'Total Cases'
+            self.map_loc = [140.0,-12.0, 0.00016]
+            self.data_filepath = './Data/Indonesia/Indonesia_Data.csv'
+            self.shp_fields =  './Data/Indonesia/shp_fields.csv'
             
             
     
@@ -180,6 +187,9 @@ class SD_UI(tk.Tk):
         """
         
         #Generate frame to house graphs and dropdowns, situate in appropriate column
+        #self.screenwidth = self.winfo_screenwidth()
+        #self.screenheight = self.winfo_screenwidth()
+        #width=self.screenwidth*.75, height=self.screenheight*.75
         graph_frame = tk.Frame(self, width=500, height=300,
                                padx = 5, pady = 5, 
                                # borderwidth=1, relief='groove',
@@ -344,7 +354,10 @@ class SD_UI(tk.Tk):
         """
         
         #Initialize Figure
-        fig = Figure(figsize=(8, 3), dpi=100)
+        self.screenwidth = self.winfo_screenwidth()
+        self.screenheight = self.winfo_screenwidth()
+        #fig = Figure(figsize=(self.screenwidth/202.5, self.screenheight/372.4), dpi=100)
+        fig = Figure(figsize=(7.75, 2.5), dpi=100)
         
         #Retrieve SD Object based on name
         SDob = self.SD_Map.retrieve_ob(graph_setting)
@@ -1088,7 +1101,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-               location = 'Chile')
+               location = 'Indonesia')
 
     #Run the user interface
     UI.mainloop()
