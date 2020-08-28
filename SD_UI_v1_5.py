@@ -5,10 +5,12 @@ Created on Fri Jun 12 11:08:59 2020
 
 @author: jackreid
 """
+
+#Import tkinter and other visualization packages
 import tkinter as tk
 import tkinter.font
 import tkinter.ttk
-
+from tkinter import Widget
 from matplotlib.backends.backend_tkagg import (
     FigureCanvasTkAgg, NavigationToolbar2Tk)
 # Implement the default Matplotlib key bindings.
@@ -18,16 +20,17 @@ import matplotlib.animation as animation
 from matplotlib import style
 style.use('ggplot')
 import matplotlib.pyplot as plt
-# from PyQt5 import QtGui    # or PySide
 
-from tkinter import Widget
+#Import other auxilary pacakges
+import csv
 import numpy as np
-import SDlib_v1_4 as SDlib
 import shapefile
 
+#Import custom packages
+import SDlib_v1_4 as SDlib
 import MapWindow_v4 as MapWindow
 
-        
+
 
 # =============================================================================
 #  SD_UI Class               
@@ -55,15 +58,7 @@ class SD_UI(tk.Tk):
         self.button_color='#b1a4f5'
         self.configure(bg=self.default_background)
                 
-        #Set geometry and other parameters of the window
-        self.title('System Dynamics Visualization')
-        default_font = tk.font.nametofont("TkDefaultFont")
-        default_font.configure(size=20)
-        pad=3
-        self._geom='200x200+0+0'
-        self.geometry("{0}x{1}+0+0".format(
-            self.winfo_screenwidth()-pad, self.winfo_screenheight()-pad))
-        self.bind('<Escape>',self.toggle_geom)            
+                  
 
         #Load keyword arguments
         if 'tuning' in kwargs:
@@ -82,6 +77,7 @@ class SD_UI(tk.Tk):
             self.map_loc = [-43.1, -23.0, 0.01]
             self.data_filepath = './Data/Brazil/Brazil_Data.csv'
             self.shp_fields =  './Data/Brazil/shp_fields.csv'
+            self.language = 'portuguese'
         elif self.location == 'Chile':
             self.shpfilepath = './Data/Chile/Shapefiles/Regions_data_simple.shp'
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
@@ -89,6 +85,7 @@ class SD_UI(tk.Tk):
             self.map_loc = [-35.0, -50.0, 0.0001]
             self.data_filepath = './Data/Chile/Chile_Data.csv'
             self.shp_fields =  './Data/Chile/shp_fields.csv'
+            self.language = 'spanish'
         elif self.location == 'Indonesia':
             self.shpfilepath = './Data/Indonesia/Shapefiles/Regions_data.shp'
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
@@ -96,8 +93,20 @@ class SD_UI(tk.Tk):
             self.map_loc = [140.0,-12.0, 0.00016]
             self.data_filepath = './Data/Indonesia/Indonesia_Data.csv'
             self.shp_fields =  './Data/Indonesia/shp_fields.csv'
+            self.language = 'english'
             
-            
+        self.translations = './translations.csv' 
+    
+        #Set geometry and other parameters of the window
+        self.title(self.translate('System Dynamics Visualization'))
+        default_font = tk.font.nametofont("TkDefaultFont")
+        default_font.configure(size=20)
+        pad=3
+        self._geom='200x200+0+0'
+        self.geometry("{0}x{1}+0+0".format(
+            self.winfo_screenwidth()-pad, self.winfo_screenheight()-pad))
+        self.bind('<Escape>',self.toggle_geom)  
+    
     
         #Label the SD_Map input for easy reference
         self.SD_Map = SDlib.SD_System(tuning_flag=self.tuning_flag,
@@ -143,7 +152,8 @@ class SD_UI(tk.Tk):
         self.graph_optionlist_list = [[],[]]
         self.graph_frame_L = self.make_graph_frame('Measured Total Infected Population', 'Hospitalized Population', 0) #left pair of graphs
         # self.graph_frame_R = self.make_graph_frame('Employment Rate', 'Daily Emissions Rate', 1) #right pair of graphs
-        
+        # self.graph_frame_L = self.make_graph_frame('Closure Policy', 'Hospitalized Population', 0) #left pair of graphs
+
         #Generate the policy action controls
         self.control_frame = self.make_control_frame()
         
@@ -168,6 +178,56 @@ class SD_UI(tk.Tk):
         print(geom,self._geom)
         self.geometry(self._geom)
         self._geom=geom
+        
+    def translate(self,phrase, **kwargs):
+        """TRANSLATES STRINGS TO APPROPRIATE LANGUAGE
+        
+        Args:
+            phrase: string to be translated
+            input_language: optional, specifies the original language of the phrase. Defaults to English
+            output_language: optional, specifies the output language of the phrase. Defaults to whatever self.language is set to.
+    
+        Returns:
+            N/A
+        """
+        
+        #Load the input and output languages
+        if 'output_language' in kwargs:
+            out_lang = kwargs.pop('output_language')
+        else:
+            out_lang = self.language
+            
+        if 'input_language' in kwargs:
+            in_lang = kwargs.pop('input_language')
+        else:
+            in_lang = 'english'
+            
+        #Identify the language based on intput
+        if out_lang in ['Spanish', 'spanish', 'Espanol', 'espanol', 's', 'S']:
+            output_language = 'spanish'
+        elif out_lang in ['Portuguese', 'portuguese', 'Português', 'português', 'p', 'P']:
+            output_language = 'portuguese'
+        elif out_lang in ['English', 'english', 'E', 'e']:
+            output_language = 'english'
+        else:
+            output_language = 'english'
+            print('Unable to find language:', out_lang)
+        
+        #Open CSV with translations
+        with open(self.translations) as csv_file:
+           csvread = csv.DictReader(csv_file)
+           found = 0
+           for row in csvread:
+               if row[in_lang] == phrase:
+                   output_phrase = row[output_language] #translate phrase
+                   found = 1 #set flag indicating that the phrase was successfully translated
+
+        #If no translation was found, return original phrase and present an error message
+        if found == 0:
+            output_phrase = phrase
+            print('Unable to find phrase ', phrase, "in language ", out_lang)
+            
+        return output_phrase
 
         
 # =============================================================================
@@ -199,7 +259,7 @@ class SD_UI(tk.Tk):
         
         #Generate the top graph label and dropdown menu
         index = 0
-        graph_label = tk.Label(graph_frame, text='Graph 1: ', font=('Aria',24),
+        graph_label = tk.Label(graph_frame, text=self.translate('Graph 1: '), font=('Aria',24),
                                bg=self.default_background)
         graph_label.grid(column=0, row=0)
         graph_optionlist = self.make_graph_dropdown(graph_frame, firstgraph, index, col)
@@ -212,7 +272,7 @@ class SD_UI(tk.Tk):
         
         #Generate the bottom graph label and dropdown menu
         index = 1
-        graph_label = tk.Label(graph_frame, text='Graph 2: ', font=('Arial',24),
+        graph_label = tk.Label(graph_frame, text=self.translate('Graph 2: '), font=('Arial',24),
                                bg=self.default_background)
         graph_label.grid(column=0, row=3)        
         graph_optionlist = self.make_graph_dropdown(graph_frame, secondgraph, index, col)
@@ -261,12 +321,13 @@ class SD_UI(tk.Tk):
         for SDobject in SD_dict:
             categoryname = self.SD_Map.__dict__[SDobject].category
             obname = self.SD_Map.__dict__[SDobject].name
-            catdict[categoryname].append(obname)
-                
+            catdict[categoryname].append(self.translate(obname))
+                            
         #Initalize the tkinter variable associated with the dropdown menu
         graph_setting_default = defaultsetting
         graph_setting_name = tk.StringVar()
-        graph_setting_name.set(graph_setting_default)
+        graph_setting_name.set(self.translate(graph_setting_default))
+        
         
         #Identify the initial background color of the dropdown menu
         normvalue = self.norm(self.CatColorDict[self.SD_Map.retrieve_ob(graph_setting_default).category])
@@ -278,12 +339,12 @@ class SD_UI(tk.Tk):
         graph_optionlist = tk.Menubutton(frame, textvariable=graph_setting_name, 
                                         indicatoron=False,
                                         background=fill,
-                                        width=40)
+                                        width=52)
         
         #Fill the dropdown menu with the category cascade menus and the specific objects in the appropriate categories
         topMenu = tk.Menu(graph_optionlist, tearoff=False)
         graph_optionlist.configure(menu=topMenu)
-        graph_optionlist.configure(width=35)
+        graph_optionlist.configure(width=45)
         for key in sorted(catdict.keys()):
             
             #Identify the color of each category in menu
@@ -294,7 +355,7 @@ class SD_UI(tk.Tk):
             
             #Add a cascade menu for the category
             menu = tk.Menu(topMenu)
-            topMenu.add_cascade(label=key, menu=menu, background=fill)
+            topMenu.add_cascade(label=self.translate(key), menu=menu, background=fill)
 
             #Populate the cascade menu with each specific object button
             for value in catdict[key]:
@@ -305,8 +366,6 @@ class SD_UI(tk.Tk):
                                       )
                 
         #Store the dropdown setting variable for future reference
-        
-        
         self.graph_setting_list[col].append(graph_setting_name)
         
         return graph_optionlist
@@ -357,7 +416,9 @@ class SD_UI(tk.Tk):
         self.screenwidth = self.winfo_screenwidth()
         self.screenheight = self.winfo_screenwidth()
         #fig = Figure(figsize=(self.screenwidth/202.5, self.screenheight/372.4), dpi=100)
-        fig = Figure(figsize=(7.75, 2.5), dpi=100)
+        # fig = Figure(figsize=(7.75, 2.5), dpi=100)
+        fig, ax1 = plt.subplots(figsize=(10.5, 4))
+        
         
         #Retrieve SD Object based on name
         SDob = self.SD_Map.retrieve_ob(graph_setting)
@@ -378,7 +439,7 @@ class SD_UI(tk.Tk):
         fill1 = np.array([self.colormap(normvalue)[0:3]])
 
         #Generate scatterplot
-        ax1 = fig.add_subplot(111)
+        # ax1 = fig.add_subplot(111)
         
         histTime = list(range(0,len(SDob.history)))
         histval = []
@@ -387,14 +448,14 @@ class SD_UI(tk.Tk):
             histval[:] = [x if x != [] else np.nan for x in histval]
             
         if self.tuning_flag == 1:
-            ax1.scatter(self.timeSeries, plotval, c=fill1, marker="s", label = "Model")
-            ax1.scatter(histTime, histval, edgecolors=fill1, marker="o", label = "Historical", facecolors='none')
+            ax1.scatter(self.timeSeries, plotval, c=fill1, marker="s", label = self.translate('Simulation'))
+            ax1.scatter(histTime, histval, edgecolors=fill1, marker="o", label = self.translate('History'), facecolors='none')
             
         else:
-            ax1.scatter(histTime, histval, edgecolors=fill1, marker="o", label = "Historical", facecolors='none')
+            ax1.scatter(histTime, histval, edgecolors=fill1, marker="o", label = self.translate('History'), facecolors='none')
             
             if len(self.timeSeries) > len(histTime):
-                ax1.scatter(self.timeSeries[len(histTime):], plotval[len(histTime):], c=fill1, marker="s", label = "Model")
+                ax1.scatter(self.timeSeries[len(histTime):], plotval[len(histTime):], c=fill1, marker="s", label = self.translate('Simulation'))
             # ax1.scatter(self.timeSeries, plotval, c=fill1)
             # ax1.set_ylim(min(0, np.nanmin(plotval)), 1.2*np.nanmax(plotval))
         
@@ -402,9 +463,10 @@ class SD_UI(tk.Tk):
         ax1.set_ylim(min(0, np.nanmin(plotval), np.nanmin(histval)), 1.2*max(np.nanmax(plotval), np.nanmax(histval)))
         endtime = max(self.timeSeries[-1], 200)
         ax1.set_xlim(0, endtime)
-        ax1.set_ylabel(SDob.units)
-        ax1.set_xlabel('Days')
-
+        ax1.set_ylabel(self.translate(SDob.units))
+        ax1.set_xlabel(self.translate('Days'))
+        fig.tight_layout()
+        
         return fig
         
     def replace_fig(self, index, col):
@@ -423,7 +485,9 @@ class SD_UI(tk.Tk):
         self.graph_canvas_list[col][index].get_tk_widget().destroy()
         
         #Identify the proper SD object to plot in replacement
-        graph = self.graph_setting_list[col][index].get()
+        graph = self.translate(self.graph_setting_list[col][index].get(),
+                          input_language = self.language,
+                          output_language = 'english')
         
         #Generate the new graph and store it for future reference
         canvas = self.make_graph(framename, graph,
@@ -533,12 +597,14 @@ class SD_UI(tk.Tk):
         
         #Create UOA Color Fill Dropdown
         self.color_setting_name = tk.StringVar()
-        self.color_setting_name.set(self.color_range)
+        self.color_setting_name.set(self.translate(self.color_range))
     
-                
+        translated_color_list = []
+        for entry in self.color_longname_modes_inverted.keys():
+            translated_color_list.append(self.translate(entry))
         
         color_optionlist = tk.OptionMenu(root, self.color_setting_name,
-                           *list(self.color_longname_modes_inverted.keys()),
+                           *list(translated_color_list),
                             command=lambda e: self.replace_map_image(self.subframe_map)
                             )
                            
@@ -585,10 +651,13 @@ class SD_UI(tk.Tk):
 
         
         #Pull settings into more usable formats
-        fill_color_title = self.color_setting_name.get()
+        fill_color_title = self.translate(self.color_setting_name.get(),
+                                          input_language=self.language,
+                                          output_language='english')
         fill_color = self.color_field_modes[self.color_longname_modes_inverted[fill_color_title]]
         
         #Delete exisiting map
+        self.MAP.delete("all")
         slaveitems = mapframe.slaves()
         for item in slaveitems:
             item.destroy()    
@@ -596,7 +665,7 @@ class SD_UI(tk.Tk):
         for item in griditems:
             item.destroy()
             
-        MAP = MapWindow.Map(mapframe,
+        self.MAP = MapWindow.Map(mapframe,
                             self.shps,
                             # background_image = self.background_image, 
                             color_range = [fill_color],
@@ -604,7 +673,7 @@ class SD_UI(tk.Tk):
                             lat_lon_zoom = self.map_loc,
                             null_zeros=1)
                 
-        MAP.configure(bg='white')
+        self.MAP.configure(bg='white')
         # #Bind commands to the map
         # self.MAP.bind("<Button-1>", self.print_coords)       
         # self.MAP.bind("<Double-Button-1>", lambda e: self.uoa_type(self.clickname))
@@ -634,7 +703,7 @@ class SD_UI(tk.Tk):
         control_frame.grid(column=0, row=4, columnspan = 1)
         
         #Generate the time indicator
-        time_label = tk.Label(control_frame, text='Day: ', font=('Arial',24),
+        time_label = tk.Label(control_frame, text=self.translate('Day')+': ', font=('Arial',24),
                               bg=self.default_background)
         time_label.grid(column=0, row=0)
         self.timev = tk.StringVar()
@@ -646,7 +715,7 @@ class SD_UI(tk.Tk):
         boxwidth = 30
         
         #Generate the Closure Policy control dropdown
-        option1_label = tk.Label(control_frame, text='Closure Policy: ', font=('Arial',24),
+        option1_label = tk.Label(control_frame, text=self.translate('Closure Policy')+': ', font=('Arial',24),
                                  bg=self.default_background)
         option1_label.grid(column=0, row=1)
         option1_list = list(self.ClosureDict.keys())
@@ -664,7 +733,7 @@ class SD_UI(tk.Tk):
         option1_menu.grid(column=1, row=1, columnspan=2)
         
         #Generate the Social Distancing Policy control dropdown
-        option2_label = tk.Label(control_frame, text='Social Distancing Policy: ', font=('Arial',24),
+        option2_label = tk.Label(control_frame, text=self.translate('Social Distancing Policy')+': ', font=('Arial',24),
                                  bg=self.default_background)
         option2_label.grid(column=0, row=2)
         option2_list = list(self.SocialDisDict.keys())
@@ -682,7 +751,7 @@ class SD_UI(tk.Tk):
         option2_menu.grid(column=1, row=2, columnspan=2)
         
         #Generate the ventilator ordering entry box
-        option3_label = tk.Label(control_frame, text='Order New Ventilators: ', font=('Arial',24),
+        option3_label = tk.Label(control_frame, text=self.translate('Order New Ventilators')+': ', font=('Arial',24),
                                  bg=self.default_background)
         option3_label.grid(column=0, row=3)
         self.option3_var = tk.IntVar()
@@ -695,7 +764,7 @@ class SD_UI(tk.Tk):
         self.option3_menu.grid(column=1, row=3, sticky='W')
 
         #Generate the Next Week simulation button
-        run_button = tk.Button(control_frame, text='Next Week', 
+        run_button = tk.Button(control_frame, text=self.translate('Next Week'), 
                                command = lambda: self.increment_time(),
                                font=('Arial',24),
                                bg=self.button_color,
@@ -703,7 +772,7 @@ class SD_UI(tk.Tk):
         run_button.grid(column=0, row=4, columnspan=2)
         
         #Generate the Run Autonomously button
-        automatic_button = tk.Button(control_frame, text='Run Autonomously', 
+        automatic_button = tk.Button(control_frame, text=self.translate('Run Autonomously'), 
                                command = lambda: self.automatic_window(),
                                font=('Arial',24),
                                bg=self.button_color,
@@ -794,8 +863,8 @@ class SD_UI(tk.Tk):
                
         #Add any triggered rules to the rule log display
         if triggered_rules != []:
-            day_text = 'Day ' + str(self.timeSeries[-1]) 
-            rule_text = '; Rules: ' + str(triggered_rules)[1:-1]
+            day_text = self.translate('Day')+'  ' + str(self.timeSeries[-1]) 
+            rule_text = '; ' + self.translate('Rules') + ': ' + str(triggered_rules)[1:-1]
             log_text = day_text + rule_text
             self.list_info_boxes['Log'].insert(tk.END, log_text)
         
@@ -819,7 +888,9 @@ class SD_UI(tk.Tk):
                     inputindex = index - 2
                 framename = canvas.get_tk_widget().master
                 canvas.get_tk_widget().destroy()
-                graph = self.graph_setting_list[col][inputindex].get()
+                graph = self.translate(self.graph_setting_list[col][inputindex].get(),
+                                       input_language=self.language,
+                                       output_language='english')
                 canvas = self.make_graph(framename, graph,
                             gridpos = inputindex*2+1)
                 self.graph_canvas_list[col][inputindex]=canvas
@@ -837,7 +908,7 @@ class SD_UI(tk.Tk):
         
         #Create window and label
         automatic_window = tk.Toplevel(self)
-        windowtext = 'How many days do you want the simulation to run for?' 
+        windowtext = self.translate('How many days do you want the simulation to run for?') 
         automatic_window.title(windowtext)
         automatic_window.config(bg=self.default_background)
         lbl_text = tk.Label(automatic_window, text=windowtext,font=('Arial',24),
@@ -854,7 +925,7 @@ class SD_UI(tk.Tk):
         auto_menu.grid(column=0, row=1)
 
         #Create button to initate the simulation
-        auto_run_button = tk.Button(automatic_window, text='Run Simulation', 
+        auto_run_button = tk.Button(automatic_window, text=self.translate('Run Simulation'), 
                                command = lambda: self.auto_run(automatic_window, int(auto_menu.get())),
                                font=('Arial',24),
                                bg=self.button_color,
@@ -976,12 +1047,12 @@ class SD_UI(tk.Tk):
         self.list_info_boxes=dict()
         self.list_info_boxes['Rules'] = tk.Listbox(list_tabparent, width=50)
         self.list_info_boxes['Log'] = tk.Listbox(list_tabparent, width=50)
-        list_tabparent.add(self.list_info_boxes['Rules'], text = 'Rules')
-        list_tabparent.add( self.list_info_boxes['Log'], text = 'Log')
+        list_tabparent.add(self.list_info_boxes['Rules'], text = self.translate('Rules'))
+        list_tabparent.add( self.list_info_boxes['Log'], text = self.translate('Log'))
         
         #Populate list of rules
         for rule in self.Rules:
-            self.list_info_boxes['Rules'].insert(tk.END, 'Rule ' + str(rule.number) + ': ' + str(rule.name))
+            self.list_info_boxes['Rules'].insert(tk.END, self.translate('Rules') + ' ' + str(rule.number) + ': ' + str(rule.name))
             
         #Add scrollbar to the rule log display
         self.scrollbar = tk.Scrollbar(info_frame, orient='vertical',
@@ -1095,13 +1166,22 @@ class SD_UI(tk.Tk):
 #  Run UI            
 # =============================================================================
 if str.__eq__(__name__, '__main__'):
-    
+
+    #Avoids the "pyimage not found" error that is thrown if an error occured on the previous run attempt. 
+    #This is certainly a janky method, but I don't know of another way, sadly
+    root = tk.Tk()
+    root.after(1000, root.destroy) 
+    root.mainloop()
+
     #Load system dynamics causal map
     # SD_Map = SDlib.SD_System(tuning_flag=1)
 
+
+
+
     #Generate user interface
     UI = SD_UI(tuning = 0,
-               location = 'Indonesia')
+                location = 'Rio de Janeiro')
 
     #Run the user interface
     UI.mainloop()
