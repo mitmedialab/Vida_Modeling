@@ -1,0 +1,11 @@
+FieldName,LongName,Category
+Operacione,Operations Mean Anomaly,
+Pasajeros,Passengers Mean Anomaly,
+JulyOperac,July Operations,
+JulyPasaje,July Passengers,
+Population,Population,
+CurrentICU,Current ICU,
+AccmCases,Accumulative Cases,
+TotalPCR,Accumulative PCR Exams,
+TotalDeaths,Accumulative Deaths,
+Estado,Status,

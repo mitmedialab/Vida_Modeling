@@ -94,6 +94,12 @@ class SD_UI(tk.Tk):
             self.data_filepath = './Data/Indonesia/Indonesia_Data.csv'
             self.shp_fields =  './Data/Indonesia/shp_fields.csv'
             self.language = 'english'
+        elif self.location == 'Santiago':
+            self.color_range = 
+            self.map_loc = [-35.0, -50.0, 0.0001]
+            self.data_filepath = './Data/Santiago/Santiago_Data.csv'
+            self.shp_fields =  './Data/Santiago/shp_fields.csv'
+            self.language = 'spanish'
             
         self.translations = './translations.csv' 
     

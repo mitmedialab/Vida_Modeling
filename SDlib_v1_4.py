@@ -218,84 +218,120 @@ class SD_System:
                               minval = lambda: 0,
                               category = 'Health Parameters')
         
-        self.HosL = SD_object('Hospitalization Likelihood',
-                          units = 'person/person',
-                          init_value = 0.39,
-                          obtype = 'variable',
-                          func = lambda tstep, tind: self.HosL.value(ind=tind),
-                          maxval = lambda: 1,
-                          minval = lambda: 0,
-                          category = 'Health Parameters')
+        if location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
         
-        self.UHML = SD_object('Unhospitalized Mortality Likelihood',
-                  units = 'person/person',
-                  init_value = 0.3,
+            self.HosL = SD_object('Hospitalization Likelihood',
+                              units = 'probability',
+                              init_value = 0.39,
+                              obtype = 'variable',
+                              func = lambda tstep, tind: self.HosL.value(ind=tind),
+                              maxval = lambda: 1,
+                              minval = lambda: 0,
+                              category = 'Health Parameters')
+            
+            self.UHML = SD_object('Unhospitalized Mortality Likelihood',
+                      units = 'probability',
+                      init_value = 0.3,
+                      obtype = 'variable',
+                      func = lambda tstep, tind: self.UHML.value(ind=tind),
+                      maxval = lambda: 1,
+                      minval = lambda: 0,
+                      category = 'Health Parameters')
+            
+            self.UHRL = SD_object('Unhospitalized Recovery Likelihood',
+                      units = 'probability',
+                      init_value = 1-self.UHML.value(),
+                      obtype = 'variable',
+                      func = lambda tstep, tind: 1 - self.UHML.value(ind=tind),
+                      maxval = lambda: 1,
+                      minval = lambda: 0,
+                      category = 'Health Parameters')
+            
+            self.HRL = SD_object('Hospitalized Recovery Likelihood',
+                      units = 'probability',
+                      init_value = 0.9, #lambda: self.HRecovP_func(0, -1),
+                      obtype = 'variable',
+                      func = lambda tstep, tind: self.HRecovP_func(tstep, tind),
+                      maxval = lambda: 1,
+                      minval = lambda: 0,
+                      category = 'Health Parameters')
+            
+            self.bHRL = SD_object('Base Hospitalized Recovery Likelihood',
+                      units = 'probability',
+                      init_value = 0.9,
+                      obtype = 'variable',
+                      func = lambda tstep, tind: self.bHRL.value(ind=tind),
+                      maxval = lambda: 1,
+                      minval = lambda: 0,
+                      category = 'Health Parameters')
+            
+            self.HML = SD_object('Hospitalized Mortality Likelihood',
+                      units = 'probability',
+                      init_value = 1-self.HRL.value(),
+                      obtype = 'variable',
+                      func = lambda tstep, tind: 1 - self.HRL.value(ind=tind),
+                      maxval = lambda: 1,
+                      minval = lambda: 0,
+                      category = 'Health Parameters')
+        
+            self.RecL = SD_object('Recovery Likelihood',
+                      units = 'probability',
+                      init_value = (1-self.HosL.value())*self.UHRL.value() + 
+                                    self.HosL.value() * self.HRL.value(),
+                      obtype = 'variable',
+                      func = lambda tstep, tind: (1-self.HosL.value(ind=tind))*self.UHRL.value(ind=tind) + 
+                                    self.HosL.value(ind=tind) * self.HRL.value(ind=tind),
+                      maxval = lambda: 1,
+                      minval = lambda: 0,
+                      category = 'Health Parameters')
+            
+            self.MorL = SD_object('Mortality Likelihood',
+                      units = 'probability',
+                      init_value = (1-self.HosL.value())*self.UHML.value() + 
+                                    self.HosL.value() * self.HML.value(),
+                      obtype = 'variable',
+                      func = lambda tstep, tind: (1-self.HosL.value(ind=tind))*self.UHML.value(ind=tind) + 
+                                    self.HosL.value(ind=tind) * self.HML.value(ind=tind),
+                      maxval = lambda: 1,
+                      minval = lambda: 0,
+                      category = 'Health Parameters')
+            
+            self.AvHDur = SD_object('Average Hospitalization Duration',
+                  units = 'days',
+                  init_value = 7,
                   obtype = 'variable',
-                  func = lambda tstep, tind: self.UHML.value(ind=tind),
-                  maxval = lambda: 1,
+                  func = lambda tstep, tind: self.AvHDur.value(ind=tind),
+                  maxval = lambda: 300,
                   minval = lambda: 0,
                   category = 'Health Parameters')
-        
-        self.UHRL = SD_object('Unhospitalized Recovery Likelihood',
-                  units = 'person/person',
-                  init_value = 1-self.UHML.value(),
-                  obtype = 'variable',
-                  func = lambda tstep, tind: 1 - self.UHML.value(ind=tind),
-                  maxval = lambda: 1,
-                  minval = lambda: 0,
-                  category = 'Health Parameters')
-        
-        self.HRL = SD_object('Hospitalized Recovery Likelihood',
-                  units = 'person/person',
-                  init_value = 0.9, #lambda: self.HRecovP_func(0, -1),
-                  obtype = 'variable',
-                  func = lambda tstep, tind: self.HRecovP_func(tstep, tind),
-                  maxval = lambda: 1,
-                  minval = lambda: 0,
-                  category = 'Health Parameters')
-        
-        self.bHRL = SD_object('Base Hospitalized Recovery Likelihood',
-                  units = 'person/person',
-                  init_value = 0.9,
-                  obtype = 'variable',
-                  func = lambda tstep, tind: self.bHRL.value(ind=tind),
-                  maxval = lambda: 1,
-                  minval = lambda: 0,
-                  category = 'Health Parameters')
-        
-        self.HML = SD_object('Hospitalized Mortality Likelihood',
-                  units = 'person/person',
-                  init_value = 1-self.HRL.value(),
-                  obtype = 'variable',
-                  func = lambda tstep, tind: 1 - self.HRL.value(ind=tind),
-                  maxval = lambda: 1,
-                  minval = lambda: 0,
-                  category = 'Health Parameters')
-        
-        self.RecL = SD_object('Recovery Likelihood',
-                  units = 'person/person',
-                  init_value = (1-self.HosL.value())*self.UHRL.value() + 
-                                self.HosL.value() * self.HRL.value(),
-                  obtype = 'variable',
-                  func = lambda tstep, tind: (1-self.HosL.value(ind=tind))*self.UHRL.value(ind=tind) + 
-                                self.HosL.value(ind=tind) * self.HRL.value(ind=tind),
-                  maxval = lambda: 1,
-                  minval = lambda: 0,
-                  category = 'Health Parameters')
-        
-        self.MorL = SD_object('Mortality Likelihood',
-                  units = 'person/person',
-                  init_value = (1-self.HosL.value())*self.UHML.value() + 
-                                self.HosL.value() * self.HML.value(),
-                  obtype = 'variable',
-                  func = lambda tstep, tind: (1-self.HosL.value(ind=tind))*self.UHML.value(ind=tind) + 
-                                self.HosL.value(ind=tind) * self.HML.value(ind=tind),
-                  maxval = lambda: 1,
-                  minval = lambda: 0,
-                  category = 'Health Parameters')
+            
+        elif location in ['Santiago']:
+            
+            self.RecL = SD_object('Recovery Likelihood',
+                      units = 'probability',
+                      init_value = (1-self.HosL.value())*self.UHRL.value() + 
+                                    self.HosL.value() * self.HRL.value(),
+                      obtype = 'variable',
+                      func = lambda tstep, tind: (1-self.HosL.value(ind=tind))*self.UHRL.value(ind=tind) + 
+                                    self.HosL.value(ind=tind) * self.HRL.value(ind=tind),
+                      maxval = lambda: 1,
+                      minval = lambda: 0,
+                      category = 'Health Parameters')
+            
+            self.MorL = SD_object('Mortality Likelihood',
+                      units = 'probability',
+                      init_value = (1-self.HosL.value())*self.UHML.value() + 
+                                    self.HosL.value() * self.HML.value(),
+                      obtype = 'variable',
+                      func = lambda tstep, tind: (1-self.HosL.value(ind=tind))*self.UHML.value(ind=tind) + 
+                                    self.HosL.value(ind=tind) * self.HML.value(ind=tind),
+                      maxval = lambda: 1,
+                      minval = lambda: 0,
+                      category = 'Health Parameters')
+            
         
         self.AvDur = SD_object('Average Illness Duration',
-                  units = 'person/person',
+                  units = 'days',
                   init_value = 14,
                   obtype = 'variable',
                   func = lambda tstep, tind: self.AvDur.value(ind=tind),
@@ -303,14 +339,7 @@ class SD_System:
                   minval = lambda: 0,
                   category = 'Health Parameters')
         
-        self.AvHDur = SD_object('Average Hospitalization Duration',
-                  units = 'person/person',
-                  init_value = 7,
-                  obtype = 'variable',
-                  func = lambda tstep, tind: self.AvHDur.value(ind=tind),
-                  maxval = lambda: 300,
-                  minval = lambda: 0,
-                  category = 'Health Parameters')
+
         
     # =============================================================================
     #   3 - Health Populations  
@@ -519,7 +548,7 @@ class SD_System:
                   minval = lambda: 0,
                   category = 'Equipment Parameters')
         
-        self.VDur = SD_object('Default VentilatorDelivery Duration',
+        self.VDur = SD_object('Default Ventilator Delivery Duration',
                   units = 'days',
                   init_value = 30,
                   obtype = 'variable',
@@ -670,7 +699,7 @@ class SD_System:
                               func = lambda tstep, tind: self.RioEmployment.value(ind=tind) + self.RioEmploymentR.value(ind=tind) * tstep,
                               maxval = lambda: 1,
                               minval = lambda: 0,
-                              category = 'Economic')
+                              category = 'Economy')
             
     
             
@@ -681,7 +710,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.RioEmploymentR_update(tstep, tind),
                                 maxval = lambda: 0.05,
                                 minval = lambda: -0.05,
-                                category = 'Economic'
+                                category = 'Economy'
                                 )
             
             self.BraEmployment = SD_object('Brazil Unemployment Rate',
@@ -691,7 +720,7 @@ class SD_System:
                               func = lambda tstep, tind: self.BraEmployment.value(ind=tind) + self.BraEmploymentR.value(ind=tind) * tstep,
                               maxval = lambda: 1,
                               minval = lambda: 0,
-                              category = 'Economic')
+                              category = 'Economy')
             
     
             
@@ -702,7 +731,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.BraEmploymentR_update(tstep, tind),
                                 maxval = lambda: 0.05,
                                 minval = lambda: -0.05,
-                                category = 'Economic'
+                                category = 'Economy'
                                 )
             
         elif location == 'Chile':
@@ -714,7 +743,7 @@ class SD_System:
                               func = lambda tstep, tind: self.AirPass.value(ind=tind),
                               maxval = lambda: 10000000,
                               minval = lambda: 0,
-                              category = 'Economic')
+                              category = 'Economy')
 
         elif location == 'Indonesia':
             
@@ -725,7 +754,7 @@ class SD_System:
                               func = lambda tstep, tind: self.AirPass.value(ind=tind),
                               maxval = lambda: 10000000,
                               minval = lambda: 0,
-                              category = 'Economic')                              
+                              category = 'Economy')                              
             
         
     # =============================================================================
