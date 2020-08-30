@@ -1,4 +1,4 @@
-Fecha,Current Infected,True  Infected,New Deaths,total_recup,total_obito,Susceptible Population,True Infection Rate,Measured Infection Rate,Total Cases,Closure Policy
+Fecha,Current Infected,True Infected,New Deaths,total_recup,total_obito,Susceptible Population,True Infection Rate,Measured Infection Rate,Total Cases,Closure Policy
 2020-03-02,0,5.18,0,0,0,503147,5.18,0,0,Paso 3
 2020-03-03,0,5.775,0,0,0,503147,0.595000000000001,0,0,Paso 3
 2020-03-04,0,7.23,0,0,0,503147,1.455,0,0,Paso 3
@@ -179,4 +179,3 @@ Fecha,Current Infected,True  Infected,New Deaths,total_recup,total_obito,Suscept
 2020-08-26,176,652.79,0,14801,218,487952,241.375,0,15195,Paso 3
 2020-08-27,176,652.79,0,14801,218,487952,0,0,15195,Paso 3
 2020-08-28,208,652.79,0,14885,218,487836,0,32,15311,Paso 3
-,,,,,,,-652.79,-208,,Paso 3

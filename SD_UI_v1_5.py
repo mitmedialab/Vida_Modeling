@@ -74,6 +74,8 @@ class SD_UI(tk.Tk):
             self.shpfilepath = './Data/Brazil/Shapefiles/Bairros_AQ.shp'
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'PM10'
+            self.default_graph1 = 'Measured Total Infected Population'
+            self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-43.1, -23.0, 0.01]
             self.data_filepath = './Data/Brazil/Brazil_Data.csv'
             self.shp_fields =  './Data/Brazil/shp_fields.csv'
@@ -82,6 +84,8 @@ class SD_UI(tk.Tk):
             self.shpfilepath = './Data/Chile/Shapefiles/Regions_data_simple.shp'
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'Población'
+            self.default_graph1 = 'Measured Total Infected Population'
+            self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-35.0, -50.0, 0.0001]
             self.data_filepath = './Data/Chile/Chile_Data.csv'
             self.shp_fields =  './Data/Chile/shp_fields.csv'
@@ -90,13 +94,18 @@ class SD_UI(tk.Tk):
             self.shpfilepath = './Data/Indonesia/Shapefiles/Regions_data.shp'
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'Total Cases'
+            self.default_graph1 = 'Measured Total Infected Population'
+            self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [140.0,-12.0, 0.00016]
             self.data_filepath = './Data/Indonesia/Indonesia_Data.csv'
             self.shp_fields =  './Data/Indonesia/shp_fields.csv'
             self.language = 'english'
         elif self.location == 'Santiago':
-            self.color_range = 
-            self.map_loc = [-35.0, -50.0, 0.0001]
+            self.shpfilepath = './Data/Santiago/Shapefiles/Metro_comunas_simple_data.shp'
+            self.color_range = 'PM10'
+            self.default_graph1 = 'Measured Infected Population'
+            self.default_graph2 = "'True' Infected Population"
+            self.map_loc = [-69.0, -34.0, 0.0025]
             self.data_filepath = './Data/Santiago/Santiago_Data.csv'
             self.shp_fields =  './Data/Santiago/shp_fields.csv'
             self.language = 'spanish'
@@ -156,7 +165,7 @@ class SD_UI(tk.Tk):
         self.graph_setting_list = [[],[]]
         self.graph_canvas_list = [[],[]]
         self.graph_optionlist_list = [[],[]]
-        self.graph_frame_L = self.make_graph_frame('Measured Total Infected Population', 'Hospitalized Population', 0) #left pair of graphs
+        self.graph_frame_L = self.make_graph_frame(self.default_graph1, self.default_graph2, 0) #left pair of graphs
         # self.graph_frame_R = self.make_graph_frame('Employment Rate', 'Daily Emissions Rate', 1) #right pair of graphs
         # self.graph_frame_L = self.make_graph_frame('Closure Policy', 'Hospitalized Population', 0) #left pair of graphs
 
@@ -545,7 +554,10 @@ class SD_UI(tk.Tk):
         self.color_optionlist.pack()
         
         
-        color_title = self.color_setting_name.get()
+        color_title = self.translate(self.color_setting_name.get(),
+                                     input_language = self.language,
+                                     output_language = 'english')
+        print(color_title)
         color_range = self.color_field_modes[self.color_longname_modes_inverted[color_title]]
         
         
@@ -1187,7 +1199,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Rio de Janeiro')
+                location = 'Santiago')
 
     #Run the user interface
     UI.mainloop()

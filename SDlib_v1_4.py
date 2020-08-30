@@ -221,110 +221,106 @@ class SD_System:
         if location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
         
             self.HosL = SD_object('Hospitalization Likelihood',
-                              units = 'probability',
-                              init_value = 0.39,
-                              obtype = 'variable',
-                              func = lambda tstep, tind: self.HosL.value(ind=tind),
-                              maxval = lambda: 1,
-                              minval = lambda: 0,
-                              category = 'Health Parameters')
+                        units = 'probability',
+                        init_value = 0.39,
+                        obtype = 'variable',
+                        func = lambda tstep, tind: self.HosL.value(ind=tind),
+                        maxval = lambda: 1,
+                        minval = lambda: 0,
+                        category = 'Health Parameters')
             
             self.UHML = SD_object('Unhospitalized Mortality Likelihood',
-                      units = 'probability',
-                      init_value = 0.3,
-                      obtype = 'variable',
-                      func = lambda tstep, tind: self.UHML.value(ind=tind),
-                      maxval = lambda: 1,
-                      minval = lambda: 0,
-                      category = 'Health Parameters')
+                        units = 'probability',
+                        init_value = 0.3,
+                        obtype = 'variable',
+                        func = lambda tstep, tind: self.UHML.value(ind=tind),
+                        maxval = lambda: 1,
+                        minval = lambda: 0,
+                        category = 'Health Parameters')
             
             self.UHRL = SD_object('Unhospitalized Recovery Likelihood',
-                      units = 'probability',
-                      init_value = 1-self.UHML.value(),
-                      obtype = 'variable',
-                      func = lambda tstep, tind: 1 - self.UHML.value(ind=tind),
-                      maxval = lambda: 1,
-                      minval = lambda: 0,
-                      category = 'Health Parameters')
-            
+                        units = 'probability',
+                        init_value = 1-self.UHML.value(),
+                        obtype = 'variable',
+                        func = lambda tstep, tind: 1 - self.UHML.value(ind=tind),
+                        maxval = lambda: 1,
+                        minval = lambda: 0,
+                        category = 'Health Parameters')
+              
             self.HRL = SD_object('Hospitalized Recovery Likelihood',
-                      units = 'probability',
-                      init_value = 0.9, #lambda: self.HRecovP_func(0, -1),
-                      obtype = 'variable',
-                      func = lambda tstep, tind: self.HRecovP_func(tstep, tind),
-                      maxval = lambda: 1,
-                      minval = lambda: 0,
-                      category = 'Health Parameters')
+                        units = 'probability',
+                        init_value = 0.9, #lambda: self.HRecovP_func(0, -1),
+                        obtype = 'variable',
+                        func = lambda tstep, tind: self.HRecovP_func(tstep, tind),
+                        maxval = lambda: 1,
+                        minval = lambda: 0,
+                        category = 'Health Parameters')
             
             self.bHRL = SD_object('Base Hospitalized Recovery Likelihood',
-                      units = 'probability',
-                      init_value = 0.9,
-                      obtype = 'variable',
-                      func = lambda tstep, tind: self.bHRL.value(ind=tind),
-                      maxval = lambda: 1,
-                      minval = lambda: 0,
-                      category = 'Health Parameters')
+                        units = 'probability',
+                        init_value = 0.9,
+                        obtype = 'variable',
+                        func = lambda tstep, tind: self.bHRL.value(ind=tind),
+                        maxval = lambda: 1,
+                        minval = lambda: 0,
+                        category = 'Health Parameters')
             
             self.HML = SD_object('Hospitalized Mortality Likelihood',
-                      units = 'probability',
-                      init_value = 1-self.HRL.value(),
-                      obtype = 'variable',
-                      func = lambda tstep, tind: 1 - self.HRL.value(ind=tind),
-                      maxval = lambda: 1,
-                      minval = lambda: 0,
-                      category = 'Health Parameters')
+                        units = 'probability',
+                        init_value = 1-self.HRL.value(),
+                        obtype = 'variable',
+                        func = lambda tstep, tind: 1 - self.HRL.value(ind=tind),
+                        maxval = lambda: 1,
+                        minval = lambda: 0,
+                        category = 'Health Parameters')
         
             self.RecL = SD_object('Recovery Likelihood',
-                      units = 'probability',
-                      init_value = (1-self.HosL.value())*self.UHRL.value() + 
-                                    self.HosL.value() * self.HRL.value(),
-                      obtype = 'variable',
-                      func = lambda tstep, tind: (1-self.HosL.value(ind=tind))*self.UHRL.value(ind=tind) + 
-                                    self.HosL.value(ind=tind) * self.HRL.value(ind=tind),
-                      maxval = lambda: 1,
-                      minval = lambda: 0,
-                      category = 'Health Parameters')
+                        units = 'probability',
+                        init_value = (1-self.HosL.value())*self.UHRL.value() + 
+                                      self.HosL.value() * self.HRL.value(),
+                        obtype = 'variable',
+                        func = lambda tstep, tind: (1-self.HosL.value(ind=tind))*self.UHRL.value(ind=tind) + 
+                                      self.HosL.value(ind=tind) * self.HRL.value(ind=tind),
+                        maxval = lambda: 1,
+                        minval = lambda: 0,
+                        category = 'Health Parameters')
             
             self.MorL = SD_object('Mortality Likelihood',
-                      units = 'probability',
-                      init_value = (1-self.HosL.value())*self.UHML.value() + 
-                                    self.HosL.value() * self.HML.value(),
-                      obtype = 'variable',
-                      func = lambda tstep, tind: (1-self.HosL.value(ind=tind))*self.UHML.value(ind=tind) + 
-                                    self.HosL.value(ind=tind) * self.HML.value(ind=tind),
-                      maxval = lambda: 1,
-                      minval = lambda: 0,
-                      category = 'Health Parameters')
+                        units = 'probability',
+                        init_value = (1-self.HosL.value())*self.UHML.value() + 
+                                      self.HosL.value() * self.HML.value(),
+                        obtype = 'variable',
+                        func = lambda tstep, tind: (1-self.HosL.value(ind=tind))*self.UHML.value(ind=tind) + 
+                                      self.HosL.value(ind=tind) * self.HML.value(ind=tind),
+                        maxval = lambda: 1,
+                        minval = lambda: 0,
+                        category = 'Health Parameters')
             
             self.AvHDur = SD_object('Average Hospitalization Duration',
-                  units = 'days',
-                  init_value = 7,
-                  obtype = 'variable',
-                  func = lambda tstep, tind: self.AvHDur.value(ind=tind),
-                  maxval = lambda: 300,
-                  minval = lambda: 0,
-                  category = 'Health Parameters')
+                        units = 'days',
+                        init_value = 7,
+                        obtype = 'variable',
+                        func = lambda tstep, tind: self.AvHDur.value(ind=tind),
+                        maxval = lambda: 300,
+                        minval = lambda: 0,
+                        category = 'Health Parameters')
             
         elif location in ['Santiago']:
             
             self.RecL = SD_object('Recovery Likelihood',
                       units = 'probability',
-                      init_value = (1-self.HosL.value())*self.UHRL.value() + 
-                                    self.HosL.value() * self.HRL.value(),
+                      init_value = 0.79,
                       obtype = 'variable',
-                      func = lambda tstep, tind: (1-self.HosL.value(ind=tind))*self.UHRL.value(ind=tind) + 
-                                    self.HosL.value(ind=tind) * self.HRL.value(ind=tind),
+                      func = lambda tstep, tind: self.RecL(ind=tind),
                       maxval = lambda: 1,
                       minval = lambda: 0,
                       category = 'Health Parameters')
             
             self.MorL = SD_object('Mortality Likelihood',
                       units = 'probability',
-                      init_value = (1-self.HosL.value())*self.UHML.value() + 
-                                    self.HosL.value() * self.HML.value(),
+                      init_value = 1-self.RecL.value(),
                       obtype = 'variable',
-                      func = lambda tstep, tind: (1-self.HosL.value(ind=tind))*self.UHML.value(ind=tind) + 
-                                    self.HosL.value(ind=tind) * self.HML.value(ind=tind),
+                      func = lambda tstep, tind: 1-self.RecL.value(ind=tind),
                       maxval = lambda: 1,
                       minval = lambda: 0,
                       category = 'Health Parameters')
@@ -352,86 +348,128 @@ class SD_System:
                         maxval = lambda: 1000000000,
                         minval = lambda: 0,
                         category = 'Health Populations')
+        
+        if location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
            
-        self.IPop = SD_object("'True' Unhospitalized Infected Population",
-                          units = 'people',
-                          init_value = lambda: self.historical_data('True UnHos Infected', location, filename),
-                          obtype = 'stock',
-                          func = lambda tstep, tind: self.IPop.value(ind=tind) + (self.InfectR.value(ind=tind) - self.UHMR.value(ind=tind) - 
-                                                                    self.HosR.value(ind=tind) - self.UHRR.value(ind=tind)) * tstep,
-                          maxval = lambda: 100000000,
-                          minval = lambda: 0,
-                          category = 'Health Populations')
-    
-        self.Deaths = SD_object('Deaths',
-                          units = 'people',
-                          init_value = lambda: self.historical_data('total_obito', location, filename),
-                          obtype = 'stock',
-                          func = lambda tstep, tind: self.Deaths.value(ind=tind) + (self.UHMR.value(ind=tind) + self.HMR.value(ind=tind)) * tstep,
-                          maxval = lambda: 100000000,
-                          minval = lambda: 0,
-                          category = 'Health Populations')
+            self.IPop = SD_object("'True' Unhospitalized Infected Population",
+                              units = 'people',
+                              init_value = lambda: self.historical_data('True UnHos Infected', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.IPop.value(ind=tind) + (self.InfectR.value(ind=tind) - self.UHMR.value(ind=tind) - 
+                                                                        self.HosR.value(ind=tind) - self.UHRR.value(ind=tind)) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
         
-        self.HPop = SD_object('Hospitalized Population',
-                          units = 'people',
-                          init_value = lambda: self.historical_data('Hospitalizados', location, filename),
-                          obtype = 'stock',
-                          func = lambda tstep, tind: self.HPop.value(ind=tind) + (self.HosR.value(ind=tind) - self.HMR.value(ind=tind) - self.HRR.value(ind=tind)) * tstep,
-                          maxval = lambda: 1000000,
-                          minval = lambda: 0,
-                          category = 'Health Populations')
+            self.Deaths = SD_object('Deaths',
+                              units = 'people',
+                              init_value = lambda: self.historical_data('total_obito', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.Deaths.value(ind=tind) + (self.UHMR.value(ind=tind) + self.HMR.value(ind=tind)) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+            
+            self.HPop = SD_object('Hospitalized Population',
+                              units = 'people',
+                              init_value = lambda: self.historical_data('Hospitalizados', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.HPop.value(ind=tind) + (self.HosR.value(ind=tind) - self.HMR.value(ind=tind) - self.HRR.value(ind=tind)) * tstep,
+                              maxval = lambda: 1000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+            
+            self.RPop = SD_object('Known Recovered Population',
+                              units = 'people',
+                              init_value = lambda: self.historical_data('total_recup', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.RPop.value(ind=tind) + (self.UHRR.value(ind=tind) + self.HRR.value(ind=tind)) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+            
+            self.mIPop = SD_object("Measured Unhospitalized Infected Population",
+                              units = 'people',
+                              init_value = lambda: self.historical_data('Unhospitalized Infected', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.true_to_measured(self.IPop, 14, 0.25),
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+            
+            self.mTotIPop = SD_object('Measured Total Infected Population',
+                              units = 'people',
+                              init_value = self.historical_data('Current Infected', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.mIPop.value(ind=tind) + self.HPop.value(ind=tind),
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+            
+            self.TotIPop = SD_object("'True' Total Infected Population",
+                              units = 'people',
+                              init_value = self.IPop.value() + self.HPop.value(),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.IPop.value(ind=tind) + self.HPop.value(ind=tind),
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+            
+        elif location in ['Santiago']:
+            
+            self.IPop = SD_object("'True' Infected Population",
+                              units = 'people',
+                              init_value = lambda: self.historical_data('True Infected', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.IPop.value(ind=tind) + (self.InfectR.value(ind=tind) - self.UHMR.value(ind=tind) - 
+                                                                        self.RR.value(ind=tind) - self.MR.value(ind=tind)) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
         
-        self.RPop = SD_object('Known Recovered Population',
-                          units = 'people',
-                          init_value = lambda: self.historical_data('total_recup', location, filename),
-                          obtype = 'stock',
-                          func = lambda tstep, tind: self.RPop.value(ind=tind) + (self.UHRR.value(ind=tind) + self.HRR.value(ind=tind)) * tstep,
-                          maxval = lambda: 100000000,
-                          minval = lambda: 0,
-                          category = 'Health Populations')
-        
-        self.mIPop = SD_object("Measured Unhospitalized Infected Population",
-                          units = 'people',
-                          init_value = lambda: self.historical_data('Unhospitalized Infected', location, filename),
-                          obtype = 'stock',
-                          func = lambda tstep, tind: self.true_to_measured(self.IPop, 14, 0.25),
-                          maxval = lambda: 100000000,
-                          minval = lambda: 0,
-                          category = 'Health Populations')
-        
-        self.mTotIPop = SD_object('Measured Total Infected Population',
-                          units = 'people',
-                          init_value = self.historical_data('Current Infected', location, filename),
-                          obtype = 'stock',
-                          func = lambda tstep, tind: self.mIPop.value(ind=tind) + self.HPop.value(ind=tind),
-                          maxval = lambda: 100000000,
-                          minval = lambda: 0,
-                          category = 'Health Populations')
-        
-        self.TotIPop = SD_object("'True' Total Infected Population",
-                          units = 'people',
-                          init_value = self.IPop.value() + self.HPop.value(),
-                          obtype = 'stock',
-                          func = lambda tstep, tind: self.IPop.value(ind=tind) + self.HPop.value(ind=tind),
-                          maxval = lambda: 100000000,
-                          minval = lambda: 0,
-                          category = 'Health Populations')
+            self.Deaths = SD_object('Deaths',
+                              units = 'people',
+                              init_value = lambda: self.historical_data('total_obito', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.Deaths.value(ind=tind) + self.MR.value(ind=tind) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+            
+            self.RPop = SD_object('Known Recovered Population',
+                              units = 'people',
+                              init_value = lambda: self.historical_data('total_recup', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.RPop.value(ind=tind) + self.RR.value(ind=tind) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+            
+            self.mIPop = SD_object("Measured Infected Population",
+                              units = 'people',
+                              init_value = lambda: self.historical_data('Current Infected', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.true_to_measured(self.IPop, 14, 0.25),
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+                
         
     # =============================================================================
     #   4 - Health Flows  
     # =============================================================================
     
         self.InfectR = SD_object("'True' Infection Rate",
-                            units = 'people/day',
-                            init_value = lambda: self.historical_data('True Infection Rate', location, filename),
-                            obtype = 'flow',
-                            func = lambda tstep, tind: (self.combos(self.SPop.value(ind=tind) + self.IPop.value(ind=tind)) - self.combos(self.SPop.value(ind=tind)) - self.combos(self.IPop.value(ind=tind))) / 
-                                                self.combos(self.SPop.value(ind=tind) + self.IPop.value(ind=tind)) * self.ContactR.value(ind=tind) * (self.SPop.value(ind=tind) + self.IPop.value(ind=tind)) * self.Infectivity.value(ind=tind),
-                            maxval = lambda: self.SPop.value(),
-                            minval = lambda: 0,
-                            category = 'Health Flows'
-                            )
-        
+                                    units = 'people/day',
+                                    init_value = lambda: self.historical_data('True Infection Rate', location, filename),
+                                    obtype = 'flow',
+                                    func = lambda tstep, tind: (self.combos(self.SPop.value(ind=tind) + self.IPop.value(ind=tind)) - self.combos(self.SPop.value(ind=tind)) - self.combos(self.IPop.value(ind=tind))) / 
+                                                        self.combos(self.SPop.value(ind=tind) + self.IPop.value(ind=tind)) * self.ContactR.value(ind=tind) * (self.SPop.value(ind=tind) + self.IPop.value(ind=tind)) * self.Infectivity.value(ind=tind),
+                                    maxval = lambda: self.SPop.value(),
+                                    minval = lambda: 0,
+                                    category = 'Health Flows'
+                                    )
+                
         self.mInfectR = SD_object("Measured Infection Rate",
                             units = 'people/day',
                             init_value = lambda: self.historical_data('Measured Infection Rate',  location, filename),
@@ -440,90 +478,119 @@ class SD_System:
                             maxval = lambda: self.SPop.value(),
                             minval = lambda: 0,
                             category = 'Health Flows'
-                            )
-        
-        self.UHRR = SD_object('Unhospitalized Recovery Rate',
-                            units = 'people/day',
-                            init_value = (1 - self.HosL.value()) * self.UHRL.value() * self.IPop.value() / self.AvDur.value(),
-#                            init_value = 1,
-                            obtype = 'flow',
-                            func = lambda tstep, tind: (1 - self.HosL.value(ind=tind)) * self.UHRL.value(ind=tind) * self.IPop.value(ind=tind) / self.AvDur.value(ind=tind),
-                            maxval = lambda: self.IPop.value(),
-                            minval = lambda: 0,
-                            category = 'Health Flows'
-                            )
-        
-        self.UHMR = SD_object('Unhospitalized Mortality Rate',
-                            units = 'people/day',
-                            init_value = (1 - self.HosL.value()) * self.UHML.value() * self.IPop.value() / self.AvDur.value(),
-                            obtype = 'flow',
-                            func = lambda tstep, tind: (1 - self.HosL.value(ind=tind)) * self.UHML.value(ind=tind) * self.IPop.value(ind=tind) / self.AvDur.value(ind=tind),
-                            maxval = lambda: self.IPop.value(),
-                            minval = lambda: 0,
-                            category = 'Health Flows'
-                            )
-        
-        self.HRR = SD_object('Hospital Recovery Rate',
-                            units = 'people/day',
-                            init_value = self.HRL.value() * self.HPop.value() / self.AvHDur.value(),
-                            obtype = 'flow',
-                            func = lambda tstep, tind: self.HRL.value(ind=tind) * self.HPop.value(ind=tind) / self.AvHDur.value(ind=tind),
-                            maxval = lambda: self.HPop.value(),
-                            minval = lambda: 0,
-                            category = 'Health Flows'
-                            )
-        
-        self.HMR = SD_object('Hospital Mortaility Rate',
-                            units = 'people/day',
-                            init_value = int(round(self.HML.value() * self.HPop.value() / self.AvHDur.value())),
-                            obtype = 'flow',
-                            func = lambda tstep, tind: self.HML.value(ind=tind) * self.HPop.value(ind=tind) / self.AvHDur.value(ind=tind),
-                            maxval = lambda: self.HPop.value(),
-                            minval = lambda: 0,
-                            category = 'Health Flows'
-                            )
-        
-        self.HosR = SD_object('Hospitalization Rate',
-                            units = 'people/day',
-                            init_value = lambda: self.historical_data('Hospitalization Rate', location, filename),
-                            obtype = 'flow',
-                            func = lambda tstep, tind: self.HosL.value(ind=tind) * self.IPop.value(ind=tind) / self.AvDur.value(ind=tind),
-                            maxval = lambda: self.IPop.value(),
-                            minval = lambda: 0,
-                            category = 'Health Flows'
-                            )
-        
+                            )   
+        if location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
+            
+            
+            
+            self.UHRR = SD_object('Unhospitalized Recovery Rate',
+                                units = 'people/day',
+                                init_value = (1 - self.HosL.value()) * self.UHRL.value() * self.IPop.value() / self.AvDur.value(),
+    #                            init_value = 1,
+                                obtype = 'flow',
+                                func = lambda tstep, tind: (1 - self.HosL.value(ind=tind)) * self.UHRL.value(ind=tind) * self.IPop.value(ind=tind) / self.AvDur.value(ind=tind),
+                                maxval = lambda: self.IPop.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )
+            
+            self.UHMR = SD_object('Unhospitalized Mortality Rate',
+                                units = 'people/day',
+                                init_value = (1 - self.HosL.value()) * self.UHML.value() * self.IPop.value() / self.AvDur.value(),
+                                obtype = 'flow',
+                                func = lambda tstep, tind: (1 - self.HosL.value(ind=tind)) * self.UHML.value(ind=tind) * self.IPop.value(ind=tind) / self.AvDur.value(ind=tind),
+                                maxval = lambda: self.IPop.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )
+            
+            self.HRR = SD_object('Hospital Recovery Rate',
+                                units = 'people/day',
+                                init_value = self.HRL.value() * self.HPop.value() / self.AvHDur.value(),
+                                obtype = 'flow',
+                                func = lambda tstep, tind: self.HRL.value(ind=tind) * self.HPop.value(ind=tind) / self.AvHDur.value(ind=tind),
+                                maxval = lambda: self.HPop.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )
+            
+            self.HMR = SD_object('Hospital Mortaility Rate',
+                                units = 'people/day',
+                                init_value = int(round(self.HML.value() * self.HPop.value() / self.AvHDur.value())),
+                                obtype = 'flow',
+                                func = lambda tstep, tind: self.HML.value(ind=tind) * self.HPop.value(ind=tind) / self.AvHDur.value(ind=tind),
+                                maxval = lambda: self.HPop.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )
+            
+            self.HosR = SD_object('Hospitalization Rate',
+                                units = 'people/day',
+                                init_value = lambda: self.historical_data('Hospitalization Rate', location, filename),
+                                obtype = 'flow',
+                                func = lambda tstep, tind: self.HosL.value(ind=tind) * self.IPop.value(ind=tind) / self.AvDur.value(ind=tind),
+                                maxval = lambda: self.IPop.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )
+            
+        if location in ['Santiago']:
+            
+
+            self.RR = SD_object('Recovery Rate',
+                                units = 'people/day',
+                                init_value = self.RecL.value() * self.IPop.value() / self.AvDur.value(),
+                                # init_value = 1,
+                                obtype = 'flow',
+                                func = lambda tstep, tind: self.RecL.value(ind=tind) * self.IPop.value(ind=tind) / self.AvDur.value(ind=tind),
+                                maxval = lambda: self.IPop.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )
+            
+            self.MR = SD_object('Mortality Rate',
+                                units = 'people/day',
+                                init_value = self.MorL.value() * self.IPop.value() / self.AvDur.value(),
+                                obtype = 'flow',
+                                func = lambda tstep, tind: self.MorL.value(ind=tind) * self.IPop.value(ind=tind) / self.AvDur.value(ind=tind),
+                                maxval = lambda: self.IPop.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )
     
     # =============================================================================
     #   5 - Equipment Supplies  
     # =============================================================================
-        self.HBeds = SD_object('Hospital Bed Capacity',
-                  units = 'person',
-                  init_value = 2000,
-                  obtype = 'variable',
-                  func = lambda tstep, tind: self.HBeds.value(ind=tind),
-                  maxval = lambda: 1000000,
-                  minval = lambda: 0,
-                  category = 'Equipment Supplies')
         
-        self.Vents = SD_object('Available Ventilators',
-                          units = 'ventilator',
-                          init_value = lambda: self.historical_data('Ventilators', location, filename),
-                          obtype = 'stock',
-                          func = lambda tstep, tind: self.Vents.value(ind=tind) + self.VentAqRate.value(ind=tind) * tstep,
-                          maxval = lambda: 1000000,
-                          minval = lambda: 0,
-                          category = 'Equipment Supplies')
-        
-        self.OVents = SD_object('Ordered Ventilators',
-                          units = 'ventilator',
-                          init_value = 0,
-                          obtype = 'stock',
-                          func = lambda tstep, tind: self.OVents.value(ind=tind) + self.NewOVents.value(ind=tind) 
-                                                      - (self.VentAqRate.value(ind=tind) * tstep),
-                          maxval = lambda: 1000000,
-                          minval = lambda: 0,
-                          category = 'Equipment Supplies')
+        if location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
+    
+            self.HBeds = SD_object('Hospital Bed Capacity',
+                      units = 'person',
+                      init_value = 2000,
+                      obtype = 'variable',
+                      func = lambda tstep, tind: self.HBeds.value(ind=tind),
+                      maxval = lambda: 1000000,
+                      minval = lambda: 0,
+                      category = 'Equipment Supplies')
+            
+            self.Vents = SD_object('Available Ventilators',
+                              units = 'ventilator',
+                              init_value = lambda: self.historical_data('Ventilators', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.Vents.value(ind=tind) + self.VentAqRate.value(ind=tind) * tstep,
+                              maxval = lambda: 1000000,
+                              minval = lambda: 0,
+                              category = 'Equipment Supplies')
+            
+            self.OVents = SD_object('Ordered Ventilators',
+                              units = 'ventilator',
+                              init_value = 0,
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.OVents.value(ind=tind) + self.NewOVents.value(ind=tind) 
+                                                          - (self.VentAqRate.value(ind=tind) * tstep),
+                              maxval = lambda: 1000000,
+                              minval = lambda: 0,
+                              category = 'Equipment Supplies')
         
         if location == 'Chile':
             
@@ -539,34 +606,35 @@ class SD_System:
     # =============================================================================
     #   6 - Equipment Parameters 
     # =============================================================================
-        self.VWTP = SD_object('Ventilator Willingness to Pay',
-                  units = 'dollar/ventilator',
-                  init_value = 25000,
-                  obtype = 'variable',
-                  func = lambda tstep, tind: self.VWTP.value(ind=tind),
-                  maxval = lambda: 1000000,
-                  minval = lambda: 0,
-                  category = 'Equipment Parameters')
-        
-        self.VDur = SD_object('Default Ventilator Delivery Duration',
-                  units = 'days',
-                  init_value = 30,
-                  obtype = 'variable',
-                  func = lambda tstep, tind: self.VDur.value(ind=tind),
-                  maxval = lambda: 365,
-                  minval = lambda: 0,
-                  category = 'Equipment Parameters')
-        
-        self.VentAqRate = SD_object('Ventilator Acquisition Rate',
-                                units = 'ventilator/day',
-                                init_value = 0,
-                                obtype = 'flow',
-                                func = lambda tstep, tind: self.OVents.value(ind=tind) / self.VDur.value(ind=tind) 
-                                                            * (3 * (1 - math.exp(-math.log(3/2) / self.VWTP.values[0] * self.VWTP.value(ind=tind)))),
-                                maxval = lambda: 1000000,
-                                minval = lambda: 0,
-                                category = 'Equipment Parameters')
-        
+        if location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
+            self.VWTP = SD_object('Ventilator Willingness to Pay',
+                      units = 'dollar/ventilator',
+                      init_value = 25000,
+                      obtype = 'variable',
+                      func = lambda tstep, tind: self.VWTP.value(ind=tind),
+                      maxval = lambda: 1000000,
+                      minval = lambda: 0,
+                      category = 'Equipment Parameters')
+            
+            self.VDur = SD_object('Default Ventilator Delivery Duration',
+                      units = 'days',
+                      init_value = 30,
+                      obtype = 'variable',
+                      func = lambda tstep, tind: self.VDur.value(ind=tind),
+                      maxval = lambda: 365,
+                      minval = lambda: 0,
+                      category = 'Equipment Parameters')
+            
+            self.VentAqRate = SD_object('Ventilator Acquisition Rate',
+                                    units = 'ventilator/day',
+                                    init_value = 0,
+                                    obtype = 'flow',
+                                    func = lambda tstep, tind: self.OVents.value(ind=tind) / self.VDur.value(ind=tind) 
+                                                                * (3 * (1 - math.exp(-math.log(3/2) / self.VWTP.values[0] * self.VWTP.value(ind=tind)))),
+                                    maxval = lambda: 1000000,
+                                    minval = lambda: 0,
+                                    category = 'Equipment Parameters')
+            
 
             
         
@@ -921,7 +989,7 @@ class SD_System:
                             'Fase 2': 0.4,
                             'Fase 1': 0.3,
                             'Lockdown': 0.2}
-        elif location == 'Chile':
+        elif location in ['Chile', 'Santiago']:
              ClosureDictOut = {'No Closures' : 1,
                             'Paso 5': 0.8,
                             'Paso 4' : 0.7,
@@ -1129,11 +1197,16 @@ if str.__eq__(__name__, '__main__'):
 #                       location='Chile',
 #                       data_filepath='./Data/Chile/Chile_Data.csv')
     
+    # SD_Map = SD_System(tuning_flag=0,
+    #                    location='Rio de Janeiro',
+    #                    data_filepath='./Data/Brazil/Brazil_Data.csv')
+    
     SD_Map = SD_System(tuning_flag=0,
-                       location='Rio de Janeiro',
-                       data_filepath='./Data/Brazil/Brazil_Data.csv')
-       
-       
+                   location='Santiago',
+                   data_filepath='./Data/Santiago/Santiago_Data.csv')
+   
+   
+   
 
 
 
