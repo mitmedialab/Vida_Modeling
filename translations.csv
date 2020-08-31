@@ -3,20 +3,20 @@ Graph 1: ,Grafico 1: ,Gráfico 1:
 Graph 2: ,Grafico 2: ,Gráfico 2: 
 Simulation,Simulación,Simulação
 History,Historia,História
-
+,,
 System Dynamics Visualization,Visualización de dinámica de sistemas,Visualização da dinâmica do sistema
-
+,,
 Order New Ventilators,Solicite nuevos ventiladores,Solicitar novos ventiladores
 Next Week,La próxima semana,Semana que vem
 Run Autonomously,Ejecutar de forma autónoma,Executar de forma autônoma
 Rules,Reglas,Regras
 Log,Registro,Registro
-
+,,
 How many days do you want the simulation to run for?,¿Cuántos días desea que se ejecute la simulación?,Por quantos dias você deseja que a simulação seja executada?
 Run Simulation,Ejecutar simulación,Executar Simulação
-
-
-
+,,
+,,
+,,
 Days,Dias,Dias
 Day,Dia,Dia
 people,personas,pessoas
@@ -32,12 +32,12 @@ Celsius,Celsius,Celsius
 µg / m3,µg / m3,µg / m3
 ppm,ppm,ppm
 percent,por ciento,por cento
-
+,,
 Policies & Actions,Políticas y acciones,Políticas e Ações
 Closure Policy,Política de cierre,Política de Fechamento
 Social Distancing Policy,Política de distanciamiento,Política de Distanciamento
 New Ventilator Orders,Nuevos pedidos de ventiladores,Novos pedidos de ventiladores
-
+,,
 Health Parameters,Parámetros de salud,Parâmetros de Saúde
 Base Contact Rate,Tasa de contacto base,Taxa de contato básica
 Contact Rate,Tasa de contacto,Taxa de contato
@@ -52,7 +52,7 @@ Recovery Likelihood,Probabilidad de recuperación,Probabilidade de recuperação
 Mortality Likelihood,Probabilidad de mortalidad,Probabilidade de mortalidade
 Average Illness Duration,Duración media de la enfermedad,Duração média da doença
 Average Hospitalization Duration,Duración media de la hospitalización,Duração Média de Hospitalização
-
+,,
 Health Populations,Poblaciones de salud,Populações de Saúde
 Susceptible Population,Población susceptible,População Susceptível
 'True' Unhospitalized Infected Population,Población infectada no hospitalizada 'verdadera',População infectada 'verdadeira' não hospitalizada
@@ -62,7 +62,9 @@ Known Recovered Population,Población recuperada conocida,População Recuperada
 Measured Unhospitalized Infected Population,Población infectada no hospitalizada medida,População infectada não hospitalizada medida
 Measured Total Infected Population,Población total infectada medida,População total infectada medida
 'True' Total Infected Population,Población total infectada 'verdadera',População total infectada 'verdadeira'
-
+'True' Infected Population,Población infectada 'verdadera',População infectada 'verdadeira'
+Measured Infected Population,Población infectada medida,População infectada medida
+,,
 Health Flows,Flujos de salud,Fluxos de Saúde
 'True' Infection Rate,Tasa de infección 'verdadera',Taxa de infecção 'verdadeira'
 Measured Infection Rate,Tasa de infección medida,Taxa de infecção medida
@@ -71,18 +73,20 @@ Unhospitalized Mortality Rate,Tasa de mortalidad no hospitalizada,Taxa de mortal
 Hospital Recovery Rate,Tasa de recuperación hospitalaria,Taxa de recuperação hospitalar
 Hospital Mortaility Rate,Tasa de mortalidad hospitalaria,Taxa de mortalidade hospitalar
 Hospitalization Rate,Tasa de hospitalización,Taxa de hospitalização
-
+Recovery Rate,Tasa de recuperación,Taxa de recuperação
+Mortality Rate,Tasa de mortalidad,Taxa de mortalidade
+,,
 Equipment Supplies,Suministros de equipo,Suprimentos de equipamentos
 Hospital Bed Capacity,Capacidad de la cama de hospital,Capacidade de leitos hospitalares
 Available Ventilators,Ventiladores disponibles,Ventiladores Disponíveis
 Ordered Ventilators,Ventiladores pedidos,Ventiladores solicitados
 Daily PCR Tests,Exámenes PCR diarias,Testes PCR diários
-
+,,
 Equipment Parameters,Parámetros del equipo,Parâmetros de Equipamento
 Ventilator Willingness to Pay,Disposición del ventilador a pagar,Disposição do Ventilador a Pagar
 Default Ventilator Delivery Duration,Duración predeterminada de la administración del ventilador,Duração de entrega do ventilador padrão
 Ventilator Acquisition Rate,Tasa de adquisición del ventilador,Taxa de aquisição do ventilador
-
+,,
 Environment,Ambiente,Meio Ambiente
 Average Temperature,Temperatura media,Temperatura média
 SO2,SO2,SO2
@@ -94,9 +98,9 @@ CO,CO,CO
 NO,NO,NO
 NOx,NOx,NOx
 O3,O3,O3
-PM10,PM10,PM10
-PM2.5,PM2.5,PM2.5
-
+PM10,MP10,PM10
+PM2.5,MP2.5,PM2.5
+,,
 Economy,Economía,Economia
 Rio de Janeiro Unemployment Rate,Tasa de desempleo de Río de Janeiro,Taxa de desemprego do Rio de Janeiro
 Rio de Janeiro Unemployment Rate of Change,Tasa de variación del desempleo en Río de Janeiro,Taxa de variação do desemprego no Rio de Janeiro
@@ -105,7 +109,7 @@ Brazil Unemployment Rate of Change,Tasa de variación del desempleo en Brasil,Ta
 Daily Flight Passengers,Pasajeros de vuelos diarios,Passageiros de voos diários
 Gross Domestic Product,Producto Interno Bruto,Produto Interno Bruto
 Rp Million,Millones de Rp,Rp milhões
-
+,,
 Rainfall,Lluvia,Chuva
 Barometric Pressure,Presión barométrica,Pressão barométrica
 Solar Radiation,Radiación solar,Radiação solar
@@ -113,7 +117,7 @@ Temperature,Temperatura,Temperatura
 Relative Humidity,Humedad relativa,Humidade relativa
 Wind Direction,Dirección del viento,Direção do vento
 Wind Speed,Velocidad del viento,Velocidade do vento
-
+,,
 Operations Mean Anomaly,Anomalía del medio de operaciones,Anomalia média de operações
 Passengers Mean Anomaly,Los pasajeros significan anomalía,Passageiros Significam Anomalia
 July Operations,Operaciones de Julio,Operações de julho
@@ -124,21 +128,13 @@ Accumulative Cases,Casos acumulativos,Casos Acumulativos
 Accumulative PCR Exams,Exámenes de PCR acumulativos,Exames PCR Acumulativos
 Accumulative Deaths,Fallecidos Acumulados,Mortes acumuladas
 Status,Estado,Status
-
+,,
 Total Cases,Casos totales,Total de Casos
+Additional Closures,Cierres adicionales,Fechamentos Adicionais
+Complete Lockdown,Cierre completo,Bloqueio completo
+Re-open Some Businesses,Reabrir algunos negocios,Reabrir algumas empresas
+Relax Mandatory Social Distancing,Relax Distancia social obligatoria,Relaxe o distanciamento social obrigatório
 Recovered Cases,Casos recuperados,Casos Recuperados
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+,,
+Initial Closures,Cierres iniciales,Fechamentos iniciais
 

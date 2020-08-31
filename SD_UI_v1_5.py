@@ -995,12 +995,19 @@ class SD_UI(tk.Tk):
             for i in range(0,runtime):
                 
                 #Store all conditional decision inputs in class
-                mIPop = self.SD_Map.mTotIPop.value()
+                if self.location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
+                    mIPop = self.SD_Map.mTotIPop.value()
+                    HPop = self.SD_Map.HPop.value()
+                    Vents = self.SD_Map.Vents.value()
+                elif self.location in ['Santiago']:
+                    mIPop = self.SD_Map.mIPop.value()
+                    HPop = 0
+                    Vents = 0
+
                 ClosureVal = self.ClosureDictInv[self.SD_Map.ClosureP.value()]
                 SocialDisVal = self.SocialDisDictInv[self.SD_Map.SocialDisP.value()]
                 mInfectR = self.SD_Map.mInfectR.value()
-                HPop = self.SD_Map.HPop.value()
-                Vents = self.SD_Map.Vents.value()
+                
                 rule_input = RuleInputs(mIPop,
                                          ClosureVal,
                                          SocialDisVal,
@@ -1070,7 +1077,7 @@ class SD_UI(tk.Tk):
         
         #Populate list of rules
         for rule in self.Rules:
-            self.list_info_boxes['Rules'].insert(tk.END, self.translate('Rules') + ' ' + str(rule.number) + ': ' + str(rule.name))
+            self.list_info_boxes['Rules'].insert(tk.END, self.translate('Rules') + ' ' + str(rule.number) + ': ' + self.translate(str(rule.name)))
             
         #Add scrollbar to the rule log display
         self.scrollbar = tk.Scrollbar(info_frame, orient='vertical',
@@ -1096,7 +1103,8 @@ class SD_UI(tk.Tk):
         Returns:
             output: a flag indicating if the conditional has been met (0=no, 1=yes)
         """
-        
+    
+    #Brazil Rules
     def Rule1func(self, rule_input):
         output = 0
         ClosureVal = self.ClosureDict[rule_input.ClosureVal]
@@ -1149,7 +1157,46 @@ class SD_UI(tk.Tk):
             self.SD_Map.VWTP.values[-1] = 50000
             output = 1
         return output
-        
+    
+    #Chile Rules
+    def CRule1func(self, rule_input):
+        output = 0
+        ClosureVal = self.ClosureDict[rule_input.ClosureVal]
+        if rule_input.mIPop >= 20 and ClosureVal == 'No Closures' and rule_input.SocialDisVal == 'No Distancing':
+            # print('Rule 1 Triggered')
+            self.SD_Map.ClosureP.values[-1] = self.ClosureDict['Paso 3']
+            self.SD_Map.SocialDisP.values[-1] = self.SocialDisDict['Voluntary Social Distancing']
+            output = 1
+        return output
+    def CRule2func(self, rule_input):
+        output = 0
+        if rule_input.mIPop >= 100 and (rule_input.ClosureVal in ['No Closures', 'Paso 5', 'Paso 4']):
+            # print('Rule 2 Triggered')
+            self.SD_Map.ClosureP.values[-1] = self.ClosureDict['Paso 1'] 
+            output = 1
+        return output
+    def CRule3func(self, rule_input):
+        output = 0
+        if rule_input.mInfectR >= 100 and (rule_input.ClosureVal in ['No Closures', 'Paso 6', 'Paso 5', 'Paso 4', 'Paso 3', 'Paso 1' ]):
+            # print('Rule 3 Triggered')
+            self.SD_Map.ClosureP.values[-1] = self.ClosureDict['Lockdown']
+            self.SD_Map.SocialDisP.values[-1] = self.SocialDisDict['Mandatory Social Distancing'] 
+            output = 1
+        return output
+    def CRule4func(self,rule_input):
+        output = 0
+        if rule_input.mIPop <= 500 and (rule_input.ClosureVal in ['Paso 2', 'Paso 1', 'Lockdown' ]):
+            # print('Rule 4 Triggered')
+            self.SD_Map.ClosureP.values[-1] = self.ClosureDict['Paso 3']
+            output = 1
+        return output
+    def CRule5func(self, rule_input):
+        output = 0
+        if rule_input.mIPop <= 500 and rule_input.SocialDisVal == 'Mandatory Social Distancing':
+            # print('Rule 5 Triggered')
+            self.SD_Map.SocialDisP.values[-1] = self.SocialDisDict['Voluntary Social Distancing']   
+            output = 1
+        return output
     def make_rules(self):
         """PUT EACH DECISION RULE INTO A RULE CLASS AND STORE THEM AS A LIST
         
@@ -1159,25 +1206,41 @@ class SD_UI(tk.Tk):
         Returns:
             N/A
         """
-        
         self.Rules = []
-        self.Rules.append(SDlib.Rule('Initial Closures', 1, 
-                             func = lambda rule_input: self.Rule1func(rule_input)))
-        self.Rules.append(SDlib.Rule('Additional Closures', 2, 
-                             func = lambda rule_input: self.Rule2func(rule_input)))
-        
-        self.Rules.append(SDlib.Rule('Complete Lockdown', 3, 
-                             func = lambda rule_input: self.Rule3func(rule_input)))
-        
-        self.Rules.append(SDlib.Rule('Re-open Some Businesses', 4, 
-                             func = lambda rule_input: self.Rule4func(rule_input)))
-        self.Rules.append(SDlib.Rule('Relax Mandatory Social Distancing', 5, 
-                             func = lambda rule_input: self.Rule5func(rule_input)))
-        self.Rules.append(SDlib.Rule('Order More Ventilators', 6, 
-                             func = lambda rule_input: self.Rule6func(rule_input)))
-        self.Rules.append(SDlib.Rule('Pay More for Ventilators to Accelerate Delivery', 7, 
-                             func = lambda rule_input: self.Rule7func(rule_input)))
-                   
+        if self.location in ['Rio de Janeiro', 'Indonesia']:
+
+            self.Rules.append(SDlib.Rule('Initial Closures', 1, 
+                                 func = lambda rule_input: self.Rule1func(rule_input)))
+            self.Rules.append(SDlib.Rule('Additional Closures', 2, 
+                                 func = lambda rule_input: self.Rule2func(rule_input)))
+            
+            self.Rules.append(SDlib.Rule('Complete Lockdown', 3, 
+                                 func = lambda rule_input: self.Rule3func(rule_input)))
+            
+            self.Rules.append(SDlib.Rule('Re-open Some Businesses', 4, 
+                                 func = lambda rule_input: self.Rule4func(rule_input)))
+            self.Rules.append(SDlib.Rule('Relax Mandatory Social Distancing', 5, 
+                                 func = lambda rule_input: self.Rule5func(rule_input)))
+        elif self.location in ['Chile', 'Santiago']:
+            self.Rules.append(SDlib.Rule('Initial Closures', 1, 
+                                 func = lambda rule_input: self.CRule1func(rule_input)))
+            self.Rules.append(SDlib.Rule('Additional Closures', 2, 
+                                 func = lambda rule_input: self.CRule2func(rule_input)))
+            
+            self.Rules.append(SDlib.Rule('Complete Lockdown', 3, 
+                                 func = lambda rule_input: self.CRule3func(rule_input)))
+            
+            self.Rules.append(SDlib.Rule('Re-open Some Businesses', 4, 
+                                 func = lambda rule_input: self.CRule4func(rule_input)))
+            self.Rules.append(SDlib.Rule('Relax Mandatory Social Distancing', 5, 
+                                 func = lambda rule_input: self.CRule5func(rule_input)))
+            
+        if self.location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
+            self.Rules.append(SDlib.Rule('Order More Ventilators', 6, 
+                                 func = lambda rule_input: self.Rule6func(rule_input)))
+            self.Rules.append(SDlib.Rule('Pay More for Ventilators to Accelerate Delivery', 7, 
+                                 func = lambda rule_input: self.Rule7func(rule_input)))
+                       
 
 
 # =============================================================================

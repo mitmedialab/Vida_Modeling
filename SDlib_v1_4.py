@@ -311,7 +311,7 @@ class SD_System:
                       units = 'probability',
                       init_value = 0.79,
                       obtype = 'variable',
-                      func = lambda tstep, tind: self.RecL(ind=tind),
+                      func = lambda tstep, tind: self.RecL.value(ind=tind),
                       maxval = lambda: 1,
                       minval = lambda: 0,
                       category = 'Health Parameters')
@@ -421,7 +421,7 @@ class SD_System:
                               units = 'people',
                               init_value = lambda: self.historical_data('True Infected', location, filename),
                               obtype = 'stock',
-                              func = lambda tstep, tind: self.IPop.value(ind=tind) + (self.InfectR.value(ind=tind) - self.UHMR.value(ind=tind) - 
+                              func = lambda tstep, tind: self.IPop.value(ind=tind) + (self.InfectR.value(ind=tind)  - 
                                                                         self.RR.value(ind=tind) - self.MR.value(ind=tind)) * tstep,
                               maxval = lambda: 100000000,
                               minval = lambda: 0,
