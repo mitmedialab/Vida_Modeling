@@ -94,8 +94,8 @@ class SD_UI(tk.Tk):
             self.shpfilepath = './Data/Indonesia/Shapefiles/Regions_data.shp'
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'Total Cases'
-            self.default_graph1 = 'Measured Total Infected Population'
-            self.default_graph2 = 'Hospitalized Population'
+            self.default_graph1 = 'Measured Infected Population'
+            self.default_graph2 = "'True' Infected Population"
             self.map_loc = [140.0,-12.0, 0.00016]
             self.data_filepath = './Data/Indonesia/Indonesia_Data.csv'
             self.shp_fields =  './Data/Indonesia/shp_fields.csv'
@@ -431,8 +431,10 @@ class SD_UI(tk.Tk):
         self.screenwidth = self.winfo_screenwidth()
         self.screenheight = self.winfo_screenwidth()
         #fig = Figure(figsize=(self.screenwidth/202.5, self.screenheight/372.4), dpi=100)
-        # fig = Figure(figsize=(7.75, 2.5), dpi=100)
-        fig, ax1 = plt.subplots(figsize=(10.5, 4))
+        #fig = Figure(figsize=(7.75, 2.5), dpi=100)
+        #fig, ax1 = plt.subplots(figsize=(10.5, 4))
+        fig, ax1 = plt.subplots(figsize=(7.75, 2.5))
+        # (7.75 and 2.5 are the values that work on Shea's monitor)
         
         
         #Retrieve SD Object based on name
@@ -995,11 +997,11 @@ class SD_UI(tk.Tk):
             for i in range(0,runtime):
                 
                 #Store all conditional decision inputs in class
-                if self.location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
+                if self.location in ['Chile', 'Rio de Janeiro']:
                     mIPop = self.SD_Map.mTotIPop.value()
                     HPop = self.SD_Map.HPop.value()
                     Vents = self.SD_Map.Vents.value()
-                elif self.location in ['Santiago']:
+                elif self.location in ['Santiago', 'Indonesia']:
                     mIPop = self.SD_Map.mIPop.value()
                     HPop = 0
                     Vents = 0
@@ -1262,7 +1264,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Santiago')
+                location = 'Indonesia')
 
     #Run the user interface
     UI.mainloop()

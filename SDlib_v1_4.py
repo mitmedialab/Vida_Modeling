@@ -218,7 +218,7 @@ class SD_System:
                               minval = lambda: 0,
                               category = 'Health Parameters')
         
-        if location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
+        if location in ['Chile', 'Rio de Janeiro']:
         
             self.HosL = SD_object('Hospitalization Likelihood',
                         units = 'probability',
@@ -305,7 +305,7 @@ class SD_System:
                         minval = lambda: 0,
                         category = 'Health Parameters')
             
-        elif location in ['Santiago']:
+        elif location in ['Santiago', 'Indonesia']:
             
             self.RecL = SD_object('Recovery Likelihood',
                       units = 'probability',
@@ -349,7 +349,7 @@ class SD_System:
                         minval = lambda: 0,
                         category = 'Health Populations')
         
-        if location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
+        if location in ['Chile', 'Rio de Janeiro']:
            
             self.IPop = SD_object("'True' Unhospitalized Infected Population",
                               units = 'people',
@@ -415,7 +415,7 @@ class SD_System:
                               minval = lambda: 0,
                               category = 'Health Populations')
             
-        elif location in ['Santiago']:
+        elif location in ['Santiago','Indonesia']:
             
             self.IPop = SD_object("'True' Infected Population",
                               units = 'people',
@@ -479,7 +479,7 @@ class SD_System:
                             minval = lambda: 0,
                             category = 'Health Flows'
                             )   
-        if location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
+        if location in ['Chile', 'Rio de Janeiro']:
             
             
             
@@ -534,7 +534,7 @@ class SD_System:
                                 category = 'Health Flows'
                                 )
             
-        if location in ['Santiago']:
+        if location in ['Santiago','Indonesia']:
             
 
             self.RR = SD_object('Recovery Rate',
@@ -562,7 +562,7 @@ class SD_System:
     #   5 - Equipment Supplies  
     # =============================================================================
         
-        if location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
+        if location in ['Chile', 'Rio de Janeiro']:
     
             self.HBeds = SD_object('Hospital Bed Capacity',
                       units = 'person',
@@ -606,7 +606,7 @@ class SD_System:
     # =============================================================================
     #   6 - Equipment Parameters 
     # =============================================================================
-        if location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
+        if location in ['Chile', 'Rio de Janeiro']:
             self.VWTP = SD_object('Ventilator Willingness to Pay',
                       units = 'dollar/ventilator',
                       init_value = 25000,
@@ -1204,6 +1204,8 @@ if str.__eq__(__name__, '__main__'):
     SD_Map = SD_System(tuning_flag=0,
                    location='Santiago',
                    data_filepath='./Data/Santiago/Santiago_Data.csv')
+
+                   
    
    
    
