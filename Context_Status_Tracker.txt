@@ -1,0 +1,10 @@
+This document is for tracking the status of development for each context area.
+
+Rio de Janeiro: Ongoing, operational with all major data types
+
+Chile: On hold, operational with all major data types
+
+Santiago: Ongoing, operational with most major data types, currently missing socioeconomic data
+
+Indonesia: Ongoing, mostly operational, currently lacking conditional decision rules so autonomous simulation cannot be used
+
