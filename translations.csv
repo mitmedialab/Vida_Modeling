@@ -5,10 +5,16 @@ Simulation,Simulación,Simulação
 History,Historia,História
 ,,
 System Dynamics Visualization,Visualización de dinámica de sistemas,Visualização da dinâmica do sistema
+English,Inglés,Inglês
+Spanish,Espanol,Espanhol
+Portuguese,Portugués,Português
+Languages,Idiomas,Línguas
+Exit,Salida,Saída
 ,,
 Order New Ventilators,Solicite nuevos ventiladores,Solicitar novos ventiladores
 Next Week,La próxima semana,Semana que vem
 Run Autonomously,Ejecutar de forma autónoma,Executar de forma autônoma
+Clear Simulation,Reiniciar la simulación,Reiniciar Simulação
 Rules,Reglas,Regras
 Log,Registro,Registro
 ,,
@@ -130,11 +136,15 @@ Accumulative Deaths,Fallecidos Acumulados,Mortes acumuladas
 Status,Estado,Status
 ,,
 Total Cases,Casos totales,Total de Casos
+Recovered Cases,Casos recuperados,Casos Recuperados
+,,
+Initial Closures,Cierres iniciales,Fechamentos iniciais
 Additional Closures,Cierres adicionales,Fechamentos Adicionais
 Complete Lockdown,Cierre completo,Bloqueio completo
 Re-open Some Businesses,Reabrir algunos negocios,Reabrir algumas empresas
 Relax Mandatory Social Distancing,Relax Distancia social obligatoria,Relaxe o distanciamento social obrigatório
-Recovered Cases,Casos recuperados,Casos Recuperados
+Order More Ventilators,Solicite más ventiladores,Peça mais ventiladores
+Pay More for Ventilators to Accelerate Delivery,Pague más por los ventiladores para acelerar la entrega,Pague mais por ventiladores para acelerar a entrega
 ,,
-Initial Closures,Cierres iniciales,Fechamentos iniciais
+
 

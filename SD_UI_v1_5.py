@@ -112,6 +112,9 @@ class SD_UI(tk.Tk):
             
         self.translations = './translations.csv' 
     
+        if 'language' in kwargs:
+            self.language = kwargs.pop('language')
+            
         #Set geometry and other parameters of the window
         self.title(self.translate('System Dynamics Visualization'))
         default_font = tk.font.nametofont("TkDefaultFont")
@@ -152,7 +155,8 @@ class SD_UI(tk.Tk):
         
         self.timestep = lambda: self.timeSeries[-1] - self.timeSeries[-2]
 
-            
+        #Generate the top menus
+        self.make_top_menus()
         
         #Pull from the SD_Map various attributes for easy reference
         self.ClosureDict = self.SD_Map.ClosureDict(self.location) #dictionary relating string closure policy to numerical value
@@ -178,7 +182,7 @@ class SD_UI(tk.Tk):
         
         self.frame_map, self.subframe_map, self.MAP = self.make_map_frame()
         
-    
+
     def toggle_geom(self,event):
         """TOGGLE FULL SCREEN DISPLAY
         
@@ -244,6 +248,37 @@ class SD_UI(tk.Tk):
             
         return output_phrase
 
+# =============================================================================
+#  Generate the Top Menu             
+# =============================================================================   
+
+    def make_top_menus(self):
+        menubar = tk.Menu(self)
+
+        # create a pulldown menu, and add it to the menu bar
+        language_menu = tk.Menu(menubar, tearoff=0)
+        language_menu.add_command(label=self.translate("English"), command=lambda: self.replace_language('english'))
+        language_menu.add_command(label=self.translate("Spanish"), command=lambda: self.replace_language('spanish'))
+        language_menu.add_command(label=self.translate("Portuguese"), command=lambda: self.replace_language('portuguese'))
+        menubar.add_cascade(label=self.translate("Languages"), menu=language_menu)
+        
+        # create more pulldown menus
+        menubar.add_command(label=self.translate("Exit"), command=self.destroy)
+        
+        # display the menu
+        self.config(menu=menubar)
+        
+    def replace_language(self, new_language):
+        
+        self.destroy()
+        
+        #Generate user interface
+        UI = SD_UI(tuning = self.tuning_flag,
+                    location = self.location,
+                    language = new_language)
+    
+        #Run the user interface
+        UI.mainloop()
         
 # =============================================================================
 #  Generate the Graphs             
@@ -280,10 +315,11 @@ class SD_UI(tk.Tk):
         graph_optionlist = self.make_graph_dropdown(graph_frame, firstgraph, index, col)
         graph_optionlist.grid(column=1, row=0)
         self.graph_optionlist_list[col].append(graph_optionlist)
-        
+        self.figures = []
         #Generate the top graph
-        canvas = self.make_graph(graph_frame, firstgraph)
+        canvas, fig = self.make_graph(graph_frame, firstgraph)
         self.graph_canvas_list[col].append(canvas)
+        self.figures.append(fig)
         
         #Generate the bottom graph label and dropdown menu
         index = 1
@@ -295,8 +331,9 @@ class SD_UI(tk.Tk):
         self.graph_optionlist_list[col].append(graph_optionlist)
         
         #Generate the bottom graph
-        canvas = self.make_graph(graph_frame, secondgraph)
+        canvas,fig = self.make_graph(graph_frame, secondgraph)
         self.graph_canvas_list[col].append(canvas)
+        self.figures.append(fig)
         
         return graph_frame
     
@@ -415,7 +452,7 @@ class SD_UI(tk.Tk):
         canvas.draw()
         canvas.get_tk_widget().grid(column=0, row=0)
 
-        return canvas
+        return canvas, fig
     
     def make_fig(self, graph_setting):
         """GENERATE FIGURE PLOTTING OBJECT VALUES OVER TIME
@@ -430,10 +467,12 @@ class SD_UI(tk.Tk):
         #Initialize Figure
         self.screenwidth = self.winfo_screenwidth()
         self.screenheight = self.winfo_screenwidth()
-        #fig = Figure(figsize=(self.screenwidth/202.5, self.screenheight/372.4), dpi=100)
+        # fig = Figure(figsize=(self.screenwidth/202.5, self.screenheight/372.4), dpi=100)
         #fig = Figure(figsize=(7.75, 2.5), dpi=100)
-        #fig, ax1 = plt.subplots(figsize=(10.5, 4))
-        fig, ax1 = plt.subplots(figsize=(7.75, 2.5))
+        # fig, ax1 = plt.subplots(figsize=(self.screenwidth/495.48, self.screenheight/1536))
+        fig, ax1 = plt.subplots(figsize=(self.screenwidth/384, self.screenheight/1097))
+
+        # fig, ax1 = plt.subplots(figsize=(7.75, 2.5))
         # (7.75 and 2.5 are the values that work on Shea's monitor)
         
         
@@ -499,7 +538,10 @@ class SD_UI(tk.Tk):
         
         #Identify the frame housing the specific graph and delete it
         framename = self.graph_canvas_list[col][index].get_tk_widget().master
+        self.figures[index].clear()
+        plt.close(self.figures[index])
         self.graph_canvas_list[col][index].get_tk_widget().destroy()
+        
         
         #Identify the proper SD object to plot in replacement
         graph = self.translate(self.graph_setting_list[col][index].get(),
@@ -507,10 +549,11 @@ class SD_UI(tk.Tk):
                           output_language = 'english')
         
         #Generate the new graph and store it for future reference
-        canvas = self.make_graph(framename, graph,
+        canvas,fig = self.make_graph(framename, graph,
                         gridpos = index*2+1)
         self.graph_canvas_list[col][index] = canvas
-
+        self.figures[index] = fig
+        
         #Set the dropdown menu background to its proper color
         SDob = self.SD_Map.retrieve_ob(graph)
         normvalue = self.norm(self.CatColorDict[SDob.category])
@@ -799,6 +842,14 @@ class SD_UI(tk.Tk):
                                highlightbackground=self.highlight_color)
         automatic_button.grid(column=0, row=5, columnspan=2)
         
+        #Generate the Clear Simulation Button
+        clear_button = tk.Button(control_frame, text = self.translate('Clear Simulation'),
+                                 command = lambda: self.clear_simulation(),
+                                 font=('Arial',24),
+                                 bg=self.button_color,
+                                 highlightbackground=self.highlight_color)
+        clear_button.grid(column=0, row=6, columnspan=2)
+        
         return control_frame
     
     def update_ClosureP(self):
@@ -898,11 +949,14 @@ class SD_UI(tk.Tk):
                 for entry in entrylist:
                     canvaslist.append(entry)
             
-            #For each graph, delete it and repalce it with an update graph
+            #For each graph, delete it and replace it with an update graph
             for canvas in canvaslist:
+
                 if index < 2:
                     col = 0
                     inputindex = index
+                    self.figures[index].clear()
+                    plt.close(self.figures[index])
                 else:
                     col = 1
                     inputindex = index - 2
@@ -911,9 +965,10 @@ class SD_UI(tk.Tk):
                 graph = self.translate(self.graph_setting_list[col][inputindex].get(),
                                        input_language=self.language,
                                        output_language='english')
-                canvas = self.make_graph(framename, graph,
+                canvas,fig = self.make_graph(framename, graph,
                             gridpos = inputindex*2+1)
                 self.graph_canvas_list[col][inputindex]=canvas
+                self.figures[index] = fig
                 index += 1
            
     def automatic_window(self):
@@ -1036,7 +1091,72 @@ class SD_UI(tk.Tk):
                 
         #Remove the run autonomously duration input window
         wind.destroy()
- 
+    
+    def clear_simulation(self):
+        
+        self.SD_Map = SDlib.SD_System(tuning_flag=self.tuning_flag,
+                                      location=self.location,
+                                      data_filepath=self.data_filepath)
+        
+        #Initialize the time series list and associated function(s)
+        if self.tuning_flag == 1:
+            self.timeSeries=[0]
+        else:
+            maxtimelist = []
+            
+            SD_dict = self.SD_Map.__dict__.copy()
+#            del SD_dict['location']
+
+            for SDattribute in SD_dict:
+                maxtimelist.append(len(self.SD_Map.__dict__[SDattribute].values))
+            maxtime = max(maxtimelist)
+            self.timeSeries = list(range(0,maxtime))
+            
+            for SDattribute in SD_dict:
+                vallen = len(self.SD_Map.__dict__[SDattribute].values)
+                timelen = len(self.timeSeries)
+                if vallen < timelen:
+                    timedif = timelen - vallen
+                    list_add = [self.SD_Map.__dict__[SDattribute].values[-1]] * timedif
+                    self.SD_Map.__dict__[SDattribute].values[0:0] = list_add
+        
+        self.timestep = lambda: self.timeSeries[-1] - self.timeSeries[-2]
+        
+        index = 0
+        
+        #Select all of the graphs
+        canvaslist = []
+        for entrylist in self.graph_canvas_list:
+            for entry in entrylist:
+                canvaslist.append(entry)
+        
+        #For each graph, delete it and replace it with an update graph
+        for canvas in canvaslist:
+
+            if index < 2:
+                col = 0
+                inputindex = index
+                self.figures[index].clear()
+                plt.close(self.figures[index])
+            else:
+                col = 1
+                inputindex = index - 2
+            framename = canvas.get_tk_widget().master
+            canvas.get_tk_widget().destroy()
+            graph = self.translate(self.graph_setting_list[col][inputindex].get(),
+                                   input_language=self.language,
+                                   output_language='english')
+            canvas,fig = self.make_graph(framename, graph,
+                        gridpos = inputindex*2+1)
+            self.graph_canvas_list[col][inputindex]=canvas
+            self.figures[index] = fig
+            index += 1
+            
+        #Update the time display
+        self.timev.set(self.timeSeries[-1])
+            
+        #Clear the Log
+        self.list_info_boxes['Log'].delete(0, tk.END)
 # =============================================================================
 #  Generate the Info Display Frame             
 # =============================================================================
@@ -1282,7 +1402,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Indonesia')
+                location = 'Rio de Janeiro')
 
     #Run the user interface
     UI.mainloop()
