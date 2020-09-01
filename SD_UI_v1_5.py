@@ -71,43 +71,31 @@ class SD_UI(tk.Tk):
             self.location = 'Rio de Janeiro'
             
         if self.location == 'Rio de Janeiro':
-            # self.shpfilepath = './Data/Brazil/Shapefiles/Bairros_AQ.shp'
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'PM10'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-43.1, -23.0, 0.01]
-            # self.data_filepath = './Data/Brazil/Brazil_Data.csv'
-            # self.shp_fields =  './Data/Brazil/shp_fields.csv'
             self.language = 'portuguese'
         elif self.location == 'Chile':
-            # self.shpfilepath = './Data/Chile/Shapefiles/Regions_data_simple.shp'
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
-            self.color_range =  'Población'
+            self.color_range =  'Population'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-35.0, -50.0, 0.0001]
-            # self.data_filepath = './Data/Chile/Chile_Data.csv'
-            # self.shp_fields =  './Data/Chile/shp_fields.csv'
             self.language = 'spanish'
         elif self.location == 'Indonesia':
-            # self.shpfilepath = './Data/Indonesia/Shapefiles/Regions_data.shp'
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'Total Cases'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [140.0,-12.0, 0.00016]
-            # self.data_filepath = './Data/Indonesia/Indonesia_Data.csv'
-            # self.shp_fields =  './Data/Indonesia/shp_fields.csv'
             self.language = 'english'
         elif self.location == 'Santiago':
-            # self.shpfilepath = './Data/Santiago/Shapefiles/Metro_comunas_simple_data.shp'
             self.color_range = 'PM10'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [-69.0, -34.0, 0.0025]
-            # self.data_filepath = './Data/Santiago/Santiago_Data.csv'
-            # self.shp_fields =  './Data/Santiago/shp_fields.csv'
             self.language = 'spanish'
             
         self.translations = './translations.csv' 
@@ -259,12 +247,21 @@ class SD_UI(tk.Tk):
     def make_top_menus(self):
         menubar = tk.Menu(self)
 
-        # create a pulldown menu, and add it to the menu bar
+        # create a pulldown menu for Languages, and add it to the menu bar
         language_menu = tk.Menu(menubar, tearoff=0)
         language_menu.add_command(label=self.translate("English"), command=lambda: self.replace_language('english'))
         language_menu.add_command(label=self.translate("Spanish"), command=lambda: self.replace_language('spanish'))
         language_menu.add_command(label=self.translate("Portuguese"), command=lambda: self.replace_language('portuguese'))
         menubar.add_cascade(label=self.translate("Languages"), menu=language_menu)
+        
+        # create a pulldown menu for switching context areas, and add it to the menu bar
+        context_menu = tk.Menu(menubar, tearoff=0)
+        context_menu.add_command(label=self.translate("Rio de Janeiro"), command=lambda: self.switch_context('Rio de Janeiro'))
+        context_menu.add_command(label=self.translate("Chile"), command=lambda: self.switch_context('Chile'))
+        context_menu.add_command(label=self.translate("Santiago"), command=lambda: self.switch_context('Santiago'))
+        context_menu.add_command(label=self.translate("Indonesia"), command=lambda: self.switch_context('Indonesia'))
+
+        menubar.add_cascade(label=self.translate("Locations"), menu=context_menu)
         
         # create more pulldown menus
         menubar.add_command(label=self.translate("Exit"), command=self.destroy)
@@ -280,6 +277,18 @@ class SD_UI(tk.Tk):
         UI = SD_UI(tuning = self.tuning_flag,
                     location = self.location,
                     language = new_language)
+    
+        #Run the user interface
+        UI.mainloop()
+        
+    def switch_context(self, new_location):
+        
+        self.destroy()
+        
+        #Generate user interface
+        UI = SD_UI(tuning = self.tuning_flag,
+                    location = new_location,
+                    language = self.language)
     
         #Run the user interface
         UI.mainloop()
@@ -1406,7 +1415,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Rio de Janeiro')
+                location = 'Chile')
 
     #Run the user interface
     UI.mainloop()
