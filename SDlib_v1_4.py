@@ -353,7 +353,7 @@ class SD_System:
            
             self.IPop = SD_object("'True' Unhospitalized Infected Population",
                               units = 'people',
-                              init_value = lambda: self.historical_data('True UnHos Infected', location, filename),
+                              init_value = lambda: self.historical_data('True Unhospitalized Infected', location, filename),
                               obtype = 'stock',
                               func = lambda tstep, tind: self.IPop.value(ind=tind) + (self.InfectR.value(ind=tind) - self.UHMR.value(ind=tind) - 
                                                                         self.HosR.value(ind=tind) - self.UHRR.value(ind=tind)) * tstep,
@@ -363,7 +363,7 @@ class SD_System:
         
             self.Deaths = SD_object('Deaths',
                               units = 'people',
-                              init_value = lambda: self.historical_data('total_obito', location, filename),
+                              init_value = lambda: self.historical_data('Accumulative Deaths', location, filename),
                               obtype = 'stock',
                               func = lambda tstep, tind: self.Deaths.value(ind=tind) + (self.UHMR.value(ind=tind) + self.HMR.value(ind=tind)) * tstep,
                               maxval = lambda: 100000000,
@@ -372,7 +372,7 @@ class SD_System:
             
             self.HPop = SD_object('Hospitalized Population',
                               units = 'people',
-                              init_value = lambda: self.historical_data('Hospitalizados', location, filename),
+                              init_value = lambda: self.historical_data('Hospitalized Population', location, filename),
                               obtype = 'stock',
                               func = lambda tstep, tind: self.HPop.value(ind=tind) + (self.HosR.value(ind=tind) - self.HMR.value(ind=tind) - self.HRR.value(ind=tind)) * tstep,
                               maxval = lambda: 1000000,
@@ -381,7 +381,7 @@ class SD_System:
             
             self.RPop = SD_object('Known Recovered Population',
                               units = 'people',
-                              init_value = lambda: self.historical_data('total_recup', location, filename),
+                              init_value = lambda: self.historical_data('Recovered Population', location, filename),
                               obtype = 'stock',
                               func = lambda tstep, tind: self.RPop.value(ind=tind) + (self.UHRR.value(ind=tind) + self.HRR.value(ind=tind)) * tstep,
                               maxval = lambda: 100000000,
@@ -390,7 +390,7 @@ class SD_System:
             
             self.mIPop = SD_object("Measured Unhospitalized Infected Population",
                               units = 'people',
-                              init_value = lambda: self.historical_data('Unhospitalized Infected', location, filename),
+                              init_value = lambda: self.historical_data('Measured Unhospitalized Infected', location, filename),
                               obtype = 'stock',
                               func = lambda tstep, tind: self.true_to_measured(self.IPop, 14, 0.25),
                               maxval = lambda: 100000000,
@@ -399,7 +399,7 @@ class SD_System:
             
             self.mTotIPop = SD_object('Measured Total Infected Population',
                               units = 'people',
-                              init_value = self.historical_data('Current Infected', location, filename),
+                              init_value = self.historical_data('Measured Current Infected', location, filename),
                               obtype = 'stock',
                               func = lambda tstep, tind: self.mIPop.value(ind=tind) + self.HPop.value(ind=tind),
                               maxval = lambda: 100000000,
@@ -419,7 +419,7 @@ class SD_System:
             
             self.IPop = SD_object("'True' Infected Population",
                               units = 'people',
-                              init_value = lambda: self.historical_data('True Infected', location, filename),
+                              init_value = lambda: self.historical_data('True Current Infected', location, filename),
                               obtype = 'stock',
                               func = lambda tstep, tind: self.IPop.value(ind=tind) + (self.InfectR.value(ind=tind)  - 
                                                                         self.RR.value(ind=tind) - self.MR.value(ind=tind)) * tstep,
@@ -429,7 +429,7 @@ class SD_System:
         
             self.Deaths = SD_object('Deaths',
                               units = 'people',
-                              init_value = lambda: self.historical_data('total_obito', location, filename),
+                              init_value = lambda: self.historical_data('Accumulative Deaths', location, filename),
                               obtype = 'stock',
                               func = lambda tstep, tind: self.Deaths.value(ind=tind) + self.MR.value(ind=tind) * tstep,
                               maxval = lambda: 100000000,
@@ -438,7 +438,7 @@ class SD_System:
             
             self.RPop = SD_object('Known Recovered Population',
                               units = 'people',
-                              init_value = lambda: self.historical_data('total_recup', location, filename),
+                              init_value = lambda: self.historical_data('Recovered Population', location, filename),
                               obtype = 'stock',
                               func = lambda tstep, tind: self.RPop.value(ind=tind) + self.RR.value(ind=tind) * tstep,
                               maxval = lambda: 100000000,
@@ -447,7 +447,7 @@ class SD_System:
             
             self.mIPop = SD_object("Measured Infected Population",
                               units = 'people',
-                              init_value = lambda: self.historical_data('Current Infected', location, filename),
+                              init_value = lambda: self.historical_data('Measured Current Infected', location, filename),
                               obtype = 'stock',
                               func = lambda tstep, tind: self.true_to_measured(self.IPop, 14, 0.25),
                               maxval = lambda: 100000000,
@@ -762,7 +762,7 @@ class SD_System:
             
             self.RioEmployment = SD_object('Rio de Janeiro Unemployment Rate',
                               units = 'percent',
-                              init_value = lambda: self.historical_data('Rio Unemployment Rate', location, filename),
+                              init_value = lambda: self.historical_data('Rio de Janeiro Unemployment Rate', location, filename),
                               obtype = 'stock',
                               func = lambda tstep, tind: self.RioEmployment.value(ind=tind) + self.RioEmploymentR.value(ind=tind) * tstep,
                               maxval = lambda: 1,
@@ -806,7 +806,7 @@ class SD_System:
             
                         self.AirPass = SD_object('Daily Flight Passengers',
                               units = 'people',
-                              init_value = lambda: self.historical_data('AirPassengers', location, filename),
+                              init_value = lambda: self.historical_data('Air Passengers', location, filename),
                               obtype = 'stock',
                               func = lambda tstep, tind: self.AirPass.value(ind=tind),
                               maxval = lambda: 10000000,

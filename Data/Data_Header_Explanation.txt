@@ -1,0 +1,11 @@
+The data used in the Vida model comes from a variety of sources and is current stored in either csv or shapefile form, depending on whether it is primarily temporal or geographic data.
+
+The contents of the Data Folder are described below.
+
+This text file, titled Data_Header_Explanation.txt, explains the format of the data used by Vida. It should be kept updated as these formats and organization change.
+
+For each context area, there is a folder: Data/[Context Area]/ . In each of these folders reside at minimum a csv titled temporal_data.csv that houses all of the temporal data, a csv titled shp_fields.csv which specifies which shapefile fields should be vizualized in the Vida UI, and a folder Data/[Context Area]/Shapefiles/, which in turn houses geographic_data shapefiles. There may be additional files and folders in the Data/[Context Area/ folder. If so, these will be unprocessed or in-process data that is not used by the Vida model, but only present for the convenience of developers.
+
+The spreadsheet Data/Data_Descriptions.xlsx is the primary repository for Vida-related metadata. It defines the headers and fieldnames of the csv's and shapefile's respectively, explains their meaning, lists their associated variable names in Vida, and documents their source. At time of writing, formating and importing data must be done manually by developers, though there is intention to provide functionality for API-based importing and user importing in the future. It should be noted that this spreadsheet only contains general descriptions of each data type. For detailed explanations, such as the standard used to categorize a particular case as coronavirus, the original source should be consulted.
+
+

@@ -71,46 +71,50 @@ class SD_UI(tk.Tk):
             self.location = 'Rio de Janeiro'
             
         if self.location == 'Rio de Janeiro':
-            self.shpfilepath = './Data/Brazil/Shapefiles/Bairros_AQ.shp'
+            # self.shpfilepath = './Data/Brazil/Shapefiles/Bairros_AQ.shp'
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'PM10'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-43.1, -23.0, 0.01]
-            self.data_filepath = './Data/Brazil/Brazil_Data.csv'
-            self.shp_fields =  './Data/Brazil/shp_fields.csv'
+            # self.data_filepath = './Data/Brazil/Brazil_Data.csv'
+            # self.shp_fields =  './Data/Brazil/shp_fields.csv'
             self.language = 'portuguese'
         elif self.location == 'Chile':
-            self.shpfilepath = './Data/Chile/Shapefiles/Regions_data_simple.shp'
+            # self.shpfilepath = './Data/Chile/Shapefiles/Regions_data_simple.shp'
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'Población'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-35.0, -50.0, 0.0001]
-            self.data_filepath = './Data/Chile/Chile_Data.csv'
-            self.shp_fields =  './Data/Chile/shp_fields.csv'
+            # self.data_filepath = './Data/Chile/Chile_Data.csv'
+            # self.shp_fields =  './Data/Chile/shp_fields.csv'
             self.language = 'spanish'
         elif self.location == 'Indonesia':
-            self.shpfilepath = './Data/Indonesia/Shapefiles/Regions_data.shp'
+            # self.shpfilepath = './Data/Indonesia/Shapefiles/Regions_data.shp'
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'Total Cases'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [140.0,-12.0, 0.00016]
-            self.data_filepath = './Data/Indonesia/Indonesia_Data.csv'
-            self.shp_fields =  './Data/Indonesia/shp_fields.csv'
+            # self.data_filepath = './Data/Indonesia/Indonesia_Data.csv'
+            # self.shp_fields =  './Data/Indonesia/shp_fields.csv'
             self.language = 'english'
         elif self.location == 'Santiago':
-            self.shpfilepath = './Data/Santiago/Shapefiles/Metro_comunas_simple_data.shp'
+            # self.shpfilepath = './Data/Santiago/Shapefiles/Metro_comunas_simple_data.shp'
             self.color_range = 'PM10'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [-69.0, -34.0, 0.0025]
-            self.data_filepath = './Data/Santiago/Santiago_Data.csv'
-            self.shp_fields =  './Data/Santiago/shp_fields.csv'
+            # self.data_filepath = './Data/Santiago/Santiago_Data.csv'
+            # self.shp_fields =  './Data/Santiago/shp_fields.csv'
             self.language = 'spanish'
             
         self.translations = './translations.csv' 
+        self.data_filepath = './Data/' + self.location + '/temporal_data.csv'
+        self.shp_fields = './Data/' + self.location + '/shp_fields.csv'
+        self.shpfilepath = './Data/' + self.location + '/Shapefiles/geographic_data.shp'
+        
     
         if 'language' in kwargs:
             self.language = kwargs.pop('language')
