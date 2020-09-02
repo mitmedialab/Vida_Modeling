@@ -174,13 +174,6 @@ class SD_System:
                               func = lambda tstep, tind: self.ClosureP.value(),
                               category = 'Policies & Actions')
         
-        self.SocialDisP = SD_object('Social Distancing Policy',
-                              units = 'unitless',
-                              init_value = 1,
-                              obtype = 'variable',
-                              func = lambda tstep, tind: self.SocialDisP.value(),
-                              category = 'Policies & Actions')
-        
         self.NewOVents = SD_object('New Ventilator Orders',
                     units = 'ventilator',
                     init_value = 0,
@@ -189,6 +182,24 @@ class SD_System:
                     maxval = lambda: 1000000,
                     minval = lambda: 0,
                     category = 'Policies & Actions')
+        
+        if location in ['Rio de Janeiro', 'Indonesia']:
+            
+            self.SocialDisP = SD_object('Social Distancing Policy',
+                                  units = 'unitless',
+                                  init_value = 1,
+                                  obtype = 'variable',
+                                  func = lambda tstep, tind: self.SocialDisP.value(),
+                                  category = 'Policies & Actions')
+        elif location in ['Chile', 'Santiago']:
+            
+            self.SocialDisP = SD_object('Curfew Policy',
+                                  units = 'unitless',
+                                  init_value = 1,
+                                  obtype = 'variable',
+                                  func = lambda tstep, tind: self.SocialDisP.value(),
+                                  category = 'Policies & Actions')
+            
         
     # =============================================================================
     #   2 - Health Parameters  
@@ -486,7 +497,6 @@ class SD_System:
             self.UHRR = SD_object('Unhospitalized Recovery Rate',
                                 units = 'people/day',
                                 init_value = (1 - self.HosL.value()) * self.UHRL.value() * self.IPop.value() / self.AvDur.value(),
-    #                            init_value = 1,
                                 obtype = 'flow',
                                 func = lambda tstep, tind: (1 - self.HosL.value(ind=tind)) * self.UHRL.value(ind=tind) * self.IPop.value(ind=tind) / self.AvDur.value(ind=tind),
                                 maxval = lambda: self.IPop.value(),
@@ -606,7 +616,9 @@ class SD_System:
     # =============================================================================
     #   6 - Equipment Parameters 
     # =============================================================================
+        
         if location in ['Chile', 'Rio de Janeiro']:
+            
             self.VWTP = SD_object('Ventilator Willingness to Pay',
                       units = 'dollar/ventilator',
                       init_value = 25000,
@@ -968,50 +980,63 @@ class SD_System:
     #   11 - Auxillary Functions 
     # =============================================================================  
         
-    def ClosureDict(self, location):
-        """GENERATE DICTIONARY DEFINING THE CLOSURE POLICY OPTIONS
+
+    
+    def PolicyDicts(self, location):
+        """GENERATE DICTIONARY DEFINING THE ALL POLICY ACTIONS. EACH ENTRY
+        CONTAINS ITS OWN DICTIONARY WITH POLICY OPTIONS
         
         Args:
             location: the application location of the SD_System
             
         Returns:
-            ClosureDictOut: Directionary relating string titles of closure policies to 
+            PolicyDictsOut: Dictionary of Policy Actions, each containging a 
+            directionary relating string titles of policy options to 
                 numerical values generally according with effectiveness
         """
-        #dictionary relating string closure policy to numerical value
+        
+        PolicyDictsOut = dict()
         if location == 'Rio de Janeiro':
-            ClosureDictOut = {'No Closures' : 1,
-                            'Fase 6' : 0.9,
-                            'Fase 5': 0.8,
-                            'Fase 4' : 0.7,
-                            'Fase 3B': 0.6,
-                            'Fase 3A': 0.5,
-                            'Fase 2': 0.4,
-                            'Fase 1': 0.3,
-                            'Lockdown': 0.2}
+            PolicyDictsOut['Closure Policy'] = {'No Closures' : 1,
+                                                'Fase 6' : 0.9,
+                                                'Fase 5': 0.8,
+                                                'Fase 4' : 0.7,
+                                                'Fase 3B': 0.6,
+                                                'Fase 3A': 0.5,
+                                                'Fase 2': 0.4,
+                                                'Fase 1': 0.3,
+                                                'Lockdown': 0.2}
+
+            PolicyDictsOut['Social Distancing Policy'] = {'No Distancing' : 1,
+                                                        'Voluntary Social Distancing' : 0.6,
+                                                        'Mandatory Social Distancing' : 0.1}
+            
         elif location in ['Chile', 'Santiago']:
-             ClosureDictOut = {'No Closures' : 1,
-                            'Paso 5': 0.8,
+            PolicyDictsOut['Closure Policy'] = {'Paso 5': 1,
                             'Paso 4' : 0.7,
                             'Paso 3': 0.5,
                             'Paso 2': 0.4,
-                            'Paso 1': 0.3,
-                            'Lockdown': 0.2}
+                            'Paso 1': 0.2}
+            PolicyDictsOut['Curfew Policy'] = {'No Curfew' : 1,
+                                                'Unenforced Curfew' : 0.6,
+                                                'Enforced Curfew' : 0.1}
+            
+             
         elif location == 'Indonesia':
-            ClosureDictOut = {'No Closures' : 1,
-                            'Placeholder 5': 0.8,
-                            'Placeholder 4' : 0.7,
-                            'Placeholder 3': 0.5,
-                            'Placeholder 2': 0.4,
-                            'Placeholder 1': 0.3,
-                            'Lockdown': 0.2}
-        
-        
-        return ClosureDictOut
+            PolicyDictsOut['Closure Policy'] = {'No Closures' : 1,
+                                                'Placeholder 5': 0.8,
+                                                'Placeholder 4' : 0.7,
+                                                'Placeholder 3': 0.5,
+                                                'Placeholder 2': 0.4,
+                                                'Placeholder 1': 0.3,
+                                                'Lockdown': 0.2}
+            PolicyDictsOut['Social Distancing Policy'] = {'No Distancing' : 1,
+                                                        'Voluntary Social Distancing' : 0.6,
+                                                        'Mandatory Social Distancing' : 0.1}
+        return PolicyDictsOut
     
-    
-    def ClosureDictInv(self, location):
-        """GENERATE INVERSE OF ClosureDict DICTIONARY
+    def PolicyDictsInv(self, location):
+        """GENERATE INVERSE OF PolicyDicts DICTIONARIES
         
         Args:
             location: the application location of the SD_System
@@ -1019,44 +1044,15 @@ class SD_System:
         Returns:
             ClosureDictInvOut: Directionary relating numerical values to string titles of closure policies
         """
-        #dictionary relating numerical closure policy to string value
-        cldict = self.ClosureDict(location)
-        ClosureDictInvOut = dict(map(reversed, cldict.items()))
-        return ClosureDictInvOut
-
         
-    def SocialDisDict(self):
-        """GENERATE DICTIONARY DEFINING THE SOCIAL DISTANCING POLICY OPTIONS
+        PolicyDictsInvOut = dict()
+        PolicyDictstemp = self.PolicyDicts(location)
+        for policy in PolicyDictstemp.keys():
+            #dictionary relating numerical closure policy to string value
+            # policy_dict = policy
+            PolicyDictsInvOut[policy] = dict(map(reversed, PolicyDictstemp[policy].items()))
         
-        Args:
-            N/A
-            
-        Returns:
-            SocialDisDictOut: Directionary relating string titles of social distancing policies 
-                to numerical values generally according with effectiveness
-        """
-        
-        #dictionary relating string social distancing policy to numerical value
-        SocialDisDictOut = {'No Distancing' : 1,
-                        'Voluntary Social Distancing' : 0.6,
-                        'Mandatory Social Distancing' : 0.1}
-        return SocialDisDictOut
-    
-    
-    def SocialDisDictInv(self):
-        """GENERATE INVERSE OF SocialDisDict DICTIONARY
-        
-        Args:
-            N/A
-            
-        Returns:
-            SocialDisDictInvOut: Directionary relating numerical values to string titles of closure policies
-        """
-        
-        #dictionary relating numerical social distancing policy to string value
-        sddict = self.SocialDisDict()
-        SocialDisDictInvOut = dict(map(reversed, sddict.items()))
-        return SocialDisDictInvOut
+        return PolicyDictsInvOut
     
     
     def CatColor(self):
@@ -1175,7 +1171,7 @@ class SD_System:
                     value = []
                 else:
                     if fieldname == 'Closure Policy':
-                        value = self.ClosureDict(location)[value]
+                        value = self.PolicyDicts(location)['Closure Policy'][value]
                     else:
                         value = float(value)
                 fieldvalues.append(value)
@@ -1192,18 +1188,10 @@ class SD_System:
             
 if str.__eq__(__name__, '__main__'):
     
-
-#    SD_Map = SD_System(tuning_flag=0,
-#                       location='Chile',
-#                       data_filepath='./Data/Chile/Chile_Data.csv')
-    
-    # SD_Map = SD_System(tuning_flag=0,
-    #                    location='Rio de Janeiro',
-    #                    data_filepath='./Data/Brazil/Brazil_Data.csv')
     
     SD_Map = SD_System(tuning_flag=0,
                    location='Santiago',
-                   data_filepath='./Data/Santiago/Santiago_Data.csv')
+                   data_filepath='./Data/Santiago/temporal_data.csv')
 
                    
    

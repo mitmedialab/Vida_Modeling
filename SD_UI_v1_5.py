@@ -58,13 +58,7 @@ class SD_UI(tk.Tk):
         self.button_color='#b1a4f5'
         self.configure(bg=self.default_background)
                 
-                  
-
-        #Load keyword arguments
-        if 'tuning' in kwargs:
-            self.tuning_flag = kwargs.pop('tuning')
-        else:
-            self.tuning_flag = 0
+        #Load location setting and location-specific data
         if 'location' in kwargs:
             self.location = kwargs.pop('location')
         else:
@@ -77,6 +71,7 @@ class SD_UI(tk.Tk):
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-43.1, -23.0, 0.01]
             self.language = 'portuguese'
+            # self.policy_options = ['Closure Policy', 'Social Distancing Policy']
         elif self.location == 'Chile':
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'Population'
@@ -84,6 +79,7 @@ class SD_UI(tk.Tk):
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-35.0, -50.0, 0.0001]
             self.language = 'spanish'
+            # self.policy_options = ['Closure Policy', 'Curfew Policy']
         elif self.location == 'Indonesia':
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'Total Cases'
@@ -91,19 +87,26 @@ class SD_UI(tk.Tk):
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [140.0,-12.0, 0.00016]
             self.language = 'english'
+            # self.policy_options = ['Closure Policy', 'Social Distancing Policy']
         elif self.location == 'Santiago':
             self.color_range = 'PM10'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [-69.0, -34.0, 0.0025]
             self.language = 'spanish'
+            # self.policy_options = ['Closure Policy', 'Curfew Policy']
             
+        #Set filepaths for relevant data and auxilary files
         self.translations = './translations.csv' 
         self.data_filepath = './Data/' + self.location + '/temporal_data.csv'
         self.shp_fields = './Data/' + self.location + '/shp_fields.csv'
         self.shpfilepath = './Data/' + self.location + '/Shapefiles/geographic_data.shp'
         
-    
+        #Load other keyword arguments
+        if 'tuning' in kwargs:
+            self.tuning_flag = kwargs.pop('tuning')
+        else:
+            self.tuning_flag = 0
         if 'language' in kwargs:
             self.language = kwargs.pop('language')
             
@@ -112,6 +115,10 @@ class SD_UI(tk.Tk):
         default_font = tk.font.nametofont("TkDefaultFont")
         default_font.configure(size=20)
         pad=3
+        
+        self.screenwidth = self.winfo_screenwidth()
+        self.screenheight = self.winfo_screenheight()
+        self.dpi = self.winfo_fpixels('1i')
         self._geom='200x200+0+0'
         self.geometry("{0}x{1}+0+0".format(
             self.winfo_screenwidth()-pad, self.winfo_screenheight()-pad))
@@ -148,13 +155,17 @@ class SD_UI(tk.Tk):
         self.timestep = lambda: self.timeSeries[-1] - self.timeSeries[-2]
 
         #Generate the top menus
-        self.make_top_menus()
+        self.menubar = self.make_top_menus()
         
         #Pull from the SD_Map various attributes for easy reference
-        self.ClosureDict = self.SD_Map.ClosureDict(self.location) #dictionary relating string closure policy to numerical value
-        self.ClosureDictInv = self.SD_Map.ClosureDictInv(self.location) #dictionary relating numerical closure policy to string value
-        self.SocialDisDict = self.SD_Map.SocialDisDict() #dictionary relating string social distancing policy to numerical value
-        self.SocialDisDictInv = self.SD_Map.SocialDisDictInv() #dictionary relating numerical social distancing policy to string value
+        # self.ClosureDict = self.SD_Map.ClosureDict(self.location) #dictionary relating string closure policy to numerical value
+        # self.ClosureDictInv = self.SD_Map.ClosureDictInv(self.location) #dictionary relating numerical closure policy to string value
+        # self.SocialDisDict = self.SD_Map.SocialDisDict() #dictionary relating string social distancing policy to numerical value
+        # self.SocialDisDictInv = self.SD_Map.SocialDisDictInv() #dictionary relating numerical social distancing policy to string value
+        
+        self.PolicyDicts = self.SD_Map.PolicyDicts(self.location) #dictionary relating string closure policy to numerical value
+        self.PolicyDictsInv = self.SD_Map.PolicyDictsInv(self.location) #dictionary relating numerical closure policy to string value
+        
         self.CatColorDict, self.colormap, self.norm = self.SD_Map.CatColor() #information relating categories to colors for visualization
         
         #Generate the four graphs and their associated dropdown menus
@@ -162,8 +173,6 @@ class SD_UI(tk.Tk):
         self.graph_canvas_list = [[],[]]
         self.graph_optionlist_list = [[],[]]
         self.graph_frame_L = self.make_graph_frame(self.default_graph1, self.default_graph2, 0) #left pair of graphs
-        # self.graph_frame_R = self.make_graph_frame('Employment Rate', 'Daily Emissions Rate', 1) #right pair of graphs
-        # self.graph_frame_L = self.make_graph_frame('Closure Policy', 'Hospitalized Population', 0) #left pair of graphs
 
         #Generate the policy action controls
         self.control_frame = self.make_control_frame()
@@ -173,10 +182,9 @@ class SD_UI(tk.Tk):
         self.info_frame = self.make_rule_display()
         
         self.frame_map, self.subframe_map, self.MAP = self.make_map_frame()
-        
 
     def toggle_geom(self,event):
-        """TOGGLE FULL SCREEN DISPLAY
+        """NOT CURRENTLY FUNCTIONAL - TOGGLE FULL SCREEN DISPLAY
         
         Args:
             event: triggering event
@@ -245,9 +253,18 @@ class SD_UI(tk.Tk):
 # =============================================================================   
 
     def make_top_menus(self):
+        """GENERATES THE DROPDOWN MENUS AT THE TOP OF THE UI. EXACT PLACEMENT IS
+        OPERATING SYSTEM DEPENDENT.
+        
+        Args:
+            N/A
+    
+        Returns:
+            N/A
+        """
         menubar = tk.Menu(self)
 
-        # create a pulldown menu for Languages, and add it to the menu bar
+        # create a pulldown menu for languages, and add it to the menu bar
         language_menu = tk.Menu(menubar, tearoff=0)
         language_menu.add_command(label=self.translate("English"), command=lambda: self.replace_language('english'))
         language_menu.add_command(label=self.translate("Spanish"), command=lambda: self.replace_language('spanish'))
@@ -260,29 +277,48 @@ class SD_UI(tk.Tk):
         context_menu.add_command(label=self.translate("Chile"), command=lambda: self.switch_context('Chile'))
         context_menu.add_command(label=self.translate("Santiago"), command=lambda: self.switch_context('Santiago'))
         context_menu.add_command(label=self.translate("Indonesia"), command=lambda: self.switch_context('Indonesia'))
-
         menubar.add_cascade(label=self.translate("Locations"), menu=context_menu)
         
-        # create more pulldown menus
+        # create an exit command that closes the UI
         menubar.add_command(label=self.translate("Exit"), command=self.destroy)
         
         # display the menu
         self.config(menu=menubar)
         
-    def replace_language(self, new_language):
+        return menubar
         
+    def replace_language(self, new_language):
+        """REPLACE THE DISPLAY LANGUAGE OF THE UI
+        
+        Args:
+            new_language: the new language to swtich the display to
+    
+        Returns:
+            N/A
+        """
+        
+        #Close the exisiting display
         self.destroy()
         
-        #Generate user interface
+        #Generate user interface with the new langauge
         UI = SD_UI(tuning = self.tuning_flag,
                     location = self.location,
                     language = new_language)
     
-        #Run the user interface
+        #Run the new user interface
         UI.mainloop()
         
     def switch_context(self, new_location):
+        """CHANGE THE CONTEXT AREA / LOCATION OF THE UI
         
+        Args:
+            new_location: the new context area / location to switch the UI to.
+    
+        Returns:
+            N/A
+        """
+        
+        #Close the exisiting display
         self.destroy()
         
         #Generate user interface
@@ -290,7 +326,7 @@ class SD_UI(tk.Tk):
                     location = new_location,
                     language = self.language)
     
-        #Run the user interface
+        #Run the new user interface
         UI.mainloop()
         
 # =============================================================================
@@ -310,15 +346,11 @@ class SD_UI(tk.Tk):
         """
         
         #Generate frame to house graphs and dropdowns, situate in appropriate column
-        #self.screenwidth = self.winfo_screenwidth()
-        #self.screenheight = self.winfo_screenwidth()
-        #width=self.screenwidth*.75, height=self.screenheight*.75
-        graph_frame = tk.Frame(self, width=500, height=300,
+        graph_frame = tk.Frame(self, #width=self.screenwidth*0.13, height=self.screenheight*0.2778,
                                padx = 5, pady = 5, 
                                # borderwidth=1, relief='groove',
                                bg=self.default_background)
         graph_frame.grid(column=col, row=0)
-        # graph_frame.grid_propagate(0)
         
         #Generate the top graph label and dropdown menu
         index = 0
@@ -365,7 +397,6 @@ class SD_UI(tk.Tk):
         
         #Get all SD objects from the SD Map
         SD_dict = self.SD_Map.__dict__.copy()
-#        del SD_dict['location']
         
         #Generate a list of the categories of all the SD objects
         categorylist = []
@@ -457,7 +488,7 @@ class SD_UI(tk.Tk):
             newrow = frame.grid_size()[1]      
             
         #Generate a frame specifically for the figure (this prevents resizing when the figure is updated)
-        canvas_frame = tk.Frame(frame,width=500, height=300)
+        canvas_frame = tk.Frame(frame) #, width=self.screenwidth*0.13, height=self.screenheight*0.2778)
         canvas_frame.grid(column=0, row=newrow+1, columnspan=2)
         
         #Generate a canvas and place the figure in it
@@ -478,13 +509,8 @@ class SD_UI(tk.Tk):
         """
         
         #Initialize Figure
-        self.screenwidth = self.winfo_screenwidth()
-        self.screenheight = self.winfo_screenwidth()
-        # fig = Figure(figsize=(self.screenwidth/202.5, self.screenheight/372.4), dpi=100)
-        #fig = Figure(figsize=(7.75, 2.5), dpi=100)
-        # fig, ax1 = plt.subplots(figsize=(self.screenwidth/495.48, self.screenheight/1536))
-        fig, ax1 = plt.subplots(figsize=(self.screenwidth/384, self.screenheight/1097))
 
+        fig, ax1 = plt.subplots(figsize=(0.25*self.screenwidth/self.dpi, 0.251*self.screenheight/self.dpi), dpi=self.dpi)
         # fig, ax1 = plt.subplots(figsize=(7.75, 2.5))
         # (7.75 and 2.5 are the values that work on Shea's monitor)
         
@@ -591,38 +617,29 @@ class SD_UI(tk.Tk):
 #  Generate the Map Frame             
 # =============================================================================     
     def make_map_frame(self):
-        frame_map = tk.Frame(self, width=500, height=400,
+        frame_map = tk.Frame(self, #width=500, height=400,
                              # borderwidth=1, relief='groove',
                              bg=self.default_background)
         frame_map.grid(column=1, row=0)
-        # frame_map.grid_propagate(0)
-        #Select specific UOA shapefile
 
-            
-            
+        #Select specific UOA shapefile
         self.shps = [shapefile.Reader(self.shpfilepath)]
-        
         
         # Make Color Fill Dropdown Menu
         self.color_optionlist =  self.make_fill_list(frame_map, self.shps[0])
         self.color_optionlist.configure(bg=self.button_color,
                                         highlightbackground=self.highlight_color)
         self.color_optionlist['menu'].config(bg=self.button_color)
-        # self.color_optionlist.grid(column=0, row=0)
         self.color_optionlist.pack()
-        
         
         color_title = self.translate(self.color_setting_name.get(),
                                      input_language = self.language,
                                      output_language = 'english')
-        print(color_title)
         color_range = self.color_field_modes[self.color_longname_modes_inverted[color_title]]
-        
         
         #Create Map and bind commands to it
         subframe_map = tk.Frame(frame_map,
                                 bg=self.default_background)
-        # subframe_map.grid(column=0, row=1)
         subframe_map.pack()
         MAP = MapWindow.Map(subframe_map,
                             self.shps,
@@ -630,8 +647,8 @@ class SD_UI(tk.Tk):
                             color_range= [color_range],
                             color_title= color_title,
                             lat_lon_zoom= self.map_loc,
-                            null_zeros=1)
-        
+                            null_zeros=1,
+                            window_dimensions = [self.screenwidth,self.screenheight])
         MAP.configure(bg='white')
         
         # MAP.bind("<Button-1>", self.print_coords)
@@ -660,17 +677,13 @@ class SD_UI(tk.Tk):
                 longfieldlist.append(testfield.longname)
                 categorylist.append(testfield.category)
             
-            
         #Create a index:field dictionary and a index:longname dictionary (and inverses)
         self.color_field_modes = dict(list(enumerate(shortfieldlist)))
-        # self.color_field_modes[0] = 'Nenhum'
         self.color_field_modes_inverted = dict(map(reversed, self.color_field_modes.items()))
         
         self.color_longname_modes = dict(list(enumerate(longfieldlist)))
-        # self.color_longname_modes[0] = 'Nenhum'
         self.color_longname_modes_inverted = dict(map(reversed, self.color_longname_modes.items()))
 
-        
         #Create UOA Color Fill Dropdown
         self.color_setting_name = tk.StringVar()
         self.color_setting_name.set(self.translate(self.color_range))
@@ -683,10 +696,7 @@ class SD_UI(tk.Tk):
                            *list(translated_color_list),
                             command=lambda e: self.replace_map_image(self.subframe_map)
                             )
-                           
-                           
         
-    
         #Return dropdown for future reference
         return color_optionlist 
     
@@ -701,7 +711,6 @@ class SD_UI(tk.Tk):
             self.choices = []
             self.category = []
             
-               
             #Appropriately label Other field
             with open(shp_fields) as csv_file:
                csvread = csv.DictReader(csv_file)
@@ -724,8 +733,6 @@ class SD_UI(tk.Tk):
             N/A
         """
         
-
-        
         #Pull settings into more usable formats
         fill_color_title = self.translate(self.color_setting_name.get(),
                                           input_language=self.language,
@@ -747,18 +754,12 @@ class SD_UI(tk.Tk):
                             color_range = [fill_color],
                             color_title = fill_color_title,
                             lat_lon_zoom = self.map_loc,
-                            null_zeros=1)
+                            null_zeros=1,
+                            window_dimensions = [self.screenwidth,self.screenheight])
                 
         self.MAP.configure(bg='white')
-        # #Bind commands to the map
-        # self.MAP.bind("<Button-1>", self.print_coords)       
-        # self.MAP.bind("<Double-Button-1>", lambda e: self.uoa_type(self.clickname))
         
         
-        
-
-
-       
 # =============================================================================
 #  Generate the Control Frame             
 # =============================================================================
@@ -790,41 +791,32 @@ class SD_UI(tk.Tk):
         
         boxwidth = 30
         
-        #Generate the Closure Policy control dropdown
-        option1_label = tk.Label(control_frame, text=self.translate('Closure Policy')+': ', font=('Arial',24),
-                                 bg=self.default_background)
-        option1_label.grid(column=0, row=1)
-        option1_list = list(self.ClosureDict.keys())
-        
-        self.option1_var = tk.StringVar()
-        self.option1_var.set(option1_list[0])
-        option1_menu = tk.OptionMenu(control_frame, self.option1_var, 
-                          *option1_list, 
-                           command=lambda _: self.update_ClosureP()
-                          )
-        option1_menu.config(width=boxwidth, anchor='w',
-                            bg=self.button_color,
-                            highlightbackground=self.highlight_color)
-        option1_menu['menu'].config(bg=self.button_color)
-        option1_menu.grid(column=1, row=1, columnspan=2)
-        
-        #Generate the Social Distancing Policy control dropdown
-        option2_label = tk.Label(control_frame, text=self.translate('Social Distancing Policy')+': ', font=('Arial',24),
-                                 bg=self.default_background)
-        option2_label.grid(column=0, row=2)
-        option2_list = list(self.SocialDisDict.keys())
-        
-        self.option2_var = tk.StringVar()
-        self.option2_var.set(option2_list[0])
-        option2_menu = tk.OptionMenu(control_frame, self.option2_var, 
-                          *option2_list, 
-                           command=lambda _: self.update_SocialDisP()
-                          )
-        option2_menu.config(width=boxwidth, anchor='w',
-                            bg=self.button_color,
-                            highlightbackground=self.highlight_color)
-        option2_menu['menu'].config(bg=self.button_color)
-        option2_menu.grid(column=1, row=2, columnspan=2)
+        index = 0 
+        self.policy_option_vars = dict()
+        self.option_menus = []
+        for policy in self.PolicyDicts.keys():
+            
+            option1_label = tk.Label(control_frame, text=self.translate(policy)+': ', font=('Arial',24),
+                                     bg=self.default_background)
+            option1_label.grid(column=0, row=index+1)
+            option1_list = []
+            for entry in list(self.PolicyDicts[policy].keys()):
+                option1_list.append(self.translate(entry))
+            
+            self.policy_option_vars[policy] = tk.StringVar()
+            self.policy_option_vars[policy].set(option1_list[0])
+            self.option_menus.append(tk.OptionMenu(control_frame, self.policy_option_vars[policy], 
+                              *option1_list, 
+                                command=lambda value, policy=policy: self.update_Policy(policy)
+                               # command=lambda value, policy=policy: print(policy)
+                              ))
+            self.option_menus[-1].config(width=boxwidth, anchor='w',
+                                bg=self.button_color,
+                                highlightbackground=self.highlight_color)
+            self.option_menus[-1]['menu'].config(bg=self.button_color)
+            self.option_menus[-1].grid(column=1, row=index+1, columnspan=2)
+            
+            index+=1
         
         #Generate the ventilator ordering entry box
         option3_label = tk.Label(control_frame, text=self.translate('Order New Ventilators')+': ', font=('Arial',24),
@@ -864,8 +856,8 @@ class SD_UI(tk.Tk):
         clear_button.grid(column=0, row=6, columnspan=2)
         
         return control_frame
-    
-    def update_ClosureP(self):
+        
+    def update_Policy(self,inputpolicy):
         """UPDATES THE CURRENT CLOSURE POLICY
         
         Args:
@@ -875,19 +867,15 @@ class SD_UI(tk.Tk):
             N/A
         """
         
-        self.SD_Map.ClosureP.values[-1] = self.ClosureDict[self.option1_var.get()]
-    
-    def update_SocialDisP(self):
-        """UPDATES THE SOCIAL DISTANCING POLICY
+        print(inputpolicy)
+        print(self.policy_option_vars[inputpolicy].get())
+        policyob = self.SD_Map.retrieve_ob(inputpolicy)
         
-        Args:
-            N/A
-    
-        Returns:
-            N/A
-        """
-        
-        self.SD_Map.SocialDisP.values[-1] = self.SocialDisDict [self.option2_var.get()]
+        print(policyob.name)
+
+        policyob.values[-1] = self.PolicyDicts[inputpolicy][self.translate(self.policy_option_vars[inputpolicy].get(),
+                                                                      input_language = self.language,
+                                                                      output_language = 'english')]
 
     def increment_time(self, **kwargs):
         """RUN SIMULATION FOR SPECIFIED NUMBER OF TIME INCREMENTS
@@ -1058,7 +1046,6 @@ class SD_UI(tk.Tk):
                 self.HPop = HPop
                 self.Vents = Vents
         
-        
         #Run simulation for specified number of timesteps
         if runtime > 0:
             displayflag = 0
@@ -1074,8 +1061,8 @@ class SD_UI(tk.Tk):
                     HPop = 0
                     Vents = 0
 
-                ClosureVal = self.ClosureDictInv[self.SD_Map.ClosureP.value()]
-                SocialDisVal = self.SocialDisDictInv[self.SD_Map.SocialDisP.value()]
+                ClosureVal = self.PolicyDictsInv[list(self.PolicyDicts.keys())[0]][self.SD_Map.ClosureP.value()]
+                SocialDisVal = self.PolicyDictsInv[list(self.PolicyDicts.keys())[1]][self.SD_Map.SocialDisP.value()]
                 mInfectR = self.SD_Map.mInfectR.value()
                 
                 rule_input = RuleInputs(mIPop,
@@ -1107,6 +1094,7 @@ class SD_UI(tk.Tk):
     
     def clear_simulation(self):
         
+        #Reload a the SD Map to clear data
         self.SD_Map = SDlib.SD_System(tuning_flag=self.tuning_flag,
                                       location=self.location,
                                       data_filepath=self.data_filepath)
@@ -1116,9 +1104,7 @@ class SD_UI(tk.Tk):
             self.timeSeries=[0]
         else:
             maxtimelist = []
-            
             SD_dict = self.SD_Map.__dict__.copy()
-#            del SD_dict['location']
 
             for SDattribute in SD_dict:
                 maxtimelist.append(len(self.SD_Map.__dict__[SDattribute].values))
@@ -1143,7 +1129,7 @@ class SD_UI(tk.Tk):
             for entry in entrylist:
                 canvaslist.append(entry)
         
-        #For each graph, delete it and replace it with an update graph
+        #For each graph, delete it and replace it with a fresh graph
         for canvas in canvaslist:
 
             if index < 2:
@@ -1170,6 +1156,8 @@ class SD_UI(tk.Tk):
             
         #Clear the Log
         self.list_info_boxes['Log'].delete(0, tk.END)
+        
+        
 # =============================================================================
 #  Generate the Info Display Frame             
 # =============================================================================
@@ -1202,7 +1190,7 @@ class SD_UI(tk.Tk):
         
         #Make Label and Tabs for the Rule Info Box
         list_tabparent = tk.ttk.Notebook(info_frame)
-        list_tabparent.config(height=250)
+        list_tabparent.config(height=int(round(0.23*self.screenheight)))
         list_tabparent.grid(column=0, row=0)
         self.list_info_boxes=dict()
         self.list_info_boxes['Rules'] = tk.Listbox(list_tabparent, width=50)
@@ -1242,40 +1230,40 @@ class SD_UI(tk.Tk):
     """ BRAZIL RULES """
     def Br_Rule1func(self, rule_input):
         output = 0
-        ClosureVal = self.ClosureDict[rule_input.ClosureVal]
-        if rule_input.mIPop >= 20 and ClosureVal == 'No Closures' and rule_input.SocialDisVal == 'No Distancing':
+        # ClosureVal = self.ClosureDict[rule_input.ClosureVal]
+        if rule_input.mIPop >= 20 and rule_input.ClosureVal == 'No Closures' and rule_input.SocialDisVal == 'No Distancing':
             # print('Rule 1 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.ClosureDict['Fase 3A']
-            self.SD_Map.SocialDisP.values[-1] = self.SocialDisDict['Voluntary Social Distancing']
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 3A']
+            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Voluntary Social Distancing']
             output = 1
         return output
     def Br_Rule2func(self, rule_input):
         output = 0
         if rule_input.mIPop >= 100 and (rule_input.ClosureVal in ['No Closures', 'Fase 6', 'Fase 5', 'Fase 4', 'Fase 3B', 'Fase 3A']):
             # print('Rule 2 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.ClosureDict['Fase 1'] 
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 1'] 
             output = 1
         return output
     def Br_Rule3func(self, rule_input):
         output = 0
         if rule_input.mInfectR >= 100 and (rule_input.ClosureVal in ['No Closures', 'Fase 6', 'Fase 5', 'Fase 4', 'Fase 3B', 'Fase 3A', 'Fase 2', 'Fase 1' ]):
             # print('Rule 3 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.ClosureDict['Lockdown']
-            self.SD_Map.SocialDisP.values[-1] = self.SocialDisDict['Mandatory Social Distancing'] 
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Lockdown']
+            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Mandatory Social Distancing'] 
             output = 1
         return output
     def Br_Rule4func(self,rule_input):
         output = 0
         if rule_input.mIPop <= 500 and (rule_input.ClosureVal in ['Fase 2', 'Fase 1', 'Lockdown' ]):
             # print('Rule 4 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.ClosureDict['Fase 3A']
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 3A']
             output = 1
         return output
     def Br_Rule5func(self, rule_input):
         output = 0
         if rule_input.mIPop <= 500 and rule_input.SocialDisVal == 'Mandatory Social Distancing':
             # print('Rule 5 Triggered')
-            self.SD_Map.SocialDisP.values[-1] = self.SocialDisDict['Voluntary Social Distancing']   
+            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Voluntary Social Distancing']   
             output = 1
         return output
     def Br_Rule6func(self, rule_input):
@@ -1296,40 +1284,40 @@ class SD_UI(tk.Tk):
     """ CHILE AND SANTIAGO RULES """
     def Ch_Rule1func(self, rule_input):
         output = 0
-        ClosureVal = self.ClosureDict[rule_input.ClosureVal]
-        if rule_input.mIPop >= 20 and ClosureVal == 'No Closures' and rule_input.SocialDisVal == 'No Distancing':
+        # ClosureVal = self.ClosureDict[rule_input.ClosureVal]
+        if rule_input.mIPop >= 20 and rule_input.ClosureVal == 'Paso 5' and rule_input.SocialDisVal == 'No Curfew':
             # print('Rule 1 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.ClosureDict['Paso 3']
-            self.SD_Map.SocialDisP.values[-1] = self.SocialDisDict['Voluntary Social Distancing']
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Paso 3']
+            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Curfew Policy']['Unenforced Curfew']
             output = 1
         return output
     def Ch_Rule2func(self, rule_input):
         output = 0
-        if rule_input.mIPop >= 100 and (rule_input.ClosureVal in ['No Closures', 'Paso 5', 'Paso 4']):
+        if rule_input.mIPop >= 100 and (rule_input.ClosureVal in ['Paso 5', 'Paso 4']):
             # print('Rule 2 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.ClosureDict['Paso 1'] 
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Paso 3'] 
             output = 1
         return output
     def Ch_Rule3func(self, rule_input):
         output = 0
-        if rule_input.mInfectR >= 100 and (rule_input.ClosureVal in ['No Closures', 'Paso 6', 'Paso 5', 'Paso 4', 'Paso 3', 'Paso 1' ]):
+        if rule_input.mInfectR >= 100 and (rule_input.ClosureVal in ['Paso 5', 'Paso 4', 'Paso 3', 'Paso 2']):
             # print('Rule 3 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.ClosureDict['Lockdown']
-            self.SD_Map.SocialDisP.values[-1] = self.SocialDisDict['Mandatory Social Distancing'] 
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Paso 1']
+            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Curfew Policy']['Enforced Curfew'] 
             output = 1
         return output
     def Ch_Rule4func(self,rule_input):
         output = 0
-        if rule_input.mIPop <= 500 and (rule_input.ClosureVal in ['Paso 2', 'Paso 1', 'Lockdown' ]):
+        if rule_input.mIPop <= 500 and (rule_input.ClosureVal in ['Paso 2', 'Paso 1']):
             # print('Rule 4 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.ClosureDict['Paso 3']
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Paso 3']
             output = 1
         return output
     def Ch_Rule5func(self, rule_input):
         output = 0
-        if rule_input.mIPop <= 500 and rule_input.SocialDisVal == 'Mandatory Social Distancing':
+        if rule_input.mIPop <= 500 and rule_input.SocialDisVal == 'Enforced Curfew':
             # print('Rule 5 Triggered')
-            self.SD_Map.SocialDisP.values[-1] = self.SocialDisDict['Voluntary Social Distancing']   
+            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Curfew Policy']['Unenforced Curfew']   
             output = 1
         return output
     
@@ -1407,15 +1395,9 @@ if str.__eq__(__name__, '__main__'):
     root.after(1000, root.destroy) 
     root.mainloop()
 
-    #Load system dynamics causal map
-    # SD_Map = SDlib.SD_System(tuning_flag=1)
-
-
-
-
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Chile')
+                location = 'Rio de Janeiro')
 
     #Run the user interface
     UI.mainloop()
