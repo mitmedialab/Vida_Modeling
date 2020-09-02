@@ -30,11 +30,11 @@ class Map(tk.Canvas):
 
     #Define Projections (Only Mercator used at this time)
     projections = {
-        'mercator': pyproj.Proj(init="epsg:3857"),
+        'mercator': pyproj.Proj("epsg:3857"),
         'spherical': pyproj.Proj('+proj=ortho +lon_0=28 +lat_0=47')
         }
 
-    screenwidth, screenheight = 1000, 600
+    
     
     def __init__(self, root, shapefiles, **kwargs):
         """INITIALIZES THE MAP CLASS
@@ -49,6 +49,14 @@ class Map(tk.Canvas):
         Returns:
             N/A
         """
+        
+        if 'window_dimensions' in kwargs:
+            temp_dimensions = kwargs.pop('window_dimensions')
+            self.screenwidth = int(round(temp_dimensions[0]*0.245))
+            self.screenheight = int(round(temp_dimensions[1]*0.556))
+        else:
+            self.screenwidth = int(round(3840*0.245))
+            self.screenheight = int(round(1080*0.556))
         
         super().__init__(root, width=self.screenwidth, height=self.screenheight)
         # super().__init__(root, width=root.winfo_width(), height=root.winfo_height())

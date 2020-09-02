@@ -48,6 +48,15 @@ Policies & Actions,Políticas y acciones,Políticas e Ações
 Closure Policy,Política de cierre,Política de Fechamento
 Social Distancing Policy,Política de distanciamiento,Política de Distanciamento
 New Ventilator Orders,Nuevos pedidos de ventiladores,Novos pedidos de ventiladores
+Curfew Policy,Política de toque de queda,Política de toque de recolher
+Lockdown,Cierre de emergencia,Confinamento
+No Closures,Sin cierres,Sem fechamentos
+No Distancing,Sin distanciamiento,Sem distanciamento
+Voluntary Social Distancing,Distanciamiento social voluntario,Distanciamento Social Voluntário
+Mandatory Social Distancing,Distanciamiento social obligatorio,Distanciamento Social Obrigatório
+No Curfew,No hay toque de queda,Sem toque de recolher
+Unenforced Curfew,Toque de queda no forzado,Toque de recolher não forçado
+Enforced Curfew,Toque de queda forzado,Toque de recolher forçado
 ,,
 Health Parameters,Parámetros de salud,Parâmetros de Saúde
 Base Contact Rate,Tasa de contacto base,Taxa de contato básica
@@ -150,3 +159,16 @@ Re-open Some Businesses,Reabrir algunos negocios,Reabrir algumas empresas
 Relax Mandatory Social Distancing,Relax Distancia social obligatoria,Relaxe o distanciamento social obrigatório
 Order More Ventilators,Solicite más ventiladores,Peça mais ventiladores
 Pay More for Ventilators to Accelerate Delivery,Pague más por los ventiladores para acelerar la entrega,Pague mais por ventiladores para acelerar a entrega
+,,
+Fase 6,Fase 6,Fase 6
+Fase 5,Fase 5,Fase 5
+Fase 4,Fase 4,Fase 4
+Fase 3B,Fase 3B,Fase 3B
+Fase 3A,Fase 3A,Fase 3A
+Fase 2,Fase 2,Fase 2
+Fase 1,Fase 1,Fase 1
+Paso 1,Paso 1,Paso 1
+Paso 2,Paso 2,Paso 2
+Paso 3,Paso 3,Paso 3
+Paso 4,Paso 4,Paso 4
+Paso 5,Paso 5,Paso 5
