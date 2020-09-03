@@ -52,10 +52,10 @@ class Map(tk.Canvas):
         
         if 'window_dimensions' in kwargs:
             temp_dimensions = kwargs.pop('window_dimensions')
-            self.screenwidth = int(round(temp_dimensions[0]*0.245))
+            self.screenwidth = int(round(temp_dimensions[0]*0.54))
             self.screenheight = int(round(temp_dimensions[1]*0.556))
         else:
-            self.screenwidth = int(round(3840*0.245))
+            self.screenwidth = int(round(1920*0.54))
             self.screenheight = int(round(1080*0.556))
         
         super().__init__(root, width=self.screenwidth, height=self.screenheight)
