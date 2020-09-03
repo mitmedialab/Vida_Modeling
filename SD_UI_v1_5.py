@@ -10,13 +10,7 @@ Created on Fri Jun 12 11:08:59 2020
 import tkinter as tk
 import tkinter.font
 import tkinter.ttk
-from tkinter import Widget
-from matplotlib.backends.backend_tkagg import (
-    FigureCanvasTkAgg, NavigationToolbar2Tk)
-# Implement the default Matplotlib key bindings.
-from matplotlib.backend_bases import key_press_handler
-from matplotlib.figure import Figure
-import matplotlib.animation as animation
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib import style
 style.use('ggplot')
 import matplotlib.pyplot as plt
@@ -25,6 +19,7 @@ import matplotlib.pyplot as plt
 import csv
 import numpy as np
 import shapefile
+import screeninfo
 
 #Import custom packages
 import SDlib_v1_4 as SDlib
@@ -111,18 +106,37 @@ class SD_UI(tk.Tk):
             self.language = kwargs.pop('language')
             
         #Set geometry and other parameters of the window
-        self.title(self.translate('System Dynamics Visualization'))
-        default_font = tk.font.nametofont("TkDefaultFont")
-        default_font.configure(size=20)
+        self.title(self.translate('System Dynamics Visualization'))       
         pad=3
-        
-        self.screenwidth = self.winfo_screenwidth()
-        self.screenheight = self.winfo_screenheight()
-        self.dpi = self.winfo_fpixels('1i')
         self._geom='200x200+0+0'
         self.geometry("{0}x{1}+0+0".format(
             self.winfo_screenwidth()-pad, self.winfo_screenheight()-pad))
-        self.bind('<Escape>',self.toggle_geom)  
+        self.update_idletasks() 
+        # self.wm_attributes('-zoomed', 1)
+
+        # Get the monitor which contains the window
+        def get_monitor_from_coord(x, y):
+            monitors = screeninfo.get_monitors()
+        
+            for m in reversed(monitors):
+                if m.x <= x <= m.width + m.x and m.y <= y <= m.height + m.y:
+                    return m
+            return monitors[0]
+        current_screen = get_monitor_from_coord(self.winfo_x(), self.winfo_y())
+        
+        #Get dimensions and resolution of window
+        self.screenwidth= current_screen.width 
+        self.screenheight= current_screen.height
+        self.inch_width = current_screen.width_mm * 0.0393701
+        self.inch_height = current_screen.height_mm * 0.0393701
+        self.dpi = self.screenwidth/self.inch_width
+        
+        #Set default font and font sizes
+        fontsize = int(round(20/7.634 * self.inch_height))
+        self.option_add("*Font", "helvetica " + str(fontsize))
+        self.small_font = tk.font.Font(family="helvetica", size=int(round(fontsize/2)))
+        
+        # self.bind('<Escape>',self.toggle_geom)  
     
     
         #Label the SD_Map input for easy reference
@@ -283,6 +297,7 @@ class SD_UI(tk.Tk):
         menubar.add_command(label=self.translate("Exit"), command=self.destroy)
         
         # display the menu
+        menubar.config(font=self.small_font)
         self.config(menu=menubar)
         
         return menubar
@@ -354,7 +369,7 @@ class SD_UI(tk.Tk):
         
         #Generate the top graph label and dropdown menu
         index = 0
-        graph_label = tk.Label(graph_frame, text=self.translate('Graph 1: '), font=('Aria',24),
+        graph_label = tk.Label(graph_frame, text=self.translate('Graph 1: '),
                                bg=self.default_background)
         graph_label.grid(column=0, row=0)
         graph_optionlist = self.make_graph_dropdown(graph_frame, firstgraph, index, col)
@@ -368,7 +383,7 @@ class SD_UI(tk.Tk):
         
         #Generate the bottom graph label and dropdown menu
         index = 1
-        graph_label = tk.Label(graph_frame, text=self.translate('Graph 2: '), font=('Arial',24),
+        graph_label = tk.Label(graph_frame, text=self.translate('Graph 2: '),
                                bg=self.default_background)
         graph_label.grid(column=0, row=3)        
         graph_optionlist = self.make_graph_dropdown(graph_frame, secondgraph, index, col)
@@ -510,7 +525,7 @@ class SD_UI(tk.Tk):
         
         #Initialize Figure
 
-        fig, ax1 = plt.subplots(figsize=(0.25*self.screenwidth/self.dpi, 0.251*self.screenheight/self.dpi), dpi=self.dpi)
+        fig, ax1 = plt.subplots(figsize=(0.6*self.inch_width, 0.35*self.inch_height), dpi=0.75*self.dpi)
         # fig, ax1 = plt.subplots(figsize=(7.75, 2.5))
         # (7.75 and 2.5 are the values that work on Shea's monitor)
         
@@ -524,8 +539,6 @@ class SD_UI(tk.Tk):
         else:
             plotval.append(SDob.values)
         if True in [True if x==[] else False for x in plotval]:
-            # print(SDob.name)
-            # print(SDob.values)
             plotval[:] = [x if x != [] else np.nan for x in plotval]
             
         
@@ -780,12 +793,12 @@ class SD_UI(tk.Tk):
         control_frame.grid(column=0, row=4, columnspan = 1)
         
         #Generate the time indicator
-        time_label = tk.Label(control_frame, text=self.translate('Day')+': ', font=('Arial',24),
+        time_label = tk.Label(control_frame, text=self.translate('Day')+': ',
                               bg=self.default_background)
         time_label.grid(column=0, row=0)
         self.timev = tk.StringVar()
         self.timev.set(str(self.timeSeries[-1]))
-        self.time_value_label = tk.Label(control_frame, textvariable=self.timev, font=('Arial',24),
+        self.time_value_label = tk.Label(control_frame, textvariable=self.timev,
                                          bg=self.default_background)
         self.time_value_label.grid(column=1, row=0, sticky='W')
         
@@ -796,7 +809,7 @@ class SD_UI(tk.Tk):
         self.option_menus = []
         for policy in self.PolicyDicts.keys():
             
-            option1_label = tk.Label(control_frame, text=self.translate(policy)+': ', font=('Arial',24),
+            option1_label = tk.Label(control_frame, text=self.translate(policy)+': ',
                                      bg=self.default_background)
             option1_label.grid(column=0, row=index+1)
             option1_list = []
@@ -808,7 +821,6 @@ class SD_UI(tk.Tk):
             self.option_menus.append(tk.OptionMenu(control_frame, self.policy_option_vars[policy], 
                               *option1_list, 
                                 command=lambda value, policy=policy: self.update_Policy(policy)
-                               # command=lambda value, policy=policy: print(policy)
                               ))
             self.option_menus[-1].config(width=boxwidth, anchor='w',
                                 bg=self.button_color,
@@ -819,13 +831,12 @@ class SD_UI(tk.Tk):
             index+=1
         
         #Generate the ventilator ordering entry box
-        option3_label = tk.Label(control_frame, text=self.translate('Order New Ventilators')+': ', font=('Arial',24),
+        option3_label = tk.Label(control_frame, text=self.translate('Order New Ventilators')+': ',
                                  bg=self.default_background)
         option3_label.grid(column=0, row=3)
         self.option3_var = tk.IntVar()
         self.option3_var.set(0)
-        FontOfEntryList=tkinter.font.Font(family="Arial", size=24)
-        self.option3_menu = tk.Entry(control_frame, font=FontOfEntryList,
+        self.option3_menu = tk.Entry(control_frame,
                                      highlightbackground=self.highlight_color)
         self.option3_menu.insert(0,self.option3_var.get())
         self.option3_menu.configure(width=5)
@@ -834,7 +845,6 @@ class SD_UI(tk.Tk):
         #Generate the Next Week simulation button
         run_button = tk.Button(control_frame, text=self.translate('Next Week'), 
                                command = lambda: self.increment_time(),
-                               font=('Arial',24),
                                bg=self.button_color,
                                highlightbackground=self.highlight_color)
         run_button.grid(column=0, row=4, columnspan=2)
@@ -842,7 +852,6 @@ class SD_UI(tk.Tk):
         #Generate the Run Autonomously button
         automatic_button = tk.Button(control_frame, text=self.translate('Run Autonomously'), 
                                command = lambda: self.automatic_window(),
-                               font=('Arial',24),
                                bg=self.button_color,
                                highlightbackground=self.highlight_color)
         automatic_button.grid(column=0, row=5, columnspan=2)
@@ -850,7 +859,6 @@ class SD_UI(tk.Tk):
         #Generate the Clear Simulation Button
         clear_button = tk.Button(control_frame, text = self.translate('Clear Simulation'),
                                  command = lambda: self.clear_simulation(),
-                                 font=('Arial',24),
                                  bg=self.button_color,
                                  highlightbackground=self.highlight_color)
         clear_button.grid(column=0, row=6, columnspan=2)
@@ -858,21 +866,16 @@ class SD_UI(tk.Tk):
         return control_frame
         
     def update_Policy(self,inputpolicy):
-        """UPDATES THE CURRENT CLOSURE POLICY
+        """UPDATES THE CURRENT INPUT POLICY
         
         Args:
-            N/A
+            inputpolicy: Which policy to update (i.e. "Closure Policy")
     
         Returns:
             N/A
         """
         
-        print(inputpolicy)
-        print(self.policy_option_vars[inputpolicy].get())
         policyob = self.SD_Map.retrieve_ob(inputpolicy)
-        
-        print(policyob.name)
-
         policyob.values[-1] = self.PolicyDicts[inputpolicy][self.translate(self.policy_option_vars[inputpolicy].get(),
                                                                       input_language = self.language,
                                                                       output_language = 'english')]
@@ -987,15 +990,14 @@ class SD_UI(tk.Tk):
         windowtext = self.translate('How many days do you want the simulation to run for?') 
         automatic_window.title(windowtext)
         automatic_window.config(bg=self.default_background)
-        lbl_text = tk.Label(automatic_window, text=windowtext,font=('Arial',24),
+        lbl_text = tk.Label(automatic_window, text=windowtext,
                             bg=self.default_background)
         lbl_text.grid(column=0, row=0)
             
         #Create input box
         self.auto_var = tk.IntVar()
         self.auto_var.set(1)
-        FontOfEntryList=tkinter.font.Font(family="Arial",size=24)
-        auto_menu = tk.Entry(automatic_window, font=FontOfEntryList)
+        auto_menu = tk.Entry(automatic_window)
         auto_menu.insert(0,0)
         auto_menu.configure(width=5)
         auto_menu.grid(column=0, row=1)
@@ -1003,7 +1005,6 @@ class SD_UI(tk.Tk):
         #Create button to initate the simulation
         auto_run_button = tk.Button(automatic_window, text=self.translate('Run Simulation'), 
                                command = lambda: self.auto_run(automatic_window, int(auto_menu.get())),
-                               font=('Arial',24),
                                bg=self.button_color,
                                highlightbackground=self.highlight_color)
         auto_run_button.grid(column=0, row=2)
