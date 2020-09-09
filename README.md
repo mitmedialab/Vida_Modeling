@@ -1,4 +1,4 @@
-# SD_UI
+# Vida Modeling
 User Interface and Simulation Platform for a System Dynamics Model
 Part of the Vida Decision Support System for COVID-19
 Managed by the Space Enabled Research Group at the Massachusetts Institute of Technology
