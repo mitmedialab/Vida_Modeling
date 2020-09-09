@@ -763,7 +763,62 @@ class SD_System:
                       maxval = lambda: 1000,
                       minval = lambda: 0,
                       category = 'Environment')
-        
+
+        elif location == 'Indonesia':  
+
+                        self.Retail_Mob = SD_object('Retail and Recreation Mobility',
+                              units = 'Percent Change from Baseline',
+                              init_value = lambda: self.historical_data('retail_and_recreation_percent_change_from_baseline', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.Retail_Mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 100,
+                              minval = lambda: -100,
+                              category = 'Environment')
+
+                        self.Grocery_Mob = SD_object('Grocery and Pharmacy Mobility',
+                              units = 'Percent Change from Baseline',
+                              init_value = lambda: self.historical_data('grocery_and_pharmacy_percent_change_from_baseline', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.Grocery_Mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 100,
+                              minval = lambda: -100,
+                              category = 'Environment')                                                       
+
+                        self.Parks_Mob = SD_object('Parks Mobility',
+                              units = 'Percent Change from Baseline',
+                              init_value = lambda: self.historical_data('parks_percent_change_from_baseline', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.Parks_Mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 100,
+                              minval = lambda: -100,
+                              category = 'Environment')    
+
+                        self.Transit_Mob = SD_object('Transit Mobility',
+                              units = 'Percent Change from Baseline',
+                              init_value = lambda: self.historical_data('transit_stations_percent_change_from_baseline', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.Transit_Mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 100,
+                              minval = lambda: -100,
+                              category = 'Environment')  
+
+                        self.Workplace_Mob = SD_object('Workplace Mobility',
+                              units = 'Percent Change from Baseline',
+                              init_value = lambda: self.historical_data('workplaces_percent_change_from_baseline', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.Workplace_Mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 100,
+                              minval = lambda: -100,
+                              category = 'Environment')   
+
+                        self.Residential_Mob = SD_object('Residential Mobility',
+                              units = 'Percent Change from Baseline',
+                              init_value = lambda: self.historical_data('residential_percent_change_from_baseline', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.Residential_Mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 100,
+                              minval = lambda: -100,
+                              category = 'Environment')                   
         
     # =============================================================================
     #   8 - Economic 
@@ -827,15 +882,24 @@ class SD_System:
 
         elif location == 'Indonesia':
             
-                        self.AirPass = SD_object('Gross Domestic Product',
+                        self.GDP_Ind = SD_object('Gross Domestic Product',
                               units = 'Rp Million',
                               init_value = lambda: self.historical_data('GDP', location, filename),
                               obtype = 'stock',
-                              func = lambda tstep, tind: self.AirPass.value(ind=tind),
+                              func = lambda tstep, tind: self.GDP_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                               maxval = lambda: 10000000,
                               minval = lambda: 0,
-                              category = 'Economy')                              
-            
+                              category = 'Economy')    
+
+                        self.Arrivals_Ind = SD_object('Visitor Arrivals',
+                              units = 'People',
+                              init_value = lambda: self.historical_data('Arrivals', location, filename), #this historical data only goes through June, so post-June is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.Arrivals_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 10000000,
+                              minval = lambda: 0,
+                              category = 'Economy')
+                                                                                                  
         
     # =============================================================================
     #   9 - Adjustments for Tuning  
