@@ -1,3 +1,9 @@
 FieldName,LongName,Category
 Cases,Total Cases,
-Recovered,Recovered Cases,
+Recovered,Recovered Cases ,
+Retail,Retail and Recreation Mobility % Change from Baseline (late July),
+Grocery,Grocery and Pharmacy Mobility % Change from Baseline (late July),
+Parks,Parks Mobility % Change from Baseline (late July),
+Transit,Transit Mobility % Change from Baseline (late July),
+Workplace,Workplace Mobility % Change from Baseline (late July),
+Residential,Residential Mobility % Change from Baseline (late July),

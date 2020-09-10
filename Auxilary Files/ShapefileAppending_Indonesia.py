@@ -113,7 +113,13 @@ def ShapefileFormatter(shpfilepath, datapath,fieldname, writepath):
 
 
 metrics = metrics = ['Cases',
-           'Recovered'
+           'Recovered',
+           'Retail',
+           'Grocery',
+           'Parks',
+           'Transit',
+           'Workplace',
+           'Residential'
            ]
 
 
