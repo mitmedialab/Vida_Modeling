@@ -80,7 +80,7 @@ class SD_UI(tk.Tk):
             self.color_range =  'Total Cases'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
-            self.map_loc = [140.0,-12.0, 0.00016]
+            self.map_loc = [160.0,-23.0, 0.00011] #modified this to fit in screen with new fontsize and figsize settings
             self.language = 'english'
             # self.policy_options = ['Closure Policy', 'Social Distancing Policy']
         elif self.location == 'Santiago':
@@ -132,7 +132,8 @@ class SD_UI(tk.Tk):
         self.dpi = self.screenwidth/self.inch_width
         
         #Set default font and font sizes
-        fontsize = int(round(20/7.634 * self.inch_height))
+        #fontsize = int(round(20/7.634 * self.inch_height))
+        fontsize = int(round(20/12 * self.inch_height)) # these settings work on Shea's smaller monitor
         self.option_add("*Font", "helvetica " + str(fontsize))
         self.small_font = tk.font.Font(family="helvetica", size=int(round(fontsize/2)))
         
@@ -525,7 +526,8 @@ class SD_UI(tk.Tk):
         
         #Initialize Figure
 
-        fig, ax1 = plt.subplots(figsize=(0.6*self.inch_width, 0.35*self.inch_height), dpi=0.75*self.dpi)
+        #fig, ax1 = plt.subplots(figsize=(0.6*self.inch_width, 0.35*self.inch_height), dpi=0.75*self.dpi)
+        fig, ax1 = plt.subplots(figsize=(0.55*self.inch_width, 0.3*self.inch_height), dpi=0.75*self.dpi) # these settings work on Shea's smaller monitor
         # fig, ax1 = plt.subplots(figsize=(7.75, 2.5))
         # (7.75 and 2.5 are the values that work on Shea's monitor)
         
