@@ -685,6 +685,7 @@ class SD_UI(tk.Tk):
         for field in shp.fields:
             fieldname = field[0]
             testfield = self.fieldnamelookup(fieldname, self.shp_fields)
+            
             if testfield.fieldname != []:
                 shortfieldlist.append(testfield.fieldname)
                 longfieldlist.append(testfield.longname)
@@ -1398,7 +1399,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Rio de Janeiro')
+                location = 'Indonesia')
 
     #Run the user interface
     UI.mainloop()
