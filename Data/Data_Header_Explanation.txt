@@ -8,4 +8,5 @@ For each context area, there is a folder: Data/[Context Area]/ . In each of thes
 
 The spreadsheet Data/Data_Descriptions.xlsx is the primary repository for Vida-related metadata. It defines the headers and fieldnames of the csv's and shapefile's respectively, explains their meaning, lists their associated variable names in Vida, and documents their source. At time of writing, formating and importing data must be done manually by developers, though there is intention to provide functionality for API-based importing and user importing in the future. It should be noted that this spreadsheet only contains general descriptions of each data type. For detailed explanations, such as the standard used to categorize a particular case as coronavirus, the original source should be consulted.
 
+Currently all data is processed outside of the Vida model itself. That is, data will be collected from sources, formatted, calculations performed (if necessary), and added to the appropriate csv or shapefile.
 
