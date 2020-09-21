@@ -133,7 +133,7 @@ class SD_UI(tk.Tk):
         
         #Set default font and font sizes
         #fontsize = int(round(20/7.634 * self.inch_height))
-        fontsize = int(round(20/12 * self.inch_height)) # these settings work on Shea's smaller monitor
+        fontsize = int(round(0.016575085503472222 * self.screenheight))
         self.option_add("*Font", "helvetica " + str(fontsize))
         self.small_font = tk.font.Font(family="helvetica", size=int(round(fontsize/2)))
         
@@ -1401,7 +1401,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Indonesia')
+                location = 'Rio de Janeiro')
 
     #Run the user interface
     UI.mainloop()
