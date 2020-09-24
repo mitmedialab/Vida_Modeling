@@ -187,6 +187,7 @@ class SD_System:
             
             self.SocialDisP = SD_object('Social Distancing Policy',
                                   units = 'unitless',
+                                  #init_value = lambda: self.historical_data('Social Distancing Policy', location, filename),
                                   init_value = 1,
                                   obtype = 'variable',
                                   func = lambda tstep, tind: self.SocialDisP.value(),
@@ -1088,12 +1089,8 @@ class SD_System:
              
         elif location == 'Indonesia':
             PolicyDictsOut['Closure Policy'] = {'No Closures' : 1,
-                                                'Placeholder 5': 0.8,
-                                                'Placeholder 4' : 0.7,
-                                                'Placeholder 3': 0.5,
-                                                'Placeholder 2': 0.4,
-                                                'Placeholder 1': 0.3,
-                                                'Lockdown': 0.2}
+                                                'Relaxed Social Restrictions': 0.66,
+                                                'High Social Restrictions' : 0.33}
             PolicyDictsOut['Social Distancing Policy'] = {'No Distancing' : 1,
                                                         'Voluntary Social Distancing' : 0.6,
                                                         'Mandatory Social Distancing' : 0.1}

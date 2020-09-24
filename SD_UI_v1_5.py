@@ -80,7 +80,7 @@ class SD_UI(tk.Tk):
             self.color_range =  'Total Cases'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
-            self.map_loc = [160.0,-23.0, 0.00011] #modified this to fit in screen with new fontsize and figsize settings
+            self.map_loc = [143.0,-15.0, 0.00014] #modified this to fit in screen with new fontsize and figsize settings
             self.language = 'english'
             # self.policy_options = ['Closure Policy', 'Social Distancing Policy']
         elif self.location == 'Santiago':
@@ -1284,6 +1284,32 @@ class SD_UI(tk.Tk):
             self.SD_Map.VWTP.values[-1] = 50000
             output = 1
         return output
+
+    """ INDONESIA RULES """ # not going to update these until I fully understand them
+    def In_Rule1func(self, rule_input):
+        output = 0
+        # ClosureVal = self.ClosureDict[rule_input.ClosureVal]
+        if rule_input.mIPop >= 20 and rule_input.ClosureVal == 'No Closures' and rule_input.SocialDisVal == 'No Distancing':
+            # print('Rule 1 Triggered')
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 3A']
+            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Voluntary Social Distancing']
+            output = 1
+        return output
+    def Br_Rule2func(self, rule_input):
+        output = 0
+        if rule_input.mIPop >= 100 and (rule_input.ClosureVal in ['No Closures', 'Fase 6', 'Fase 5', 'Fase 4', 'Fase 3B', 'Fase 3A']):
+            # print('Rule 2 Triggered')
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 1'] 
+            output = 1
+        return output
+    def Br_Rule3func(self, rule_input):
+        output = 0
+        if rule_input.mInfectR >= 100 and (rule_input.ClosureVal in ['No Closures', 'Fase 6', 'Fase 5', 'Fase 4', 'Fase 3B', 'Fase 3A', 'Fase 2', 'Fase 1' ]):
+            # print('Rule 3 Triggered')
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Lockdown']
+            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Mandatory Social Distancing'] 
+            output = 1
+        return output    
     
     """ CHILE AND SANTIAGO RULES """
     def Ch_Rule1func(self, rule_input):
