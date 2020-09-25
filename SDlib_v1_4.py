@@ -183,12 +183,22 @@ class SD_System:
                     minval = lambda: 0,
                     category = 'Policies & Actions')
         
-        if location in ['Rio de Janeiro', 'Indonesia']:
+        if location in ['Rio de Janeiro']:
             
             self.SocialDisP = SD_object('Social Distancing Policy',
                                   units = 'unitless',
                                   #init_value = lambda: self.historical_data('Social Distancing Policy', location, filename),
                                   init_value = 1,
+                                  obtype = 'variable',
+                                  func = lambda tstep, tind: self.SocialDisP.value(),
+                                  category = 'Policies & Actions')
+
+        elif location in ['Indonesia']:
+            
+            self.SocialDisP = SD_object('Social Distancing Policy',
+                                  units = 'unitless',
+                                  init_value = lambda: self.historical_data('Social Distancing Policy', location, filename),
+                                  #init_value = 1,
                                   obtype = 'variable',
                                   func = lambda tstep, tind: self.SocialDisP.value(),
                                   category = 'Policies & Actions')
@@ -772,8 +782,8 @@ class SD_System:
                               init_value = lambda: self.historical_data('retail_and_recreation_percent_change_from_baseline', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
                               obtype = 'stock',
                               func = lambda tstep, tind: self.Retail_Mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
-                              maxval = lambda: 100,
-                              minval = lambda: -100,
+                              maxval = lambda: 100,   
+                              minval = lambda: -100, 
                               category = 'Environment')
 
                         self.Grocery_Mob = SD_object('Grocery and Pharmacy Mobility',
@@ -1233,6 +1243,8 @@ class SD_System:
                 else:
                     if fieldname == 'Closure Policy':
                         value = self.PolicyDicts(location)['Closure Policy'][value]
+                    elif fieldname == 'Social Distancing Policy':
+                        value = self.PolicyDicts(location)['Social Distancing Policy'][value]
                     else:
                         value = float(value)
                 fieldvalues.append(value)
