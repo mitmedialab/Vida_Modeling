@@ -1285,31 +1285,42 @@ class SD_UI(tk.Tk):
             output = 1
         return output
 
-    """ INDONESIA RULES """ # not going to update these until I fully understand them
+    """ INDONESIA RULES """ 
+    # transition from nothing to relaxed restrictions
     def In_Rule1func(self, rule_input):
         output = 0
         # ClosureVal = self.ClosureDict[rule_input.ClosureVal]
         if rule_input.mIPop >= 20 and rule_input.ClosureVal == 'No Closures' and rule_input.SocialDisVal == 'No Distancing':
             # print('Rule 1 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 3A']
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Relaxed Social Restrictions']
             self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Voluntary Social Distancing']
             output = 1
         return output
-    def Br_Rule2func(self, rule_input):
+    # transition from nothing or relaxed restrictions to high restrictions
+    def In_Rule2func(self, rule_input):
         output = 0
-        if rule_input.mIPop >= 100 and (rule_input.ClosureVal in ['No Closures', 'Fase 6', 'Fase 5', 'Fase 4', 'Fase 3B', 'Fase 3A']):
+        if rule_input.mIPop >= 5000 and (rule_input.ClosureVal in ['No Closures', 'Relaxed Social Restrictions']):
             # print('Rule 2 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 1'] 
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['High Social Restrictions'] 
+            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Mandatory Social Distancing']            
             output = 1
         return output
-    def Br_Rule3func(self, rule_input):
+    # Relax social restrictions
+    def In_Rule3func(self,rule_input):
         output = 0
-        if rule_input.mInfectR >= 100 and (rule_input.ClosureVal in ['No Closures', 'Fase 6', 'Fase 5', 'Fase 4', 'Fase 3B', 'Fase 3A', 'Fase 2', 'Fase 1' ]):
-            # print('Rule 3 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Lockdown']
-            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Mandatory Social Distancing'] 
+        if rule_input.mIPop <= 2500 and (rule_input.ClosureVal in ['High Social Restrictions']):
+            # print('Rule 4 Triggered')
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Relaxed Social Restrictions']
             output = 1
-        return output    
+        return output
+    # Relax social distancing    
+    def In_Rule4func(self, rule_input):
+        output = 0
+        if rule_input.mIPop <= 2500 and rule_input.SocialDisVal == 'Mandatory Social Distancing':
+            # print('Rule 5 Triggered')
+            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Voluntary Social Distancing']   
+            output = 1
+        return output 
     
     """ CHILE AND SANTIAGO RULES """
     def Ch_Rule1func(self, rule_input):
@@ -1377,7 +1388,7 @@ class SD_UI(tk.Tk):
             N/A
         """
         self.Rules = []
-        if self.location in ['Rio de Janeiro', 'Indonesia']:
+        if self.location in ['Rio de Janeiro']:
 
             self.Rules.append(SDlib.Rule('Initial Closures', 1, 
                                  func = lambda rule_input: self.Br_Rule1func(rule_input)))
@@ -1391,7 +1402,18 @@ class SD_UI(tk.Tk):
                                  func = lambda rule_input: self.Br_Rule4func(rule_input)))
             self.Rules.append(SDlib.Rule('Relax Mandatory Social Distancing', 5, 
                                  func = lambda rule_input: self.Br_Rule5func(rule_input)))
-            
+
+        elif self.location in ['Indonesia']:
+
+            self.Rules.append(SDlib.Rule('Implement Some Restrictions', 1, 
+                                 func = lambda rule_input: self.In_Rule1func(rule_input)))
+            self.Rules.append(SDlib.Rule('Implement High Restrictions', 2, 
+                                 func = lambda rule_input: self.In_Rule2func(rule_input)))
+            self.Rules.append(SDlib.Rule('Relax Some Restrictions', 3, 
+                                 func = lambda rule_input: self.In_Rule3func(rule_input)))
+            self.Rules.append(SDlib.Rule('Relax Mandatory Social Distancing', 4, 
+                                 func = lambda rule_input: self.In_Rule4func(rule_input))) 
+
         elif self.location in ['Chile', 'Santiago']:
             self.Rules.append(SDlib.Rule('Initial Closures', 1, 
                                  func = lambda rule_input: self.Ch_Rule1func(rule_input)))
