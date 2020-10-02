@@ -80,7 +80,7 @@ class SD_UI(tk.Tk):
             self.color_range =  'Total Cases'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
-            self.map_loc = [143.0,-15.0, 0.00014] #modified this to fit in screen with new fontsize and figsize settings
+            self.map_loc = [122.5,-9.0, 0.0004] #modified this to fit in screen with new fontsize and figsize settings
             self.language = 'english'
             # self.policy_options = ['Closure Policy', 'Social Distancing Policy']
         elif self.location == 'Santiago':
@@ -1449,7 +1449,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Rio de Janeiro')
+                location = 'Indonesia')
 
     #Run the user interface
     UI.mainloop()
