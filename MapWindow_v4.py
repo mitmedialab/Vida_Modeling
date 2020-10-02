@@ -325,7 +325,12 @@ class Map(tk.Canvas):
                     alpha = 0.5
                     if self.null_zeros == 1:
                         if value == 0:
-                            alpha = 0
+                            #alpha = 0 
+                            fill = self.winfo_rgb('black')
+                            alpha = 0.3
+                        #elif value == 0 and self.location in ['Indonesia']:
+                         #  fill = self.winfo_rgb('black')  
+                         #  alpha = 1
                             
                 else:
                     fill = self.winfo_rgb('green')
