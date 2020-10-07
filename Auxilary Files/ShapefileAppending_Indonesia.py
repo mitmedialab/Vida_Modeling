@@ -119,14 +119,14 @@ metrics = metrics = ['Cases',
            'Parks',
            'Transit',
            'Workplace',
-           'Residentia',
-           'houseex']
+           'Residential'
+           ]
 
 
 
 shppath = './Data/Indonesia/Shapefiles/Indonesia_Polygon.shp'
 datapath = './Data/Indonesia/Misc/ShapefileAddingIndonesia.xlsx'
-writepath = './Data/Indonesia/Shapefiles/geographic_data.shp'
+writepath = './Data/Indonesia/Shapefiles/Regions_data.shp'
 
 
 ShapefileFormatter(shppath, datapath, metrics, writepath)
