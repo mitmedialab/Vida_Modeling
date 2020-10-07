@@ -1,12 +1,12 @@
 english,spanish,portuguese
-Graph 1: ,Grafico 1: ,Gráfico 1: 
-Graph 2: ,Grafico 2: ,Gráfico 2: 
+Graph 1: ,Gráfico 1: ,Gráfico 1: 
+Graph 2: ,Gráfico 2: ,Gráfico 2: 
 Simulation,Simulación,Simulação
 History,Historia,História
 ,,
 System Dynamics Visualization,Visualización de dinámica de sistemas,Visualização da dinâmica do sistema
 English,Inglés,Inglês
-Spanish,Espanol,Espanhol
+Spanish,Español,Espanhol
 Portuguese,Portugués,Português
 Languages,Idiomas,Línguas
 Exit,Salida,Saída
@@ -28,17 +28,17 @@ Run Simulation,Ejecutar simulación,Executar Simulação
 ,,
 ,,
 ,,
-Days,Dias,Dias
-Day,Dia,Dia
+Days,Días,Dias
+Day,Dóa,Dia
 people,personas,pessoas
-people/day,personas por dia,pessoas por dia
+people/day,personas por día,pessoas por dia
 unitless,sin unidad,sem unidade
 people/(day*person),personas/(día*persona),pessoas/(dia*pessoa)
 likelihood/contact,probabilidad/contacto,probabilidade/contato
 probability,probabilidad,probabilidade
 ventilator,ventilador,ventilator
 dollar/ventilator,dólar por ventilador,dólar por ventilador
-ventilator/day,ventilador por dia,ventilador por dia
+ventilator/day,ventilador por día,ventilador por dia
 Celsius,Celsius,Celsius
 µg / m3,µg / m3,µg / m3
 ppm,ppm,ppm
@@ -96,11 +96,11 @@ Hospitalization Rate,Tasa de hospitalización,Taxa de hospitalização
 Recovery Rate,Tasa de recuperación,Taxa de recuperação
 Mortality Rate,Tasa de mortalidad,Taxa de mortalidade
 ,,
-Equipment Supplies,Suministros de equipo,Suprimentos de equipamentos
+Equipment Supplies,Suministros de equipos,Suprimentos de equipamentos
 Hospital Bed Capacity,Capacidad de la cama de hospital,Capacidade de leitos hospitalares
 Available Ventilators,Ventiladores disponibles,Ventiladores Disponíveis
 Ordered Ventilators,Ventiladores pedidos,Ventiladores solicitados
-Daily PCR Tests,Exámenes PCR diarias,Testes PCR diários
+Daily PCR Tests,Exámenes PCR diarios,Testes PCR diários
 ,,
 Equipment Parameters,Parámetros del equipo,Parâmetros de Equipamento
 Ventilator Willingness to Pay,Disposición del ventilador a pagar,Disposição do Ventilador a Pagar
@@ -156,7 +156,7 @@ Initial Closures,Cierres iniciales,Fechamentos iniciais
 Additional Closures,Cierres adicionales,Fechamentos Adicionais
 Complete Lockdown,Cierre completo,Bloqueio completo
 Re-open Some Businesses,Reabrir algunos negocios,Reabrir algumas empresas
-Relax Mandatory Social Distancing,Relax Distancia social obligatoria,Relaxe o distanciamento social obrigatório
+Relax Mandatory Social Distancing,Relajamiento Distancia social obligatoria,Relaxe o distanciamento social obrigatório
 Order More Ventilators,Solicite más ventiladores,Peça mais ventiladores
 Pay More for Ventilators to Accelerate Delivery,Pague más por los ventiladores para acelerar la entrega,Pague mais por ventiladores para acelerar a entrega
 ,,
