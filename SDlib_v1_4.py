@@ -912,7 +912,16 @@ class SD_System:
                               maxval = lambda: 10000000,
                               minval = lambda: 0,
                               category = 'Economy')
-                                                                                                  
+
+
+                        self.oil_Ind = SD_object('Oil and Gas Imports',
+                              units = 'Millions USD',
+                              init_value = lambda: self.historical_data('oil_imports', location, filename), #this historical data only goes through June, so post-June is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.oil_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 10000000,
+                              minval = lambda: 0,
+                              category = 'Economy')                                                                                                  
         
     # =============================================================================
     #   9 - Adjustments for Tuning  
