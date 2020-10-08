@@ -196,7 +196,6 @@ class SD_System:
                                   category = 'Policies & Actions')
 
         elif location in ['Indonesia']:
-            
             self.SocialDisP = SD_object('Social Distancing Policy',
                                   units = 'unitless',
                                   init_value = lambda: self.historical_data('Social Distancing Policy', location, filename),
@@ -204,6 +203,38 @@ class SD_System:
                                   obtype = 'variable',
                                   func = lambda tstep, tind: self.SocialDisP.value(),
                                   category = 'Policies & Actions')
+
+            self.SocialDisP_s = SD_object('Social Distancing Policy Sulawesi',
+                                  units = 'unitless',
+                                  init_value = lambda: self.historical_data('Social Distancing Policy_sulawesi', location, filename),
+                                  #init_value = 1,
+                                  obtype = 'variable',
+                                  func = lambda tstep, tind: self.SocialDisP_s.value(),
+                                  category = 'Policies & Actions')
+
+            self.SocialDisP_j = SD_object('Social Distancing Policy Java',
+                                  units = 'unitless',
+                                  init_value = lambda: self.historical_data('Social Distancing Policy_java', location, filename),
+                                  #init_value = 1,
+                                  obtype = 'variable',
+                                  func = lambda tstep, tind: self.SocialDisP_j.value(),
+                                  category = 'Policies & Actions')
+
+            self.ClosureP_s = SD_object('Closure Policy Sulawesi',
+                              units = 'unitless',
+                              init_value = lambda: self.historical_data('Closure Policy_sulawesi', location, filename),
+                              obtype = 'variable',
+                              func = lambda tstep, tind: self.ClosureP_s.value(),
+                              category = 'Policies & Actions')
+
+            self.ClosureP_j = SD_object('Closure Policy Java',
+                              units = 'unitless',
+                              init_value = lambda: self.historical_data('Closure Policy_java', location, filename),
+                              obtype = 'variable',
+                              func = lambda tstep, tind: self.ClosureP_j.value(),
+                              category = 'Policies & Actions')            
+
+                                  
         elif location in ['Chile', 'Santiago']:
             
             self.SocialDisP = SD_object('Curfew Policy',
@@ -329,7 +360,7 @@ class SD_System:
                         minval = lambda: 0,
                         category = 'Health Parameters')
             
-        elif location in ['Santiago', 'Indonesia']:
+        elif location in ['Santiago']:
             
             self.RecL = SD_object('Recovery Likelihood',
                       units = 'probability',
@@ -350,16 +381,60 @@ class SD_System:
                       category = 'Health Parameters')
             
         
-        self.AvDur = SD_object('Average Illness Duration',
-                  units = 'days',
-                  init_value = 14,
-                  obtype = 'variable',
-                  func = lambda tstep, tind: self.AvDur.value(ind=tind),
-                  maxval = lambda: 300,
-                  minval = lambda: 0,
-                  category = 'Health Parameters')
+            self.AvDur = SD_object('Average Illness Duration',
+                    units = 'days',
+                    init_value = 14,
+                    obtype = 'variable',
+                    func = lambda tstep, tind: self.AvDur.value(ind=tind),
+                    maxval = lambda: 300,
+                    minval = lambda: 0,
+                    category = 'Health Parameters')
+                  
+        elif location in ['Indonesia']:
+          #nationwide  
+            self.RecL = SD_object('Recovery Likelihood',
+                      units = 'probability',
+                      init_value = 0.79,
+                      obtype = 'variable',
+                      func = lambda tstep, tind: self.RecL.value(ind=tind),
+                      maxval = lambda: 1,
+                      minval = lambda: 0,
+                      category = 'Health Parameters')
+            
+            self.MorL = SD_object('Mortality Likelihood',
+                      units = 'probability',
+                      init_value = 1-self.RecL.value(),
+                      obtype = 'variable',
+                      func = lambda tstep, tind: 1-self.RecL.value(ind=tind),
+                      maxval = lambda: 1,
+                      minval = lambda: 0,
+                      category = 'Health Parameters')
+            
         
+            self.AvDur = SD_object('Average Illness Duration',
+                    units = 'days',
+                    init_value = 14,
+                    obtype = 'variable',
+                    func = lambda tstep, tind: self.AvDur.value(ind=tind),
+                    maxval = lambda: 300,
+                    minval = lambda: 0,
+                    category = 'Health Parameters')   
+            #island specific
+            self.ContactR_j = SD_object('Contact Rate Java',
+                              units = 'people/(day*person)',
+                              init_value = self.ClosureP_j.value() * self.SocialDisP_j.value() * self.BaseContactR.value(),
+                              obtype = 'variable',
+                              func = lambda tstep, tind: self.ClosureP_j.value() * self.SocialDisP_j.value() * self.BaseContactR.value(),
+                              category = 'Health Parameters'
+                              )    
 
+            self.ContactR_s = SD_object('Contact Rate Sulawesi',
+                              units = 'people/(day*person)',
+                              init_value = self.ClosureP_s.value() * self.SocialDisP_s.value() * self.BaseContactR.value(),
+                              obtype = 'variable',
+                              func = lambda tstep, tind: self.ClosureP_s.value() * self.SocialDisP_s.value() * self.BaseContactR.value(),
+                              category = 'Health Parameters'
+                              )    
         
     # =============================================================================
     #   3 - Health Populations  
@@ -439,7 +514,7 @@ class SD_System:
                               minval = lambda: 0,
                               category = 'Health Populations')
             
-        elif location in ['Santiago','Indonesia']:
+        elif location in ['Santiago']:
             
             self.IPop = SD_object("'True' Infected Population",
                               units = 'people',
@@ -478,7 +553,136 @@ class SD_System:
                               minval = lambda: 0,
                               category = 'Health Populations')
                 
+        elif location in ['Indonesia']:
+            #nationwide
+            self.IPop = SD_object("'True' Infected Population",
+                              units = 'people',
+                              init_value = lambda: self.historical_data('True Current Infected', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.IPop.value(ind=tind) + (self.InfectR.value(ind=tind)  - 
+                                                                        self.RR.value(ind=tind) - self.MR.value(ind=tind)) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
         
+            self.Deaths = SD_object('Deaths',
+                              units = 'people',
+                              init_value = lambda: self.historical_data('Accumulative Deaths', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.Deaths.value(ind=tind) + self.MR.value(ind=tind) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+            
+            self.RPop = SD_object('Known Recovered Population',
+                              units = 'people',
+                              init_value = lambda: self.historical_data('Recovered Population', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.RPop.value(ind=tind) + self.RR.value(ind=tind) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+            
+            self.mIPop = SD_object("Measured Infected Population",
+                              units = 'people',
+                              init_value = lambda: self.historical_data('Measured Current Infected', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.true_to_measured(self.IPop, 14, 0.25),
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')   
+            #island specific
+            self.IPop_j = SD_object("'True' Infected Population Java",
+                              units = 'people',
+                              init_value = lambda: self.historical_data('True Current Infected_java', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.IPop_j.value(ind=tind) + (self.InfectR_j.value(ind=tind)  - 
+                                                                        self.RR_j.value(ind=tind) - self.MR_j.value(ind=tind)) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+
+            self.IPop_s = SD_object("'True' Infected Population Sulawesi",
+                              units = 'people',
+                              init_value = lambda: self.historical_data('True Current Infected_SN', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.IPop_s.value(ind=tind) + (self.InfectR_s.value(ind=tind)  - 
+                                                                        self.RR_s.value(ind=tind) - self.MR_s.value(ind=tind)) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+        
+            self.Deaths_j = SD_object('Deaths Java',
+                              units = 'people',
+                              init_value = lambda: self.historical_data('Accumulative Deaths_java', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.Deaths_j.value(ind=tind) + self.MR_j.value(ind=tind) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+
+            self.Deaths_s = SD_object('Deaths Sulawesi',
+                              units = 'people',
+                              init_value = lambda: self.historical_data('Accumulative Deaths_SN', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.Deaths_s.value(ind=tind) + self.MR_s.value(ind=tind) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+            
+            self.RPop_j = SD_object('Known Recovered Population Java',
+                              units = 'people',
+                              init_value = lambda: self.historical_data('Recovered Population_java', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.RPop_j.value(ind=tind) + self.RR_j.value(ind=tind) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+
+            self.RPop_s = SD_object('Known Recovered Population Sulawesi',
+                              units = 'people',
+                              init_value = lambda: self.historical_data('Recovered Population_SN', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.RPop_s.value(ind=tind) + self.RR_s.value(ind=tind) * tstep,
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')
+            
+            self.mIPop_j = SD_object("Measured Infected Population Java",
+                              units = 'people',
+                              init_value = lambda: self.historical_data('Measured Current Infected_java', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.true_to_measured(self.IPop_j, 14, 0.25),
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations')  
+
+            self.mIPop_s = SD_object("Measured Infected Population Sulawesi",
+                              units = 'people',
+                              init_value = lambda: self.historical_data('Measured Current Infected_SN', location, filename),
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.true_to_measured(self.IPop_s, 14, 0.25),
+                              maxval = lambda: 100000000,
+                              minval = lambda: 0,
+                              category = 'Health Populations') 
+
+            self.SPop_j = SD_object('Susceptible Population Java',
+                            units = 'people',
+                            init_value = lambda: self.historical_data('Susceptible Population_java', location, filename),
+                            obtype = 'stock',
+                            func = lambda tstep, tind: self.SPop_j.value(ind=tind) - self.InfectR_j.value(ind=tind) * tstep,
+                            maxval = lambda: 1000000000,
+                            minval = lambda: 0,
+                            category = 'Health Populations')  
+
+            self.SPop_s = SD_object('Susceptible Population Sulawesi',
+                            units = 'people',
+                            init_value = lambda: self.historical_data('Susceptible Population_SN', location, filename),
+                            obtype = 'stock',
+                            func = lambda tstep, tind: self.SPop_s.value(ind=tind) - self.InfectR_s.value(ind=tind) * tstep,
+                            maxval = lambda: 1000000000,
+                            minval = lambda: 0,
+                            category = 'Health Populations')                                                                
     # =============================================================================
     #   4 - Health Flows  
     # =============================================================================
@@ -557,7 +761,7 @@ class SD_System:
                                 category = 'Health Flows'
                                 )
             
-        if location in ['Santiago','Indonesia']:
+        if location in ['Santiago']:
             
 
             self.RR = SD_object('Recovery Rate',
@@ -580,7 +784,114 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Health Flows'
                                 )
-    
+
+        if location in ['Indonesia']:
+            
+            #nationwide
+            self.RR = SD_object('Recovery Rate',
+                                units = 'people/day',
+                                init_value = self.RecL.value() * self.IPop.value() / self.AvDur.value(),
+                                # init_value = 1,
+                                obtype = 'flow',
+                                func = lambda tstep, tind: self.RecL.value(ind=tind) * self.IPop.value(ind=tind) / self.AvDur.value(ind=tind),
+                                maxval = lambda: self.IPop.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )
+            
+            self.MR = SD_object('Mortality Rate',
+                                units = 'people/day',
+                                init_value = self.MorL.value() * self.IPop.value() / self.AvDur.value(),
+                                obtype = 'flow',
+                                func = lambda tstep, tind: self.MorL.value(ind=tind) * self.IPop.value(ind=tind) / self.AvDur.value(ind=tind),
+                                maxval = lambda: self.IPop.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )
+            #Island specific
+            self.RR_j = SD_object('Recovery Rate Java',
+                                units = 'people/day',
+                                init_value = self.RecL.value() * self.IPop_j.value() / self.AvDur.value(),
+                                # init_value = 1,
+                                obtype = 'flow',
+                                func = lambda tstep, tind: self.RecL.value(ind=tind) * self.IPop_j.value(ind=tind) / self.AvDur.value(ind=tind),
+                                maxval = lambda: self.IPop.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )
+
+            self.RR_s = SD_object('Recovery Rate Sulawesi',
+                                units = 'people/day',
+                                init_value = self.RecL.value() * self.IPop_s.value() / self.AvDur.value(),
+                                # init_value = 1,
+                                obtype = 'flow',
+                                func = lambda tstep, tind: self.RecL.value(ind=tind) * self.IPop_s.value(ind=tind) / self.AvDur.value(ind=tind),
+                                maxval = lambda: self.IPop.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )                                
+            
+            self.MR_j = SD_object('Mortality Rate Java',
+                                units = 'people/day',
+                                init_value = self.MorL.value() * self.IPop_j.value() / self.AvDur.value(),
+                                obtype = 'flow',
+                                func = lambda tstep, tind: self.MorL.value(ind=tind) * self.IPop_j.value(ind=tind) / self.AvDur.value(ind=tind),
+                                maxval = lambda: self.IPop.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )
+
+            self.MR_s = SD_object('Mortality Rate Sulawesi',
+                                units = 'people/day',
+                                init_value = self.MorL.value() * self.IPop_s.value() / self.AvDur.value(),
+                                obtype = 'flow',
+                                func = lambda tstep, tind: self.MorL.value(ind=tind) * self.IPop_s.value(ind=tind) / self.AvDur.value(ind=tind),
+                                maxval = lambda: self.IPop.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )
+
+            self.InfectR_j = SD_object("'True' Infection Rate Java",
+                                        units = 'people/day',
+                                        init_value = lambda: self.historical_data('True Infection Rate_java', location, filename),
+                                        obtype = 'flow',
+                                        func = lambda tstep, tind: (self.combos(self.SPop_j.value(ind=tind) + self.IPop_j.value(ind=tind)) - self.combos(self.SPop_j.value(ind=tind)) - self.combos(self.IPop_j.value(ind=tind))) / 
+                                                            self.combos(self.SPop_j.value(ind=tind) + self.IPop_j.value(ind=tind)) * self.ContactR_j.value(ind=tind) * (self.SPop_j.value(ind=tind) + self.IPop_j.value(ind=tind)) * self.Infectivity.value(ind=tind),
+                                        maxval = lambda: self.SPop_j.value(),
+                                        minval = lambda: 0,
+                                        category = 'Health Flows'
+                                        )
+
+            self.InfectR_s = SD_object("'True' Infection Rate Sulawesi",
+                                        units = 'people/day',
+                                        init_value = lambda: self.historical_data('True Infection Rate_SN', location, filename),
+                                        obtype = 'flow',
+                                        func = lambda tstep, tind: (self.combos(self.SPop_s.value(ind=tind) + self.IPop_s.value(ind=tind)) - self.combos(self.SPop_s.value(ind=tind)) - self.combos(self.IPop_s.value(ind=tind))) / 
+                                                            self.combos(self.SPop_s.value(ind=tind) + self.IPop_s.value(ind=tind)) * self.ContactR_s.value(ind=tind) * (self.SPop_s.value(ind=tind) + self.IPop_s.value(ind=tind)) * self.Infectivity.value(ind=tind),
+                                        maxval = lambda: self.SPop_s.value(),
+                                        minval = lambda: 0,
+                                        category = 'Health Flows'
+                                        )                                        
+                    
+            self.mInfectR_j = SD_object("Measured Infection Rate Java",
+                                units = 'people/day',
+                                init_value = lambda: self.historical_data('Measured Infection Rate_java',  location, filename),
+                                obtype = 'flow',
+                                func = lambda tstep, tind: self.true_to_measured(self.InfectR_j, 14, 0.25),
+                                maxval = lambda: self.SPop_j.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )   
+
+            self.mInfectR_s = SD_object("Measured Infection Rate Sulawesi",
+                                units = 'people/day',
+                                init_value = lambda: self.historical_data('Measured Infection Rate_SN',  location, filename),
+                                obtype = 'flow',
+                                func = lambda tstep, tind: self.true_to_measured(self.InfectR_s, 14, 0.25),
+                                maxval = lambda: self.SPop.value(),
+                                minval = lambda: 0,
+                                category = 'Health Flows'
+                                )   
     # =============================================================================
     #   5 - Equipment Supplies  
     # =============================================================================
@@ -1109,12 +1420,33 @@ class SD_System:
             
              
         elif location == 'Indonesia':
+            #nationwide
             PolicyDictsOut['Closure Policy'] = {'No Closures' : 1,
                                                 'Relaxed Social Restrictions': 0.66,
                                                 'High Social Restrictions' : 0.33}
+
             PolicyDictsOut['Social Distancing Policy'] = {'No Distancing' : 1,
                                                         'Voluntary Social Distancing' : 0.6,
                                                         'Mandatory Social Distancing' : 0.1}
+
+            #island specific
+            PolicyDictsOut['Closure Policy Sulawesi'] = {'No Closures' : 1,
+                                                'Relaxed Social Restrictions': 0.66,
+                                                'High Social Restrictions' : 0.33}
+
+            PolicyDictsOut['Closure Policy Java'] = {'No Closures' : 1,
+                                                'Relaxed Social Restrictions': 0.66,
+                                                'High Social Restrictions' : 0.33}
+
+            PolicyDictsOut['Social Distancing Policy Sulawesi'] = {'No Distancing' : 1,
+                                                        'Voluntary Social Distancing' : 0.6,
+                                                        'Mandatory Social Distancing' : 0.1}
+
+            PolicyDictsOut['Social Distancing Policy Java'] = {'No Distancing' : 1,
+                                                        'Voluntary Social Distancing' : 0.6,
+                                                        'Mandatory Social Distancing' : 0.1} 
+                                                        
+                                                                                                               
         return PolicyDictsOut
     
     def PolicyDictsInv(self, location):
@@ -1256,6 +1588,15 @@ class SD_System:
                         value = self.PolicyDicts(location)['Closure Policy'][value]
                     elif fieldname == 'Social Distancing Policy':
                         value = self.PolicyDicts(location)['Social Distancing Policy'][value]
+                    #for Indonesia case
+                    elif fieldname == 'Social Distancing Policy_java':
+                        value = self.PolicyDicts(location)['Social Distancing Policy Java'][value]
+                    elif fieldname == 'Social Distancing Policy_sulawesi':
+                        value = self.PolicyDicts(location)['Social Distancing Policy Sulawesi'][value]
+                    elif fieldname == 'Closure Policy_java':
+                        value = self.PolicyDicts(location)['Closure Policy Java'][value]
+                    elif fieldname == 'Closure Policy_sulawesi':
+                        value = self.PolicyDicts(location)['Closure Policy Sulawesi'][value]                        
                     else:
                         value = float(value)
                 fieldvalues.append(value)
