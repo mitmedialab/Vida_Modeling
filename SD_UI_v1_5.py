@@ -1037,31 +1037,34 @@ class SD_UI(tk.Tk):
         
         #Define class for storing all conditional decision inputs
         class RuleInputs:
-            def __init__(self, mIPop,
-                         ClosureVal,
-                         SocialDisVal,
-                         mInfectR,
-                         HPop,
-                         Vents,
-                         mIPop_j,
-                         mIPop_s,
-                         ClosureVal_j,
-                         SocialDisVal_j,
-                         ClosureVal_s,
-                         SocialDisVal_s,
-                         mInfectR_j, 
-                         mInfectR_s,                                                                           
-                        ):
+            def __init__(self,  mIPop,
+                                ClosureVal,
+                                SocialDisVal,
+                                ClosureVal_j,
+                                SocialDisVal_j,
+                                ClosureVal_s,
+                                SocialDisVal_s,                                         
+                                mInfectR,
+                                mInfectR_s,
+                                mInfectR_j,                                                                                  
+                                HPop,
+                                mIPop_j,
+                                mIPop_s,
+                                Vents,                                                                           
+                                ):
+                
+                
+              
                 
                 self.mIPop = mIPop
                 self.mIPop_j = mIPop_j
                 self.mIPop_s = mIPop_s                                
                 self.ClosureVal = ClosureVal
                 self.SocialDisVal = SocialDisVal
-                self.ClosureVal = ClosureVal_j
-                self.SocialDisVal = SocialDisVal_j
-                self.ClosureVal = ClosureVal_s
-                self.SocialDisVal = SocialDisVal_s
+                self.ClosureVal_j = ClosureVal_j
+                self.SocialDisVal_j = SocialDisVal_j
+                self.ClosureVal_s = ClosureVal_s
+                self.SocialDisVal_s = SocialDisVal_s
                 self.mInfectR = mInfectR
                 self.mInfectR_s = mInfectR_s
                 self.mInfectR_j = mInfectR_j
@@ -1366,6 +1369,7 @@ class SD_UI(tk.Tk):
     # transition from nothing to relaxed restrictions
     def In_Rule1func_j(self, rule_input):
         output = 0
+
         # ClosureVal = self.ClosureDict[rule_input.ClosureVal]
         if rule_input.mIPop_j >= 20 and rule_input.ClosureVal_j == 'No Closures' and rule_input.SocialDisVal_j == 'No Distancing':
             # print('Rule 1 Triggered')
