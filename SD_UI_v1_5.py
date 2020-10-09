@@ -1391,7 +1391,7 @@ class SD_UI(tk.Tk):
     # transition from nothing or relaxed restrictions to high restrictions
     def In_Rule2func_j(self, rule_input):
         output = 0
-        if rule_input.mIPop_j >= 5000 and (rule_input.ClosureVal_j in ['No Closures', 'Relaxed Social Restrictions']):
+        if rule_input.mIPop_j >= 1000 and (rule_input.ClosureVal_j in ['No Closures', 'Relaxed Social Restrictions']):
             # print('Rule 2 Triggered')
             self.SD_Map.ClosureP_j.values[-1] = self.PolicyDicts['Closure Policy Java']['High Social Restrictions'] 
             self.SD_Map.SocialDisP_j.values[-1] = self.PolicyDicts['Social Distancing Policy Java']['Mandatory Social Distancing']            
@@ -1400,7 +1400,7 @@ class SD_UI(tk.Tk):
 
     def In_Rule2func_s(self, rule_input):
         output = 0
-        if rule_input.mIPop_s >= 5000 and (rule_input.ClosureVal_s in ['No Closures', 'Relaxed Social Restrictions']):
+        if rule_input.mIPop_s >= 500 and (rule_input.ClosureVal_s in ['No Closures', 'Relaxed Social Restrictions']):
             # print('Rule 2 Triggered')
             self.SD_Map.ClosureP_s.values[-1] = self.PolicyDicts['Closure Policy Sulawesi']['High Social Restrictions'] 
             self.SD_Map.SocialDisP_s.values[-1] = self.PolicyDicts['Social Distancing Policy Sulawesi']['Mandatory Social Distancing']            
@@ -1409,7 +1409,7 @@ class SD_UI(tk.Tk):
     # Relax social restrictions
     def In_Rule3func_j(self,rule_input):
         output = 0
-        if rule_input.mIPop_j <= 2500 and (rule_input.ClosureVal_j in ['High Social Restrictions']):
+        if rule_input.mIPop_j <= 500 and (rule_input.ClosureVal_j in ['High Social Restrictions']):
             # print('Rule 4 Triggered')
             self.SD_Map.ClosureP_j.values[-1] = self.PolicyDicts['Closure Policy Java']['Relaxed Social Restrictions']
             output = 1
@@ -1417,7 +1417,7 @@ class SD_UI(tk.Tk):
 
     def In_Rule3func_s(self,rule_input):
         output = 0
-        if rule_input.mIPop_s <= 2500 and (rule_input.ClosureVal_s in ['High Social Restrictions']):
+        if rule_input.mIPop_s <= 250 and (rule_input.ClosureVal_s in ['High Social Restrictions']):
             # print('Rule 4 Triggered')
             self.SD_Map.ClosureP_s.values[-1] = self.PolicyDicts['Closure Policy Sulawesi']['Relaxed Social Restrictions']
             output = 1
@@ -1426,7 +1426,7 @@ class SD_UI(tk.Tk):
     # Relax social distancing    
     def In_Rule4func_j(self, rule_input):
         output = 0
-        if rule_input.mIPop_j <= 2500 and rule_input.SocialDisVal_j == 'Mandatory Social Distancing':
+        if rule_input.mIPop_j <= 500 and rule_input.SocialDisVal_j == 'Mandatory Social Distancing':
             # print('Rule 5 Triggered')
             self.SD_Map.SocialDisP_j.values[-1] = self.PolicyDicts['Social Distancing Policy Java']['Voluntary Social Distancing']   
             output = 1
@@ -1434,7 +1434,7 @@ class SD_UI(tk.Tk):
 
     def In_Rule4func_s(self, rule_input):
         output = 0
-        if rule_input.mIPop_s <= 2500 and rule_input.SocialDisVal_s == 'Mandatory Social Distancing':
+        if rule_input.mIPop_s <= 250 and rule_input.SocialDisVal_s == 'Mandatory Social Distancing':
             # print('Rule 5 Triggered')
             self.SD_Map.SocialDisP_s.values[-1] = self.PolicyDicts['Social Distancing Policy Sulawesi']['Voluntary Social Distancing']   
             output = 1
