@@ -1,35 +1,35 @@
-Province,RegionID,Cases,Recovered,Retail,Grocery,Parks,Transit,Workplace,Residentia,houseex
-Aceh,ID-AC,0,0,0,0,0,0,0,0,0
-Bali,ID-BA,0,0,0,0,0,0,0,0,0
-Bangka-Belitung Islands,ID-BB,0,0,0,0,0,0,0,0,0
-Banten,ID-BT,0,0,0,0,0,0,0,0,0
-Bengkulu,ID-BE,0,0,0,0,0,0,0,0,0
-Central Java,ID-JT,"9,516","5,319",-6,1,-9,-37,-18,13,-4.929234346
-Central Kalimantan,ID-KT,0,0,0,0,0,0,0,0,0
-Central Sulawesi,ID-ST,0,0,0,0,0,0,0,0,0
-East Java,ID-JI,"22,089","14,415",-10,-4,-14,-38,-21,14,-4.820351513
-East Kalimantan,ID-KI,0,0,0,0,0,0,0,0,0
-East Nusa Tenggara,ID-NT,0,0,0,0,0,0,0,0,0
-Gorontalo,ID-GO,0,0,0,0,0,0,0,0,0
-Jakarta Special Capital Region,ID-JK,"21,399","13,208",-26,-8,-71,-42,-31,14,-7.519691454
-Jambi,ID-JA,0,0,0,0,0,0,0,0,0
-Lampung,ID-LA,0,0,0,0,0,0,0,0,0
-Maluku,ID-MA,0,0,0,0,0,0,0,0,0
-North Kalimantan,ID-KU,0,0,0,0,0,0,0,0,0
-North Maluku,ID-MU,0,0,0,0,0,0,0,0,0
-North Sulawesi,ID-SA,0,0,0,0,0,0,0,0,0
-North Sumatra,ID-SU,0,0,0,0,0,0,0,0,0
-Papua,ID-PA,0,0,0,0,0,0,0,0,0
-Riau,ID-RI,0,0,0,0,0,0,0,0,0
-Riau Islands,ID-KR,0,0,0,0,0,0,0,0,0
-Southeast Sulawesi,ID-SG,0,0,0,0,0,0,0,0,0
-South Kalimantan,ID-KS,0,0,0,0,0,0,0,0,0
-South Sulawesi,ID-SN,"9,422","6,482",-15,-2,-7,-47,-25,12,-6.181305038
-South Sumatra,ID-SS,0,0,0,0,0,0,0,0,0
-Special Region of Yogyakarta,ID-YO,0,0,0,0,0,0,0,0,0
-West Java,ID-JB,"6,532","3,966",-23,3,-2,-28,-23,13,-6.343321704
-West Kalimantan,ID-KB,0,0,0,0,0,0,0,0,0
-West Nusa Tenggara,ID-NB,0,0,0,0,0,0,0,0,0
-West Papua,ID-PB,0,0,0,0,0,0,0,0,0
-West Sulawesi,ID-SR,0,0,0,0,0,0,0,0,0
-West Sumatra,ID-SB,0,0,0,0,0,0,0,0,0
+Province,RegionID,Cases,Recovered,Retail,Grocery,Parks,Transit,Workplace,Residentia,houseex,consumex,govex,netex,GDRP
+Aceh,ID-AC,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bali,ID-BA,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bangka-Belitung Islands,ID-BB,0,0,0,0,0,0,0,0,0,0,0,0,0
+Banten,ID-BT,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bengkulu,ID-BE,0,0,0,0,0,0,0,0,0,0,0,0,0
+Central Java,ID-JT,"9,516","5,319",-6,1,-9,-37,-18,13,-4.929234346,1.055750926,21.62652302,-13.77685859,-5.17273133
+Central Kalimantan,ID-KT,0,0,0,0,0,0,0,0,0,0,0,0,0
+Central Sulawesi,ID-ST,0,0,0,0,0,0,0,0,0,0,0,0,0
+East Java,ID-JI,"22,089","14,415",-10,-4,-14,-38,-21,14,-4.820351513,-0.313438544,27.89651888,-15.14432014,-5.450369628
+East Kalimantan,ID-KI,0,0,0,0,0,0,0,0,0,0,0,0,0
+East Nusa Tenggara,ID-NT,0,0,0,0,0,0,0,0,0,0,0,0,0
+Gorontalo,ID-GO,0,0,0,0,0,0,0,0,0,0,0,0,0
+Jakarta Special Capital Region,ID-JK,"21,399","13,208",-26,-8,-71,-42,-31,14,-7.519691454,0.168283635,24.46372394,-28.14099236,-11.38467554
+Jambi,ID-JA,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lampung,ID-LA,0,0,0,0,0,0,0,0,0,0,0,0,0
+Maluku,ID-MA,0,0,0,0,0,0,0,0,0,0,0,0,0
+North Kalimantan,ID-KU,0,0,0,0,0,0,0,0,0,0,0,0,0
+North Maluku,ID-MU,0,0,0,0,0,0,0,0,0,0,0,0,0
+North Sulawesi,ID-SA,0,0,0,0,0,0,0,0,0,0,0,0,0
+North Sumatra,ID-SU,0,0,0,0,0,0,0,0,0,0,0,0,0
+Papua,ID-PA,0,0,0,0,0,0,0,0,0,0,0,0,0
+Riau,ID-RI,0,0,0,0,0,0,0,0,0,0,0,0,0
+Riau Islands,ID-KR,0,0,0,0,0,0,0,0,0,0,0,0,0
+Southeast Sulawesi,ID-SG,0,0,0,0,0,0,0,0,0,0,0,0,0
+South Kalimantan,ID-KS,0,0,0,0,0,0,0,0,0,0,0,0,0
+South Sulawesi,ID-SN,"9,422","6,482",-15,-2,-7,-47,-25,12,-6.181305038,8.093360647,46.23263576,122.2570962,-0.414985464
+South Sumatra,ID-SS,0,0,0,0,0,0,0,0,0,0,0,0,0
+Special Region of Yogyakarta,ID-YO,0,0,0,0,0,0,0,0,0,0,0,0,0
+West Java,ID-JB,"6,532","3,966",-23,3,-2,-28,-23,13,-6.343321704,-0.464271241,65.16547799,-10.15454048,-4.950709904
+West Kalimantan,ID-KB,0,0,0,0,0,0,0,0,0,0,0,0,0
+West Nusa Tenggara,ID-NB,0,0,0,0,0,0,0,0,0,0,0,0,0
+West Papua,ID-PB,0,0,0,0,0,0,0,0,0,0,0,0,0
+West Sulawesi,ID-SR,0,0,0,0,0,0,0,0,0,0,0,0,0
+West Sumatra,ID-SB,0,0,0,0,0,0,0,0,0,0,0,0,0

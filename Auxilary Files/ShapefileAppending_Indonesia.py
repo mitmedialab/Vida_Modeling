@@ -121,7 +121,11 @@ metrics = metrics = ['Cases',
            'Transit',
            'Workplace',
            'Residentia',
-           'houseex'
+           'houseex',
+           'consumex',
+           'govex',
+           'netex',
+           'GDRP'
            ]
 
 
