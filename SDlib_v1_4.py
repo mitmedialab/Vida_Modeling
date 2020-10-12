@@ -1227,12 +1227,102 @@ class SD_System:
 
                         self.oil_Ind = SD_object('Oil and Gas Imports',
                               units = 'Millions USD',
-                              init_value = lambda: self.historical_data('oil_imports', location, filename), #this historical data only goes through June, so post-June is a placeholder value
+                              init_value = lambda: self.historical_data('oil_imports', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                               obtype = 'stock',
                               func = lambda tstep, tind: self.oil_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                               maxval = lambda: 10000000,
                               minval = lambda: 0,
-                              category = 'Economy')                                                                                                  
+                              category = 'Economy') 
+
+                        self.household_ex_Ind = SD_object('Household Expenditures',
+                              units = 'Millions Rupiahs',
+                              init_value = lambda: self.historical_data('household_ex', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.household_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 10000000,
+                              minval = lambda: 0,
+                              category = 'Economy')  
+
+                        self.consumtion_ex_Ind = SD_object('Consumtion Expenditure LNPRT',
+                              units = 'Millions Rupiahs',
+                              init_value = lambda: self.historical_data('Consumtion_ex', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.consumtion_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 10000000,
+                              minval = lambda: 0,
+                              category = 'Economy')
+
+                        self.gov_ex_Ind = SD_object('Government Consumption Expenditure',
+                              units = 'Millions Rupiahs',
+                              init_value = lambda: self.historical_data('gov_ex', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.gov_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 10000000,
+                              minval = lambda: 0,
+                              category = 'Economy')         
+
+                        self.net_ex_Ind = SD_object('Net Exports',
+                              units = 'Millions Rupiahs',
+                              init_value = lambda: self.historical_data('net_ex', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.net_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 10000000,
+                              minval = lambda: 0,
+                              category = 'Economy')      
+
+                        self.GDP_manu_Ind = SD_object('Manufacturing GDP',
+                              units = 'Millions Rupiahs',
+                              init_value = lambda: self.historical_data('GDP_manu', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.GDP_manu_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 10000000,
+                              minval = lambda: 0,
+                              category = 'Economy')    
+
+                        self.GDP_cons_Ind = SD_object('Construction GDP',
+                              units = 'Millions Rupiahs',
+                              init_value = lambda: self.historical_data('GDP_cons', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.GDP_cons_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 10000000,
+                              minval = lambda: 0,
+                              category = 'Economy')   
+
+                        self.GDP_retail_Ind = SD_object('Retail and Vehicle Repair GDP',
+                              units = 'Millions Rupiahs',
+                              init_value = lambda: self.historical_data('GDP_retail', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.GDP_retail_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 10000000,
+                              minval = lambda: 0,
+                              category = 'Economy')     
+
+                        self.GDP_IT_Ind = SD_object('Information and Communication GDP',
+                              units = 'Millions Rupiahs',
+                              init_value = lambda: self.historical_data('GDP_IT', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.GDP_IT_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 10000000,
+                              minval = lambda: 0,
+                              category = 'Economy')       
+
+                        self.GDP_social_Ind = SD_object('Health and Social Work GDP',
+                              units = 'Millions Rupiahs',
+                              init_value = lambda: self.historical_data('GDP_social', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.GDP_social_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 10000000,
+                              minval = lambda: 0,
+                              category = 'Economy')           
+
+                        self.GDP_food_Ind = SD_object('Accomodation and Food Service GDP',
+                              units = 'Millions Rupiahs',
+                              init_value = lambda: self.historical_data('GDP_food', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                              obtype = 'stock',
+                              func = lambda tstep, tind: self.GDP_food_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                              maxval = lambda: 10000000,
+                              minval = lambda: 0,
+                              category = 'Economy')                                                                                                                                                                                                                                                                                                                                                                                            
         
     # =============================================================================
     #   9 - Adjustments for Tuning  
