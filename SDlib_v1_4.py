@@ -49,6 +49,7 @@ class SD_object:
                 # print(self.values)
             else:
                 self.values.append(init_value)
+                
         if 'units' in kwargs:
             self.units = kwargs.pop('units')
         if 'func' in kwargs:
@@ -69,6 +70,10 @@ class SD_object:
             self.history = kwargs.pop('history')
         else:
             self.history = []
+        if 'datatype' in kwargs:
+            self.datatype = kwargs.pop('datatype')
+        else:
+            self.datatype = 'numeric'
             
       
     def value(self, **kwargs):
@@ -174,6 +179,7 @@ class SD_System:
                               init_value = lambda: self.historical_data('Closure Policy', location, filename),
                               obtype = 'variable',
                               func = lambda tstep, tind: self.ClosureP.value(),
+                              datatype = 'stringdict',
                               category = 'Policies & Actions')
         
         self.NewOVents = SD_object('New Ventilator Orders',
@@ -193,6 +199,7 @@ class SD_System:
                                   init_value = 1,
                                   obtype = 'variable',
                                   func = lambda tstep, tind: self.SocialDisP.value(),
+                                  datatype = 'stringdict',
                                   category = 'Policies & Actions')
 
         elif location in ['Indonesia']:
@@ -202,6 +209,7 @@ class SD_System:
                                   #init_value = 1,
                                   obtype = 'variable',
                                   func = lambda tstep, tind: self.SocialDisP.value(),
+                                  datatype = 'stringdict',
                                   category = 'Policies & Actions')
 
             self.SocialDisP_s = SD_object('Social Distancing Policy Sulawesi',
@@ -210,6 +218,7 @@ class SD_System:
                                   #init_value = 1,
                                   obtype = 'variable',
                                   func = lambda tstep, tind: self.SocialDisP_s.value(),
+                                  datatype = 'stringdict',
                                   category = 'Policies & Actions')
 
             self.SocialDisP_j = SD_object('Social Distancing Policy Java',
@@ -218,6 +227,7 @@ class SD_System:
                                   #init_value = 1,
                                   obtype = 'variable',
                                   func = lambda tstep, tind: self.SocialDisP_j.value(),
+                                  datatype = 'stringdict',
                                   category = 'Policies & Actions')
 
             self.ClosureP_s = SD_object('Closure Policy Sulawesi',
@@ -225,6 +235,7 @@ class SD_System:
                               init_value = lambda: self.historical_data('Closure Policy_sulawesi', location, filename),
                               obtype = 'variable',
                               func = lambda tstep, tind: self.ClosureP_s.value(),
+                              datatype = 'stringdict',
                               category = 'Policies & Actions')
 
             self.ClosureP_j = SD_object('Closure Policy Java',
@@ -232,6 +243,7 @@ class SD_System:
                               init_value = lambda: self.historical_data('Closure Policy_java', location, filename),
                               obtype = 'variable',
                               func = lambda tstep, tind: self.ClosureP_j.value(),
+                              datatype = 'stringdict',
                               category = 'Policies & Actions')            
 
                                   
@@ -242,6 +254,7 @@ class SD_System:
                                   init_value = 1,
                                   obtype = 'variable',
                                   func = lambda tstep, tind: self.SocialDisP.value(),
+                                  datatype = 'stringdict',
                                   category = 'Policies & Actions')
             
         
@@ -272,6 +285,15 @@ class SD_System:
                               maxval = lambda: 1,
                               minval = lambda: 0,
                               category = 'Health Parameters')
+        
+        self.AvDur = SD_object('Average Illness Duration',
+                    units = 'days',
+                    init_value = 14,
+                    obtype = 'variable',
+                    func = lambda tstep, tind: self.AvDur.value(ind=tind),
+                    maxval = lambda: 300,
+                    minval = lambda: 0,
+                    category = 'Health Parameters')   
         
         if location in ['Chile', 'Rio de Janeiro']:
         
@@ -380,15 +402,7 @@ class SD_System:
                       minval = lambda: 0,
                       category = 'Health Parameters')
             
-        
-            self.AvDur = SD_object('Average Illness Duration',
-                    units = 'days',
-                    init_value = 14,
-                    obtype = 'variable',
-                    func = lambda tstep, tind: self.AvDur.value(ind=tind),
-                    maxval = lambda: 300,
-                    minval = lambda: 0,
-                    category = 'Health Parameters')
+
                   
         elif location in ['Indonesia']:
           #nationwide  
@@ -411,14 +425,7 @@ class SD_System:
                       category = 'Health Parameters')
             
         
-            self.AvDur = SD_object('Average Illness Duration',
-                    units = 'days',
-                    init_value = 14,
-                    obtype = 'variable',
-                    func = lambda tstep, tind: self.AvDur.value(ind=tind),
-                    maxval = lambda: 300,
-                    minval = lambda: 0,
-                    category = 'Health Parameters')   
+
             #island specific
             self.ContactR_j = SD_object('Contact Rate Java',
                               units = 'people/(day*person)',
