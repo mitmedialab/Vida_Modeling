@@ -1012,11 +1012,11 @@ class SD_UI(tk.Tk):
                                highlightbackground=self.highlight_color)
         auto_run_button.grid(column=0, row=2)
         
-        #Center the window on the screen (only works with 1 monitor)
+        #Center the window on the screen
         automatic_window.withdraw()
         automatic_window.update_idletasks()  # Update "requested size" from geometry manager
-        x = (automatic_window.winfo_screenwidth() - automatic_window.winfo_reqwidth()) / 2
-        y = (automatic_window.winfo_screenheight() - automatic_window.winfo_reqheight()) / 2
+        x = (self.screenwidth - automatic_window.winfo_reqwidth()) / 2
+        y = (self.screenheight - automatic_window.winfo_reqheight()) / 2
         automatic_window.geometry("+%d+%d" % (x, y))
         automatic_window.deiconify()
         
