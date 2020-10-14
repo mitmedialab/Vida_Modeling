@@ -522,10 +522,7 @@ class SD_UI(tk.Tk):
         
         #Initialize Figure
 
-        #fig, ax1 = plt.subplots(figsize=(0.6*self.inch_width, 0.35*self.inch_height), dpi=0.75*self.dpi)
         fig, ax1 = plt.subplots(figsize=(0.55*self.inch_width, 0.3*self.inch_height), dpi=0.75*self.dpi) # these settings work on Shea's smaller monitor
-        # fig, ax1 = plt.subplots(figsize=(7.75, 2.5))
-        # (7.75 and 2.5 are the values that work on Shea's monitor)
         
         
         #Retrieve SD Object based on name
@@ -536,23 +533,22 @@ class SD_UI(tk.Tk):
             plotval.extend(SDob.values)
         else:
             plotval.append(SDob.values)
-        if True in [True if x==[] else False for x in plotval]:
-            plotval[:] = [x if x != [] else np.nan for x in plotval]
+        if True in [True if not x else False for x in plotval]:
+            plotval[:] = [x if x else np.nan for x in plotval]
             
         
         #Identify color to use for plotting based on SD object's category
         normvalue = self.norm(self.CatColorDict[SDob.category])
         fill1 = np.array([self.colormap(normvalue)[0:3]])
 
-        #Generate scatterplot
-        # ax1 = fig.add_subplot(111)
         
         histTime = list(range(0,len(SDob.history)))
         histval = []
         histval.extend(SDob.history)
-        if True in [True if x==[] else False for x in histval]:
-            histval[:] = [x if x != [] else np.nan for x in histval]
+        if True in [True if not x else False for x in histval]:
+            histval[:] = [x if x else np.nan for x in histval]
             
+        #Generate scatterplot
         if self.tuning_flag == 1:
             ax1.scatter(self.timeSeries, plotval, c=fill1, marker="s", label = self.translate('Simulation'))
             ax1.scatter(histTime, histval, edgecolors=fill1, marker="o", label = self.translate('History'), facecolors='none')
@@ -1191,7 +1187,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Indonesia')
+                location = 'Rio de Janeiro')
 
     #Run the user interface
     UI.mainloop()

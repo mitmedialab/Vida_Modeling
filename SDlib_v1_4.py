@@ -90,7 +90,16 @@ class SD_object:
             ind = kwargs.pop('ind')
         else:
             ind = -1
-        return self.values[ind]
+            
+        outval = self.values[ind]
+        if outval == []:
+            while outval == []:
+                ind -= 1
+                outval = self.values[ind]
+                if ind <= -5000:
+                    break
+            
+        return outval
     
     def update(self, tstep, tind):
         """UPDATE THE SD OBJECT VALUE
@@ -106,6 +115,7 @@ class SD_object:
             self.values.append(min(max(self.func(tstep, tind), self.minval()), self.maxval()))
         else:
             self.values.append(self.func(tstep, tind))
+           
         
 
 # =============================================================================
@@ -1956,7 +1966,7 @@ class SD_System:
             EmpR = np.random.normal(0.0015, 0.0055, 1) 
             
         EmpR = EmpR + self.TotIPop.value(ind=tind)/50000000
-        return EmpR
+        return float(EmpR)
     
     
     def BraEmploymentR_update(self, tstep, tind):
@@ -1984,7 +1994,7 @@ class SD_System:
             EmpR = np.random.normal(0.0015, 0.0055, 1) 
             
         EmpR = EmpR + self.TotIPop.value(ind=tind)/50000000
-        return EmpR
+        return float(EmpR)
        
         
     # =============================================================================
@@ -2229,8 +2239,8 @@ if str.__eq__(__name__, '__main__'):
     
     
     SD_Map = SD_System(tuning_flag=0,
-                   location='Santiago',
-                   data_filepath='./Data/Santiago/temporal_data.csv')
+                   location='Rio de Janeiro',
+                   data_filepath='./Data/Rio de Janeiro/temporal_data.csv')
 
                    
    
