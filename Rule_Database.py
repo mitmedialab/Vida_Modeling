@@ -32,7 +32,7 @@ class Conditional_Database:
         
     
     # =============================================================================
-    #  RIO DE JANEIRO RULES            
+    # %% RIO DE JANEIRO RULES            
     # =============================================================================
     
     def Br_Rule1func(self, policy_input):
@@ -90,7 +90,7 @@ class Conditional_Database:
 
     
     # =============================================================================
-    #  INDONESIA RULES            
+    # %% INDONESIA RULES            
     # =============================================================================
     
     #Nationwide
@@ -201,7 +201,7 @@ class Conditional_Database:
         return output         
     
     # =============================================================================
-    #  CHILE RULES            
+    # %% CHILE RULES            
     # =============================================================================
     
     def Ch_Rule1func(self, policy_input):
@@ -258,7 +258,7 @@ class Conditional_Database:
         return output
     
     # =============================================================================
-    #  SANTIAGO RULES            
+    # %% SANTIAGO RULES            
     # =============================================================================
     
     def Sa_Rule1func(self, policy_input):
@@ -303,7 +303,9 @@ class Conditional_Database:
        
     
     
-
+# =============================================================================
+# %% make_rules            
+# =============================================================================
 
 def make_rules(UI):
     """PUT EACH DECISION RULE INTO A RULE CLASS AND STORE THEM AS A LIST
@@ -403,6 +405,9 @@ def make_rules(UI):
         
     return Rules
 
+# =============================================================================
+# %% Policy_Inputs            
+# =============================================================================
 
 def Policy_Inputs(UI):
     """TAKES THE NUMERIC POLICY VALUES AND CONVERTS THEM INTO STRINGS FOR USE IN THE RULES
