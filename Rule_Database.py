@@ -32,7 +32,7 @@ class Conditional_Database:
         
     
     # =============================================================================
-    #  BRAZIL RULES            
+    #  RIO DE JANEIRO RULES            
     # =============================================================================
     
     def Br_Rule1func(self, policy_input):
@@ -299,21 +299,8 @@ class Conditional_Database:
             output = 1
         return output
     
-    
-    def M_Rule6func(self, policy_input):
-        output = 0
-        if self.SD_Map.HPop.value() > 2.5 * self.SD_Map.Vents.value():
-            # print('Rule 6 Triggered')
-            self.SD_Map.NewOVents.values[-1] = 5
-            output = 1
-        return output
-    def M_Rule7func(self, policy_input):
-        output = 0
-        if self.SD_Map.HPop.value() > 7 * self.SD_Map.Vents.value():
-            # print('Rule 7 Triggered')
-            self.SD_Map.VWTP.values[-1] = 50000
-            output = 1
-        return output
+
+       
     
     
 
