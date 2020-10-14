@@ -24,6 +24,7 @@ import screeninfo
 #Import custom packages
 import SDlib_v1_4 as SDlib
 import MapWindow_v4 as MapWindow
+import Rule_Database
 
 
 
@@ -96,6 +97,7 @@ class SD_UI(tk.Tk):
         self.data_filepath = './Data/' + self.location + '/temporal_data.csv'
         self.shp_fields = './Data/' + self.location + '/shp_fields.csv'
         self.shpfilepath = './Data/' + self.location + '/Shapefiles/geographic_data.shp'
+    
         
         #Load other keyword arguments
         if 'tuning' in kwargs:
@@ -172,15 +174,9 @@ class SD_UI(tk.Tk):
         #Generate the top menus
         self.menubar = self.make_top_menus()
         
-        #Pull from the SD_Map various attributes for easy reference
-        # self.ClosureDict = self.SD_Map.ClosureDict(self.location) #dictionary relating string closure policy to numerical value
-        # self.ClosureDictInv = self.SD_Map.ClosureDictInv(self.location) #dictionary relating numerical closure policy to string value
-        # self.SocialDisDict = self.SD_Map.SocialDisDict() #dictionary relating string social distancing policy to numerical value
-        # self.SocialDisDictInv = self.SD_Map.SocialDisDictInv() #dictionary relating numerical social distancing policy to string value
-        
+        #Pull from the SD_Map various attributes for easy reference       
         self.PolicyDicts = self.SD_Map.PolicyDicts(self.location) #dictionary relating string closure policy to numerical value
         self.PolicyDictsInv = self.SD_Map.PolicyDictsInv(self.location) #dictionary relating numerical closure policy to string value
-        
         self.CatColorDict, self.colormap, self.norm = self.SD_Map.CatColor() #information relating categories to colors for visualization
         
         #Generate the four graphs and their associated dropdown menus
@@ -193,7 +189,7 @@ class SD_UI(tk.Tk):
         self.control_frame = self.make_control_frame()
         
         #Generate the decision rules and their associated display
-        self.make_rules()
+        self.Rules = Rule_Database.make_rules(self)
         self.info_frame = self.make_rule_display()
         
         self.frame_map, self.subframe_map, self.MAP = self.make_map_frame()
@@ -836,35 +832,35 @@ class SD_UI(tk.Tk):
         #Generate the ventilator ordering entry box
         option3_label = tk.Label(control_frame, text=self.translate('Order New Ventilators')+': ',
                                  bg=self.default_background)
-        option3_label.grid(column=0, row=3)
+        option3_label.grid(column=0, row=7)
         self.option3_var = tk.IntVar()
         self.option3_var.set(0)
         self.option3_menu = tk.Entry(control_frame,
                                      highlightbackground=self.highlight_color)
         self.option3_menu.insert(0,self.option3_var.get())
         self.option3_menu.configure(width=5)
-        self.option3_menu.grid(column=1, row=3, sticky='W')
+        self.option3_menu.grid(column=1, row=7, sticky='W')
 
         #Generate the Next Week simulation button
         run_button = tk.Button(control_frame, text=self.translate('Next Week'), 
                                command = lambda: self.increment_time(),
                                bg=self.button_color,
                                highlightbackground=self.highlight_color)
-        run_button.grid(column=0, row=4, columnspan=2)
+        run_button.grid(column=0, row=8, columnspan=1, sticky='E')
         
         #Generate the Run Autonomously button
         automatic_button = tk.Button(control_frame, text=self.translate('Run Autonomously'), 
                                command = lambda: self.automatic_window(),
                                bg=self.button_color,
                                highlightbackground=self.highlight_color)
-        automatic_button.grid(column=0, row=5, columnspan=2)
+        automatic_button.grid(column=1, row=8, columnspan=1)
         
         #Generate the Clear Simulation Button
         clear_button = tk.Button(control_frame, text = self.translate('Clear Simulation'),
                                  command = lambda: self.clear_simulation(),
                                  bg=self.button_color,
                                  highlightbackground=self.highlight_color)
-        clear_button.grid(column=0, row=6, columnspan=2)
+        clear_button.grid(column=2, row=8, columnspan=2)
         
         return control_frame
         
@@ -1034,52 +1030,17 @@ class SD_UI(tk.Tk):
         #Save runtime
         self.auto_var.set(runtime)
         
-        #Define class for storing all conditional decision inputs
-        class RuleInputs:
-            def __init__(self, mIPop,
-                         ClosureVal,
-                         SocialDisVal,
-                         mInfectR,
-                         HPop,
-                         Vents):
-                
-                self.mIPop = mIPop
-                self.ClosureVal = ClosureVal
-                self.SocialDisVal = SocialDisVal
-                self.mInfectR = mInfectR
-                self.HPop = HPop
-                self.Vents = Vents
-        
         #Run simulation for specified number of timesteps
         if runtime > 0:
             displayflag = 0
             for i in range(0,runtime):
                 
-                #Store all conditional decision inputs in class
-                if self.location in ['Chile', 'Rio de Janeiro']:
-                    mIPop = self.SD_Map.mTotIPop.value()
-                    HPop = self.SD_Map.HPop.value()
-                    Vents = self.SD_Map.Vents.value()
-                elif self.location in ['Santiago', 'Indonesia']:
-                    mIPop = self.SD_Map.mIPop.value()
-                    HPop = 0
-                    Vents = 0
-
-                ClosureVal = self.PolicyDictsInv[list(self.PolicyDicts.keys())[0]][self.SD_Map.ClosureP.value()]
-                SocialDisVal = self.PolicyDictsInv[list(self.PolicyDicts.keys())[1]][self.SD_Map.SocialDisP.value()]
-                mInfectR = self.SD_Map.mInfectR.value()
-                
-                rule_input = RuleInputs(mIPop,
-                                         ClosureVal,
-                                         SocialDisVal,
-                                         mInfectR,
-                                         HPop,
-                                         Vents)
+                policy_input = Rule_Database.Policy_Inputs(self)
                 
                 #Identify any decision rules that have been triggered
                 triggered_rules = []
                 for rule in self.Rules:
-                    rule_flag = rule.func(rule_input)
+                    rule_flag = rule.func(policy_input)
                     if rule_flag == 1:
                         triggered_rules.append(rule.number)
                 
@@ -1214,225 +1175,6 @@ class SD_UI(tk.Tk):
         
         return info_frame
  
- 
-# =============================================================================
-#  Define the Catalog of Decision Rules             
-# =============================================================================
-    """Each decision rules follows a pattern, as follows
-        
-        Args:
-            rule_intput: class holding all of the relevant input values for the decision conditions
-
-        Conditional: Condition identifying when the rule is triggered
-        
-        Policy Effect: Policy changes that occur when the conditional is met
-    
-        Returns:
-            output: a flag indicating if the conditional has been met (0=no, 1=yes)
-        """
-    
-    """ BRAZIL RULES """
-    def Br_Rule1func(self, rule_input):
-        output = 0
-        # ClosureVal = self.ClosureDict[rule_input.ClosureVal]
-        if rule_input.mIPop >= 20 and rule_input.ClosureVal == 'No Closures' and rule_input.SocialDisVal == 'No Distancing':
-            # print('Rule 1 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 3A']
-            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Voluntary Social Distancing']
-            output = 1
-        return output
-    def Br_Rule2func(self, rule_input):
-        output = 0
-        if rule_input.mIPop >= 100 and (rule_input.ClosureVal in ['No Closures', 'Fase 6', 'Fase 5', 'Fase 4', 'Fase 3B', 'Fase 3A']):
-            # print('Rule 2 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 1'] 
-            output = 1
-        return output
-    def Br_Rule3func(self, rule_input):
-        output = 0
-        if rule_input.mInfectR >= 100 and (rule_input.ClosureVal in ['No Closures', 'Fase 6', 'Fase 5', 'Fase 4', 'Fase 3B', 'Fase 3A', 'Fase 2', 'Fase 1' ]):
-            # print('Rule 3 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Lockdown']
-            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Mandatory Social Distancing'] 
-            output = 1
-        return output
-    def Br_Rule4func(self,rule_input):
-        output = 0
-        if rule_input.mIPop <= 500 and (rule_input.ClosureVal in ['Fase 2', 'Fase 1', 'Lockdown' ]):
-            # print('Rule 4 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 3A']
-            output = 1
-        return output
-    def Br_Rule5func(self, rule_input):
-        output = 0
-        if rule_input.mIPop <= 500 and rule_input.SocialDisVal == 'Mandatory Social Distancing':
-            # print('Rule 5 Triggered')
-            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Voluntary Social Distancing']   
-            output = 1
-        return output
-    def Br_Rule6func(self, rule_input):
-        output = 0
-        if rule_input.HPop > 2.5 * rule_input.Vents:
-            # print('Rule 6 Triggered')
-            self.SD_Map.NewOVents.values[-1] = 5
-            output = 1
-        return output
-    def Br_Rule7func(self, rule_input):
-        output = 0
-        if rule_input.HPop > 7 * rule_input.Vents:
-            # print('Rule 7 Triggered')
-            self.SD_Map.VWTP.values[-1] = 50000
-            output = 1
-        return output
-
-    """ INDONESIA RULES """ 
-    # transition from nothing to relaxed restrictions
-    def In_Rule1func(self, rule_input):
-        output = 0
-        # ClosureVal = self.ClosureDict[rule_input.ClosureVal]
-        if rule_input.mIPop >= 20 and rule_input.ClosureVal == 'No Closures' and rule_input.SocialDisVal == 'No Distancing':
-            # print('Rule 1 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Relaxed Social Restrictions']
-            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Voluntary Social Distancing']
-            output = 1
-        return output
-    # transition from nothing or relaxed restrictions to high restrictions
-    def In_Rule2func(self, rule_input):
-        output = 0
-        if rule_input.mIPop >= 5000 and (rule_input.ClosureVal in ['No Closures', 'Relaxed Social Restrictions']):
-            # print('Rule 2 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['High Social Restrictions'] 
-            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Mandatory Social Distancing']            
-            output = 1
-        return output
-    # Relax social restrictions
-    def In_Rule3func(self,rule_input):
-        output = 0
-        if rule_input.mIPop <= 2500 and (rule_input.ClosureVal in ['High Social Restrictions']):
-            # print('Rule 4 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Relaxed Social Restrictions']
-            output = 1
-        return output
-    # Relax social distancing    
-    def In_Rule4func(self, rule_input):
-        output = 0
-        if rule_input.mIPop <= 2500 and rule_input.SocialDisVal == 'Mandatory Social Distancing':
-            # print('Rule 5 Triggered')
-            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Voluntary Social Distancing']   
-            output = 1
-        return output 
-    
-    """ CHILE AND SANTIAGO RULES """
-    def Ch_Rule1func(self, rule_input):
-        output = 0
-        # ClosureVal = self.ClosureDict[rule_input.ClosureVal]
-        if rule_input.mIPop >= 20 and rule_input.ClosureVal == 'Paso 5' and rule_input.SocialDisVal == 'No Curfew':
-            # print('Rule 1 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Paso 3']
-            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Curfew Policy']['Unenforced Curfew']
-            output = 1
-        return output
-    def Ch_Rule2func(self, rule_input):
-        output = 0
-        if rule_input.mIPop >= 100 and (rule_input.ClosureVal in ['Paso 5', 'Paso 4']):
-            # print('Rule 2 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Paso 3'] 
-            output = 1
-        return output
-    def Ch_Rule3func(self, rule_input):
-        output = 0
-        if rule_input.mInfectR >= 100 and (rule_input.ClosureVal in ['Paso 5', 'Paso 4', 'Paso 3', 'Paso 2']):
-            # print('Rule 3 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Paso 1']
-            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Curfew Policy']['Enforced Curfew'] 
-            output = 1
-        return output
-    def Ch_Rule4func(self,rule_input):
-        output = 0
-        if rule_input.mIPop <= 500 and (rule_input.ClosureVal in ['Paso 2', 'Paso 1']):
-            # print('Rule 4 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Paso 3']
-            output = 1
-        return output
-    def Ch_Rule5func(self, rule_input):
-        output = 0
-        if rule_input.mIPop <= 500 and rule_input.SocialDisVal == 'Enforced Curfew':
-            # print('Rule 5 Triggered')
-            self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Curfew Policy']['Unenforced Curfew']   
-            output = 1
-        return output
-    
-    """ MULTIPLE CONTEXT RULES """
-    def M_Rule6func(self, rule_input):
-        output = 0
-        if rule_input.HPop > 2.5 * rule_input.Vents:
-            # print('Rule 6 Triggered')
-            self.SD_Map.NewOVents.values[-1] = 5
-            output = 1
-        return output
-    def M_Rule7func(self, rule_input):
-        output = 0
-        if rule_input.HPop > 7 * rule_input.Vents:
-            # print('Rule 7 Triggered')
-            self.SD_Map.VWTP.values[-1] = 50000
-            output = 1
-        return output
-    
-    def make_rules(self):
-        """PUT EACH DECISION RULE INTO A RULE CLASS AND STORE THEM AS A LIST
-        
-        Args:
-            N/A
-    
-        Returns:
-            N/A
-        """
-        self.Rules = []
-        if self.location in ['Rio de Janeiro']:
-
-            self.Rules.append(SDlib.Rule('Initial Closures', 1, 
-                                 func = lambda rule_input: self.Br_Rule1func(rule_input)))
-            self.Rules.append(SDlib.Rule('Additional Closures', 2, 
-                                 func = lambda rule_input: self.Br_Rule2func(rule_input)))
-            
-            self.Rules.append(SDlib.Rule('Complete Lockdown', 3, 
-                                 func = lambda rule_input: self.Br_Rule3func(rule_input)))
-            
-            self.Rules.append(SDlib.Rule('Re-open Some Businesses', 4, 
-                                 func = lambda rule_input: self.Br_Rule4func(rule_input)))
-            self.Rules.append(SDlib.Rule('Relax Mandatory Social Distancing', 5, 
-                                 func = lambda rule_input: self.Br_Rule5func(rule_input)))
-
-        elif self.location in ['Indonesia']:
-
-            self.Rules.append(SDlib.Rule('Implement Some Restrictions', 1, 
-                                 func = lambda rule_input: self.In_Rule1func(rule_input)))
-            self.Rules.append(SDlib.Rule('Implement High Restrictions', 2, 
-                                 func = lambda rule_input: self.In_Rule2func(rule_input)))
-            self.Rules.append(SDlib.Rule('Relax Some Restrictions', 3, 
-                                 func = lambda rule_input: self.In_Rule3func(rule_input)))
-            self.Rules.append(SDlib.Rule('Relax Mandatory Social Distancing', 4, 
-                                 func = lambda rule_input: self.In_Rule4func(rule_input))) 
-
-        elif self.location in ['Chile', 'Santiago']:
-            self.Rules.append(SDlib.Rule('Initial Closures', 1, 
-                                 func = lambda rule_input: self.Ch_Rule1func(rule_input)))
-            self.Rules.append(SDlib.Rule('Additional Closures', 2, 
-                                 func = lambda rule_input: self.Ch_Rule2func(rule_input)))
-            
-            self.Rules.append(SDlib.Rule('Complete Lockdown', 3, 
-                                 func = lambda rule_input: self.Ch_Rule3func(rule_input)))
-            
-            self.Rules.append(SDlib.Rule('Re-open Some Businesses', 4, 
-                                 func = lambda rule_input: self.Ch_Rule4func(rule_input)))
-            self.Rules.append(SDlib.Rule('Relax Mandatory Social Distancing', 5, 
-                                 func = lambda rule_input: self.Ch_Rule5func(rule_input)))
-            
-        if self.location in ['Chile', 'Rio de Janeiro', 'Indonesia']:
-            self.Rules.append(SDlib.Rule('Order More Ventilators', 6, 
-                                 func = lambda rule_input: self.M_Rule6func(rule_input)))
-            self.Rules.append(SDlib.Rule('Pay More for Ventilators to Accelerate Delivery', 7, 
-                                 func = lambda rule_input: self.M_Rule7func(rule_input)))
                        
 
 

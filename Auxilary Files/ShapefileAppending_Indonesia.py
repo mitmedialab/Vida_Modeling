@@ -114,19 +114,25 @@ def ShapefileFormatter(shpfilepath, datapath,fieldname, writepath):
 
 metrics = metrics = ['Cases',
            'Recovered',
+           'Deaths',
            'Retail',
            'Grocery',
            'Parks',
            'Transit',
            'Workplace',
-           'Residential'
+           'Residentia',
+           'houseex',
+           'consumex',
+           'govex',
+           'netex',
+           'GDRP'
            ]
 
 
 
 shppath = './Data/Indonesia/Shapefiles/Indonesia_Polygon.shp'
 datapath = './Data/Indonesia/Misc/ShapefileAddingIndonesia.xlsx'
-writepath = './Data/Indonesia/Shapefiles/Regions_data.shp'
+writepath = './Data/Indonesia/Shapefiles/geographic_data.shp'
 
 
 ShapefileFormatter(shppath, datapath, metrics, writepath)
