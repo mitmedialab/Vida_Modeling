@@ -260,7 +260,7 @@ class SD_UI(tk.Tk):
         return output_phrase
 
 # =============================================================================
-#  Generate the Top Menu             
+# %% Generate the Top Menu             
 # =============================================================================   
 
     def make_top_menus(self):
@@ -342,7 +342,7 @@ class SD_UI(tk.Tk):
         UI.mainloop()
         
 # =============================================================================
-#  Generate the Graphs             
+# %% Generate the Graphs             
 # =============================================================================
 
     def make_graph_frame(self, firstgraph, secondgraph, col):
@@ -625,7 +625,7 @@ class SD_UI(tk.Tk):
         return f"#{''.join(f'{hex(c)[2:].upper():0>2}' for c in color)}"
  
 # =============================================================================
-#  Generate the Map Frame             
+# %% Generate the Map Frame             
 # =============================================================================     
     def make_map_frame(self):
         frame_map = tk.Frame(self, #width=500, height=400,
@@ -773,7 +773,7 @@ class SD_UI(tk.Tk):
         
         
 # =============================================================================
-#  Generate the Control Frame             
+# %% Generate the Control Frame             
 # =============================================================================
 
     def make_control_frame(self):
@@ -1124,7 +1124,7 @@ class SD_UI(tk.Tk):
         
         
 # =============================================================================
-#  Generate the Info Display Frame             
+# %% Generate the Info Display Frame             
 # =============================================================================
  
     def make_rule_display(self):
@@ -1179,7 +1179,7 @@ class SD_UI(tk.Tk):
 
 
 # =============================================================================
-#  Run UI            
+# %% Run UI            
 # =============================================================================
 if str.__eq__(__name__, '__main__'):
 
