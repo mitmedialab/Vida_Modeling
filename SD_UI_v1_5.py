@@ -67,7 +67,6 @@ class SD_UI(tk.Tk):
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-43.1, -23.0, 0.01]
             self.language = 'portuguese'
-            # self.policy_options = ['Closure Policy', 'Social Distancing Policy']
         elif self.location == 'Chile':
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'Population'
@@ -75,7 +74,6 @@ class SD_UI(tk.Tk):
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-35.0, -50.0, 0.0001]
             self.language = 'spanish'
-            # self.policy_options = ['Closure Policy', 'Curfew Policy']
         elif self.location == 'Indonesia':
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'Total Cases'
@@ -83,14 +81,18 @@ class SD_UI(tk.Tk):
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [122.5,-9.0, 0.0004] #modified this to fit in screen with new fontsize and figsize settings
             self.language = 'english'
-            # self.policy_options = ['Closure Policy', 'Social Distancing Policy']
         elif self.location == 'Santiago':
             self.color_range = 'PM10'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [-69.0, -34.0, 0.0025]
             self.language = 'spanish'
-            # self.policy_options = ['Closure Policy', 'Curfew Policy']
+        elif self.location == 'Querétaro':
+            self.color_range = 'Shape_Area'
+            self.default_graph1 = 'Measured Total Infected Population'
+            self.default_graph2 = "Hospitalized Population"
+            self.map_loc = [-98.7, 20.37, 0.003]
+            self.language = 'spanish'
             
         #Set filepaths for relevant data and auxilary files
         self.translations = './translations.csv' 
@@ -288,6 +290,7 @@ class SD_UI(tk.Tk):
         context_menu.add_command(label=self.translate("Chile"), command=lambda: self.switch_context('Chile'))
         context_menu.add_command(label=self.translate("Santiago"), command=lambda: self.switch_context('Santiago'))
         context_menu.add_command(label=self.translate("Indonesia"), command=lambda: self.switch_context('Indonesia'))
+        context_menu.add_command(label=self.translate("Querétaro"), command=lambda: self.switch_context('Querétaro'))
         menubar.add_cascade(label=self.translate("Locations"), menu=context_menu)
         
         # create an exit command that closes the UI
@@ -1187,7 +1190,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Rio de Janeiro')
+                location = 'Querétaro')
 
     #Run the user interface
     UI.mainloop()
