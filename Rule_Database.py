@@ -403,7 +403,6 @@ def make_rules(UI):
         Rules.append(SDlib.Rule('Relax Mandatory Social Distancing', 5, 
                              func = lambda policy_input: Conditionals.Sa_Rule5func(policy_input)))
         
-        
     if location in ['Querétaro']:
 
         Rules.append(SDlib.Rule('Initial Closures', 1, 
@@ -422,6 +421,7 @@ def make_rules(UI):
                              func = lambda policy_input: Conditionals.Br_Rule6func(policy_input)))
         Rules.append(SDlib.Rule('Pay More for Ventilators to Accelerate Delivery', 7, 
                              func = lambda policy_input: Conditionals.Br_Rule7func(policy_input)))
+
     return Rules
 
 # =============================================================================

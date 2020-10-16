@@ -67,6 +67,7 @@ class SD_UI(tk.Tk):
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-43.1, -23.0, 0.01]
             self.language = 'portuguese'
+            # self.policy_options = ['Closure Policy', 'Social Distancing Policy']
         elif self.location == 'Chile':
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'Population'
@@ -74,6 +75,7 @@ class SD_UI(tk.Tk):
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-35.0, -50.0, 0.0001]
             self.language = 'spanish'
+            # self.policy_options = ['Closure Policy', 'Curfew Policy']
         elif self.location == 'Indonesia':
             # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'Total Cases'
@@ -81,6 +83,7 @@ class SD_UI(tk.Tk):
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [122.5,-9.0, 0.0004] #modified this to fit in screen with new fontsize and figsize settings
             self.language = 'english'
+            # self.policy_options = ['Closure Policy', 'Social Distancing Policy']
         elif self.location == 'Santiago':
             self.color_range = 'PM10'
             self.default_graph1 = 'Measured Infected Population'
@@ -304,14 +307,14 @@ class SD_UI(tk.Tk):
         
     def replace_language(self, new_language):
         """REPLACE THE DISPLAY LANGUAGE OF THE UI
-        
+
         Args:
             new_language: the new language to swtich the display to
     
         Returns:
             N/A
         """
-        
+
         #Close the exisiting display
         self.destroy()
         
@@ -769,8 +772,7 @@ class SD_UI(tk.Tk):
                             window_dimensions = [self.screenwidth,self.screenheight])
                 
         self.MAP.configure(bg='white')
-        
-        
+
 # =============================================================================
 # %% Generate the Control Frame             
 # =============================================================================
