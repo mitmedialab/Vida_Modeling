@@ -1262,8 +1262,6 @@ class SD_System:
             """ 8 - ECONOMIC """
         
         
-        
-        
     # =============================================================================
     # %% 4 - Indonesia 
     # =============================================================================
@@ -1348,7 +1346,6 @@ class SD_System:
                                     func = lambda tstep, tind: self.ClosureP.value() * self.SocialDisP.value() * self.BaseContactR.value(),
                                     category = 'Health Parameters'
                                     )
-<<<<<<< HEAD
             
             self.Infectivity = SD_object('Infectivity',
                                 units = 'likelihood/contact',
@@ -1772,7 +1769,7 @@ class SD_System:
                                 init_value = lambda: self.historical_data('household_ex', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.household_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
-                                maxval = lambda: 10000000,
+                                maxval = lambda: 100000000000,
                                 minval = lambda: 0,
                                 category = 'Economy')  
   
@@ -1781,7 +1778,7 @@ class SD_System:
                                 init_value = lambda: self.historical_data('Consumtion_ex', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.consumtion_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
-                                maxval = lambda: 10000000,
+                                maxval = lambda: 100000000000,
                                 minval = lambda: 0,
                                 category = 'Economy')
   
@@ -1790,7 +1787,7 @@ class SD_System:
                                 init_value = lambda: self.historical_data('gov_ex', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.gov_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
-                                maxval = lambda: 10000000,
+                                maxval = lambda: 100000000000,
                                 minval = lambda: 0,
                                 category = 'Economy')         
   
@@ -1799,7 +1796,7 @@ class SD_System:
                                 init_value = lambda: self.historical_data('net_ex', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.net_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
-                                maxval = lambda: 10000000,
+                                maxval = lambda: 100000000000,
                                 minval = lambda: 0,
                                 category = 'Economy')      
   
