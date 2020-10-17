@@ -90,7 +90,12 @@ class SD_UI(tk.Tk):
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [-69.0, -34.0, 0.0025]
             self.language = 'spanish'
-            # self.policy_options = ['Closure Policy', 'Curfew Policy']
+        elif self.location == 'Querétaro':
+            self.color_range = 'Shape_Area'
+            self.default_graph1 = 'Measured Total Infected Population'
+            self.default_graph2 = "Hospitalized Population"
+            self.map_loc = [-98.7, 20.37, 0.003]
+            self.language = 'spanish'
             
         #Set filepaths for relevant data and auxilary files
         self.translations = './translations.csv' 
@@ -288,6 +293,7 @@ class SD_UI(tk.Tk):
         context_menu.add_command(label=self.translate("Chile"), command=lambda: self.switch_context('Chile'))
         context_menu.add_command(label=self.translate("Santiago"), command=lambda: self.switch_context('Santiago'))
         context_menu.add_command(label=self.translate("Indonesia"), command=lambda: self.switch_context('Indonesia'))
+        context_menu.add_command(label=self.translate("Querétaro"), command=lambda: self.switch_context('Querétaro'))
         menubar.add_cascade(label=self.translate("Locations"), menu=context_menu)
         
         # create an exit command that closes the UI
@@ -301,14 +307,14 @@ class SD_UI(tk.Tk):
         
     def replace_language(self, new_language):
         """REPLACE THE DISPLAY LANGUAGE OF THE UI
-        
+
         Args:
             new_language: the new language to swtich the display to
     
         Returns:
             N/A
         """
-        
+
         #Close the exisiting display
         self.destroy()
         
@@ -766,8 +772,7 @@ class SD_UI(tk.Tk):
                             window_dimensions = [self.screenwidth,self.screenheight])
                 
         self.MAP.configure(bg='white')
-        
-        
+
 # =============================================================================
 # %% Generate the Control Frame             
 # =============================================================================
@@ -1187,7 +1192,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Rio de Janeiro')
+                location = 'Querétaro')
 
     #Run the user interface
     UI.mainloop()
