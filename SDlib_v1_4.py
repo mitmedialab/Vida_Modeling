@@ -115,8 +115,6 @@ class SD_object:
             self.values.append(min(max(self.func(tstep, tind), self.minval()), self.maxval()))
         else:
             self.values.append(self.func(tstep, tind))
-            
-           
         
 
 # =============================================================================
@@ -647,7 +645,7 @@ class SD_System:
                         maxval = lambda: 1000,
                         minval = lambda: 0,
                         category = 'Environment')
-            
+
             """ 8 - ECONOMIC """
             
             self.RioEmployment = SD_object('Rio de Janeiro Unemployment Rate',
