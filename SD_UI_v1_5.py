@@ -91,7 +91,7 @@ class SD_UI(tk.Tk):
             self.map_loc = [-69.0, -34.0, 0.0025]
             self.language = 'spanish'
         elif self.location == 'Querétaro':
-            self.color_range = 'Shape_Area'
+            self.color_range = 'COVID Cases per 1000 People'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = "Hospitalized Population"
             self.map_loc = [-98.7, 20.37, 0.003]
