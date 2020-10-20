@@ -817,7 +817,9 @@ class SD_UI(tk.Tk):
                 option1_list.append(self.translate(entry))
             
             self.policy_option_vars[policy] = tk.StringVar()
-            self.policy_option_vars[policy].set(option1_list[0])
+            defaultpolicy = self.PolicyDictsInv[policy][self.SD_Map.retrieve_ob(policy).value()]
+            
+            self.policy_option_vars[policy].set(defaultpolicy)
             self.option_menus.append(tk.OptionMenu(control_frame, self.policy_option_vars[policy], 
                               *option1_list, 
                                 command=lambda value, policy=policy: self.update_Policy(policy)
@@ -1192,7 +1194,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Querétaro')
+                location = 'Indonesia')
 
     #Run the user interface
     UI.mainloop()
