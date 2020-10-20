@@ -1,3 +1,5 @@
 FieldName,LongName,Category
-ADM2_PCODE,ADM2_PCODE,
-Shape_Area,Shape_Area,
+Pop,2015 Population,
+CaseP,COVID Cases per 1000 People,
+DeathP,COVID Deaths per 1000 People,
+HosP,COVID Hospitalizations per 1000 People,
