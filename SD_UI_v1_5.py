@@ -1058,6 +1058,7 @@ class SD_UI(tk.Tk):
                                 triggered = triggered_rules)
                 
         #Remove the run autonomously duration input window
+
         wind.destroy()
     
     def clear_simulation(self):
@@ -1066,6 +1067,7 @@ class SD_UI(tk.Tk):
         self.SD_Map = SDlib.SD_System(tuning_flag=self.tuning_flag,
                                       location=self.location,
                                       data_filepath=self.data_filepath)
+        self.Rules = Rule_Database.make_rules(self)
         
         #Initialize the time series list and associated function(s)
         if self.tuning_flag == 1:
