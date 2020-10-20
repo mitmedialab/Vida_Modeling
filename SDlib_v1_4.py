@@ -2054,20 +2054,28 @@ class SD_System:
 
             #island specific
             PolicyDictsOut['Closure Policy Sulawesi'] = {'No Closures' : 1,
-                                                'Relaxed Social Restrictions': 0.66,
-                                                'High Social Restrictions' : 0.33}
+                                                'Relaxed Social Restrictions - Zonal': 0.66,
+                                                'Relaxed Social Restrictions - Provincial': 0.4,
+                                                'High Social Restrictions - Zonal': 0.33,
+                                                'High Social Restrictions - Provincial' : 0.25}
 
             PolicyDictsOut['Closure Policy Java'] = {'No Closures' : 1,
-                                                'Relaxed Social Restrictions': 0.66,
-                                                'High Social Restrictions' : 0.33}
+                                                'Relaxed Social Restrictions - Zonal': 0.66,
+                                                'Relaxed Social Restrictions - Provincial': 0.4,
+                                                'High Social Restrictions - Zonal': 0.33,
+                                                'High Social Restrictions - Provincial' : 0.25}
 
             PolicyDictsOut['Social Distancing Policy Sulawesi'] = {'No Distancing' : 1,
-                                                        'Voluntary Social Distancing' : 0.6,
-                                                        'Mandatory Social Distancing' : 0.1}
+                                                        'Voluntary Social Distancing - Zonal': 0.75,
+                                                        'Voluntary Social Distancing - Provincial' : 0.5,
+                                                        'Mandatory Social Distancing - Zonal': 0.25,
+                                                        'Mandatory Social Distancing - Provincial' : 0.1}
 
             PolicyDictsOut['Social Distancing Policy Java'] = {'No Distancing' : 1,
-                                                        'Voluntary Social Distancing' : 0.6,
-                                                        'Mandatory Social Distancing' : 0.1} 
+                                                        'Voluntary Social Distancing - Zonal': 0.75,
+                                                        'Voluntary Social Distancing - Provincial' : 0.5,
+                                                        'Mandatory Social Distancing - Zonal': 0.25,
+                                                        'Mandatory Social Distancing - Provincial' : 0.1}
                                                         
                                                                                                                
         return PolicyDictsOut
