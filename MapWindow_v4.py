@@ -60,10 +60,11 @@ class Map(tk.Canvas):
         
         super().__init__(root, width=self.screenwidth, height=self.screenheight)
         # super().__init__(root, width=root.winfo_width(), height=root.winfo_height())
+        
+        self.bind('<ButtonPress-1>', self.print_coords)
 
         #Create display defaults
         self.proj = 'mercator'
-        self.ratio = 1
         self.offset = (0, 0)
         
         
@@ -164,7 +165,13 @@ class Map(tk.Canvas):
         px, py = (x - self.offset[0])/self.ratio, (self.offset[1] - y)/self.ratio
         return self.projections[self.proj](px, py, inverse=True)
     
-    
+    def print_coords(self, event):
+        event.x, event.y = self.canvasx(event.x), self.canvasy(event.y)
+        print('Geographic Coordinates')
+        print(*self.to_geographical_coordinates(event.x, event.y))
+        print('Canvas Coordinates')
+        print([event.x, event.y])
+        
     def set_canvas_location(self, longitude, latitude, zoomlevel):
         """SET MAP VISUAL LOCATION TO SPECIFIC COORDINATES AND ZOOM LEVEL
     
@@ -176,24 +183,17 @@ class Map(tk.Canvas):
         Returns:
             N/A
         """
-        #Move canvas center to specified coordinates
-        locationx, locationy = self.to_canvas_coordinates(longitude, latitude)
-        self.move('all', -locationx, -locationy)
-        self.offset = (
-            self.offset[0] - locationx,
-            self.offset[1] - locationy
-        )
-        
-        
         #Scale canvas to specified zoom level
-        width, height = 943.0, 471.0
-        self.scale('all', width, height, zoomlevel, zoomlevel)
-        self.configure(scrollregion=self.bbox('all'))
-        self.ratio *= float(zoomlevel)
+        self.ratio = zoomlevel
+        
+        #Move canvas center to specified coordinates and center in canvas
+        locationx, locationy = self.to_canvas_coordinates(longitude, latitude)
         self.offset = (
-            self.offset[0]*zoomlevel + width*(1 - zoomlevel),
-            self.offset[1]*zoomlevel + height*(1 - zoomlevel)
-        )
+            self.offset[0] - locationx+self.screenwidth/2,
+            self.offset[1] - locationy+self.screenheight/2
+            )
+              
+
         
         return self.offset, self.ratio
   
@@ -325,13 +325,8 @@ class Map(tk.Canvas):
                     alpha = 0.5
                     if self.null_zeros == 1:
                         if value == 0:
-                            #alpha = 0 
                             fill = self.winfo_rgb('black')
-                            alpha = 0.3
-                        #elif value == 0 and self.location in ['Indonesia']:
-                         #  fill = self.winfo_rgb('black')  
-                         #  alpha = 1
-                            
+                            alpha = 0.3                         
                 else:
                     fill = self.winfo_rgb('green')
                     alpha = 0
@@ -537,8 +532,10 @@ class Map(tk.Canvas):
 if str.__eq__(__name__, '__main__'):
     root_window = tk.Tk()
     root_window.title('MapWindow')
-    sf = shapefile.Reader('/home/jackreid/Google Drive/School/Research/Space Enabled/Code/Decisions/Data/Chile/Shapefiles/chl_admbnda_adm1_bcn2018.shp')
-    # py_giss = Map(root_window, [sf],
-                  # background_image='./map.jpg', color_range=['POP'])
-    py_giss = Map(root_window, [sf])
+    sf = shapefile.Reader('/home/jackreid/Documents/School/Research/Space Enabled/Code/Decisions/Data/Rio de Janeiro/Shapefiles/geographic_data.shp')
+
+
+
+    py_giss = Map(root_window, [sf],
+                  lat_lon_zoom= [-43.162396, -22.916935, 0.01])
     root_window.mainloop()
