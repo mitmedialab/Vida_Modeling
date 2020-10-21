@@ -152,7 +152,7 @@ class Conditional_Database:
     # transition from nothing or relaxed restrictions to high restrictions
     def In_Rule2func_j(self, policy_input):
         output = 0
-        if self.SD_Map.mIPop_j.value() >= 1000 and (policy_input['Closure Policy Java'] in ['No Closures', 'Relaxed Social Restrictions - Zonal']):
+        if self.SD_Map.mIPop_j.value() >= 1000 and (policy_input['Closure Policy Java'] in ['No Closures', 'Relaxed Social Restrictions - Zonal', 'Relaxed Social Restrictions - Provincial']):
             # print('Rule 2 Triggered')
             self.SD_Map.ClosureP_j.values[-1] = self.PolicyDicts['Closure Policy Java']['High Social Restrictions - Zonal'] 
             self.SD_Map.SocialDisP_j.values[-1] = self.PolicyDicts['Social Distancing Policy Java']['Mandatory Social Distancing - Zonal']            
@@ -161,7 +161,7 @@ class Conditional_Database:
     
     def In_Rule2func_s(self, policy_input):
         output = 0
-        if self.SD_Map.mIPop_s.value() >= 500 and (policy_input['Closure Policy Sulawesi'] in ['No Closures', 'Relaxed Social Restrictions - Zonal']):
+        if self.SD_Map.mIPop_s.value() >= 500 and (policy_input['Closure Policy Sulawesi'] in ['No Closures', 'Relaxed Social Restrictions - Zonal', 'Relaxed Social Restrictions - Provincial']):
             # print('Rule 2 Triggered')
             self.SD_Map.ClosureP_s.values[-1] = self.PolicyDicts['Closure Policy Sulawesi']['High Social Restrictions - Zonal'] 
             self.SD_Map.SocialDisP_s.values[-1] = self.PolicyDicts['Social Distancing Policy Sulawesi']['Mandatory Social Distancing - Zonal']            
@@ -170,7 +170,7 @@ class Conditional_Database:
     # Relax social restrictions
     def In_Rule3func_j(self,policy_input):
         output = 0
-        if self.SD_Map.mIPop_j.value() <= 500 and (policy_input['Closure Policy Java'] in ['High Social Restrictions - Zonal']):
+        if self.SD_Map.mIPop_j.value() <= 500 and (policy_input['Closure Policy Java'] in ['High Social Restrictions - Zonal', 'High Social Restrictions - Provincial']):
             # print('Rule 4 Triggered')
             self.SD_Map.ClosureP_j.values[-1] = self.PolicyDicts['Closure Policy Java']['Relaxed Social Restrictions - Zonal']
             output = 1
@@ -178,7 +178,7 @@ class Conditional_Database:
     
     def In_Rule3func_s(self,policy_input):
         output = 0
-        if self.SD_Map.mIPop_s.value() <= 250 and (policy_input['Closure Policy Sulawesi'] in ['High Social Restrictions - Zonal']):
+        if self.SD_Map.mIPop_s.value() <= 250 and (policy_input['Closure Policy Sulawesi'] in ['High Social Restrictions - Zonal', 'High Social Restrictions - Provincial']):
             # print('Rule 4 Triggered')
             self.SD_Map.ClosureP_s.values[-1] = self.PolicyDicts['Closure Policy Sulawesi']['Relaxed Social Restrictions - Zonal']
             output = 1
@@ -187,7 +187,7 @@ class Conditional_Database:
     # Relax social distancing    
     def In_Rule4func_j(self, policy_input):
         output = 0
-        if self.SD_Map.mIPop_j.value() <= 500 and policy_input['Social Distancing Policy Java'] == 'Mandatory Social Distancing - Zonal':
+        if self.SD_Map.mIPop_j.value() <= 500 and (policy_input['Social Distancing Policy Java'] in ['Mandatory Social Distancing - Provincial', 'Mandatory Social Distancing - Zonal']):
             # print('Rule 5 Triggered')
             self.SD_Map.SocialDisP_j.values[-1] = self.PolicyDicts['Social Distancing Policy Java']['Voluntary Social Distancing - Zonal']   
             output = 1
@@ -195,7 +195,7 @@ class Conditional_Database:
     
     def In_Rule4func_s(self, policy_input):
         output = 0
-        if self.SD_Map.mIPop_s.value() <= 250 and policy_input['Social Distancing Policy Sulawesi'] == 'Mandatory Social Distancing - Zonal':
+        if self.SD_Map.mIPop_s.value() <= 250 and (policy_input['Social Distancing Policy Java'] in ['Mandatory Social Distancing - Provincial', 'Mandatory Social Distancing - Zonal']):
             # print('Rule 5 Triggered')
             self.SD_Map.SocialDisP_s.values[-1] = self.PolicyDicts['Social Distancing Policy Sulawesi']['Voluntary Social Distancing - Zonal']   
             output = 1
