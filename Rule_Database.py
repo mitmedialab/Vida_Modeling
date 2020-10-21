@@ -120,6 +120,7 @@ class Conditional_Database:
             self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Relaxed Social Restrictions']
             output = 1
         return output
+        #test
     # Relax social distancing    
     def In_Rule4func(self, policy_input):
         output = 0
