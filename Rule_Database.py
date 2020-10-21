@@ -120,6 +120,7 @@ class Conditional_Database:
             self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Relaxed Social Restrictions']
             output = 1
         return output
+        #test
     # Relax social distancing    
     def In_Rule4func(self, policy_input):
         output = 0
@@ -134,8 +135,8 @@ class Conditional_Database:
         output = 0
         if self.SD_Map.mIPop_j.value() >= 20 and policy_input['Closure Policy Java'] == 'No Closures' and policy_input['Social Distancing Policy Java'] == 'No Distancing':
             # print('Rule 1 Triggered')
-            self.SD_Map.ClosureP_j.values[-1] = self.PolicyDicts['Closure Policy Java']['Relaxed Social Restrictions']
-            self.SD_Map.SocialDisP_j.values[-1] = self.PolicyDicts['Social Distancing Policy Java']['Voluntary Social Distancing']
+            self.SD_Map.ClosureP_j.values[-1] = self.PolicyDicts['Closure Policy Java']['Relaxed Social Restrictions - Zonal']
+            self.SD_Map.SocialDisP_j.values[-1] = self.PolicyDicts['Social Distancing Policy Java']['Voluntary Social Distancing - Zonal']
             output = 1
         return output
     
@@ -143,60 +144,60 @@ class Conditional_Database:
         output = 0
         if self.SD_Map.mIPop_s.value() >= 20 and policy_input['Closure Policy Sulawesi'] == 'No Closures' and policy_input['Social Distancing Policy Sulawesi'] == 'No Distancing':
             # print('Rule 1 Triggered')
-            self.SD_Map.ClosureP_s.values[-1] = self.PolicyDicts['Closure Policy Sulawesi']['Relaxed Social Restrictions']
-            self.SD_Map.SocialDisP_s.values[-1] = self.PolicyDicts['Social Distancing Policy Sulawesi']['Voluntary Social Distancing']
+            self.SD_Map.ClosureP_s.values[-1] = self.PolicyDicts['Closure Policy Sulawesi']['Relaxed Social Restrictions - Zonal']
+            self.SD_Map.SocialDisP_s.values[-1] = self.PolicyDicts['Social Distancing Policy Sulawesi']['Voluntary Social Distancing - Zonal']
             output = 1
         return output
     
     # transition from nothing or relaxed restrictions to high restrictions
     def In_Rule2func_j(self, policy_input):
         output = 0
-        if self.SD_Map.mIPop_j.value() >= 1000 and (policy_input['Closure Policy Java'] in ['No Closures', 'Relaxed Social Restrictions']):
+        if self.SD_Map.mIPop_j.value() >= 1000 and (policy_input['Closure Policy Java'] in ['No Closures', 'Relaxed Social Restrictions - Zonal', 'Relaxed Social Restrictions - Provincial']):
             # print('Rule 2 Triggered')
-            self.SD_Map.ClosureP_j.values[-1] = self.PolicyDicts['Closure Policy Java']['High Social Restrictions'] 
-            self.SD_Map.SocialDisP_j.values[-1] = self.PolicyDicts['Social Distancing Policy Java']['Mandatory Social Distancing']            
+            self.SD_Map.ClosureP_j.values[-1] = self.PolicyDicts['Closure Policy Java']['High Social Restrictions - Zonal'] 
+            self.SD_Map.SocialDisP_j.values[-1] = self.PolicyDicts['Social Distancing Policy Java']['Mandatory Social Distancing - Zonal']            
             output = 1
         return output
     
     def In_Rule2func_s(self, policy_input):
         output = 0
-        if self.SD_Map.mIPop_s.value() >= 500 and (policy_input['Closure Policy Sulawesi'] in ['No Closures', 'Relaxed Social Restrictions']):
+        if self.SD_Map.mIPop_s.value() >= 500 and (policy_input['Closure Policy Sulawesi'] in ['No Closures', 'Relaxed Social Restrictions - Zonal', 'Relaxed Social Restrictions - Provincial']):
             # print('Rule 2 Triggered')
-            self.SD_Map.ClosureP_s.values[-1] = self.PolicyDicts['Closure Policy Sulawesi']['High Social Restrictions'] 
-            self.SD_Map.SocialDisP_s.values[-1] = self.PolicyDicts['Social Distancing Policy Sulawesi']['Mandatory Social Distancing']            
+            self.SD_Map.ClosureP_s.values[-1] = self.PolicyDicts['Closure Policy Sulawesi']['High Social Restrictions - Zonal'] 
+            self.SD_Map.SocialDisP_s.values[-1] = self.PolicyDicts['Social Distancing Policy Sulawesi']['Mandatory Social Distancing - Zonal']            
             output = 1
         return output
     # Relax social restrictions
     def In_Rule3func_j(self,policy_input):
         output = 0
-        if self.SD_Map.mIPop_j.value() <= 500 and (policy_input['Closure Policy Java'] in ['High Social Restrictions']):
+        if self.SD_Map.mIPop_j.value() <= 500 and (policy_input['Closure Policy Java'] in ['High Social Restrictions - Zonal', 'High Social Restrictions - Provincial']):
             # print('Rule 4 Triggered')
-            self.SD_Map.ClosureP_j.values[-1] = self.PolicyDicts['Closure Policy Java']['Relaxed Social Restrictions']
+            self.SD_Map.ClosureP_j.values[-1] = self.PolicyDicts['Closure Policy Java']['Relaxed Social Restrictions - Zonal']
             output = 1
         return output
     
     def In_Rule3func_s(self,policy_input):
         output = 0
-        if self.SD_Map.mIPop_s.value() <= 250 and (policy_input['Closure Policy Sulawesi'] in ['High Social Restrictions']):
+        if self.SD_Map.mIPop_s.value() <= 250 and (policy_input['Closure Policy Sulawesi'] in ['High Social Restrictions - Zonal', 'High Social Restrictions - Provincial']):
             # print('Rule 4 Triggered')
-            self.SD_Map.ClosureP_s.values[-1] = self.PolicyDicts['Closure Policy Sulawesi']['Relaxed Social Restrictions']
+            self.SD_Map.ClosureP_s.values[-1] = self.PolicyDicts['Closure Policy Sulawesi']['Relaxed Social Restrictions - Zonal']
             output = 1
         return output   
     
     # Relax social distancing    
     def In_Rule4func_j(self, policy_input):
         output = 0
-        if self.SD_Map.mIPop_j.value() <= 500 and policy_input['Social Distancing Policy Java'] == 'Mandatory Social Distancing':
+        if self.SD_Map.mIPop_j.value() <= 500 and (policy_input['Social Distancing Policy Java'] in ['Mandatory Social Distancing - Provincial', 'Mandatory Social Distancing - Zonal']):
             # print('Rule 5 Triggered')
-            self.SD_Map.SocialDisP_j.values[-1] = self.PolicyDicts['Social Distancing Policy Java']['Voluntary Social Distancing']   
+            self.SD_Map.SocialDisP_j.values[-1] = self.PolicyDicts['Social Distancing Policy Java']['Voluntary Social Distancing - Zonal']   
             output = 1
         return output 
     
     def In_Rule4func_s(self, policy_input):
         output = 0
-        if self.SD_Map.mIPop_s.value() <= 250 and policy_input['Social Distancing Policy Sulawesi'] == 'Mandatory Social Distancing':
+        if self.SD_Map.mIPop_s.value() <= 250 and (policy_input['Social Distancing Policy Java'] in ['Mandatory Social Distancing - Provincial', 'Mandatory Social Distancing - Zonal']):
             # print('Rule 5 Triggered')
-            self.SD_Map.SocialDisP_s.values[-1] = self.PolicyDicts['Social Distancing Policy Sulawesi']['Voluntary Social Distancing']   
+            self.SD_Map.SocialDisP_s.values[-1] = self.PolicyDicts['Social Distancing Policy Sulawesi']['Voluntary Social Distancing - Zonal']   
             output = 1
         return output         
     
@@ -352,23 +353,23 @@ def make_rules(UI):
         Rules.append(SDlib.Rule('Relax Mandatory Social Distancing Nationwide', 4, 
                              func = lambda policy_input: Conditionals.In_Rule4func(policy_input))) 
         #Java
-        Rules.append(SDlib.Rule('Implement Some Restrictions Java', 5, 
+        Rules.append(SDlib.Rule('Implement Some Restrictions Java - Zonal', 5, 
                              func = lambda policy_input: Conditionals.In_Rule1func_j(policy_input)))
-        Rules.append(SDlib.Rule('Implement High Restrictions Java', 6, 
+        Rules.append(SDlib.Rule('Implement High Restrictions Java - Zonal', 6, 
                              func = lambda policy_input: Conditionals.In_Rule2func_j(policy_input)))
-        Rules.append(SDlib.Rule('Relax Some Restrictions Java', 7, 
+        Rules.append(SDlib.Rule('Relax Some Restrictions Java - Zonal', 7, 
                              func = lambda policy_input: Conditionals.In_Rule3func_j(policy_input)))
-        Rules.append(SDlib.Rule('Relax Mandatory Social Distancing Java', 8, 
+        Rules.append(SDlib.Rule('Relax Mandatory Social Distancing Java - Zonal', 8, 
                              func = lambda policy_input: Conditionals.In_Rule4func_j(policy_input))) 
 
         #Sulawesi
-        Rules.append(SDlib.Rule('Implement Some Restrictions Sulawesi', 9, 
+        Rules.append(SDlib.Rule('Implement Some Restrictions Sulawesi - Zonal', 9, 
                              func = lambda policy_input: Conditionals.In_Rule1func_s(policy_input)))
-        Rules.append(SDlib.Rule('Implement High Restrictions Sulawesi', 10, 
+        Rules.append(SDlib.Rule('Implement High Restrictions Sulawesi - Zonal', 10, 
                              func = lambda policy_input: Conditionals.In_Rule2func_s(policy_input)))
-        Rules.append(SDlib.Rule('Relax Some Restrictions Sulawesi', 11, 
+        Rules.append(SDlib.Rule('Relax Some Restrictions Sulawesi - Zonal', 11, 
                              func = lambda policy_input: Conditionals.In_Rule3func_s(policy_input)))
-        Rules.append(SDlib.Rule('Relax Mandatory Social Distancing Sulawesi', 12, 
+        Rules.append(SDlib.Rule('Relax Mandatory Social Distancing Sulawesi - Zonal', 12, 
                              func = lambda policy_input: Conditionals.In_Rule4func_s(policy_input))) 
 
     elif location in ['Chile']:
