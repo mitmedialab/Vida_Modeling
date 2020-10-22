@@ -242,7 +242,7 @@ class SD_UI(tk.Tk):
         
         #Open CSV with translations
         #with open(self.translations) as csv_file:
-        with open(self.translations, encoding='ANSI') as csv_file:
+        with open(self.translations, encoding='ISO-8859-15') as csv_file:
            csvread = csv.DictReader(csv_file)
            found = 0
            for row in csvread:
@@ -810,7 +810,7 @@ class SD_UI(tk.Tk):
                 option1_list.append(self.translate(entry))
             
             self.policy_option_vars[policy] = tk.StringVar()
-            defaultpolicy = self.PolicyDictsInv[policy][self.SD_Map.retrieve_ob(policy).value()]
+            defaultpolicy = self.translate(self.PolicyDictsInv[policy][self.SD_Map.retrieve_ob(policy).value()])
             
             self.policy_option_vars[policy].set(defaultpolicy)
             self.option_menus.append(tk.OptionMenu(control_frame, self.policy_option_vars[policy], 

@@ -237,7 +237,7 @@ class SD_System:
                                 category = 'Health Parameters')
             
             self.AvDur = SD_object('Average Illness Duration',
-                                  units = 'days',
+                                  units = 'Days',
                                   init_value = 14,
                                   obtype = 'variable',
                                   func = lambda tstep, tind: self.AvDur.value(ind=tind),
@@ -322,7 +322,7 @@ class SD_System:
                           category = 'Health Parameters')
               
             self.AvHDur = SD_object('Average Hospitalization Duration',
-                          units = 'days',
+                          units = 'Days',
                           init_value = 7,
                           obtype = 'variable',
                           func = lambda tstep, tind: self.AvHDur.value(ind=tind),
@@ -519,7 +519,7 @@ class SD_System:
                         category = 'Equipment Parameters')
               
             self.VDur = SD_object('Default Ventilator Delivery Duration',
-                        units = 'days',
+                        units = 'Days',
                         init_value = 30,
                         obtype = 'variable',
                         func = lambda tstep, tind: self.VDur.value(ind=tind),
@@ -751,7 +751,7 @@ class SD_System:
                                 category = 'Health Parameters')
             
             self.AvDur = SD_object('Average Illness Duration',
-                                  units = 'days',
+                                  units = 'Days',
                                   init_value = 14,
                                   obtype = 'variable',
                                   func = lambda tstep, tind: self.AvDur.value(ind=tind),
@@ -836,7 +836,7 @@ class SD_System:
                           category = 'Health Parameters')
               
             self.AvHDur = SD_object('Average Hospitalization Duration',
-                          units = 'days',
+                          units = 'Days',
                           init_value = 7,
                           obtype = 'variable',
                           func = lambda tstep, tind: self.AvHDur.value(ind=tind),
@@ -1043,7 +1043,7 @@ class SD_System:
                         category = 'Equipment Parameters')
               
             self.VDur = SD_object('Default Ventilator Delivery Duration',
-                        units = 'days',
+                        units = 'Days',
                         init_value = 30,
                         obtype = 'variable',
                         func = lambda tstep, tind: self.VDur.value(ind=tind),
@@ -1134,7 +1134,7 @@ class SD_System:
                                 category = 'Health Parameters')
             
             self.AvDur = SD_object('Average Illness Duration',
-                                  units = 'days',
+                                  units = 'Days',
                                   init_value = 14,
                                   obtype = 'variable',
                                   func = lambda tstep, tind: self.AvDur.value(ind=tind),
@@ -1359,7 +1359,7 @@ class SD_System:
                                 category = 'Health Parameters')
             
             self.AvDur = SD_object('Average Illness Duration',
-                                  units = 'days',
+                                  units = 'Days',
                                   init_value = 14,
                                   obtype = 'variable',
                                   func = lambda tstep, tind: self.AvDur.value(ind=tind),
@@ -1748,7 +1748,7 @@ class SD_System:
                                 category = 'Economy')    
   
             self.Arrivals_Ind = SD_object('Visitor Arrivals',
-                                units = 'People',
+                                units = 'people',
                                 init_value = lambda: self.historical_data('Arrivals', location, filename), #this historical data only goes through June, so post-June is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.Arrivals_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
@@ -1767,7 +1767,7 @@ class SD_System:
                                 category = 'Economy') 
   
             self.household_ex_Ind = SD_object('Household Expenditures',
-                                units = 'Millions Rupiahs',
+                                units = 'Rp Million',
                                 init_value = lambda: self.historical_data('household_ex', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.household_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
@@ -1775,8 +1775,8 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Economy')  
   
-            self.consumtion_ex_Ind = SD_object('Consumtion Expenditure LNPRT',
-                                units = 'Millions Rupiahs',
+            self.consumtion_ex_Ind = SD_object('Consumption Expenditure LNPRT',
+                                units = 'Rp Million',
                                 init_value = lambda: self.historical_data('Consumtion_ex', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.consumtion_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
@@ -1785,7 +1785,7 @@ class SD_System:
                                 category = 'Economy')
   
             self.gov_ex_Ind = SD_object('Government Consumption Expenditure',
-                                units = 'Millions Rupiahs',
+                                units = 'Rp Million',
                                 init_value = lambda: self.historical_data('gov_ex', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.gov_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
@@ -1794,7 +1794,7 @@ class SD_System:
                                 category = 'Economy')         
   
             self.net_ex_Ind = SD_object('Net Exports',
-                                units = 'Millions Rupiahs',
+                                units = 'Rp Million',
                                 init_value = lambda: self.historical_data('net_ex', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.net_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
@@ -1803,7 +1803,7 @@ class SD_System:
                                 category = 'Economy')      
   
             self.GDP_manu_Ind = SD_object('Manufacturing GDP',
-                                units = 'Millions Rupiahs',
+                                units = 'Rp Million',
                                 init_value = lambda: self.historical_data('GDP_manu', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.GDP_manu_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
@@ -1812,7 +1812,7 @@ class SD_System:
                                 category = 'Economy')    
   
             self.GDP_cons_Ind = SD_object('Construction GDP',
-                                units = 'Millions Rupiahs',
+                                units = 'Rp Million',
                                 init_value = lambda: self.historical_data('GDP_cons', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.GDP_cons_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
@@ -1821,7 +1821,7 @@ class SD_System:
                                 category = 'Economy')   
   
             self.GDP_retail_Ind = SD_object('Retail and Vehicle Repair GDP',
-                                units = 'Millions Rupiahs',
+                                units = 'Rp Million',
                                 init_value = lambda: self.historical_data('GDP_retail', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.GDP_retail_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
@@ -1830,7 +1830,7 @@ class SD_System:
                                 category = 'Economy')     
   
             self.GDP_IT_Ind = SD_object('Information and Communication GDP',
-                                units = 'Millions Rupiahs',
+                                units = 'Rp Million',
                                 init_value = lambda: self.historical_data('GDP_IT', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.GDP_IT_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
@@ -1839,7 +1839,7 @@ class SD_System:
                                 category = 'Economy')       
   
             self.GDP_social_Ind = SD_object('Health and Social Work GDP',
-                                units = 'Millions Rupiahs',
+                                units = 'Rp Million',
                                 init_value = lambda: self.historical_data('GDP_social', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.GDP_social_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
@@ -1847,8 +1847,8 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Economy')           
   
-            self.GDP_food_Ind = SD_object('Accomodation and Food Service GDP',
-                                units = 'Millions Rupiahs',
+            self.GDP_food_Ind = SD_object('Accommodation and Food Service GDP',
+                                units = 'Rp Million',
                                 init_value = lambda: self.historical_data('GDP_food', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.GDP_food_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
