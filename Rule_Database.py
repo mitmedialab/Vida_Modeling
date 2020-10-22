@@ -195,7 +195,7 @@ class Conditional_Database:
     
     def In_Rule4func_s(self, policy_input):
         output = 0
-        if self.SD_Map.mIPop_s.value() <= 250 and (policy_input['Social Distancing Policy Java'] in ['Mandatory Social Distancing - Provincial', 'Mandatory Social Distancing - Zonal']):
+        if self.SD_Map.mIPop_s.value() <= 250 and (policy_input['Social Distancing Policy Sulawesi'] in ['Mandatory Social Distancing - Provincial', 'Mandatory Social Distancing - Zonal']):
             # print('Rule 5 Triggered')
             self.SD_Map.SocialDisP_s.values[-1] = self.PolicyDicts['Social Distancing Policy Sulawesi']['Voluntary Social Distancing - Zonal']   
             output = 1
