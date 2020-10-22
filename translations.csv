@@ -1,114 +1,114 @@
 english,spanish,portuguese
-Graph 1: ,Gr√°fico 1: ,Gr√°fico 1: 
-Graph 2: ,Gr√°fico 2: ,Gr√°fico 2: 
-Simulation,Simulaci√≥n,Simula√ß√£o
-History,Historia,Hist√≥ria
+Graph 1: ,Gr·fico 1: ,Gr·fico 1: 
+Graph 2: ,Gr·fico 2: ,Gr·fico 2: 
+Simulation,SimulaciÛn,SimulaÁ„o
+History,Historia,HistÛria
 ,,
-System Dynamics Visualization,Visualizaci√≥n de din√°mica de sistemas,Visualiza√ß√£o da din√¢mica do sistema
-English,Ingl√©s,Ingl√™s
-Spanish,Espa√±ol,Espanhol
-Portuguese,Portugu√©s,Portugu√™s
-Languages,Idiomas,L√≠nguas
-Exit,Salida,Sa√≠da
+System Dynamics Visualization,VisualizaciÛn de din·mica de sistemas,VisualizaÁ„o da din‚mica do sistema
+English,InglÈs,InglÍs
+Spanish,EspaÒol,Espanhol
+Portuguese,PortuguÈs,PortuguÍs
+Languages,Idiomas,LÌnguas
+Exit,Salida,SaÌda
 Rio de Janeiro,Rio de Janeiro,Rio de Janeiro
 Chile,Chile,Chile
 Santiago,Santiago,Santiago
-Indonesia,Indonesia,Indon√©sia
-Locations,Ubicaciones,Localiza√ß√µes
+Indonesia,Indonesia,IndonÈsia
+Locations,Ubicaciones,LocalizaÁıes
 ,,
 Order New Ventilators,Solicite nuevos ventiladores,Solicitar novos ventiladores
-Next Week,La pr√≥xima semana,Semana que vem
-Run Autonomously,Ejecutar de forma aut√≥noma,Executar de forma aut√¥noma
-Clear Simulation,Reiniciar la simulaci√≥n,Reiniciar Simula√ß√£o
+Next Week,La prÛxima semana,Semana que vem
+Run Autonomously,Ejecutar de forma autÛnoma,Executar de forma autÙnoma
+Clear Simulation,Reiniciar la simulaciÛn,Reiniciar SimulaÁ„o
 Rules,Reglas,Regras
 Log,Registro,Registro
 ,,
-How many days do you want the simulation to run for?,¬øCu√°ntos d√≠as desea que se ejecute la simulaci√≥n?,Por quantos dias voc√™ deseja que a simula√ß√£o seja executada?
-Run Simulation,Ejecutar simulaci√≥n,Executar Simula√ß√£o
+How many days do you want the simulation to run for?,øCu·ntos dÌas desea que se ejecute la simulaciÛn?,Por quantos dias vocÍ deseja que a simulaÁ„o seja executada?
+Run Simulation,Ejecutar simulaciÛn,Executar SimulaÁ„o
 ,,
 ,,
 ,,
-Days,D√≠as,Dias
-Day,D√≥a,Dia
+Days,DÌas,Dias
+Day,DÛa,Dia
 people,personas,pessoas
-people/day,personas por d√≠a,pessoas por dia
+people/day,personas por dÌa,pessoas por dia
 unitless,sin unidad,sem unidade
-people/(day*person),personas/(d√≠a*persona),pessoas/(dia*pessoa)
+people/(day*person),personas/(dÌa*persona),pessoas/(dia*pessoa)
 likelihood/contact,probabilidad/contacto,probabilidade/contato
 probability,probabilidad,probabilidade
 ventilator,ventilador,ventilator
-dollar/ventilator,d√≥lar por ventilador,d√≥lar por ventilador
-ventilator/day,ventilador por d√≠a,ventilador por dia
+dollar/ventilator,dÛlar por ventilador,dÛlar por ventilador
+ventilator/day,ventilador por dÌa,ventilador por dia
 Celsius,Celsius,Celsius
-¬µg / m3,¬µg / m3,¬µg / m3
+µg / m3,µg / m3,µg / m3
 ppm,ppm,ppm
 percent,por ciento,por cento
 ,,
-Policies & Actions,Pol√≠ticas y acciones,Pol√≠ticas e A√ß√µes
-Closure Policy,Pol√≠tica de cierre,Pol√≠tica de Fechamento
-Social Distancing Policy,Pol√≠tica de distanciamiento,Pol√≠tica de Distanciamento
+Policies & Actions,PolÌticas y acciones,PolÌticas e AÁıes
+Closure Policy,PolÌtica de cierre,PolÌtica de Fechamento
+Social Distancing Policy,PolÌtica de distanciamiento,PolÌtica de Distanciamento
 New Ventilator Orders,Nuevos pedidos de ventiladores,Novos pedidos de ventiladores
-Curfew Policy,Pol√≠tica de toque de queda,Pol√≠tica de toque de recolher
+Curfew Policy,PolÌtica de toque de queda,PolÌtica de toque de recolher
 Lockdown,Cierre de emergencia,Confinamento
 No Closures,Sin cierres,Sem fechamentos
 No Distancing,Sin distanciamiento,Sem distanciamento
-Voluntary Social Distancing,Distanciamiento social voluntario,Distanciamento Social Volunt√°rio
-Mandatory Social Distancing,Distanciamiento social obligatorio,Distanciamento Social Obrigat√≥rio
+Voluntary Social Distancing,Distanciamiento social voluntario,Distanciamento Social Volunt·rio
+Mandatory Social Distancing,Distanciamiento social obligatorio,Distanciamento Social ObrigatÛrio
 No Curfew,No hay toque de queda,Sem toque de recolher
-Unenforced Curfew,Toque de queda no forzado,Toque de recolher n√£o for√ßado
-Enforced Curfew,Toque de queda forzado,Toque de recolher for√ßado
+Unenforced Curfew,Toque de queda no forzado,Toque de recolher n„o forÁado
+Enforced Curfew,Toque de queda forzado,Toque de recolher forÁado
 ,,
-Health Parameters,Par√°metros de salud,Par√¢metros de Sa√∫de
-Base Contact Rate,Tasa de contacto base,Taxa de contato b√°sica
+Health Parameters,Par·metros de salud,Par‚metros de Sa˙de
+Base Contact Rate,Tasa de contacto base,Taxa de contato b·sica
 Contact Rate,Tasa de contacto,Taxa de contato
 Infectivity,Infectividad,Infectividade
-Hospitalization Likelihood,Probabilidad de hospitalizaci√≥n,Probabilidade de hospitaliza√ß√£o
-Unhospitalized Mortality Likelihood,Probabilidad de mortalidad no hospitalaria,Probabilidade de mortalidade n√£o hospitalizada
-Unhospitalized Recovery Likelihood,Probabilidad de recuperaci√≥n no hospitalizada,Probabilidade de recupera√ß√£o n√£o hospitalizada
-Hospitalized Recovery Likelihood,Probabilidad de recuperaci√≥n hospitalizada,Probabilidade de recupera√ß√£o hospitalizada
-Base Hospitalized Recovery Likelihood,Probabilidad de recuperaci√≥n hospitalaria base,Probabilidade de recupera√ß√£o de base hospitalizada
+Hospitalization Likelihood,Probabilidad de hospitalizaciÛn,Probabilidade de hospitalizaÁ„o
+Unhospitalized Mortality Likelihood,Probabilidad de mortalidad no hospitalaria,Probabilidade de mortalidade n„o hospitalizada
+Unhospitalized Recovery Likelihood,Probabilidad de recuperaciÛn no hospitalizada,Probabilidade de recuperaÁ„o n„o hospitalizada
+Hospitalized Recovery Likelihood,Probabilidad de recuperaciÛn hospitalizada,Probabilidade de recuperaÁ„o hospitalizada
+Base Hospitalized Recovery Likelihood,Probabilidad de recuperaciÛn hospitalaria base,Probabilidade de recuperaÁ„o de base hospitalizada
 Hospitalized Mortality Likelihood,Probabilidad de mortalidad hospitalaria,Probabilidade de mortalidade hospitalizada
-Recovery Likelihood,Probabilidad de recuperaci√≥n,Probabilidade de recupera√ß√£o
+Recovery Likelihood,Probabilidad de recuperaciÛn,Probabilidade de recuperaÁ„o
 Mortality Likelihood,Probabilidad de mortalidad,Probabilidade de mortalidade
-Average Illness Duration,Duraci√≥n media de la enfermedad,Dura√ß√£o m√©dia da doen√ßa
-Average Hospitalization Duration,Duraci√≥n media de la hospitalizaci√≥n,Dura√ß√£o M√©dia de Hospitaliza√ß√£o
+Average Illness Duration,DuraciÛn media de la enfermedad,DuraÁ„o mÈdia da doenÁa
+Average Hospitalization Duration,DuraciÛn media de la hospitalizaciÛn,DuraÁ„o MÈdia de HospitalizaÁ„o
 ,,
-Health Populations,Poblaciones de salud,Popula√ß√µes de Sa√∫de
-Susceptible Population,Poblaci√≥n susceptible,Popula√ß√£o Suscept√≠vel
-'True' Unhospitalized Infected Population,Poblaci√≥n infectada no hospitalizada 'verdadera',Popula√ß√£o infectada 'verdadeira' n√£o hospitalizada
+Health Populations,Poblaciones de salud,PopulaÁıes de Sa˙de
+Susceptible Population,PoblaciÛn susceptible,PopulaÁ„o SusceptÌvel
+'True' Unhospitalized Infected Population,PoblaciÛn infectada no hospitalizada 'verdadera',PopulaÁ„o infectada 'verdadeira' n„o hospitalizada
 Deaths,Fallecidos,Mortes
-Hospitalized Population,Poblaci√≥n hospitalizada,Popula√ß√£o Hospitalizada
-Known Recovered Population,Poblaci√≥n recuperada conocida,Popula√ß√£o Recuperada Conhecida
-Measured Unhospitalized Infected Population,Poblaci√≥n infectada no hospitalizada medida,Popula√ß√£o infectada n√£o hospitalizada medida
-Measured Total Infected Population,Poblaci√≥n total infectada medida,Popula√ß√£o total infectada medida
-'True' Total Infected Population,Poblaci√≥n total infectada 'verdadera',Popula√ß√£o total infectada 'verdadeira'
-'True' Infected Population,Poblaci√≥n infectada 'verdadera',Popula√ß√£o infectada 'verdadeira'
-Measured Infected Population,Poblaci√≥n infectada medida,Popula√ß√£o infectada medida
+Hospitalized Population,PoblaciÛn hospitalizada,PopulaÁ„o Hospitalizada
+Known Recovered Population,PoblaciÛn recuperada conocida,PopulaÁ„o Recuperada Conhecida
+Measured Unhospitalized Infected Population,PoblaciÛn infectada no hospitalizada medida,PopulaÁ„o infectada n„o hospitalizada medida
+Measured Total Infected Population,PoblaciÛn total infectada medida,PopulaÁ„o total infectada medida
+'True' Total Infected Population,PoblaciÛn total infectada 'verdadera',PopulaÁ„o total infectada 'verdadeira'
+'True' Infected Population,PoblaciÛn infectada 'verdadera',PopulaÁ„o infectada 'verdadeira'
+Measured Infected Population,PoblaciÛn infectada medida,PopulaÁ„o infectada medida
 ,,
-Health Flows,Flujos de salud,Fluxos de Sa√∫de
-'True' Infection Rate,Tasa de infecci√≥n 'verdadera',Taxa de infec√ß√£o 'verdadeira'
-Measured Infection Rate,Tasa de infecci√≥n medida,Taxa de infec√ß√£o medida
-Unhospitalized Recovery Rate,Tasa de recuperaci√≥n no hospitalizada,Taxa de recupera√ß√£o n√£o hospitalar
-Unhospitalized Mortality Rate,Tasa de mortalidad no hospitalizada,Taxa de mortalidade n√£o hospitalizada
-Hospital Recovery Rate,Tasa de recuperaci√≥n hospitalaria,Taxa de recupera√ß√£o hospitalar
+Health Flows,Flujos de salud,Fluxos de Sa˙de
+'True' Infection Rate,Tasa de infecciÛn 'verdadera',Taxa de infecÁ„o 'verdadeira'
+Measured Infection Rate,Tasa de infecciÛn medida,Taxa de infecÁ„o medida
+Unhospitalized Recovery Rate,Tasa de recuperaciÛn no hospitalizada,Taxa de recuperaÁ„o n„o hospitalar
+Unhospitalized Mortality Rate,Tasa de mortalidad no hospitalizada,Taxa de mortalidade n„o hospitalizada
+Hospital Recovery Rate,Tasa de recuperaciÛn hospitalaria,Taxa de recuperaÁ„o hospitalar
 Hospital Mortaility Rate,Tasa de mortalidad hospitalaria,Taxa de mortalidade hospitalar
-Hospitalization Rate,Tasa de hospitalizaci√≥n,Taxa de hospitaliza√ß√£o
-Recovery Rate,Tasa de recuperaci√≥n,Taxa de recupera√ß√£o
+Hospitalization Rate,Tasa de hospitalizaciÛn,Taxa de hospitalizaÁ„o
+Recovery Rate,Tasa de recuperaciÛn,Taxa de recuperaÁ„o
 Mortality Rate,Tasa de mortalidad,Taxa de mortalidade
 ,,
 Equipment Supplies,Suministros de equipos,Suprimentos de equipamentos
 Hospital Bed Capacity,Capacidad de la cama de hospital,Capacidade de leitos hospitalares
-Available Ventilators,Ventiladores disponibles,Ventiladores Dispon√≠veis
+Available Ventilators,Ventiladores disponibles,Ventiladores DisponÌveis
 Ordered Ventilators,Ventiladores pedidos,Ventiladores solicitados
-Daily PCR Tests,Ex√°menes PCR diarios,Testes PCR di√°rios
+Daily PCR Tests,Ex·menes PCR diarios,Testes PCR di·rios
 ,,
-Equipment Parameters,Par√°metros del equipo,Par√¢metros de Equipamento
-Ventilator Willingness to Pay,Disposici√≥n del ventilador a pagar,Disposi√ß√£o do Ventilador a Pagar
-Default Ventilator Delivery Duration,Duraci√≥n predeterminada de la administraci√≥n del ventilador,Dura√ß√£o de entrega do ventilador padr√£o
-Ventilator Acquisition Rate,Tasa de adquisici√≥n del ventilador,Taxa de aquisi√ß√£o do ventilador
+Equipment Parameters,Par·metros del equipo,Par‚metros de Equipamento
+Ventilator Willingness to Pay,DisposiciÛn del ventilador a pagar,DisposiÁ„o do Ventilador a Pagar
+Default Ventilator Delivery Duration,DuraciÛn predeterminada de la administraciÛn del ventilador,DuraÁ„o de entrega do ventilador padr„o
+Ventilator Acquisition Rate,Tasa de adquisiciÛn del ventilador,Taxa de aquisiÁ„o do ventilador
 ,,
 Environment,Ambiente,Meio Ambiente
-Average Temperature,Temperatura media,Temperatura m√©dia
+Average Temperature,Temperatura media,Temperatura mÈdia
 SO2,SO2,SO2
 NO2,NO2,NO2
 HCNM,HCNM,HCNM
@@ -121,31 +121,31 @@ O3,O3,O3
 PM10,MP10,PM10
 PM2.5,MP2.5,PM2.5
 ,,
-Economy,Econom√≠a,Economia
-Rio de Janeiro Unemployment Rate,Tasa de desempleo de R√≠o de Janeiro,Taxa de desemprego do Rio de Janeiro
-Rio de Janeiro Unemployment Rate of Change,Tasa de variaci√≥n del desempleo en R√≠o de Janeiro,Taxa de varia√ß√£o do desemprego no Rio de Janeiro
+Economy,EconomÌa,Economia
+Rio de Janeiro Unemployment Rate,Tasa de desempleo de RÌo de Janeiro,Taxa de desemprego do Rio de Janeiro
+Rio de Janeiro Unemployment Rate of Change,Tasa de variaciÛn del desempleo en RÌo de Janeiro,Taxa de variaÁ„o do desemprego no Rio de Janeiro
 Brazil Unemployment Rate,Tasa de desempleo de Brasil,Taxa de desemprego no Brasil
-Brazil Unemployment Rate of Change,Tasa de variaci√≥n del desempleo en Brasil,Taxa de varia√ß√£o do desemprego no Brasil
-Daily Flight Passengers,Pasajeros de vuelos diarios,Passageiros de voos di√°rios
+Brazil Unemployment Rate of Change,Tasa de variaciÛn del desempleo en Brasil,Taxa de variaÁ„o do desemprego no Brasil
+Daily Flight Passengers,Pasajeros de vuelos diarios,Passageiros de voos di·rios
 Gross Domestic Product,Producto Interno Bruto,Produto Interno Bruto
-Rp Million,Millones de Rp,Rp milh√µes
+Rp Million,Millones de Rp,Rp milhıes
 ,,
 Rainfall,Lluvia,Chuva
-Barometric Pressure,Presi√≥n barom√©trica,Press√£o barom√©trica
-Solar Radiation,Radiaci√≥n solar,Radia√ß√£o solar
+Barometric Pressure,PresiÛn baromÈtrica,Press„o baromÈtrica
+Solar Radiation,RadiaciÛn solar,RadiaÁ„o solar
 Temperature,Temperatura,Temperatura
 Relative Humidity,Humedad relativa,Humidade relativa
-Wind Direction,Direcci√≥n del viento,Dire√ß√£o do vento
+Wind Direction,DirecciÛn del viento,DireÁ„o do vento
 Wind Speed,Velocidad del viento,Velocidade do vento
 ,,
-Operations Mean Anomaly,Anomal√≠a del medio de operaciones,Anomalia m√©dia de opera√ß√µes
-Passengers Mean Anomaly,Los pasajeros significan anomal√≠a,Passageiros Significam Anomalia
-July Operations,Operaciones de Julio,Opera√ß√µes de julho
+Operations Mean Anomaly,AnomalÌa del medio de operaciones,Anomalia mÈdia de operaÁıes
+Passengers Mean Anomaly,Los pasajeros significan anomalÌa,Passageiros Significam Anomalia
+July Operations,Operaciones de Julio,OperaÁıes de julho
 July Passengers,Pasajeros de julio,Passageiros de julho
-Population,Poblaci√≥n,Popula√ß√£o
+Population,PoblaciÛn,PopulaÁ„o
 Current ICU,UCI actual,UTI atual
 Accumulative Cases,Casos acumulativos,Casos Acumulativos
-Accumulative PCR Exams,Ex√°menes de PCR acumulativos,Exames PCR Acumulativos
+Accumulative PCR Exams,Ex·menes de PCR acumulativos,Exames PCR Acumulativos
 Accumulative Deaths,Fallecidos Acumulados,Mortes acumuladas
 Status,Estado,Status
 ,,
@@ -156,9 +156,9 @@ Initial Closures,Cierres iniciales,Fechamentos iniciais
 Additional Closures,Cierres adicionales,Fechamentos Adicionais
 Complete Lockdown,Cierre completo,Bloqueio completo
 Re-open Some Businesses,Reabrir algunos negocios,Reabrir algumas empresas
-Relax Mandatory Social Distancing,Relajamiento Distancia social obligatoria,Relaxe o distanciamento social obrigat√≥rio
-Order More Ventilators,Solicite m√°s ventiladores,Pe√ßa mais ventiladores
-Pay More for Ventilators to Accelerate Delivery,Pague m√°s por los ventiladores para acelerar la entrega,Pague mais por ventiladores para acelerar a entrega
+Relax Mandatory Social Distancing,Relajamiento Distancia social obligatoria,Relaxe o distanciamento social obrigatÛrio
+Order More Ventilators,Solicite m·s ventiladores,PeÁa mais ventiladores
+Pay More for Ventilators to Accelerate Delivery,Pague m·s por los ventiladores para acelerar la entrega,Pague mais por ventiladores para acelerar a entrega
 ,,
 Fase 6,Fase 6,Fase 6
 Fase 5,Fase 5,Fase 5
