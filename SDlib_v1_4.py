@@ -1971,7 +1971,7 @@ class SD_System:
                                 category = 'Health Parameters')
             
             self.AvDur = SD_object('Average Illness Duration',
-                                  units = 'days',
+                                  units = 'Days',
                                   init_value = 14,
                                   obtype = 'variable',
                                   func = lambda tstep, tind: self.AvDur.value(ind=tind),
@@ -2056,7 +2056,7 @@ class SD_System:
                           category = 'Health Parameters')
               
             self.AvHDur = SD_object('Average Hospitalization Duration',
-                          units = 'days',
+                          units = 'Days',
                           init_value = 7,
                           obtype = 'variable',
                           func = lambda tstep, tind: self.AvHDur.value(ind=tind),
@@ -2253,7 +2253,7 @@ class SD_System:
                         category = 'Equipment Parameters')
               
             self.VDur = SD_object('Default Ventilator Delivery Duration',
-                        units = 'days',
+                        units = 'Days',
                         init_value = 30,
                         obtype = 'variable',
                         func = lambda tstep, tind: self.VDur.value(ind=tind),
