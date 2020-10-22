@@ -65,36 +65,31 @@ class SD_UI(tk.Tk):
             self.color_range =  'PM10'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
-            self.map_loc = [-43.1, -23.0, 0.01]
+            self.map_loc = [-43.487035, -22.930828, 0.01]
             self.language = 'portuguese'
-            # self.policy_options = ['Closure Policy', 'Social Distancing Policy']
         elif self.location == 'Chile':
-            # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'Population'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
-            self.map_loc = [-35.0, -50.0, 0.0001]
+            self.map_loc = [-70.915467, -37.561959, 0.0001]
             self.language = 'spanish'
-            # self.policy_options = ['Closure Policy', 'Curfew Policy']
         elif self.location == 'Indonesia':
-            # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
             self.color_range =  'Total Cases'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
-            self.map_loc = [122.5,-9.0, 0.0004] #modified this to fit in screen with new fontsize and figsize settings
+            self.map_loc = [113.119473,-5.944932, 0.0004]
             self.language = 'english'
-            # self.policy_options = ['Closure Policy', 'Social Distancing Policy']
         elif self.location == 'Santiago':
             self.color_range = 'PM10'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
-            self.map_loc = [-69.0, -34.0, 0.0025]
+            self.map_loc = [-70.738862, -33.478012, 0.0025]
             self.language = 'spanish'
         elif self.location == 'Querétaro':
             self.color_range = 'COVID Cases per 1000 People'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = "Hospitalized Population"
-            self.map_loc = [-98.7, 20.37, 0.003]
+            self.map_loc = [-99.866625, 20.85, 0.003]
             self.language = 'spanish'
             
         #Set filepaths for relevant data and auxilary files
@@ -143,9 +138,7 @@ class SD_UI(tk.Tk):
         fontsize = int(round(0.016575085503472222 * self.screenheight))
         self.option_add("*Font", "helvetica " + str(fontsize))
         self.small_font = tk.font.Font(family="helvetica", size=int(round(fontsize/2)))
-        
-        # self.bind('<Escape>',self.toggle_geom)  
-    
+            
     
         #Label the SD_Map input for easy reference
         self.SD_Map = SDlib.SD_System(tuning_flag=self.tuning_flag,
@@ -159,7 +152,6 @@ class SD_UI(tk.Tk):
             maxtimelist = []
             
             SD_dict = self.SD_Map.__dict__.copy()
-#            del SD_dict['location']
 
             for SDattribute in SD_dict:
                 maxtimelist.append(len(self.SD_Map.__dict__[SDattribute].values))
@@ -249,7 +241,6 @@ class SD_UI(tk.Tk):
             print('Unable to find language:', out_lang)
         
         #Open CSV with translations
-       # with open(self.translations) as csv_file:
         with open(self.translations, encoding='ISO-8859-15') as csv_file:
            csvread = csv.DictReader(csv_file)
            found = 0
@@ -818,7 +809,7 @@ class SD_UI(tk.Tk):
                 option1_list.append(self.translate(entry))
             
             self.policy_option_vars[policy] = tk.StringVar()
-            defaultpolicy = self.PolicyDictsInv[policy][self.SD_Map.retrieve_ob(policy).value()]
+            defaultpolicy = self.translate(self.PolicyDictsInv[policy][self.SD_Map.retrieve_ob(policy).value()])
             
             self.policy_option_vars[policy].set(defaultpolicy)
             self.option_menus.append(tk.OptionMenu(control_frame, self.policy_option_vars[policy], 
@@ -1197,7 +1188,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Indonesia')
+                location = 'Rio de Janeiro')
 
     #Run the user interface
     UI.mainloop()
