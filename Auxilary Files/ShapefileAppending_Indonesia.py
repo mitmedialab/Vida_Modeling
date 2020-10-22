@@ -125,7 +125,9 @@ metrics = metrics = ['Cases',
            'consumex',
            'govex',
            'netex',
-           'GDRP'
+           'GDRP', 
+           'pov',
+           'FTT',
            ]
 
 

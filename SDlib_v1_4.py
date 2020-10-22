@@ -1856,6 +1856,59 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Economy')
 
+            self.stock_index_Ind = SD_object('Closing Compsite Stock Index (IDX)',
+                                units = 'Stock Index',
+                                init_value = lambda: self.historical_data('stock_index', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.stock_index_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')                                
+
+            self.FTT_Ind_JK = SD_object('Farmer Terms of Trade - Jakarta ',
+                                units = 'Currency',
+                                init_value = lambda: self.historical_data('FTT_JK', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.FTT_Ind_JK.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')    
+
+            self.FTT_Ind_JB = SD_object('Farmer Terms of Trade - West Java ',
+                                units = 'Currency',
+                                init_value = lambda: self.historical_data('FTT_JB', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.FTT_Ind_JB.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')        
+
+            self.FTT_Ind_JT = SD_object('Farmer Terms of Trade - Central Java ',
+                                units = 'Currency',
+                                init_value = lambda: self.historical_data('FTT_JT', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.FTT_Ind_JT.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')        
+
+            self.FTT_Ind_JI = SD_object('Farmer Terms of Trade - East Java ',
+                                units = 'Currency',
+                                init_value = lambda: self.historical_data('FTT_JI', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.FTT_Ind_JI.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')        
+
+            self.FTT_Ind_SN = SD_object('Farmer Terms of Trade - South Sulawesi ',
+                                units = 'Currency',
+                                init_value = lambda: self.historical_data('FTT_SN', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.FTT_Ind_SN.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')                                                                                         
           
     # =============================================================================
     # %% 5 - Adjustments for Tuning  
