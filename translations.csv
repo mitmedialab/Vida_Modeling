@@ -196,7 +196,6 @@ Status,Estado,Status
 ,,
 Total Cases,Casos totales,Total de Casos
 Recovered Cases,Casos recuperados,Casos Recuperados
-,,
 Retail and Recreation Mobility % Change from Baseline (late July),Cambio porcentual de movilidad minorista y recreativa con respecto al valor inicial (finales de julio),Mudança de % de mobilidade para varejo e recreação em relação à linha de base (final de julho)
 Grocery and Pharmacy Mobility % Change from Baseline (late July),Cambio porcentual de movilidad en supermercados y farmacias con respecto al valor inicial (finales de julio),Mudança de % de mobilidade em supermercados e farmácias em relação à linha de base (final de julho)
 Parks Mobility % Change from Baseline (late July),Cambio porcentual de movilidad en parques con respecto al valor inicial (finales de julio),Mudança de % da mobilidade dos parques em relação à linha de base (final de julho)
@@ -208,6 +207,11 @@ Government Consumption Expenditure % Change from Q1 to Q2,Cambio porcentual de g
 Net Export % Change from Q1 to Q2,Cambio porcentual de exportación neta del primer trimestre al segundo,Mudança de % de exportação líquida do 1º ao 2º trimestre
 Gross Domestic Regional Expenditure % Change from Q1 to Q2,Cambio porcentual de gasto bruto producto regional del primer trimestre al segundo,Mudança de % da despesa interna bruta regional do 1º ao 2º trimestre
 Residential Mobility % Change from Baseline (late July),Cambio porcentual de movilidad en residencial con respecto al valor inicial (finales de julio),Mudança de % de mobilidade de residencial da linha de base (final de julho)
+,,
+COVID Cases per 1000 People,Casos de COVID por 1000 personas,Casos COVID por 1000 pessoas
+2015 Population,Población 2015,População 2015
+COVID Deaths per 1000 People,Fallecidos COVID por 1000 personas,COVID Mortes por 1000 pessoas
+COVID Hospitalizations per 1000 People,Hospitalizaciones por COVID por 1000 personas,Hospitalizações COVID por 1000 pessoas
 ,,
 Initial Closures,Cierres iniciales,Fechamentos iniciais
 Additional Closures,Cierres adicionales,Fechamentos Adicionais
