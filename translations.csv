@@ -46,6 +46,8 @@ ppm,ppm,ppm
 percent,por ciento,por cento
 Millions USD,Millones de USD,Milhões de dólares
 Percent Change from Baseline,Cambio porcentual desde la línea de base,Alteração percentual da linha de base
+Stock Index,Índice bursátil,Índice de ações
+Terms Rate,Términos Tasa,Taxa de termos
 ,,
 Policies & Actions,Políticas y acciones,Políticas e Ações
 Closure Policy,Política de cierre,Política de Fechamento
@@ -174,6 +176,12 @@ Retail and Vehicle Repair GDP,PIB minorista y de reparación de vehículos,PIB de 
 Information and Communication GDP,PIB de información y comunicación,PIB de informação e comunicação
 Health and Social Work GDP,PIB de salud y trabajo social,PIB de saúde e serviço social
 Accommodation and Food Service GDP,PIB alojamiento y servicio de alimentos,PIB de hospedagem e alimentação
+Closing Compsite Stock Index (IDX),Cierre del índice bursátil compuesto (IDX),Índice de ações da Compsite de fechamento (IDX)
+Farmer Terms of Trade - Jakarta,Términos de intercambio de agricultores - Yakarta,Termos de comércio do agricultor - Jacarta
+Farmer Terms of Trade - West Java,Términos de intercambio de agricultores - Java Occidental,Termos de comércio do agricultor - Java do Oeste
+Farmer Terms of Trade - Central Java,Términos de intercambio de agricultores - Java Central,Termos de comércio do agricultor - Java Central
+Farmer Terms of Trade - East Java,Términos de intercambio de agricultores - Java Oriental,Termos de comércio do agricultor - Java Leste
+Farmer Terms of Trade - South Sulawesi,Términos de intercambio de agricultores - Sulawesi del Sur,Termos de comércio do agricultor - Sulawesi do Sul
 ,,
 Rainfall,Lluvia,Chuva
 Barometric Pressure,Presión barométrica,Pressão barométrica
@@ -207,6 +215,8 @@ Government Consumption Expenditure % Change from Q1 to Q2,Cambio porcentual de g
 Net Export % Change from Q1 to Q2,Cambio porcentual de exportación neta del primer trimestre al segundo,Mudança de % de exportação líquida do 1º ao 2º trimestre
 Gross Domestic Regional Expenditure % Change from Q1 to Q2,Cambio porcentual de gasto bruto producto regional del primer trimestre al segundo,Mudança de % da despesa interna bruta regional do 1º ao 2º trimestre
 Residential Mobility % Change from Baseline (late July),Cambio porcentual de movilidad en residencial con respecto al valor inicial (finales de julio),Mudança de % de mobilidade de residencial da linha de base (final de julho)
+Poverty Rate (March 2020),Tasa de pobreza (marzo de 2020),Taxa de pobreza (março de 2020)
+Farmer Terms of Trade (September 2020),Términos de intercambio de agricultores (septiembre de 2020),Termos de troca do agricultor (setembro de 2020)
 ,,
 COVID Cases per 1000 People,Casos de COVID por 1000 personas,Casos COVID por 1000 pessoas
 2015 Population,Población 2015,População 2015

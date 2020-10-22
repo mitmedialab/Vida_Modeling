@@ -1865,8 +1865,8 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Economy')                                
 
-            self.FTT_Ind_JK = SD_object('Farmer Terms of Trade - Jakarta ',
-                                units = 'Currency',
+            self.FTT_Ind_JK = SD_object('Farmer Terms of Trade - Jakarta',
+                                units = 'Terms Rate',
                                 init_value = lambda: self.historical_data('FTT_JK', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.FTT_Ind_JK.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
@@ -1874,8 +1874,8 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Economy')    
 
-            self.FTT_Ind_JB = SD_object('Farmer Terms of Trade - West Java ',
-                                units = 'Currency',
+            self.FTT_Ind_JB = SD_object('Farmer Terms of Trade - West Java',
+                                units = 'Terms Rate',
                                 init_value = lambda: self.historical_data('FTT_JB', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.FTT_Ind_JB.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
@@ -1883,8 +1883,8 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Economy')        
 
-            self.FTT_Ind_JT = SD_object('Farmer Terms of Trade - Central Java ',
-                                units = 'Currency',
+            self.FTT_Ind_JT = SD_object('Farmer Terms of Trade - Central Java',
+                                units = 'Terms Rate',
                                 init_value = lambda: self.historical_data('FTT_JT', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.FTT_Ind_JT.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
@@ -1892,8 +1892,8 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Economy')        
 
-            self.FTT_Ind_JI = SD_object('Farmer Terms of Trade - East Java ',
-                                units = 'Currency',
+            self.FTT_Ind_JI = SD_object('Farmer Terms of Trade - East Java',
+                                units = 'Terms Rate',
                                 init_value = lambda: self.historical_data('FTT_JI', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.FTT_Ind_JI.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
@@ -1901,8 +1901,8 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Economy')        
 
-            self.FTT_Ind_SN = SD_object('Farmer Terms of Trade - South Sulawesi ',
-                                units = 'Currency',
+            self.FTT_Ind_SN = SD_object('Farmer Terms of Trade - South Sulawesi',
+                                units = 'Terms Rate',
                                 init_value = lambda: self.historical_data('FTT_SN', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.FTT_Ind_SN.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
