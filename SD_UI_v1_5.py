@@ -249,7 +249,8 @@ class SD_UI(tk.Tk):
             print('Unable to find language:', out_lang)
         
         #Open CSV with translations
-        with open(self.translations) as csv_file:
+       # with open(self.translations) as csv_file:
+        with open(self.translations, encoding='ISO-8859-15') as csv_file:
            csvread = csv.DictReader(csv_file)
            found = 0
            for row in csvread:
