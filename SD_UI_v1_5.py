@@ -101,7 +101,8 @@ class SD_UI(tk.Tk):
         self.data_filepath = './Data/' + self.location + '/temporal_data.csv'
         self.shp_fields = './Data/' + self.location + '/shp_fields.csv'
         self.shpfilepath = './Data/' + self.location + '/Shapefiles/geographic_data.shp'
-    
+        self.image_filepath = './Data/' + self.location + '/images.csv'
+        
         
         #Load other keyword arguments
         if 'tuning' in kwargs:
@@ -635,29 +636,45 @@ class SD_UI(tk.Tk):
         self.shps = [shapefile.Reader(self.shpfilepath)]
         
         # Make Color Fill Dropdown Menu
+        color_label = tk.Label(frame_map, text=self.translate('Color') +': ',
+                              bg=self.default_background)
+        color_label.grid(column=0, row=0)
         self.color_optionlist =  self.make_fill_list(frame_map, self.shps[0])
         self.color_optionlist.configure(bg=self.button_color,
                                         highlightbackground=self.highlight_color)
         self.color_optionlist['menu'].config(bg=self.button_color)
-        self.color_optionlist.pack()
+        self.color_optionlist.grid(column=1, row=0, sticky='W')
         
         color_title = self.translate(self.color_setting_name.get(),
                                      input_language = self.language,
                                      output_language = 'english')
         color_range = self.color_field_modes[self.color_longname_modes_inverted[color_title]]
         
-        #Create Map and bind commands to it
+        #Make Background Image Dropdown Menu
+        image_label = tk.Label(frame_map, text=self.translate('Image') +': ',
+                              bg=self.default_background)
+        image_label.grid(column=2, row=0)
+        self.image_optionlist =  self.make_image_list(frame_map)
+        self.image_optionlist.configure(bg=self.button_color,
+                                        highlightbackground=self.highlight_color)
+        self.image_optionlist['menu'].config(bg=self.button_color)
+        self.image_optionlist.grid(column=3, row=0, sticky='W')
+
+        
+        image_title = self.translate(self.image_setting_name.get(),
+                                          input_language=self.language,
+                                          output_language='english')
+        image_path = self.image_dict[image_title]
+        
+        #Create subframe to house the map
         subframe_map = tk.Frame(frame_map,
                                 bg=self.default_background)
-        subframe_map.pack()
-        if self.background_image != []:
-            background = self.background_image[0]
-        else:
-            background = []
-            
+        subframe_map.grid(column=0, row=1, columnspan=4)
+
+        #Create Map
         MAP = MapWindow.Map(subframe_map,
                             self.shps,
-                            background_image = background, 
+                            background_image = image_path, 
                             color_range= [color_range],
                             color_title= color_title,
                             lat_lon_zoom= self.map_loc,
@@ -665,8 +682,6 @@ class SD_UI(tk.Tk):
                             window_dimensions = [self.screenwidth,self.screenheight])
         MAP.configure(bg='white')
         
-        # MAP.bind("<Button-1>", self.print_coords)
-        # MAP.bind("<Double-Button-1>", lambda e: self.uoa_type(self.clickname))
         return frame_map, subframe_map, MAP
     
     def make_fill_list (self, root, shp):    
@@ -676,7 +691,7 @@ class SD_UI(tk.Tk):
             root: tk frame for the dropdown to to be situated in.
                
         Returns:
-            zoneoptionlist: the dropdown list
+            color_optionlist: the dropdown list, tk Widget
         """
         
         #Identify fields, longnames, and categories to be added to the dropdown
@@ -714,6 +729,42 @@ class SD_UI(tk.Tk):
         
         #Return dropdown for future reference
         return color_optionlist 
+    
+    def make_image_list (self, root):    
+        """CREATE BACKGROUND IMAGE TOGGLE
+    
+        Args:
+            root: tk frame for the dropdown to to be situated in.
+               
+        Returns:
+            image_optionlist: the dropdown list, tk Widget
+        """
+        
+        #Identify names to be added to dropdown and filepaths associated with those names
+        image_list = ['None']
+        self.image_dict = dict()
+        self.image_dict['None'] = []
+        with open(self.image_filepath, encoding='ISO-8859-15') as csv_file:
+           csvread = csv.DictReader(csv_file)
+           for row in csvread:
+               image_list.append(row['name'])
+               self.image_dict[row['name']] = row['filepath']
+        
+        #Create Image Dropdown
+        self.image_setting_name = tk.StringVar()
+        self.image_setting_name.set(self.translate(image_list[0]))
+        
+        translated_image_list = []
+        for entry in image_list:
+            translated_image_list.append(self.translate(entry))
+            
+        image_optionlist = tk.OptionMenu(root, self.image_setting_name,
+                           *list(translated_image_list),
+                            command=lambda e: self.replace_map_image(self.subframe_map)
+                            )
+        
+        #Return dropdown for future reference
+        return image_optionlist 
     
     class fieldnamelookup:
     
@@ -753,6 +804,10 @@ class SD_UI(tk.Tk):
                                           input_language=self.language,
                                           output_language='english')
         fill_color = self.color_field_modes[self.color_longname_modes_inverted[fill_color_title]]
+        image_title = self.translate(self.image_setting_name.get(),
+                                          input_language=self.language,
+                                          output_language='english')
+        image_path = self.image_dict[image_title]
         
         #Delete exisiting map
         self.MAP.delete("all")
@@ -763,14 +818,9 @@ class SD_UI(tk.Tk):
         for item in griditems:
             item.destroy()
             
-        if self.background_image != []:
-            background = self.background_image[0]
-        else:
-            background = []
-            
         self.MAP = MapWindow.Map(mapframe,
                             self.shps,
-                            background_image = background, 
+                            background_image = image_path, 
                             color_range = [fill_color],
                             color_title = fill_color_title,
                             lat_lon_zoom = self.map_loc,

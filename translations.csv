@@ -27,6 +27,9 @@ Log,Registro,Registro
 How many days do you want the simulation to run for?,¿Cuántos días desea que se ejecute la simulación?,Por quantos dias você deseja que a simulação seja executada?
 Run Simulation,Ejecutar simulación,Executar Simulação
 ,,
+Color,Color,Cor
+Image,Imagen,Imagem
+None,Ninguno,Nenhum
 ,,
 ,,
 Days,Días,Dias
