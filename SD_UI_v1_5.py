@@ -311,6 +311,11 @@ class SD_UI(tk.Tk):
         Returns:
             N/A
         """
+        
+        #Clear Figures to avoid memory leak
+        for figure in self.figures:
+            figure.clear()
+            plt.close(figure)
 
         #Close the exisiting display
         self.destroy()
@@ -332,7 +337,11 @@ class SD_UI(tk.Tk):
         Returns:
             N/A
         """
-        
+        #Clear Figures to avoid memory leak
+        for figure in self.figures:
+            figure.clear()
+            plt.close(figure)
+            
         #Close the exisiting display
         self.destroy()
         
@@ -643,6 +652,7 @@ class SD_UI(tk.Tk):
         self.color_optionlist.configure(bg=self.button_color,
                                         highlightbackground=self.highlight_color)
         self.color_optionlist['menu'].config(bg=self.button_color)
+        self.color_optionlist.config(width=30)
         self.color_optionlist.grid(column=1, row=0, sticky='W')
         
         color_title = self.translate(self.color_setting_name.get(),

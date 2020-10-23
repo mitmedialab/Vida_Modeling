@@ -198,18 +198,19 @@ class Map(tk.Canvas):
         src_srs.ImportFromWkt(ds.GetProjection())
         tgt_srs = src_srs.CloneGeogCS()
         geo_ext=ReprojectCoords(ext,src_srs,tgt_srs) 
-        
+
         #Calculate Proper Dimensions of Image
         top_left = geo_ext[0]
-        top_left_lat = top_left[0]
-        top_left_lon = top_left[1]
+        top_left_lat = top_left[1]
+        top_left_lon = top_left[0]
         bottom_right = geo_ext[2]
-        bottom_right_lat = bottom_right[0]
-        bottom_right_lon = bottom_right[1]
+        bottom_right_lat = bottom_right[1]
+        bottom_right_lon = bottom_right[0]
         tlx, tly = self.to_canvas_coordinates(top_left_lon, top_left_lat)
         brx, bry = self.to_canvas_coordinates(bottom_right_lon, bottom_right_lat)
         new_width = brx - tlx
         new_height = bry - tly
+
         
         def display(image, display_min, display_max): # copied from Bi Rico
             """CONVERT A 16-BIT LUT TO AN 8-BIT LUT
@@ -245,17 +246,44 @@ class Map(tk.Canvas):
             return np.take(lut, image)
 
 
-        #Load Image and Convert to 8 bits
+        #Load Image
         image_array = np.array(gdal.Open(imagename).ReadAsArray())
-        image_array = image_array[0:3] #take the BGR bands, omit the NIR band
-        display_min = image_array.min()
-        display_max = image_array.max()
-        if image_array.dtype == np.dtype('uint16'):
-            image_array8 = np.array(lut_display(image_array, display_min, display_max))
-        else:
-            image_array8 = image_array
-        image_array8 = image_array8.transpose(1,2,0)
-        loaded_image = pil.Image.fromarray(image_array8)
+        
+        #Determine if Image is Multiband or Single band
+        shape_count = len(image_array.shape)
+        
+        #Process Image
+        if shape_count > 2: #Image is multiband
+            image_array = image_array[0:3] #take the BGR bands, omit the NIR band
+            image_array = np.dstack((image_array[2],image_array[1],image_array[0])) #Convert BGR to RGB
+            
+            #Convert from uint16 to uint8 if needed
+            display_min = image_array.min()
+            display_max = image_array.max()
+            if image_array.dtype == np.dtype('uint16'):
+                image_array8 = np.array(lut_display(image_array, display_min, display_max))
+                
+            #make sure that the image is in uint8
+            else:
+                image_array8 = np.rint(image_array)
+                image_array8 = np.nan_to_num(image_array8)
+                image_array8 = image_array8.astype(np.uint8)
+                
+            loaded_image = pil.Image.fromarray(image_array8)
+            
+        else: #Image is single band
+            display_min = image_array.min()
+            display_max = image_array.max()
+            
+            #Convert from uint16 to uint8 if needed
+            if image_array.dtype == np.dtype('uint16'):
+                image_array8 = np.array(lut_display(image_array, display_min, display_max))
+            
+            #For single band images, can be left as float64 or uint8
+            else:
+                image_array8 = image_array
+    
+            loaded_image = pil.Image.fromarray(image_array8)
 
         #Resize Image
         loaded_image_resized = loaded_image.resize((int(new_width), int(new_height)), Image.ANTIALIAS)
