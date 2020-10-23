@@ -19,6 +19,9 @@ import matplotlib.colors as colors
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 import matplotlib.colorbar as colorbar
 import matplotlib.pyplot as plt
+from osgeo import gdal,ogr,osr
+import array2gif
+import numpy as np
 
 
 class Map(tk.Canvas):
@@ -75,8 +78,8 @@ class Map(tk.Canvas):
         
         #Set geographic coordinates and zoom level of map, initialize shapes
         if 'lat_lon_zoom' in kwargs:
-            lat_lon_zoom = kwargs.pop('lat_lon_zoom')
-            self.default_offset, self.default_ratio = self.set_canvas_location(lat_lon_zoom[0], lat_lon_zoom[1], lat_lon_zoom[2])
+            self.lat_lon_zoom = kwargs.pop('lat_lon_zoom')
+            self.default_offset, self.default_ratio = self.set_canvas_location(self.lat_lon_zoom[0], self.lat_lon_zoom[1], self.lat_lon_zoom[2])
         else:
             self.default_offset, self.default_ratio = self.set_canvas_location(-43.5765151113451, -22.9969539088035, 0.03)
 
@@ -88,7 +91,8 @@ class Map(tk.Canvas):
         #Add background image on map (if selected)
         if 'background_image' in kwargs:
             imagename = kwargs.pop('background_image')
-            self.draw_background(imagename)
+            if imagename != []:
+                self.draw_background(imagename)
 
 
         #Identify shapefile field name to be used for scaling colors
@@ -123,14 +127,146 @@ class Map(tk.Canvas):
         
         
     def draw_background(self, imagename):
+        """ADD A GEOTIFF IMAGE TO BACKGROUND OF MAP CANVAS
+    
+        Args:
+            imagename: filepath of geotiff image to be added
+    
+        Returns:
+            N/A
+        """
         
-        #Insert background image
-        load = pil.Image.open(imagename)
-        scaling = self.ratio/0.03
-        load = load.resize((int(1300*scaling), int(800*scaling)), Image.ANTIALIAS)
-        self.background = ImageTk.PhotoImage(load)
-        xcord, ycord = self.to_canvas_coordinates(-43.6555, -22.981)
-        self.create_image(xcord,ycord,image=self.background,anchor="center")
+        def GetExtent(gt,cols,rows):
+            """GENERATE LIST OF CORNER COORDINATES FROM A GEOTRANSFORM
+    
+            Args:
+                @type gt:   C{tuple/list}
+                @param gt: geotransform
+                @type cols:   C{int}
+                @param cols: number of columns in the dataset
+                @type rows:   C{int}
+                @param rows: number of rows in the dataset
+                
+            Returns:
+                @rtype:    C{[float,...,float]}
+                @return:   coordinates of each corner, counter-clockwise from top right corner
+            """
+            
+            ext=[]
+            xarr=[0,cols]
+            yarr=[0,rows]
+        
+            for px in xarr:
+                for py in yarr:
+                    x=gt[0]+(px*gt[1])+(py*gt[2])
+                    y=gt[3]+(px*gt[4])+(py*gt[5])
+                    ext.append([x,y])
+                yarr.reverse()
+            return ext
+
+        def ReprojectCoords(coords,src_srs,tgt_srs):
+            """REPROJECT A LIST OF X,Y COORDINATES
+        
+            Args:
+                @type geom:     C{tuple/list}
+                @param geom:    List of [[x,y],...[x,y]] coordinates
+                @type src_srs:  C{osr.SpatialReference}
+                @param src_srs: OSR SpatialReference object
+                @type tgt_srs:  C{osr.SpatialReference}
+                @param tgt_srs: OSR SpatialReference object
+        
+            Returns:
+                @rtype:         C{tuple/list}
+                @return:        List of transformed [[x,y],...[x,y]] coordinates
+            """
+           
+            trans_coords=[]
+            transform = osr.CoordinateTransformation( src_srs, tgt_srs)
+            for x,y in coords:
+                x,y,z = transform.TransformPoint(x,y)
+                trans_coords.append([x,y])
+            return trans_coords
+            
+        
+        #Get Geographic Coordinates of the Corners of the Image
+        ds=gdal.Open(imagename)
+        gt=ds.GetGeoTransform()
+        cols = ds.RasterXSize
+        rows = ds.RasterYSize
+        ext=GetExtent(gt,cols,rows)
+        src_srs=osr.SpatialReference()
+        src_srs.ImportFromWkt(ds.GetProjection())
+        tgt_srs = src_srs.CloneGeogCS()
+        geo_ext=ReprojectCoords(ext,src_srs,tgt_srs) 
+        
+        #Calculate Proper Dimensions of Image
+        top_left = geo_ext[0]
+        top_left_lat = top_left[0]
+        top_left_lon = top_left[1]
+        bottom_right = geo_ext[2]
+        bottom_right_lat = bottom_right[0]
+        bottom_right_lon = bottom_right[1]
+        tlx, tly = self.to_canvas_coordinates(top_left_lon, top_left_lat)
+        brx, bry = self.to_canvas_coordinates(bottom_right_lon, bottom_right_lat)
+        new_width = brx - tlx
+        new_height = bry - tly
+        
+        def display(image, display_min, display_max): # copied from Bi Rico
+            """CONVERT A 16-BIT LUT TO AN 8-BIT LUT
+        
+            Args:
+                image: 16-bit LUT in np-array form
+                display_min: minimum cut-off value for image
+                display_max: maximum cut-off value for image
+        
+            Returns:
+                return: 8-bit LUT with cutoffs
+            """
+            image = np.array(image)
+            image.clip(display_min, display_max, out=image)
+            image -= display_min
+            np.floor_divide(image, (display_max - display_min + 1) / 256,
+                            out=image, casting='unsafe')
+            return image.astype(np.uint8)
+
+        def lut_display(image, display_min, display_max) :
+            """CONVERT A 16-BIT IMAGE TO AN 8-BIT IMAGE USING A LUT
+        
+            Args:
+                image: 16-bit image in np-array form
+                display_min: minimum cut-off value for image
+                display_max: maximum cut-off value for image
+        
+            Returns:
+                return: 8-bit version of image, with cutoffs
+            """
+            lut = np.arange(2**16, dtype='uint16')
+            lut = display(lut, display_min, display_max)
+            return np.take(lut, image)
+
+
+        #Load Image and Convert to 8 bits
+        image_array = np.array(gdal.Open(imagename).ReadAsArray())
+        image_array = image_array[0:3] #take the BGR bands, omit the NIR band
+        display_min = image_array.min()
+        display_max = image_array.max()
+        if image_array.dtype == np.dtype('uint16'):
+            image_array8 = np.array(lut_display(image_array, display_min, display_max))
+        else:
+            image_array8 = image_array
+        image_array8 = image_array8.transpose(1,2,0)
+        loaded_image = pil.Image.fromarray(image_array8)
+
+        #Resize Image
+        loaded_image_resized = loaded_image.resize((int(new_width), int(new_height)), Image.ANTIALIAS)
+        
+        #Place Image in Correct Location
+        self.background = ImageTk.PhotoImage(loaded_image_resized)
+        self.create_image(tlx,tly,image=self.background,anchor="nw")
+        
+        
+        
+        
 # =============================================================================
 #     Location Functions
 # =============================================================================
@@ -236,8 +372,6 @@ class Map(tk.Canvas):
         #Calculate the range of values, including the smallest positive value
         minim = min(values)
         maxim = max(values)
-        print(minim)
-        print(maxim)
         valuerange = maxim - minim
         if minim <= 0 and strdict == []:
             values =[]
@@ -537,5 +671,6 @@ if str.__eq__(__name__, '__main__'):
 
 
     py_giss = Map(root_window, [sf],
-                  lat_lon_zoom= [-43.162396, -22.916935, 0.01])
+                  lat_lon_zoom= [-43.162396, -22.916935, 0.01],
+                  background_image = './Data/Rio de Janeiro/test.tif')
     root_window.mainloop()

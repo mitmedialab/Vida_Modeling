@@ -61,31 +61,35 @@ class SD_UI(tk.Tk):
             self.location = 'Rio de Janeiro'
             
         if self.location == 'Rio de Janeiro':
-            # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
+            self.background_image = ['./Data/Rio de Janeiro/test.tif']
             self.color_range =  'PM10'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-43.487035, -22.930828, 0.01]
             self.language = 'portuguese'
         elif self.location == 'Chile':
+            self.background_image = []
             self.color_range =  'Population'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-70.915467, -37.561959, 0.0001]
             self.language = 'spanish'
         elif self.location == 'Indonesia':
+            self.background_image = []
             self.color_range =  'Total Cases'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [113.119473,-5.944932, 0.0004]
             self.language = 'english'
         elif self.location == 'Santiago':
+            self.background_image = []
             self.color_range = 'PM10'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [-70.738862, -33.478012, 0.0025]
             self.language = 'spanish'
         elif self.location == 'Querétaro':
+            self.background_image = []
             self.color_range = 'COVID Cases per 1000 People'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = "Hospitalized Population"
@@ -646,9 +650,14 @@ class SD_UI(tk.Tk):
         subframe_map = tk.Frame(frame_map,
                                 bg=self.default_background)
         subframe_map.pack()
+        if self.background_image != []:
+            background = self.background_image[0]
+        else:
+            background = []
+            
         MAP = MapWindow.Map(subframe_map,
                             self.shps,
-                            # background_image = self.background_image, 
+                            background_image = background, 
                             color_range= [color_range],
                             color_title= color_title,
                             lat_lon_zoom= self.map_loc,
@@ -754,9 +763,14 @@ class SD_UI(tk.Tk):
         for item in griditems:
             item.destroy()
             
+        if self.background_image != []:
+            background = self.background_image[0]
+        else:
+            background = []
+            
         self.MAP = MapWindow.Map(mapframe,
                             self.shps,
-                            # background_image = self.background_image, 
+                            background_image = background, 
                             color_range = [fill_color],
                             color_title = fill_color_title,
                             lat_lon_zoom = self.map_loc,
