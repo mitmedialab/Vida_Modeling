@@ -728,7 +728,8 @@ class SD_UI(tk.Tk):
         self.color_setting_name = tk.StringVar()
         self.color_setting_name.set(self.translate(self.color_range))
     
-        translated_color_list = []
+        
+        translated_color_list = [self.translate('None')]
         for entry in self.color_longname_modes_inverted.keys():
             translated_color_list.append(self.translate(entry))
         
@@ -813,7 +814,13 @@ class SD_UI(tk.Tk):
         fill_color_title = self.translate(self.color_setting_name.get(),
                                           input_language=self.language,
                                           output_language='english')
-        fill_color = self.color_field_modes[self.color_longname_modes_inverted[fill_color_title]]
+        if fill_color_title == 'None':
+            fill_color = []
+            fill_color_title_input = []
+        else:
+            fill_color = [self.color_field_modes[self.color_longname_modes_inverted[fill_color_title]]]
+            fill_color_title_input = fill_color_title
+       
         image_title = self.translate(self.image_setting_name.get(),
                                           input_language=self.language,
                                           output_language='english')
@@ -831,8 +838,8 @@ class SD_UI(tk.Tk):
         self.MAP = MapWindow.Map(mapframe,
                             self.shps,
                             background_image = image_path, 
-                            color_range = [fill_color],
-                            color_title = fill_color_title,
+                            color_range = fill_color,
+                            color_title = fill_color_title_input,
                             lat_lon_zoom = self.map_loc,
                             null_zeros=1,
                             window_dimensions = [self.screenwidth,self.screenheight])
