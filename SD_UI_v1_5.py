@@ -560,7 +560,11 @@ class SD_UI(tk.Tk):
             # ax1.set_ylim(min(0, np.nanmin(plotval)), 1.2*np.nanmax(plotval))
         
         ax1.legend(loc='upper right')
-        ax1.set_ylim(min(0, np.nanmin(plotval), np.nanmin(histval)), 1.2*max(np.nanmax(plotval), np.nanmax(histval)))
+        # to better visualize values with a small range that is far from zero
+        if (np.nanmax(histval) - np.nanmin(histval)) < 0.5*(np.nanmin(histval)):
+            ax1.set_ylim(min(0.8*np.nanmin(plotval), 0.8*np.nanmin(histval)), 1.2*max(np.nanmax(plotval), np.nanmax(histval)))
+        else:
+            ax1.set_ylim(min(0, np.nanmin(plotval), np.nanmin(histval)), 1.2*max(np.nanmax(plotval), np.nanmax(histval)))
         endtime = max(self.timeSeries[-1], 200)
         ax1.set_xlim(0, endtime)
         ax1.set_ylabel(self.translate(SDob.units))
