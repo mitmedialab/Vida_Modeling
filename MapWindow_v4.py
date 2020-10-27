@@ -296,7 +296,12 @@ class Map(tk.Canvas):
             color_name = color_range[0]
         if color_name != []:
             valuerange, minim, smallpos, strdict = self.colorrange(sf, color_name)
-            colormap = cm.get_cmap('Reds', 48)
+            if minim < 0 and smallpos == []:
+                colormap = cm.get_cmap('autumn', 48)
+            elif minim < 0 and smallpos != []:
+                colormap = cm.get_cmap('RdYlGn', 48)
+            else: 
+                colormap = cm.get_cmap('YlOrRd', 48)
             norm = colors.Normalize(minim, minim+valuerange)
         
         
