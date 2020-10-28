@@ -61,31 +61,35 @@ class SD_UI(tk.Tk):
             self.location = 'Rio de Janeiro'
             
         if self.location == 'Rio de Janeiro':
-            # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
+            self.background_image = ['./Data/Rio de Janeiro/test.tif']
             self.color_range =  'PM10'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-43.487035, -22.930828, 0.01]
             self.language = 'portuguese'
         elif self.location == 'Chile':
+            self.background_image = []
             self.color_range =  'Population'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-70.915467, -37.561959, 0.0001]
             self.language = 'spanish'
         elif self.location == 'Indonesia':
+            self.background_image = []
             self.color_range =  'Total Cases'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [113.119473,-5.944932, 0.0004]
             self.language = 'english'
         elif self.location == 'Santiago':
+            self.background_image = []
             self.color_range = 'PM10'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [-70.738862, -33.478012, 0.0025]
             self.language = 'spanish'
         elif self.location == 'Querétaro':
+            self.background_image = []
             self.color_range = 'COVID Cases per 1000 People'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = "Hospitalized Population"
@@ -97,7 +101,8 @@ class SD_UI(tk.Tk):
         self.data_filepath = './Data/' + self.location + '/temporal_data.csv'
         self.shp_fields = './Data/' + self.location + '/shp_fields.csv'
         self.shpfilepath = './Data/' + self.location + '/Shapefiles/geographic_data.shp'
-    
+        self.image_filepath = './Data/' + self.location + '/images.csv'
+        
         
         #Load other keyword arguments
         if 'tuning' in kwargs:
@@ -306,6 +311,11 @@ class SD_UI(tk.Tk):
         Returns:
             N/A
         """
+        
+        #Clear Figures to avoid memory leak
+        for figure in self.figures:
+            figure.clear()
+            plt.close(figure)
 
         #Close the exisiting display
         self.destroy()
@@ -327,7 +337,11 @@ class SD_UI(tk.Tk):
         Returns:
             N/A
         """
-        
+        #Clear Figures to avoid memory leak
+        for figure in self.figures:
+            figure.clear()
+            plt.close(figure)
+            
         #Close the exisiting display
         self.destroy()
         
@@ -649,38 +663,60 @@ class SD_UI(tk.Tk):
         self.shps = [shapefile.Reader(self.shpfilepath)]
         
         # Make Color Fill Dropdown Menu
+        color_label = tk.Label(frame_map, text=self.translate('Color') +': ',
+                              bg=self.default_background)
+        color_label.grid(column=0, row=0)
         self.color_optionlist =  self.make_fill_list(frame_map, self.shps[0])
         self.color_optionlist.configure(bg=self.button_color,
                                         highlightbackground=self.highlight_color)
         self.color_optionlist['menu'].config(bg=self.button_color)
-        self.color_optionlist.pack()
+        self.color_optionlist.config(width=30)
+        self.color_optionlist.grid(column=1, row=0, sticky='W')
         
         color_title = self.translate(self.color_setting_name.get(),
                                      input_language = self.language,
                                      output_language = 'english')
         color_range = self.color_field_modes[self.color_longname_modes_inverted[color_title]]
         
+
         #Check for specified visualization parameters
         testfield = self.fieldnamelookup(color_range, self.shp_fields)
         vis_params = testfield.vis_params
         
-        #Create Map and bind commands to it
+
+        #Make Background Image Dropdown Menu
+        image_label = tk.Label(frame_map, text=self.translate('Image') +': ',
+                              bg=self.default_background)
+        image_label.grid(column=2, row=0)
+        self.image_optionlist =  self.make_image_list(frame_map)
+        self.image_optionlist.configure(bg=self.button_color,
+                                        highlightbackground=self.highlight_color)
+        self.image_optionlist['menu'].config(bg=self.button_color)
+        self.image_optionlist.grid(column=3, row=0, sticky='W')
+
+        
+        image_title = self.translate(self.image_setting_name.get(),
+                                          input_language=self.language,
+                                          output_language='english')
+        image_path = self.image_dict[image_title]
+        
+        #Create subframe to house the map
         subframe_map = tk.Frame(frame_map,
                                 bg=self.default_background)
-        subframe_map.pack()
+        subframe_map.grid(column=0, row=1, columnspan=4)
+
+        #Create Map
         MAP = MapWindow.Map(subframe_map,
                             self.shps,
-                            # background_image = self.background_image, 
-                            color_range = [color_range],
-                            color_title = color_title,
-                            color_params = vis_params, 
-                            lat_lon_zoom = self.map_loc,
-                            null_zeros = 1,
+                            background_image = image_path, 
+                            color_range= [color_range],
+                            color_title= color_title,
+                            color_params = vis_params,
+                            lat_lon_zoom= self.map_loc,
+                            null_zeros=1,
                             window_dimensions = [self.screenwidth,self.screenheight])
         MAP.configure(bg='white')
         
-        # MAP.bind("<Button-1>", self.print_coords)
-        # MAP.bind("<Double-Button-1>", lambda e: self.uoa_type(self.clickname))
         return frame_map, subframe_map, MAP
     
     def make_fill_list (self, root, shp):    
@@ -690,7 +726,7 @@ class SD_UI(tk.Tk):
             root: tk frame for the dropdown to to be situated in.
                
         Returns:
-            zoneoptionlist: the dropdown list
+            color_optionlist: the dropdown list, tk Widget
         """
         
         #Identify fields, longnames, and categories to be added to the dropdown
@@ -717,7 +753,8 @@ class SD_UI(tk.Tk):
         self.color_setting_name = tk.StringVar()
         self.color_setting_name.set(self.translate(self.color_range))
     
-        translated_color_list = []
+        
+        translated_color_list = [self.translate('None')]
         for entry in self.color_longname_modes_inverted.keys():
             translated_color_list.append(self.translate(entry))
         
@@ -728,6 +765,42 @@ class SD_UI(tk.Tk):
         
         #Return dropdown for future reference
         return color_optionlist 
+    
+    def make_image_list (self, root):    
+        """CREATE BACKGROUND IMAGE TOGGLE
+    
+        Args:
+            root: tk frame for the dropdown to to be situated in.
+               
+        Returns:
+            image_optionlist: the dropdown list, tk Widget
+        """
+        
+        #Identify names to be added to dropdown and filepaths associated with those names
+        image_list = ['None']
+        self.image_dict = dict()
+        self.image_dict['None'] = []
+        with open(self.image_filepath, encoding='ISO-8859-15') as csv_file:
+           csvread = csv.DictReader(csv_file)
+           for row in csvread:
+               image_list.append(row['name'])
+               self.image_dict[row['name']] = row['filepath']
+        
+        #Create Image Dropdown
+        self.image_setting_name = tk.StringVar()
+        self.image_setting_name.set(self.translate(image_list[0]))
+        
+        translated_image_list = []
+        for entry in image_list:
+            translated_image_list.append(self.translate(entry))
+            
+        image_optionlist = tk.OptionMenu(root, self.image_setting_name,
+                           *list(translated_image_list),
+                            command=lambda e: self.replace_map_image(self.subframe_map)
+                            )
+        
+        #Return dropdown for future reference
+        return image_optionlist 
     
     class fieldnamelookup:
     
@@ -767,7 +840,17 @@ class SD_UI(tk.Tk):
         fill_color_title = self.translate(self.color_setting_name.get(),
                                           input_language=self.language,
                                           output_language='english')
-        fill_color = self.color_field_modes[self.color_longname_modes_inverted[fill_color_title]]
+        if fill_color_title == 'None':
+            fill_color = []
+            fill_color_title_input = []
+        else:
+            fill_color = [self.color_field_modes[self.color_longname_modes_inverted[fill_color_title]]]
+            fill_color_title_input = fill_color_title
+       
+        image_title = self.translate(self.image_setting_name.get(),
+                                          input_language=self.language,
+                                          output_language='english')
+        image_path = self.image_dict[image_title]
         
         #Check for specified visualization parameters
         testfield = self.fieldnamelookup(fill_color, self.shp_fields)
@@ -785,10 +868,10 @@ class SD_UI(tk.Tk):
             
         self.MAP = MapWindow.Map(mapframe,
                             self.shps,
-                            # background_image = self.background_image, 
-                            color_range = [fill_color],
-                            color_title = fill_color_title,
-                            color_params = vis_params,
+                            background_image = image_path, 
+                            color_range = fill_color,
+                            color_title = fill_color_title_input,
+                            color_params = vis_params
                             lat_lon_zoom = self.map_loc,
                             null_zeros=1,
                             window_dimensions = [self.screenwidth,self.screenheight])
