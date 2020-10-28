@@ -110,6 +110,16 @@ class Map(tk.Canvas):
         else:
             self.color_title = []
             
+        if 'color_params' in kwargs:
+            color_params = kwargs.pop('color_params')
+            self.color_min = color_params[0]
+            self.color_max = color_params[1]
+            self.color_choice = color_params[2]
+        else:
+            self.color_min = []
+            self.color_max = []
+            self.color_choice = []
+            
         if 'null_zeros' in kwargs:
             self.null_zeros = kwargs.pop('null_zeros')
         else:
@@ -236,8 +246,6 @@ class Map(tk.Canvas):
         #Calculate the range of values, including the smallest positive value
         minim = min(values)
         maxim = max(values)
-        print(minim)
-        print(maxim)
         valuerange = maxim - minim
         if minim <= 0 and strdict == []:
             values =[]
@@ -296,13 +304,23 @@ class Map(tk.Canvas):
             color_name = color_range[0]
         if color_name != []:
             valuerange, minim, smallpos, strdict = self.colorrange(sf, color_name)
-            if minim < 0 and smallpos == []:
+            if self.color_min:
+                minim = self.color_min
+            if self.color_max:
+                maxim = self.color_max
+            else:
+                maxim = minim + valuerange
+            
+            if self.color_choice:
+                colormap = cm.get_cmap(self.color_choice)
+            elif minim < 0 and smallpos == []:
                 colormap = cm.get_cmap('autumn', 48)
             elif minim < 0 and smallpos != []:
                 colormap = cm.get_cmap('RdYlGn', 48)
             else: 
                 colormap = cm.get_cmap('YlOrRd', 48)
-            norm = colors.Normalize(minim, minim+valuerange)
+                
+            norm = colors.Normalize(minim, maxim)
         
         
         #Draw each shape in shapefile

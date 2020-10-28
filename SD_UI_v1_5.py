@@ -556,15 +556,29 @@ class SD_UI(tk.Tk):
             
             if len(self.timeSeries) > len(histTime):
                 ax1.scatter(self.timeSeries[len(histTime):], plotval[len(histTime):], c=fill1, marker="s", label = self.translate('Simulation'))
-            # ax1.scatter(self.timeSeries, plotval, c=fill1)
-            # ax1.set_ylim(min(0, np.nanmin(plotval)), 1.2*np.nanmax(plotval))
+
         
-        ax1.legend(loc='upper right')
-        # to better visualize values with a small range that is far from zero
-        if (np.nanmax(histval) - np.nanmin(histval)) < 0.5*(np.nanmin(histval)):
-            ax1.set_ylim(min(0.8*np.nanmin(plotval), 0.8*np.nanmin(histval)), 1.2*max(np.nanmax(plotval), np.nanmax(histval)))
+        #check if object has preset visualization parameters
+        if SDob.vismin:
+            vismin = min(SDob.vismin, 0.8*np.nanmin(plotval), 0.8*np.nanmin(histval))
+            
+        # check if it is better visualize values with a small range that is far from zero
+        elif (np.nanmax(histval) - np.nanmin(histval)) < 0.5*(np.nanmin(histval)):
+            vismin = min(0.8*np.nanmin(plotval), 0.8*np.nanmin(histval))
         else:
-            ax1.set_ylim(min(0, np.nanmin(plotval), np.nanmin(histval)), 1.2*max(np.nanmax(plotval), np.nanmax(histval)))
+            vismin = min(0, np.nanmin(plotval), np.nanmin(histval))
+        
+        #check if object has preset visualization parameters
+        if SDob.vismax:
+            vismax = max(SDob.vismax, 1.2*np.nanmax(plotval), 1.2*np.nanmax(histval))
+            
+        # check if it is better visualize values with a small range that is far from zero
+        else:
+            vismax = 1.2*max(np.nanmax(plotval), np.nanmax(histval))
+            
+        #set figure axes
+        ax1.legend(loc='upper right')
+        ax1.set_ylim(vismin, vismax)
         endtime = max(self.timeSeries[-1], 200)
         ax1.set_xlim(0, endtime)
         ax1.set_ylabel(self.translate(SDob.units))
@@ -646,6 +660,10 @@ class SD_UI(tk.Tk):
                                      output_language = 'english')
         color_range = self.color_field_modes[self.color_longname_modes_inverted[color_title]]
         
+        #Check for specified visualization parameters
+        testfield = self.fieldnamelookup(color_range, self.shp_fields)
+        vis_params = testfield.vis_params
+        
         #Create Map and bind commands to it
         subframe_map = tk.Frame(frame_map,
                                 bg=self.default_background)
@@ -653,10 +671,11 @@ class SD_UI(tk.Tk):
         MAP = MapWindow.Map(subframe_map,
                             self.shps,
                             # background_image = self.background_image, 
-                            color_range= [color_range],
-                            color_title= color_title,
-                            lat_lon_zoom= self.map_loc,
-                            null_zeros=1,
+                            color_range = [color_range],
+                            color_title = color_title,
+                            color_params = vis_params, 
+                            lat_lon_zoom = self.map_loc,
+                            null_zeros = 1,
                             window_dimensions = [self.screenwidth,self.screenheight])
         MAP.configure(bg='white')
         
@@ -730,6 +749,7 @@ class SD_UI(tk.Tk):
                        self.longname = row['LongName']
                        self.category = row['Category']
                        self.type = 'Other'
+                       self.vis_params = [row['VisMin'], row['VisMax'], row['VisColor']]
     
     def replace_map_image(self, mapframe, **kwargs):
         """UPDATE MAP TO CURRENT SETTINGS
@@ -749,6 +769,11 @@ class SD_UI(tk.Tk):
                                           output_language='english')
         fill_color = self.color_field_modes[self.color_longname_modes_inverted[fill_color_title]]
         
+        #Check for specified visualization parameters
+        testfield = self.fieldnamelookup(fill_color, self.shp_fields)
+        vis_params = testfield.vis_params
+        
+        
         #Delete exisiting map
         self.MAP.delete("all")
         slaveitems = mapframe.slaves()
@@ -763,6 +788,7 @@ class SD_UI(tk.Tk):
                             # background_image = self.background_image, 
                             color_range = [fill_color],
                             color_title = fill_color_title,
+                            color_params = vis_params,
                             lat_lon_zoom = self.map_loc,
                             null_zeros=1,
                             window_dimensions = [self.screenwidth,self.screenheight])

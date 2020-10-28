@@ -74,6 +74,14 @@ class SD_object:
             self.datatype = kwargs.pop('datatype')
         else:
             self.datatype = 'numeric'
+        if 'visualization' in kwargs:
+            visualization = kwargs.pop('visualization')
+            self.vismin = visualization[0]
+            self.vismax = visualization[1]
+        else:
+            self.vismin = []
+            self.vismax = []
+                
             
       
     def value(self, **kwargs):
@@ -676,7 +684,8 @@ class SD_System:
                                 func = lambda tstep, tind: self.BraEmployment.value(ind=tind) + self.BraEmploymentR.value(ind=tind) * tstep,
                                 maxval = lambda: 1,
                                 minval = lambda: 0,
-                                category = 'Economy')
+                                category = 'Economy',
+                                visualization = [0.08, 0.15])
               
       
               

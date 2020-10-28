@@ -1,5 +1,5 @@
-FieldName,LongName,Category
-CO,CO,
-PM2.5,PM2.5,
-PM10,PM10,
-SO2,SO2,
+FieldName,LongName,Category,VisMin,VisMax,VisColor
+CO,CO,,,,
+PM2.5,PM2.5,,,,
+PM10,PM10,,,,
+SO2,SO2,,,,
