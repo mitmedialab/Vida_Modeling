@@ -853,7 +853,7 @@ class SD_UI(tk.Tk):
         image_path = self.image_dict[image_title]
         
         #Check for specified visualization parameters
-        testfield = self.fieldnamelookup(fill_color, self.shp_fields)
+        testfield = self.fieldnamelookup(fill_color[0], self.shp_fields)
         vis_params = testfield.vis_params
         
         
@@ -871,7 +871,7 @@ class SD_UI(tk.Tk):
                             background_image = image_path, 
                             color_range = fill_color,
                             color_title = fill_color_title_input,
-                            color_params = vis_params
+                            color_params = vis_params,
                             lat_lon_zoom = self.map_loc,
                             null_zeros=1,
                             window_dimensions = [self.screenwidth,self.screenheight])
