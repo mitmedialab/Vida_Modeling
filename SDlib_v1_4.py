@@ -1858,7 +1858,7 @@ class SD_System:
 
             self.stock_index_Ind = SD_object('Closing Compsite Stock Index (IDX)',
                                 units = 'Stock Index',
-                                init_value = lambda: self.historical_data('stock_index', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                                init_value = lambda: self.historical_data('stock_index', location, filename), 
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.stock_index_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
@@ -1867,7 +1867,7 @@ class SD_System:
 
             self.FTT_Ind_JK = SD_object('Farmer Terms of Trade - Jakarta',
                                 units = 'Terms Rate',
-                                init_value = lambda: self.historical_data('FTT_JK', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                                init_value = lambda: self.historical_data('FTT_JK', location, filename), 
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.FTT_Ind_JK.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
@@ -1876,7 +1876,7 @@ class SD_System:
 
             self.FTT_Ind_JB = SD_object('Farmer Terms of Trade - West Java',
                                 units = 'Terms Rate',
-                                init_value = lambda: self.historical_data('FTT_JB', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                                init_value = lambda: self.historical_data('FTT_JB', location, filename), 
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.FTT_Ind_JB.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
@@ -1885,7 +1885,7 @@ class SD_System:
 
             self.FTT_Ind_JT = SD_object('Farmer Terms of Trade - Central Java',
                                 units = 'Terms Rate',
-                                init_value = lambda: self.historical_data('FTT_JT', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                                init_value = lambda: self.historical_data('FTT_JT', location, filename), 
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.FTT_Ind_JT.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
@@ -1894,7 +1894,7 @@ class SD_System:
 
             self.FTT_Ind_JI = SD_object('Farmer Terms of Trade - East Java',
                                 units = 'Terms Rate',
-                                init_value = lambda: self.historical_data('FTT_JI', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                                init_value = lambda: self.historical_data('FTT_JI', location, filename), 
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.FTT_Ind_JI.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
@@ -1903,13 +1903,57 @@ class SD_System:
 
             self.FTT_Ind_SN = SD_object('Farmer Terms of Trade - South Sulawesi',
                                 units = 'Terms Rate',
-                                init_value = lambda: self.historical_data('FTT_SN', location, filename), #this historical data only goes through Q2, so post-Q2 is a placeholder value
+                                init_value = lambda: self.historical_data('FTT_SN', location, filename), 
                                 obtype = 'stock',
                                 func = lambda tstep, tind: self.FTT_Ind_SN.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
                                 category = 'Economy')                                                                                         
 
+            self.IF_Ind_JK = SD_object('Inflation - Jakarta',
+                                units = '%',
+                                init_value = lambda: self.historical_data('IF_JK', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.IF_Ind_JK.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')    
+
+            self.IF_Ind_JB = SD_object('Inflation - West Java',
+                                units = '%',
+                                init_value = lambda: self.historical_data('IF_JB', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.IF_Ind_JB.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')        
+
+            self.IF_Ind_JT = SD_object('Inflation - Central Java',
+                                units = '%',
+                                init_value = lambda: self.historical_data('IF_JT', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.IF_Ind_JT.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')        
+
+            self.IF_Ind_JI = SD_object('Inflation - East Java',
+                                units = '%',
+                                init_value = lambda: self.historical_data('IF_JI', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.IF_Ind_JI.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')        
+
+            self.IF_Ind_SN = SD_object('Inflation - South Sulawesi',
+                                units = '%',
+                                init_value = lambda: self.historical_data('IF_SN', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.IF_Ind_SN.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')   
     # =============================================================================
     # %% 6 - Querétaro  
     # =============================================================================   
