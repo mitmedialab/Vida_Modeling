@@ -55,14 +55,15 @@ class Map(tk.Canvas):
         
         if 'window_dimensions' in kwargs:
             temp_dimensions = kwargs.pop('window_dimensions')
-            self.screenwidth = int(round(temp_dimensions[0]*0.54))
-            self.screenheight = int(round(temp_dimensions[1]*0.556))
+            # self.screenwidth = int(round(temp_dimensions[0]*0.54))
+            # self.screenheight = int(round(temp_dimensions[1]*0.556))
+            self.screenwidth = int(round(temp_dimensions[0]*0.5))
+            self.screenheight = int(round(temp_dimensions[1]*0.52))
         else:
-            self.screenwidth = int(round(1920*0.54))
-            self.screenheight = int(round(1080*0.556))
+            self.screenwidth = int(round(temp_dimensions[0]*0.5))
+            self.screenheight = int(round(temp_dimensions[1]*0.52))
         
         super().__init__(root, width=self.screenwidth, height=self.screenheight)
-        # super().__init__(root, width=root.winfo_width(), height=root.winfo_height())
         
         self.bind('<ButtonPress-1>', self.print_coords)
 
@@ -70,11 +71,9 @@ class Map(tk.Canvas):
         self.proj = 'mercator'
         self.offset = (0, 0)
         
-        
         #Create initial key bindings (???)
         self.bind('<ButtonPress-3>', lambda e: self.scan_mark(e.x, e.y))
         self.bind('<B3-Motion>', lambda e: self.scan_dragto(e.x, e.y, gain=1))
-        
         
         #Set geographic coordinates and zoom level of map, initialize shapes
         if 'lat_lon_zoom' in kwargs:
@@ -83,10 +82,9 @@ class Map(tk.Canvas):
         else:
             self.default_offset, self.default_ratio = self.set_canvas_location(-43.5765151113451, -22.9969539088035, 0.03)
 
-
+        #Save the shapefiles
         self.polyimages = []
         self.shapefiles = shapefiles
-
 
         #Add background image on map (if selected)
         if 'background_image' in kwargs:
@@ -94,13 +92,11 @@ class Map(tk.Canvas):
             if imagename != []:
                 self.draw_background(imagename)
 
-
         #Identify shapefile field name to be used for scaling colors
         if 'color_range' in kwargs:
             self.color_rangename = kwargs.pop('color_range')
         else:
             self.color_rangename = list()
-            
             
         #Ensure that length of color_rangename matches the length of shapefiles
         if len(self.color_rangename) < len(self.shapefiles):
@@ -114,6 +110,7 @@ class Map(tk.Canvas):
         else:
             self.color_title = []
             
+        #Identify any specified visualization parameters
         if 'color_params' in kwargs:
             color_params = kwargs.pop('color_params')
             self.color_min = color_params[0]
@@ -124,17 +121,16 @@ class Map(tk.Canvas):
             self.color_max = []
             self.color_choice = []
             
+        #Identify if zeros should be plotted or considered invalid data
         if 'null_zeros' in kwargs:
             self.null_zeros = kwargs.pop('null_zeros')
         else:
             self.null_zeros = 0
         
-        
         #Draw and Place Map
         self.draw_map(self.shapefiles, color_range=self.color_rangename)
         self.pack(fill='both', expand=1)
-        
-        
+    
         
     def draw_background(self, imagename):
         """ADD A GEOTIFF IMAGE TO BACKGROUND OF MAP CANVAS
@@ -476,12 +472,12 @@ class Map(tk.Canvas):
                 maxim = minim + valuerange
             
             if self.color_choice:
-                colormap = cm.get_cmap(self.color_choice)
-            elif minim < 0 and smallpos == []:
+                colormap = cm.get_cmap(self.color_choice) #if colors were pre-specified
+            elif minim < 0 and smallpos == []: #if data is entirely negative
                 colormap = cm.get_cmap('autumn', 48)
-            elif minim < 0 and smallpos != []:
+            elif minim < 0 and smallpos != []: #if data is partially negative and partially positive
                 colormap = cm.get_cmap('RdYlGn', 48)
-            else: 
+            else:  #if data is entirely positive
                 colormap = cm.get_cmap('YlOrRd', 48)
                 
             norm = colors.Normalize(minim, maxim)
