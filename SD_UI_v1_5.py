@@ -200,20 +200,20 @@ class SD_UI(tk.Tk):
         self.info_frame = self.make_rule_display()
         
         #Generate the map(s) and their associated dropdown menus
-        self.subframe_map_list = []
+        self.subframe_map_list = [[],[]]
         self.color_setting_name_list = [[],[]]
         self.color_optionlist_list = [[],[]]
         self.image_setting_name_list = [[],[]]
         self.image_optionlist_list = [[],[]]
-        self.MAP_list = []
+        self.MAP_list = [[],[]]
         if self.arrangment[0] == 'Map':
             self.frame_map_L, subframe_map, MAP = self.make_map_frame(0)
-            self.subframe_map_list.append(subframe_map)
-            self.MAP_list.append(MAP)
+            self.subframe_map_list[0] = subframe_map
+            self.MAP_list[0] = MAP
         if self.arrangment[1] == 'Map':
             self.frame_map_R, subframe_map, MAP = self.make_map_frame(1)
-            self.subframe_map_list.append(subframe_map)
-            self.MAP_list.append(MAP)
+            self.subframe_map_list[1] = subframe_map
+            self.MAP_list[1] = MAP
 
     def toggle_geom(self,event):
         """NOT CURRENTLY FUNCTIONAL - TOGGLE FULL SCREEN DISPLAY
@@ -603,7 +603,7 @@ class SD_UI(tk.Tk):
         else:
             plotval.append(SDob.values)
         if True in [True if not x else False for x in plotval]:
-            plotval[:] = [x if x else np.nan for x in plotval]
+            plotval[:] = [x if x or x == 0 else np.nan for x in plotval]
             
         #Pull and format the history of the SD Object
         #Note: If tuning==0, this will initially be the same as plotval just above
@@ -611,7 +611,7 @@ class SD_UI(tk.Tk):
         histval = []
         histval.extend(SDob.history)
         if True in [True if not x else False for x in histval]:
-            histval[:] = [x if x else np.nan for x in histval]
+            histval[:] = [x if x or x == 0 else np.nan for x in histval]
             
         #Identify color to use for plotting based on SD object's category
         normvalue = self.norm(self.CatColorDict[SDob.category])
@@ -641,6 +641,9 @@ class SD_UI(tk.Tk):
             vismax = max(SDob.vismax, 1.2*np.nanmax(plotval), 1.2*np.nanmax(histval))
             
         # check if it is better visualize values with a small range that is far from zero
+        elif np.nanmax(histval) == np.nanmin(histval):
+            vismax = max(np.nanmax(plotval), np.nanmax(histval)) + 1
+
         else:
             vismax = 1.2*max(np.nanmax(plotval), np.nanmax(histval))
             
@@ -862,8 +865,8 @@ class SD_UI(tk.Tk):
         return image_optionlist 
     
     class fieldnamelookup:
-    """FIELDNAMELOOKUP CLASS PULLS RELEVANT INFORMATION FROM A CSV FOR 
-    A SPECIFIED FIELDNAME AND STORES IT AS A STRUCTURE"""
+        """FIELDNAMELOOKUP CLASS PULLS RELEVANT INFORMATION FROM A CSV FOR 
+        A SPECIFIED FIELDNAME AND STORES IT AS A STRUCTURE"""
     
         def __init__(self, fieldname, shp_fields, **kwargs):
             
@@ -1378,7 +1381,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Indonesia',
+                location = 'Rio de Janeiro',
                 arrangment = ['Graph', 'Map'])
 
     #Run the user interface
