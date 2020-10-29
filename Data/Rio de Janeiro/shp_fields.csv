@@ -1,19 +1,19 @@
-FieldName,LongName,Category
-Rain,Rainfall
-Pres,Barometric Pressure
-SolRad,Solar Radiation
-Temp,Temperature
-Humid,Relative Humidity
-WindDir,Wind Direction
-WindSpd,Wind Speed
-SO2,SO2
-NO2,NO2
-HCNM,HCNM
-HCT,HCT
-CH4,CH4
-CO,CO
-NO,NO
-NOx,NOx
-O3,O3
-PM10,PM10
-PM2_5,PM2.5
+FieldName,LongName,Category,VisMin,VisMax,VisColor
+Rain,Rainfall,,,,
+Pres,Barometric Pressure,,,,
+SolRad,Solar Radiation,,,,
+Temp,Temperature,,,,
+Humid,Relative Humidity,,0,14,hsv
+WindDir,Wind Direction,,,,
+WindSpd,Wind Speed,,,,
+SO2,SO2,,,,
+NO2,NO2,,,,
+HCNM,HCNM,,,,
+HCT,HCT,,,,
+CH4,CH4,,,,
+CO,CO,,,,
+NO,NO,,,,
+NOx,NOx,,,,
+O3,O3,,,,
+PM10,PM10,,,,
+PM2_5,PM2.5,,,,

@@ -17,6 +17,12 @@ Indonesia,Indonesia,Indonésia
 Locations,Ubicaciones,Localizações
 Querétaro,Querétaro,Querétaro
 ,,
+Arrange,Organizar,Organizar
+Graphs-Graphs,Gráficos-Gráficos,Gráficos-Gráficos
+Graphs-Map,Gráficos-Mapa,Gráficos-Mapa
+Map-Graphs,Mapa-Gráficos,Mapa-Gráficos
+Map-Map,Mapa-Mapa,Mapa-Mapa
+,,
 Order New Ventilators,Solicite nuevos ventiladores,Solicitar novos ventiladores
 Next Week,La próxima semana,Semana que vem
 Run Autonomously,Ejecutar de forma autónoma,Executar de forma autônoma
@@ -27,6 +33,9 @@ Log,Registro,Registro
 How many days do you want the simulation to run for?,¿Cuántos días desea que se ejecute la simulación?,Por quantos dias você deseja que a simulação seja executada?
 Run Simulation,Ejecutar simulación,Executar Simulação
 ,,
+Color,Color,Cor
+Image,Imagen,Imagem
+None,Ninguno,Nenhum
 ,,
 ,,
 Days,Días,Dias
@@ -265,3 +274,7 @@ Voluntary Social Distancing - Zonal,Distanciamiento social voluntario - Zonal,Di
 Voluntary Social Distancing - Provincial,Distanciamiento social voluntario - Provincial,Distanciamento Social Voluntário - Provincial
 Mandatory Social Distancing - Zonal,Distanciamiento social obligatorio - Zonal,Distanciamento Social Obrigatório - Zonal
 Mandatory Social Distancing - Provincial,Distanciamiento social obligatorio - Provincial,Distanciamento Social Obrigatório - Provincial
+,,
+Visual Composite,Compuesto visual,Composto Visual
+Nightlights Mean Anomaly,Las luces nocturnas promedio anomalías,Luzes noturnas média anomalia
+Nightlights,Luces nocturnas,Luzes noturnas

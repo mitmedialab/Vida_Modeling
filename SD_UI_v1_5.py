@@ -61,31 +61,35 @@ class SD_UI(tk.Tk):
             self.location = 'Rio de Janeiro'
             
         if self.location == 'Rio de Janeiro':
-            # self.background_image = self.map_image.filepaths[self.map_image.setting_index.get()]
+            self.background_image = ['./Data/Rio de Janeiro/test.tif']
             self.color_range =  'PM10'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-43.487035, -22.930828, 0.01]
             self.language = 'portuguese'
         elif self.location == 'Chile':
+            self.background_image = []
             self.color_range =  'Population'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-70.915467, -37.561959, 0.0001]
             self.language = 'spanish'
         elif self.location == 'Indonesia':
+            self.background_image = []
             self.color_range =  'Total Cases'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [113.119473,-5.944932, 0.0004]
             self.language = 'english'
         elif self.location == 'Santiago':
+            self.background_image = []
             self.color_range = 'PM10'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'True' Infected Population"
             self.map_loc = [-70.738862, -33.478012, 0.0025]
             self.language = 'spanish'
         elif self.location == 'Querétaro':
+            self.background_image = []
             self.color_range = 'COVID Cases per 1000 People'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = "Hospitalized Population"
@@ -97,15 +101,20 @@ class SD_UI(tk.Tk):
         self.data_filepath = './Data/' + self.location + '/temporal_data.csv'
         self.shp_fields = './Data/' + self.location + '/shp_fields.csv'
         self.shpfilepath = './Data/' + self.location + '/Shapefiles/geographic_data.shp'
-    
+        self.image_filepath = './Data/' + self.location + '/images.csv'
+        
         
         #Load other keyword arguments
-        if 'tuning' in kwargs:
-            self.tuning_flag = kwargs.pop('tuning')
+        if 'tuning' in kwargs: #determines whether to start simulation from t=0 or from end of historical data
+            self.tuning_flag = kwargs.pop('tuning') 
         else:
             self.tuning_flag = 0
-        if 'language' in kwargs:
-            self.language = kwargs.pop('language')
+        if 'language' in kwargs: #identifies display language
+            self.language = kwargs.pop('language') 
+        if 'arrangment' in kwargs: #identifies arrangment of graphs and maps
+            self.arrangment = kwargs.pop('arrangment')
+        else:
+            self.arrangment = ['Graph', 'Map']
             
         #Set geometry and other parameters of the window
         self.title(self.translate('System Dynamics Visualization'))       
@@ -114,12 +123,10 @@ class SD_UI(tk.Tk):
         self.geometry("{0}x{1}+0+0".format(
             self.winfo_screenwidth()-pad, self.winfo_screenheight()-pad))
         self.update_idletasks() 
-        # self.wm_attributes('-zoomed', 1)
 
-        # Get the monitor which contains the window
+        # Select the monitor which contains the window
         def get_monitor_from_coord(x, y):
             monitors = screeninfo.get_monitors()
-        
             for m in reversed(monitors):
                 if m.x <= x <= m.width + m.x and m.y <= y <= m.height + m.y:
                     return m
@@ -134,12 +141,10 @@ class SD_UI(tk.Tk):
         self.dpi = self.screenwidth/self.inch_width
         
         #Set default font and font sizes
-        #fontsize = int(round(20/7.634 * self.inch_height))
         fontsize = int(round(0.016575085503472222 * self.screenheight))
         self.option_add("*Font", "helvetica " + str(fontsize))
         self.small_font = tk.font.Font(family="helvetica", size=int(round(fontsize/2)))
             
-    
         #Label the SD_Map input for easy reference
         self.SD_Map = SDlib.SD_System(tuning_flag=self.tuning_flag,
                                       location=self.location,
@@ -176,12 +181,17 @@ class SD_UI(tk.Tk):
         self.PolicyDictsInv = self.SD_Map.PolicyDictsInv(self.location) #dictionary relating numerical closure policy to string value
         self.CatColorDict, self.colormap, self.norm = self.SD_Map.CatColor() #information relating categories to colors for visualization
         
-        #Generate the four graphs and their associated dropdown menus
+        #Generate the graphs and their associated dropdown menus
         self.graph_setting_list = [[],[]]
         self.graph_canvas_list = [[],[]]
         self.graph_optionlist_list = [[],[]]
-        self.graph_frame_L = self.make_graph_frame(self.default_graph1, self.default_graph2, 0) #left pair of graphs
+        self.figures = []
 
+        if self.arrangment[0] == 'Graph':
+            self.graph_frame_L = self.make_graph_frame(self.default_graph1, self.default_graph2, 0) #left pair of graphs
+        if self.arrangment[1] == 'Graph':
+            self.graph_frame_R = self.make_graph_frame(self.default_graph1, self.default_graph2, 1) #left pair of graphs
+        
         #Generate the policy action controls
         self.control_frame = self.make_control_frame()
         
@@ -189,7 +199,21 @@ class SD_UI(tk.Tk):
         self.Rules = Rule_Database.make_rules(self)
         self.info_frame = self.make_rule_display()
         
-        self.frame_map, self.subframe_map, self.MAP = self.make_map_frame()
+        #Generate the map(s) and their associated dropdown menus
+        self.subframe_map_list = [[],[]]
+        self.color_setting_name_list = [[],[]]
+        self.color_optionlist_list = [[],[]]
+        self.image_setting_name_list = [[],[]]
+        self.image_optionlist_list = [[],[]]
+        self.MAP_list = [[],[]]
+        if self.arrangment[0] == 'Map':
+            self.frame_map_L, subframe_map, MAP = self.make_map_frame(0)
+            self.subframe_map_list[0] = subframe_map
+            self.MAP_list[0] = MAP
+        if self.arrangment[1] == 'Map':
+            self.frame_map_R, subframe_map, MAP = self.make_map_frame(1)
+            self.subframe_map_list[1] = subframe_map
+            self.MAP_list[1] = MAP
 
     def toggle_geom(self,event):
         """NOT CURRENTLY FUNCTIONAL - TOGGLE FULL SCREEN DISPLAY
@@ -288,6 +312,15 @@ class SD_UI(tk.Tk):
         context_menu.add_command(label=self.translate("Querétaro"), command=lambda: self.switch_context('Querétaro'))
         menubar.add_cascade(label=self.translate("Locations"), menu=context_menu)
         
+        
+        # create a pulldown menu for arrangment, and add it to the menu bar
+        language_menu = tk.Menu(menubar, tearoff=0)
+        language_menu.add_command(label=self.translate("Graphs-Graphs"), command=lambda: self.switch_arrangment(['Graph', 'Graph']))
+        language_menu.add_command(label=self.translate("Graphs-Map"), command=lambda: self.switch_arrangment(['Graph', 'Map']))
+        language_menu.add_command(label=self.translate("Map-Graphs"), command=lambda: self.switch_arrangment(['Map', 'Graph']))
+        language_menu.add_command(label=self.translate("Map-Map"), command=lambda: self.switch_arrangment(['Map', 'Map']))
+        menubar.add_cascade(label=self.translate("Arrange"), menu=language_menu)
+        
         # create an exit command that closes the UI
         menubar.add_command(label=self.translate("Exit"), command=self.destroy)
         
@@ -306,6 +339,11 @@ class SD_UI(tk.Tk):
         Returns:
             N/A
         """
+        
+        #Clear Figures to avoid memory leak
+        for figure in self.figures:
+            figure.clear()
+            plt.close(figure)
 
         #Close the exisiting display
         self.destroy()
@@ -313,7 +351,8 @@ class SD_UI(tk.Tk):
         #Generate user interface with the new langauge
         UI = SD_UI(tuning = self.tuning_flag,
                     location = self.location,
-                    language = new_language)
+                    language = new_language,
+                    arrangment = self.arrangment)
     
         #Run the new user interface
         UI.mainloop()
@@ -327,14 +366,45 @@ class SD_UI(tk.Tk):
         Returns:
             N/A
         """
-        
+        #Clear Figures to avoid memory leak
+        for figure in self.figures:
+            figure.clear()
+            plt.close(figure)
+            
         #Close the exisiting display
         self.destroy()
         
         #Generate user interface
         UI = SD_UI(tuning = self.tuning_flag,
                     location = new_location,
-                    language = self.language)
+                    language = self.language,
+                    arrangment = self.arrangment)
+    
+        #Run the new user interface
+        UI.mainloop()
+        
+    def switch_arrangment(self, new_arrangment):
+        """CHANGE THE ARRANGMENT OF GRAPHS AND MAPS IN THE UI
+        
+        Args:
+            new_arrangment: the new arrangment of graphis and maps to switch the UI to.
+    
+        Returns:
+            N/A
+        """
+        #Clear Figures to avoid memory leak
+        for figure in self.figures:
+            figure.clear()
+            plt.close(figure)
+            
+        #Close the exisiting display
+        self.destroy()
+        
+        #Generate user interface
+        UI = SD_UI(tuning = self.tuning_flag,
+                    location = self.location,
+                    language = self.language,
+                    arrangment = new_arrangment)
     
         #Run the new user interface
         UI.mainloop()
@@ -370,7 +440,8 @@ class SD_UI(tk.Tk):
         graph_optionlist = self.make_graph_dropdown(graph_frame, firstgraph, index, col)
         graph_optionlist.grid(column=1, row=0)
         self.graph_optionlist_list[col].append(graph_optionlist)
-        self.figures = []
+        
+        
         #Generate the top graph
         canvas, fig = self.make_graph(graph_frame, firstgraph)
         self.graph_canvas_list[col].append(canvas)
@@ -434,7 +505,6 @@ class SD_UI(tk.Tk):
         graph_setting_name = tk.StringVar()
         graph_setting_name.set(self.translate(graph_setting_default))
         
-        
         #Identify the initial background color of the dropdown menu
         normvalue = self.norm(self.CatColorDict[self.SD_Map.retrieve_ob(graph_setting_default).category])
         fill1 = self.colormap(normvalue)[0:3]
@@ -486,6 +556,7 @@ class SD_UI(tk.Tk):
     
         Returns:
             canvas: the canvas housing an individual graph
+            fig: matplotlib figure that is the graph
         """
         
         #Generate the figure
@@ -519,52 +590,66 @@ class SD_UI(tk.Tk):
         """
         
         #Initialize Figure
-
         fig, ax1 = plt.subplots(figsize=(0.55*self.inch_width, 0.3*self.inch_height), dpi=0.75*self.dpi) # these settings work on Shea's smaller monitor
         
         
         #Retrieve SD Object based on name
         SDob = self.SD_Map.retrieve_ob(graph_setting)
         
+        #Pull and format the values of the SD Object
         plotval = []
         if type(SDob.values) is list:
             plotval.extend(SDob.values)
         else:
             plotval.append(SDob.values)
         if True in [True if not x else False for x in plotval]:
-            plotval[:] = [x if x else np.nan for x in plotval]
+            plotval[:] = [x if x or x == 0 else np.nan for x in plotval]
             
-        
-        #Identify color to use for plotting based on SD object's category
-        normvalue = self.norm(self.CatColorDict[SDob.category])
-        fill1 = np.array([self.colormap(normvalue)[0:3]])
-
-        
+        #Pull and format the history of the SD Object
+        #Note: If tuning==0, this will initially be the same as plotval just above
         histTime = list(range(0,len(SDob.history)))
         histval = []
         histval.extend(SDob.history)
         if True in [True if not x else False for x in histval]:
-            histval[:] = [x if x else np.nan for x in histval]
+            histval[:] = [x if x or x == 0 else np.nan for x in histval]
             
+        #Identify color to use for plotting based on SD object's category
+        normvalue = self.norm(self.CatColorDict[SDob.category])
+        fill1 = np.array([self.colormap(normvalue)[0:3]])
+
         #Generate scatterplot
         if self.tuning_flag == 1:
             ax1.scatter(self.timeSeries, plotval, c=fill1, marker="s", label = self.translate('Simulation'))
             ax1.scatter(histTime, histval, edgecolors=fill1, marker="o", label = self.translate('History'), facecolors='none')
-            
         else:
             ax1.scatter(histTime, histval, edgecolors=fill1, marker="o", label = self.translate('History'), facecolors='none')
-            
             if len(self.timeSeries) > len(histTime):
                 ax1.scatter(self.timeSeries[len(histTime):], plotval[len(histTime):], c=fill1, marker="s", label = self.translate('Simulation'))
-            # ax1.scatter(self.timeSeries, plotval, c=fill1)
-            # ax1.set_ylim(min(0, np.nanmin(plotval)), 1.2*np.nanmax(plotval))
-        
-        ax1.legend(loc='upper right')
-        # to better visualize values with a small range that is far from zero
-        if (np.nanmax(histval) - np.nanmin(histval)) < 0.5*(np.nanmin(histval)):
-            ax1.set_ylim(min(0.8*np.nanmin(plotval), 0.8*np.nanmin(histval)), 1.2*max(np.nanmax(plotval), np.nanmax(histval)))
+
+        #check if object has preset visualization parameters
+        if SDob.vismin:
+            vismin = min(SDob.vismin, 0.8*np.nanmin(plotval), 0.8*np.nanmin(histval))
+            
+        # check if it is better visualize values with a small range that is far from zero
+        elif (np.nanmax(histval) - np.nanmin(histval)) < 0.5*(np.nanmin(histval)):
+            vismin = min(0.8*np.nanmin(plotval), 0.8*np.nanmin(histval))
         else:
-            ax1.set_ylim(min(0, np.nanmin(plotval), np.nanmin(histval)), 1.2*max(np.nanmax(plotval), np.nanmax(histval)))
+            vismin = min(0, np.nanmin(plotval), np.nanmin(histval))
+        
+        #check if object has preset visualization parameters
+        if SDob.vismax:
+            vismax = max(SDob.vismax, 1.2*np.nanmax(plotval), 1.2*np.nanmax(histval))
+            
+        # check if it is better visualize values with a small range that is far from zero
+        elif np.nanmax(histval) == np.nanmin(histval):
+            vismax = max(np.nanmax(plotval), np.nanmax(histval)) + 1
+
+        else:
+            vismax = 1.2*max(np.nanmax(plotval), np.nanmax(histval))
+            
+        #set figure axes
+        ax1.legend(loc='upper right')
+        ax1.set_ylim(vismin, vismax)
         endtime = max(self.timeSeries[-1], 200)
         ax1.set_xlim(0, endtime)
         ax1.set_ylabel(self.translate(SDob.units))
@@ -584,12 +669,20 @@ class SD_UI(tk.Tk):
             N/A
         """
         
+        #Identify the arrangment of the graphs and prep indices appropriately
+        if col == 1:
+            if self.arrangment == ['Map', 'Graph']:
+                figindex = index
+            else:
+                figindex = index + 2
+        else:
+            figindex = index
+        
         #Identify the frame housing the specific graph and delete it
         framename = self.graph_canvas_list[col][index].get_tk_widget().master
-        self.figures[index].clear()
-        plt.close(self.figures[index])
+        self.figures[figindex].clear()
+        plt.close(self.figures[figindex])
         self.graph_canvas_list[col][index].get_tk_widget().destroy()
-        
         
         #Identify the proper SD object to plot in replacement
         graph = self.translate(self.graph_setting_list[col][index].get(),
@@ -600,7 +693,7 @@ class SD_UI(tk.Tk):
         canvas,fig = self.make_graph(framename, graph,
                         gridpos = index*2+1)
         self.graph_canvas_list[col][index] = canvas
-        self.figures[index] = fig
+        self.figures[figindex] = fig
         
         #Set the dropdown menu background to its proper color
         SDob = self.SD_Map.retrieve_ob(graph)
@@ -625,53 +718,78 @@ class SD_UI(tk.Tk):
 # =============================================================================
 # %% Generate the Map Frame             
 # =============================================================================     
-    def make_map_frame(self):
+    def make_map_frame(self, col):
         frame_map = tk.Frame(self, #width=500, height=400,
                              # borderwidth=1, relief='groove',
                              bg=self.default_background)
-        frame_map.grid(column=1, row=0)
+        frame_map.grid(column=col, row=0)
 
         #Select specific UOA shapefile
         self.shps = [shapefile.Reader(self.shpfilepath)]
         
         # Make Color Fill Dropdown Menu
-        self.color_optionlist =  self.make_fill_list(frame_map, self.shps[0])
-        self.color_optionlist.configure(bg=self.button_color,
+        color_label = tk.Label(frame_map, text=self.translate('Color') +': ',
+                              bg=self.default_background)
+        color_label.grid(column=0, row=0)
+        self.color_optionlist_list[col] =  self.make_fill_list(frame_map, self.shps[0], col)
+        self.color_optionlist_list[col].configure(bg=self.button_color,
                                         highlightbackground=self.highlight_color)
-        self.color_optionlist['menu'].config(bg=self.button_color)
-        self.color_optionlist.pack()
+        self.color_optionlist_list[col]['menu'].config(bg=self.button_color)
+        self.color_optionlist_list[col].config(width=30)
+        self.color_optionlist_list[col].grid(column=1, row=0, sticky='W')
         
-        color_title = self.translate(self.color_setting_name.get(),
+        color_title = self.translate(self.color_setting_name_list[col].get(),
                                      input_language = self.language,
                                      output_language = 'english')
         color_range = self.color_field_modes[self.color_longname_modes_inverted[color_title]]
         
-        #Create Map and bind commands to it
+
+        #Check for specified visualization parameters
+        testfield = self.fieldnamelookup(color_range, self.shp_fields)
+        vis_params = testfield.vis_params
+        
+        #Make Background Image Dropdown Menu
+        image_label = tk.Label(frame_map, text=self.translate('Image') +': ',
+                              bg=self.default_background)
+        image_label.grid(column=2, row=0)
+        self.image_optionlist_list[col] =  self.make_image_list(frame_map,col)
+        self.image_optionlist_list[col].configure(bg=self.button_color,
+                                        highlightbackground=self.highlight_color)
+        self.image_optionlist_list[col]['menu'].config(bg=self.button_color)
+        self.image_optionlist_list[col].grid(column=3, row=0, sticky='W')
+
+        image_title = self.translate(self.image_setting_name_list[col].get(),
+                                          input_language=self.language,
+                                          output_language='english')
+        image_path = self.image_dict[image_title]
+        
+        #Create subframe to house the map
         subframe_map = tk.Frame(frame_map,
                                 bg=self.default_background)
-        subframe_map.pack()
+        subframe_map.grid(column=0, row=1, columnspan=4)
+
+        #Create Map
         MAP = MapWindow.Map(subframe_map,
                             self.shps,
-                            # background_image = self.background_image, 
+                            background_image = image_path, 
                             color_range= [color_range],
                             color_title= color_title,
+                            color_params = vis_params,
                             lat_lon_zoom= self.map_loc,
                             null_zeros=1,
                             window_dimensions = [self.screenwidth,self.screenheight])
         MAP.configure(bg='white')
         
-        # MAP.bind("<Button-1>", self.print_coords)
-        # MAP.bind("<Double-Button-1>", lambda e: self.uoa_type(self.clickname))
         return frame_map, subframe_map, MAP
     
-    def make_fill_list (self, root, shp):    
+    def make_fill_list (self, root, shp, col):    
         """CREATE UOA FILL COLOR TOGGLE
     
         Args:
             root: tk frame for the dropdown to to be situated in.
                
         Returns:
-            zoneoptionlist: the dropdown list
+            color_optionlist: the dropdown list, tk Widget
         """
         
         #Identify fields, longnames, and categories to be added to the dropdown
@@ -695,22 +813,60 @@ class SD_UI(tk.Tk):
         self.color_longname_modes_inverted = dict(map(reversed, self.color_longname_modes.items()))
 
         #Create UOA Color Fill Dropdown
-        self.color_setting_name = tk.StringVar()
-        self.color_setting_name.set(self.translate(self.color_range))
-    
-        translated_color_list = []
+        self.color_setting_name_list[col] = tk.StringVar()
+        self.color_setting_name_list[col].set(self.translate(self.color_range))
+        
+        translated_color_list = [self.translate('None')]
         for entry in self.color_longname_modes_inverted.keys():
             translated_color_list.append(self.translate(entry))
-        
-        color_optionlist = tk.OptionMenu(root, self.color_setting_name,
+            
+        color_optionlist = tk.OptionMenu(root, self.color_setting_name_list[col],
                            *list(translated_color_list),
-                            command=lambda e: self.replace_map_image(self.subframe_map)
+                            command=lambda e: self.replace_map_image(self.subframe_map_list[col],col)
                             )
         
         #Return dropdown for future reference
         return color_optionlist 
     
+    def make_image_list (self, root,col):    
+        """CREATE BACKGROUND IMAGE TOGGLE
+    
+        Args:
+            root: tk frame for the dropdown to to be situated in.
+               
+        Returns:
+            image_optionlist: the dropdown list, tk Widget
+        """
+        
+        #Identify names to be added to dropdown and filepaths associated with those names
+        image_list = ['None']
+        self.image_dict = dict()
+        self.image_dict['None'] = []
+        with open(self.image_filepath, encoding='ISO-8859-15') as csv_file:
+           csvread = csv.DictReader(csv_file)
+           for row in csvread:
+               image_list.append(row['name'])
+               self.image_dict[row['name']] = row['filepath']
+        
+        #Create Image Dropdown
+        self.image_setting_name_list[col] = tk.StringVar()
+        self.image_setting_name_list[col].set(self.translate(image_list[0]))
+        
+        translated_image_list = []
+        for entry in image_list:
+            translated_image_list.append(self.translate(entry))
+            
+        image_optionlist = tk.OptionMenu(root, self.image_setting_name_list[col],
+                           *list(translated_image_list),
+                            command=lambda e: self.replace_map_image(self.subframe_map_list[col],col)
+                            )
+        
+        #Return dropdown for future reference
+        return image_optionlist 
+    
     class fieldnamelookup:
+        """FIELDNAMELOOKUP CLASS PULLS RELEVANT INFORMATION FROM A CSV FOR 
+        A SPECIFIED FIELDNAME AND STORES IT AS A STRUCTURE"""
     
         def __init__(self, fieldname, shp_fields, **kwargs):
             
@@ -730,8 +886,9 @@ class SD_UI(tk.Tk):
                        self.longname = row['LongName']
                        self.category = row['Category']
                        self.type = 'Other'
+                       self.vis_params = [row['VisMin'], row['VisMax'], row['VisColor']]
     
-    def replace_map_image(self, mapframe, **kwargs):
+    def replace_map_image(self, mapframe, col, **kwargs):
         """UPDATE MAP TO CURRENT SETTINGS
     
         Args:
@@ -744,13 +901,27 @@ class SD_UI(tk.Tk):
         """
         
         #Pull settings into more usable formats
-        fill_color_title = self.translate(self.color_setting_name.get(),
+        fill_color_title = self.translate(self.color_setting_name_list[col].get(),
                                           input_language=self.language,
                                           output_language='english')
-        fill_color = self.color_field_modes[self.color_longname_modes_inverted[fill_color_title]]
+        if fill_color_title == 'None':
+            fill_color = []
+            fill_color_title_input = []
+        else:
+            fill_color = [self.color_field_modes[self.color_longname_modes_inverted[fill_color_title]]]
+            fill_color_title_input = fill_color_title
+       
+        image_title = self.translate(self.image_setting_name_list[col].get(),
+                                          input_language=self.language,
+                                          output_language='english')
+        image_path = self.image_dict[image_title]
+        
+        #Check for specified visualization parameters
+        testfield = self.fieldnamelookup(fill_color[0], self.shp_fields)
+        vis_params = testfield.vis_params
         
         #Delete exisiting map
-        self.MAP.delete("all")
+        self.MAP_list[col].delete("all")
         slaveitems = mapframe.slaves()
         for item in slaveitems:
             item.destroy()    
@@ -758,16 +929,17 @@ class SD_UI(tk.Tk):
         for item in griditems:
             item.destroy()
             
-        self.MAP = MapWindow.Map(mapframe,
+        self.MAP_list[col] = MapWindow.Map(mapframe,
                             self.shps,
-                            # background_image = self.background_image, 
-                            color_range = [fill_color],
-                            color_title = fill_color_title,
+                            background_image = image_path, 
+                            color_range = fill_color,
+                            color_title = fill_color_title_input,
+                            color_params = vis_params,
                             lat_lon_zoom = self.map_loc,
                             null_zeros=1,
                             window_dimensions = [self.screenwidth,self.screenheight])
                 
-        self.MAP.configure(bg='white')
+        self.MAP_list[col].configure(bg='white')
 
 # =============================================================================
 # %% Generate the Control Frame             
@@ -943,17 +1115,21 @@ class SD_UI(tk.Tk):
         
         #If appropriate, update all of the graphs
         if displayflag == 1:
-            index = 0
+            if self.arrangment == ['Map', 'Graph']:
+                index = 2
+                invertflag = 1
+            else:
+                index = 0
+                invertflag = 0
             
             #Select all of the graphs
             canvaslist = []
             for entrylist in self.graph_canvas_list:
                 for entry in entrylist:
                     canvaslist.append(entry)
-            
+
             #For each graph, delete it and replace it with an update graph
             for canvas in canvaslist:
-
                 if index < 2:
                     col = 0
                     inputindex = index
@@ -962,6 +1138,14 @@ class SD_UI(tk.Tk):
                 else:
                     col = 1
                     inputindex = index - 2
+                    if invertflag:
+                        self.figures[inputindex].clear()
+                        plt.close(self.figures[inputindex])
+                    else:
+                        self.figures[index].clear()
+                        plt.close(self.figures[index])
+                    
+                #Make new graph
                 framename = canvas.get_tk_widget().master
                 canvas.get_tk_widget().destroy()
                 graph = self.translate(self.graph_setting_list[col][inputindex].get(),
@@ -970,7 +1154,12 @@ class SD_UI(tk.Tk):
                 canvas,fig = self.make_graph(framename, graph,
                             gridpos = inputindex*2+1)
                 self.graph_canvas_list[col][inputindex]=canvas
-                self.figures[index] = fig
+                
+                #Update figures list
+                if invertflag:
+                    self.figures[inputindex] = fig
+                else:
+                    self.figures[index] = fig
                 index += 1
            
     def automatic_window(self):
@@ -1192,7 +1381,8 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Indonesia')
+                location = 'Rio de Janeiro',
+                arrangment = ['Graph', 'Map'])
 
     #Run the user interface
     UI.mainloop()
