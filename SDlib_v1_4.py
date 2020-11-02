@@ -2007,7 +2007,61 @@ class SD_System:
                                 func = lambda tstep, tind: self.Int_F_Ind_JI.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')                                    
+                                category = 'Economy')   
+
+            self.foreign_vis_Ind = SD_object('Foreign Visitors',
+                                units = 'People',
+                                init_value = lambda: self.historical_data('foreign', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.foreign_vis_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')   
+
+            self.HO_Ind_JK = SD_object('Hotel Occupancy - Jakarta',
+                                units = '%',
+                                init_value = lambda: self.historical_data('HO_JK', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.HO_Ind_JK.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')    
+
+            self.HO_Ind_JB = SD_object('Hotel Occupancy - West Java',
+                                units = '%',
+                                init_value = lambda: self.historical_data('HO_JB', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.HO_Ind_JB.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')        
+
+            self.HO_Ind_JT = SD_object('Hotel Occupancy - Central Java',
+                                units = '%',
+                                init_value = lambda: self.historical_data('HO_JT', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.HO_Ind_JT.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')        
+
+            self.HO_Ind_JI = SD_object('Hotel Occupancy - East Java',
+                                units = '%',
+                                init_value = lambda: self.historical_data('HO_JI', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.HO_Ind_JI.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')        
+
+            self.HO_Ind_SN = SD_object('Hotel Occupancy - South Sulawesi',
+                                units = '%',
+                                init_value = lambda: self.historical_data('HO_SN', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.HO_Ind_SN.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')                                                                 
     # =============================================================================
     # %% 6 - Querétaro  
     # =============================================================================   
