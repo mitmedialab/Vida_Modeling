@@ -1963,6 +1963,51 @@ class SD_System:
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
                                 category = 'Economy')   
+
+            self.DF_Ind_JK = SD_object('Domestic Flights - Jakarta',
+                                units = 'Passengers',
+                                init_value = lambda: self.historical_data('DF_JK', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.DF_Ind_JK.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')      
+
+            self.DF_Ind_JI = SD_object('Domestic Flights - East Java',
+                                units = 'Passengers',
+                                init_value = lambda: self.historical_data('DF_JI', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.DF_Ind_JI.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')     
+
+            self.DF_Ind_SN = SD_object('Domestic Flights - South Sulawesi',
+                                units = 'Passengers',
+                                init_value = lambda: self.historical_data('DF_SN', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.DF_Ind_SN.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')  
+
+            self.Int_F_Ind_JK = SD_object('International Flights - Jakarta',
+                                units = 'Passengers',
+                                init_value = lambda: self.historical_data('Int_F_JK', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.Int_F_Ind_JK.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')      
+
+            self.Int_F_Ind_JI = SD_object('International Flights - East Java',
+                                units = 'Passengers',
+                                init_value = lambda: self.historical_data('Int_F_JI', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.Int_F_Ind_JI.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy')                                    
     # =============================================================================
     # %% 6 - Querétaro  
     # =============================================================================   
