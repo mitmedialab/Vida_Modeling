@@ -1,1 +1,4 @@
 filepath,name
+./Data/Querétaro/Images/Landsat_Composite.tif,Visual Composite
+./Data/Querétaro/Images/DNB_meanAnomaly.tif,Nightlights Mean Anomaly
+./Data/Querétaro/Images/DNB_Mosaic.tif,Nightlights

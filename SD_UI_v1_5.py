@@ -93,7 +93,7 @@ class SD_UI(tk.Tk):
             self.color_range = 'COVID Cases per 1000 People'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = "Hospitalized Population"
-            self.map_loc = [-99.866625, 20.85, 0.003]
+            self.map_loc = [-99.866625, 20.85, 0.0028]
             self.language = 'spanish'
             
         #Set filepaths for relevant data and auxilary files
@@ -917,8 +917,11 @@ class SD_UI(tk.Tk):
         image_path = self.image_dict[image_title]
         
         #Check for specified visualization parameters
-        testfield = self.fieldnamelookup(fill_color[0], self.shp_fields)
-        vis_params = testfield.vis_params
+        if fill_color:
+            testfield = self.fieldnamelookup(fill_color[0], self.shp_fields)
+            vis_params = testfield.vis_params
+        else:
+            vis_params = [[],[],[]]
         
         #Delete exisiting map
         self.MAP_list[col].delete("all")
@@ -1381,7 +1384,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Rio de Janeiro',
+                location = 'Querétaro',
                 arrangment = ['Graph', 'Map'])
 
     #Run the user interface
