@@ -1754,7 +1754,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.GDP_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')    
+                                category = 'Economy - Nationwide')    
   
             self.Arrivals_Ind = SD_object('Visitor Arrivals',
                                 units = 'people',
@@ -1763,7 +1763,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.Arrivals_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')
+                                category = 'Economy - Nationwide')
   
   
             self.oil_Ind = SD_object('Oil and Gas Imports',
@@ -1773,7 +1773,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.oil_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy') 
+                                category = 'Economy - Nationwide') 
   
             self.household_ex_Ind = SD_object('Household Expenditures',
                                 units = 'Rp Million',
@@ -1782,7 +1782,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.household_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 100000000000,
                                 minval = lambda: 0,
-                                category = 'Economy')  
+                                category = 'Economy - Nationwide')  
   
             self.consumtion_ex_Ind = SD_object('Consumption Expenditure LNPRT',
                                 units = 'Rp Million',
@@ -1791,7 +1791,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.consumtion_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 100000000000,
                                 minval = lambda: 0,
-                                category = 'Economy')
+                                category = 'Economy - Nationwide')
   
             self.gov_ex_Ind = SD_object('Government Consumption Expenditure',
                                 units = 'Rp Million',
@@ -1800,7 +1800,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.gov_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 100000000000,
                                 minval = lambda: 0,
-                                category = 'Economy')         
+                                category = 'Economy - Nationwide')         
   
             self.net_ex_Ind = SD_object('Net Exports',
                                 units = 'Rp Million',
@@ -1809,7 +1809,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.net_ex_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 100000000000,
                                 minval = lambda: 0,
-                                category = 'Economy')      
+                                category = 'Economy - Nationwide')      
   
             self.GDP_manu_Ind = SD_object('Manufacturing GDP',
                                 units = 'Rp Million',
@@ -1818,7 +1818,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.GDP_manu_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')    
+                                category = 'Economy - Nationwide')    
   
             self.GDP_cons_Ind = SD_object('Construction GDP',
                                 units = 'Rp Million',
@@ -1827,7 +1827,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.GDP_cons_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')   
+                                category = 'Economy - Nationwide')   
   
             self.GDP_retail_Ind = SD_object('Retail and Vehicle Repair GDP',
                                 units = 'Rp Million',
@@ -1836,7 +1836,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.GDP_retail_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')     
+                                category = 'Economy - Nationwide')     
   
             self.GDP_IT_Ind = SD_object('Information and Communication GDP',
                                 units = 'Rp Million',
@@ -1845,7 +1845,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.GDP_IT_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')       
+                                category = 'Economy - Nationwide')       
   
             self.GDP_social_Ind = SD_object('Health and Social Work GDP',
                                 units = 'Rp Million',
@@ -1854,7 +1854,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.GDP_social_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')           
+                                category = 'Economy - Nationwide')           
   
             self.GDP_food_Ind = SD_object('Accommodation and Food Service GDP',
                                 units = 'Rp Million',
@@ -1863,7 +1863,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.GDP_food_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')
+                                category = 'Economy - Nationwide')
 
             self.stock_index_Ind = SD_object('Closing Compsite Stock Index (IDX)',
                                 units = 'Stock Index',
@@ -1872,7 +1872,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.stock_index_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')                                
+                                category = 'Economy - Nationwide')                                
 
             self.FTT_Ind_JK = SD_object('Farmer Terms of Trade - Jakarta',
                                 units = 'Terms Rate',
@@ -1881,7 +1881,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.FTT_Ind_JK.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')    
+                                category = 'Economy - Regional')    
 
             self.FTT_Ind_JB = SD_object('Farmer Terms of Trade - West Java',
                                 units = 'Terms Rate',
@@ -1890,7 +1890,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.FTT_Ind_JB.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')        
+                                category = 'Economy - Regional')        
 
             self.FTT_Ind_JT = SD_object('Farmer Terms of Trade - Central Java',
                                 units = 'Terms Rate',
@@ -1899,7 +1899,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.FTT_Ind_JT.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')        
+                                category = 'Economy - Regional')        
 
             self.FTT_Ind_JI = SD_object('Farmer Terms of Trade - East Java',
                                 units = 'Terms Rate',
@@ -1908,7 +1908,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.FTT_Ind_JI.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')        
+                                category = 'Economy - Regional')        
 
             self.FTT_Ind_SN = SD_object('Farmer Terms of Trade - South Sulawesi',
                                 units = 'Terms Rate',
@@ -1917,7 +1917,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.FTT_Ind_SN.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')                                                                                         
+                                category = 'Economy - Regional')                                                                                         
 
             self.IF_Ind_JK = SD_object('Inflation - Jakarta',
                                 units = '%',
@@ -1926,7 +1926,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.IF_Ind_JK.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')    
+                                category = 'Economy - Regional')    
 
             self.IF_Ind_JB = SD_object('Inflation - West Java',
                                 units = '%',
@@ -1935,7 +1935,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.IF_Ind_JB.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')        
+                                category = 'Economy - Regional')        
 
             self.IF_Ind_JT = SD_object('Inflation - Central Java',
                                 units = '%',
@@ -1944,7 +1944,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.IF_Ind_JT.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')        
+                                category = 'Economy - Regional')        
 
             self.IF_Ind_JI = SD_object('Inflation - East Java',
                                 units = '%',
@@ -1953,7 +1953,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.IF_Ind_JI.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')        
+                                category = 'Economy - Regional')        
 
             self.IF_Ind_SN = SD_object('Inflation - South Sulawesi',
                                 units = '%',
@@ -1962,7 +1962,106 @@ class SD_System:
                                 func = lambda tstep, tind: self.IF_Ind_SN.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
-                                category = 'Economy')   
+                                category = 'Economy - Regional')   
+
+            self.DF_Ind_JK = SD_object('Domestic Flights - Jakarta',
+                                units = 'Passengers',
+                                init_value = lambda: self.historical_data('DF_JK', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.DF_Ind_JK.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy - Regional')      
+
+            self.DF_Ind_JI = SD_object('Domestic Flights - East Java',
+                                units = 'Passengers',
+                                init_value = lambda: self.historical_data('DF_JI', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.DF_Ind_JI.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy - Regional')     
+
+            self.DF_Ind_SN = SD_object('Domestic Flights - South Sulawesi',
+                                units = 'Passengers',
+                                init_value = lambda: self.historical_data('DF_SN', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.DF_Ind_SN.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy - Regional')  
+
+            self.Int_F_Ind_JK = SD_object('International Flights - Jakarta',
+                                units = 'Passengers',
+                                init_value = lambda: self.historical_data('Int_F_JK', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.Int_F_Ind_JK.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy - Regional')      
+
+            self.Int_F_Ind_JI = SD_object('International Flights - East Java',
+                                units = 'Passengers',
+                                init_value = lambda: self.historical_data('Int_F_JI', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.Int_F_Ind_JI.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy - Regional')   
+
+            self.foreign_vis_Ind = SD_object('Foreign Visitors',
+                                units = 'People',
+                                init_value = lambda: self.historical_data('foreign', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.foreign_vis_Ind.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy - Nationwide')   
+
+            self.HO_Ind_JK = SD_object('Hotel Occupancy - Jakarta',
+                                units = '%',
+                                init_value = lambda: self.historical_data('HO_JK', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.HO_Ind_JK.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy - Regional')    
+
+            self.HO_Ind_JB = SD_object('Hotel Occupancy - West Java',
+                                units = '%',
+                                init_value = lambda: self.historical_data('HO_JB', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.HO_Ind_JB.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy - Regional')        
+
+            self.HO_Ind_JT = SD_object('Hotel Occupancy - Central Java',
+                                units = '%',
+                                init_value = lambda: self.historical_data('HO_JT', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.HO_Ind_JT.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy - Regional')        
+
+            self.HO_Ind_JI = SD_object('Hotel Occupancy - East Java',
+                                units = '%',
+                                init_value = lambda: self.historical_data('HO_JI', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.HO_Ind_JI.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy - Regional')        
+
+            self.HO_Ind_SN = SD_object('Hotel Occupancy - South Sulawesi',
+                                units = '%',
+                                init_value = lambda: self.historical_data('HO_SN', location, filename), 
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.HO_Ind_SN.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 10000000,
+                                minval = lambda: 0,
+                                category = 'Economy - Regional')                                                                 
     # =============================================================================
     # %% 6 - Querétaro  
     # =============================================================================   
