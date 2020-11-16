@@ -1268,14 +1268,14 @@ class SD_System:
             
             """ 7 - ENVIRONMENT """
             
-            # self.Mob = SD_object('Mobility',
-            #                     units = 'Mobility Index',
-            #                     init_value = lambda: self.historical_data('Mobility', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
-            #                     obtype = 'stock',
-            #                     func = lambda tstep, tind: self.Mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
-            #                     maxval = lambda: 100,   
-            #                     minval = lambda: -100, 
-            #                     category = 'Environment')
+            self.Mob = SD_object('Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('Mobility', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.Mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Environment')
             
             """ 8 - ECONOMIC """
         

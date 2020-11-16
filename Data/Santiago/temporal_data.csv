@@ -1,4 +1,4 @@
-Fecha,Current Infected,True Infected,New Deaths,total_recup,total_obito,Susceptible Population,True Infection Rate,Measured Infection Rate,Total Cases,Closure Policy,Mobility
+Fecha,Measured Current Infected,True Current Infected,New Deaths,Recovered Population,Accumulative Deaths,Susceptible Population,True Infection Rate,Measured Infection Rate,Total Cases,Closure Policy,Mobility
 2020-03-02,0,5.18,0,0,0,503147,5.18,0,0,Paso 3,10.252392534008
 2020-03-03,0,5.775,0,0,0,503147,0.595000000000001,0,0,Paso 3,10.3529529791165
 2020-03-04,0,7.23,0,0,0,503147,1.455,0,0,Paso 3,10.5384331264421

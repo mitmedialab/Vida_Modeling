@@ -61,10 +61,10 @@ def ShapefileFormatter(shpfilepath, datapath,fieldname, writepath):
         # print('LOOKING FOR:', name)
         if (df.index == name).any():
             namerow =  df.loc[name]
-            # print('NAMEROW IS:', namerow)
+            print('NAMEROW IS:', namerow)
             namevalue = namerow[valname] 
-            # print('FOUND: ' + name)
-            # print('VALUE IS:', namevalue)
+            print('FOUND: ' + str(name))
+            print('VALUE IS:', namevalue)
         else:
             namevalue = 0
         if namevalue == '[]':
@@ -112,17 +112,14 @@ def ShapefileFormatter(shpfilepath, datapath,fieldname, writepath):
 
 
 
-metrics = ['CO',
-           'PM2.5',
-           'PM10',
-           'SO2'
+metrics = ['Mobility'
            ]
 
 
 
-shppath = './Data/Santiago/Shapefiles/Metro_comunas_simple2.shp'
-datapath = './Data/Santiago/Misc/Air Quality/MeanAnomalies.xlsx'
-writepath = './Data/Santiago/Shapefiles/Metro_comunas_simple_data.shp'
+shppath = '/home/jackreid/Documents/School/Research/Space Enabled/Code/Decisions/Data/Santiago/Shapefiles/geographic_data.shp'
+datapath = '/home/jackreid/Documents/School/Research/Space Enabled/Code/Decisions/Data/Santiago/Misc/Mobility.xlsx'
+writepath = '/home/jackreid/Documents/School/Research/Space Enabled/Code/Decisions/Data/Santiago/Shapefiles/geographic_data2.shp'
 
 
 ShapefileFormatter(shppath, datapath, metrics, writepath)
