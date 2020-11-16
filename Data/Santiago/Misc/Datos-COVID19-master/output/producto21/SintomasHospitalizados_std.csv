@@ -1,0 +1,421 @@
+Sintomas,fecha,numero
+Cefalea,2020-03-25,48
+Tos,2020-03-25,103
+Mialgia,2020-03-25,71
+Fiebre,2020-03-25,98
+Odinofagia,2020-03-25,48
+Anosmia,2020-03-25,
+Ageusia,2020-03-25,
+Disnea,2020-03-25,34
+Diarrea,2020-03-25,7
+Dolor torácico,2020-03-25,11
+Dolor abdominal,2020-03-25,3
+Taquipnea,2020-03-25,10
+Cianosis,2020-03-25,3
+Postración,2020-03-25,1
+Congestión nasal,2020-03-25,
+Cefalea,2020-03-26,60
+Tos,2020-03-26,129
+Mialgia,2020-03-26,88
+Fiebre,2020-03-26,122
+Odinofagia,2020-03-26,54
+Anosmia,2020-03-26,
+Ageusia,2020-03-26,
+Disnea,2020-03-26,49
+Diarrea,2020-03-26,11
+Dolor torácico,2020-03-26,16
+Dolor abdominal,2020-03-26,4
+Taquipnea,2020-03-26,15
+Cianosis,2020-03-26,3
+Postración,2020-03-26,1
+Congestión nasal,2020-03-26,
+Cefalea,2020-03-27,65
+Tos,2020-03-27,147
+Mialgia,2020-03-27,97
+Fiebre,2020-03-27,141
+Odinofagia,2020-03-27,63
+Anosmia,2020-03-27,
+Ageusia,2020-03-27,
+Disnea,2020-03-27,62
+Diarrea,2020-03-27,13
+Dolor torácico,2020-03-27,17
+Dolor abdominal,2020-03-27,4
+Taquipnea,2020-03-27,18
+Cianosis,2020-03-27,4
+Postración,2020-03-27,1
+Congestión nasal,2020-03-27,
+Cefalea,2020-03-28,83
+Tos,2020-03-28,173
+Mialgia,2020-03-28,116
+Fiebre,2020-03-28,171
+Odinofagia,2020-03-28,75
+Anosmia,2020-03-28,
+Ageusia,2020-03-28,
+Disnea,2020-03-28,80
+Diarrea,2020-03-28,18
+Dolor torácico,2020-03-28,22
+Dolor abdominal,2020-03-28,7
+Taquipnea,2020-03-28,25
+Cianosis,2020-03-28,4
+Postración,2020-03-28,1
+Congestión nasal,2020-03-28,
+Cefalea,2020-03-29,86
+Tos,2020-03-29,180
+Mialgia,2020-03-29,118
+Fiebre,2020-03-29,178
+Odinofagia,2020-03-29,80
+Anosmia,2020-03-29,
+Ageusia,2020-03-29,
+Disnea,2020-03-29,86
+Diarrea,2020-03-29,19
+Dolor torácico,2020-03-29,23
+Dolor abdominal,2020-03-29,7
+Taquipnea,2020-03-29,27
+Cianosis,2020-03-29,4
+Postración,2020-03-29,1
+Congestión nasal,2020-03-29,
+Cefalea,2020-03-30,95
+Tos,2020-03-30,200
+Mialgia,2020-03-30,132
+Fiebre,2020-03-30,195
+Odinofagia,2020-03-30,87
+Anosmia,2020-03-30,
+Ageusia,2020-03-30,
+Disnea,2020-03-30,99
+Diarrea,2020-03-30,23
+Dolor torácico,2020-03-30,26
+Dolor abdominal,2020-03-30,9
+Taquipnea,2020-03-30,33
+Cianosis,2020-03-30,6
+Postración,2020-03-30,
+Congestión nasal,2020-03-30,
+Cefalea,2020-03-31,115
+Tos,2020-03-31,234
+Mialgia,2020-03-31,154
+Fiebre,2020-03-31,231
+Odinofagia,2020-03-31,100
+Anosmia,2020-03-31,
+Ageusia,2020-03-31,
+Disnea,2020-03-31,120
+Diarrea,2020-03-31,28
+Dolor torácico,2020-03-31,32
+Dolor abdominal,2020-03-31,12
+Taquipnea,2020-03-31,39
+Cianosis,2020-03-31,6
+Postración,2020-03-31,
+Congestión nasal,2020-03-31,
+Cefalea,2020-04-01,133
+Tos,2020-04-01,273
+Mialgia,2020-04-01,174
+Fiebre,2020-04-01,264
+Odinofagia,2020-04-01,112
+Anosmia,2020-04-01,
+Ageusia,2020-04-01,
+Disnea,2020-04-01,141
+Diarrea,2020-04-01,37
+Dolor torácico,2020-04-01,34
+Dolor abdominal,2020-04-01,16
+Taquipnea,2020-04-01,48
+Cianosis,2020-04-01,7
+Postración,2020-04-01,
+Congestión nasal,2020-04-01,
+Cefalea,2020-04-02,139
+Tos,2020-04-02,284
+Mialgia,2020-04-02,181
+Fiebre,2020-04-02,274
+Odinofagia,2020-04-02,118
+Anosmia,2020-04-02,
+Ageusia,2020-04-02,
+Disnea,2020-04-02,149
+Diarrea,2020-04-02,41
+Dolor torácico,2020-04-02,36
+Dolor abdominal,2020-04-02,17
+Taquipnea,2020-04-02,52
+Cianosis,2020-04-02,7
+Postración,2020-04-02,
+Congestión nasal,2020-04-02,
+Cefalea,2020-04-03,166
+Tos,2020-04-03,318
+Mialgia,2020-04-03,212
+Fiebre,2020-04-03,320
+Odinofagia,2020-04-03,144
+Anosmia,2020-04-03,
+Ageusia,2020-04-03,
+Disnea,2020-04-03,176
+Diarrea,2020-04-03,50
+Dolor torácico,2020-04-03,46
+Dolor abdominal,2020-04-03,21
+Taquipnea,2020-04-03,61
+Cianosis,2020-04-03,10
+Postración,2020-04-03,
+Congestión nasal,2020-04-03,
+Cefalea,2020-04-04,184
+Tos,2020-04-04,362
+Mialgia,2020-04-04,243
+Fiebre,2020-04-04,357
+Odinofagia,2020-04-04,159
+Anosmia,2020-04-04,
+Ageusia,2020-04-04,
+Disnea,2020-04-04,202
+Diarrea,2020-04-04,58
+Dolor torácico,2020-04-04,57
+Dolor abdominal,2020-04-04,27
+Taquipnea,2020-04-04,69
+Cianosis,2020-04-04,9
+Postración,2020-04-04,
+Congestión nasal,2020-04-04,
+Cefalea,2020-04-05,199
+Tos,2020-04-05,390
+Mialgia,2020-04-05,257
+Fiebre,2020-04-05,381
+Odinofagia,2020-04-05,174
+Anosmia,2020-04-05,
+Ageusia,2020-04-05,
+Disnea,2020-04-05,226
+Diarrea,2020-04-05,62
+Dolor torácico,2020-04-05,63
+Dolor abdominal,2020-04-05,27
+Taquipnea,2020-04-05,80
+Cianosis,2020-04-05,10
+Postración,2020-04-05,
+Congestión nasal,2020-04-05,
+Cefalea,2020-04-06,209
+Tos,2020-04-06,418
+Mialgia,2020-04-06,274
+Fiebre,2020-04-06,405
+Odinofagia,2020-04-06,185
+Anosmia,2020-04-06,
+Ageusia,2020-04-06,
+Disnea,2020-04-06,248
+Diarrea,2020-04-06,66
+Dolor torácico,2020-04-06,71
+Dolor abdominal,2020-04-06,27
+Taquipnea,2020-04-06,91
+Cianosis,2020-04-06,11
+Postración,2020-04-06,
+Congestión nasal,2020-04-06,
+Cefalea,2020-04-07,228
+Tos,2020-04-07,451
+Mialgia,2020-04-07,295
+Fiebre,2020-04-07,439
+Odinofagia,2020-04-07,201
+Anosmia,2020-04-07,
+Ageusia,2020-04-07,
+Disnea,2020-04-07,264
+Diarrea,2020-04-07,73
+Dolor torácico,2020-04-07,75
+Dolor abdominal,2020-04-07,32
+Taquipnea,2020-04-07,95
+Cianosis,2020-04-07,13
+Postración,2020-04-07,
+Congestión nasal,2020-04-07,
+Cefalea,2020-04-08,256
+Tos,2020-04-08,489
+Mialgia,2020-04-08,314
+Fiebre,2020-04-08,463
+Odinofagia,2020-04-08,215
+Anosmia,2020-04-08,
+Ageusia,2020-04-08,
+Disnea,2020-04-08,285
+Diarrea,2020-04-08,76
+Dolor torácico,2020-04-08,84
+Dolor abdominal,2020-04-08,38
+Taquipnea,2020-04-08,100
+Cianosis,2020-04-08,13
+Postración,2020-04-08,
+Congestión nasal,2020-04-08,
+Cefalea,2020-04-09,297
+Tos,2020-04-09,548
+Mialgia,2020-04-09,361
+Fiebre,2020-04-09,528
+Odinofagia,2020-04-09,245
+Anosmia,2020-04-09,
+Ageusia,2020-04-09,
+Disnea,2020-04-09,308
+Diarrea,2020-04-09,87
+Dolor torácico,2020-04-09,92
+Dolor abdominal,2020-04-09,43
+Taquipnea,2020-04-09,108
+Cianosis,2020-04-09,15
+Postración,2020-04-09,
+Congestión nasal,2020-04-09,
+Cefalea,2020-04-10,346
+Tos,2020-04-10,619
+Mialgia,2020-04-10,422
+Fiebre,2020-04-10,598
+Odinofagia,2020-04-10,279
+Anosmia,2020-04-10,
+Ageusia,2020-04-10,
+Disnea,2020-04-10,342
+Diarrea,2020-04-10,95
+Dolor torácico,2020-04-10,97
+Dolor abdominal,2020-04-10,50
+Taquipnea,2020-04-10,121
+Cianosis,2020-04-10,15
+Postración,2020-04-10,
+Congestión nasal,2020-04-10,
+Cefalea,2020-04-11,374
+Tos,2020-04-11,674
+Mialgia,2020-04-11,456
+Fiebre,2020-04-11,648
+Odinofagia,2020-04-11,307
+Anosmia,2020-04-11,
+Ageusia,2020-04-11,
+Disnea,2020-04-11,358
+Diarrea,2020-04-11,105
+Dolor torácico,2020-04-11,103
+Dolor abdominal,2020-04-11,52
+Taquipnea,2020-04-11,125
+Cianosis,2020-04-11,16
+Postración,2020-04-11,
+Congestión nasal,2020-04-11,
+Cefalea,2020-04-12,380
+Tos,2020-04-12,684
+Mialgia,2020-04-12,462
+Fiebre,2020-04-12,657
+Odinofagia,2020-04-12,311
+Anosmia,2020-04-12,
+Ageusia,2020-04-12,
+Disnea,2020-04-12,365
+Diarrea,2020-04-12,108
+Dolor torácico,2020-04-12,105
+Dolor abdominal,2020-04-12,53
+Taquipnea,2020-04-12,126
+Cianosis,2020-04-12,16
+Postración,2020-04-12,
+Congestión nasal,2020-04-12,
+Cefalea,2020-06-12,8309.0
+Tos,2020-06-12,6813.0
+Mialgia,2020-06-12,5872.0
+Fiebre,2020-06-12,5597.0
+Odinofagia,2020-06-12,4444.0
+Anosmia,2020-06-12,2479.0
+Ageusia,2020-06-12,1856.0
+Disnea,2020-06-12,1455.0
+Diarrea,2020-06-12,1100.0
+Dolor torácico,2020-06-12,849.0
+Dolor abdominal,2020-06-12,626.0
+Taquipnea,2020-06-12,531.0
+Cianosis,2020-06-12,287.0
+Postración,2020-06-12,
+Congestión nasal,2020-06-12,
+Cefalea,2020-06-15,9291.0
+Tos,2020-06-15,7580.0
+Mialgia,2020-06-15,6586.0
+Fiebre,2020-06-15,6285.0
+Odinofagia,2020-06-15,4981.0
+Anosmia,2020-06-15,2757.0
+Ageusia,2020-06-15,2057.0
+Disnea,2020-06-15,1629.0
+Diarrea,2020-06-15,1230.0
+Dolor torácico,2020-06-15,934.0
+Dolor abdominal,2020-06-15,720.0
+Taquipnea,2020-06-15,600.0
+Cianosis,2020-06-15,316.0
+Postración,2020-06-15,
+Congestión nasal,2020-06-15,
+Cefalea,2020-06-19,5653.0
+Tos,2020-06-19,10501.0
+Mialgia,2020-06-19,7109.0
+Fiebre,2020-06-19,8523.0
+Odinofagia,2020-06-19,3054.0
+Anosmia,2020-06-19,828.0
+Ageusia,2020-06-19,697.0
+Disnea,2020-06-19,7109.0
+Diarrea,2020-06-19,1415.0
+Dolor torácico,2020-06-19,1864.0
+Dolor abdominal,2020-06-19,1058.0
+Taquipnea,2020-06-19,2379.0
+Cianosis,2020-06-19,380.0
+Postración,2020-06-19,
+Congestión nasal,2020-06-19,
+Cefalea,2020-06-23,5990.0
+Tos,2020-06-23,11214.0
+Mialgia,2020-06-23,7600.0
+Fiebre,2020-06-23,9084.0
+Odinofagia,2020-06-23,3215.0
+Anosmia,2020-06-23,877.0
+Ageusia,2020-06-23,744.0
+Disnea,2020-06-23,8192.0
+Diarrea,2020-06-23,1512.0
+Dolor torácico,2020-06-23,2006.0
+Dolor abdominal,2020-06-23,1160.0
+Taquipnea,2020-06-23,2547.0
+Cianosis,2020-06-23,409.0
+Postración,2020-06-23,
+Congestión nasal,2020-06-23,
+Cefalea,2020-06-28,6409.0
+Tos,2020-06-28,12027.0
+Mialgia,2020-06-28,8966.0
+Fiebre,2020-06-28,9708.0
+Odinofagia,2020-06-28,3366.0
+Anosmia,2020-06-28,971.0
+Ageusia,2020-06-28,821.0
+Disnea,2020-06-28,8151.0
+Diarrea,2020-06-28,1635.0
+Dolor torácico,2020-06-28,2181.0
+Dolor abdominal,2020-06-28,1274.0
+Taquipnea,2020-06-28,2767.0
+Cianosis,2020-06-28,442.0
+Postración,2020-06-28,
+Congestión nasal,2020-06-28,
+Cefalea,2020-07-01,6597.0
+Tos,2020-07-01,12411.0
+Mialgia,2020-07-01,8424.0
+Fiebre,2020-07-01,9997.0
+Odinofagia,2020-07-01,3438.0
+Anosmia,2020-07-01,1013.0
+Ageusia,2020-07-01,846.0
+Disnea,2020-07-01,9321.0
+Diarrea,2020-07-01,1694.0
+Dolor torácico,2020-07-01,2283.0
+Dolor abdominal,2020-07-01,1317.0
+Taquipnea,2020-07-01,2895.0
+Cianosis,2020-07-01,475.0
+Postración,2020-07-01,
+Congestión nasal,2020-07-01,
+Cefalea,2020-07-05,6887.0
+Tos,2020-07-05,9797.0
+Mialgia,2020-07-05,12981.0
+Fiebre,2020-07-05,10408.0
+Odinofagia,2020-07-05,3561.0
+Anosmia,2020-07-05,1057.0
+Ageusia,2020-07-05,893.0
+Disnea,2020-07-05,9797.0
+Diarrea,2020-07-05,1785.0
+Dolor torácico,2020-07-05,2416.0
+Dolor abdominal,2020-07-05,1398.0
+Taquipnea,2020-07-05,3040.0
+Cianosis,2020-07-05,502.0
+Postración,2020-07-05,
+Congestión nasal,2020-07-05,
+Cefalea,2020-07-10,7250.0
+Tos,2020-07-10,13639.0
+Mialgia,2020-07-10,9238.0
+Fiebre,2020-07-10,10879.0
+Odinofagia,2020-07-10,3725.0
+Anosmia,2020-07-10,1130.0
+Ageusia,2020-07-10,951.0
+Disnea,2020-07-10,10352.0
+Diarrea,2020-07-10,1889.0
+Dolor torácico,2020-07-10,2595.0
+Dolor abdominal,2020-07-10,1499.0
+Taquipnea,2020-07-10,3225.0
+Cianosis,2020-07-10,532.0
+Postración,2020-07-10,
+Congestión nasal,2020-07-10,
+Cefalea,2020-07-13,7522.0
+Tos,2020-07-13,14112.0
+Mialgia,2020-07-13,9582.0
+Fiebre,2020-07-13,11213.0
+Odinofagia,2020-07-13,3851.0
+Anosmia,2020-07-13,1193.0
+Ageusia,2020-07-13,1008.0
+Disnea,2020-07-13,10761.0
+Diarrea,2020-07-13,1988.0
+Dolor torácico,2020-07-13,2674.0
+Dolor abdominal,2020-07-13,1567.0
+Taquipnea,2020-07-13,3335.0
+Cianosis,2020-07-13,555.0
+Postración,2020-07-13,
+Congestión nasal,2020-07-13,

@@ -1,0 +1,64 @@
+ID,Nombre,Estado,Alcance,Fecha de Inicio,Fecha de Término,Código CUT Comuna,Detalle,Superficie en m2,Perímetro en m
+4,El Bosque,Activa,Comuna completa,2020-04-16 22:00:00,,13105,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,20622713.2285156,18788.8707505944
+26,Quinta Normal,Activa,Comuna completa,2020-04-23 22:00:00,,13126,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,17014139.1523438,21243.797016579
+27,Pedro Aguirre Cerda,Activa,Comuna completa,2020-04-23 22:00:00,,13121,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,12625146.265625,15651.7189634514
+32,Estación Central,Activa,Comuna completa,2020-04-30 22:00:00,,13106,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,20682566.4921875,22689.2274650058
+33,Independencia Extensión a Total,Activa,Comuna completa,2020-04-30 22:00:00,,13108,Aplicada a la totalidad de la comuna. Extendida desde el sector sur a la comuna completa. Se incorpora a cuarentena del Gran Santiago,10582914.0429688,13699.9128448926
+37,Recoleta,Activa,Comuna completa,2020-05-05 22:00:00,,13127,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,22715640.5234375,22324.0747754827
+38,Cerrillos,Activa,Comuna completa,2020-05-05 22:00:00,,13102,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,24198337.6621094,25227.7694753954
+40,Santiago Extensión a Total,Activa,Comuna completa,2020-05-05 22:00:00,,13101,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,33329909.4960938,29265.4336900164
+41,Cerro Navia,Activa,Comuna completa,2020-05-08 22:00:00,,13103,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,15975127.9863281,19974.248542906
+42,Conchalí,Activa,Comuna completa,2020-05-08 22:00:00,,13104,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,15979605.8085938,16815.7934099155
+43,Lo Espejo,Activa,Comuna completa,2020-05-08 22:00:00,,13116,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,11886614.0898438,13762.0736724309
+44,La Cisterna,Activa,Comuna completa,2020-05-08 22:00:00,,13109,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,14401733.5859375,15356.421889586
+45,La Florida,Activa,Comuna completa,2020-05-08 22:00:00,,13110,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,102214162.755859,59430.2695012662
+46,Peñalolen,Activa,Comuna completa,2020-05-08 22:00:00,,13122,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,77293355.8457031,43926.3659584545
+47,Lo Prado,Activa,Comuna completa,2020-05-08 22:00:00,,13117,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,9448923.36523438,12856.5022905017
+48,Macul,Activa,Comuna completa,2020-05-08 22:00:00,,13118,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,18517268.578125,18417.8115619807
+49,Renca,Activa,Comuna completa,2020-05-08 22:00:00,,13128,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,34181427.8125,34681.9394332968
+50,San Joaquín,Activa,Comuna completa,2020-05-08 22:00:00,,13129,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,14337674.6074219,16946.3826485334
+51,San Miguel,Activa,Comuna completa,2020-05-08 22:00:00,,13130,Aplicada a la totalidad de la comuna. Se incorpora a cuarentena del Gran Santiago,13863805.7050781,16029.8040021794
+52,La Granja,Activa,Comuna completa,2020-05-08 22:00:00,,13111,Aplicada a la totalidad de la comuna. Se incorpora y amplia a extensión total a cuarentena del Gran Santiago,14562829.4550781,16986.3556262322
+53,La Pintana Extensión a Total,Activa,Comuna completa,2020-05-08 22:00:00,,13112,Se amplía a toda la comuna desde su extensión original. Se incorpora y amplia a extensión total a cuarentena del Gran Santiago,44005772.3105469,31961.0278584575
+54,San Ramón Extensión a Total,Activa,Comuna completa,2020-05-08 22:00:00,,13131,Se amplía a toda la comuna desde su extensión original. Se incorpora y amplia a extensión total a cuarentena del Gran Santiago,9061336.23046875,14097.9605564344
+57,Alto Hospicio,Activa,Comuna completa,2020-05-15 22:00:00,,1107,Aplicada a la totalidad de la comuna,655133931.175781,109806.644974769
+58,Iquique,Activa,Comuna completa,2020-05-15 22:00:00,,1101,Aplicada a la totalidad de la comuna,2636677588.45313,473982.696822035
+59,Buin,Activa,Comuna completa,2020-05-15 22:00:00,,13402,Incorporada como parte de la Cuarentena del Gran Santiago y Alrededores a todo el territorio,315447694.376953,106661.453928384
+60,Pudahuel,Activa,Comuna completa,2020-05-15 22:00:00,,13124,Incorporada como parte de la Cuarentena del Gran Santiago y Alrededores a todo el territorio,283948656.376953,86170.5795723086
+62,Lampa,Activa,Comuna completa,2020-05-15 22:00:00,,13302,Incorporada como parte de la Cuarentena del Gran Santiago y Alrededores a todo el territorio,645813313.240234,127669.572849804
+63,Huechuraba,Activa,Comuna completa,2020-05-15 22:00:00,,13107,Incorporada como parte de la Cuarentena del Gran Santiago y Alrededores a todo el territorio,64546615.3515625,39133.1212126811
+68,Maipú,Activa,Comuna completa,2020-05-15 22:00:00,,13119,Incorporada como parte de la Cuarentena del Gran Santiago y Alrededores a todo el territorio,198564410.646484,73872.6258555928
+70,Padre Hurtado,Activa,Comuna completa,2020-05-15 22:00:00,,13604,Incorporada como parte de la Cuarentena del Gran Santiago y Alrededores a todo el territorio,117050934.980469,61176.6714847736
+71,Puente Alto Extensión a Total,Activa,Comuna completa,2020-05-15 22:00:00,,13201,Incorporada como parte de la Cuarentena del Gran Santiago y Alrededores a todo el territorio,127531919.042969,59827.7119649119
+72,Quilicura Extensión a Total,Activa,Comuna completa,2020-05-15 22:00:00,,13125,Incorporada como parte de la Cuarentena del Gran Santiago y Alrededores a todo el territorio,82391551.0488281,41916.2560534792
+73,San Bernardo Extensión a Total,Activa,Comuna completa,2020-05-15 22:00:00,,13401,Incorporada como parte de la Cuarentena del Gran Santiago y Alrededores a todo el territorio,221119742.068359,103398.390100715
+74,Providencia Re-ingreso total,Activa,Comuna completa,2020-05-15 22:00:00,,13123,Incorporada como parte de la Cuarentena del Gran Santiago y Alrededores a todo el territorio,20727385.15625,19429.199340283
+77,Calama,Activa,Comuna completa,2020-06-12 22:00:00,,2201,Aplicada a la totalidad de la comuna,18278946180.584,705723.838225614
+78,Viña del Mar,Activa,Comuna completa,2020-06-12 22:00:00,,5109,Aplicada a la totalidad de la comuna,171902397.738281,77155.8975512116
+79,Valparaíso,Activa,Comuna completa,2020-06-12 22:00:00,,5101,Aplicada a la totalidad de la comuna,451856991.105469,181454.80909984
+80,Pozo Almonte (Radio Urbano),Activa,Área Urbana Completa,2020-06-12 22:00:00,,1401,Aplicable solo a la zona urbana,2353288.24023438,15497.7725966503
+81,San José de Maipo (Área Urbana),Activa,Área Urbana Completa,2020-06-12 22:00:00,,13203,Aplicado solo al sector urbano entre el Estero El Almendro y el Estero San José,6372625.9296875,11333.7834773233
+82,Melipilla (Área Urbana),Activa,Área Urbana Completa,2020-06-12 22:00:00,,13501,Aplicable solo al centro urbano,14510740.2324219,62602.7048087187
+83,Curacaví (Área Urbana),Activa,Área Urbana Completa,2020-06-12 22:00:00,,13503,Aplicable solo al Centro Urbano,5514002.38476563,32755.134785762
+85,Peñaflor,Activa,Comuna completa,2020-06-12 22:00:00,,13605,Aplicada a la totalidad de la comuna,100223974.589844,46938.4971703687
+86,Los Andes,Activa,Comuna completa,2020-06-19 22:00:00,,5301,Aplicada a la totalidad de la comuna,1757629850.23828,274656.693977739
+88,Rancagua,Activa,Comuna completa,2020-06-19 22:00:00,,6101,Aplicada a la totalidad de la comuna,382965176.1875,98686.2315737476
+89,Machalí,Activa,Comuna completa,2020-06-19 22:00:00,,6108,Aplicada a la totalidad de la comuna,3813690684.08398,346676.467677033
+90,Curicó (Área Urbana),Activa,Área Urbana Completa,2020-06-19 22:00:00,,7301,Aplicado solamente a la zona urbana,32069120.2851563,29295.2099611109
+91,Antofagasta Re-ingreso Ciudad,Activa,Área Urbana Completa,2020-06-23 22:00:00,,2101,Re-ingreso total por incremento de casos activos. Alcance urbano acorde a Res.Ex. MINSAL 479/2020 ,43532156.4257813,134484.167871907
+92,Mejillones Re-ingreso urbano,Activa,Área Urbana Completa,2020-06-23 22:00:00,,2102,Re-ingreso total por incremento de casos activos. Alcance solo a área urbana acorde a Res.Ex. MINSAL 479/2020 ,7391563.77148438,35405.5396978546
+93,Tocopilla,Activa,Área Urbana Completa,2020-06-23 22:00:00,,2301,Aplicada solo a la extensión urbana de la comuna conforme a Res.Ex. MINSAL 479/2020,5375471.3125,31002.8841710106
+94,Quillota,Activa,Comuna completa,2020-06-26 22:00:00,,5501,Aplicada a la totalidad de la comuna,428867542.921875,107405.438297665
+95,Graneros,Activa,Comuna completa,2020-06-26 22:00:00,,6106,Aplicada a la totalidad de la comuna,164012497.722656,67214.9793907091
+96,Calera de Tango,Activa,Comuna completa,2020-06-26 22:00:00,,13403,Aplicada a la totalidad de la comuna,105783369.845703,54220.9928795631
+97,El Monte,Activa,Comuna completa,2020-06-26 22:00:00,,13602,Aplicada a la totalidad de la comuna,166257629.505859,59682.0347698489
+98,Talagante,Activa,Comuna completa,2020-06-26 22:00:00,,13601,Aplicada a la totalidad de la comuna,183307247.0,81310.1022562255
+99,Arica Re-Ingreso urbano,Activa,Área Urbana Completa,2020-07-14 22:00:00,,15101,Corresponde al Re-ingreso del Radio Urbano de la Ciudad de Arica,28050418.8046875,48722.3000133759
+100,Rengo,Activa,Comuna completa,2020-07-14 22:00:00,,6115,Aplicada a la totalidad de la comuna de forma indefinida,861965138.042969,201937.442359106
+101,Copiapó,Activa,Comuna completa,2020-07-27 22:00:00,,3101,Aplicada a la totalidad de la comuna de forma indefinida,22625013803.1387,1406885.40093402
+102,La Calera,Activa,Comuna completa,2020-07-27 22:00:00,,5502,Aplicada a la totalidad de la comuna,84139819.6757813,67738.4324019953
+103,La Cruz,Activa,Comuna completa,2020-07-27 22:00:00,,5504,Aplicada a la totalidad de la comuna de forma indefinida,110927483.525391,57942.953712829
+104,Isla de Maipo,Activa,Comuna completa,2020-07-27 22:00:00,,13603,Aplicada a la totalidad de la comuna de forma indefinida,274564570.140625,96196.0438396968
+105,Puerto Montt,Activa,Comuna completa,2020-07-27 22:00:00,,10101,Aplicada a la totalidad de la comuna de forma indefinida,2985602290.16016,527212.90641785
+106,La Serena,Activa,Comuna completa,2020-07-27 22:00:00,,4101,Aplicada a la totalidad de la comuna de forma indefinida,2532736006.82422,316863.885559652
+107,Coquimbo,Activa,Comuna completa,2020-07-27 22:00:00,,4102,Aplicada a la totalidad de la comuna de forma indefinida,1914337722.45117,350322.520496572

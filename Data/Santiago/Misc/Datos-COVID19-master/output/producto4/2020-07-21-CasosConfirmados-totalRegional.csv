@@ -1,0 +1,19 @@
+Region,Casos totales acumulados,Casos nuevos totales,Casos nuevos con sintomas,Casos nuevos sin sintomas*,Casos nuevos sin notificar,Casos activos confirmados,Fallecidos totales,Casos confirmados recuperados,Casos probables acumulados ,Casos activos probables 
+Arica y Parinacota,3291,103,93,8,2,828,40,2425,154,54
+Tarapacá,7820,54,45,5,4,655,144,7026,217,27
+Antofagasta,13309,80,67,10,3,1323,293,11692,586,77
+Atacama,1958,63,45,16,2,414,9,1535,37,13
+Coquimbo,4988,71,60,5,6,846,54,4092,553,85
+Valparaíso,15914,146,132,10,4,1438,427,14045,4683,391
+Metropolitana,247622,685,507,127,51,8860,7096,231618,29073,1239
+O'Higgins,9559,90,81,9,0,1181,183,8209,1694,171
+Maule,8009,125,108,17,0,1025,131,6863,632,60
+Ñuble,3273,23,21,2,0,416,54,2805,762,145
+Biobío,9696,105,97,6,2,1316,100,8285,1146,96
+Araucania,3774,27,21,3,3,170,71,3538,51,12
+Los Ríos,847,4,3,1,0,84,13,751,13,3
+Los Lagos,2860,74,60,10,4,524,32,2306,205,31
+Aysén,69,0,0,0,0,17,1,52,0,0
+Magallanes,1612,3,2,1,0,82,28,1503,22,10
+Se desconoce región de origen,82,3,0,0,3,11,1,71,0,0
+Total,334683,1656,1342,230,84,19190,8677,306816,39828,2414

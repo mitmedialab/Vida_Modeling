@@ -1,0 +1,22 @@
+name: Upload std prod
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  Upload_std_products_and_readme:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --exclude '*' --include '*_std.csv' --include '*bulk/*.csv' --include '*/SemanasEpidemiologicas.csv' --include '*/README.md'
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.COVID_AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.COVID_AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'us-east-1'   # optional: defaults to us-east-1
+        SOURCE_DIR: 'output'      # optional: defaults to entire repository
+        DEST_DIR: 'std_prods'

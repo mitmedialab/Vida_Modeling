@@ -1,0 +1,44 @@
+Nombre estacion,Region,Codigo region,Comuna,Codigo comuna,UTM_Este,UTM_Norte,Key
+Arica,Arica y Parinacota,15,Arica,15101,363747,7955831,F01
+Alto_Hospicio,Tarapacá,1,Alto Hospicio,1107,385118,7755989,117
+Antofagasta,Antofagasta,2,Antofagasta,2101,358874,7387875,237
+Copiapó,Atacama,3,Copiapo,3101,369133,6971887,332
+Huasco,Atacama,3,Huasco,3304,282682,6848727,333
+Coquimbo,Coquimbo,4,Coquimbo,4102,274609,6682171,426
+La_Serena,Coquimbo,4,Coquimbo,4102,282211,6687896,425
+Concón,Valparaíso,5,Concon,5103,264737,6354228,560
+Valparaíso,Valparaíso,5,Valparaiso,5101,255891,6340183,550
+Viña_del_Mar,Valparaíso,5,Vina del mar,5109,261803,6343569,529
+Independencia,Metropolitana,13,Independencia,13108,346488,6300681,D11
+La_Florida,Metropolitana,13,La Florida,13110,352504,6290304,D12
+Las_Condes,Metropolitana,13,Las Condes,13114,358305,6305906,D13
+Santiago,Metropolitana,13,Santiago,13101,345673,6296019,D14
+Pudahuel,Metropolitana,13,Pudahuel,13124,337311,6298809,D15
+Cerrillos,Metropolitana,13,Cerrillos,13102,340277,6292747,D01
+El_Bosque,Metropolitana,13,El Bosque,13105,345313,6286825,D17
+Cerro_Navia,Metropolitana,13,Cerro Navia,13103,338984,6299360,D18
+Puente_Alto,Metropolitana,13,Puente Alto,13201,352049,6282013,D27
+Talagante,Metropolitana,13,Talagante,13601,318945,6272298,D28
+Quilicura,Metropolitana,13,Quilicura,13125,337356,6306788,D30
+Rancagua_I,O’Higgins,6,Rancagua,6101,342015,6218523,609
+Rancagua_II,O’Higgins,6,Rancagua,6101,339842,6220527,615
+Rengo,O’Higgins,6,Rengo,6115,329665,6192542,611
+San_Fernando,O’Higgins,6,San Fernando,6301,317503,6171746,612
+Curicó,Maule,7,Curico,7301,296068,6127456,709
+Talca_La_Florida,Maule,7,Talca,7101,256889,6075395,703
+UC_Maule,Maule,7,Talca,7101,262216,6075477,710
+U_Talca,Maule,7,Talca,7101,260878,6078683,711
+Linares,Maule,7,Talca,7101,265805,6031030,713
+Nielol,Araucanía,9,Temuco,9101,710378,5710745,905
+Las_Encinas,Araucanía,9,Temuco,9101,706767,5708420,901
+Padre_las_Casas,Araucanía,9,Padre las Casas,9112,708625,5706593,902
+Valdivia,Los Ríos,14,Valdivia,14101,651593,5589460,E03
+Valdivia_II,Los Ríos,14,Valdivia,14101,649060,5592376,E08
+Osorno,Los Lagos,10,Osorno,10301,659217,5505665,A01
+Mirasol,Los Lagos,10,Puerto Montt,10101,669585,5406017,A07
+Alerce,Los Lagos,10,Puerto Montt,10101,675585,5414803,A08
+Coyhaique_I,Aysén,11,Coyhaique,11101,729281,4948421,B03
+Coyhaique_II,Aysén,11,Coyhaique,11101,730152,4948488,B04
+Punta_Arenas,Magallanes,12,Punta Arenas,12101,371526,4108390,C05
+La_Unión,Los Ríos,14,La Union,14201,663446,5538659,E04
+Vialidad,Aysén,11,Aysen,11201,680977,4969547,B05

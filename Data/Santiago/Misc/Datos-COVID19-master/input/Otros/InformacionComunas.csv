@@ -1,0 +1,347 @@
+Region,Codigo region,Comuna,Codigo comuna,Superficie_km2,Poblacion
+Tarapacá,1,Iquique,1101,2289.53,223463.0
+Tarapacá,1,Alto Hospicio,1107,571.19,129999.0
+Tarapacá,1,Pozo Almonte,1401,13765.8,17395.0
+Tarapacá,1,Camiña,1402,2199.83,1375.0
+Tarapacá,1,Colchane,1403,4007.84,1583.0
+Tarapacá,1,Huara,1404,10472.5,3000.0
+Tarapacá,1,Pica,1405,8982.12,5958.0
+Antofagasta,2,Antofagasta,2101,30683.5,425725.0
+Antofagasta,2,Mejillones,2102,3576.07,14776.0
+Antofagasta,2,Sierra Gorda,2103,12883.0,1746.0
+Antofagasta,2,Taltal,2104,20412.1,13657.0
+Antofagasta,2,Calama,2201,15533.2,190336.0
+Antofagasta,2,Ollagüe,2202,2925.54,287.0
+Antofagasta,2,San Pedro de Atacama,2203,23602.2,10434.0
+Antofagasta,2,Tocopilla,2301,4120.83,28079.0
+Antofagasta,2,María Elena,2302,12330.1,6814.0
+Atacama,3,Copiapó,3101,17782.9,171766.0
+Atacama,3,Caldera,3102,3680.47,19426.0
+Atacama,3,Tierra Amarilla,3103,11251.1,14312.0
+Atacama,3,Chañaral,3201,5758.87,13164.0
+Atacama,3,Diego de Almagro,3202,18969.2,14358.0
+Atacama,3,Vallenar,3301,7226.86,57009.0
+Atacama,3,Alto del Carmen,3302,6155.88,5729.0
+Atacama,3,Freirina,3303,3222.55,7681.0
+Atacama,3,Huasco,3304,1602.25,11264.0
+Coquimbo,4,La Serena,4101,1901.22,249656.0
+Coquimbo,4,Coquimbo,4102,1431.77,256735.0
+Coquimbo,4,Andacollo,4103,514.2,11791.0
+Coquimbo,4,La Higuera,4104,4165.74,4450.0
+Coquimbo,4,Paiguano,4105,1513.94,4675.0
+Coquimbo,4,Vicuña,4106,7579.04,29741.0
+Coquimbo,4,Illapel,4201,2629.06,32801.0
+Coquimbo,4,Canela,4202,2196.81,9546.0
+Coquimbo,4,Los Vilos,4203,1859.5,23374.0
+Coquimbo,4,Salamanca,4204,3445.76,29110.0
+Coquimbo,4,Ovalle,4301,3546.21,121269.0
+Coquimbo,4,Combarbalá,4302,2296.04,13884.0
+Coquimbo,4,Monte Patria,4303,4211.35,32527.0
+Coquimbo,4,Punitaqui,4304,1092.42,12165.0
+Coquimbo,4,Río Hurtado,4305,2204.5,4372.0
+Valparaíso,5,Valparaíso,5101,310.87,315732.0
+Valparaíso,5,Casablanca,5102,954.63,29170.0
+Valparaíso,5,Juan Fernández,5104,110.55,1033.0
+Valparaíso,5,Puchuncaví,5105,299.68,20071.0
+Valparaíso,5,Quintero,5107,146.06,36135.0
+Valparaíso,5,Isla de Pascua,5201,163.83,8277.0
+Valparaíso,5,Los Andes,5301,1233.75,68093.0
+Valparaíso,5,Calle Larga,5302,321.23,16482.0
+Valparaíso,5,Rinconada,5303,122.82,11263.0
+Valparaíso,5,San Esteban,5304,1374.51,20643.0
+Valparaíso,5,La Ligua,5401,1163.02,37739.0
+Valparaíso,5,Cabildo,5402,1455.15,20663.0
+Valparaíso,5,Papudo,5403,167.12,6201.0
+Valparaíso,5,Petorca,5404,1515.74,10558.0
+Valparaíso,5,Zapallar,5405,288.27,7994.0
+Valparaíso,5,Calera,5502,59.97,53591.0
+Valparaíso,5,Hijuelas,5503,268.15,19099.0
+Valparaíso,5,La Cruz,5504,77.86,25321.0
+Valparaíso,5,Nogales,5506,405.49,23490.0
+Valparaíso,5,San Antonio,5601,400.04,96761.0
+Valparaíso,5,Algarrobo,5602,176.3,15174.0
+Valparaíso,5,Cartagena,5603,243.86,25357.0
+Valparaíso,5,El Quisco,5604,51.64,17742.0
+Valparaíso,5,El Tabo,5605,99.58,14338.0
+Valparaíso,5,Santo Domingo,5606,536.92,11934.0
+Valparaíso,5,San Felipe,5701,186.82,83494.0
+Valparaíso,5,Catemu,5702,361.85,15213.0
+Valparaíso,5,Llaillay,5703,348.83,26533.0
+Valparaíso,5,Panquehue,5704,121.26,7633.0
+Valparaíso,5,Putaendo,5705,1451.23,17645.0
+Valparaíso,5,Santa María,5706,165.71,16367.0
+Valparaíso,5,Quilpué,5801,536.48,167085.0
+Valparaíso,5,Olmué,5803,231.32,19266.0
+Libertador General Bernardo O'Higgins,6,Rancagua,6101,260.94,265211.0
+Libertador General Bernardo O'Higgins,6,Codegua,6102,284.17,14096.0
+Libertador General Bernardo O'Higgins,6,Coinco,6103,97.34,7831.0
+Libertador General Bernardo O'Higgins,6,Coltauco,6104,222.02,21263.0
+Libertador General Bernardo O'Higgins,6,Doñihue,6105,80.47,22700.0
+Libertador General Bernardo O'Higgins,6,Graneros,6106,112.45,36504.0
+Libertador General Bernardo O'Higgins,6,Las Cabras,6107,751.28,26749.0
+Libertador General Bernardo O'Higgins,6,Machalí,6108,2593.18,59913.0
+Libertador General Bernardo O'Higgins,6,Malloa,6109,220.65,14163.0
+Libertador General Bernardo O'Higgins,6,Mostazal,6110,525.72,27462.0
+Libertador General Bernardo O'Higgins,6,Olivar,6111,44.22,14624.0
+Libertador General Bernardo O'Higgins,6,Peumo,6112,155.15,14952.0
+Libertador General Bernardo O'Higgins,6,Pichidegua,6113,319.47,20743.0
+Libertador General Bernardo O'Higgins,6,Quinta de Tilcoco,6114,86.75,13877.0
+Libertador General Bernardo O'Higgins,6,Rengo,6115,585.04,63710.0
+Libertador General Bernardo O'Higgins,6,Requínoa,6116,677.18,30371.0
+Libertador General Bernardo O'Higgins,6,San Vicente,6117,484.76,50617.0
+Libertador General Bernardo O'Higgins,6,Pichilemu,6201,715.89,17882.0
+Libertador General Bernardo O'Higgins,6,La Estrella,6202,431.44,3114.0
+Libertador General Bernardo O'Higgins,6,Litueche,6203,613.64,6765.0
+Libertador General Bernardo O'Higgins,6,Marchihue,6204,657.65,7632.0
+Libertador General Bernardo O'Higgins,6,Navidad,6205,301.4,6904.0
+Libertador General Bernardo O'Higgins,6,Paredones,6206,572.51,6349.0
+Libertador General Bernardo O'Higgins,6,San Fernando,6301,2321.18,78642.0
+Libertador General Bernardo O'Higgins,6,Chépica,6302,477.33,15925.0
+Libertador General Bernardo O'Higgins,6,Chimbarongo,6303,509.03,37696.0
+Libertador General Bernardo O'Higgins,6,Lolol,6304,596.92,7289.0
+Libertador General Bernardo O'Higgins,6,Nancagua,6305,151.21,19141.0
+Libertador General Bernardo O'Higgins,6,Palmilla,6306,235.79,13299.0
+Libertador General Bernardo O'Higgins,6,Peralillo,6307,283.03,11848.0
+Libertador General Bernardo O'Higgins,6,Placilla,6308,144.4,9164.0
+Libertador General Bernardo O'Higgins,6,Pumanque,6309,441.31,3531.0
+Libertador General Bernardo O'Higgins,6,Santa Cruz,6310,393.53,41096.0
+Maule,7,Talca,7101,232.05,236724.0
+Maule,7,Constitución,7102,1339.62,50348.0
+Maule,7,Curepto,7103,1070.81,9426.0
+Maule,7,Empedrado,7104,565.5,4206.0
+Maule,7,Maule,7105,243.05,60000.0
+Maule,7,Pelarco,7106,330.93,9083.0
+Maule,7,Pencahue,7107,956.23,8601.0
+Maule,7,Río Claro,7108,434.71,14753.0
+Maule,7,San Clemente,7109,4500.58,46292.0
+Maule,7,San Rafael,7110,261.97,9959.0
+Maule,7,Cauquenes,7201,2126.16,44143.0
+Maule,7,Chanco,7202,528.01,9331.0
+Maule,7,Pelluhue,7203,369.56,8092.0
+Maule,7,Curicó,7301,1334.33,163626.0
+Maule,7,Hualañé,7302,629.36,10222.0
+Maule,7,Licantén,7303,273.01,6989.0
+Maule,7,Molina,7304,1516.82,49800.0
+Maule,7,Rauco,7305,306.73,11248.0
+Maule,7,Romeral,7306,1602.87,16170.0
+Maule,7,Sagrada Familia,7307,554.88,19469.0
+Maule,7,Teno,7308,618.52,30850.0
+Maule,7,Vichuquén,7309,452.0,4381.0
+Maule,7,Linares,7401,1466.62,101073.0
+Maule,7,Colbún,7402,2926.88,22565.0
+Maule,7,Longaví,7403,1453.37,32810.0
+Maule,7,Parral,7404,1638.81,44544.0
+Maule,7,Retiro,7405,827.42,21071.0
+Maule,7,San Javier,7406,1312.57,49451.0
+Maule,7,Villa Alegre,7407,188.67,17512.0
+Maule,7,Yerbas Buenas,7408,259.03,19200.0
+Biobío,8,Coronel,8102,281.27,125829.0
+Biobío,8,Florida,8104,605.89,11841.0
+Biobío,8,Lota,8106,114.69,45750.0
+Biobío,8,Santa Juana,8109,777.43,14779.0
+Biobío,8,Talcahuano,8110,92.55,158345.0
+Biobío,8,Lebu,8201,564.34,27100.0
+Biobío,8,Arauco,8202,959.62,38679.0
+Biobío,8,Cañete,8203,1088.57,37003.0
+Biobío,8,Contulmo,8204,638.95,6330.0
+Biobío,8,Curanilahue,8205,1002.76,33892.0
+Biobío,8,Los Alamos,8206,600.38,22524.0
+Biobío,8,Tirúa,8207,626.54,11019.0
+Biobío,8,Los Angeles,8301,1749.02,218515.0
+Biobío,8,Antuco,8302,1957.43,4306.0
+Biobío,8,Cabrero,8303,657.03,30725.0
+Biobío,8,Laja,8304,345.18,23873.0
+Biobío,8,Mulchén,8305,1922.24,31041.0
+Biobío,8,Nacimiento,8306,904.52,27944.0
+Biobío,8,Negrete,8307,155.33,10429.0
+Biobío,8,Quilaco,8308,1124.64,4179.0
+Biobío,8,Quilleco,8309,1118.68,10032.0
+Biobío,8,San Rosendo,8310,94.45,3611.0
+Biobío,8,Santa Bárbara,8311,1251.76,14592.0
+Biobío,8,Tucapel,8312,914.28,15205.0
+Biobío,8,Yumbel,8313,727.1,22132.0
+Biobío,8,Alto Biobío,8314,2124.77,6775.0
+La Araucanía,9,Temuco,9101,466.89,302931.0
+La Araucanía,9,Carahue,9102,1336.81,25486.0
+La Araucanía,9,Cunco,9103,1890.34,18055.0
+La Araucanía,9,Curarrehue,9104,1167.15,7802.0
+La Araucanía,9,Freire,9105,870.08,25446.0
+La Araucanía,9,Galvarino,9106,567.86,12633.0
+La Araucanía,9,Gorbea,9107,690.43,15148.0
+La Araucanía,9,Lautaro,9108,906.29,40746.0
+La Araucanía,9,Loncoche,9109,971.27,24739.0
+La Araucanía,9,Melipeuco,9110,1107.69,6265.0
+La Araucanía,9,Nueva Imperial,9111,730.73,33777.0
+La Araucanía,9,Padre Las Casas,9112,463.83,82110.0
+La Araucanía,9,Perquenco,9113,331.03,7223.0
+La Araucanía,9,Pitrufquén,9114,583.25,26096.0
+La Araucanía,9,Pucón,9115,1248.06,29782.0
+La Araucanía,9,Saavedra,9116,398.35,12793.0
+La Araucanía,9,Teodoro Schmidt,9117,656.17,15786.0
+La Araucanía,9,Toltén,9118,851.8,10055.0
+La Araucanía,9,Vilcún,9119,1416.48,30766.0
+La Araucanía,9,Villarrica,9120,1292.66,59103.0
+La Araucanía,9,Cholchol,9121,427.14,12341.0
+La Araucanía,9,Angol,9201,1197.32,56058.0
+La Araucanía,9,Collipulli,9202,1306.73,26148.0
+La Araucanía,9,Curacautín,9203,1658.66,18178.0
+La Araucanía,9,Ercilla,9204,498.91,8458.0
+La Araucanía,9,Lonquimay,9205,3928.81,11049.0
+La Araucanía,9,Los Sauces,9206,848.07,7517.0
+La Araucanía,9,Lumaco,9207,1109.98,10050.0
+La Araucanía,9,Purén,9208,463.96,12188.0
+La Araucanía,9,Renaico,9209,265.49,10833.0
+La Araucanía,9,Traiguén,9210,897.07,19314.0
+La Araucanía,9,Victoria,9211,1262.59,35467.0
+Los Lagos,10,Puerto Montt,10101,1670.35,269398.0
+Los Lagos,10,Calbuco,10102,587.38,36744.0
+Los Lagos,10,Cochamó,10103,3981.1,4006.0
+Los Lagos,10,Fresia,10104,1275.62,12656.0
+Los Lagos,10,Frutillar,10105,828.25,20223.0
+Los Lagos,10,Los Muermos,10106,1229.62,17817.0
+Los Lagos,10,Llanquihue,10107,433.02,18621.0
+Los Lagos,10,Maullín,10108,822.95,14894.0
+Los Lagos,10,Puerto Varas,10109,4028.8,48620.0
+Los Lagos,10,Castro,10201,471.38,47607.0
+Los Lagos,10,Ancud,10202,1754.07,42458.0
+Los Lagos,10,Chonchi,10203,1361.08,16013.0
+Los Lagos,10,Curaco de Vélez,10204,79.85,4066.0
+Los Lagos,10,Dalcahue,10205,1229.21,15069.0
+Los Lagos,10,Puqueldón,10206,96.58,4201.0
+Los Lagos,10,Queilén,10207,330.88,5543.0
+Los Lagos,10,Quellón,10208,3360.3,29309.0
+Los Lagos,10,Quemchi,10209,438.3,8783.0
+Los Lagos,10,Quinchao,10210,158.73,8298.0
+Los Lagos,10,Osorno,10301,954.57,173410.0
+Los Lagos,10,Puerto Octay,10302,1793.82,9192.0
+Los Lagos,10,Purranque,10303,1451.58,21080.0
+Los Lagos,10,Puyehue,10304,1635.28,11787.0
+Los Lagos,10,Río Negro,10305,1281.02,14275.0
+Los Lagos,10,San Juan de la Costa,10306,1506.02,7639.0
+Los Lagos,10,San Pablo,10307,629.94,10553.0
+Los Lagos,10,Chaitén,10401,8256.01,5020.0
+Los Lagos,10,Futaleufú,10402,1236.22,2806.0
+Los Lagos,10,Hualaihué,10403,2834.53,9525.0
+Los Lagos,10,Palena,10404,2656.01,1827.0
+Aysén del General Carlos Ibáñez del Campo,11,Coihaique,11101,7280.46,61210.0
+Aysén del General Carlos Ibáñez del Campo,11,Lago Verde,11102,5440.42,920.0
+Aysén del General Carlos Ibáñez del Campo,11,Aysen,11201,29879.3,25002.0
+Aysén del General Carlos Ibáñez del Campo,11,Cisnes,11202,15418.3,5828.0
+Aysén del General Carlos Ibáñez del Campo,11,Guaitecas,11203,631.38,1599.0
+Aysén del General Carlos Ibáñez del Campo,11,Cochrane,11301,8629.21,3685.0
+Aysén del General Carlos Ibáñez del Campo,11,O'Higgins,11302,7781.76,661.0
+Aysén del General Carlos Ibáñez del Campo,11,Tortel,11303,19977.3,572.0
+Aysén del General Carlos Ibáñez del Campo,11,Chile Chico,11401,5739.01,5121.0
+Aysén del General Carlos Ibáñez del Campo,11,Río Ibáñez,11402,6019.41,2699.0
+Magallanes y de la Antártica Chilena,12,Punta Arenas,12101,17771.4,141984.0
+Magallanes y de la Antártica Chilena,12,Laguna Blanca,12102,3567.32,264.0
+Magallanes y de la Antártica Chilena,12,San Gregorio,12104,6706.74,681.0
+Magallanes y de la Antártica Chilena,12,Cabo de Hornos,12201,15720.3,1983.0
+Magallanes y de la Antártica Chilena,12,Antártica,12202,1250257.6,137.0
+Magallanes y de la Antártica Chilena,12,Porvenir,12301,7457.05,7323.0
+Magallanes y de la Antártica Chilena,12,Primavera,12302,3946.46,694.0
+Magallanes y de la Antártica Chilena,12,Timaukel,12303,11011.8,282.0
+Magallanes y de la Antártica Chilena,12,Natales,12401,48938.2,23782.0
+Magallanes y de la Antártica Chilena,12,Torres del Paine,12402,6215.16,1021.0
+Metropolitana de Santiago,13,Lo Barnechea,13115,1023.61,124076.0
+Metropolitana de Santiago,13,Pirque,13202,444.71,30433.0
+Metropolitana de Santiago,13,San José de Maipo,13203,4982.37,18644.0
+Metropolitana de Santiago,13,Paine,13404,677.52,82766.0
+Metropolitana de Santiago,13,Melipilla,13501,1352.65,141612.0
+Metropolitana de Santiago,13,Alhué,13502,844.43,7405.0
+Metropolitana de Santiago,13,Curacaví,13503,694.1,36430.0
+Metropolitana de Santiago,13,María Pinto,13504,394.3,14926.0
+Metropolitana de Santiago,13,San Pedro,13505,793.11,11953.0
+Metropolitana de Santiago,13,Isla de Maipo,13603,189.62,40171.0
+Los Ríos,14,Valdivia,14101,1018.32,176774.0
+Los Ríos,14,Corral,14102,729.42,5447.0
+Los Ríos,14,Lanco,14103,533.04,17652.0
+Los Ríos,14,Los Lagos,14104,1788.82,20518.0
+Los Ríos,14,Máfil,14105,579.15,7389.0
+Los Ríos,14,Mariquina,14106,1319.22,23250.0
+Los Ríos,14,Paillaco,14107,901.57,20798.0
+Los Ríos,14,Panguipulli,14108,3297.47,35991.0
+Los Ríos,14,La Unión,14201,2131.24,39538.0
+Los Ríos,14,Futrono,14202,2090.51,15261.0
+Los Ríos,14,Lago Ranco,14203,1763.14,10292.0
+Los Ríos,14,Río Bueno,14204,2172.28,32925.0
+Arica y Parinacota,15,Arica,15101,4799.66,247552.0
+Arica y Parinacota,15,Camarones,15102,3922.22,1233.0
+Arica y Parinacota,15,Putre,15201,5885.18,2515.0
+Arica y Parinacota,15,General Lagos,15202,2257.22,810.0
+Ñuble,16,Chillán,16101,477.58,198624.0
+Ñuble,16,Bulnes,16102,426.4,22607.0
+Ñuble,16,El Carmen,16104,666.04,12334.0
+Ñuble,16,Pemuco,16105,563.26,8639.0
+Ñuble,16,Pinto,16106,1102.7,11880.0
+Ñuble,16,Quillón,16107,406.52,18777.0
+Ñuble,16,San Ignacio,16108,363.25,16624.0
+Ñuble,16,Yungay,16109,824.72,18596.0
+Ñuble,16,Quirihue,16201,589.85,12192.0
+Ñuble,16,Cobquecura,16202,569.21,5275.0
+Ñuble,16,Coelemu,16203,342.32,16845.0
+Ñuble,16,Ninhue,16204,403.19,5414.0
+Ñuble,16,Portezuelo,16205,289.24,4940.0
+Ñuble,16,Ranquil,16206,247.42,6261.0
+Ñuble,16,Treguaco,16207,313.0,5696.0
+Ñuble,16,San Carlos,16301,877.81,56252.0
+Ñuble,16,Coihueco,16302,1771.65,28375.0
+Ñuble,16,Ñiquén,16303,492.34,11567.0
+Ñuble,16,San Fabián,16304,1541.59,4654.0
+Ñuble,16,San Nicolás,16305,565.94,12172.0
+Metropolitana de Santiago,13,Tiltil,13303,654.65,21477.0
+Metropolitana de Santiago,13,Colina,13301,970.86,180353.0
+Metropolitana de Santiago,13,Lampa,13302,449.52,126898.0
+Metropolitana de Santiago,13,Quilicura,13125,57.32,254694.0
+Metropolitana de Santiago,13,Pudahuel,13124,198.57,253139.0
+Metropolitana de Santiago,13,Cerro Navia,13103,11.05,142465.0
+Metropolitana de Santiago,13,Renca,13128,23.68,160847.0
+Metropolitana de Santiago,13,Quinta Normal,13126,11.8,136368.0
+Metropolitana de Santiago,13,Huechuraba,13107,44.98,112528.0
+Metropolitana de Santiago,13,Conchalí,13104,10.94,139195.0
+Metropolitana de Santiago,13,Independencia,13108,7.35,142065.0
+Metropolitana de Santiago,13,Recoleta,13127,15.61,190075.0
+Metropolitana de Santiago,13,Vitacura,13132,28.59,96774.0
+Metropolitana de Santiago,13,Providencia,13123,14.44,157749.0
+Metropolitana de Santiago,13,Las Condes,13114,99.06,330759.0
+Metropolitana de Santiago,13,Ñuñoa,13120,16.89,250192.0
+Metropolitana de Santiago,13,Santiago,13101,23.18,503147.0
+Metropolitana de Santiago,13,Lo Prado,13117,6.54,104403.0
+Metropolitana de Santiago,13,Estación Central,13106,14.37,206792.0
+Metropolitana de Santiago,13,Maipú,13119,136.8,578605.0
+Metropolitana de Santiago,13,Pedro Aguirre Cerda,13121,8.73,107803.0
+Metropolitana de Santiago,13,Cerrillos,13102,16.82,88956.0
+Metropolitana de Santiago,13,San Miguel,13130,9.63,133059.0
+Metropolitana de Santiago,13,San Joaquín,13129,9.94,103485.0
+Metropolitana de Santiago,13,Macul,13118,12.81,134635.0
+Metropolitana de Santiago,13,La Reina,13113,23.39,100252.0
+Metropolitana de Santiago,13,Peñalolén,13122,53.89,266798.0
+Metropolitana de Santiago,13,Lo Espejo,13116,8.25,103865.0
+Metropolitana de Santiago,13,La Cisterna,13109,10.01,100434.0
+Metropolitana de Santiago,13,La Granja,13111,10.05,122557.0
+Metropolitana de Santiago,13,San Ramón,13131,6.31,86510.0
+Metropolitana de Santiago,13,La Florida,13110,71.04,402433.0
+Metropolitana de Santiago,13,El Bosque,13105,14.25,172000.0
+Metropolitana de Santiago,13,La Pintana,13112,30.47,189335.0
+Metropolitana de Santiago,13,Calera de Tango,13403,73.22,28525.0
+Metropolitana de Santiago,13,Puente Alto,13201,88.39,645909.0
+Metropolitana de Santiago,13,Talagante,13601,125.23,81838.0
+Metropolitana de Santiago,13,Buin,13402,217.03,109641.0
+Metropolitana de Santiago,13,San Bernardo,13401,153.85,334836.0
+Metropolitana de Santiago,13,Padre Hurtado,13604,80.64,74188.0
+Metropolitana de Santiago,13,Peñaflor,13605,69.42,101058.0
+Metropolitana de Santiago,13,El Monte,13602,115.97,40014.0
+Valparaíso,5,Limache,5802,294.88,49931.0
+Valparaíso,5,Viña del Mar,5109,120.56,361371.0
+Valparaíso,5,Villa Alemana,5804,96.37,139310.0
+Valparaíso,5,Quillota,5501,301.24,97572.0
+Ñuble,16,Chillán Viejo,16103,262.61,33827.0
+Biobío,8,Tomé,8111,494.32,58729.0
+Biobío,8,Penco,8107,108.38,49865.0
+Biobío,8,Concepción,8101,220.2,238092.0
+Biobío,8,Chiguayante,8103,71.4,91180.0
+Biobío,8,Hualpén,8112,53.77,97273.0
+Biobío,8,San Pedro de la Paz,8108,112.86,145906.0
+Biobío,8,Hualqui,8105,535.85,26201.0
+Magallanes y de la Antártica Chilena,12,Río Verde,12103,9147.57,211.0
+Valparaíso,5,Concón,5103,76.93,45889.0

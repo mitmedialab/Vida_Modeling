@@ -1,0 +1,2862 @@
+codigo_region,region_residencia,fecha,positividad
+NA,0,2020-03-20,NA
+NA,0,2020-03-21,NA
+NA,0,2020-03-22,NA
+NA,0,2020-03-23,NA
+NA,0,2020-03-24,NA
+NA,0,2020-03-25,NA
+NA,0,2020-03-26,0.01581934829982281
+NA,0,2020-03-27,0.01532421709005222
+NA,0,2020-03-28,0.01412373689797539
+NA,0,2020-03-29,0.003919655265322329
+NA,0,2020-03-30,0.003919655265322329
+NA,0,2020-03-31,0.0028844585779517285
+NA,0,2020-04-01,NA
+NA,0,2020-04-02,NA
+NA,0,2020-04-03,NA
+NA,0,2020-04-04,NA
+NA,0,2020-04-05,NA
+NA,0,2020-04-06,NA
+NA,0,2020-04-07,NA
+NA,0,2020-04-08,0
+NA,0,2020-04-09,0
+NA,0,2020-04-10,0.047619047619047616
+NA,0,2020-04-11,0.047619047619047616
+NA,0,2020-04-12,0.047619047619047616
+NA,0,2020-04-13,0.047619047619047616
+NA,0,2020-04-14,0.047619047619047616
+NA,0,2020-04-15,0.11904761904761904
+NA,0,2020-04-16,0.11904761904761904
+NA,0,2020-04-17,0.07142857142857142
+NA,0,2020-04-18,0.07142857142857142
+NA,0,2020-04-19,0.07142857142857142
+NA,0,2020-04-20,0.07575757575757576
+NA,0,2020-04-21,NA
+NA,0,2020-04-22,NA
+NA,0,2020-04-23,NA
+NA,0,2020-04-24,NA
+NA,0,2020-04-25,NA
+NA,0,2020-04-26,NA
+NA,0,2020-04-27,NA
+NA,0,2020-04-28,NA
+NA,0,2020-04-29,NA
+NA,0,2020-04-30,NA
+NA,0,2020-05-01,NA
+NA,0,2020-05-02,NA
+NA,0,2020-05-03,NA
+NA,0,2020-05-04,0.3246753246753247
+NA,0,2020-05-05,0.32539319976505904
+NA,0,2020-05-06,0.2569827369883991
+NA,0,2020-05-07,0.19074897075463285
+NA,0,2020-05-08,0.2600130400187021
+NA,0,2020-05-09,0.35525113525679736
+NA,0,2020-05-10,0.30763208763774974
+NA,0,2020-05-11,0.3503037017379353
+NA,0,2020-05-12,0.4924429695053438
+NA,0,2020-05-13,0.6322820037105752
+NA,0,2020-05-14,0.6985157699443414
+NA,0,2020-05-15,0.7244897959183674
+NA,0,2020-05-16,0.5816326530612245
+NA,0,2020-05-17,NA
+NA,0,2020-05-18,NA
+NA,0,2020-05-19,NA
+NA,0,2020-05-20,NA
+NA,0,2020-05-21,NA
+NA,0,2020-05-22,NA
+NA,0,2020-05-23,NA
+NA,0,2020-05-24,0.4166666666666667
+NA,0,2020-05-25,0.30952380952380953
+NA,0,2020-05-26,0.42857142857142855
+NA,0,2020-05-27,NA
+NA,0,2020-05-28,NA
+NA,0,2020-05-29,NA
+NA,0,2020-05-30,NA
+NA,0,2020-05-31,NA
+NA,0,2020-06-01,NA
+NA,0,2020-06-02,NA
+NA,0,2020-06-03,NA
+NA,0,2020-06-04,NA
+NA,0,2020-06-05,NA
+NA,0,2020-06-06,NA
+NA,0,2020-06-07,NA
+NA,0,2020-06-08,NA
+NA,0,2020-06-09,NA
+NA,0,2020-06-10,NA
+NA,0,2020-06-11,NA
+NA,0,2020-06-12,NA
+NA,0,2020-06-13,NA
+NA,0,2020-06-14,NA
+NA,0,2020-06-15,NA
+NA,0,2020-06-16,NA
+NA,0,2020-06-17,NA
+NA,0,2020-06-18,NA
+NA,0,2020-06-19,NA
+NA,0,2020-06-20,NA
+NA,0,2020-06-21,NA
+NA,0,2020-06-22,NA
+NA,0,2020-06-23,NA
+NA,0,2020-06-24,NA
+NA,0,2020-06-25,NA
+NA,0,2020-06-26,NA
+NA,0,2020-06-27,NA
+NA,0,2020-06-28,NA
+NA,0,2020-06-29,NA
+NA,0,2020-06-30,NA
+NA,0,2020-07-01,NA
+NA,0,2020-07-02,NA
+NA,0,2020-07-03,NA
+NA,0,2020-07-04,NA
+NA,0,2020-07-05,NA
+NA,0,2020-07-06,NA
+NA,0,2020-07-07,NA
+NA,0,2020-07-08,NA
+NA,0,2020-07-09,NA
+NA,0,2020-07-10,NA
+NA,0,2020-07-11,NA
+NA,0,2020-07-12,NA
+NA,0,2020-07-13,NA
+NA,0,2020-07-14,NA
+NA,0,2020-07-15,NA
+NA,0,2020-07-16,NA
+NA,0,2020-07-17,NA
+NA,0,2020-07-18,NA
+NA,0,2020-07-19,NA
+NA,0,2020-07-20,NA
+NA,0,2020-07-21,NA
+NA,0,2020-07-22,NA
+NA,0,2020-07-23,NA
+NA,0,2020-07-24,NA
+NA,0,2020-07-25,NA
+NA,0,2020-07-26,NA
+NA,0,2020-07-27,NA
+NA,0,2020-07-28,NA
+NA,0,2020-07-29,NA
+NA,0,2020-07-30,NA
+NA,0,2020-07-31,NA
+NA,0,2020-08-01,NA
+NA,0,2020-08-02,NA
+NA,0,2020-08-03,0
+NA,0,2020-08-04,0
+NA,0,2020-08-05,0
+NA,0,2020-08-06,0
+NA,0,2020-08-07,0.001152073732718894
+NA,0,2020-08-08,0.010080645161290322
+NA,0,2020-08-09,0.010080645161290322
+NA,0,2020-08-10,0.010080645161290322
+NA,0,2020-08-11,NA
+NA,0,2020-08-12,NA
+NA,0,2020-08-13,NA
+NA,0,2020-08-14,NA
+NA,0,2020-08-15,NA
+NA,0,2020-08-16,NA
+NA,0,2020-08-17,NA
+NA,0,2020-08-18,0.09173669467787114
+NA,0,2020-08-19,0.09173669467787114
+NA,0,2020-08-20,0.09173669467787114
+NA,0,2020-08-21,0.09173669467787114
+NA,0,2020-08-22,0.08333333333333333
+NA,0,2020-08-23,0.011904761904761904
+NA,0,2020-08-24,0
+NA,0,2020-08-25,0.01948051948051948
+2,Región de Antofagasta,2020-03-02,NA
+2,Región de Antofagasta,2020-03-03,NA
+2,Región de Antofagasta,2020-03-04,NA
+2,Región de Antofagasta,2020-03-05,NA
+2,Región de Antofagasta,2020-03-06,NA
+2,Región de Antofagasta,2020-03-07,NA
+2,Región de Antofagasta,2020-03-08,NA
+2,Región de Antofagasta,2020-03-09,NA
+2,Región de Antofagasta,2020-03-10,NA
+2,Región de Antofagasta,2020-03-11,NA
+2,Región de Antofagasta,2020-03-12,NA
+2,Región de Antofagasta,2020-03-13,NA
+2,Región de Antofagasta,2020-03-14,NA
+2,Región de Antofagasta,2020-03-15,0.08571428571428572
+2,Región de Antofagasta,2020-03-16,0.08571428571428572
+2,Región de Antofagasta,2020-03-17,0.08571428571428572
+2,Región de Antofagasta,2020-03-18,0.10303030303030303
+2,Región de Antofagasta,2020-03-19,0.02483481430849852
+2,Región de Antofagasta,2020-03-20,0.04326799403200082
+2,Región de Antofagasta,2020-03-21,0.05150975227375906
+2,Región de Antofagasta,2020-03-22,0.07373197449598129
+2,Región de Antofagasta,2020-03-23,0.07623824016014169
+2,Región de Antofagasta,2020-03-24,0.07941284333474487
+2,Región de Antofagasta,2020-03-25,0.07638254030444183
+2,Región de Antofagasta,2020-03-26,0.08139507163276263
+2,Región de Antofagasta,2020-03-27,0.0788349077822762
+2,Región de Antofagasta,2020-03-28,0.08158216052952895
+2,Región de Antofagasta,2020-03-29,0.06828850973587816
+2,Región de Antofagasta,2020-03-30,0.07082426087844045
+2,Región de Antofagasta,2020-03-31,0.0771734672276468
+2,Región de Antofagasta,2020-04-01,0.07517653942426737
+2,Región de Antofagasta,2020-04-02,0.06405963826046679
+2,Región de Antofagasta,2020-04-03,0.05132633981288263
+2,Región de Antofagasta,2020-04-04,0.048966283761551405
+2,Región de Antofagasta,2020-04-05,0.04003771233297998
+2,Región de Antofagasta,2020-04-06,0.04415320468376645
+2,Región de Antofagasta,2020-04-07,0.04615013248714586
+2,Región de Antofagasta,2020-04-08,0.05095536309882809
+2,Región de Antofagasta,2020-04-09,0.06371759897345154
+2,Región de Antofagasta,2020-04-10,0.0803581013282396
+2,Región de Antofagasta,2020-04-11,0.07783415249556594
+2,Región de Antofagasta,2020-04-12,0.0924861671475806
+2,Región de Antofagasta,2020-04-13,0.09863478043905102
+2,Región de Antofagasta,2020-04-14,0.11432492746560358
+2,Región de Antofagasta,2020-04-15,0.10492979830999538
+2,Región de Antofagasta,2020-04-16,0.10503884956408481
+2,Región de Antofagasta,2020-04-17,0.1054676890173145
+2,Región de Antofagasta,2020-04-18,0.11773002985108391
+2,Región de Antofagasta,2020-04-19,0.134824046945101
+2,Región de Antofagasta,2020-04-20,0.1443386636025748
+2,Región de Antofagasta,2020-04-21,0.1397758628725267
+2,Región de Antofagasta,2020-04-22,0.1477325522335307
+2,Región de Antofagasta,2020-04-23,0.15795371182707524
+2,Región de Antofagasta,2020-04-24,0.1604959753449485
+2,Región de Antofagasta,2020-04-25,0.16513104971367906
+2,Región de Antofagasta,2020-04-26,0.1493467099069929
+2,Región de Antofagasta,2020-04-27,0.1418225755410904
+2,Región de Antofagasta,2020-04-28,0.1434800474729526
+2,Región de Antofagasta,2020-04-29,0.15407929642836593
+2,Región de Antofagasta,2020-04-30,0.15821729952303293
+2,Región de Antofagasta,2020-05-01,0.15778740534313876
+2,Región de Antofagasta,2020-05-02,0.1590779499529641
+2,Región de Antofagasta,2020-05-03,0.17985095189116956
+2,Región de Antofagasta,2020-05-04,0.1891111237073952
+2,Región de Antofagasta,2020-05-05,0.20575794910422057
+2,Región de Antofagasta,2020-05-06,0.2025800459263174
+2,Región de Antofagasta,2020-05-07,0.20117148403917395
+2,Región de Antofagasta,2020-05-08,0.19771797999604726
+2,Región de Antofagasta,2020-05-09,0.20663303412884118
+2,Región de Antofagasta,2020-05-10,0.20212175593335246
+2,Región de Antofagasta,2020-05-11,0.21363405315993542
+2,Región de Antofagasta,2020-05-12,0.21192814002545085
+2,Región de Antofagasta,2020-05-13,0.2174733040812532
+2,Región de Antofagasta,2020-05-14,0.21889660098741615
+2,Región de Antofagasta,2020-05-15,0.22267676008280765
+2,Región de Antofagasta,2020-05-16,0.21519397265446666
+2,Región de Antofagasta,2020-05-17,0.21731121631306372
+2,Región de Antofagasta,2020-05-18,0.20071453516774101
+2,Región de Antofagasta,2020-05-19,0.1960384791444557
+2,Región de Antofagasta,2020-05-20,0.2125291739666175
+2,Región de Antofagasta,2020-05-21,0.2289823439285594
+2,Región de Antofagasta,2020-05-22,0.2345951298700834
+2,Región de Antofagasta,2020-05-23,0.23530609450300163
+2,Región de Antofagasta,2020-05-24,0.2309354651323723
+2,Región de Antofagasta,2020-05-25,0.23709773291588113
+2,Región de Antofagasta,2020-05-26,0.2429684975918583
+2,Región de Antofagasta,2020-05-27,0.22502199198357528
+2,Región de Antofagasta,2020-05-28,0.2041065110989533
+2,Región de Antofagasta,2020-05-29,0.20230066798876237
+2,Región de Antofagasta,2020-05-30,0.23101817778650102
+2,Región de Antofagasta,2020-05-31,0.2458911971438253
+2,Región de Antofagasta,2020-06-01,0.2630429400295833
+2,Región de Antofagasta,2020-06-02,0.2742298069734861
+2,Región de Antofagasta,2020-06-03,0.29402689428559836
+2,Región de Antofagasta,2020-06-04,0.31116817589249846
+2,Región de Antofagasta,2020-06-05,0.3274177757719916
+2,Región de Antofagasta,2020-06-06,0.33757019116852993
+2,Región de Antofagasta,2020-06-07,0.3612714241621801
+2,Región de Antofagasta,2020-06-08,0.3608368953954303
+2,Región de Antofagasta,2020-06-09,0.35932322087260066
+2,Región de Antofagasta,2020-06-10,0.37537768297336194
+2,Región de Antofagasta,2020-06-11,0.3811057227688516
+2,Región de Antofagasta,2020-06-12,0.3937232252858726
+2,Región de Antofagasta,2020-06-13,0.39108991389680087
+2,Región de Antofagasta,2020-06-14,0.39645627691501323
+2,Región de Antofagasta,2020-06-15,0.4161633592905592
+2,Región de Antofagasta,2020-06-16,0.4264386007885081
+2,Región de Antofagasta,2020-06-17,0.4198397658742507
+2,Región de Antofagasta,2020-06-18,0.4254288210572734
+2,Región de Antofagasta,2020-06-19,0.4237304877650122
+2,Región de Antofagasta,2020-06-20,0.41518580277567646
+2,Región de Antofagasta,2020-06-21,0.403734634419386
+2,Región de Antofagasta,2020-06-22,0.3832256610070804
+2,Región de Antofagasta,2020-06-23,0.3814311198508371
+2,Región de Antofagasta,2020-06-24,0.37373859633673523
+2,Región de Antofagasta,2020-06-25,0.3717505608979956
+2,Región de Antofagasta,2020-06-26,0.3695487230106738
+2,Región de Antofagasta,2020-06-27,0.36437607277888623
+2,Región de Antofagasta,2020-06-28,0.3482673394832654
+2,Región de Antofagasta,2020-06-29,0.3596828365955095
+2,Región de Antofagasta,2020-06-30,0.34723676720463725
+2,Región de Antofagasta,2020-07-01,0.3457666343986237
+2,Región de Antofagasta,2020-07-02,0.34265866442963727
+2,Región de Antofagasta,2020-07-03,0.3332994753473397
+2,Región de Antofagasta,2020-07-04,0.31633984869568765
+2,Región de Antofagasta,2020-07-05,0.31192633444561163
+2,Región de Antofagasta,2020-07-06,0.30042082859474933
+2,Región de Antofagasta,2020-07-07,0.29685750910515574
+2,Región de Antofagasta,2020-07-08,0.2876687271824871
+2,Región de Antofagasta,2020-07-09,0.2846500652550136
+2,Región de Antofagasta,2020-07-10,0.27645489248416877
+2,Región de Antofagasta,2020-07-11,0.2767807802819857
+2,Región de Antofagasta,2020-07-12,0.2670705830717885
+2,Región de Antofagasta,2020-07-13,0.25863066384502664
+2,Región de Antofagasta,2020-07-14,0.25280626781041293
+2,Región de Antofagasta,2020-07-15,0.2504907140011581
+2,Región de Antofagasta,2020-07-16,0.23926915390975131
+2,Región de Antofagasta,2020-07-17,0.23622688125964664
+2,Región de Antofagasta,2020-07-18,0.2266680956090771
+2,Región de Antofagasta,2020-07-19,0.23499405877374996
+2,Región de Antofagasta,2020-07-20,0.23320771513013563
+2,Región de Antofagasta,2020-07-21,0.22365731516558957
+2,Región de Antofagasta,2020-07-22,0.2156196020866938
+2,Región de Antofagasta,2020-07-23,0.20673822698207575
+2,Región de Antofagasta,2020-07-24,0.1948560743018995
+2,Región de Antofagasta,2020-07-25,0.18804957124985489
+2,Región de Antofagasta,2020-07-26,0.16810481915546874
+2,Región de Antofagasta,2020-07-27,0.159261351163108
+2,Región de Antofagasta,2020-07-28,0.1586644777983775
+2,Región de Antofagasta,2020-07-29,0.15389391502781471
+2,Región de Antofagasta,2020-07-30,0.14918510257617262
+2,Región de Antofagasta,2020-07-31,0.14814050683076052
+2,Región de Antofagasta,2020-08-01,0.141938425844692
+2,Región de Antofagasta,2020-08-02,0.13094556716275768
+2,Región de Antofagasta,2020-08-03,0.12673588619181095
+2,Región de Antofagasta,2020-08-04,0.11992765082252907
+2,Región de Antofagasta,2020-08-05,0.11995838712358188
+2,Región de Antofagasta,2020-08-06,0.1159247881911273
+2,Región de Antofagasta,2020-08-07,0.11647964051303135
+2,Región de Antofagasta,2020-08-08,0.11331407225839385
+2,Región de Antofagasta,2020-08-09,0.11180679575111734
+2,Región de Antofagasta,2020-08-10,0.11271822982785241
+2,Región de Antofagasta,2020-08-11,0.11041276449731284
+2,Región de Antofagasta,2020-08-12,0.10572013667140134
+2,Región de Antofagasta,2020-08-13,0.10643253428292644
+2,Región de Antofagasta,2020-08-14,0.09668485301012295
+2,Región de Antofagasta,2020-08-15,0.09769845950576819
+2,Región de Antofagasta,2020-08-16,0.10459361297626413
+2,Región de Antofagasta,2020-08-17,0.100614711206132
+2,Región de Antofagasta,2020-08-18,0.09961233867472274
+2,Región de Antofagasta,2020-08-19,0.09677089393684667
+2,Región de Antofagasta,2020-08-20,0.0940320901566617
+2,Región de Antofagasta,2020-08-21,0.09373432801994723
+2,Región de Antofagasta,2020-08-22,0.09172924913263097
+2,Región de Antofagasta,2020-08-23,0.08636665363641081
+2,Región de Antofagasta,2020-08-24,0.08058196288197882
+2,Región de Antofagasta,2020-08-25,0.07802727365648816
+15,Región de Arica y Parinacota,2020-03-16,NA
+15,Región de Arica y Parinacota,2020-03-17,NA
+15,Región de Arica y Parinacota,2020-03-18,NA
+15,Región de Arica y Parinacota,2020-03-19,NA
+15,Región de Arica y Parinacota,2020-03-20,NA
+15,Región de Arica y Parinacota,2020-03-21,NA
+15,Región de Arica y Parinacota,2020-03-22,0.045950286272866916
+15,Región de Arica y Parinacota,2020-03-23,0.02473816506074571
+15,Región de Arica y Parinacota,2020-03-24,0.012794371149738682
+15,Región de Arica y Parinacota,2020-03-25,0.014895211485873137
+15,Región de Arica y Parinacota,2020-03-26,0.014368549208058785
+15,Región de Arica y Parinacota,2020-03-27,0.015035690286158766
+15,Región de Arica y Parinacota,2020-03-28,0.019694075379326468
+15,Región de Arica y Parinacota,2020-03-29,0.02959506547833637
+15,Región de Arica y Parinacota,2020-03-30,0.037058025053972
+15,Región de Arica y Parinacota,2020-03-31,0.04924394971558436
+15,Región de Arica y Parinacota,2020-04-01,0.07479287896470335
+15,Región de Arica y Parinacota,2020-04-02,0.09452077012116593
+15,Región de Arica y Parinacota,2020-04-03,0.09793288312232004
+15,Región de Arica y Parinacota,2020-04-04,0.11708402183867614
+15,Región de Arica y Parinacota,2020-04-05,0.14040562310179247
+15,Región de Arica y Parinacota,2020-04-06,0.14988128046477378
+15,Región de Arica y Parinacota,2020-04-07,0.16551216558718435
+15,Región de Arica y Parinacota,2020-04-08,0.16249293787385205
+15,Región de Arica y Parinacota,2020-04-09,0.15654055692147112
+15,Región de Arica y Parinacota,2020-04-10,0.15974086538493748
+15,Región de Arica y Parinacota,2020-04-11,0.14467769726054486
+15,Región de Arica y Parinacota,2020-04-12,0.1144312963746091
+15,Región de Arica y Parinacota,2020-04-13,0.10346670541001812
+15,Región de Arica y Parinacota,2020-04-14,0.07727622921954193
+15,Región de Arica y Parinacota,2020-04-15,0.06256632226825568
+15,Región de Arica y Parinacota,2020-04-16,0.05695407737029649
+15,Región de Arica y Parinacota,2020-04-17,0.07499919015225139
+15,Región de Arica y Parinacota,2020-04-18,0.0855578537721395
+15,Región de Arica y Parinacota,2020-04-19,0.10267094901023473
+15,Región de Arica y Parinacota,2020-04-20,0.1066477829870687
+15,Región de Arica y Parinacota,2020-04-21,0.13360736407036114
+15,Región de Arica y Parinacota,2020-04-22,0.17360067062993273
+15,Región de Arica y Parinacota,2020-04-23,0.16962023548066643
+15,Región de Arica y Parinacota,2020-04-24,0.150467959185533
+15,Región de Arica y Parinacota,2020-04-25,0.13513119384876765
+15,Región de Arica y Parinacota,2020-04-26,0.12256070512696314
+15,Región de Arica y Parinacota,2020-04-27,0.11523892341493754
+15,Región de Arica y Parinacota,2020-04-28,0.09516099794747793
+15,Región de Arica y Parinacota,2020-04-29,0.08492959614981108
+15,Región de Arica y Parinacota,2020-04-30,0.08438714106190146
+15,Región de Arica y Parinacota,2020-05-01,0.08943453489772203
+15,Región de Arica y Parinacota,2020-05-02,0.08811178357497072
+15,Región de Arica y Parinacota,2020-05-03,0.0987335761516505
+15,Región de Arica y Parinacota,2020-05-04,0.09751243576935217
+15,Región de Arica y Parinacota,2020-05-05,0.09631503583777502
+15,Región de Arica y Parinacota,2020-05-06,0.06155860452961957
+15,Región de Arica y Parinacota,2020-05-07,0.06682360979462484
+15,Región de Arica y Parinacota,2020-05-08,0.06788501399306811
+15,Región de Arica y Parinacota,2020-05-09,0.06890251501056913
+15,Región de Arica y Parinacota,2020-05-10,0.052832318816149325
+15,Región de Arica y Parinacota,2020-05-11,0.05927994003468461
+15,Región de Arica y Parinacota,2020-05-12,0.055121935876680454
+15,Región de Arica y Parinacota,2020-05-13,0.054091931398400114
+15,Región de Arica y Parinacota,2020-05-14,0.05824777555424427
+15,Región de Arica y Parinacota,2020-05-15,0.06057696810082812
+15,Región de Arica y Parinacota,2020-05-16,0.08438649191035194
+15,Región de Arica y Parinacota,2020-05-17,0.10111309101681375
+15,Región de Arica y Parinacota,2020-05-18,0.10797614666035718
+15,Región de Arica y Parinacota,2020-05-19,0.12076735545156599
+15,Región de Arica y Parinacota,2020-05-20,0.13666471110795778
+15,Región de Arica y Parinacota,2020-05-21,0.14520403695065442
+15,Región de Arica y Parinacota,2020-05-22,0.1370871538337713
+15,Región de Arica y Parinacota,2020-05-23,0.13231155560022914
+15,Región de Arica y Parinacota,2020-05-24,0.14037658998105298
+15,Región de Arica y Parinacota,2020-05-25,0.14091771552217852
+15,Región de Arica y Parinacota,2020-05-26,0.13699752398187526
+15,Región de Arica y Parinacota,2020-05-27,0.13040282219335472
+15,Región de Arica y Parinacota,2020-05-28,0.13900635349351523
+15,Región de Arica y Parinacota,2020-05-29,0.14813401828155737
+15,Región de Arica y Parinacota,2020-05-30,0.15519899380447683
+15,Región de Arica y Parinacota,2020-05-31,0.15728187824030243
+15,Región de Arica y Parinacota,2020-06-01,0.16888554694513846
+15,Región de Arica y Parinacota,2020-06-02,0.18156294013153226
+15,Región de Arica y Parinacota,2020-06-03,0.191893594132263
+15,Región de Arica y Parinacota,2020-06-04,0.1873951138891019
+15,Región de Arica y Parinacota,2020-06-05,0.17567004650365714
+15,Región de Arica y Parinacota,2020-06-06,0.1709081417417524
+15,Región de Arica y Parinacota,2020-06-07,0.17866047815032196
+15,Región de Arica y Parinacota,2020-06-08,0.16277924290556195
+15,Región de Arica y Parinacota,2020-06-09,0.1660934698309
+15,Región de Arica y Parinacota,2020-06-10,0.18135716151446998
+15,Región de Arica y Parinacota,2020-06-11,0.1806704565724459
+15,Región de Arica y Parinacota,2020-06-12,0.18815461064363068
+15,Región de Arica y Parinacota,2020-06-13,0.1828233477036721
+15,Región de Arica y Parinacota,2020-06-14,0.19587099795643373
+15,Región de Arica y Parinacota,2020-06-15,0.21397344928898443
+15,Región de Arica y Parinacota,2020-06-16,0.20975612406102087
+15,Región de Arica y Parinacota,2020-06-17,0.18831949591314556
+15,Región de Arica y Parinacota,2020-06-18,0.1870385156847969
+15,Región de Arica y Parinacota,2020-06-19,0.21404825967534938
+15,Región de Arica y Parinacota,2020-06-20,0.22491387376034616
+15,Región de Arica y Parinacota,2020-06-21,0.20338767068652402
+15,Región de Arica y Parinacota,2020-06-22,0.1981834755490697
+15,Región de Arica y Parinacota,2020-06-23,0.19962498748141796
+15,Región de Arica y Parinacota,2020-06-24,0.22792388773330016
+15,Región de Arica y Parinacota,2020-06-25,0.22494905935801415
+15,Región de Arica y Parinacota,2020-06-26,0.21771768934414526
+15,Región de Arica y Parinacota,2020-06-27,0.22551086433151127
+15,Región de Arica y Parinacota,2020-06-28,0.2497703035569369
+15,Región de Arica y Parinacota,2020-06-29,0.2727430204951711
+15,Región de Arica y Parinacota,2020-06-30,0.28472213049408307
+15,Región de Arica y Parinacota,2020-07-01,0.2728609177682212
+15,Región de Arica y Parinacota,2020-07-02,0.27878542804055756
+15,Región de Arica y Parinacota,2020-07-03,0.296328094797884
+15,Región de Arica y Parinacota,2020-07-04,0.284191044855956
+15,Región de Arica y Parinacota,2020-07-05,0.27252923727578104
+15,Región de Arica y Parinacota,2020-07-06,0.27683677642652577
+15,Región de Arica y Parinacota,2020-07-07,0.2698496267683664
+15,Región de Arica y Parinacota,2020-07-08,0.2678594264028422
+15,Región de Arica y Parinacota,2020-07-09,0.2726985042389527
+15,Región de Arica y Parinacota,2020-07-10,0.27373746527791376
+15,Región de Arica y Parinacota,2020-07-11,0.3030454474635938
+15,Región de Arica y Parinacota,2020-07-12,0.3207218093469298
+15,Región de Arica y Parinacota,2020-07-13,0.32142800645992137
+15,Región de Arica y Parinacota,2020-07-14,0.33553081273868784
+15,Región de Arica y Parinacota,2020-07-15,0.3399939887121122
+15,Región de Arica y Parinacota,2020-07-16,0.3495751844799488
+15,Región de Arica y Parinacota,2020-07-17,0.33965762857513176
+15,Región de Arica y Parinacota,2020-07-18,0.31604322816999003
+15,Región de Arica y Parinacota,2020-07-19,0.2855617442378345
+15,Región de Arica y Parinacota,2020-07-20,0.2760337428964528
+15,Región de Arica y Parinacota,2020-07-21,0.2740005038582633
+15,Región de Arica y Parinacota,2020-07-22,0.2821078286360808
+15,Región de Arica y Parinacota,2020-07-23,0.27497197367026416
+15,Región de Arica y Parinacota,2020-07-24,0.27445570807742986
+15,Región de Arica y Parinacota,2020-07-25,0.2833143009573695
+15,Región de Arica y Parinacota,2020-07-26,0.30464035715304366
+15,Región de Arica y Parinacota,2020-07-27,0.29293388644473584
+15,Región de Arica y Parinacota,2020-07-28,0.2816125464943636
+15,Región de Arica y Parinacota,2020-07-29,0.26339502493212447
+15,Región de Arica y Parinacota,2020-07-30,0.24961172882737465
+15,Región de Arica y Parinacota,2020-07-31,0.2277850806854611
+15,Región de Arica y Parinacota,2020-08-01,0.20845427326040197
+15,Región de Arica y Parinacota,2020-08-02,0.1758897135661624
+15,Región de Arica y Parinacota,2020-08-03,0.1691968304632645
+15,Región de Arica y Parinacota,2020-08-04,0.1575203349158012
+15,Región de Arica y Parinacota,2020-08-05,0.16168297807879448
+15,Región de Arica y Parinacota,2020-08-06,0.15866698017687994
+15,Región de Arica y Parinacota,2020-08-07,0.15361987933814256
+15,Región de Arica y Parinacota,2020-08-08,0.15342740231989854
+15,Región de Arica y Parinacota,2020-08-09,0.15595972064169056
+15,Región de Arica y Parinacota,2020-08-10,0.15068413742829606
+15,Región de Arica y Parinacota,2020-08-11,0.15372123994183837
+15,Región de Arica y Parinacota,2020-08-12,0.13860365429595947
+15,Región de Arica y Parinacota,2020-08-13,0.13858127792540678
+15,Región de Arica y Parinacota,2020-08-14,0.1389602295772799
+15,Región de Arica y Parinacota,2020-08-15,0.13588145273879
+15,Región de Arica y Parinacota,2020-08-16,0.13994091941507908
+15,Región de Arica y Parinacota,2020-08-17,0.14362830754182648
+15,Región de Arica y Parinacota,2020-08-18,0.1365346141043882
+15,Región de Arica y Parinacota,2020-08-19,0.14177434426068272
+15,Región de Arica y Parinacota,2020-08-20,0.1331642814669126
+15,Región de Arica y Parinacota,2020-08-21,0.1312839203285828
+15,Región de Arica y Parinacota,2020-08-22,0.12363392008370443
+15,Región de Arica y Parinacota,2020-08-23,0.1326909133323859
+15,Región de Arica y Parinacota,2020-08-24,0.12534052154263484
+15,Región de Arica y Parinacota,2020-08-25,0.12446606117786363
+3,Región de Atacama,2020-03-13,NA
+3,Región de Atacama,2020-03-14,NA
+3,Región de Atacama,2020-03-15,NA
+3,Región de Atacama,2020-03-16,NA
+3,Región de Atacama,2020-03-17,NA
+3,Región de Atacama,2020-03-18,NA
+3,Región de Atacama,2020-03-19,0.19371118012422361
+3,Región de Atacama,2020-03-20,0.050854037267080744
+3,Región de Atacama,2020-03-21,0.01513975155279503
+3,Región de Atacama,2020-03-22,0.01513975155279503
+3,Región de Atacama,2020-03-23,0.01513975155279503
+3,Región de Atacama,2020-03-24,0.01513975155279503
+3,Región de Atacama,2020-03-25,0.006211180124223602
+3,Región de Atacama,2020-03-26,0
+3,Región de Atacama,2020-03-27,0.14285714285714285
+3,Región de Atacama,2020-03-28,0.14285714285714285
+3,Región de Atacama,2020-03-29,0.14285714285714285
+3,Región de Atacama,2020-03-30,0.14285714285714285
+3,Región de Atacama,2020-03-31,0.14965986394557823
+3,Región de Atacama,2020-04-01,0.1606488749345892
+3,Región de Atacama,2020-04-02,0.1892203035060178
+3,Región de Atacama,2020-04-03,0.04636316064887493
+3,Región de Atacama,2020-04-04,0.04636316064887493
+3,Región de Atacama,2020-04-05,0.04636316064887493
+3,Región de Atacama,2020-04-06,0.11779173207744636
+3,Región de Atacama,2020-04-07,NA
+3,Región de Atacama,2020-04-08,NA
+3,Región de Atacama,2020-04-09,NA
+3,Región de Atacama,2020-04-10,NA
+3,Región de Atacama,2020-04-11,NA
+3,Región de Atacama,2020-04-12,NA
+3,Región de Atacama,2020-04-13,NA
+3,Región de Atacama,2020-04-14,NA
+3,Región de Atacama,2020-04-15,NA
+3,Región de Atacama,2020-04-16,NA
+3,Región de Atacama,2020-04-17,NA
+3,Región de Atacama,2020-04-18,NA
+3,Región de Atacama,2020-04-19,0
+3,Región de Atacama,2020-04-20,0.08163265306122448
+3,Región de Atacama,2020-04-21,0.18877551020408162
+3,Región de Atacama,2020-04-22,0.20271279243404677
+3,Región de Atacama,2020-04-23,0.20271279243404677
+3,Región de Atacama,2020-04-24,0.22176041148166584
+3,Región de Atacama,2020-04-25,0.3646175543388087
+3,Región de Atacama,2020-04-26,0.4360461257673801
+3,Región de Atacama,2020-04-27,0.3829849012775842
+3,Región de Atacama,2020-04-28,0.30305292848846854
+3,Región de Atacama,2020-04-29,0.3085961657390229
+3,Región de Atacama,2020-04-30,0.3085961657390229
+3,Región de Atacama,2020-05-01,0.28954854669140384
+3,Región de Atacama,2020-05-02,0.15218590932876647
+3,Región de Atacama,2020-05-03,0.09409067123352838
+3,Región de Atacama,2020-05-04,0.0655192426620998
+3,Región de Atacama,2020-05-05,0.05491965398942143
+3,Región de Atacama,2020-05-06,0.04714873638243825
+3,Región de Atacama,2020-05-07,0.062186330367400657
+3,Región de Atacama,2020-05-08,0.0713048714008353
+3,Región de Atacama,2020-05-09,0.07397363121245226
+3,Región de Atacama,2020-05-10,0.06314656354327933
+3,Región de Atacama,2020-05-11,0.06386806426478005
+3,Región de Atacama,2020-05-12,0.04725676858371693
+3,Región de Atacama,2020-05-13,0.04447573813875205
+3,Región de Atacama,2020-05-14,0.03430827402391952
+3,Región de Atacama,2020-05-15,0.03587064086765443
+3,Región de Atacama,2020-05-16,0.03116359675968866
+3,Región de Atacama,2020-05-17,0.03341923585743302
+3,Región de Atacama,2020-05-18,0.03904694148513865
+3,Región de Atacama,2020-05-19,0.046700002709628444
+3,Región de Atacama,2020-05-20,0.04462857413819987
+3,Región de Atacama,2020-05-21,0.041566762532084474
+3,Región de Atacama,2020-05-22,0.0355543887352137
+3,Región de Atacama,2020-05-23,0.04080896893078524
+3,Región de Atacama,2020-05-24,0.05009858641712404
+3,Región de Atacama,2020-05-25,0.05051629736115077
+3,Región de Atacama,2020-05-26,0.04980768058110542
+3,Región de Atacama,2020-05-27,0.04856851525205245
+3,Región de Atacama,2020-05-28,0.05492346229416043
+3,Región de Atacama,2020-05-29,0.06257019914982223
+3,Región de Atacama,2020-05-30,0.05693159437667773
+3,Región de Atacama,2020-05-31,0.054784834033196075
+3,Región de Atacama,2020-06-01,0.06222008883687193
+3,Región de Atacama,2020-06-02,0.07042715954394264
+3,Región de Atacama,2020-06-03,0.08531837579237327
+3,Región de Atacama,2020-06-04,0.0961424522584027
+3,Región de Atacama,2020-06-05,0.09791168836469563
+3,Región de Atacama,2020-06-06,0.10415626193044732
+3,Región de Atacama,2020-06-07,0.11623481597980428
+3,Región de Atacama,2020-06-08,0.11903944660398379
+3,Región de Atacama,2020-06-09,0.1180686037213762
+3,Región de Atacama,2020-06-10,0.11154117286278882
+3,Región de Atacama,2020-06-11,0.11697385551066135
+3,Región de Atacama,2020-06-12,0.11993480301386238
+3,Región de Atacama,2020-06-13,0.12718117982545657
+3,Región de Atacama,2020-06-14,0.11789510079079685
+3,Región de Atacama,2020-06-15,0.11888906405975054
+3,Región de Atacama,2020-06-16,0.12337314412393702
+3,Región de Atacama,2020-06-17,0.12297095752322279
+3,Región de Atacama,2020-06-18,0.1195459125646315
+3,Región de Atacama,2020-06-19,0.1292243115328688
+3,Región de Atacama,2020-06-20,0.13931871750828165
+3,Región de Atacama,2020-06-21,0.1510402672815818
+3,Región de Atacama,2020-06-22,0.15372469844732506
+3,Región de Atacama,2020-06-23,0.152755241755146
+3,Región de Atacama,2020-06-24,0.1543859249070592
+3,Región de Atacama,2020-06-25,0.15720046925514988
+3,Región de Atacama,2020-06-26,0.14434910688667646
+3,Región de Atacama,2020-06-27,0.13390625897344025
+3,Región de Atacama,2020-06-28,0.23843985323306188
+3,Región de Atacama,2020-06-29,0.2617107000333205
+3,Región de Atacama,2020-06-30,0.26075858559683435
+3,Región de Atacama,2020-07-01,0.26807084865022474
+3,Región de Atacama,2020-07-02,0.2645144893976629
+3,Región de Atacama,2020-07-03,0.2689855224325446
+3,Región de Atacama,2020-07-04,0.27976225911042385
+3,Región de Atacama,2020-07-05,0.1703245081064078
+3,Región de Atacama,2020-07-06,0.15398751176941147
+3,Región de Atacama,2020-07-07,0.15696264042413755
+3,Región de Atacama,2020-07-08,0.14251834919413203
+3,Región de Atacama,2020-07-09,0.15466936582183902
+3,Región de Atacama,2020-07-10,0.15237367046489816
+3,Región de Atacama,2020-07-11,0.13898767090378342
+3,Región de Atacama,2020-07-12,0.12677969521321283
+3,Región de Atacama,2020-07-13,0.11640202690451004
+3,Región de Atacama,2020-07-14,0.1063872210884818
+3,Región de Atacama,2020-07-15,0.10880132232219562
+3,Región de Atacama,2020-07-16,0.1122608590096127
+3,Región de Atacama,2020-07-17,0.10494665464060196
+3,Región de Atacama,2020-07-18,0.10706553497962282
+3,Región de Atacama,2020-07-19,0.1295871560734199
+3,Región de Atacama,2020-07-20,0.1323959020763583
+3,Región de Atacama,2020-07-21,0.1447150001775376
+3,Región de Atacama,2020-07-22,0.1653208211984399
+3,Región de Atacama,2020-07-23,0.14561356591138785
+3,Región de Atacama,2020-07-24,0.14431488569515757
+3,Región de Atacama,2020-07-25,0.14284804482805197
+3,Región de Atacama,2020-07-26,0.15693813682339935
+3,Región de Atacama,2020-07-27,0.159818532032932
+3,Región de Atacama,2020-07-28,0.15472836454257965
+3,Región de Atacama,2020-07-29,0.14584749604321368
+3,Región de Atacama,2020-07-30,0.14845878256300743
+3,Región de Atacama,2020-07-31,0.16106352086477174
+3,Región de Atacama,2020-08-01,0.1623806901289825
+3,Región de Atacama,2020-08-02,0.14844526521274737
+3,Región de Atacama,2020-08-03,0.15437477354996038
+3,Región de Atacama,2020-08-04,0.17204371485715605
+3,Región de Atacama,2020-08-05,0.1747296773274774
+3,Región de Atacama,2020-08-06,0.1937153656498228
+3,Región de Atacama,2020-08-07,0.19933090643978219
+3,Región de Atacama,2020-08-08,0.22100761176548342
+3,Región de Atacama,2020-08-09,0.21897375588763993
+3,Región de Atacama,2020-08-10,0.21105748914784378
+3,Región de Atacama,2020-08-11,0.19939373894122162
+3,Región de Atacama,2020-08-12,0.19798785222681095
+3,Región de Atacama,2020-08-13,0.1773932336344343
+3,Región de Atacama,2020-08-14,0.17153028935633066
+3,Región de Atacama,2020-08-15,0.1514389502776498
+3,Región de Atacama,2020-08-16,0.13495056715509798
+3,Región de Atacama,2020-08-17,0.1312268077900657
+3,Región de Atacama,2020-08-18,0.12332677602050095
+3,Región de Atacama,2020-08-19,0.11565846151678352
+3,Región de Atacama,2020-08-20,0.12108731852902488
+3,Región de Atacama,2020-08-21,0.11203916999877586
+3,Región de Atacama,2020-08-22,0.10986416782377369
+3,Región de Atacama,2020-08-23,0.12299591955734913
+3,Región de Atacama,2020-08-24,0.12074440419710668
+3,Región de Atacama,2020-08-25,0.12356395306928714
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-03-19,NA
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-03-20,NA
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-03-21,NA
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-03-22,NA
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-03-23,NA
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-03-24,NA
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-03-25,0.07976190476190476
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-03-26,0.0619047619047619
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-03-27,0.13333333333333333
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-03-28,0.11904761904761904
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-03-29,0.11904761904761904
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-03-30,NA
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-03-31,NA
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-01,NA
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-02,NA
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-03,NA
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-04,NA
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-05,NA
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-06,0.017042606516290727
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-07,0.017042606516290727
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-08,0.009523809523809523
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-09,0.009523809523809523
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-10,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-11,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-12,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-13,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-14,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-15,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-16,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-17,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-18,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-19,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-20,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-21,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-22,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-23,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-24,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-25,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-26,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-27,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-28,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-29,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-04-30,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-01,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-02,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-03,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-04,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-05,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-06,0.004081632653061224
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-07,0.004081632653061224
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-08,0.004081632653061224
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-09,0.004081632653061224
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-10,0.004081632653061224
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-11,0.006246134817563389
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-12,0.008009803247898486
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-13,0.003928170594837262
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-14,0.003928170594837262
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-15,0.003928170594837262
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-16,0.003928170594837262
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-17,0.003928170594837262
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-18,0.001763668430335097
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-19,0
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-20,0.004329004329004329
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-21,0.004329004329004329
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-22,0.010043290043290043
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-23,0.010043290043290043
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-24,0.0279004329004329
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-25,0.028730997684486056
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-26,0.03153211813266533
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-27,0.029335309965707906
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-28,0.03143615030184236
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-29,0.02806378496226391
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-30,0.02806378496226391
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-05-31,0.012061929674694334
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-01,0.011231364890641178
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-02,0.010238562706476372
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-03,0.008106366544429464
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-04,0.00600552620829501
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-05,0.004622378604441058
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-06,0.004622378604441058
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-07,0.002767091034867774
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-08,0.004286847873773549
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-09,0.002478529609759083
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-10,0.004220689888504728
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-11,0.006204816872631712
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-12,0.007967132537152553
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-13,0.007967132537152553
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-14,0.007967132537152553
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-15,0.006447375698246779
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-16,0.006447375698246779
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-17,0.0075623582766439915
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-18,0.0055782312925170075
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-19,0.002857142857142857
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-20,0.002857142857142857
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-21,0.002857142857142857
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-22,0.002857142857142857
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-23,0.006103896103896104
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-24,0.012175324675324676
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-25,0.02186055469953775
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-26,0.024639876545007457
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-27,0.024639876545007457
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-28,0.027745466607119258
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-29,0.03220975232140497
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-06-30,0.03010585621750887
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-01,0.022357922333211346
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-02,0.01660454027754349
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-03,0.01597344614421127
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-04,0.01597344614421127
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-05,0.012867856082099468
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-06,0.00912144545754814
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-07,0.007978588314690997
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-08,0.009743458870564364
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-09,0.014740182330590577
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-10,0.014233990743247835
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-11,0.02263735208778565
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-12,0.02263735208778565
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-13,0.02293988516131657
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-14,0.030162999126003568
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-15,0.027217491025856293
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-16,0.018288919597284865
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-17,0.016646883472490118
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-18,0.008243522127952305
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-19,0.008243522127952305
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-20,0.0072231139646869984
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-21,0.001124859392575928
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-22,0.001124859392575928
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-23,0.0033924330887210525
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-24,0.0033924330887210525
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-25,0.012321004517292481
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-26,0.019123725605727854
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-27,0.021089649590000464
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-28,0.02133841657105091
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-29,0.024224419457053795
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-30,0.025358206305126356
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-07-31,0.025358206305126356
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-01,0.016429634876554928
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-02,0.009626913788119555
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-03,0.009180746642752723
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-04,0.007807120269126348
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-05,0.005854824199183219
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-06,0.01111147231297419
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-07,0.012131880476239497
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-08,0.012131880476239497
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-09,0.012131880476239497
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-10,0.010612123637333722
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-11,0.010612123637333722
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-12,0.010684453038577787
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-13,0.0035302037790653695
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-14,0.0033452175038535307
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-15,0.0033452175038535307
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-16,0.0033452175038535307
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-17,0.0033452175038535307
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-18,0.004351253721157354
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-19,0.005787219945855973
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-20,0.004283460547359732
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-21,0.004199918358554385
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-22,0.017186931345567372
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-23,0.031764190820786034
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-24,0.031764190820786034
+11,Región de Aysén del General Carlos Ibáñez del Campo,2020-08-25,0.0360006185615425
+4,Región de Coquimbo,2020-03-16,NA
+4,Región de Coquimbo,2020-03-17,NA
+4,Región de Coquimbo,2020-03-18,NA
+4,Región de Coquimbo,2020-03-19,NA
+4,Región de Coquimbo,2020-03-20,NA
+4,Región de Coquimbo,2020-03-21,NA
+4,Región de Coquimbo,2020-03-22,0.0740135774002769
+4,Región de Coquimbo,2020-03-23,0.043961996328287664
+4,Región de Coquimbo,2020-03-24,0.06044551281180415
+4,Región de Coquimbo,2020-03-25,0.06571051807680942
+4,Región de Coquimbo,2020-03-26,0.05915667702819485
+4,Región de Coquimbo,2020-03-27,0.08132416471292392
+4,Región de Coquimbo,2020-03-28,0.0723955932843525
+4,Región de Coquimbo,2020-03-29,0.07615499178059308
+4,Región de Coquimbo,2020-03-30,0.08255631007188476
+4,Región de Coquimbo,2020-03-31,0.06607279358836828
+4,Región de Coquimbo,2020-04-01,0.06212737192142762
+4,Región de Coquimbo,2020-04-02,0.06024583882038232
+4,Región de Coquimbo,2020-04-03,0.046273604158492486
+4,Región de Coquimbo,2020-04-04,0.05443686946461494
+4,Región de Coquimbo,2020-04-05,0.05385207414297751
+4,Región de Coquimbo,2020-04-06,0.05644006586140401
+4,Región de Coquimbo,2020-04-07,0.06395886285388522
+4,Región de Coquimbo,2020-04-08,0.06303415465069599
+4,Región de Coquimbo,2020-04-09,0.06339129750783885
+4,Región de Coquimbo,2020-04-10,0.04780688192342327
+4,Región de Coquimbo,2020-04-11,0.04547452040738829
+4,Región de Coquimbo,2020-04-12,0.04851109735700871
+4,Región de Coquimbo,2020-04-13,0.039157355860410074
+4,Región de Coquimbo,2020-04-14,0.03308156031093031
+4,Región de Coquimbo,2020-04-15,0.031933318309029776
+4,Región de Coquimbo,2020-04-16,0.03619156006727153
+4,Región de Coquimbo,2020-04-17,0.04351756739327887
+4,Región de Coquimbo,2020-04-18,0.045205460595672604
+4,Región de Coquimbo,2020-04-19,0.038994280471449
+4,Región de Coquimbo,2020-04-20,0.03967167007135676
+4,Región de Coquimbo,2020-04-21,0.04307128364046185
+4,Región de Coquimbo,2020-04-22,0.04668465310748986
+4,Región de Coquimbo,2020-04-23,0.035017596759582444
+4,Región de Coquimbo,2020-04-24,0.037691589433575125
+4,Región de Coquimbo,2020-04-25,0.03857615378563173
+4,Región de Coquimbo,2020-04-26,0.04132340653288448
+4,Región de Coquimbo,2020-04-27,0.03989194171798506
+4,Región de Coquimbo,2020-04-28,0.03622996425015244
+4,Región de Coquimbo,2020-04-29,0.03416695759998982
+4,Región de Coquimbo,2020-04-30,0.040355319979994635
+4,Región de Coquimbo,2020-05-01,0.04027595490062955
+4,Región de Coquimbo,2020-05-02,0.05058007654928902
+4,Región de Coquimbo,2020-05-03,0.05735663332584579
+4,Región de Coquimbo,2020-05-04,0.06414337911979864
+4,Región de Coquimbo,2020-05-05,0.065304661950232
+4,Región de Coquimbo,2020-05-06,0.062063631276652854
+4,Región de Coquimbo,2020-05-07,0.06124287042255009
+4,Región de Coquimbo,2020-05-08,0.05807351824563648
+4,Región de Coquimbo,2020-05-09,0.05408795455451117
+4,Región de Coquimbo,2020-05-10,0.06712053600814526
+4,Región de Coquimbo,2020-05-11,0.08220293796422218
+4,Región de Coquimbo,2020-05-12,0.1015541392826366
+4,Región de Coquimbo,2020-05-13,0.11707529027176788
+4,Región de Coquimbo,2020-05-14,0.11957760326846242
+4,Región de Coquimbo,2020-05-15,0.1305254355689889
+4,Región de Coquimbo,2020-05-16,0.12363130491662337
+4,Región de Coquimbo,2020-05-17,0.11708476615592854
+4,Región de Coquimbo,2020-05-18,0.11179448826904015
+4,Región de Coquimbo,2020-05-19,0.09629758000104753
+4,Región de Coquimbo,2020-05-20,0.09163514298668017
+4,Región de Coquimbo,2020-05-21,0.10463353132667037
+4,Región de Coquimbo,2020-05-22,0.10205433286219316
+4,Región de Coquimbo,2020-05-23,0.11654797278391528
+4,Región de Coquimbo,2020-05-24,0.12076568061773542
+4,Región de Coquimbo,2020-05-25,0.13491733808889497
+4,Región de Coquimbo,2020-05-26,0.15766603596161835
+4,Región de Coquimbo,2020-05-27,0.18312066880091835
+4,Región de Coquimbo,2020-05-28,0.18739927576609247
+4,Región de Coquimbo,2020-05-29,0.19696572098316525
+4,Región de Coquimbo,2020-05-30,0.20519236069565402
+4,Región de Coquimbo,2020-05-31,0.20510325250159864
+4,Región de Coquimbo,2020-06-01,0.20655458888899642
+4,Región de Coquimbo,2020-06-02,0.2130884844985223
+4,Región de Coquimbo,2020-06-03,0.19217889556368475
+4,Región de Coquimbo,2020-06-04,0.19166367308124915
+4,Región de Coquimbo,2020-06-05,0.19256366522896867
+4,Región de Coquimbo,2020-06-06,0.18550766043711484
+4,Región de Coquimbo,2020-06-07,0.1916344231866231
+4,Región de Coquimbo,2020-06-08,0.18329663991277842
+4,Región de Coquimbo,2020-06-09,0.17010354729111438
+4,Región de Coquimbo,2020-06-10,0.1793938049491374
+4,Región de Coquimbo,2020-06-11,0.1803789796045819
+4,Región de Coquimbo,2020-06-12,0.1767273838152496
+4,Región de Coquimbo,2020-06-13,0.18225317746604325
+4,Región de Coquimbo,2020-06-14,0.18202596426748102
+4,Región de Coquimbo,2020-06-15,0.19083276030831958
+4,Región de Coquimbo,2020-06-16,0.2013392538148131
+4,Región de Coquimbo,2020-06-17,0.19999897086619062
+4,Región de Coquimbo,2020-06-18,0.19844870597107792
+4,Región de Coquimbo,2020-06-19,0.20164369378689348
+4,Región de Coquimbo,2020-06-20,0.19303399990934245
+4,Región de Coquimbo,2020-06-21,0.18845073424233294
+4,Región de Coquimbo,2020-06-22,0.1874957355269759
+4,Región de Coquimbo,2020-06-23,0.17740929878491002
+4,Región de Coquimbo,2020-06-24,0.17170183112644036
+4,Región de Coquimbo,2020-06-25,0.172354544237271
+4,Región de Coquimbo,2020-06-26,0.17558419397255934
+4,Región de Coquimbo,2020-06-27,0.17684330944394072
+4,Región de Coquimbo,2020-06-28,0.18427512832533943
+4,Región de Coquimbo,2020-06-29,0.16651547087173343
+4,Región de Coquimbo,2020-06-30,0.17696220132852342
+4,Región de Coquimbo,2020-07-01,0.1813524422312262
+4,Región de Coquimbo,2020-07-02,0.18296077144428152
+4,Región de Coquimbo,2020-07-03,0.18359844942775813
+4,Región de Coquimbo,2020-07-04,0.18810918116227485
+4,Región de Coquimbo,2020-07-05,0.19025710929904682
+4,Región de Coquimbo,2020-07-06,0.20912711838932022
+4,Región de Coquimbo,2020-07-07,0.21355824537510773
+4,Región de Coquimbo,2020-07-08,0.21333736234309217
+4,Región de Coquimbo,2020-07-09,0.21083558819445897
+4,Región de Coquimbo,2020-07-10,0.20502692030174927
+4,Región de Coquimbo,2020-07-11,0.2100404257382182
+4,Región de Coquimbo,2020-07-12,0.2030261705396481
+4,Región de Coquimbo,2020-07-13,0.20498762178681362
+4,Región de Coquimbo,2020-07-14,0.1917116242962859
+4,Región de Coquimbo,2020-07-15,0.1969090562363551
+4,Región de Coquimbo,2020-07-16,0.20606294820789026
+4,Región de Coquimbo,2020-07-17,0.2112136829450513
+4,Región de Coquimbo,2020-07-18,0.21637258506718554
+4,Región de Coquimbo,2020-07-19,0.22146973694298572
+4,Región de Coquimbo,2020-07-20,0.20917888745555846
+4,Región de Coquimbo,2020-07-21,0.21468777021483468
+4,Región de Coquimbo,2020-07-22,0.21024177853526477
+4,Región de Coquimbo,2020-07-23,0.20162508948404234
+4,Región de Coquimbo,2020-07-24,0.19516497082880171
+4,Región de Coquimbo,2020-07-25,0.18683408156146522
+4,Región de Coquimbo,2020-07-26,0.1839793283882407
+4,Región de Coquimbo,2020-07-27,0.18578735404073982
+4,Región de Coquimbo,2020-07-28,0.17441830190855173
+4,Región de Coquimbo,2020-07-29,0.16559173755308823
+4,Región de Coquimbo,2020-07-30,0.15487421430246542
+4,Región de Coquimbo,2020-07-31,0.14777351754659626
+4,Región de Coquimbo,2020-08-01,0.146842668567416
+4,Región de Coquimbo,2020-08-02,0.15746146153915014
+4,Región de Coquimbo,2020-08-03,0.1471613461915008
+4,Región de Coquimbo,2020-08-04,0.1464234477263296
+4,Región de Coquimbo,2020-08-05,0.14983922021808563
+4,Región de Coquimbo,2020-08-06,0.15482375051331262
+4,Región de Coquimbo,2020-08-07,0.160712192625037
+4,Región de Coquimbo,2020-08-08,0.15101683380649597
+4,Región de Coquimbo,2020-08-09,0.13960606794976568
+4,Región de Coquimbo,2020-08-10,0.14519794721002444
+4,Región de Coquimbo,2020-08-11,0.15137546330758792
+4,Región de Coquimbo,2020-08-12,0.14476539467585864
+4,Región de Coquimbo,2020-08-13,0.14491938964341933
+4,Región de Coquimbo,2020-08-14,0.14147251591709556
+4,Región de Coquimbo,2020-08-15,0.13746654742724473
+4,Región de Coquimbo,2020-08-16,0.13750609813124728
+4,Región de Coquimbo,2020-08-17,0.1373075993073118
+4,Región de Coquimbo,2020-08-18,0.13494027688454546
+4,Región de Coquimbo,2020-08-19,0.14021841953878142
+4,Región de Coquimbo,2020-08-20,0.1390012435403523
+4,Región de Coquimbo,2020-08-21,0.13254175175346325
+4,Región de Coquimbo,2020-08-22,0.13237091249507776
+4,Región de Coquimbo,2020-08-23,0.1332582239413954
+4,Región de Coquimbo,2020-08-24,0.12785879224484675
+4,Región de Coquimbo,2020-08-25,0.12125766108406033
+9,Región de la Araucanía,2020-03-02,NA
+9,Región de la Araucanía,2020-03-03,NA
+9,Región de la Araucanía,2020-03-04,NA
+9,Región de la Araucanía,2020-03-05,NA
+9,Región de la Araucanía,2020-03-06,NA
+9,Región de la Araucanía,2020-03-07,NA
+9,Región de la Araucanía,2020-03-08,NA
+9,Región de la Araucanía,2020-03-09,NA
+9,Región de la Araucanía,2020-03-10,NA
+9,Región de la Araucanía,2020-03-11,NA
+9,Región de la Araucanía,2020-03-12,NA
+9,Región de la Araucanía,2020-03-13,NA
+9,Región de la Araucanía,2020-03-14,NA
+9,Región de la Araucanía,2020-03-15,0.21765127103472967
+9,Región de la Araucanía,2020-03-16,0.236956290339749
+9,Región de la Araucanía,2020-03-17,0.23489443466964588
+9,Región de la Araucanía,2020-03-18,0.21227538705059826
+9,Región de la Araucanía,2020-03-19,0.20745679294628988
+9,Región de la Araucanía,2020-03-20,0.21413974781837955
+9,Región de la Araucanía,2020-03-21,0.18762311376749893
+9,Región de la Araucanía,2020-03-22,0.179990395608465
+9,Región de la Araucanía,2020-03-23,0.18733782832903204
+9,Región de la Araucanía,2020-03-24,0.19154254114199226
+9,Región de la Araucanía,2020-03-25,0.20597850970417442
+9,Región de la Araucanía,2020-03-26,0.218544647270312
+9,Región de la Araucanía,2020-03-27,0.2287757307408321
+9,Región de la Araucanía,2020-03-28,0.24629765579700372
+9,Región de la Araucanía,2020-03-29,0.25061369903520264
+9,Región de la Araucanía,2020-03-30,0.2545031189307986
+9,Región de la Araucanía,2020-03-31,0.2569151272123721
+9,Región de la Araucanía,2020-04-01,0.2588711000421313
+9,Región de la Araucanía,2020-04-02,0.26014797559646347
+9,Región de la Araucanía,2020-04-03,0.24816869804341543
+9,Región de la Araucanía,2020-04-04,0.23916340703812444
+9,Región de la Araucanía,2020-04-05,0.23299207623035223
+9,Región de la Araucanía,2020-04-06,0.23151997175103042
+9,Región de la Araucanía,2020-04-07,0.22723983160132505
+9,Región de la Araucanía,2020-04-08,0.2154218250464764
+9,Región de la Araucanía,2020-04-09,0.20144812092705217
+9,Región de la Araucanía,2020-04-10,0.19957458462728636
+9,Región de la Araucanía,2020-04-11,0.18892105424961805
+9,Región de la Araucanía,2020-04-12,0.17791665248891378
+9,Región de la Araucanía,2020-04-13,0.17592438271278626
+9,Región de la Araucanía,2020-04-14,0.17269006722747476
+9,Región de la Araucanía,2020-04-15,0.16684662043622278
+9,Región de la Araucanía,2020-04-16,0.16816778762565343
+9,Región de la Araucanía,2020-04-17,0.16960288221143296
+9,Región de la Araucanía,2020-04-18,0.17273193706462572
+9,Región de la Araucanía,2020-04-19,0.18305606671648647
+9,Región de la Araucanía,2020-04-20,0.1688424823886005
+9,Región de la Araucanía,2020-04-21,0.16208778688490103
+9,Región de la Araucanía,2020-04-22,0.15890867728517558
+9,Región de la Araucanía,2020-04-23,0.13872727138948396
+9,Región de la Araucanía,2020-04-24,0.11631568494113663
+9,Región de la Araucanía,2020-04-25,0.10575481723741179
+9,Región de la Araucanía,2020-04-26,0.0880677424074798
+9,Región de la Araucanía,2020-04-27,0.09306097192677568
+9,Región de la Araucanía,2020-04-28,0.08660759297040271
+9,Región de la Araucanía,2020-04-29,0.07498305056482608
+9,Región de la Araucanía,2020-04-30,0.07423359824152388
+9,Región de la Araucanía,2020-05-01,0.07220001015970517
+9,Región de la Araucanía,2020-05-02,0.06284462390462288
+9,Región de la Araucanía,2020-05-03,0.059718266978873856
+9,Región de la Araucanía,2020-05-04,0.045847835085186146
+9,Región de la Araucanía,2020-05-05,0.04119832110985616
+9,Región de la Araucanía,2020-05-06,0.04354168791127432
+9,Región de la Araucanía,2020-05-07,0.04275646996733731
+9,Región de la Araucanía,2020-05-08,0.04660910110023877
+9,Región de la Araucanía,2020-05-09,0.047611891473451184
+9,Región de la Araucanía,2020-05-10,0.0439120696518392
+9,Región de la Araucanía,2020-05-11,0.04893156986850827
+9,Región de la Araucanía,2020-05-12,0.05145019313728987
+9,Región de la Araucanía,2020-05-13,0.05696888244356811
+9,Región de la Araucanía,2020-05-14,0.058597383346509886
+9,Región de la Araucanía,2020-05-15,0.05817216763151019
+9,Región de la Araucanía,2020-05-16,0.05896454307954232
+9,Región de la Araucanía,2020-05-17,0.0645717107325327
+9,Región de la Araucanía,2020-05-18,0.06189781971451587
+9,Región de la Araucanía,2020-05-19,0.06213332482191322
+9,Región de la Araucanía,2020-05-20,0.05746665861323431
+9,Región de la Araucanía,2020-05-21,0.0612352766898261
+9,Región de la Araucanía,2020-05-22,0.06807764720952608
+9,Región de la Araucanía,2020-05-23,0.07630654420489753
+9,Región de la Araucanía,2020-05-24,0.07539443736536895
+9,Región de la Araucanía,2020-05-25,0.07930277260520728
+9,Región de la Araucanía,2020-05-26,0.08044668980580236
+9,Región de la Araucanía,2020-05-27,0.08833516477582351
+9,Región de la Araucanía,2020-05-28,0.08963226780693184
+9,Región de la Araucanía,2020-05-29,0.08340113324228804
+9,Región de la Araucanía,2020-05-30,0.07713380822496303
+9,Región de la Araucanía,2020-05-31,0.0763440375236879
+9,Región de la Araucanía,2020-06-01,0.07807249409085415
+9,Región de la Araucanía,2020-06-02,0.08208435898964271
+9,Región de la Araucanía,2020-06-03,0.07647360096576541
+9,Región de la Araucanía,2020-06-04,0.077859808679227
+9,Región de la Araucanía,2020-06-05,0.0791649340881692
+9,Región de la Araucanía,2020-06-06,0.0857990918851177
+9,Región de la Araucanía,2020-06-07,0.09736915447558844
+9,Región de la Araucanía,2020-06-08,0.10111432822076219
+9,Región de la Araucanía,2020-06-09,0.09460458844129666
+9,Región de la Araucanía,2020-06-10,0.0977345580264872
+9,Región de la Araucanía,2020-06-11,0.09454746421161196
+9,Región de la Araucanía,2020-06-12,0.09228164765796133
+9,Región de la Araucanía,2020-06-13,0.09482419291526692
+9,Región de la Araucanía,2020-06-14,0.08428208787449284
+9,Región de la Araucanía,2020-06-15,0.07654586249428841
+9,Región de la Araucanía,2020-06-16,0.07745458315136232
+9,Región de la Araucanía,2020-06-17,0.06918837616266464
+9,Región de la Araucanía,2020-06-18,0.07058642236571899
+9,Región de la Araucanía,2020-06-19,0.07143928247103491
+9,Región de la Araucanía,2020-06-20,0.06796935812969453
+9,Región de la Araucanía,2020-06-21,0.06413368198280556
+9,Región de la Araucanía,2020-06-22,0.06377466926777191
+9,Región de la Araucanía,2020-06-23,0.06272678457723313
+9,Región de la Araucanía,2020-06-24,0.06382283428238165
+9,Región de la Araucanía,2020-06-25,0.0616731532736249
+9,Región de la Araucanía,2020-06-26,0.06250235424029865
+9,Región de la Araucanía,2020-06-27,0.05935846786983644
+9,Región de la Araucanía,2020-06-28,0.062118614990885813
+9,Región de la Araucanía,2020-06-29,0.06412469401824143
+9,Región de la Araucanía,2020-06-30,0.06740703939778563
+9,Región de la Araucanía,2020-07-01,0.07219879936195939
+9,Región de la Araucanía,2020-07-02,0.06825203569181265
+9,Región de la Araucanía,2020-07-03,0.06582955991934972
+9,Región de la Araucanía,2020-07-04,0.0614551160182978
+9,Región de la Araucanía,2020-07-05,0.05671382556272163
+9,Región de la Araucanía,2020-07-06,0.05297652042236115
+9,Región de la Araucanía,2020-07-07,0.050847569248395626
+9,Región de la Araucanía,2020-07-08,0.04722843956291523
+9,Región de la Araucanía,2020-07-09,0.04694538587758752
+9,Región de la Araucanía,2020-07-10,0.04376904189986483
+9,Región de la Araucanía,2020-07-11,0.04375809163596347
+9,Región de la Araucanía,2020-07-12,0.0460256653321086
+9,Región de la Araucanía,2020-07-13,0.04484483370603759
+9,Región de la Araucanía,2020-07-14,0.03775500064637694
+9,Región de la Araucanía,2020-07-15,0.03620304570871792
+9,Región de la Araucanía,2020-07-16,0.03760386244191074
+9,Región de la Araucanía,2020-07-17,0.041794409566127316
+9,Región de la Araucanía,2020-07-18,0.04158801449420657
+9,Región de la Araucanía,2020-07-19,0.04180283726542032
+9,Región de la Araucanía,2020-07-20,0.04693021591546927
+9,Región de la Araucanía,2020-07-21,0.05380455977398497
+9,Región de la Araucanía,2020-07-22,0.05437152577431418
+9,Región de la Araucanía,2020-07-23,0.05501701127009505
+9,Región de la Araucanía,2020-07-24,0.05127989740563584
+9,Región de la Araucanía,2020-07-25,0.0511751662004334
+9,Región de la Araucanía,2020-07-26,0.05115856841457803
+9,Región de la Araucanía,2020-07-27,0.049592458956674926
+9,Región de la Araucanía,2020-07-28,0.04543639881344443
+9,Región de la Araucanía,2020-07-29,0.04393514400926798
+9,Región de la Araucanía,2020-07-30,0.0448312196811853
+9,Región de la Araucanía,2020-07-31,0.046649148949940385
+9,Región de la Araucanía,2020-08-01,0.050773095673150546
+9,Región de la Araucanía,2020-08-02,0.054134843899874927
+9,Región de la Araucanía,2020-08-03,0.051638590599763105
+9,Región de la Araucanía,2020-08-04,0.05012720343620203
+9,Región de la Araucanía,2020-08-05,0.050139421897853274
+9,Región de la Araucanía,2020-08-06,0.04670499494461578
+9,Región de la Araucanía,2020-08-07,0.04466100741455737
+9,Región de la Araucanía,2020-08-08,0.03851189891789663
+9,Región de la Araucanía,2020-08-09,0.03745585887517282
+9,Región de la Araucanía,2020-08-10,0.03902989874242931
+9,Región de la Araucanía,2020-08-11,0.0395212545204093
+9,Región de la Araucanía,2020-08-12,0.03934664487878236
+9,Región de la Araucanía,2020-08-13,0.04008520739774304
+9,Región de la Araucanía,2020-08-14,0.03861960277968465
+9,Región de la Araucanía,2020-08-15,0.04057859228782226
+9,Región de la Araucanía,2020-08-16,0.034725627198002824
+9,Región de la Araucanía,2020-08-17,0.03674311439437259
+9,Región de la Araucanía,2020-08-18,0.040210279806654106
+9,Región de la Araucanía,2020-08-19,0.040905267589730496
+9,Región de la Araucanía,2020-08-20,0.038639913778792764
+9,Región de la Araucanía,2020-08-21,0.03886450740470089
+9,Región de la Araucanía,2020-08-22,0.0372380953719979
+9,Región de la Araucanía,2020-08-23,0.042138625084557686
+9,Región de la Araucanía,2020-08-24,0.038763863303198885
+9,Región de la Araucanía,2020-08-25,0.03264728740169119
+10,Región de Los Lagos,2020-03-05,NA
+10,Región de Los Lagos,2020-03-06,NA
+10,Región de Los Lagos,2020-03-07,NA
+10,Región de Los Lagos,2020-03-08,NA
+10,Región de Los Lagos,2020-03-09,NA
+10,Región de Los Lagos,2020-03-10,NA
+10,Región de Los Lagos,2020-03-11,NA
+10,Región de Los Lagos,2020-03-12,NA
+10,Región de Los Lagos,2020-03-13,0.0606060606060606
+10,Región de Los Lagos,2020-03-14,0.07846320346320346
+10,Región de Los Lagos,2020-03-15,0.11143023643023643
+10,Región de Los Lagos,2020-03-16,0.13006377680290723
+10,Región de Los Lagos,2020-03-17,0.10779035130367529
+10,Región de Los Lagos,2020-03-18,0.13358400209732607
+10,Región de Los Lagos,2020-03-19,0.14030669117295633
+10,Región de Los Lagos,2020-03-20,0.13656942124863605
+10,Región de Los Lagos,2020-03-21,0.1302952899745048
+10,Región de Los Lagos,2020-03-22,0.10906048613100527
+10,Región de Los Lagos,2020-03-23,0.10290960872643433
+10,Región de Los Lagos,2020-03-24,0.09786855513453745
+10,Región de Los Lagos,2020-03-25,0.09194245400976082
+10,Región de Los Lagos,2020-03-26,0.11379119350555915
+10,Región de Los Lagos,2020-03-27,0.12818677063991077
+10,Región de Los Lagos,2020-03-28,0.15008590191404206
+10,Región de Los Lagos,2020-03-29,0.183204171129379
+10,Región de Los Lagos,2020-03-30,0.19683517943624074
+10,Región de Los Lagos,2020-03-31,0.20259943259758162
+10,Región de Los Lagos,2020-04-01,0.20158612513320345
+10,Región de Los Lagos,2020-04-02,0.19713343496622757
+10,Región de Los Lagos,2020-04-03,0.18983923352994056
+10,Región de Los Lagos,2020-04-04,0.16947662420049447
+10,Región de Los Lagos,2020-04-05,0.13858960599051773
+10,Región de Los Lagos,2020-04-06,0.12767350310461387
+10,Región de Los Lagos,2020-04-07,0.11065445517101033
+10,Región de Los Lagos,2020-04-08,0.09918937552809068
+10,Región de Los Lagos,2020-04-09,0.08670606052376727
+10,Región de Los Lagos,2020-04-10,0.0814291388837187
+10,Región de Los Lagos,2020-04-11,0.07889161593803248
+10,Región de Los Lagos,2020-04-12,0.07157265408156407
+10,Región de Los Lagos,2020-04-13,0.060597464299121384
+10,Región de Los Lagos,2020-04-14,0.06155678972453898
+10,Región de Los Lagos,2020-04-15,0.06379844578254529
+10,Región de Los Lagos,2020-04-16,0.056303809131898405
+10,Región de Los Lagos,2020-04-17,0.048831052587420154
+10,Región de Los Lagos,2020-04-18,0.04276983766544574
+10,Región de Los Lagos,2020-04-19,0.050735709003410095
+10,Región de Los Lagos,2020-04-20,0.051386374767146414
+10,Región de Los Lagos,2020-04-21,0.04692098560739467
+10,Región de Los Lagos,2020-04-22,0.04006025009030508
+10,Región de Los Lagos,2020-04-23,0.03867333597421339
+10,Región de Los Lagos,2020-04-24,0.039217303561248196
+10,Región de Los Lagos,2020-04-25,0.03656799885567242
+10,Región de Los Lagos,2020-04-26,0.021957609245282807
+10,Región de Los Lagos,2020-04-27,0.01838919631654918
+10,Región de Los Lagos,2020-04-28,0.015951076357339018
+10,Región de Los Lagos,2020-04-29,0.01585956468341737
+10,Región de Los Lagos,2020-04-30,0.015544716440270568
+10,Región de Los Lagos,2020-05-01,0.012786270829016358
+10,Región de Los Lagos,2020-05-02,0.014802049067947612
+10,Región de Los Lagos,2020-05-03,0.017045878536907973
+10,Región de Los Lagos,2020-05-04,0.01926237385585361
+10,Región de Los Lagos,2020-05-05,0.017757922381181766
+10,Región de Los Lagos,2020-05-06,0.01679592543286973
+10,Región de Los Lagos,2020-05-07,0.018446880592728077
+10,Región de Los Lagos,2020-05-08,0.02352785954802857
+10,Región de Los Lagos,2020-05-09,0.02324809396214053
+10,Región de Los Lagos,2020-05-10,0.021782777533273595
+10,Región de Los Lagos,2020-05-11,0.024564171781113576
+10,Región de Los Lagos,2020-05-12,0.025537035767676193
+10,Región de Los Lagos,2020-05-13,0.024416942050912178
+10,Región de Los Lagos,2020-05-14,0.021725808452899453
+10,Región de Los Lagos,2020-05-15,0.016484108515177075
+10,Región de Los Lagos,2020-05-16,0.013491044231790213
+10,Región de Los Lagos,2020-05-17,0.015605840414119937
+10,Región de Los Lagos,2020-05-18,0.017672727775124946
+10,Región de Los Lagos,2020-05-19,0.01963120799447473
+10,Región de Los Lagos,2020-05-20,0.021910168349787353
+10,Región de Los Lagos,2020-05-21,0.0230982726707648
+10,Región de Los Lagos,2020-05-22,0.024486068481910137
+10,Región de Los Lagos,2020-05-23,0.026019856869930878
+10,Región de Los Lagos,2020-05-24,0.03455511907607916
+10,Región de Los Lagos,2020-05-25,0.028891338412298496
+10,Región de Los Lagos,2020-05-26,0.029047500307590828
+10,Región de Los Lagos,2020-05-27,0.031544124449427474
+10,Región de Los Lagos,2020-05-28,0.03367712383023086
+10,Región de Los Lagos,2020-05-29,0.03666911776594712
+10,Región de Los Lagos,2020-05-30,0.038174525420999986
+10,Región de Los Lagos,2020-05-31,0.030994493556953252
+10,Región de Los Lagos,2020-06-01,0.032183827529928384
+10,Región de Los Lagos,2020-06-02,0.031203974050074905
+10,Región de Los Lagos,2020-06-03,0.030126960143305143
+10,Región de Los Lagos,2020-06-04,0.03384582905483563
+10,Región de Los Lagos,2020-06-05,0.03149006859428948
+10,Región de Los Lagos,2020-06-06,0.032122147512813413
+10,Región de Los Lagos,2020-06-07,0.032061602364296164
+10,Región de Los Lagos,2020-06-08,0.03283320699609525
+10,Región de Los Lagos,2020-06-09,0.03213883256318871
+10,Región de Los Lagos,2020-06-10,0.032168813974713564
+10,Región de Los Lagos,2020-06-11,0.027661843377857938
+10,Región de Los Lagos,2020-06-12,0.02888051338296922
+10,Región de Los Lagos,2020-06-13,0.029859216421973766
+10,Región de Los Lagos,2020-06-14,0.04441488968580421
+10,Región de Los Lagos,2020-06-15,0.04286898911742725
+10,Región de Los Lagos,2020-06-16,0.04375701136593283
+10,Región de Los Lagos,2020-06-17,0.045294984463538954
+10,Región de Los Lagos,2020-06-18,0.046551652579393595
+10,Región de Los Lagos,2020-06-19,0.04862400362352892
+10,Región de Los Lagos,2020-06-20,0.04772385746552525
+10,Región de Los Lagos,2020-06-21,0.03527182561100194
+10,Región de Los Lagos,2020-06-22,0.03763511928767728
+10,Región de Los Lagos,2020-06-23,0.037616646764075966
+10,Región de Los Lagos,2020-06-24,0.03634387824992814
+10,Región de Los Lagos,2020-06-25,0.03638184300176521
+10,Región de Los Lagos,2020-06-26,0.03564544986484274
+10,Región de Los Lagos,2020-06-27,0.039477900009602995
+10,Región de Los Lagos,2020-06-28,0.046627124399342176
+10,Región de Los Lagos,2020-06-29,0.04835817219564909
+10,Región de Los Lagos,2020-06-30,0.0569356650987656
+10,Región de Los Lagos,2020-07-01,0.061579962685377083
+10,Región de Los Lagos,2020-07-02,0.06530788328184438
+10,Región de Los Lagos,2020-07-03,0.0643292393398704
+10,Región de Los Lagos,2020-07-04,0.06395400411075064
+10,Región de Los Lagos,2020-07-05,0.07078659981271715
+10,Región de Los Lagos,2020-07-06,0.07092292022553526
+10,Región de Los Lagos,2020-07-07,0.06459775105739254
+10,Región de Los Lagos,2020-07-08,0.06107750183620874
+10,Región de Los Lagos,2020-07-09,0.06011121112243448
+10,Región de Los Lagos,2020-07-10,0.06001308868388651
+10,Región de Los Lagos,2020-07-11,0.06319721330502676
+10,Región de Los Lagos,2020-07-12,0.0531872802728886
+10,Región de Los Lagos,2020-07-13,0.05311036837018322
+10,Región de Los Lagos,2020-07-14,0.05221966707099655
+10,Región de Los Lagos,2020-07-15,0.051910337285531724
+10,Región de Los Lagos,2020-07-16,0.054521304907615586
+10,Región de Los Lagos,2020-07-17,0.05930430053969188
+10,Región de Los Lagos,2020-07-18,0.05554322466080198
+10,Región de Los Lagos,2020-07-19,0.05631866281488091
+10,Región de Los Lagos,2020-07-20,0.05552735287879307
+10,Región de Los Lagos,2020-07-21,0.05753079374378397
+10,Región de Los Lagos,2020-07-22,0.058483163353874296
+10,Región de Los Lagos,2020-07-23,0.05873550404458001
+10,Región de Los Lagos,2020-07-24,0.05729385561174892
+10,Región de Los Lagos,2020-07-25,0.060469243679713514
+10,Región de Los Lagos,2020-07-26,0.05578733720547083
+10,Región de Los Lagos,2020-07-27,0.05615107826328556
+10,Región de Los Lagos,2020-07-28,0.05531648638300583
+10,Región de Los Lagos,2020-07-29,0.05642919385121721
+10,Región de Los Lagos,2020-07-30,0.052569986746051026
+10,Región de Los Lagos,2020-07-31,0.05379093398015727
+10,Región de Los Lagos,2020-08-01,0.05139791205298422
+10,Región de Los Lagos,2020-08-02,0.05460815472679599
+10,Región de Los Lagos,2020-08-03,0.05486758857803672
+10,Región de Los Lagos,2020-08-04,0.055936600719111565
+10,Región de Los Lagos,2020-08-05,0.05373449566032929
+10,Región de Los Lagos,2020-08-06,0.0512009960576568
+10,Región de Los Lagos,2020-08-07,0.047739228644934587
+10,Región de Los Lagos,2020-08-08,0.047755544966451804
+10,Región de Los Lagos,2020-08-09,0.047510978739712204
+10,Región de Los Lagos,2020-08-10,0.045755658066805614
+10,Región de Los Lagos,2020-08-11,0.04291395409105654
+10,Región de Los Lagos,2020-08-12,0.04354186629993862
+10,Región de Los Lagos,2020-08-13,0.04433174639899888
+10,Región de Los Lagos,2020-08-14,0.04309931380911184
+10,Región de Los Lagos,2020-08-15,0.042523628989729535
+10,Región de Los Lagos,2020-08-16,0.04248797801071696
+10,Región de Los Lagos,2020-08-17,0.04167216537782622
+10,Región de Los Lagos,2020-08-18,0.042116740022860887
+10,Región de Los Lagos,2020-08-19,0.04039680335586893
+10,Región de Los Lagos,2020-08-20,0.03917155767741696
+10,Región de Los Lagos,2020-08-21,0.03950883579247285
+10,Región de Los Lagos,2020-08-22,0.035353932724526305
+10,Región de Los Lagos,2020-08-23,0.029376284572608827
+10,Región de Los Lagos,2020-08-24,0.030249566870732603
+10,Región de Los Lagos,2020-08-25,0.028979490378716263
+14,Región de Los Ríos,2020-03-14,NA
+14,Región de Los Ríos,2020-03-15,NA
+14,Región de Los Ríos,2020-03-16,NA
+14,Región de Los Ríos,2020-03-17,NA
+14,Región de Los Ríos,2020-03-18,NA
+14,Región de Los Ríos,2020-03-19,NA
+14,Región de Los Ríos,2020-03-20,0.04899267399267399
+14,Región de Los Ríos,2020-03-21,0.036766161766161765
+14,Región de Los Ríos,2020-03-22,0.04892421647740797
+14,Región de Los Ríos,2020-03-23,0.05686072441391591
+14,Región de Los Ríos,2020-03-24,0.08002674757993908
+14,Región de Los Ríos,2020-03-25,0.08121722377041526
+14,Región de Los Ríos,2020-03-26,0.10817693073012223
+14,Región de Los Ríos,2020-03-27,0.12385637323883303
+14,Región de Los Ríos,2020-03-28,0.1256662187986786
+14,Región de Los Ríos,2020-03-29,0.1339163273527385
+14,Región de Los Ríos,2020-03-30,0.13630684179144573
+14,Región de Los Ríos,2020-03-31,0.11812420732974149
+14,Región de Los Ríos,2020-04-01,0.11385491340527513
+14,Región de Los Ríos,2020-04-02,0.09221142415116643
+14,Región de Los Ríos,2020-04-03,0.10454318612424833
+14,Región de Los Ríos,2020-04-04,0.23400747183853407
+14,Región de Los Ríos,2020-04-05,0.3564564514303708
+14,Región de Los Ríos,2020-04-06,0.43184371476944133
+14,Región de Los Ríos,2020-04-07,0.5047824039872003
+14,Región de Los Ríos,2020-04-08,0.5534961423561111
+14,Región de Los Ríos,2020-04-09,0.6301396316102199
+14,Región de Los Ríos,2020-04-10,0.6281024531024532
+14,Región de Los Ríos,2020-04-11,0.6281024531024532
+14,Región de Los Ríos,2020-04-12,0.5328643578643578
+14,Región de Los Ríos,2020-04-13,0.5287827252112967
+14,Región de Los Ríos,2020-04-14,0.45299284345126567
+14,Región de Los Ríos,2020-04-15,0.39466429114680973
+14,Región de Los Ríos,2020-04-16,0.3093468308293494
+14,Región de Los Ríos,2020-04-17,0.3151188366013552
+14,Región de Los Ríos,2020-04-18,0.1930409145234331
+14,Región de Los Ríos,2020-04-19,0.14890618746187675
+14,Región de Los Ríos,2020-04-20,0.08408025708972791
+14,Región de Los Ríos,2020-04-21,0.08449908133584427
+14,Región de Los Ríos,2020-04-22,0.093621284433951
+14,Región de Los Ríos,2020-04-23,0.09839938615082822
+14,Región de Los Ríos,2020-04-24,0.06665335440479647
+14,Región de Los Ríos,2020-04-25,0.04847153622297829
+14,Región de Los Ríos,2020-04-26,0.04823396891224025
+14,Región de Los Ríos,2020-04-27,0.053072267868186265
+14,Región de Los Ríos,2020-04-28,0.06004505698383252
+14,Región de Los Ríos,2020-04-29,0.054380032353290655
+14,Región de Los Ríos,2020-04-30,0.046814314212433365
+14,Región de Los Ríos,2020-05-01,0.048384172925149224
+14,Región de Los Ríos,2020-05-02,0.045786770327746626
+14,Región de Los Ríos,2020-05-03,0.04254001708099338
+14,Región de Los Ríos,2020-05-04,0.02312713829311459
+14,Región de Los Ríos,2020-05-05,0.01492608009205639
+14,Región de Los Ríos,2020-05-06,0.009181708749443898
+14,Región de Los Ríos,2020-05-07,0.009473825255243628
+14,Región de Los Ríos,2020-05-08,0.009239080027173968
+14,Región de Los Ríos,2020-05-09,0.013207333995427936
+14,Región de Los Ríos,2020-05-10,0.015087033243548237
+14,Región de Los Ríos,2020-05-11,0.01478539231690731
+14,Región de Los Ríos,2020-05-12,0.016028936973625618
+14,Región de Los Ríos,2020-05-13,0.018443623952070987
+14,Región de Los Ríos,2020-05-14,0.019592101881027495
+14,Región de Los Ríos,2020-05-15,0.021076537268561752
+14,Región de Los Ríos,2020-05-16,0.018443396784953974
+14,Región de Los Ríos,2020-05-17,0.041016721989858125
+14,Región de Los Ríos,2020-05-18,0.046949915996446635
+14,Región de Los Ríos,2020-05-19,0.05164754253513681
+14,Región de Los Ríos,2020-05-20,0.05877889749257872
+14,Región de Los Ríos,2020-05-21,0.06518022190452602
+14,Región de Los Ríos,2020-05-22,0.0684722085556458
+14,Región de Los Ríos,2020-05-23,0.07726082960418294
+14,Región de Los Ríos,2020-05-24,0.0647125670559204
+14,Región de Los Ríos,2020-05-25,0.05938855365851251
+14,Región de Los Ríos,2020-05-26,0.06036638938211094
+14,Región de Los Ríos,2020-05-27,0.05920370541797056
+14,Región de Los Ríos,2020-05-28,0.0569838701154285
+14,Región de Los Ríos,2020-05-29,0.058198341918135596
+14,Región de Los Ríos,2020-05-30,0.052917222397058775
+14,Región de Los Ríos,2020-05-31,0.046160465640302024
+14,Región de Los Ríos,2020-06-01,0.052837372962370635
+14,Región de Los Ríos,2020-06-02,0.050439770564768234
+14,Región de Los Ríos,2020-06-03,0.0461642212645884
+14,Región de Los Ríos,2020-06-04,0.048198024476594846
+14,Región de Los Ríos,2020-06-05,0.04927537849512533
+14,Región de Los Ríos,2020-06-06,0.05971160229126937
+14,Región de Los Ríos,2020-06-07,0.06569532256070393
+14,Región de Los Ríos,2020-06-08,0.06476030619791757
+14,Región de Los Ríos,2020-06-09,0.06679016610179324
+14,Región de Los Ríos,2020-06-10,0.06612285155692767
+14,Región de Los Ríos,2020-06-11,0.06835272564682789
+14,Región de Los Ríos,2020-06-12,0.07640756048398856
+14,Región de Los Ríos,2020-06-13,0.06620057290143537
+14,Región de Los Ríos,2020-06-14,0.057597292490316775
+14,Región de Los Ríos,2020-06-15,0.05358011131544579
+14,Región de Los Ríos,2020-06-16,0.052222386294231336
+14,Región de Los Ríos,2020-06-17,0.049755017824174366
+14,Región de Los Ríos,2020-06-18,0.048823754568967447
+14,Región de Los Ríos,2020-06-19,0.039884355379750165
+14,Región de Los Ríos,2020-06-20,0.037895751841617024
+14,Región de Los Ríos,2020-06-21,0.03977647791113365
+14,Región de Los Ríos,2020-06-22,0.04098030158157162
+14,Región de Los Ríos,2020-06-23,0.03924361786484486
+14,Región de Los Ríos,2020-06-24,0.044880781038497554
+14,Región de Los Ríos,2020-06-25,0.04172563659670815
+14,Región de Los Ríos,2020-06-26,0.04064184603923339
+14,Región de Los Ríos,2020-06-27,0.04539831960602455
+14,Región de Los Ríos,2020-06-28,0.046091189346513343
+14,Región de Los Ríos,2020-06-29,0.0435786383766121
+14,Región de Los Ríos,2020-06-30,0.04253037465010391
+14,Región de Los Ríos,2020-07-01,0.036340470803950066
+14,Región de Los Ríos,2020-07-02,0.03465148540160961
+14,Región de Los Ríos,2020-07-03,0.03204300957884808
+14,Región de Los Ríos,2020-07-04,0.029305329140819205
+14,Región de Los Ríos,2020-07-05,0.026584240705445055
+14,Región de Los Ríos,2020-07-06,0.033705635550405504
+14,Región de Los Ríos,2020-07-07,0.03211714940968056
+14,Región de Los Ríos,2020-07-08,0.03339187468440583
+14,Región de Los Ríos,2020-07-09,0.03628539320292435
+14,Región de Los Ríos,2020-07-10,0.03455970292681391
+14,Región de Los Ríos,2020-07-11,0.03827600426216286
+14,Región de Los Ríos,2020-07-12,0.03793586820774109
+14,Región de Los Ríos,2020-07-13,0.03591466225866568
+14,Región de Los Ríos,2020-07-14,0.05061268781034977
+14,Región de Los Ríos,2020-07-15,0.049525579796412485
+14,Región de Los Ríos,2020-07-16,0.0456182159526714
+14,Región de Los Ríos,2020-07-17,0.05188557645335702
+14,Región de Los Ríos,2020-07-18,0.04719605345940243
+14,Región de Los Ríos,2020-07-19,0.04611400990372513
+14,Región de Los Ríos,2020-07-20,0.042411143715698665
+14,Región de Los Ríos,2020-07-21,0.028362257298495733
+14,Región de Los Ríos,2020-07-22,0.02972055175311098
+14,Región de Los Ríos,2020-07-23,0.031991010834947306
+14,Región de Los Ríos,2020-07-24,0.029473614483744
+14,Región de Los Ríos,2020-07-25,0.027455984629330635
+14,Región de Los Ríos,2020-07-26,0.029743965105230575
+14,Región de Los Ríos,2020-07-27,0.02974933088363734
+14,Región de Los Ríos,2020-07-28,0.030901243458183354
+14,Región de Los Ríos,2020-07-29,0.02720148558893396
+14,Región de Los Ríos,2020-07-30,0.024150370037818412
+14,Región de Los Ríos,2020-07-31,0.023815285353635727
+14,Región de Los Ríos,2020-08-01,0.024878699224931373
+14,Región de Los Ríos,2020-08-02,0.02817502122354345
+14,Región de Los Ríos,2020-08-03,0.025887061087388762
+14,Región de Los Ríos,2020-08-04,0.024192871020656308
+14,Región de Los Ríos,2020-08-05,0.029949364527149813
+14,Región de Los Ríos,2020-08-06,0.028541415750779984
+14,Región de Los Ríos,2020-08-07,0.032685075715487226
+14,Región de Los Ríos,2020-08-08,0.034801477831889346
+14,Región de Los Ríos,2020-08-09,0.03475190908003052
+14,Región de Los Ríos,2020-08-10,0.036680061688568126
+14,Región de Los Ríos,2020-08-11,0.03715143133879042
+14,Región de Los Ríos,2020-08-12,0.03237793102957583
+14,Región de Los Ríos,2020-08-13,0.032631296684149415
+14,Región de Los Ríos,2020-08-14,0.024565119254704844
+14,Región de Los Ríos,2020-08-15,0.020634658181386628
+14,Región de Los Ríos,2020-08-16,0.016355991112021885
+14,Región de Los Ríos,2020-08-17,0.013578446349744299
+14,Región de Los Ríos,2020-08-18,0.0147393454920099
+14,Región de Los Ríos,2020-08-19,0.01614567725548452
+14,Región de Los Ríos,2020-08-20,0.021167527131145447
+14,Región de Los Ríos,2020-08-21,0.02173415200827158
+14,Región de Los Ríos,2020-08-22,0.022947610364587083
+14,Región de Los Ríos,2020-08-23,0.022403614716552268
+14,Región de Los Ríos,2020-08-24,0.025501550372627458
+14,Región de Los Ríos,2020-08-25,0.024609596017579064
+12,Región de Magallanes y la Antártica Chilena,2020-03-14,NA
+12,Región de Magallanes y la Antártica Chilena,2020-03-15,NA
+12,Región de Magallanes y la Antártica Chilena,2020-03-16,NA
+12,Región de Magallanes y la Antártica Chilena,2020-03-17,NA
+12,Región de Magallanes y la Antártica Chilena,2020-03-18,NA
+12,Región de Magallanes y la Antártica Chilena,2020-03-19,NA
+12,Región de Magallanes y la Antártica Chilena,2020-03-20,0.18590533948922425
+12,Región de Magallanes y la Antártica Chilena,2020-03-21,0.13564078922467399
+12,Región de Magallanes y la Antártica Chilena,2020-03-22,0.12713738786412976
+12,Región de Magallanes y la Antártica Chilena,2020-03-23,0.16695676389040234
+12,Región de Magallanes y la Antártica Chilena,2020-03-24,0.17602080329926933
+12,Región de Magallanes y la Antártica Chilena,2020-03-25,0.22522309291076612
+12,Región de Magallanes y la Antártica Chilena,2020-03-26,0.3052290083204082
+12,Región de Magallanes y la Antártica Chilena,2020-03-27,0.3247778805008594
+12,Región de Magallanes y la Antártica Chilena,2020-03-28,0.35463426750010346
+12,Región de Magallanes y la Antártica Chilena,2020-03-29,0.43796760083343683
+12,Región de Magallanes y la Antártica Chilena,2020-03-30,0.4295716108584995
+12,Región de Magallanes y la Antártica Chilena,2020-03-31,0.4816625866472009
+12,Región de Magallanes y la Antártica Chilena,2020-04-01,0.4895360062853264
+12,Región de Magallanes y la Antártica Chilena,2020-04-02,0.4436915815589141
+12,Región de Magallanes y la Antártica Chilena,2020-04-03,0.4111022958446284
+12,Región de Magallanes y la Antártica Chilena,2020-04-04,0.3692984775431142
+12,Región de Magallanes y la Antártica Chilena,2020-04-05,0.30141600540532293
+12,Región de Magallanes y la Antártica Chilena,2020-04-06,0.28641298060193515
+12,Región de Magallanes y la Antártica Chilena,2020-04-07,0.2602248528215853
+12,Región de Magallanes y la Antártica Chilena,2020-04-08,0.23638215887579858
+12,Región de Magallanes y la Antártica Chilena,2020-04-09,0.2123889711378703
+12,Región de Magallanes y la Antártica Chilena,2020-04-10,0.20853933345671088
+12,Región de Magallanes y la Antártica Chilena,2020-04-11,0.23037864421607776
+12,Región de Magallanes y la Antártica Chilena,2020-04-12,0.23324280133555403
+12,Región de Magallanes y la Antártica Chilena,2020-04-13,0.23166515878428062
+12,Región de Magallanes y la Antártica Chilena,2020-04-14,0.2210591736227012
+12,Región de Magallanes y la Antártica Chilena,2020-04-15,0.20346502256021434
+12,Región de Magallanes y la Antártica Chilena,2020-04-16,0.2094122139912767
+12,Región de Magallanes y la Antártica Chilena,2020-04-17,0.21783449383609774
+12,Región de Magallanes y la Antártica Chilena,2020-04-18,0.22729032029387097
+12,Región de Magallanes y la Antártica Chilena,2020-04-19,0.24080231849974673
+12,Región de Magallanes y la Antártica Chilena,2020-04-20,0.23150769155806097
+12,Región de Magallanes y la Antártica Chilena,2020-04-21,0.2305870225385735
+12,Región de Magallanes y la Antártica Chilena,2020-04-22,0.23462852678071977
+12,Región de Magallanes y la Antártica Chilena,2020-04-23,0.26726493677562035
+12,Región de Magallanes y la Antártica Chilena,2020-04-24,0.26027151996407144
+12,Región de Magallanes y la Antártica Chilena,2020-04-25,0.2609220204880857
+12,Región de Magallanes y la Antártica Chilena,2020-04-26,0.24144900217024648
+12,Región de Magallanes y la Antártica Chilena,2020-04-27,0.22572028644153078
+12,Región de Magallanes y la Antártica Chilena,2020-04-28,0.22491909355434317
+12,Región de Magallanes y la Antártica Chilena,2020-04-29,0.20502637703241317
+12,Región de Magallanes y la Antártica Chilena,2020-04-30,0.1640145586621042
+12,Región de Magallanes y la Antártica Chilena,2020-05-01,0.17007725060322462
+12,Región de Magallanes y la Antártica Chilena,2020-05-02,0.15631228327429164
+12,Región de Magallanes y la Antártica Chilena,2020-05-03,0.15874112128264448
+12,Región de Magallanes y la Antártica Chilena,2020-05-04,0.16946478082520167
+12,Región de Magallanes y la Antártica Chilena,2020-05-05,0.16461959219414002
+12,Región de Magallanes y la Antártica Chilena,2020-05-06,0.19083322530432484
+12,Región de Magallanes y la Antártica Chilena,2020-05-07,0.1977929322640318
+12,Región de Magallanes y la Antártica Chilena,2020-05-08,0.18483553878032252
+12,Región de Magallanes y la Antártica Chilena,2020-05-09,0.16603118935489986
+12,Región de Magallanes y la Antártica Chilena,2020-05-10,0.15472820662334572
+12,Región de Magallanes y la Antártica Chilena,2020-05-11,0.15369544098220875
+12,Región de Magallanes y la Antártica Chilena,2020-05-12,0.14741121439095278
+12,Región de Magallanes y la Antártica Chilena,2020-05-13,0.12785549359905765
+12,Región de Magallanes y la Antártica Chilena,2020-05-14,0.10538264481041938
+12,Región de Magallanes y la Antártica Chilena,2020-05-15,0.10166528689951308
+12,Región de Magallanes y la Antártica Chilena,2020-05-16,0.10810997003592555
+12,Región de Magallanes y la Antártica Chilena,2020-05-17,0.09272535465131015
+12,Región de Magallanes y la Antártica Chilena,2020-05-18,0.08715431093715587
+12,Región de Magallanes y la Antártica Chilena,2020-05-19,0.08764911548935773
+12,Región de Magallanes y la Antártica Chilena,2020-05-20,0.07368315174536957
+12,Región de Magallanes y la Antártica Chilena,2020-05-21,0.08945704976726046
+12,Región de Magallanes y la Antártica Chilena,2020-05-22,0.09051492879227278
+12,Región de Magallanes y la Antártica Chilena,2020-05-23,0.09949756236736094
+12,Región de Magallanes y la Antártica Chilena,2020-05-24,0.11442293550168932
+12,Región de Magallanes y la Antártica Chilena,2020-05-25,0.10843233701510367
+12,Región de Magallanes y la Antártica Chilena,2020-05-26,0.10003039180830507
+12,Región de Magallanes y la Antártica Chilena,2020-05-27,0.10694368344074752
+12,Región de Magallanes y la Antártica Chilena,2020-05-28,0.08830930087416156
+12,Región de Magallanes y la Antártica Chilena,2020-05-29,0.07969893849021427
+12,Región de Magallanes y la Antártica Chilena,2020-05-30,0.06237513950159228
+12,Región de Magallanes y la Antártica Chilena,2020-05-31,0.054713688885423724
+12,Región de Magallanes y la Antártica Chilena,2020-06-01,0.0573381199528147
+12,Región de Magallanes y la Antártica Chilena,2020-06-02,0.058410960156089695
+12,Región de Magallanes y la Antártica Chilena,2020-06-03,0.05339842882776889
+12,Región de Magallanes y la Antártica Chilena,2020-06-04,0.04539842882776889
+12,Región de Magallanes y la Antártica Chilena,2020-06-05,0.045979765396366605
+12,Región de Magallanes y la Antártica Chilena,2020-06-06,0.04155091052108316
+12,Región de Magallanes y la Antártica Chilena,2020-06-07,0.038147991863927214
+12,Región de Magallanes y la Antártica Chilena,2020-06-08,0.041384013085559945
+12,Región de Magallanes y la Antártica Chilena,2020-06-09,0.035920511070333797
+12,Región de Magallanes y la Antártica Chilena,2020-06-10,0.048598309462417895
+12,Región de Magallanes y la Antártica Chilena,2020-06-11,0.06675811575781741
+12,Región de Magallanes y la Antártica Chilena,2020-06-12,0.0933338245026896
+12,Región de Magallanes y la Antártica Chilena,2020-06-13,0.10764083644190359
+12,Región de Magallanes y la Antártica Chilena,2020-06-14,0.11676684556791271
+12,Región de Magallanes y la Antártica Chilena,2020-06-15,0.11379197374058188
+12,Región de Magallanes y la Antártica Chilena,2020-06-16,0.1191433576580784
+12,Región de Magallanes y la Antártica Chilena,2020-06-17,0.11578290488128322
+12,Región de Magallanes y la Antártica Chilena,2020-06-18,0.11755665340315946
+12,Región de Magallanes y la Antártica Chilena,2020-06-19,0.09683816585275064
+12,Región de Magallanes y la Antártica Chilena,2020-06-20,0.0919518919057032
+12,Región de Magallanes y la Antártica Chilena,2020-06-21,0.08086964082345213
+12,Región de Magallanes y la Antártica Chilena,2020-06-22,0.09366904722779279
+12,Región de Magallanes y la Antártica Chilena,2020-06-23,0.09981191618385947
+12,Región de Magallanes y la Antártica Chilena,2020-06-24,0.09519712273037487
+12,Región de Magallanes y la Antártica Chilena,2020-06-25,0.08258957523910646
+12,Región de Magallanes y la Antártica Chilena,2020-06-26,0.07761754611648707
+12,Región de Magallanes y la Antártica Chilena,2020-06-27,0.07133139529252111
+12,Región de Magallanes y la Antártica Chilena,2020-06-28,0.08728377624490205
+12,Región de Magallanes y la Antártica Chilena,2020-06-29,0.07170970330965822
+12,Región de Magallanes y la Antártica Chilena,2020-06-30,0.06326276398862106
+12,Región de Magallanes y la Antártica Chilena,2020-07-01,0.060481591065535134
+12,Región de Magallanes y la Antártica Chilena,2020-07-02,0.05808169211391205
+12,Región de Magallanes y la Antártica Chilena,2020-07-03,0.06368308363151928
+12,Región de Magallanes y la Antártica Chilena,2020-07-04,0.06394985700753635
+12,Región de Magallanes y la Antártica Chilena,2020-07-05,0.04937678639998298
+12,Región de Magallanes y la Antártica Chilena,2020-07-06,0.04773526022429532
+12,Región de Magallanes y la Antártica Chilena,2020-07-07,0.050532813354074356
+12,Región de Magallanes y la Antártica Chilena,2020-07-08,0.050114360867452155
+12,Región de Magallanes y la Antártica Chilena,2020-07-09,0.06367564745105112
+12,Región de Magallanes y la Antártica Chilena,2020-07-10,0.05905346749384444
+12,Región de Magallanes y la Antártica Chilena,2020-07-11,0.07379269651878775
+12,Región de Magallanes y la Antártica Chilena,2020-07-12,0.09431814807872207
+12,Región de Magallanes y la Antártica Chilena,2020-07-13,0.09633313128719534
+12,Región de Magallanes y la Antártica Chilena,2020-07-14,0.09822038407860725
+12,Región de Magallanes y la Antártica Chilena,2020-07-15,0.09988151364671358
+12,Región de Magallanes y la Antártica Chilena,2020-07-16,0.08333775328542621
+12,Región de Magallanes y la Antártica Chilena,2020-07-17,0.08095421142264436
+12,Región de Magallanes y la Antártica Chilena,2020-07-18,0.06436575785940088
+12,Región de Magallanes y la Antártica Chilena,2020-07-19,0.05484194833559136
+12,Región de Magallanes y la Antártica Chilena,2020-07-20,0.0652373346803448
+12,Región de Magallanes y la Antártica Chilena,2020-07-21,0.05964347103946488
+12,Región de Magallanes y la Antártica Chilena,2020-07-22,0.0546673361760547
+12,Región de Magallanes y la Antártica Chilena,2020-07-23,0.0564707741788905
+12,Región de Magallanes y la Antártica Chilena,2020-07-24,0.06169006493526883
+12,Región de Magallanes y la Antártica Chilena,2020-07-25,0.07062545727402252
+12,Región de Magallanes y la Antártica Chilena,2020-07-26,0.07442292562845289
+12,Región de Magallanes y la Antártica Chilena,2020-07-27,0.06461864942906467
+12,Región de Magallanes y la Antártica Chilena,2020-07-28,0.06390963200272202
+12,Región de Magallanes y la Antártica Chilena,2020-07-29,0.06381842215476095
+12,Región de Magallanes y la Antártica Chilena,2020-07-30,0.06541180349381412
+12,Región de Magallanes y la Antártica Chilena,2020-07-31,0.06397259205117685
+12,Región de Magallanes y la Antártica Chilena,2020-08-01,0.07488612906361496
+12,Región de Magallanes y la Antártica Chilena,2020-08-02,0.07891178996088526
+12,Región de Magallanes y la Antártica Chilena,2020-08-03,0.08996346740767472
+12,Región de Magallanes y la Antártica Chilena,2020-08-04,0.09471256240350671
+12,Región de Magallanes y la Antártica Chilena,2020-08-05,0.09494753018947777
+12,Región de Magallanes y la Antártica Chilena,2020-08-06,0.09819814154298921
+12,Región de Magallanes y la Antártica Chilena,2020-08-07,0.09857350905153162
+12,Región de Magallanes y la Antártica Chilena,2020-08-08,0.09871439380780099
+12,Región de Magallanes y la Antártica Chilena,2020-08-09,0.09021099244725676
+12,Región de Magallanes y la Antártica Chilena,2020-08-10,0.08122811485972802
+12,Región de Magallanes y la Antártica Chilena,2020-08-11,0.0838553040153228
+12,Región de Magallanes y la Antártica Chilena,2020-08-12,0.09849131169535041
+12,Región de Magallanes y la Antártica Chilena,2020-08-13,0.1006145321175399
+12,Región de Magallanes y la Antártica Chilena,2020-08-14,0.10582149013179921
+12,Región de Magallanes y la Antártica Chilena,2020-08-15,0.10196048627079536
+12,Región de Magallanes y la Antártica Chilena,2020-08-16,0.10922181776968705
+12,Región de Magallanes y la Antártica Chilena,2020-08-17,0.11713457903286219
+12,Región de Magallanes y la Antártica Chilena,2020-08-18,0.13181542574808305
+12,Región de Magallanes y la Antártica Chilena,2020-08-19,0.14259982862743364
+12,Región de Magallanes y la Antártica Chilena,2020-08-20,0.15382911658085954
+12,Región de Magallanes y la Antártica Chilena,2020-08-21,0.15585093594690383
+12,Región de Magallanes y la Antártica Chilena,2020-08-22,0.17654961410414555
+12,Región de Magallanes y la Antártica Chilena,2020-08-23,0.19486651389777085
+12,Región de Magallanes y la Antártica Chilena,2020-08-24,0.20715151647779376
+12,Región de Magallanes y la Antártica Chilena,2020-08-25,0.20913417560838293
+1,Región de Tarapacá,2020-03-20,NA
+1,Región de Tarapacá,2020-03-21,NA
+1,Región de Tarapacá,2020-03-22,NA
+1,Región de Tarapacá,2020-03-23,NA
+1,Región de Tarapacá,2020-03-24,NA
+1,Región de Tarapacá,2020-03-25,NA
+1,Región de Tarapacá,2020-03-26,0.05599436738605415
+1,Región de Tarapacá,2020-03-27,0.05791836931005607
+1,Región de Tarapacá,2020-03-28,0.04380503166730666
+1,Región de Tarapacá,2020-03-29,0.04031895799255374
+1,Región de Tarapacá,2020-03-30,0.04840521136182598
+1,Región de Tarapacá,2020-03-31,0.05792902088563551
+1,Región de Tarapacá,2020-04-01,0.04432357870876476
+1,Región de Tarapacá,2020-04-02,0.04270187739666097
+1,Región de Tarapacá,2020-04-03,0.055929390624174194
+1,Región de Tarapacá,2020-04-04,0.06193179158455835
+1,Región de Tarapacá,2020-04-05,0.0778841725369393
+1,Región de Tarapacá,2020-04-06,0.06979791916766706
+1,Región de Tarapacá,2020-04-07,0.07126312063286853
+1,Región de Tarapacá,2020-04-08,0.08857913794888585
+1,Región de Tarapacá,2020-04-09,NA
+1,Región de Tarapacá,2020-04-10,NA
+1,Región de Tarapacá,2020-04-11,NA
+1,Región de Tarapacá,2020-04-12,NA
+1,Región de Tarapacá,2020-04-13,NA
+1,Región de Tarapacá,2020-04-14,NA
+1,Región de Tarapacá,2020-04-15,NA
+1,Región de Tarapacá,2020-04-16,0.11486889837902374
+1,Región de Tarapacá,2020-04-17,0.09320484814354493
+1,Región de Tarapacá,2020-04-18,0.06463341957211637
+1,Región de Tarapacá,2020-04-19,0.047107143006444224
+1,Región de Tarapacá,2020-04-20,0.06439558704648062
+1,Región de Tarapacá,2020-04-21,0.07827574926730657
+1,Región de Tarapacá,2020-04-22,0.07449221338104195
+1,Región de Tarapacá,2020-04-23,0.07381085975851186
+1,Región de Tarapacá,2020-04-24,0.07278862617813875
+1,Región de Tarapacá,2020-04-25,0.09303609524450546
+1,Región de Tarapacá,2020-04-26,0.08606981616723075
+1,Región de Tarapacá,2020-04-27,0.09635029443295877
+1,Región de Tarapacá,2020-04-28,0.09925389489753485
+1,Región de Tarapacá,2020-04-29,0.11530525926350595
+1,Región de Tarapacá,2020-04-30,0.12799141480680434
+1,Región de Tarapacá,2020-05-01,0.13588178025530934
+1,Región de Tarapacá,2020-05-02,0.1407852166215382
+1,Región de Tarapacá,2020-05-03,0.17068344330483098
+1,Región de Tarapacá,2020-05-04,0.1684701177832348
+1,Región de Tarapacá,2020-05-05,0.18216485582164826
+1,Región de Tarapacá,2020-05-06,0.18475560235089272
+1,Región de Tarapacá,2020-05-07,0.1728460226549917
+1,Región de Tarapacá,2020-05-08,0.17091244667682973
+1,Región de Tarapacá,2020-05-09,0.17736710382324808
+1,Región de Tarapacá,2020-05-10,0.19014355593156276
+1,Región de Tarapacá,2020-05-11,0.19549158388087004
+1,Región de Tarapacá,2020-05-12,0.19395854505451549
+1,Región de Tarapacá,2020-05-13,0.21180535989381155
+1,Región de Tarapacá,2020-05-14,0.2491686635147069
+1,Región de Tarapacá,2020-05-15,0.2783039804042872
+1,Región de Tarapacá,2020-05-16,0.3047982127671735
+1,Región de Tarapacá,2020-05-17,0.3167162652819986
+1,Región de Tarapacá,2020-05-18,0.3413276958635784
+1,Región de Tarapacá,2020-05-19,0.3531286363697862
+1,Región de Tarapacá,2020-05-20,0.3488445554029447
+1,Región de Tarapacá,2020-05-21,0.3703296069881544
+1,Región de Tarapacá,2020-05-22,0.37093564145470587
+1,Región de Tarapacá,2020-05-23,0.357229699671599
+1,Región de Tarapacá,2020-05-24,0.3584875217526657
+1,Región de Tarapacá,2020-05-25,0.3556254130590235
+1,Región de Tarapacá,2020-05-26,0.3573156151226308
+1,Región de Tarapacá,2020-05-27,0.36765210871145426
+1,Región de Tarapacá,2020-05-28,0.34321663109835576
+1,Región de Tarapacá,2020-05-29,0.35062332318676187
+1,Región de Tarapacá,2020-05-30,0.3592773992973961
+1,Región de Tarapacá,2020-05-31,0.3520623920823889
+1,Región de Tarapacá,2020-06-01,0.35638987433442787
+1,Región de Tarapacá,2020-06-02,0.36677788280786794
+1,Región de Tarapacá,2020-06-03,0.36402201820477403
+1,Región de Tarapacá,2020-06-04,0.3806588116624855
+1,Región de Tarapacá,2020-06-05,0.3726305484931319
+1,Región de Tarapacá,2020-06-06,0.36747222961331466
+1,Región de Tarapacá,2020-06-07,0.35939098293024424
+1,Región de Tarapacá,2020-06-08,0.3563086290314628
+1,Región de Tarapacá,2020-06-09,0.34973151232151495
+1,Región de Tarapacá,2020-06-10,0.357653618892299
+1,Región de Tarapacá,2020-06-11,0.3488908958761217
+1,Región de Tarapacá,2020-06-12,0.3383908742488887
+1,Región de Tarapacá,2020-06-13,0.34448414733524935
+1,Región de Tarapacá,2020-06-14,0.36285206939487213
+1,Región de Tarapacá,2020-06-15,0.35485678257771797
+1,Región de Tarapacá,2020-06-16,0.3443716549674794
+1,Región de Tarapacá,2020-06-17,0.33982120058254817
+1,Región de Tarapacá,2020-06-18,0.33504680070401965
+1,Región de Tarapacá,2020-06-19,0.3374867964243682
+1,Región de Tarapacá,2020-06-20,0.330653807388932
+1,Región de Tarapacá,2020-06-21,0.30505844443478447
+1,Región de Tarapacá,2020-06-22,0.29330190804530193
+1,Región de Tarapacá,2020-06-23,0.2900055365424087
+1,Región de Tarapacá,2020-06-24,0.2695890706234782
+1,Región de Tarapacá,2020-06-25,0.2500233628026498
+1,Región de Tarapacá,2020-06-26,0.24714315648555177
+1,Región de Tarapacá,2020-06-27,0.22592732797908285
+1,Región de Tarapacá,2020-06-28,0.2114907841307743
+1,Región de Tarapacá,2020-06-29,0.21939721093416895
+1,Región de Tarapacá,2020-06-30,0.21291516143027478
+1,Región de Tarapacá,2020-07-01,0.20997195731509208
+1,Región de Tarapacá,2020-07-02,0.21959442591403908
+1,Región de Tarapacá,2020-07-03,0.20896548938761236
+1,Región de Tarapacá,2020-07-04,0.21390832752929775
+1,Región de Tarapacá,2020-07-05,0.22514525473261152
+1,Región de Tarapacá,2020-07-06,0.21097114758975438
+1,Región de Tarapacá,2020-07-07,0.20671069789160576
+1,Región de Tarapacá,2020-07-08,0.20825549947457947
+1,Región de Tarapacá,2020-07-09,0.19474399794848699
+1,Región de Tarapacá,2020-07-10,0.1911546965724653
+1,Región de Tarapacá,2020-07-11,0.18857316861817705
+1,Región de Tarapacá,2020-07-12,0.18589138761127288
+1,Región de Tarapacá,2020-07-13,0.18782557244693834
+1,Región de Tarapacá,2020-07-14,0.181314650366372
+1,Región de Tarapacá,2020-07-15,0.17885987243989598
+1,Región de Tarapacá,2020-07-16,0.192933518092489
+1,Región de Tarapacá,2020-07-17,0.2065613612213106
+1,Región de Tarapacá,2020-07-18,0.20769578276998854
+1,Región de Tarapacá,2020-07-19,0.20753114874174897
+1,Región de Tarapacá,2020-07-20,0.21144965339263605
+1,Región de Tarapacá,2020-07-21,0.21740987154884464
+1,Región de Tarapacá,2020-07-22,0.2152678694068425
+1,Región de Tarapacá,2020-07-23,0.218593189919663
+1,Región de Tarapacá,2020-07-24,0.21139625923679145
+1,Región de Tarapacá,2020-07-25,0.20899348859367747
+1,Región de Tarapacá,2020-07-26,0.20974163188769232
+1,Región de Tarapacá,2020-07-27,0.2015197073055267
+1,Región de Tarapacá,2020-07-28,0.18935865527430418
+1,Región de Tarapacá,2020-07-29,0.18332583674148564
+1,Región de Tarapacá,2020-07-30,0.15951599359821975
+1,Región de Tarapacá,2020-07-31,0.1548112060891721
+1,Región de Tarapacá,2020-08-01,0.1526890562672644
+1,Región de Tarapacá,2020-08-02,0.149540748751487
+1,Región de Tarapacá,2020-08-03,0.1410932391164209
+1,Región de Tarapacá,2020-08-04,0.14038674648524735
+1,Región de Tarapacá,2020-08-05,0.144023551983755
+1,Región de Tarapacá,2020-08-06,0.15232674364092308
+1,Región de Tarapacá,2020-08-07,0.14686678808211
+1,Región de Tarapacá,2020-08-08,0.1428169682283984
+1,Región de Tarapacá,2020-08-09,0.1428312320714581
+1,Región de Tarapacá,2020-08-10,0.14441958987541081
+1,Región de Tarapacá,2020-08-11,0.14478522845243152
+1,Región de Tarapacá,2020-08-12,0.1391748402219142
+1,Región de Tarapacá,2020-08-13,0.13104182418761737
+1,Región de Tarapacá,2020-08-14,0.12753850741065562
+1,Región de Tarapacá,2020-08-15,0.1341004774762753
+1,Región de Tarapacá,2020-08-16,0.14410226824783254
+1,Región de Tarapacá,2020-08-17,0.14459059204619795
+1,Región de Tarapacá,2020-08-18,0.14609936533112697
+1,Región de Tarapacá,2020-08-19,0.14234511748753884
+1,Región de Tarapacá,2020-08-20,0.1401200413487095
+1,Región de Tarapacá,2020-08-21,0.13656622706376315
+1,Región de Tarapacá,2020-08-22,0.12083751133504743
+1,Región de Tarapacá,2020-08-23,0.0966100121161818
+1,Región de Tarapacá,2020-08-24,0.08738183956317347
+1,Región de Tarapacá,2020-08-25,0.07881902019691488
+5,Región de Valparaíso,2020-03-02,NA
+5,Región de Valparaíso,2020-03-03,NA
+5,Región de Valparaíso,2020-03-04,NA
+5,Región de Valparaíso,2020-03-05,NA
+5,Región de Valparaíso,2020-03-06,NA
+5,Región de Valparaíso,2020-03-07,NA
+5,Región de Valparaíso,2020-03-08,0.006493506493506494
+5,Región de Valparaíso,2020-03-09,0.006493506493506494
+5,Región de Valparaíso,2020-03-10,0
+5,Región de Valparaíso,2020-03-11,0
+5,Región de Valparaíso,2020-03-12,0
+5,Región de Valparaíso,2020-03-13,0.015873015873015872
+5,Región de Valparaíso,2020-03-14,0.022675736961451247
+5,Región de Valparaíso,2020-03-15,0.03325774754346183
+5,Región de Valparaíso,2020-03-16,0.04673483649224889
+5,Región de Valparaíso,2020-03-17,0.0615131616154016
+5,Región de Valparaíso,2020-03-18,0.06612145654627717
+5,Región de Valparaíso,2020-03-19,0.07483225794000539
+5,Región de Valparaíso,2020-03-20,0.06761725072499818
+5,Región de Valparaíso,2020-03-21,0.07356963167737914
+5,Región de Valparaíso,2020-03-22,0.06821410193160549
+5,Región de Valparaíso,2020-03-23,0.062853896099701545
+5,Región de Valparaíso,2020-03-24,0.05714586576112933
+5,Región de Valparaíso,2020-03-25,0.05828469726703537
+5,Región de Valparaíso,2020-03-26,0.0739245452239565
+5,Región de Valparaíso,2020-03-27,0.09472161756742059
+5,Región de Valparaíso,2020-03-28,0.0947596924988857
+5,Región de Valparaíso,2020-03-29,0.09867606880550592
+5,Región de Valparaíso,2020-03-30,0.10566907579851291
+5,Región de Valparaíso,2020-03-31,0.1079818202854179
+5,Región de Valparaíso,2020-04-01,0.11039795915475874
+5,Región de Valparaíso,2020-04-02,0.09149347654059871
+5,Región de Valparaíso,2020-04-03,0.06750058041307554
+5,Región de Valparaíso,2020-04-04,0.05928615801954867
+5,Región de Valparaíso,2020-04-05,0.060965811699202344
+5,Región de Valparaíso,2020-04-06,0.050474148190297455
+5,Región de Valparaíso,2020-04-07,0.043496395262424305
+5,Región de Valparaíso,2020-04-08,0.039347850598657155
+5,Región de Valparaíso,2020-04-09,0.04007929003977402
+5,Región de Valparaíso,2020-04-10,0.03750310805182733
+5,Región de Valparaíso,2020-04-11,0.04071656126528054
+5,Región de Valparaíso,2020-04-12,0.03882262187134115
+5,Región de Valparaíso,2020-04-13,0.04899357085248305
+5,Región de Valparaíso,2020-04-14,0.05483542133828602
+5,Región de Valparaíso,2020-04-15,0.05931091848847409
+5,Región de Valparaíso,2020-04-16,0.05895795976641666
+5,Región de Valparaíso,2020-04-17,0.06649948555611764
+5,Región de Valparaíso,2020-04-18,0.06611967668574273
+5,Región de Valparaíso,2020-04-19,0.064490375330164
+5,Región de Valparaíso,2020-04-20,0.05836630513445373
+5,Región de Valparaíso,2020-04-21,0.05482214274994835
+5,Región de Valparaíso,2020-04-22,0.053237406183127896
+5,Región de Valparaíso,2020-04-23,0.05038894920376963
+5,Región de Valparaíso,2020-04-24,0.05084992227022605
+5,Región de Valparaíso,2020-04-25,0.057008951919821735
+5,Región de Valparaíso,2020-04-26,0.063740294091727
+5,Región de Valparaíso,2020-04-27,0.07797595206408876
+5,Región de Valparaíso,2020-04-28,0.08525707413686459
+5,Región de Valparaíso,2020-04-29,0.09034936076828455
+5,Región de Valparaíso,2020-04-30,0.09733994770073194
+5,Región de Valparaíso,2020-05-01,0.10364342303593556
+5,Región de Valparaíso,2020-05-02,0.10675074718386883
+5,Región de Valparaíso,2020-05-03,0.11514538410840611
+5,Región de Valparaíso,2020-05-04,0.10413542630983515
+5,Región de Valparaíso,2020-05-05,0.10200750083199388
+5,Región de Valparaíso,2020-05-06,0.10526632104697307
+5,Región de Valparaíso,2020-05-07,0.10561849298167479
+5,Región de Valparaíso,2020-05-08,0.10994829187448543
+5,Región de Valparaíso,2020-05-09,0.10960197661635988
+5,Región de Valparaíso,2020-05-10,0.10569524596544319
+5,Región de Valparaíso,2020-05-11,0.11216255288099505
+5,Región de Valparaíso,2020-05-12,0.11591059134883168
+5,Región de Valparaíso,2020-05-13,0.11780710107496872
+5,Región de Valparaíso,2020-05-14,0.12367118744591485
+5,Región de Valparaíso,2020-05-15,0.1227401527424259
+5,Región de Valparaíso,2020-05-16,0.1296847577275611
+5,Región de Valparaíso,2020-05-17,0.1347713894236349
+5,Región de Valparaíso,2020-05-18,0.14251441887283456
+5,Región de Valparaíso,2020-05-19,0.15526704566190389
+5,Región de Valparaíso,2020-05-20,0.1619234716731686
+5,Región de Valparaíso,2020-05-21,0.17490164172559325
+5,Región de Valparaíso,2020-05-22,0.18568103731881844
+5,Región de Valparaíso,2020-05-23,0.19382071093646588
+5,Región de Valparaíso,2020-05-24,0.19712139031828618
+5,Región de Valparaíso,2020-05-25,0.20532791958860622
+5,Región de Valparaíso,2020-05-26,0.2095221809451487
+5,Región de Valparaíso,2020-05-27,0.22198755490636754
+5,Región de Valparaíso,2020-05-28,0.22382365372186744
+5,Región de Valparaíso,2020-05-29,0.2263090665167628
+5,Región de Valparaíso,2020-05-30,0.23476475874620475
+5,Región de Valparaíso,2020-05-31,0.24966494921668184
+5,Región de Valparaíso,2020-06-01,0.2518993783052247
+5,Región de Valparaíso,2020-06-02,0.2519130536493171
+5,Región de Valparaíso,2020-06-03,0.24788830915877064
+5,Región de Valparaíso,2020-06-04,0.2574225660383544
+5,Región de Valparaíso,2020-06-05,0.25958142214585317
+5,Región de Valparaíso,2020-06-06,0.25856911747933525
+5,Región de Valparaíso,2020-06-07,0.26268146475938436
+5,Región de Valparaíso,2020-06-08,0.26647795785000056
+5,Región de Valparaíso,2020-06-09,0.26810659790065383
+5,Región de Valparaíso,2020-06-10,0.2686244814126393
+5,Región de Valparaíso,2020-06-11,0.26259027444819977
+5,Región de Valparaíso,2020-06-12,0.2620729519675133
+5,Región de Valparaíso,2020-06-13,0.26412498784425914
+5,Región de Valparaíso,2020-06-14,0.26591602684050275
+5,Región de Valparaíso,2020-06-15,0.2599395079172258
+5,Región de Valparaíso,2020-06-16,0.2619951098416064
+5,Región de Valparaíso,2020-06-17,0.26452270618094603
+5,Región de Valparaíso,2020-06-18,0.260678908652938
+5,Región de Valparaíso,2020-06-19,0.262982922437859
+5,Región de Valparaíso,2020-06-20,0.268153732242926
+5,Región de Valparaíso,2020-06-21,0.2631614127344774
+5,Región de Valparaíso,2020-06-22,0.27045535668352055
+5,Región de Valparaíso,2020-06-23,0.26741388888091266
+5,Región de Valparaíso,2020-06-24,0.265641480990408
+5,Región de Valparaíso,2020-06-25,0.2677479567810943
+5,Región de Valparaíso,2020-06-26,0.2625495692640647
+5,Región de Valparaíso,2020-06-27,0.25657555781121383
+5,Región de Valparaíso,2020-06-28,0.24961338727747134
+5,Región de Valparaíso,2020-06-29,0.25421587227862746
+5,Región de Valparaíso,2020-06-30,0.253740047348033
+5,Región de Valparaíso,2020-07-01,0.25506002768192926
+5,Región de Valparaíso,2020-07-02,0.25072458061520464
+5,Región de Valparaíso,2020-07-03,0.24843748568363502
+5,Región de Valparaíso,2020-07-04,0.23829370462215516
+5,Región de Valparaíso,2020-07-05,0.24909173785918792
+5,Región de Valparaíso,2020-07-06,0.22973906405423997
+5,Región de Valparaíso,2020-07-07,0.22370764666102327
+5,Región de Valparaíso,2020-07-08,0.2161874046554923
+5,Región de Valparaíso,2020-07-09,0.21449307628250355
+5,Región de Valparaíso,2020-07-10,0.21032758272993868
+5,Región de Valparaíso,2020-07-11,0.21703163907531495
+5,Región de Valparaíso,2020-07-12,0.19228894035517521
+5,Región de Valparaíso,2020-07-13,0.19262463800028987
+5,Región de Valparaíso,2020-07-14,0.18644155808033225
+5,Región de Valparaíso,2020-07-15,0.1789126562924159
+5,Región de Valparaíso,2020-07-16,0.18062454506130135
+5,Región de Valparaíso,2020-07-17,0.1785660118505801
+5,Región de Valparaíso,2020-07-18,0.17597087278485282
+5,Región de Valparaíso,2020-07-19,0.18473521342716873
+5,Región de Valparaíso,2020-07-20,0.18036313547289407
+5,Región de Valparaíso,2020-07-21,0.1817761888131182
+5,Región de Valparaíso,2020-07-22,0.18383447054232352
+5,Región de Valparaíso,2020-07-23,0.17371979137871635
+5,Región de Valparaíso,2020-07-24,0.17079222468808347
+5,Región de Valparaíso,2020-07-25,0.15751775205877214
+5,Región de Valparaíso,2020-07-26,0.14579605491615016
+5,Región de Valparaíso,2020-07-27,0.1408059865219771
+5,Región de Valparaíso,2020-07-28,0.13404570368184246
+5,Región de Valparaíso,2020-07-29,0.12921276052390523
+5,Región de Valparaíso,2020-07-30,0.1255175615998477
+5,Región de Valparaíso,2020-07-31,0.11609987395022091
+5,Región de Valparaíso,2020-08-01,0.11094583472215651
+5,Región de Valparaíso,2020-08-02,0.11288020267790856
+5,Región de Valparaíso,2020-08-03,0.11113778115573336
+5,Región de Valparaíso,2020-08-04,0.11180320563891986
+5,Región de Valparaíso,2020-08-05,0.1094868550454157
+5,Región de Valparaíso,2020-08-06,0.10710884654584141
+5,Región de Valparaíso,2020-08-07,0.107758653476368
+5,Región de Valparaíso,2020-08-08,0.10660728365518239
+5,Región de Valparaíso,2020-08-09,0.0981880035941922
+5,Región de Valparaíso,2020-08-10,0.09813526706288431
+5,Región de Valparaíso,2020-08-11,0.09428507862189862
+5,Región de Valparaíso,2020-08-12,0.09093887285549636
+5,Región de Valparaíso,2020-08-13,0.08946180558635576
+5,Región de Valparaíso,2020-08-14,0.08697450382554105
+5,Región de Valparaíso,2020-08-15,0.08158395288661092
+5,Región de Valparaíso,2020-08-16,0.08017193200617191
+5,Región de Valparaíso,2020-08-17,0.07406082849338994
+5,Región de Valparaíso,2020-08-18,0.07155269710618399
+5,Región de Valparaíso,2020-08-19,0.06885991124639196
+5,Región de Valparaíso,2020-08-20,0.06583048169172374
+5,Región de Valparaíso,2020-08-21,0.06485372547489464
+5,Región de Valparaíso,2020-08-22,0.06710433670204445
+5,Región de Valparaíso,2020-08-23,0.06649689446137677
+5,Región de Valparaíso,2020-08-24,0.06873832638257081
+5,Región de Valparaíso,2020-08-25,0.0696986922662288
+8,Región del Biobío,2020-03-09,NA
+8,Región del Biobío,2020-03-10,NA
+8,Región del Biobío,2020-03-11,NA
+8,Región del Biobío,2020-03-12,NA
+8,Región del Biobío,2020-03-13,NA
+8,Región del Biobío,2020-03-14,NA
+8,Región del Biobío,2020-03-15,0.04082143802048555
+8,Región del Biobío,2020-03-16,0.03966445348754194
+8,Región del Biobío,2020-03-17,0.04731751471203174
+8,Región del Biobío,2020-03-18,0.05488610506207904
+8,Región del Biobío,2020-03-19,0.05097633062598882
+8,Región del Biobío,2020-03-20,0.051802448179456985
+8,Región del Biobío,2020-03-21,0.06443607305797981
+8,Región del Biobío,2020-03-22,0.06845474041603011
+8,Región del Biobío,2020-03-23,0.07073217312824544
+8,Región del Biobío,2020-03-24,0.07194610697764726
+8,Región del Biobío,2020-03-25,0.07189631362008117
+8,Región del Biobío,2020-03-26,0.07194944999458633
+8,Región del Biobío,2020-03-27,0.08228666969141195
+8,Región del Biobío,2020-03-28,0.08451679378068432
+8,Región del Biobío,2020-03-29,0.08839553826093256
+8,Región del Biobío,2020-03-30,0.08694275375730058
+8,Región del Biobío,2020-03-31,0.0878361845929032
+8,Región del Biobío,2020-04-01,0.08921325363914519
+8,Región del Biobío,2020-04-02,0.0930560556578385
+8,Región del Biobío,2020-04-03,0.09034568208653779
+8,Región del Biobío,2020-04-04,0.08677761418186548
+8,Región del Biobío,2020-04-05,0.07207529914732455
+8,Región del Biobío,2020-04-06,0.07156901081611992
+8,Región del Biobío,2020-04-07,0.0698085849066257
+8,Región del Biobío,2020-04-08,0.0661441071978824
+8,Región del Biobío,2020-04-09,0.06095990140721826
+8,Región del Biobío,2020-04-10,0.05181680660331149
+8,Región del Biobío,2020-04-11,0.05039336711974722
+8,Región del Biobío,2020-04-12,0.050823306537374734
+8,Región del Biobío,2020-04-13,0.049679115594790234
+8,Región del Biobío,2020-04-14,0.04730341255766988
+8,Región del Biobío,2020-04-15,0.0485500330923337
+8,Región del Biobío,2020-04-16,0.05184331302112765
+8,Región del Biobío,2020-04-17,0.052378551873616855
+8,Región del Biobío,2020-04-18,0.047711631288852883
+8,Región del Biobío,2020-04-19,0.046947689348440354
+8,Región del Biobío,2020-04-20,0.04748036736943497
+8,Región del Biobío,2020-04-21,0.046715156898294884
+8,Región del Biobío,2020-04-22,0.04738000517650832
+8,Región del Biobío,2020-04-23,0.04537499264518
+8,Región del Biobío,2020-04-24,0.041450900955427826
+8,Región del Biobío,2020-04-25,0.040119671970318384
+8,Región del Biobío,2020-04-26,0.03702984310304478
+8,Región del Biobío,2020-04-27,0.03007661933566172
+8,Región del Biobío,2020-04-28,0.029185786812176134
+8,Región del Biobío,2020-04-29,0.026409741896393227
+8,Región del Biobío,2020-04-30,0.023579910205568794
+8,Región del Biobío,2020-05-01,0.02725885205804973
+8,Región del Biobío,2020-05-02,0.025159382940999814
+8,Región del Biobío,2020-05-03,0.024355110756208054
+8,Región del Biobío,2020-05-04,0.02958159159244499
+8,Región del Biobío,2020-05-05,0.0311903432011966
+8,Región del Biobío,2020-05-06,0.035065289215880605
+8,Región del Biobío,2020-05-07,0.0377184678202444
+8,Región del Biobío,2020-05-08,0.03698669488508163
+8,Región del Biobío,2020-05-09,0.04345383023420456
+8,Región del Biobío,2020-05-10,0.04203139225380549
+8,Región del Biobío,2020-05-11,0.04371456766217039
+8,Región del Biobío,2020-05-12,0.04195435597829459
+8,Región del Biobío,2020-05-13,0.03903646641444229
+8,Región del Biobío,2020-05-14,0.038923935001192116
+8,Región del Biobío,2020-05-15,0.04064729101026241
+8,Región del Biobío,2020-05-16,0.041226900080437515
+8,Región del Biobío,2020-05-17,0.04925598658248266
+8,Región del Biobío,2020-05-18,0.050218050454498904
+8,Región del Biobío,2020-05-19,0.05361965508411549
+8,Región del Biobío,2020-05-20,0.05688529816027826
+8,Región del Biobío,2020-05-21,0.05938515885213056
+8,Región del Biobío,2020-05-22,0.062796795410077
+8,Región del Biobío,2020-05-23,0.06159447571719127
+8,Región del Biobío,2020-05-24,0.0688707139716904
+8,Región del Biobío,2020-05-25,0.07627381544014807
+8,Región del Biobío,2020-05-26,0.08065059872534949
+8,Región del Biobío,2020-05-27,0.087481511760341
+8,Región del Biobío,2020-05-28,0.09177482560464031
+8,Región del Biobío,2020-05-29,0.09300187086672727
+8,Región del Biobío,2020-05-30,0.09520815075859668
+8,Región del Biobío,2020-05-31,0.09051430856475448
+8,Región del Biobío,2020-06-01,0.08625293609542585
+8,Región del Biobío,2020-06-02,0.08261753644080862
+8,Región del Biobío,2020-06-03,0.0766292201209958
+8,Región del Biobío,2020-06-04,0.07323307638742874
+8,Región del Biobío,2020-06-05,0.06993064335262371
+8,Región del Biobío,2020-06-06,0.07484085174988105
+8,Región del Biobío,2020-06-07,0.08049384941031364
+8,Región del Biobío,2020-06-08,0.08532826083339377
+8,Región del Biobío,2020-06-09,0.09242980624139081
+8,Región del Biobío,2020-06-10,0.09677670035015033
+8,Región del Biobío,2020-06-11,0.10278631336047318
+8,Región del Biobío,2020-06-12,0.11307426619071788
+8,Región del Biobío,2020-06-13,0.11599523108511176
+8,Región del Biobío,2020-06-14,0.1154702678630584
+8,Región del Biobío,2020-06-15,0.11587197284386966
+8,Región del Biobío,2020-06-16,0.11799981521485418
+8,Región del Biobío,2020-06-17,0.12713989897056774
+8,Región del Biobío,2020-06-18,0.13094862161858806
+8,Región del Biobío,2020-06-19,0.13162298697088573
+8,Región del Biobío,2020-06-20,0.13049022597170593
+8,Región del Biobío,2020-06-21,0.12991638985976697
+8,Región del Biobío,2020-06-22,0.13222588020764534
+8,Región del Biobío,2020-06-23,0.13748689105394254
+8,Región del Biobío,2020-06-24,0.13300838930970862
+8,Región del Biobío,2020-06-25,0.1291443137293667
+8,Región del Biobío,2020-06-26,0.12718588281601775
+8,Región del Biobío,2020-06-27,0.12944209379620658
+8,Región del Biobío,2020-06-28,0.12981067539254618
+8,Región del Biobío,2020-06-29,0.12627483722511124
+8,Región del Biobío,2020-06-30,0.1200298169247902
+8,Región del Biobío,2020-07-01,0.11452414842208218
+8,Región del Biobío,2020-07-02,0.11202166964710222
+8,Región del Biobío,2020-07-03,0.11028977140835465
+8,Región del Biobío,2020-07-04,0.10585122970302858
+8,Región del Biobío,2020-07-05,0.10329445727590666
+8,Región del Biobío,2020-07-06,0.10394051778886024
+8,Región del Biobío,2020-07-07,0.10216095619149523
+8,Región del Biobío,2020-07-08,0.10302378535122518
+8,Región del Biobío,2020-07-09,0.10402867434362524
+8,Región del Biobío,2020-07-10,0.10106394953853641
+8,Región del Biobío,2020-07-11,0.10049026128907476
+8,Región del Biobío,2020-07-12,0.09922607301750673
+8,Región del Biobío,2020-07-13,0.09936026843927015
+8,Región del Biobío,2020-07-14,0.09841019865887601
+8,Región del Biobío,2020-07-15,0.09703481366081472
+8,Región del Biobío,2020-07-16,0.09872876312249869
+8,Región del Biobío,2020-07-17,0.10071346022696313
+8,Región del Biobío,2020-07-18,0.10223854059175808
+8,Región del Biobío,2020-07-19,0.10574325909108895
+8,Región del Biobío,2020-07-20,0.10520543441302622
+8,Región del Biobío,2020-07-21,0.1076958817469948
+8,Región del Biobío,2020-07-22,0.10902217885622752
+8,Región del Biobío,2020-07-23,0.10560239825792166
+8,Región del Biobío,2020-07-24,0.1034110664857278
+8,Región del Biobío,2020-07-25,0.10122054762519488
+8,Región del Biobío,2020-07-26,0.10272726601503014
+8,Región del Biobío,2020-07-27,0.10151972389990593
+8,Región del Biobío,2020-07-28,0.09791697921418739
+8,Región del Biobío,2020-07-29,0.0945106185136103
+8,Región del Biobío,2020-07-30,0.09435271367297227
+8,Región del Biobío,2020-07-31,0.09240617134520154
+8,Región del Biobío,2020-08-01,0.09246071513088627
+8,Región del Biobío,2020-08-02,0.08632965511194199
+8,Región del Biobío,2020-08-03,0.08402881754972316
+8,Región del Biobío,2020-08-04,0.0859821547611415
+8,Región del Biobío,2020-08-05,0.08817014949241862
+8,Región del Biobío,2020-08-06,0.08666476004367865
+8,Región del Biobío,2020-08-07,0.08566049483764558
+8,Región del Biobío,2020-08-08,0.0828147641626389
+8,Región del Biobío,2020-08-09,0.08264330317317983
+8,Región del Biobío,2020-08-10,0.08212564946635548
+8,Región del Biobío,2020-08-11,0.07968609238316988
+8,Región del Biobío,2020-08-12,0.07743898403544809
+8,Región del Biobío,2020-08-13,0.07542190615140368
+8,Región del Biobío,2020-08-14,0.07588460843447607
+8,Región del Biobío,2020-08-15,0.07675772351706223
+8,Región del Biobío,2020-08-16,0.081443818138397
+8,Región del Biobío,2020-08-17,0.08353154608185095
+8,Región del Biobío,2020-08-18,0.085022996343793
+8,Región del Biobío,2020-08-19,0.0845799117041189
+8,Región del Biobío,2020-08-20,0.09020264314916214
+8,Región del Biobío,2020-08-21,0.09525679393022637
+8,Región del Biobío,2020-08-22,0.0956907138021373
+8,Región del Biobío,2020-08-23,0.09381201079416428
+8,Región del Biobío,2020-08-24,0.09601456344713544
+8,Región del Biobío,2020-08-25,0.09516662675974143
+6,Región del Libertador General Bernardo OHiggins,2020-03-15,NA
+6,Región del Libertador General Bernardo OHiggins,2020-03-16,NA
+6,Región del Libertador General Bernardo OHiggins,2020-03-17,NA
+6,Región del Libertador General Bernardo OHiggins,2020-03-18,NA
+6,Región del Libertador General Bernardo OHiggins,2020-03-19,NA
+6,Región del Libertador General Bernardo OHiggins,2020-03-20,NA
+6,Región del Libertador General Bernardo OHiggins,2020-03-21,0.06463322456353815
+6,Región del Libertador General Bernardo OHiggins,2020-03-22,0.026537986468300055
+6,Región del Libertador General Bernardo OHiggins,2020-03-23,0.015058394631565362
+6,Región del Libertador General Bernardo OHiggins,2020-03-24,0.015058394631565362
+6,Región del Libertador General Bernardo OHiggins,2020-03-25,0.022447557193141714
+6,Región del Libertador General Bernardo OHiggins,2020-03-26,0.0241310588766434
+6,Región del Libertador General Bernardo OHiggins,2020-03-27,0.05984534459092911
+6,Región del Libertador General Bernardo OHiggins,2020-03-28,0.056361024033437825
+6,Región del Libertador General Bernardo OHiggins,2020-03-29,0.056361024033437825
+6,Región del Libertador General Bernardo OHiggins,2020-03-30,0.05739923001350427
+6,Región del Libertador General Bernardo OHiggins,2020-03-31,0.07619622249470727
+6,Región del Libertador General Bernardo OHiggins,2020-04-01,0.08141210194993764
+6,Región del Libertador General Bernardo OHiggins,2020-04-02,0.08372761589335856
+6,Región del Libertador General Bernardo OHiggins,2020-04-03,0.056294903678037654
+6,Región del Libertador General Bernardo OHiggins,2020-04-04,0.05969626422225534
+6,Región del Libertador General Bernardo OHiggins,2020-04-05,0.06541054993654107
+6,Región del Libertador General Bernardo OHiggins,2020-04-06,0.05925329633742699
+6,Región del Libertador General Bernardo OHiggins,2020-04-07,0.04233600310434429
+6,Región del Libertador General Bernardo OHiggins,2020-04-08,0.04089167537325185
+6,Región del Libertador General Bernardo OHiggins,2020-04-09,0.03984939799718514
+6,Región del Libertador General Bernardo OHiggins,2020-04-10,0.03553607846647431
+6,Región del Libertador General Bernardo OHiggins,2020-04-11,0.032134717922256625
+6,Región del Libertador General Bernardo OHiggins,2020-04-12,0.02642043220797091
+6,Región del Libertador General Bernardo OHiggins,2020-04-13,0.027901913689452388
+6,Región del Libertador General Bernardo OHiggins,2020-04-14,0.030223895113600994
+6,Región del Libertador General Bernardo OHiggins,2020-04-15,0.022547501385378
+6,Región del Libertador General Bernardo OHiggins,2020-04-16,0.016945260489019457
+6,Región del Libertador General Bernardo OHiggins,2020-04-17,0.016223759767518737
+6,Región del Libertador General Bernardo OHiggins,2020-04-18,0.0201920137357727
+6,Región del Libertador General Bernardo OHiggins,2020-04-19,0.0201920137357727
+6,Región del Libertador General Bernardo OHiggins,2020-04-20,0.028293865587624555
+6,Región del Libertador General Bernardo OHiggins,2020-04-21,0.05913261618220201
+6,Región del Libertador General Bernardo OHiggins,2020-04-22,0.06610125729718459
+6,Región del Libertador General Bernardo OHiggins,2020-04-23,0.07097138716731445
+6,Región del Libertador General Bernardo OHiggins,2020-04-24,0.08138009610543516
+6,Región del Libertador General Bernardo OHiggins,2020-04-25,0.08194698952947144
+6,Región del Libertador General Bernardo OHiggins,2020-04-26,0.09018874777122968
+6,Región del Libertador General Bernardo OHiggins,2020-04-27,0.14822446205694395
+6,Región del Libertador General Bernardo OHiggins,2020-04-28,0.11972710603546292
+6,Región del Libertador General Bernardo OHiggins,2020-04-29,0.11491324210734996
+6,Región del Libertador General Bernardo OHiggins,2020-04-30,0.11617808156237346
+6,Región del Libertador General Bernardo OHiggins,2020-05-01,0.1075646361842222
+6,Región del Libertador General Bernardo OHiggins,2020-05-02,0.10964324540568857
+6,Región del Libertador General Bernardo OHiggins,2020-05-03,0.10581065823976807
+6,Región del Libertador General Bernardo OHiggins,2020-05-04,0.04552232272207475
+6,Región del Libertador General Bernardo OHiggins,2020-05-05,0.05875946725692921
+6,Región del Libertador General Bernardo OHiggins,2020-05-06,0.06681899964955461
+6,Región del Libertador General Bernardo OHiggins,2020-05-07,0.06944413814111282
+6,Región del Libertador General Bernardo OHiggins,2020-05-08,0.07843720905368838
+6,Región del Libertador General Bernardo OHiggins,2020-05-09,0.09472881711744834
+6,Región del Libertador General Bernardo OHiggins,2020-05-10,0.11387587704465012
+6,Región del Libertador General Bernardo OHiggins,2020-05-11,0.12018609957801928
+6,Región del Libertador General Bernardo OHiggins,2020-05-12,0.12332698853980374
+6,Región del Libertador General Bernardo OHiggins,2020-05-13,0.12111686989132894
+6,Región del Libertador General Bernardo OHiggins,2020-05-14,0.13727370559621202
+6,Región del Libertador General Bernardo OHiggins,2020-05-15,0.15115323199842448
+6,Región del Libertador General Bernardo OHiggins,2020-05-16,0.1450027174090913
+6,Región del Libertador General Bernardo OHiggins,2020-05-17,0.148090477335757
+6,Región del Libertador General Bernardo OHiggins,2020-05-18,0.15099003924153007
+6,Región del Libertador General Bernardo OHiggins,2020-05-19,0.16063739830115425
+6,Región del Libertador General Bernardo OHiggins,2020-05-20,0.18276233219079402
+6,Región del Libertador General Bernardo OHiggins,2020-05-21,0.1926198247594249
+6,Región del Libertador General Bernardo OHiggins,2020-05-22,0.19934806778077135
+6,Región del Libertador General Bernardo OHiggins,2020-05-23,0.2092507706659304
+6,Región del Libertador General Bernardo OHiggins,2020-05-24,0.2264910000910338
+6,Región del Libertador General Bernardo OHiggins,2020-05-25,0.2344363558624765
+6,Región del Libertador General Bernardo OHiggins,2020-05-26,0.22603894476986572
+6,Región del Libertador General Bernardo OHiggins,2020-05-27,0.23104676185018622
+6,Región del Libertador General Bernardo OHiggins,2020-05-28,0.2270137362482066
+6,Región del Libertador General Bernardo OHiggins,2020-05-29,0.21923290596737632
+6,Región del Libertador General Bernardo OHiggins,2020-05-30,0.22626807536600155
+6,Región del Libertador General Bernardo OHiggins,2020-05-31,0.23173450436184231
+6,Región del Libertador General Bernardo OHiggins,2020-06-01,0.23817045196252865
+6,Región del Libertador General Bernardo OHiggins,2020-06-02,0.251231285176619
+6,Región del Libertador General Bernardo OHiggins,2020-06-03,0.24448723641354278
+6,Región del Libertador General Bernardo OHiggins,2020-06-04,0.24869558564569877
+6,Región del Libertador General Bernardo OHiggins,2020-06-05,0.25847952151659115
+6,Región del Libertador General Bernardo OHiggins,2020-06-06,0.2704299526715945
+6,Región del Libertador General Bernardo OHiggins,2020-06-07,0.2644966702677238
+6,Región del Libertador General Bernardo OHiggins,2020-06-08,0.2776376869711063
+6,Región del Libertador General Bernardo OHiggins,2020-06-09,0.2813894036053753
+6,Región del Libertador General Bernardo OHiggins,2020-06-10,0.2991251385377067
+6,Región del Libertador General Bernardo OHiggins,2020-06-11,0.30565003319518497
+6,Región del Libertador General Bernardo OHiggins,2020-06-12,0.3244767814673359
+6,Región del Libertador General Bernardo OHiggins,2020-06-13,0.3248784921670473
+6,Región del Libertador General Bernardo OHiggins,2020-06-14,0.333888309686288
+6,Región del Libertador General Bernardo OHiggins,2020-06-15,0.3463215173711823
+6,Región del Libertador General Bernardo OHiggins,2020-06-16,0.3650648732711431
+6,Región del Libertador General Bernardo OHiggins,2020-06-17,0.3823376775914154
+6,Región del Libertador General Bernardo OHiggins,2020-06-18,0.3990928368781314
+6,Región del Libertador General Bernardo OHiggins,2020-06-19,0.3977037095933564
+6,Región del Libertador General Bernardo OHiggins,2020-06-20,0.41483185326329997
+6,Región del Libertador General Bernardo OHiggins,2020-06-21,0.4304797861681725
+6,Región del Libertador General Bernardo OHiggins,2020-06-22,0.4331733507463001
+6,Región del Libertador General Bernardo OHiggins,2020-06-23,0.43510052362730806
+6,Región del Libertador General Bernardo OHiggins,2020-06-24,0.4233048418984123
+6,Región del Libertador General Bernardo OHiggins,2020-06-25,0.4175046957529976
+6,Región del Libertador General Bernardo OHiggins,2020-06-26,0.41111144565117996
+6,Región del Libertador General Bernardo OHiggins,2020-06-27,0.40398473687121556
+6,Región del Libertador General Bernardo OHiggins,2020-06-28,0.3956206949417361
+6,Región del Libertador General Bernardo OHiggins,2020-06-29,0.39593921699938855
+6,Región del Libertador General Bernardo OHiggins,2020-06-30,0.38123939638185483
+6,Región del Libertador General Bernardo OHiggins,2020-07-01,0.38240722655339615
+6,Región del Libertador General Bernardo OHiggins,2020-07-02,0.37141231475468456
+6,Región del Libertador General Bernardo OHiggins,2020-07-03,0.3623994608617219
+6,Región del Libertador General Bernardo OHiggins,2020-07-04,0.35878477268730957
+6,Región del Libertador General Bernardo OHiggins,2020-07-05,0.3470292752368107
+6,Región del Libertador General Bernardo OHiggins,2020-07-06,0.3258743389033029
+6,Región del Libertador General Bernardo OHiggins,2020-07-07,0.3183114020354071
+6,Región del Libertador General Bernardo OHiggins,2020-07-08,0.28243053017510994
+6,Región del Libertador General Bernardo OHiggins,2020-07-09,0.26084608359879874
+6,Región del Libertador General Bernardo OHiggins,2020-07-10,0.2450257467304269
+6,Región del Libertador General Bernardo OHiggins,2020-07-11,0.22522200174937695
+6,Región del Libertador General Bernardo OHiggins,2020-07-12,0.20892665541869496
+6,Región del Libertador General Bernardo OHiggins,2020-07-13,0.19446756181240507
+6,Región del Libertador General Bernardo OHiggins,2020-07-14,0.17983319844692686
+6,Región del Libertador General Bernardo OHiggins,2020-07-15,0.18427944690441422
+6,Región del Libertador General Bernardo OHiggins,2020-07-16,0.19324901353665291
+6,Región del Libertador General Bernardo OHiggins,2020-07-17,0.195806530925631
+6,Región del Libertador General Bernardo OHiggins,2020-07-18,0.20909703231137047
+6,Región del Libertador General Bernardo OHiggins,2020-07-19,0.22377826406577297
+6,Región del Libertador General Bernardo OHiggins,2020-07-20,0.21985827499074945
+6,Región del Libertador General Bernardo OHiggins,2020-07-21,0.21556909676062128
+6,Región del Libertador General Bernardo OHiggins,2020-07-22,0.2083390629670158
+6,Región del Libertador General Bernardo OHiggins,2020-07-23,0.20190143709330413
+6,Región del Libertador General Bernardo OHiggins,2020-07-24,0.189378762909901
+6,Región del Libertador General Bernardo OHiggins,2020-07-25,0.1604488125513792
+6,Región del Libertador General Bernardo OHiggins,2020-07-26,0.13688167625889824
+6,Región del Libertador General Bernardo OHiggins,2020-07-27,0.13220105056073578
+6,Región del Libertador General Bernardo OHiggins,2020-07-28,0.12731482491743387
+6,Región del Libertador General Bernardo OHiggins,2020-07-29,0.12765880045414615
+6,Región del Libertador General Bernardo OHiggins,2020-07-30,0.11597173771723568
+6,Región del Libertador General Bernardo OHiggins,2020-07-31,0.11283635019616318
+6,Región del Libertador General Bernardo OHiggins,2020-08-01,0.1051018371984923
+6,Región del Libertador General Bernardo OHiggins,2020-08-02,0.10050932825815727
+6,Región del Libertador General Bernardo OHiggins,2020-08-03,0.10338436020295665
+6,Región del Libertador General Bernardo OHiggins,2020-08-04,0.10518800689075669
+6,Región del Libertador General Bernardo OHiggins,2020-08-05,0.09905626750206561
+6,Región del Libertador General Bernardo OHiggins,2020-08-06,0.09967760694693448
+6,Región del Libertador General Bernardo OHiggins,2020-08-07,0.10075377753189718
+6,Región del Libertador General Bernardo OHiggins,2020-08-08,0.10689764941796888
+6,Región del Libertador General Bernardo OHiggins,2020-08-09,0.10574797941583987
+6,Región del Libertador General Bernardo OHiggins,2020-08-10,0.09768031292468034
+6,Región del Libertador General Bernardo OHiggins,2020-08-11,0.09109370579160117
+6,Región del Libertador General Bernardo OHiggins,2020-08-12,0.08638406198863413
+6,Región del Libertador General Bernardo OHiggins,2020-08-13,0.08248993753723413
+6,Región del Libertador General Bernardo OHiggins,2020-08-14,0.08013629259222967
+6,Región del Libertador General Bernardo OHiggins,2020-08-15,0.07403808141663862
+6,Región del Libertador General Bernardo OHiggins,2020-08-16,0.07764535047693329
+6,Región del Libertador General Bernardo OHiggins,2020-08-17,0.07546616481794058
+6,Región del Libertador General Bernardo OHiggins,2020-08-18,0.071935286622866
+6,Región del Libertador General Bernardo OHiggins,2020-08-19,0.07317367382543519
+6,Región del Libertador General Bernardo OHiggins,2020-08-20,0.07467530852318868
+6,Región del Libertador General Bernardo OHiggins,2020-08-21,0.07540964569353938
+6,Región del Libertador General Bernardo OHiggins,2020-08-22,0.07891331549366033
+6,Región del Libertador General Bernardo OHiggins,2020-08-23,0.07232151730129556
+6,Región del Libertador General Bernardo OHiggins,2020-08-24,0.0737342667511741
+6,Región del Libertador General Bernardo OHiggins,2020-08-25,0.07406722737825236
+7,Región del Maule,2020-03-02,NA
+7,Región del Maule,2020-03-03,NA
+7,Región del Maule,2020-03-04,NA
+7,Región del Maule,2020-03-05,NA
+7,Región del Maule,2020-03-06,NA
+7,Región del Maule,2020-03-07,NA
+7,Región del Maule,2020-03-08,0.11111111111111112
+7,Región del Maule,2020-03-09,0.05472013366750209
+7,Región del Maule,2020-03-10,0.07152685635657773
+7,Región del Maule,2020-03-11,0.08422526905499042
+7,Región del Maule,2020-03-12,0.08422526905499042
+7,Región del Maule,2020-03-13,0.10009828492800629
+7,Región del Maule,2020-03-14,0.07628876111848248
+7,Región del Maule,2020-03-15,0.09669692438378862
+7,Región del Maule,2020-03-16,0.09224134098083679
+7,Región del Maule,2020-03-17,0.07989890400604686
+7,Región del Maule,2020-03-18,0.05132747543461829
+7,Región del Maule,2020-03-19,0.0575386555588419
+7,Región del Maule,2020-03-20,0.054087999934273226
+7,Región del Maule,2020-03-21,0.0826594285057018
+7,Región del Maule,2020-03-22,0.0860607890499195
+7,Región del Maule,2020-03-23,0.09411231884057972
+7,Región del Maule,2020-03-24,0.09656047552260737
+7,Región del Maule,2020-03-25,0.10940156701538425
+7,Región del Maule,2020-03-26,0.1124069767529118
+7,Región del Maule,2020-03-27,0.1011366902371835
+7,Región del Maule,2020-03-28,0.07702954738004063
+7,Región del Maule,2020-03-29,0.06909303944353269
+7,Región del Maule,2020-03-30,0.05542844317024077
+7,Región del Maule,2020-03-31,0.05803981029773692
+7,Región del Maule,2020-04-01,0.04857329698268782
+7,Región del Maule,2020-04-02,0.04692529747098397
+7,Región del Maule,2020-04-03,0.05175676898882604
+7,Región del Maule,2020-04-04,0.048492963466617155
+7,Región del Maule,2020-04-05,0.034300619862508847
+7,Región del Maule,2020-04-06,0.037735037107667783
+7,Región del Maule,2020-04-07,0.03900856977654928
+7,Región del Maule,2020-04-08,0.03665439976208681
+7,Región del Maule,2020-04-09,0.0300848104110405
+7,Región del Maule,2020-04-10,0.029070209259858426
+7,Región del Maule,2020-04-11,0.030866732064784595
+7,Región del Maule,2020-04-12,0.03218306279288003
+7,Región del Maule,2020-04-13,0.035451036649089177
+7,Región del Maule,2020-04-14,0.03558843872447575
+7,Región del Maule,2020-04-15,0.053960402894759243
+7,Región del Maule,2020-04-16,0.07129747195596624
+7,Región del Maule,2020-04-17,0.06857985818814691
+7,Región del Maule,2020-04-18,0.06711237492194845
+7,Región del Maule,2020-04-19,0.06634434862200725
+7,Región del Maule,2020-04-20,0.056735436080410574
+7,Región del Maule,2020-04-21,0.047598893610534765
+7,Región del Maule,2020-04-22,0.03023081277496167
+7,Región del Maule,2020-04-23,0.012278767292326642
+7,Región del Maule,2020-04-24,0.014445699110987998
+7,Región del Maule,2020-04-25,0.019152007044582562
+7,Región del Maule,2020-04-26,0.022357812956216413
+7,Región del Maule,2020-04-27,0.023958393960069792
+7,Región del Maule,2020-04-28,0.0244793016238346
+7,Región del Maule,2020-04-29,0.02297449064533941
+7,Región del Maule,2020-04-30,0.022590466067766445
+7,Región del Maule,2020-05-01,0.023636684791862473
+7,Región del Maule,2020-05-02,0.018843858570464823
+7,Región del Maule,2020-05-03,0.014194005318127098
+7,Región del Maule,2020-05-04,0.01714475826888005
+7,Región del Maule,2020-05-05,0.01729402276556818
+7,Región del Maule,2020-05-06,0.02293217771406796
+7,Región del Maule,2020-05-07,0.027708556350628966
+7,Región del Maule,2020-05-08,0.026063785178374665
+7,Región del Maule,2020-05-09,0.03973067384526334
+7,Región del Maule,2020-05-10,0.054280692027242776
+7,Región del Maule,2020-05-11,0.054734073222673436
+7,Región del Maule,2020-05-12,0.06413854491702521
+7,Región del Maule,2020-05-13,0.06748209709750098
+7,Región del Maule,2020-05-14,0.07037835273203971
+7,Región del Maule,2020-05-15,0.07837650886244144
+7,Región del Maule,2020-05-16,0.07563520254970656
+7,Región del Maule,2020-05-17,0.07661071620372015
+7,Región del Maule,2020-05-18,0.08545771607032858
+7,Región del Maule,2020-05-19,0.08961622061326079
+7,Región del Maule,2020-05-20,0.09873592327612275
+7,Región del Maule,2020-05-21,0.12170511095119277
+7,Región del Maule,2020-05-22,0.12864158640143272
+7,Región del Maule,2020-05-23,0.1379532194064455
+7,Región del Maule,2020-05-24,0.14244338615757965
+7,Región del Maule,2020-05-25,0.14648723167506125
+7,Región del Maule,2020-05-26,0.15030289409024514
+7,Región del Maule,2020-05-27,0.15876089503692284
+7,Región del Maule,2020-05-28,0.14995106170015032
+7,Región del Maule,2020-05-29,0.15189735736012117
+7,Región del Maule,2020-05-30,0.15929108169219577
+7,Región del Maule,2020-05-31,0.16849493202905103
+7,Región del Maule,2020-06-01,0.17217518110709953
+7,Región del Maule,2020-06-02,0.17624921232334392
+7,Región del Maule,2020-06-03,0.17091872191822666
+7,Región del Maule,2020-06-04,0.17042143206288302
+7,Región del Maule,2020-06-05,0.17507830654583076
+7,Región del Maule,2020-06-06,0.17153396888795963
+7,Región del Maule,2020-06-07,0.1753640770737847
+7,Región del Maule,2020-06-08,0.1780582320619985
+7,Región del Maule,2020-06-09,0.17883359975052723
+7,Región del Maule,2020-06-10,0.17890826419897493
+7,Región del Maule,2020-06-11,0.18196380934736037
+7,Región del Maule,2020-06-12,0.18097070470139848
+7,Región del Maule,2020-06-13,0.18742867886477851
+7,Región del Maule,2020-06-14,0.18489425291225678
+7,Región del Maule,2020-06-15,0.18960466251829886
+7,Región del Maule,2020-06-16,0.19361770579881443
+7,Región del Maule,2020-06-17,0.19615517642927877
+7,Región del Maule,2020-06-18,0.19824798337429736
+7,Región del Maule,2020-06-19,0.2020718634036128
+7,Región del Maule,2020-06-20,0.20229717091792287
+7,Región del Maule,2020-06-21,0.2013921471823947
+7,Región del Maule,2020-06-22,0.20004903506876262
+7,Región del Maule,2020-06-23,0.19544017405509664
+7,Región del Maule,2020-06-24,0.1950275893968388
+7,Región del Maule,2020-06-25,0.19122027551083245
+7,Región del Maule,2020-06-26,0.1864246619400493
+7,Región del Maule,2020-06-27,0.18774836215184135
+7,Región del Maule,2020-06-28,0.18896242077602468
+7,Región del Maule,2020-06-29,0.17757775433909345
+7,Región del Maule,2020-06-30,0.1805128348484613
+7,Región del Maule,2020-07-01,0.17800095013166678
+7,Región del Maule,2020-07-02,0.17388857071662392
+7,Región del Maule,2020-07-03,0.17455461706521871
+7,Región del Maule,2020-07-04,0.1655078276177324
+7,Región del Maule,2020-07-05,0.16047670530513453
+7,Región del Maule,2020-07-06,0.16228880563418402
+7,Región del Maule,2020-07-07,0.15632777741671683
+7,Región del Maule,2020-07-08,0.15327781913372743
+7,Región del Maule,2020-07-09,0.15290995030912355
+7,Región del Maule,2020-07-10,0.1433339094385908
+7,Región del Maule,2020-07-11,0.13736263203874197
+7,Región del Maule,2020-07-12,0.1334061889459421
+7,Región del Maule,2020-07-13,0.13338020810212717
+7,Región del Maule,2020-07-14,0.13218391835443558
+7,Región del Maule,2020-07-15,0.13007110200615266
+7,Región del Maule,2020-07-16,0.13764143063333184
+7,Región del Maule,2020-07-17,0.13934620946745005
+7,Región del Maule,2020-07-18,0.13442252045639755
+7,Región del Maule,2020-07-19,0.13596055432504262
+7,Región del Maule,2020-07-20,0.13407227935916655
+7,Región del Maule,2020-07-21,0.12986212579718906
+7,Región del Maule,2020-07-22,0.12870957411094686
+7,Región del Maule,2020-07-23,0.11621057909267853
+7,Región del Maule,2020-07-24,0.11009468263427423
+7,Región del Maule,2020-07-25,0.11058436016906173
+7,Región del Maule,2020-07-26,0.10248895333162797
+7,Región del Maule,2020-07-27,0.09819495109284894
+7,Región del Maule,2020-07-28,0.09021492998351296
+7,Región del Maule,2020-07-29,0.08486583074269612
+7,Región del Maule,2020-07-30,0.08031228095504053
+7,Región del Maule,2020-07-31,0.08077936154925394
+7,Región del Maule,2020-08-01,0.07769871551086142
+7,Región del Maule,2020-08-02,0.0816967206757618
+7,Región del Maule,2020-08-03,0.07990530098458336
+7,Región del Maule,2020-08-04,0.08273917517677724
+7,Región del Maule,2020-08-05,0.08118527134226501
+7,Región del Maule,2020-08-06,0.08063526410532769
+7,Región del Maule,2020-08-07,0.07824285726913507
+7,Región del Maule,2020-08-08,0.07887231408751696
+7,Región del Maule,2020-08-09,0.0733758782250364
+7,Región del Maule,2020-08-10,0.07006776037798239
+7,Región del Maule,2020-08-11,0.06696199039425718
+7,Región del Maule,2020-08-12,0.06499791748676285
+7,Región del Maule,2020-08-13,0.0631381807863273
+7,Región del Maule,2020-08-14,0.061479042255615186
+7,Región del Maule,2020-08-15,0.060211348255460484
+7,Región del Maule,2020-08-16,0.05778555580409258
+7,Región del Maule,2020-08-17,0.05847784789214522
+7,Región del Maule,2020-08-18,0.058964297590345584
+7,Región del Maule,2020-08-19,0.059989069183809765
+7,Región del Maule,2020-08-20,0.06115656417817874
+7,Región del Maule,2020-08-21,0.06311422507213091
+7,Región del Maule,2020-08-22,0.062303232163896924
+7,Región del Maule,2020-08-23,0.06259813177229767
+7,Región del Maule,2020-08-24,0.0610539059172262
+7,Región del Maule,2020-08-25,0.06096449524141179
+16,Región del Ñuble,2020-03-11,NA
+16,Región del Ñuble,2020-03-12,NA
+16,Región del Ñuble,2020-03-13,NA
+16,Región del Ñuble,2020-03-14,NA
+16,Región del Ñuble,2020-03-15,NA
+16,Región del Ñuble,2020-03-16,NA
+16,Región del Ñuble,2020-03-17,0.184267887273856
+16,Región del Ñuble,2020-03-18,0.12474407775004649
+16,Región del Ñuble,2020-03-19,0.13099369667572175
+16,Región del Ñuble,2020-03-20,0.13135173462774466
+16,Región del Ñuble,2020-03-21,0.16289162331049048
+16,Región del Ñuble,2020-03-22,0.15962200560425308
+16,Región del Ñuble,2020-03-23,0.15254590413562824
+16,Región del Ñuble,2020-03-24,0.16914866174352575
+16,Región del Ñuble,2020-03-25,0.17765206310406997
+16,Región del Ñuble,2020-03-26,0.19078070371413455
+16,Región del Ñuble,2020-03-27,0.1964798831696226
+16,Región del Ñuble,2020-03-28,0.20617710788893862
+16,Región del Ñuble,2020-03-29,0.19337529702374748
+16,Región del Ñuble,2020-03-30,0.21900554912458783
+16,Región del Ñuble,2020-03-31,0.22623004393664561
+16,Región del Ñuble,2020-04-01,0.2268560612147225
+16,Región del Ñuble,2020-04-02,0.22330572375690472
+16,Región del Ñuble,2020-04-03,0.23862355383031508
+16,Región del Ñuble,2020-04-04,0.2523314953733082
+16,Región del Ñuble,2020-04-05,0.24884510081548505
+16,Región del Ñuble,2020-04-06,0.23262251421987118
+16,Región del Ñuble,2020-04-07,0.20993403506623173
+16,Región del Ñuble,2020-04-08,0.19950805820035936
+16,Región del Ñuble,2020-04-09,0.18652369778952835
+16,Región del Ñuble,2020-04-10,0.14878767553895234
+16,Región del Ñuble,2020-04-11,0.10555222246743369
+16,Región del Ñuble,2020-04-12,0.08046718845382825
+16,Región del Ñuble,2020-04-13,0.06705130095476827
+16,Región del Ñuble,2020-04-14,0.06503310615239612
+16,Región del Ñuble,2020-04-15,0.07340592145590448
+16,Región del Ñuble,2020-04-16,0.07359266281911643
+16,Región del Ñuble,2020-04-17,0.07687148164947234
+16,Región del Ñuble,2020-04-18,0.0818594679020956
+16,Región del Ñuble,2020-04-19,0.09851725041808707
+16,Región del Ñuble,2020-04-20,0.10108662349105725
+16,Región del Ñuble,2020-04-21,0.10281486940534969
+16,Región del Ñuble,2020-04-22,0.08786430273064508
+16,Región del Ñuble,2020-04-23,0.09386844351739455
+16,Región del Ñuble,2020-04-24,0.08590621047808034
+16,Región del Ñuble,2020-04-25,0.08748104760109021
+16,Región del Ñuble,2020-04-26,0.0676861994480331
+16,Región del Ñuble,2020-04-27,NA
+16,Región del Ñuble,2020-04-28,NA
+16,Región del Ñuble,2020-04-29,NA
+16,Región del Ñuble,2020-04-30,NA
+16,Región del Ñuble,2020-05-01,NA
+16,Región del Ñuble,2020-05-02,NA
+16,Región del Ñuble,2020-05-03,NA
+16,Región del Ñuble,2020-05-04,0.0465771874970037
+16,Región del Ñuble,2020-05-05,0.04420513033042598
+16,Región del Ñuble,2020-05-06,0.04012222969580121
+16,Región del Ñuble,2020-05-07,0.04959935387880775
+16,Región del Ñuble,2020-05-08,0.11252452394683496
+16,Región del Ñuble,2020-05-09,0.10847764203617596
+16,Región del Ñuble,2020-05-10,0.11779662024957294
+16,Región del Ñuble,2020-05-11,0.12215412361958454
+16,Región del Ñuble,2020-05-12,0.1596060434522318
+16,Región del Ñuble,2020-05-13,0.17014385260362078
+16,Región del Ñuble,2020-05-14,0.16738846473418728
+16,Región del Ñuble,2020-05-15,0.11091005941857267
+16,Región del Ñuble,2020-05-16,0.10976920149341295
+16,Región del Ñuble,2020-05-17,0.10673352477795504
+16,Región del Ñuble,2020-05-18,0.1078617625024108
+16,Región del Ñuble,2020-05-19,0.07953663934970143
+16,Región del Ñuble,2020-05-20,0.07819548119383589
+16,Región del Ñuble,2020-05-21,0.08804704086532354
+16,Región del Ñuble,2020-05-22,0.08613777576007271
+16,Región del Ñuble,2020-05-23,0.10104616061065409
+16,Región del Ñuble,2020-05-24,0.1036869684865995
+16,Región del Ñuble,2020-05-25,0.11055384485908451
+16,Región del Ñuble,2020-05-26,0.18377923450618133
+16,Región del Ñuble,2020-05-27,0.18738327388497025
+16,Región del Ñuble,2020-05-28,0.18023458107451273
+16,Región del Ñuble,2020-05-29,0.18193290909175006
+16,Región del Ñuble,2020-05-30,0.2301954573542983
+16,Región del Ñuble,2020-05-31,0.23628003068941902
+16,Región del Ñuble,2020-06-01,0.2388409416590514
+16,Región del Ñuble,2020-06-02,0.16881752245530432
+16,Región del Ñuble,2020-06-03,0.17296136121242442
+16,Región del Ñuble,2020-06-04,0.17304559301835434
+16,Región del Ñuble,2020-06-05,0.18598239166943872
+16,Región del Ñuble,2020-06-06,0.12883953452658156
+16,Región del Ñuble,2020-06-07,0.13621251812727866
+16,Región del Ñuble,2020-06-08,0.13714996237055202
+16,Región del Ñuble,2020-06-09,0.14291437339812094
+16,Región del Ñuble,2020-06-10,0.13874285093655206
+16,Región del Ñuble,2020-06-11,0.14598220566493375
+16,Región del Ñuble,2020-06-12,0.13836844018191888
+16,Región del Ñuble,2020-06-13,0.14512864426355152
+16,Región del Ñuble,2020-06-14,0.13302277726984182
+16,Región del Ñuble,2020-06-15,0.13313737449141372
+16,Región del Ñuble,2020-06-16,0.13742587351675484
+16,Región del Ñuble,2020-06-17,0.16501288445027568
+16,Región del Ñuble,2020-06-18,0.15322501220167836
+16,Región del Ñuble,2020-06-19,0.1438436578858351
+16,Región del Ñuble,2020-06-20,0.1396872539449484
+16,Región del Ñuble,2020-06-21,0.13966168247588884
+16,Región del Ñuble,2020-06-22,0.1331227403684336
+16,Región del Ñuble,2020-06-23,0.1156085018350868
+16,Región del Ñuble,2020-06-24,0.09261536948789141
+16,Región del Ñuble,2020-06-25,0.09909704379026542
+16,Región del Ñuble,2020-06-26,0.10973132865686004
+16,Región del Ñuble,2020-06-27,0.10712752851611408
+16,Región del Ñuble,2020-06-28,0.10527473102668403
+16,Región del Ñuble,2020-06-29,0.10484183059378359
+16,Región del Ñuble,2020-06-30,0.11358521035627164
+16,Región del Ñuble,2020-07-01,0.11120563663911831
+16,Región del Ñuble,2020-07-02,0.11826253800440008
+16,Región del Ñuble,2020-07-03,0.1178862172633377
+16,Región del Ñuble,2020-07-04,0.11520001457713501
+16,Región del Ñuble,2020-07-05,0.12144816989557082
+16,Región del Ñuble,2020-07-06,0.14730325198068486
+16,Región del Ñuble,2020-07-07,0.15735509097989228
+16,Región del Ñuble,2020-07-08,0.1527614719090614
+16,Región del Ñuble,2020-07-09,0.15239924068218424
+16,Región del Ñuble,2020-07-10,0.15222448828081137
+16,Región del Ñuble,2020-07-11,0.1456522075149822
+16,Región del Ñuble,2020-07-12,0.1384336775419612
+16,Región del Ñuble,2020-07-13,0.11178700609382924
+16,Región del Ñuble,2020-07-14,0.09755736291681764
+16,Región del Ñuble,2020-07-15,0.10307718756501688
+16,Región del Ñuble,2020-07-16,0.09349673353519716
+16,Región del Ñuble,2020-07-17,0.08193732674682849
+16,Región del Ñuble,2020-07-18,0.08933245616159326
+16,Región del Ñuble,2020-07-19,0.08984456541156657
+16,Región del Ñuble,2020-07-20,0.08442276032589595
+16,Región del Ñuble,2020-07-21,0.08369748147561709
+16,Región del Ñuble,2020-07-22,0.07375703854613672
+16,Región del Ñuble,2020-07-23,0.06582675741104743
+16,Región del Ñuble,2020-07-24,0.06880110977254407
+16,Región del Ñuble,2020-07-25,0.06391557720480943
+16,Región del Ñuble,2020-07-26,0.05932731155309832
+16,Región del Ñuble,2020-07-27,0.06390244339698152
+16,Región del Ñuble,2020-07-28,0.05753611736804488
+16,Región del Ñuble,2020-07-29,0.054930139729155385
+16,Región del Ñuble,2020-07-30,0.05827246696122228
+16,Región del Ñuble,2020-07-31,0.051299565885057775
+16,Región del Ñuble,2020-08-01,0.04567259305537652
+16,Región del Ñuble,2020-08-02,0.047743611737690886
+16,Región del Ñuble,2020-08-03,0.043843497375547845
+16,Región del Ñuble,2020-08-04,0.04715291770334802
+16,Región del Ñuble,2020-08-05,0.04965438434730536
+16,Región del Ñuble,2020-08-06,0.04975087684501367
+16,Región del Ñuble,2020-08-07,0.05563290253527209
+16,Región del Ñuble,2020-08-08,0.05999482468772509
+16,Región del Ñuble,2020-08-09,0.058852372533894935
+16,Región del Ñuble,2020-08-10,0.062496565253717905
+16,Región del Ñuble,2020-08-11,0.06576930423221798
+16,Región del Ñuble,2020-08-12,0.05893600924420321
+16,Región del Ñuble,2020-08-13,0.05218423879076852
+16,Región del Ñuble,2020-08-14,0.04752691716942029
+16,Región del Ñuble,2020-08-15,0.048414268053993244
+16,Región del Ñuble,2020-08-16,0.053082062961828866
+16,Región del Ñuble,2020-08-17,0.05567644790915499
+16,Región del Ñuble,2020-08-18,0.0525664042977275
+16,Región del Ñuble,2020-08-19,0.06045687957121837
+16,Región del Ñuble,2020-08-20,0.07056916405143594
+16,Región del Ñuble,2020-08-21,0.07831326819874057
+16,Región del Ñuble,2020-08-22,0.08250124534414272
+16,Región del Ñuble,2020-08-23,0.08243442563391375
+16,Región del Ñuble,2020-08-24,0.08526496356585574
+16,Región del Ñuble,2020-08-25,0.09325206711781284
+13,Región Metropolitana de Santiago,2020-03-02,NA
+13,Región Metropolitana de Santiago,2020-03-03,NA
+13,Región Metropolitana de Santiago,2020-03-04,NA
+13,Región Metropolitana de Santiago,2020-03-05,NA
+13,Región Metropolitana de Santiago,2020-03-06,NA
+13,Región Metropolitana de Santiago,2020-03-07,NA
+13,Región Metropolitana de Santiago,2020-03-08,0.06926701461773319
+13,Región Metropolitana de Santiago,2020-03-09,0.07863469611656222
+13,Región Metropolitana de Santiago,2020-03-10,0.0680702054196212
+13,Región Metropolitana de Santiago,2020-03-11,0.07135720059743915
+13,Región Metropolitana de Santiago,2020-03-12,0.06894971409101272
+13,Región Metropolitana de Santiago,2020-03-13,0.0716552851757823
+13,Región Metropolitana de Santiago,2020-03-14,0.08412694050458049
+13,Región Metropolitana de Santiago,2020-03-15,0.08845271989609169
+13,Región Metropolitana de Santiago,2020-03-16,0.08922582800049195
+13,Región Metropolitana de Santiago,2020-03-17,0.0856788890015877
+13,Región Metropolitana de Santiago,2020-03-18,0.080461186758046
+13,Región Metropolitana de Santiago,2020-03-19,0.08005265733761026
+13,Región Metropolitana de Santiago,2020-03-20,0.08127826250808554
+13,Región Metropolitana de Santiago,2020-03-21,0.07702158907847978
+13,Región Metropolitana de Santiago,2020-03-22,0.07862685445566776
+13,Región Metropolitana de Santiago,2020-03-23,0.0768654986305055
+13,Región Metropolitana de Santiago,2020-03-24,0.08156134391076637
+13,Región Metropolitana de Santiago,2020-03-25,0.08536924643713262
+13,Región Metropolitana de Santiago,2020-03-26,0.09058622274814845
+13,Región Metropolitana de Santiago,2020-03-27,0.09594297218949803
+13,Región Metropolitana de Santiago,2020-03-28,0.10808397089733224
+13,Región Metropolitana de Santiago,2020-03-29,0.11429514150534976
+13,Región Metropolitana de Santiago,2020-03-30,0.1180186879987253
+13,Región Metropolitana de Santiago,2020-03-31,0.11567003889628193
+13,Región Metropolitana de Santiago,2020-04-01,0.11185644866725966
+13,Región Metropolitana de Santiago,2020-04-02,0.1072424235700413
+13,Región Metropolitana de Santiago,2020-04-03,0.10024029937575264
+13,Región Metropolitana de Santiago,2020-04-04,0.08602109813970614
+13,Región Metropolitana de Santiago,2020-04-05,0.08304822099636706
+13,Región Metropolitana de Santiago,2020-04-06,0.08348363641453625
+13,Región Metropolitana de Santiago,2020-04-07,0.08582157381684812
+13,Región Metropolitana de Santiago,2020-04-08,0.0905067323013069
+13,Región Metropolitana de Santiago,2020-04-09,0.0961365483302826
+13,Región Metropolitana de Santiago,2020-04-10,0.10250216260145306
+13,Región Metropolitana de Santiago,2020-04-11,0.1107102516126084
+13,Región Metropolitana de Santiago,2020-04-12,0.11003590148047833
+13,Región Metropolitana de Santiago,2020-04-13,0.11465922196248372
+13,Región Metropolitana de Santiago,2020-04-14,0.11567908532966163
+13,Región Metropolitana de Santiago,2020-04-15,0.11839683959061924
+13,Región Metropolitana de Santiago,2020-04-16,0.12103253073858682
+13,Región Metropolitana de Santiago,2020-04-17,0.12380470155589693
+13,Región Metropolitana de Santiago,2020-04-18,0.1194085306551986
+13,Región Metropolitana de Santiago,2020-04-19,0.12746637611222403
+13,Región Metropolitana de Santiago,2020-04-20,0.1354981856267434
+13,Región Metropolitana de Santiago,2020-04-21,0.13992869734167337
+13,Región Metropolitana de Santiago,2020-04-22,0.14559029175857188
+13,Región Metropolitana de Santiago,2020-04-23,0.14899465500874734
+13,Región Metropolitana de Santiago,2020-04-24,0.15355372376242196
+13,Región Metropolitana de Santiago,2020-04-25,0.1640413371840286
+13,Región Metropolitana de Santiago,2020-04-26,0.175983892165787
+13,Región Metropolitana de Santiago,2020-04-27,0.17439913545098268
+13,Región Metropolitana de Santiago,2020-04-28,0.18499920614445467
+13,Región Metropolitana de Santiago,2020-04-29,0.19797313804215338
+13,Región Metropolitana de Santiago,2020-04-30,0.2101914664268587
+13,Región Metropolitana de Santiago,2020-05-01,0.22199402081448927
+13,Región Metropolitana de Santiago,2020-05-02,0.22871272152437977
+13,Región Metropolitana de Santiago,2020-05-03,0.2350321295196493
+13,Región Metropolitana de Santiago,2020-05-04,0.24562976367639353
+13,Región Metropolitana de Santiago,2020-05-05,0.2545681982138001
+13,Región Metropolitana de Santiago,2020-05-06,0.2582417336812721
+13,Región Metropolitana de Santiago,2020-05-07,0.26407093587281877
+13,Región Metropolitana de Santiago,2020-05-08,0.26827935890457827
+13,Región Metropolitana de Santiago,2020-05-09,0.2762377694918558
+13,Región Metropolitana de Santiago,2020-05-10,0.28922040466432664
+13,Región Metropolitana de Santiago,2020-05-11,0.30390656948386613
+13,Región Metropolitana de Santiago,2020-05-12,0.31436334285635237
+13,Región Metropolitana de Santiago,2020-05-13,0.3269971532196644
+13,Región Metropolitana de Santiago,2020-05-14,0.34273698058797175
+13,Región Metropolitana de Santiago,2020-05-15,0.35726926340489057
+13,Región Metropolitana de Santiago,2020-05-16,0.37757874043161255
+13,Región Metropolitana de Santiago,2020-05-17,0.39620430503639886
+13,Región Metropolitana de Santiago,2020-05-18,0.41028954608915497
+13,Región Metropolitana de Santiago,2020-05-19,0.42639159032835944
+13,Región Metropolitana de Santiago,2020-05-20,0.43923666207349454
+13,Región Metropolitana de Santiago,2020-05-21,0.4570552611554963
+13,Región Metropolitana de Santiago,2020-05-22,0.47178075574306433
+13,Región Metropolitana de Santiago,2020-05-23,0.4778969792756997
+13,Región Metropolitana de Santiago,2020-05-24,0.4800654727487545
+13,Región Metropolitana de Santiago,2020-05-25,0.48667410567525005
+13,Región Metropolitana de Santiago,2020-05-26,0.4887457330125337
+13,Región Metropolitana de Santiago,2020-05-27,0.48908016033621804
+13,Región Metropolitana de Santiago,2020-05-28,0.48474685807467927
+13,Región Metropolitana de Santiago,2020-05-29,0.48208600293622345
+13,Región Metropolitana de Santiago,2020-05-30,0.48268802355383633
+13,Región Metropolitana de Santiago,2020-05-31,0.48052190337036166
+13,Región Metropolitana de Santiago,2020-06-01,0.477740959152782
+13,Región Metropolitana de Santiago,2020-06-02,0.47319053595331434
+13,Región Metropolitana de Santiago,2020-06-03,0.4666436127442844
+13,Región Metropolitana de Santiago,2020-06-04,0.461791488221893
+13,Región Metropolitana de Santiago,2020-06-05,0.4553334594153832
+13,Región Metropolitana de Santiago,2020-06-06,0.4531848733256187
+13,Región Metropolitana de Santiago,2020-06-07,0.44729465111577066
+13,Región Metropolitana de Santiago,2020-06-08,0.44017290382439295
+13,Región Metropolitana de Santiago,2020-06-09,0.43321392758969246
+13,Región Metropolitana de Santiago,2020-06-10,0.4317785891603937
+13,Región Metropolitana de Santiago,2020-06-11,0.4240277710772434
+13,Región Metropolitana de Santiago,2020-06-12,0.4176526876542598
+13,Región Metropolitana de Santiago,2020-06-13,0.4079845723471704
+13,Región Metropolitana de Santiago,2020-06-14,0.4044378364509199
+13,Región Metropolitana de Santiago,2020-06-15,0.40150412830613325
+13,Región Metropolitana de Santiago,2020-06-16,0.39989936969686635
+13,Región Metropolitana de Santiago,2020-06-17,0.3941919253174643
+13,Región Metropolitana de Santiago,2020-06-18,0.389552980395663
+13,Región Metropolitana de Santiago,2020-06-19,0.3828856573482992
+13,Región Metropolitana de Santiago,2020-06-20,0.37815437617969633
+13,Región Metropolitana de Santiago,2020-06-21,0.3705986353973048
+13,Región Metropolitana de Santiago,2020-06-22,0.3655761636658911
+13,Región Metropolitana de Santiago,2020-06-23,0.3586980589698126
+13,Región Metropolitana de Santiago,2020-06-24,0.3552048561754496
+13,Región Metropolitana de Santiago,2020-06-25,0.34986532287085936
+13,Región Metropolitana de Santiago,2020-06-26,0.34517783300776383
+13,Región Metropolitana de Santiago,2020-06-27,0.33895930936821056
+13,Región Metropolitana de Santiago,2020-06-28,0.33591723372754295
+13,Región Metropolitana de Santiago,2020-06-29,0.3354102941424614
+13,Región Metropolitana de Santiago,2020-06-30,0.3312079653577906
+13,Región Metropolitana de Santiago,2020-07-01,0.32290180162651655
+13,Región Metropolitana de Santiago,2020-07-02,0.31553656074519226
+13,Región Metropolitana de Santiago,2020-07-03,0.30822599598169587
+13,Región Metropolitana de Santiago,2020-07-04,0.29664941727197747
+13,Región Metropolitana de Santiago,2020-07-05,0.28008704313812544
+13,Región Metropolitana de Santiago,2020-07-06,0.2617582141100516
+13,Región Metropolitana de Santiago,2020-07-07,0.2463712873203415
+13,Región Metropolitana de Santiago,2020-07-08,0.23548278557818123
+13,Región Metropolitana de Santiago,2020-07-09,0.22626827586043885
+13,Región Metropolitana de Santiago,2020-07-10,0.21422087873707252
+13,Región Metropolitana de Santiago,2020-07-11,0.20043194820896318
+13,Región Metropolitana de Santiago,2020-07-12,0.1892923530314348
+13,Región Metropolitana de Santiago,2020-07-13,0.18170378560422826
+13,Región Metropolitana de Santiago,2020-07-14,0.17641465692648375
+13,Región Metropolitana de Santiago,2020-07-15,0.16910344498709867
+13,Región Metropolitana de Santiago,2020-07-16,0.16280760192398838
+13,Región Metropolitana de Santiago,2020-07-17,0.157842131239226
+13,Región Metropolitana de Santiago,2020-07-18,0.15530350345462707
+13,Región Metropolitana de Santiago,2020-07-19,0.1519989528647335
+13,Región Metropolitana de Santiago,2020-07-20,0.1462166725014986
+13,Región Metropolitana de Santiago,2020-07-21,0.14304818639182634
+13,Región Metropolitana de Santiago,2020-07-22,0.13842224968964678
+13,Región Metropolitana de Santiago,2020-07-23,0.13255228814268
+13,Región Metropolitana de Santiago,2020-07-24,0.1299767289519528
+13,Región Metropolitana de Santiago,2020-07-25,0.1238252380907833
+13,Región Metropolitana de Santiago,2020-07-26,0.11661746858511302
+13,Región Metropolitana de Santiago,2020-07-27,0.11271147713909883
+13,Región Metropolitana de Santiago,2020-07-28,0.10558565501029855
+13,Región Metropolitana de Santiago,2020-07-29,0.10163601285131987
+13,Región Metropolitana de Santiago,2020-07-30,0.09760373201615645
+13,Región Metropolitana de Santiago,2020-07-31,0.09300301937897588
+13,Región Metropolitana de Santiago,2020-08-01,0.09109893642295167
+13,Región Metropolitana de Santiago,2020-08-02,0.0875620686608548
+13,Región Metropolitana de Santiago,2020-08-03,0.08439110795979647
+13,Región Metropolitana de Santiago,2020-08-04,0.08269418887795445
+13,Región Metropolitana de Santiago,2020-08-05,0.08119828986386861
+13,Región Metropolitana de Santiago,2020-08-06,0.07815126409739512
+13,Región Metropolitana de Santiago,2020-08-07,0.07603188529695283
+13,Región Metropolitana de Santiago,2020-08-08,0.07455269260745181
+13,Región Metropolitana de Santiago,2020-08-09,0.07381946246185853
+13,Región Metropolitana de Santiago,2020-08-10,0.07211509572309967
+13,Región Metropolitana de Santiago,2020-08-11,0.07097922708409425
+13,Región Metropolitana de Santiago,2020-08-12,0.06874355079521006
+13,Región Metropolitana de Santiago,2020-08-13,0.06630480470546686
+13,Región Metropolitana de Santiago,2020-08-14,0.06553810528727254
+13,Región Metropolitana de Santiago,2020-08-15,0.06416333282570806
+13,Región Metropolitana de Santiago,2020-08-16,0.06071726502191038
+13,Región Metropolitana de Santiago,2020-08-17,0.059527778266945074
+13,Región Metropolitana de Santiago,2020-08-18,0.05800380908844584
+13,Región Metropolitana de Santiago,2020-08-19,0.05735629816250818
+13,Región Metropolitana de Santiago,2020-08-20,0.05784241058265522
+13,Región Metropolitana de Santiago,2020-08-21,0.05747617683354961
+13,Región Metropolitana de Santiago,2020-08-22,0.05624966050316065
+13,Región Metropolitana de Santiago,2020-08-23,0.05611018143613624
+13,Región Metropolitana de Santiago,2020-08-24,0.0539103694602512
+13,Región Metropolitana de Santiago,2020-08-25,0.05284035842510658

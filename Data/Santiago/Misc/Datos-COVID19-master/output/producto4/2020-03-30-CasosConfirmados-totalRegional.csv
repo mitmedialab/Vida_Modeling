@@ -1,0 +1,18 @@
+Region, Casos nuevos, Casos totales, Casos recuperados, Casos fallecidos
+Arica y Paricota,  2,   6,,0
+Tarapacá,  2,   8,,0
+Antofagasta,  8,  35,,0
+Atacama,  0,   2,,0
+Coquimbo,  9,  27,,0
+Valparaíso, 28, 108,,0
+Metropolita,128,1295,,3
+O’Higgins,  0,  21,,0
+Maule, 12,  54,,1
+Ñuble, 32, 229,,0
+Biobío, 16, 201,,2
+Araucanía, 42, 247,,2
+Los Ríos,  7,  47,,0
+Los Lagos, 24, 128,,0
+Aysén,  0,   2,,0
+Magallanes,  0,  39,,0
+Total,310,2449,156,8

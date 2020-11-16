@@ -1,0 +1,9 @@
+venv-*
+.idea/*
+temp*
+.DS_Store
+.ipynb
+__pycache__
+*.tmp
+
+
