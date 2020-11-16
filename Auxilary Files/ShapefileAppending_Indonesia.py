@@ -130,6 +130,8 @@ metrics = metrics = ['Cases',
            'FTT',
            'IF_val',
            'IF_chg',
+           'DF_chg',
+           'HO_chg',
            ]
 
 
