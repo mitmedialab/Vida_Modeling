@@ -1,11 +1,11 @@
-FieldName,LongName,Category,VisMin,VisMax,VisColor
-Operacione,Operations Mean Anomaly,,,,
-Pasajeros,Passengers Mean Anomaly,,,,
-JulyOperac,July Operations,,,,
-JulyPasaje,July Passengers,,,,
-Population,Population,,,,
-CurrentICU,Current ICU,,,,
-AccmCases,Accumulative Cases,,,,
-TotalPCR,Accumulative PCR Exams,,,,
-TotalDeaths,Accumulative Deaths,,,,
-Estado,Status,,,,
+FieldName,LongName,Category,VisMin,VisMax,VisColor,Temporal
+Operacione,Operations Mean Anomaly,,,,,0
+Pasajeros,Passengers Mean Anomaly,,,,,0
+JulyOperac,July Operations,,,,,0
+JulyPasaje,July Passengers,,,,,0
+Population,Population,,,,,0
+CurrentICU,Current ICU,,,,,0
+AccmCases,Accumulative Cases,,,,,0
+TotalPCR,Accumulative PCR Exams,,,,,0
+TotalDeaths,Accumulative Deaths,,,,,0
+Estado,Status,,,,,0

@@ -1,21 +1,21 @@
-FieldName,LongName,Category,VisMin,VisMax,VisColor
-Cases,Total Cases,,,,
-Recovered,Recovered Cases,,,,
-Deaths,Deaths,,,,
-Retail,Retail and Recreation Mobility % Change from Baseline (late July),,,,
-Grocery,Grocery and Pharmacy Mobility % Change from Baseline (late July),,,,
-Parks,Parks Mobility % Change from Baseline (late July),,,,
-Transit,Transit Mobility % Change from Baseline (late July),,,,
-Workplace,Workplace Mobility % Change from Baseline (late July),,,,
-Residentia,Residential Mobility % Change from Baseline (late July),,,,
-houseex,Household Expenditures % Change from Q1 to Q2,,,,
-consumex,Consumtion Expenditure LNPRT % Change from Q1 to Q2,,,,
-govex,Government Consumption Expenditure % Change from Q1 to Q2,,,,
-netex,Net Export % Change from Q1 to Q2,,,,
-GDRP,Gross Domestic Regional Expenditure % Change from Q1 to Q2,,,,
-pov,Poverty Rate (March 2020),,,,
-FTT,Farmer Terms of Trade (September 2020),,,,
-IF_val,Inflation (September 2020),,,,
-IF_chg,Inflation change from September 2019 to September 2020,,,,
-DF_chg,Domestic Flights % Change from August 2019 to August 2020,,,,
-HO_chg,Hotel Occupancy % Change from August 2019 to August 2020,,,,
+FieldName,LongName,Category,VisMin,VisMax,VisColor,Temporal
+Cases,Total Cases,,,,,0
+Recovered,Recovered Cases,,,,,0
+Deaths,Deaths,,,,,0
+Retail,Retail and Recreation Mobility % Change from Baseline (late July),,,,,0
+Grocery,Grocery and Pharmacy Mobility % Change from Baseline (late July),,,,,0
+Parks,Parks Mobility % Change from Baseline (late July),,,,,0
+Transit,Transit Mobility % Change from Baseline (late July),,,,,0
+Workplace,Workplace Mobility % Change from Baseline (late July),,,,,0
+Residentia,Residential Mobility % Change from Baseline (late July),,,,,0
+houseex,Household Expenditures % Change from Q1 to Q2,,,,,0
+consumex,Consumtion Expenditure LNPRT % Change from Q1 to Q2,,,,,0
+govex,Government Consumption Expenditure % Change from Q1 to Q2,,,,,0
+netex,Net Export % Change from Q1 to Q2,,,,,0
+GDRP,Gross Domestic Regional Expenditure % Change from Q1 to Q2,,,,,0
+pov,Poverty Rate (March 2020),,,,,0
+FTT,Farmer Terms of Trade (September 2020),,,,,0
+IF_val,Inflation (September 2020),,,,,0
+IF_chg,Inflation change from September 2019 to September 2020,,,,,0
+DF_chg,Domestic Flights % Change from August 2019 to August 2020,,,,,0
+HO_chg,Hotel Occupancy % Change from August 2019 to August 2020,,,,,0

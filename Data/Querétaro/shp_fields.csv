@@ -1,5 +1,5 @@
-FieldName,LongName,Category,VisMin,VisMax,VisColor
-Pop,2015 Population,,,,
-CaseP,COVID Cases per 1000 People,,,,
-DeathP,COVID Deaths per 1000 People,,,,
-HosP,COVID Hospitalizations per 1000 People,,,,
+FieldName,LongName,Category,VisMin,VisMax,VisColor,Temporal
+Pop,2015 Population,,,,,0
+CaseP,COVID Cases per 1000 People,,,,,0
+DeathP,COVID Deaths per 1000 People,,,,,0
+HosP,COVID Hospitalizations per 1000 People,,,,,0
