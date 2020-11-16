@@ -1384,11 +1384,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-<<<<<<< HEAD
-                location = 'Querétaro',
-=======
                 location = 'Indonesia',
->>>>>>> SheaLombardo
                 arrangment = ['Graph', 'Map'])
 
     #Run the user interface
