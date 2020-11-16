@@ -943,6 +943,7 @@ class SD_UI(tk.Tk):
                                              from_=datemin, to=datemax, 
                                              orient='horizontal',
                                              tickinterval = 0,
+                                             length = self.screenwidth*0.25
                                              )
         
         if 'slideval' in kwargs:
