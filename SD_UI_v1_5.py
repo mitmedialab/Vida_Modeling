@@ -93,7 +93,7 @@ class SD_UI(tk.Tk):
             self.color_range = 'COVID Cases per 1000 People'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = "Hospitalized Population"
-            self.map_loc = [-99.866625, 20.85, 0.003]
+            self.map_loc = [-99.866625, 20.85, 0.0028]
             self.language = 'spanish'
             
         #Set filepaths for relevant data and auxilary files
@@ -200,12 +200,19 @@ class SD_UI(tk.Tk):
         self.info_frame = self.make_rule_display()
         
         #Generate the map(s) and their associated dropdown menus
+        self.frame_map_list = [[],[]]
         self.subframe_map_list = [[],[]]
         self.color_setting_name_list = [[],[]]
         self.color_optionlist_list = [[],[]]
         self.image_setting_name_list = [[],[]]
         self.image_optionlist_list = [[],[]]
         self.MAP_list = [[],[]]
+        self.mapslider_list = [[],[]]
+        self.datefieldlist = [[],[]]
+        self.datenumlist = [[],[]]
+        self.map_temporalflag = [0,0]
+        self.date_setting_list = [[],[]]
+        
         if self.arrangment[0] == 'Map':
             self.frame_map_L, subframe_map, MAP = self.make_map_frame(0)
             self.subframe_map_list[0] = subframe_map
@@ -723,6 +730,7 @@ class SD_UI(tk.Tk):
                              # borderwidth=1, relief='groove',
                              bg=self.default_background)
         frame_map.grid(column=col, row=0)
+        self.frame_map_list[col] = frame_map
 
         #Select specific UOA shapefile
         self.shps = [shapefile.Reader(self.shpfilepath)]
@@ -743,9 +751,21 @@ class SD_UI(tk.Tk):
                                      output_language = 'english')
         color_range = self.color_field_modes[self.color_longname_modes_inverted[color_title]]
         
+        #Check if this is a temporal dataset
+        testfield = self.fieldnamelookup(color_range, self.shp_fields)
+        self.map_temporalflag[col] = testfield.temporal_flag
+        # print(testfield.temporal_flag)
+        if testfield.temporal_flag:
+            # print(type(testfield.temporal_flag))
+            #Make Zoom Label, Entry, and Button
+            # zoomlabel = tk.Label(frame_layer, text='Zoom', font=('Arial',18))
+            # zoomlabel.grid(column=4, row=0, ipadx=gridpadding)
+            # print('make map slider')
+            color_range = self.make_map_slider(frame_map, col, color_range)
+
+        # print(color_range)
 
         #Check for specified visualization parameters
-        testfield = self.fieldnamelookup(color_range, self.shp_fields)
         vis_params = testfield.vis_params
         
         #Make Background Image Dropdown Menu
@@ -881,13 +901,72 @@ class SD_UI(tk.Tk):
             with open(shp_fields) as csv_file:
                csvread = csv.DictReader(csv_file)
                for row in csvread:
+                   if int(row['Temporal']):
+                       fieldname = fieldname[:4]
                    if row['FieldName'] == fieldname:
                        self.fieldname = fieldname
                        self.longname = row['LongName']
                        self.category = row['Category']
                        self.type = 'Other'
                        self.vis_params = [row['VisMin'], row['VisMax'], row['VisColor']]
+                       self.temporal_flag = int(row['Temporal'])
+                       
+   
     
+    def mapslide(self, col, **kwargs):
+        if 'factor' in kwargs:
+                factor = kwargs.pop('factor')
+                newfactor = min(self.datenumlist[col], key=lambda x:abs(x-float(factor)))
+                self.mapslider_list[col].set(newfactor)
+        else:
+            newfactor = max(self.datenumlist)
+            
+        dateindex = self.datenumlist[col].index(newfactor)
+        datefield = self.datefieldlist[col][dateindex]
+        self.date_setting_list[col] = datefield
+        
+        self.replace_map_image(self.subframe_map_list[col],col, slideval=newfactor)
+        
+        return datefield
+    
+    def make_map_slider(self,root, col,color_range, **kwargs):
+        shpfieldslist = [item[0] for item in self.shps[0].fields]
+        self.datefieldlist[col] = [item for item in shpfieldslist if item.startswith(color_range)]
+        datestrlist = [item[-6:] for item in self.datefieldlist[col]]
+        self.datenumlist[col] = [int(item) for item in datestrlist]
+        datemax = max(self.datenumlist[col])
+        datemin = min(self.datenumlist[col])
+        self.map_temporalflag[col] = 1
+        
+        
+        self.mapslider_list[col] = tk.Scale(root, 
+                                             from_=datemin, to=datemax, 
+                                             orient='horizontal',
+                                             tickinterval = 0,
+                                             length = self.screenwidth*0.25
+                                             )
+        
+        if 'slideval' in kwargs:
+            slideval = kwargs.pop('slideval')
+        else:
+            slideval = datemax
+        if not slideval:
+            slideval = datemax
+            
+        self.mapslider_list[col].set(slideval)
+        self.mapslider_list[col].bind("<ButtonRelease-1>",  lambda e: self.mapslide(col, factor=self.mapslider_list[col].get()))
+        self.mapslider_list[col].grid(column=0, row=2, columnspan=4)
+        
+        dateindex = self.datenumlist[col].index(slideval)
+        datefield = self.datefieldlist[col][dateindex]
+        self.date_setting_list[col] = datefield
+        color_range = self.date_setting_list[col]
+        
+        return color_range
+                
+                
+        
+        
     def replace_map_image(self, mapframe, col, **kwargs):
         """UPDATE MAP TO CURRENT SETTINGS
     
@@ -910,6 +989,20 @@ class SD_UI(tk.Tk):
         else:
             fill_color = [self.color_field_modes[self.color_longname_modes_inverted[fill_color_title]]]
             fill_color_title_input = fill_color_title
+            
+        if self.mapslider_list[col]:
+            self.mapslider_list[col].destroy()
+        
+        if fill_color:
+            testfield = self.fieldnamelookup(fill_color[0], self.shp_fields)
+            if testfield.temporal_flag:
+                self.map_temporalflag[col] = testfield.temporal_flag
+                if 'slideval' in kwargs:
+                    slideval = kwargs.pop('slideval')
+                else:
+                    slideval = 0
+                fill_color = [self.make_map_slider(self.frame_map_list[col], col, fill_color[0], slideval=slideval)]
+                self.date_setting_list[col] = fill_color
        
         image_title = self.translate(self.image_setting_name_list[col].get(),
                                           input_language=self.language,
@@ -917,8 +1010,10 @@ class SD_UI(tk.Tk):
         image_path = self.image_dict[image_title]
         
         #Check for specified visualization parameters
-        testfield = self.fieldnamelookup(fill_color[0], self.shp_fields)
-        vis_params = testfield.vis_params
+        if fill_color:
+            vis_params = testfield.vis_params
+        else:
+            vis_params = [[],[],[]]
         
         #Delete exisiting map
         self.MAP_list[col].delete("all")
@@ -1381,7 +1476,11 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
+<<<<<<< HEAD
                 location = 'Indonesia',
+=======
+                location = 'Santiago',
+>>>>>>> map_slider
                 arrangment = ['Graph', 'Map'])
 
     #Run the user interface

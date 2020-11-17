@@ -1268,6 +1268,15 @@ class SD_System:
             
             """ 7 - ENVIRONMENT """
             
+            self.Mob = SD_object('Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('Mobility', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.Mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Environment')
+            
             """ 8 - ECONOMIC """
         
         
@@ -1991,6 +2000,7 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Economy - Regional')  
 
+
             self.Int_F_Ind_JK = SD_object('International Flights - Jakarta',
                                 units = 'Passengers',
                                 init_value = lambda: self.historical_data('Int_F_JK', location, filename), 
@@ -2009,6 +2019,7 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Economy - Regional')   
 
+
             self.foreign_vis_Ind = SD_object('Foreign Visitors',
                                 units = 'People',
                                 init_value = lambda: self.historical_data('foreign', location, filename), 
@@ -2017,6 +2028,7 @@ class SD_System:
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
                                 category = 'Economy - Nationwide')   
+
 
             self.HO_Ind_JK = SD_object('Hotel Occupancy - Jakarta',
                                 units = '%',
@@ -2027,6 +2039,7 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Economy - Regional')    
 
+
             self.HO_Ind_JB = SD_object('Hotel Occupancy - West Java',
                                 units = '%',
                                 init_value = lambda: self.historical_data('HO_JB', location, filename), 
@@ -2035,6 +2048,7 @@ class SD_System:
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
                                 category = 'Economy - Regional')        
+
 
             self.HO_Ind_JT = SD_object('Hotel Occupancy - Central Java',
                                 units = '%',
@@ -2045,6 +2059,7 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Economy - Regional')        
 
+
             self.HO_Ind_JI = SD_object('Hotel Occupancy - East Java',
                                 units = '%',
                                 init_value = lambda: self.historical_data('HO_JI', location, filename), 
@@ -2054,6 +2069,7 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Economy - Regional')        
 
+
             self.HO_Ind_SN = SD_object('Hotel Occupancy - South Sulawesi',
                                 units = '%',
                                 init_value = lambda: self.historical_data('HO_SN', location, filename), 
@@ -2062,6 +2078,7 @@ class SD_System:
                                 maxval = lambda: 10000000,
                                 minval = lambda: 0,
                                 category = 'Economy - Regional')                                                                 
+
     # =============================================================================
     # %% 6 - Querétaro  
     # =============================================================================   

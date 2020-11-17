@@ -465,9 +465,9 @@ class Map(tk.Canvas):
         if color_name != []:
             valuerange, minim, smallpos, strdict = self.colorrange(sf, color_name)
             if self.color_min:
-                minim = self.color_min
+                minim = float(self.color_min)
             if self.color_max:
-                maxim = self.color_max
+                maxim = float(self.color_max)
             else:
                 maxim = minim + valuerange
             

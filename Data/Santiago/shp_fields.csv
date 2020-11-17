@@ -1,5 +1,6 @@
-FieldName,LongName,Category,VisMin,VisMax,VisColor
-CO,CO,,,,
-PM2.5,PM2.5,,,,
-PM10,PM10,,,,
-SO2,SO2,,,,
+FieldName,LongName,Category,VisMin,VisMax,VisColor,Temporal
+CO,CO,,,,,0
+PM2.5,PM2.5,,,,,0
+PM10,PM10,,,,,0
+S02,S02,,,,,0
+WMob,Weekly Mobility,,0,30,,1
