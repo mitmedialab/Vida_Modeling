@@ -1476,11 +1476,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-<<<<<<< HEAD
-                location = 'Indonesia',
-=======
                 location = 'Santiago',
->>>>>>> map_slider
                 arrangment = ['Graph', 'Map'])
 
     #Run the user interface
