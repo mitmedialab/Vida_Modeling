@@ -10,7 +10,7 @@ This project utilizes numerous different, primarily public government data sourc
 and how it is formated in this repository, see SD_UI/Data/Data_Header_Explanation.txt and SD_UI/Data/Data_Descriptions.xlsx. For information on the 
 permitted uses of this data, please see the original source for that data.
 
-The license for this code is currently under discussion. This README will be updated when it has been determined.
+The license for this code is available in the LICENSE file.
 
 SD_UI_v1_5.py is the primary python script that runs the user interface.
 SDlib_v1_v4.py is a package defining the underlying system dyanmics model.
