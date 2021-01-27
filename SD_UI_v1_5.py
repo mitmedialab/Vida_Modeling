@@ -61,7 +61,7 @@ class SD_UI(tk.Tk):
             self.location = 'Rio de Janeiro'
             
         if self.location == 'Rio de Janeiro':
-            self.background_image = ['./Data/Rio de Janeiro/test.tif']
+            self.background_image = ['./Data/Rio de Janeiro/Images/Landsat_Composite_uint8.tif']
             self.color_range =  'PM10'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
@@ -95,6 +95,13 @@ class SD_UI(tk.Tk):
             self.default_graph2 = "Hospitalized Population"
             self.map_loc = [-99.866625, 20.85, 0.0028]
             self.language = 'spanish'
+        elif self.location == 'Luanda':
+            self.background_image = ['./Data/Luanda/Images/Landsat_Composite_Luanda.tif']
+            self.color_range = 'AREA_CODE'
+            self.default_graph1 = 'Ships in Luanda Bay'
+            self.default_graph2 = "Ships in Offshore Area"
+            self.map_loc = [13.295026, -8.847543, 0.01]
+            self.language = 'portuguese'
             
         #Set filepaths for relevant data and auxilary files
         self.translations = './translations.csv' 
@@ -317,6 +324,7 @@ class SD_UI(tk.Tk):
         context_menu.add_command(label=self.translate("Santiago"), command=lambda: self.switch_context('Santiago'))
         context_menu.add_command(label=self.translate("Indonesia"), command=lambda: self.switch_context('Indonesia'))
         context_menu.add_command(label=self.translate("Querétaro"), command=lambda: self.switch_context('Querétaro'))
+        context_menu.add_command(label=self.translate("Luanda"), command=lambda: self.switch_context('Luanda'))
         menubar.add_cascade(label=self.translate("Locations"), menu=context_menu)
         
         

@@ -2439,6 +2439,55 @@ class SD_System:
                                       maxval = lambda: 1000000,
                                       minval = lambda: 0,
                                       category = 'Equipment Parameters')
+            
+    # =============================================================================
+    # %% 7 - Luanda  
+    # =============================================================================   
+        
+        if location in ['Luanda']:
+          
+            """ 1 - POLICIES & ACTIONS """
+            self.ClosureP = SD_object('Closure Policy',
+                                        units = 'unitless',
+                                        init_value = lambda: self.historical_data('Closure Policy', location, filename),
+                                        obtype = 'variable',
+                                        func = lambda tstep, tind: self.ClosureP.value(),
+                                        datatype = 'stringdict',
+                                        category = 'Policies & Actions')
+            
+            
+            """ 8 - ECONOMIC """
+            
+            self.ShipsLuanda = SD_object('Ships in Luanda Bay',
+                                units = 'ships',
+                                        init_value = lambda: self.historical_data('Ships in Luanda Bay', location, filename),
+                                        obtype = 'stock',
+                                        func = lambda tstep, tind: self.ShipsLuanda.value(),
+                                        maxval = lambda: 1000,
+                                        minval = lambda: 0,
+                                        category = 'Economy')
+            
+            self.ShipsOffshore = SD_object('Ships in Offshore Area',
+                                        units = 'ships',
+                                        init_value = lambda: self.historical_data('Ships in Offshore Area', location, filename),
+                                        obtype = 'stock',
+                                        func = lambda tstep, tind: self.ShipsOffshore.value(),
+                                        maxval = lambda: 1000,
+                                        minval = lambda: 0,
+                                        category = 'Economy')
+                        
+            self.ShipsLobito = SD_object('Ships in Lobito Bay',
+                                        units = 'ships',
+                                        init_value = lambda: self.historical_data('Ships in Lobito Bay', location, filename),
+                                        obtype = 'stock',
+                                        func = lambda tstep, tind: self.ShipsLobito.value(),
+                                        maxval = lambda: 1000,
+                                        minval = lambda: 0,
+                                        category = 'Economy')
+              
+          
+          
+          
 
     # =============================================================================
     # %% 5 - Adjustments for Tuning  
@@ -2673,7 +2722,13 @@ class SD_System:
 
             PolicyDictsOut['Social Distancing Policy'] = {'No Distancing' : 1,
                                                         'Voluntary Social Distancing' : 0.6,
-                                                        'Mandatory Social Distancing' : 0.1}                                                                      
+                                                        'Mandatory Social Distancing' : 0.1} 
+
+        elif location == 'Luanda':
+            PolicyDictsOut['Closure Policy'] = {'Pre-Emergency' : 1,
+                                    'Emergency State' : 0.6,
+                                    'Calamity State': 0.2}
+                                                                     
         return PolicyDictsOut
     
     def PolicyDictsInv(self, location):
