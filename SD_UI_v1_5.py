@@ -1103,18 +1103,7 @@ class SD_UI(tk.Tk):
             
             index+=1
         
-        #Generate the ventilator ordering entry box
-        option3_label = tk.Label(control_frame, text=self.translate('Order New Ventilators')+': ',
-                                 bg=self.default_background)
-        option3_label.grid(column=0, row=7)
-        self.option3_var = tk.IntVar()
-        self.option3_var.set(0)
-        self.option3_menu = tk.Entry(control_frame,
-                                     highlightbackground=self.highlight_color)
-        self.option3_menu.insert(0,self.option3_var.get())
-        self.option3_menu.configure(width=5)
-        self.option3_menu.grid(column=1, row=7, sticky='W')
-
+      
         #Generate the Next Week simulation button
         run_button = tk.Button(control_frame, text=self.translate('Next Week'), 
                                command = lambda: self.increment_time(),
@@ -1191,12 +1180,6 @@ class SD_UI(tk.Tk):
         count = range(0,timerange)
         for i in count:
             
-            #If being run manually, read the new vent orders once and then clear the entry box
-            if autoflag != 1:
-                if i == 0:
-                    self.SD_Map.NewOVents.values[-1] = int(self.option3_menu.get())
-                    self.option3_menu.delete(0, tk.END)
-                    self.option3_menu.insert(0, 0)
            
             #Increment one day if at least one infected person remains. If not, end the simulation
             if self.SD_Map.IPop.value() > 1:

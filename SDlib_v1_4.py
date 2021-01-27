@@ -199,15 +199,6 @@ class SD_System:
                                         datatype = 'stringdict',
                                         category = 'Policies & Actions')
               
-            self.NewOVents = SD_object('New Ventilator Orders',
-                                      units = 'ventilator',
-                                      init_value = 0,
-                                      obtype = 'variable',
-                                      func = lambda tstep, tind: 0,
-                                      maxval = lambda: 1000000,
-                                      minval = lambda: 0,
-                                      category = 'Policies & Actions')
-          
           
             self.SocialDisP = SD_object('Social Distancing Policy',
                                         units = 'unitless',
@@ -497,53 +488,6 @@ class SD_System:
                         minval = lambda: 0,
                         category = 'Equipment Supplies')
               
-            self.Vents = SD_object('Available Ventilators',
-                                units = 'ventilator',
-                                init_value = lambda: self.historical_data('Ventilators', location, filename),
-                                obtype = 'stock',
-                                func = lambda tstep, tind: self.Vents.value(ind=tind) + self.VentAqRate.value(ind=tind) * tstep,
-                                maxval = lambda: 1000000,
-                                minval = lambda: 0,
-                                category = 'Equipment Supplies')
-              
-            self.OVents = SD_object('Ordered Ventilators',
-                                units = 'ventilator',
-                                init_value = 0,
-                                obtype = 'stock',
-                                func = lambda tstep, tind: self.OVents.value(ind=tind) + self.NewOVents.value(ind=tind) 
-                                                            - (self.VentAqRate.value(ind=tind) * tstep),
-                                maxval = lambda: 1000000,
-                                minval = lambda: 0,
-                                category = 'Equipment Supplies')
-            
-            """ 6 - EQUIPMENT PARAMETERS """
-            self.VWTP = SD_object('Ventilator Willingness to Pay',
-                        units = 'dollar/ventilator',
-                        init_value = 25000,
-                        obtype = 'variable',
-                        func = lambda tstep, tind: self.VWTP.value(ind=tind),
-                        maxval = lambda: 1000000,
-                        minval = lambda: 0,
-                        category = 'Equipment Parameters')
-              
-            self.VDur = SD_object('Default Ventilator Delivery Duration',
-                        units = 'Days',
-                        init_value = 30,
-                        obtype = 'variable',
-                        func = lambda tstep, tind: self.VDur.value(ind=tind),
-                        maxval = lambda: 365,
-                        minval = lambda: 0,
-                        category = 'Equipment Parameters')
-              
-            self.VentAqRate = SD_object('Ventilator Acquisition Rate',
-                                      units = 'ventilator/day',
-                                      init_value = 0,
-                                      obtype = 'flow',
-                                      func = lambda tstep, tind: self.OVents.value(ind=tind) / self.VDur.value(ind=tind) 
-                                                                  * (3 * (1 - math.exp(-math.log(3/2) / self.VWTP.values[0] * self.VWTP.value(ind=tind)))),
-                                      maxval = lambda: 1000000,
-                                      minval = lambda: 0,
-                                      category = 'Equipment Parameters')
             
             """ 7 - ENVIRONMENT """
             self.Temperature = SD_object('Average Temperature',
@@ -715,14 +659,6 @@ class SD_System:
                                         datatype = 'stringdict',
                                         category = 'Policies & Actions')
               
-            self.NewOVents = SD_object('New Ventilator Orders',
-                                      units = 'ventilator',
-                                      init_value = 0,
-                                      obtype = 'variable',
-                                      func = lambda tstep, tind: 0,
-                                      maxval = lambda: 1000000,
-                                      minval = lambda: 0,
-                                      category = 'Policies & Actions')
           
           
             self.SocialDisP = SD_object('Curfew Policy',
@@ -1012,24 +948,6 @@ class SD_System:
                         minval = lambda: 0,
                         category = 'Equipment Supplies')
               
-            self.Vents = SD_object('Available Ventilators',
-                                units = 'ventilator',
-                                init_value = lambda: self.historical_data('Ventilators', location, filename),
-                                obtype = 'stock',
-                                func = lambda tstep, tind: self.Vents.value(ind=tind) + self.VentAqRate.value(ind=tind) * tstep,
-                                maxval = lambda: 1000000,
-                                minval = lambda: 0,
-                                category = 'Equipment Supplies')
-              
-            self.OVents = SD_object('Ordered Ventilators',
-                                units = 'ventilator',
-                                init_value = 0,
-                                obtype = 'stock',
-                                func = lambda tstep, tind: self.OVents.value(ind=tind) + self.NewOVents.value(ind=tind) 
-                                                            - (self.VentAqRate.value(ind=tind) * tstep),
-                                maxval = lambda: 1000000,
-                                minval = lambda: 0,
-                                category = 'Equipment Supplies')
             
             self.PCR = SD_object('Daily PCR Tests',
                     units = 'tests',
@@ -1040,35 +958,7 @@ class SD_System:
                     minval = lambda: 0,
                     category = 'Equipment Supplies')
             
-            
-            """ 6 - EQUIPMENT PARAMETERS """
-            self.VWTP = SD_object('Ventilator Willingness to Pay',
-                        units = 'dollar/ventilator',
-                        init_value = 25000,
-                        obtype = 'variable',
-                        func = lambda tstep, tind: self.VWTP.value(ind=tind),
-                        maxval = lambda: 1000000,
-                        minval = lambda: 0,
-                        category = 'Equipment Parameters')
-              
-            self.VDur = SD_object('Default Ventilator Delivery Duration',
-                        units = 'Days',
-                        init_value = 30,
-                        obtype = 'variable',
-                        func = lambda tstep, tind: self.VDur.value(ind=tind),
-                        maxval = lambda: 365,
-                        minval = lambda: 0,
-                        category = 'Equipment Parameters')
-              
-            self.VentAqRate = SD_object('Ventilator Acquisition Rate',
-                                      units = 'ventilator/day',
-                                      init_value = 0,
-                                      obtype = 'flow',
-                                      func = lambda tstep, tind: self.OVents.value(ind=tind) / self.VDur.value(ind=tind) 
-                                                                  * (3 * (1 - math.exp(-math.log(3/2) / self.VWTP.values[0] * self.VWTP.value(ind=tind)))),
-                                      maxval = lambda: 1000000,
-                                      minval = lambda: 0,
-                                      category = 'Equipment Parameters')
+        
             
             
             """ 7 - ENVIRONMENT """
@@ -1098,14 +988,6 @@ class SD_System:
                                         datatype = 'stringdict',
                                         category = 'Policies & Actions')
               
-            self.NewOVents = SD_object('New Ventilator Orders',
-                                      units = 'ventilator',
-                                      init_value = 0,
-                                      obtype = 'variable',
-                                      func = lambda tstep, tind: 0,
-                                      maxval = lambda: 1000000,
-                                      minval = lambda: 0,
-                                      category = 'Policies & Actions')
           
           
             self.SocialDisP = SD_object('Curfew Policy',
@@ -1297,14 +1179,7 @@ class SD_System:
                                         datatype = 'stringdict',
                                         category = 'Policies & Actions')
               
-            self.NewOVents = SD_object('New Ventilator Orders',
-                                      units = 'ventilator',
-                                      init_value = 0,
-                                      obtype = 'variable',
-                                      func = lambda tstep, tind: 0,
-                                      maxval = lambda: 1000000,
-                                      minval = lambda: 0,
-                                      category = 'Policies & Actions')
+
           
           
             self.SocialDisP = SD_object('Social Distancing Policy',
@@ -2094,15 +1969,6 @@ class SD_System:
                                         datatype = 'stringdict',
                                         category = 'Policies & Actions')
               
-            self.NewOVents = SD_object('New Ventilator Orders',
-                                      units = 'ventilator',
-                                      init_value = 0,
-                                      obtype = 'variable',
-                                      func = lambda tstep, tind: 0,
-                                      maxval = lambda: 1000000,
-                                      minval = lambda: 0,
-                                      category = 'Policies & Actions')
-          
           
             self.SocialDisP = SD_object('Social Distancing Policy',
                                         units = 'unitless',
@@ -2392,53 +2258,8 @@ class SD_System:
                         minval = lambda: 0,
                         category = 'Equipment Supplies')
               
-            self.Vents = SD_object('Available Ventilators',
-                                units = 'ventilator',
-                                init_value = lambda: self.historical_data('Ventilators', location, filename),
-                                obtype = 'stock',
-                                func = lambda tstep, tind: self.Vents.value(ind=tind) + self.VentAqRate.value(ind=tind) * tstep,
-                                maxval = lambda: 1000000,
-                                minval = lambda: 0,
-                                category = 'Equipment Supplies')
-              
-            self.OVents = SD_object('Ordered Ventilators',
-                                units = 'ventilator',
-                                init_value = 0,
-                                obtype = 'stock',
-                                func = lambda tstep, tind: self.OVents.value(ind=tind) + self.NewOVents.value(ind=tind) 
-                                                            - (self.VentAqRate.value(ind=tind) * tstep),
-                                maxval = lambda: 1000000,
-                                minval = lambda: 0,
-                                category = 'Equipment Supplies')
-            
-            """ 6 - EQUIPMENT PARAMETERS """
-            self.VWTP = SD_object('Ventilator Willingness to Pay',
-                        units = 'dollar/ventilator',
-                        init_value = 25000,
-                        obtype = 'variable',
-                        func = lambda tstep, tind: self.VWTP.value(ind=tind),
-                        maxval = lambda: 1000000,
-                        minval = lambda: 0,
-                        category = 'Equipment Parameters')
-              
-            self.VDur = SD_object('Default Ventilator Delivery Duration',
-                        units = 'Days',
-                        init_value = 30,
-                        obtype = 'variable',
-                        func = lambda tstep, tind: self.VDur.value(ind=tind),
-                        maxval = lambda: 365,
-                        minval = lambda: 0,
-                        category = 'Equipment Parameters')
-              
-            self.VentAqRate = SD_object('Ventilator Acquisition Rate',
-                                      units = 'ventilator/day',
-                                      init_value = 0,
-                                      obtype = 'flow',
-                                      func = lambda tstep, tind: self.OVents.value(ind=tind) / self.VDur.value(ind=tind) 
-                                                                  * (3 * (1 - math.exp(-math.log(3/2) / self.VWTP.values[0] * self.VWTP.value(ind=tind)))),
-                                      maxval = lambda: 1000000,
-                                      minval = lambda: 0,
-                                      category = 'Equipment Parameters')
+
+           
             
     # =============================================================================
     # %% 7 - Luanda  
@@ -2563,10 +2384,8 @@ class SD_System:
         baseprob = self.bHRL.value(ind=tind)
         rprob = baseprob
         
-        #Adjust recovery rate based on relative hospitalized population and available ventilators
-        if self.HPop.value(ind=tind) > 5 * self.Vents.value(ind=tind):
-            rprob = baseprob * 0.7
-        if self.HPop.value(ind=tind) > 5 * self.Vents.value(ind=tind) and self.HPop.value(ind=tind) > self.HBeds.value(ind=tind):
+        #Adjust recovery rate based on relative hospitalized population and available beds
+        if self.HPop.value(ind=tind) > self.HBeds.value(ind=tind):
             rprob = baseprob * 0.4
         
         return rprob   
