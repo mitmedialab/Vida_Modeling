@@ -4,6 +4,11 @@
 Created on Wed Nov 18 18:25:36 2020
 
 @author: jackreid
+
+This script is for calculating daily averages for each sensor site and saving
+each one as a seperate csv
+
+
 """
 
 
@@ -16,8 +21,14 @@ import numpy as np
 
 
 
+# =============================================================================
+#  Define the initial parameters and setup data structures       
+# =============================================================================
+
+#List of location abbreviations
 locations = ['CA','AV','SC','SP','IR','BG','CG','PG']
 
+#List of metrics as they appear in the raw data csv
 metrics = ['Chuva',
            'Pres',
           'RS',
@@ -49,8 +60,7 @@ daylist = []
 for day in dayrange:
     daylist.append([day, day+dateutil.relativedelta.relativedelta(days=+1)])
 
-
-#Set up a dictionary to hold the values: Day->Metric
+#Set up a dictionary to hold the values: Location->Day->Metric
 datadict = dict()
 
 for location in locations:
@@ -60,10 +70,18 @@ for location in locations:
         datadict[location][day[0].date()]['date'] = day[0].date()
         for metric in metrics:
             datadict[location][day[0].date()][metric] = []
-        
+
+#Make a copy of dictionary to hold the daily averages
 daydict = datadict.copy()
-        
+
+#Filepath of raw data
 filepath = '/home/jackreid/Documents/School/Research/Space Enabled/Code/Decisions/Data/Rio de Janeiro/Misc/Qualidade_do_ar_-_Dados_hor%C3%A1rios.csv'
+
+
+# =============================================================================
+# Extract the data            
+# =============================================================================
+
 
 #Open the CSV and count the number of rows
 with open(filepath) as csvfile:
@@ -101,11 +119,15 @@ for day in datadict[location].keys():
                 value = sum(z for z in metricdata if isinstance(z,float)) / denom
             else:
                 value = np.nan
-            daydict[location][day][metric] = value
-            
+            daydict[location][day][metric] = value 
     dayindex+=1
     if dayindex % 100 == 0:
         print(str(dayindex/len(daylist)*10) + '% of days Complete')
+
+
+# =============================================================================
+#  Save data in output csvs          
+# =============================================================================
 
 for location in locations: 
     filename = './' + location + '_DailyAirQuality' +'.csv'

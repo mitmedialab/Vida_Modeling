@@ -4,6 +4,9 @@
 Created on Wed Nov 18 18:25:36 2020
 
 @author: jackreid
+
+This script is for calculating daily averages across all sensor sites
+
 """
 
 
@@ -13,7 +16,9 @@ import dateutil
 from dateutil import rrule
 from datetime import datetime, timedelta
 
-
+# =============================================================================
+#  Define the initial parameters and setup data structures       
+# =============================================================================
 
 
 metrics = ['Chuva',
@@ -50,17 +55,22 @@ for day in dayrange:
 
 #Set up a dictionary to hold the values: Day->Metric
 datadict = dict()
-
-
 for day in daylist:
     datadict[day[0].date()] = dict()
     datadict[day[0].date()]['date'] = day[0].date()
     for metric in metrics:
         datadict[day[0].date()][metric] = []
-        
+
+#Make a copy of dictionary to hold the daily averages
 daydict = datadict.copy()
         
 filepath = '/home/jackreid/Documents/School/Research/Space Enabled/Code/Decisions/Data/Rio de Janeiro/Misc/Qualidade_do_ar_-_Dados_hor%C3%A1rios.csv'
+
+
+
+# =============================================================================
+# Extract the data            
+# ============================================================================
 
 #Open the CSV and count the number of rows
 with open(filepath) as csvfile:
@@ -102,6 +112,10 @@ for day in datadict.keys():
     if dayindex % 100 == 0:
         print(str(dayindex/len(daylist)*10) + '% of days Complete')
     
+    
+# =============================================================================
+#  Save data in output csvs          
+# =============================================================================
 filename = './' + 'DailyAirQuality' +'.csv'
 fields = list(daydict[day].keys())
 with open(filename,'w') as csvfile:
