@@ -2468,21 +2468,21 @@ class SD_System:
         
         PolicyDictsOut = dict()
         if location == 'Rio de Janeiro':
-            PolicyDictsOut['Closure Policy'] = {'No Closures' : 0.0000001,
-                                                'Conservative' : 0.00000008,
-                                                'Fase 6b' : 0.000000075,
-                                                'Fase 6a' : 0.000000065,
-                                                'Fase 5': 0.00000006,
-                                                'Fase 4' : 0.00000005,
-                                                'Fase 3b': 0.000000045,
-                                                'Fase 3a': 0.00000004,
-                                                'Fase 2': 0.00000003,
-                                                'Fase 1': 0.000000005,
-                                                'Lockdown': 0.000000001}
+            PolicyDictsOut['Closure Policy'] = {'No Closures' : 1,
+                                                'Conservative' : 0.8,
+                                                'Fase 6b' : 0.75,
+                                                'Fase 6a' : 0.65,
+                                                'Fase 5': 0.6,
+                                                'Fase 4' : 0.5,
+                                                'Fase 3b': 0.45,
+                                                'Fase 3a': 0.4,
+                                                'Fase 2': 0.3,
+                                                'Fase 1': 0.2,
+                                                'Lockdown': 0.1}
 
-            PolicyDictsOut['Social Distancing Policy'] = {'No Distancing' : 0.0000001,
-                                                        'Voluntary Social Distancing' : 0.000000006,
-                                                        'Mandatory Social Distancing' : 0.000000001}
+            PolicyDictsOut['Social Distancing Policy'] = {'No Distancing' : 1,
+                                                        'Voluntary Social Distancing' : 0.6,
+                                                        'Mandatory Social Distancing' : 0.1}
             
         elif location in ['Chile', 'Santiago']:
             PolicyDictsOut['Closure Policy'] = {'Paso 5': 1,
