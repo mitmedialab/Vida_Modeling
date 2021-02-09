@@ -141,6 +141,7 @@ def ShapefileFormatter(shpfilepath, datapath,fieldname, writepath):
     #Define a function to identify spreadsheet value based on name
     def dataextract(entry,valname):
         name = entry['NAME']
+        print(name)
         # print('LOOKING FOR:', name)
         if (df.index == name).any():
             namerow =  df.loc[name]
@@ -195,12 +196,12 @@ def ShapefileFormatter(shpfilepath, datapath,fieldname, writepath):
 
 
 
-metrics = ['Temporal', 'SO2C']
+metrics = ['Temporal', 'NO2C']
 
 
 
 shppath = '/home/jackreid/Documents/School/Research/Space Enabled/Code/Decisions/Data/Luanda/Shapefiles/Combined_Data_1.shp'
-datapath = '/home/jackreid/Documents/School/Research/Space Enabled/Code/Decisions/Data/Luanda/Misc/Adding_SOPerctangeChange.xlsx'
+datapath = '/home/jackreid/Documents/School/Research/Space Enabled/Code/Decisions/Data/Luanda/Misc/Adding_NOPerctangeChange.xlsx'
 writepath = '/home/jackreid/Documents/School/Research/Space Enabled/Code/Decisions/Data/Luanda/Shapefiles/Combined_Data_2.shp'
 
 
