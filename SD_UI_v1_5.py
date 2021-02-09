@@ -98,7 +98,7 @@ class SD_UI(tk.Tk):
         elif self.location == 'Luanda':
             self.background_image = 'Visual Composite'
             self.color_range = 'NO2 Percent Change'
-            self.default_graph1 = 'Measured Infected Population'
+            self.default_graph1 = 'National Measured Infected Population'
             self.default_graph2 = "Ships in Offshore Area"
             self.map_loc = [13.295026, -8.847543, 0.01]
             self.language = 'portuguese'

@@ -121,6 +121,11 @@ Measured Infected Population Java,Población infectada medida de Java,População i
 Measured Infected Population Sulawesi,Población infectada medida de Sulawesi,População infectada medida de Sulawesi
 Susceptible Population Java,Población susceptible de Java,População Susceptível de Java
 Susceptible Population Sulawesi,Población susceptible de Sulawesi,População Susceptível de Sulawesi
+National Susceptible Population,Población Nacional Susceptible,População Nacional Susceptível
+'Estimated' National Infected Population,Población nacional infectada 'estimada',População nacional infectada 'estimada'
+National Deaths,Defunciones nacionales,Mortes Nacionais
+National Known Recovered Population,Población recuperada conocida nacional,População Nacional Recuperada Conhecida
+National Measured Infected Population,Población infectada medida a nivel nacional,População nacional infectada medida
 ,,
 Health Flows,Flujos de salud,Fluxos de Saúde
 'True' Infection Rate,Tasa de infección 'verdadera',Taxa de infecção 'verdadeira'
@@ -143,6 +148,13 @@ Mortality Rate Sulawesi,Tasa de mortalidad de Sulawesi,Taxa de mortalidade de Su
 'Estimated' Infection Rate Sulawesi,Tasa de infección 'estimada' de Sulawesi,Taxa de infecção 'estimada' de Sulawesi
 Measured Infection Rate Java,Tasa de infección medida de Java,Taxa de infecção medida de Java
 Measured Infection Rate Sulawesi,Tasa de infección medida de Sulawesi,Taxa de infecção medida de Sulawesi
+National 'Estimated' Infection Rate,Tasa de infección nacional 'estimada',Taxa nacional de infecção 'estimada'
+National Measured Infection Rate,Tasa de infección medida a nivel nacional,Taxa de infecção medida nacional
+National Recovery Rate,Tasa de recuperación nacional,Taxa de recuperação nacional
+National Mortality Rate,Tasa Nacional de Mortalidad,Taxa Nacional de Mortalidade
+,,
+,,
+,,
 ,,
 Equipment Supplies,Suministros de equipos,Suprimentos de equipamentos
 Hospital Bed Capacity,Capacidad de la cama de hospital,Capacidade de leitos hospitalares

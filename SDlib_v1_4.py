@@ -2332,7 +2332,7 @@ class SD_System:
           
           
             """ 3 - HEALTH POPULATIONS """
-            self.SPop = SD_object('Susceptible Population',
+            self.SPop = SD_object('National Susceptible Population',
                                   units = 'people',
                                   init_value = lambda: self.historical_data('Susceptible Population', location, filename),
                                   obtype = 'stock',
@@ -2341,7 +2341,7 @@ class SD_System:
                                   minval = lambda: 0,
                                   category = 'Health Populations')
             
-            self.IPop = SD_object("'Estimated' Infected Population",
+            self.IPop = SD_object("'Estimated' National Infected Population",
                                 units = 'people',
                                 init_value = lambda: self.historical_data('True Infected', location, filename),
                                 obtype = 'stock',
@@ -2351,7 +2351,7 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Health Populations')
           
-            self.Deaths = SD_object('Deaths',
+            self.Deaths = SD_object('National Deaths',
                                 units = 'people',
                                 init_value = lambda: self.historical_data('Deaths', location, filename),
                                 obtype = 'stock',
@@ -2360,7 +2360,7 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Health Populations')
               
-            self.RPop = SD_object('Known Recovered Population',
+            self.RPop = SD_object('National Known Recovered Population',
                                 units = 'people',
                                 init_value = lambda: self.historical_data('Recoveries', location, filename),
                                 obtype = 'stock',
@@ -2369,7 +2369,7 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Health Populations')
               
-            self.mIPop = SD_object("Measured Infected Population",
+            self.mIPop = SD_object("National Measured Infected Population",
                                 units = 'people',
                                 init_value = lambda: self.historical_data('Measured Current Infected', location, filename),
                                 obtype = 'stock',
@@ -2380,7 +2380,7 @@ class SD_System:
           
           
             """ 4 - HEALTH FLOWS """
-            self.InfectR = SD_object("'Estimated' Infection Rate",
+            self.InfectR = SD_object("National 'Estimated' Infection Rate",
                                       units = 'people/day',
                                       init_value = lambda: self.historical_data('True Infection Rate', location, filename),
                                       obtype = 'flow',
@@ -2391,7 +2391,7 @@ class SD_System:
                                       category = 'Health Flows'
                                       )
                   
-            self.mInfectR = SD_object("Measured Infection Rate",
+            self.mInfectR = SD_object("National Measured Infection Rate",
                                       units = 'people/day',
                                       init_value = lambda: self.historical_data('Measured Infection Rate',  location, filename),
                                       obtype = 'flow',
@@ -2401,7 +2401,7 @@ class SD_System:
                                       category = 'Health Flows'
                                       )
             
-            self.RR = SD_object('Recovery Rate',
+            self.RR = SD_object('National Recovery Rate',
                                   units = 'people/day',
                                   init_value = self.RecL.value() * self.IPop.value() / self.AvDur.value(),
                                   # init_value = 1,
@@ -2412,7 +2412,7 @@ class SD_System:
                                   category = 'Health Flows'
                                   )
               
-            self.MR = SD_object('Mortality Rate',
+            self.MR = SD_object('National Mortality Rate',
                                   units = 'people/day',
                                   init_value = self.MorL.value() * self.IPop.value() / self.AvDur.value(),
                                   obtype = 'flow',
