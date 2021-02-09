@@ -2258,7 +2258,115 @@ class SD_System:
                         minval = lambda: 0,
                         category = 'Equipment Supplies')
               
-
+            """ 7 - MOBILITY """
+            
+            self.nat_retail_recreation_mob = SD_object('National Retail and Recreation Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('nat_retail_recreation_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.nat_retail_recreation_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.nat_grocery__pharmacy_mob = SD_object('National Grocery and Pharmacy Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('nat_grocery__pharmacy_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.nat_grocery__pharmacy_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.nat_parks_mob = SD_object('National Parks Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('nat_parks_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.nat_parks_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.nat_transit_mob = SD_object('National Transit Stations Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('nat_transit_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.nat_transit_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.nat_workplaces_mob = SD_object('National Workplaces Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('nat_workplaces_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.nat_workplaces_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.nat_residential_mob = SD_object('National Residential Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('nat_residential_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.nat_residential_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.loc_retail_recreation_mob = SD_object('Querétaro Retail and Recreation Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('loc_retail_recreation_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.loc_retail_recreation_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.loc_grocery__pharmacy_mob = SD_object('Querétaro Grocery and Pharmacy Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('loc_grocery__pharmacy_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.loc_grocery__pharmacy_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.loc_parks_mob = SD_object('Querétaro Parks Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('loc_parks_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.loc_parks_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.loc_transit_mob = SD_object('Querétaro Transit Stations Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('loc_transit_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.loc_transit_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.loc_workplaces_mob = SD_object('Querétaro Workplaces Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('loc_workplaces_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.loc_workplaces_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.loc_residential_mob = SD_object('Querétaro Residential Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('loc_residential_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.loc_residential_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
            
             
     # =============================================================================
@@ -2427,7 +2535,7 @@ class SD_System:
             
             """ 6 - EQUIPMENT PARAMETERS """
             
-            """ 7 - Mobility """
+            """ 7 - MOBILITY """
             
             self.nat_retail_recreation_mob = SD_object('National Retail and Recreation Mobility',
                                 units = 'Mobility Index',
