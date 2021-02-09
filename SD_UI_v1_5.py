@@ -776,6 +776,7 @@ class SD_UI(tk.Tk):
         #Check for specified visualization parameters
         vis_params = testfield.vis_params
         
+        
         #Make Background Image Dropdown Menu
         image_label = tk.Label(frame_map, text=self.translate('Image') +': ',
                               bg=self.default_background)
@@ -791,6 +792,10 @@ class SD_UI(tk.Tk):
                                           output_language='english')
         image_path = self.image_dict[image_title]
         
+        #check for specified visualization parameters
+        testimg = self.imagenamelookup(image_title, self.image_filepath)
+        img_params = testimg.vis_params
+        
         #Create subframe to house the map
         subframe_map = tk.Frame(frame_map,
                                 bg=self.default_background)
@@ -803,6 +808,7 @@ class SD_UI(tk.Tk):
                             color_range= [color_range],
                             color_title= color_title,
                             color_params = vis_params,
+                            image_params = img_params,
                             lat_lon_zoom= self.map_loc,
                             null_zeros=1,
                             window_dimensions = [self.screenwidth,self.screenheight])
@@ -921,8 +927,21 @@ class SD_UI(tk.Tk):
                        self.type = 'Other'
                        self.vis_params = [row['VisMin'], row['VisMax'], row['VisColor']]
                        self.temporal_flag = int(row['Temporal'])
-                       
    
+    class imagenamelookup:
+        """FIELDNAMELOOKUP CLASS PULLS RELEVANT INFORMATION FROM A CSV FOR 
+        A SPECIFIED FIELDNAME AND STORES IT AS A STRUCTURE"""
+    
+        def __init__(self, fieldname, image_filepath, **kwargs):
+            
+            #Appropriately label Other field
+            with open(image_filepath) as csv_file:
+               csvread = csv.DictReader(csv_file)
+               for row in csvread:
+                   if row['name'] == fieldname:
+                       self.fieldname = fieldname
+                       self.vis_params = [row['VisMin'], row['VisMax'], row['VisColor']]
+                       self.filepath = row['filepath']
     
     def mapslide(self, col, **kwargs):
         if 'factor' in kwargs:
@@ -1026,6 +1045,13 @@ class SD_UI(tk.Tk):
         else:
             vis_params = [[],[],[]]
         
+        #check for specified visualization parameters
+        if image_title == 'None':
+            img_params = [[],[],[]]
+        else:
+            testimg = self.imagenamelookup(image_title, self.image_filepath)
+            img_params = testimg.vis_params
+        
         #Delete exisiting map
         self.MAP_list[col].delete("all")
         slaveitems = mapframe.slaves()
@@ -1041,6 +1067,7 @@ class SD_UI(tk.Tk):
                             color_range = fill_color,
                             color_title = fill_color_title_input,
                             color_params = vis_params,
+                            image_params = img_params,
                             lat_lon_zoom = self.map_loc,
                             null_zeros=1,
                             window_dimensions = [self.screenwidth,self.screenheight])

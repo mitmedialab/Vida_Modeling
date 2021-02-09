@@ -86,6 +86,21 @@ class Map(tk.Canvas):
         self.polyimages = []
         self.shapefiles = shapefiles
 
+
+        if 'image_params' in kwargs:
+            image_params = kwargs.pop('image_params')
+            self.image_min = image_params[0]
+            self.image_max = image_params[1]
+            self.image_choice = image_params[2]
+            if self.image_min:
+                self.image_min = float(self.image_min)
+            if self.image_max:
+                self.image_max = float(self.image_max)
+        else:
+            self.image_min = []
+            self.image_max = []
+            self.image_choice = []
+            
         #Add background image on map (if selected)
         if 'background_image' in kwargs:
             imagename = kwargs.pop('background_image')
@@ -120,6 +135,9 @@ class Map(tk.Canvas):
             self.color_min = []
             self.color_max = []
             self.color_choice = []
+            
+
+            
             
         #Identify if zeros should be plotted or considered invalid data
         if 'null_zeros' in kwargs:
@@ -258,24 +276,54 @@ class Map(tk.Canvas):
         #Determine if Image is Multiband or Single band
         shape_count = len(image_array.shape)
         
+        
         #Process Image
         if shape_count > 2: #Image is multiband
-            image_array = image_array[0:3] #take the BGR bands, omit the NIR band
-            image_array = np.dstack((image_array[2],image_array[1],image_array[0])) #Convert BGR to RGB
-            
-            #Convert from uint16 to uint8 if needed
-            display_min = image_array.min()
-            display_max = image_array.max()
-            if image_array.dtype == np.dtype('uint16'):
-                image_array8 = np.array(lut_display(image_array, display_min, display_max))
+            if image_array.shape[0] in [3,4]: #image is BGR or BGR-NIR
+                image_array = image_array[0:3] #take the BGR bands, omit the NIR band
+                image_array = np.dstack((image_array[2],image_array[1],image_array[0])) #Convert BGR to RGB
                 
-            #make sure that the image is in uint8
+                #Convert from uint16 to uint8 if needed
+                display_min = image_array.min()
+                display_max = image_array.max()
+                if image_array.dtype == np.dtype('uint16'):
+                    image_array8 = np.array(lut_display(image_array, display_min, display_max))
+                    
+                #make sure that the image is in uint8
+                else:
+                    image_array8 = np.rint(image_array)
+                    image_array8 = np.nan_to_num(image_array8)
+                    image_array8 = image_array8.astype(np.uint8)
+                    
+                loaded_image = pil.Image.fromarray(image_array8)
+                
             else:
-                image_array8 = np.rint(image_array)
-                image_array8 = np.nan_to_num(image_array8)
-                image_array8 = image_array8.astype(np.uint8)
+                image_array = image_array[-1]
+                display_min = image_array.min()
+                display_max = image_array.max()
                 
-            loaded_image = pil.Image.fromarray(image_array8)
+                #Convert from uint16 to uint8 if needed
+                if image_array.dtype == np.dtype('uint16'):
+                    image_array8 = np.array(lut_display(image_array, display_min, display_max))
+                
+                #For single band images, can be left as float64 or uint8
+                else:
+                    image_array8 = image_array
+                    
+                if self.image_min:
+                    image_array8[image_array8 < self.image_min] = self.image_min
+                    
+                if self.image_max:
+                    image_array8[image_array8 > self.image_max] = self.image_max
+                    
+
+                if self.image_choice:
+                    cm = plt.get_cmap(self.image_choice)
+                    color_array = cm(image_array8)
+                    loaded_image = pil.Image.fromarray((color_array[:, :, :3] * 255).astype(np.uint8))
+                else:
+                    loaded_image = pil.Image.fromarray(image_array8)
+                   
             
         else: #Image is single band
             display_min = image_array.min()
@@ -288,8 +336,20 @@ class Map(tk.Canvas):
             #For single band images, can be left as float64 or uint8
             else:
                 image_array8 = image_array
-    
-            loaded_image = pil.Image.fromarray(image_array8)
+            
+            
+            if self.image_min:
+                image_array8[image_array8 < self.image_min] = self.image_min
+                    
+            if self.image_max:
+                image_array8[image_array8 > self.image_max] = self.image_max
+                    
+            if self.image_choice:
+                cm = plt.get_cmap(self.image_choice)
+                color_array = cm(image_array8)
+                loaded_image = pil.Image.fromarray((color_array[:, :, :3] * 255).astype(np.uint8))
+            else:
+                loaded_image = pil.Image.fromarray(image_array8)
 
         #Resize Image
         loaded_image_resized = loaded_image.resize((int(new_width), int(new_height)), Image.ANTIALIAS)
