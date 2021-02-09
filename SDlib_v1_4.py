@@ -2250,7 +2250,7 @@ class SD_System:
             
             """ 5 - EQUIPMENT SUPPLIES """
             self.HBeds = SD_object('Hospital Bed Capacity',
-                        units = 'person',
+                        units = 'people',
                         init_value = 2000,
                         obtype = 'variable',
                         func = lambda tstep, tind: self.HBeds.value(ind=tind),
@@ -2740,7 +2740,7 @@ class SD_System:
                                                 'Fase 3a': 0.4,
                                                 'Fase 2': 0.3,
                                                 'Fase 1': 0.2,
-                                                'Lockdown': 0.1}
+                                                'Initial Closures': 0.1}
 
             PolicyDictsOut['Social Distancing Policy'] = {'No Distancing' : 1,
                                                         'Voluntary Social Distancing' : 0.6,

@@ -16,6 +16,7 @@ Santiago,Santiago,Santiago
 Indonesia,Indonesia,Indonésia
 Locations,Ubicaciones,Localizações
 Querétaro,Querétaro,Querétaro
+Luanda,Luanda,Luanda
 ,,
 Arrange,Organizar,Organizar
 Graphs-Graphs,Gráficos-Gráficos,Gráficos-Gráficos
@@ -57,6 +58,7 @@ Millions USD,Millones de USD,Milhões de dólares
 Percent Change from Baseline,Cambio porcentual desde la línea de base,Alteração percentual da linha de base
 Stock Index,Índice bursátil,Índice de ações
 Terms Rate,Términos Tasa,Taxa de termos
+%,%,%
 ,,
 Policies & Actions,Políticas y acciones,Políticas e Ações
 Closure Policy,Política de cierre,Política de Fechamento
@@ -96,16 +98,21 @@ Contact Rate Sulawesi,Tasa de contacto de Sulawesi,Taxa de contato de Sulawesi
 Health Populations,Poblaciones de salud,Populações de Saúde
 Susceptible Population,Población susceptible,População Susceptível
 'True' Unhospitalized Infected Population,Población infectada no hospitalizada 'verdadera',População infectada 'verdadeira' não hospitalizada
+'Estimated' Unhospitalized Infected Population,Población infectada no hospitalizada 'estimada',População infectada 'estimada' não hospitalizada
 Deaths,Fallecidos,Mortes
 Hospitalized Population,Población hospitalizada,População Hospitalizada
 Known Recovered Population,Población recuperada conocida,População Recuperada Conhecida
 Measured Unhospitalized Infected Population,Población infectada no hospitalizada medida,População infectada não hospitalizada medida
 Measured Total Infected Population,Población total infectada medida,População total infectada medida
 'True' Total Infected Population,Población total infectada 'verdadera',População total infectada 'verdadeira'
+'Estimated' Total Infected Population,Población total infectada 'estimada',População total infectada 'estimada'
 'True' Infected Population,Población infectada 'verdadera',População infectada 'verdadeira'
+'Estimated' Infected Population,Población infectada 'estimada',População infectada 'estimada'
 Measured Infected Population,Población infectada medida,População infectada medida
 'True' Infected Population Java,Población infectada 'verdadera' de Java,População infectada 'verdadeira' de Java
+'Estimated' Infected Population Java,Población infectada 'estimada' de Java,População infectada 'estimada' de Java
 'True' Infected Population Sulawesi,Población infectada 'verdadera' de Sulawesi,População infectada 'verdadeira' de Sulawesi
+'Estimated' Infected Population Sulawesi,Población infectada 'estimada' de Sulawesi,População infectada 'estimada' de Sulawesi
 Deaths Java,Fallecidos de Java,Mortes de Java
 Deaths Sulawesi,Fallecidos de Sulawesi,Mortes de Sulawesi
 Known Recovered Population Java,Población recuperada conocida de Java,População Recuperada Conhecida de Java
@@ -117,6 +124,7 @@ Susceptible Population Sulawesi,Población susceptible de Sulawesi,População Susc
 ,,
 Health Flows,Flujos de salud,Fluxos de Saúde
 'True' Infection Rate,Tasa de infección 'verdadera',Taxa de infecção 'verdadeira'
+'Estimated' Infection Rate,Tasa de infección 'estimada',Taxa de infecção 'estimada'
 Measured Infection Rate,Tasa de infección medida,Taxa de infecção medida
 Unhospitalized Recovery Rate,Tasa de recuperación no hospitalizada,Taxa de recuperação não hospitalar
 Unhospitalized Mortality Rate,Tasa de mortalidad no hospitalizada,Taxa de mortalidade não hospitalizada
@@ -130,7 +138,9 @@ Recovery Rate Sulawesi,Tasa de recuperación de Java,Taxa de recuperação de Sulaw
 Mortality Rate Java,Tasa de mortalidad de Java,Taxa de mortalidade de Java
 Mortality Rate Sulawesi,Tasa de mortalidad de Sulawesi,Taxa de mortalidade de Sulawesi
 'True' Infection Rate Java,Tasa de infección 'verdadera' de Java,Taxa de infecção 'verdadeira' de Java
+'Estimated' Infection Rate Java,Tasa de infección 'estimada' de Java,Taxa de infecção 'estimada' de Java
 'True' Infection Rate Sulawesi,Tasa de infección 'verdadera' de Sulawesi,Taxa de infecção 'verdadeira' de Sulawesi
+'Estimated' Infection Rate Sulawesi,Tasa de infección 'estimada' de Sulawesi,Taxa de infecção 'estimada' de Sulawesi
 Measured Infection Rate Java,Tasa de infección medida de Java,Taxa de infecção medida de Java
 Measured Infection Rate Sulawesi,Tasa de infección medida de Sulawesi,Taxa de infecção medida de Sulawesi
 ,,
@@ -191,6 +201,35 @@ Farmer Terms of Trade - West Java,Términos de intercambio de agricultores - Java
 Farmer Terms of Trade - Central Java,Términos de intercambio de agricultores - Java Central,Termos de comércio do agricultor - Java Central
 Farmer Terms of Trade - East Java,Términos de intercambio de agricultores - Java Oriental,Termos de comércio do agricultor - Java Leste
 Farmer Terms of Trade - South Sulawesi,Términos de intercambio de agricultores - Sulawesi del Sur,Termos de comércio do agricultor - Sulawesi do Sul
+Inflation - Jakarta,Inflación - Jakarta,Inflação - Jakarta
+Inflation - West Java,Inflación - Java Occidental,Inflação - Java do Oeste
+Inflation - Central Java,Inflación - Java Central,Inflação - Java Central
+Inflation - East Java,Inflación - Java Oriental,Inflação - Java Leste
+Inflation - South Sulawesi,Inflación - Sulawesi del Sur,Inflação - Sulawesi do Sul
+Domestic Flights - Jakarta,Vuelos domésticos - Jakarta,Vôos domésticos - Jakarta
+Domestic Flights - East Java,Vuelos domésticos - Java Oriental,Vôos domésticos - Java Leste
+Domestic Flights - South Sulawesi,Vuelos domésticos - Sulawesi del Sur,Vôos domésticos - Sulawesi do Sul
+International Flights - Jakarta,Vuelos internacionales - Jakarta,Vôos internacionais - Jakarta
+International Flights - East Java,Vuelos internacionales - Java Oriental,Vôos internacionais - Java Leste
+Foreign Visitors,Visitantes extranjeros,Visitantes estrangeiros
+Hotel Occupancy - Jakarta,Ocupación hotelera - Jakarta,Ocupação do hotel - Jakarta
+Hotel Occupancy - West Java,Ocupación hotelera - Java Occidental,Ocupação do hotel - Java do Oeste
+Hotel Occupancy - Central Java,Ocupación hotelera - Central Java,Ocupação do hotel - Central Java
+Hotel Occupancy - East Java,Ocupación hotelera - Java Oriental,Ocupação do hotel - Java Leste
+Hotel Occupancy - South Sulawesi,Ocupación hotelera - Sulawesi del Sur,Ocupação do hotel - Sulawesi do Sul
+Economy - Nationwide,Economia a escala nacional,Economia em todo o país
+Economy - Regional,Economia regional,Economia regional
+Household Expenditures % Change from Q1 to Q3,Gasto de los hogares% de variación del primer trimestre al tercer trimestre,Mudança de% das despesas domésticas do primeiro ao terceiro trimestre
+Consumption Expenditure LNPRT % Change from Q1 to Q3,Gasto de consumo LNPRT% Cambio del primer trimestre al tercer trimestre,Despesas de consumo LNPRT% Mudança do primeiro ao terceiro trimestre
+Government Consumption Expenditure % Change from Q1 to Q3,Gasto de consumo del gobierno% de variación del primer trimestre al tercer trimestre,Mudança de% das despesas de consumo do governo do primeiro ao terceiro trimestre
+Net Export % Change from Q1 to Q3,Cambio de porcentaje de exportación neta del primer trimestre al tercer trimestre,% De mudança de exportação líquida do primeiro ao terceiro trimestre
+Gross Domestic Regional Expenditure % Change from Q1 to Q3,Variação% da despesa interna bruta regional del primer trimestre al tercer trimestre,Gasto Bruto Interno Regional% Variación do primeiro ao terceiro trimestre
+Inflation (September 2020),Inflación (septiembre de 2020),Inflação (setembro de 2020)
+Inflation change from September 2019 to September 2020,Variación de la inflación de septiembre de 2019 a septiembre de 2020,Alteração da inflação de setembro de 2019 a setembro de 2020
+Domestic Flights % Change from August 2019 to August 2020,% De cambio de vuelos nacionales de agosto de 2019 a agosto de 2020,% De variação de voos domésticos de agosto de 2019 a agosto de 2020
+Hotel Occupancy % Change from August 2019 to August 2020,% De cambio de ocupación hotelera de agosto de 2019 a agosto de 2020,Alteração da% de ocupação do hotel de agosto de 2019 a agosto de 2020
+,,
+,,
 ,,
 Rainfall,Lluvia,Chuva
 Barometric Pressure,Presión barométrica,Pressão barométrica
@@ -227,6 +266,29 @@ Residential Mobility % Change from Baseline (late July),Cambio porcentual de mov
 Poverty Rate (March 2020),Tasa de pobreza (marzo de 2020),Taxa de pobreza (março de 2020)
 Farmer Terms of Trade (September 2020),Términos de intercambio de agricultores (septiembre de 2020),Termos de troca do agricultor (setembro de 2020)
 ,,
+Mobility,Movilidad,Mobilidade
+Mobility Index,Índice de movilidad,Índice de Mobilidade
+National Retail and Recreation Mobility,Movilidad minorista y recreativa nacional,Mobilidade Nacional para Varejo e Recreação
+National Grocery and Pharmacy Mobility,Movilidad nacional de supermercados y farmacias,Mobilidade Nacional de Mercearia e Farmácia
+National Parks Mobility,Movilidad nacional en parques,Mobilidade Nacional para parques
+National Transit Stations Mobility,Movilidad de las estaciones de tránsito nacional,Mobilidade de estações de trânsito nacional
+National Workplaces Mobility,Movilidad nacional en los lugares de trabajo,Mobilidade Nacional em locais de trabalho
+National Residential Mobility,Movilidad residencial nacional,Mobilidade Residencial Nacional
+Luanda Retail and Recreation Mobility,Movilidad minorista y recreativa en Luanda,Mobilidade para Varejo e Recreação em Luanda
+Luanda Grocery and Pharmacy Mobility,Movilidad de supermercados y farmacias en Luanda,Mobilidade de Mercearia e Farmácia em Luanda
+Luanda Parks Mobility,Movilidad en parques en Luanda,Mobilidade para parques em Luanda
+Luanda Transit Stations Mobility,Movilidad de las estaciones de tránsito en Luanda,Mobilidade de estações de trânsito em Luanda
+Luanda Workplaces Mobility,Movilidad en los lugares de trabajo en Luanda,Mobilidade em locais de trabalho em Luanda
+Luanda Residential Mobility,Movilidad residencial en Luanda,Mobilidade Residencial em Luanda
+,,
+Ships in Luanda Bay,Barcos en la bahía de Luanda,Navios na Baía de Luanda
+Ships in Offshore Area,Barcos en el área costa afuera,Navios na área offshore
+Ships in Lobito Bay,Barcos en Bahía de Lobito,Navios na Baía do Lobito
+ships,Barcos,Navios
+,,
+NO2 Percent Change,Cambio porcentual de NO2,Mudança percentual de NO2
+SO2 Percent Change,Cambio porcentual de SO2,Mudança percentual de SO2
+,,
 COVID Cases per 1000 People,Casos de COVID por 1000 personas,Casos COVID por 1000 pessoas
 2015 Population,Población 2015,População 2015
 COVID Deaths per 1000 People,Fallecidos COVID por 1000 personas,COVID Mortes por 1000 pessoas
@@ -253,12 +315,15 @@ Relax Some Restrictions Sulawesi - Zonal,Relajar algunas restricciones de Sulawe
 Relax Mandatory Social Distancing Sulawesi - Zonal,Relax obligatorio distanciamiento social de Sulawesi - Zonal,Relaxe o distanciamento social obrigatório de Sulawesi - Zonal
 ,,
 Fase 6,Fase 6,Fase 6
+Fase 6a,Fase 6a,Fase 6a
+Fase 6b,Fase 6b,Fase 6b
 Fase 5,Fase 5,Fase 5
 Fase 4,Fase 4,Fase 4
-Fase 3B,Fase 3B,Fase 3B
-Fase 3A,Fase 3A,Fase 3A
+Fase 3b,Fase 3b,Fase 3b
+Fase 3a,Fase 3a,Fase 3a
 Fase 2,Fase 2,Fase 2
 Fase 1,Fase 1,Fase 1
+Conservative,Período conservador,Período conservador
 Paso 1,Paso 1,Paso 1
 Paso 2,Paso 2,Paso 2
 Paso 3,Paso 3,Paso 3
@@ -274,6 +339,9 @@ Voluntary Social Distancing - Zonal,Distanciamiento social voluntario - Zonal,Di
 Voluntary Social Distancing - Provincial,Distanciamiento social voluntario - Provincial,Distanciamento Social Voluntário - Provincial
 Mandatory Social Distancing - Zonal,Distanciamiento social obligatorio - Zonal,Distanciamento Social Obrigatório - Zonal
 Mandatory Social Distancing - Provincial,Distanciamiento social obligatorio - Provincial,Distanciamento Social Obrigatório - Provincial
+Pre-Emergency,Pre-emergencia,Pré-Emergência
+Emergency State,Estado de emergencia,Estado de emergência
+Calamity State,Estado de calamidad,Estado de calamidade
 ,,
 Visual Composite,Compuesto visual,Composto Visual
 Nightlights Mean Anomaly,Las luces nocturnas promedio anomalías,Luzes noturnas média anomalia
