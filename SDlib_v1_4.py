@@ -340,7 +340,7 @@ class SD_System:
                                   minval = lambda: 0,
                                   category = 'Health Populations')
             
-            self.IPop = SD_object("'True' Unhospitalized Infected Population",
+            self.IPop = SD_object("'Estimated' Unhospitalized Infected Population",
                                 units = 'people',
                                 init_value = lambda: self.historical_data('True Unhospitalized Infected', location, filename),
                                 obtype = 'stock',
@@ -395,7 +395,7 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Health Populations')
               
-            self.TotIPop = SD_object("'True' Total Infected Population",
+            self.TotIPop = SD_object("'Estimated' Total Infected Population",
                                 units = 'people',
                                 init_value = self.IPop.value() + self.HPop.value(),
                                 obtype = 'stock',
@@ -407,7 +407,7 @@ class SD_System:
             
           
             """ 4 - HEALTH FLOWS """
-            self.InfectR = SD_object("'True' Infection Rate",
+            self.InfectR = SD_object("'Estimated' Infection Rate",
                                       units = 'people/day',
                                       init_value = lambda: self.historical_data('True Infection Rate', location, filename),
                                       obtype = 'flow',
@@ -800,7 +800,7 @@ class SD_System:
                                   minval = lambda: 0,
                                   category = 'Health Populations')
             
-            self.IPop = SD_object("'True' Unhospitalized Infected Population",
+            self.IPop = SD_object("'Estimated' Unhospitalized Infected Population",
                                 units = 'people',
                                 init_value = lambda: self.historical_data('True Unhospitalized Infected', location, filename),
                                 obtype = 'stock',
@@ -855,7 +855,7 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Health Populations')
               
-            self.TotIPop = SD_object("'True' Total Infected Population",
+            self.TotIPop = SD_object("'Estimated' Total Infected Population",
                                 units = 'people',
                                 init_value = self.IPop.value() + self.HPop.value(),
                                 obtype = 'stock',
@@ -866,7 +866,7 @@ class SD_System:
             
           
             """ 4 - HEALTH FLOWS """
-            self.InfectR = SD_object("'True' Infection Rate",
+            self.InfectR = SD_object("'Estimated' Infection Rate",
                                       units = 'people/day',
                                       init_value = lambda: self.historical_data('True Infection Rate', location, filename),
                                       obtype = 'flow',
@@ -1062,7 +1062,7 @@ class SD_System:
                                   minval = lambda: 0,
                                   category = 'Health Populations')
             
-            self.IPop = SD_object("'True' Infected Population",
+            self.IPop = SD_object("'Estimated' Infected Population",
                                 units = 'people',
                                 init_value = lambda: self.historical_data('True Current Infected', location, filename),
                                 obtype = 'stock',
@@ -1101,7 +1101,7 @@ class SD_System:
           
           
             """ 4 - HEALTH FLOWS """
-            self.InfectR = SD_object("'True' Infection Rate",
+            self.InfectR = SD_object("'Estimated' Infection Rate",
                                       units = 'people/day',
                                       init_value = lambda: self.historical_data('True Infection Rate', location, filename),
                                       obtype = 'flow',
@@ -1308,7 +1308,7 @@ class SD_System:
                                   category = 'Health Populations')
             
             #nationwide
-            self.IPop = SD_object("'True' Infected Population",
+            self.IPop = SD_object("'Estimated' Infected Population",
                                 units = 'people',
                                 init_value = lambda: self.historical_data('True Current Infected', location, filename),
                                 obtype = 'stock',
@@ -1346,7 +1346,7 @@ class SD_System:
                                 category = 'Health Populations')   
             
             #island specific
-            self.IPop_j = SD_object("'True' Infected Population Java",
+            self.IPop_j = SD_object("'Estimated' Infected Population Java",
                                 units = 'people',
                                 init_value = lambda: self.historical_data('True Current Infected_java', location, filename),
                                 obtype = 'stock',
@@ -1356,7 +1356,7 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Health Populations')
   
-            self.IPop_s = SD_object("'True' Infected Population Sulawesi",
+            self.IPop_s = SD_object("'Estimated' Infected Population Sulawesi",
                                 units = 'people',
                                 init_value = lambda: self.historical_data('True Current Infected_SN', location, filename),
                                 obtype = 'stock',
@@ -1440,7 +1440,7 @@ class SD_System:
             
           
             """ 4 - HEALTH FLOWS """
-            self.InfectR = SD_object("'True' Infection Rate",
+            self.InfectR = SD_object("'Estimated' Infection Rate",
                                       units = 'people/day',
                                       init_value = lambda: self.historical_data('True Infection Rate', location, filename),
                                       obtype = 'flow',
@@ -1526,7 +1526,7 @@ class SD_System:
                                   category = 'Health Flows'
                                   )
   
-            self.InfectR_j = SD_object("'True' Infection Rate Java",
+            self.InfectR_j = SD_object("'Estimated' Infection Rate Java",
                                           units = 'people/day',
                                           init_value = lambda: self.historical_data('True Infection Rate_java', location, filename),
                                           obtype = 'flow',
@@ -1537,7 +1537,7 @@ class SD_System:
                                           category = 'Health Flows'
                                           )
   
-            self.InfectR_s = SD_object("'True' Infection Rate Sulawesi",
+            self.InfectR_s = SD_object("'Estimated' Infection Rate Sulawesi",
                                           units = 'people/day',
                                           init_value = lambda: self.historical_data('True Infection Rate_SN', location, filename),
                                           obtype = 'flow',
@@ -2110,7 +2110,7 @@ class SD_System:
                                   minval = lambda: 0,
                                   category = 'Health Populations')
             
-            self.IPop = SD_object("'True' Unhospitalized Infected Population",
+            self.IPop = SD_object("'Estimated' Unhospitalized Infected Population",
                                 units = 'people',
                                 init_value = lambda: self.historical_data('True Unhospitalized Infected', location, filename),
                                 obtype = 'stock',
@@ -2165,7 +2165,7 @@ class SD_System:
                                 minval = lambda: 0,
                                 category = 'Health Populations')
               
-            self.TotIPop = SD_object("'True' Total Infected Population",
+            self.TotIPop = SD_object("'Estimated' Total Infected Population",
                                 units = 'people',
                                 init_value = self.IPop.value() + self.HPop.value(),
                                 obtype = 'stock',
@@ -2177,7 +2177,7 @@ class SD_System:
             
           
             """ 4 - HEALTH FLOWS """
-            self.InfectR = SD_object("'True' Infection Rate",
+            self.InfectR = SD_object("'Estimated' Infection Rate",
                                       units = 'people/day',
                                       init_value = lambda: self.historical_data('True Infection Rate', location, filename),
                                       obtype = 'flow',
@@ -2275,6 +2275,268 @@ class SD_System:
                                         func = lambda tstep, tind: self.ClosureP.value(),
                                         datatype = 'stringdict',
                                         category = 'Policies & Actions')
+            
+            
+            
+            """ 2 - HEALTH PARAMETERS """
+            self.BaseContactR = SD_object('Base Contact Rate',
+                            units = 'people/(day*person)',
+                            init_value = 5,
+                            obtype = 'variable',
+                            func = lambda tstep, tind: self.BaseContactR.value(),
+                            category = 'Health Parameters'
+                            )
+            self.ContactR = SD_object('Contact Rate',
+                                    units = 'people/(day*person)',
+                                    init_value = self.ClosureP.value() * self.BaseContactR.value(),
+                                    obtype = 'variable',
+                                    func = lambda tstep, tind: self.ClosureP.value() * self.BaseContactR.value(),
+                                    category = 'Health Parameters'
+                                    )
+            
+            self.Infectivity = SD_object('Infectivity',
+                                units = 'likelihood/contact',
+                                init_value = 0.01,
+                                obtype = 'variable',
+                                func = lambda tstep, tind: self.Infectivity.value(ind=tind),
+                                maxval = lambda: 1,
+                                minval = lambda: 0,
+                                category = 'Health Parameters')
+            
+            self.AvDur = SD_object('Average Illness Duration',
+                                  units = 'Days',
+                                  init_value = 14,
+                                  obtype = 'variable',
+                                  func = lambda tstep, tind: self.AvDur.value(ind=tind),
+                                  maxval = lambda: 300,
+                                  minval = lambda: 0,
+                                  category = 'Health Parameters')
+            
+            self.RecL = SD_object('Recovery Likelihood',
+                        units = 'probability',
+                        init_value = 0.79,
+                        obtype = 'variable',
+                        func = lambda tstep, tind: self.RecL.value(ind=tind),
+                        maxval = lambda: 1,
+                        minval = lambda: 0,
+                        category = 'Health Parameters')
+              
+            self.MorL = SD_object('Mortality Likelihood',
+                        units = 'probability',
+                        init_value = 1-self.RecL.value(),
+                        obtype = 'variable',
+                        func = lambda tstep, tind: 1-self.RecL.value(ind=tind),
+                        maxval = lambda: 1,
+                        minval = lambda: 0,
+                        category = 'Health Parameters')
+          
+          
+            """ 3 - HEALTH POPULATIONS """
+            self.SPop = SD_object('Susceptible Population',
+                                  units = 'people',
+                                  init_value = lambda: self.historical_data('Susceptible Population', location, filename),
+                                  obtype = 'stock',
+                                  func = lambda tstep, tind: self.SPop.value(ind=tind) - self.InfectR.value(ind=tind) * tstep,
+                                  maxval = lambda: 1000000000,
+                                  minval = lambda: 0,
+                                  category = 'Health Populations')
+            
+            self.IPop = SD_object("'Estimated' Infected Population",
+                                units = 'people',
+                                init_value = lambda: self.historical_data('True Infected', location, filename),
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.IPop.value(ind=tind) + (self.InfectR.value(ind=tind)  - 
+                                                                          self.RR.value(ind=tind) - self.MR.value(ind=tind)) * tstep,
+                                maxval = lambda: 100000000,
+                                minval = lambda: 0,
+                                category = 'Health Populations')
+          
+            self.Deaths = SD_object('Deaths',
+                                units = 'people',
+                                init_value = lambda: self.historical_data('Deaths', location, filename),
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.Deaths.value(ind=tind) + self.MR.value(ind=tind) * tstep,
+                                maxval = lambda: 100000000,
+                                minval = lambda: 0,
+                                category = 'Health Populations')
+              
+            self.RPop = SD_object('Known Recovered Population',
+                                units = 'people',
+                                init_value = lambda: self.historical_data('Recoveries', location, filename),
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.RPop.value(ind=tind) + self.RR.value(ind=tind) * tstep,
+                                maxval = lambda: 100000000,
+                                minval = lambda: 0,
+                                category = 'Health Populations')
+              
+            self.mIPop = SD_object("Measured Infected Population",
+                                units = 'people',
+                                init_value = lambda: self.historical_data('Measured Current Infected', location, filename),
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.true_to_measured(self.IPop, 14, 0.25),
+                                maxval = lambda: 100000000,
+                                minval = lambda: 0,
+                                category = 'Health Populations')
+          
+          
+            """ 4 - HEALTH FLOWS """
+            self.InfectR = SD_object("'Estimated' Infection Rate",
+                                      units = 'people/day',
+                                      init_value = lambda: self.historical_data('True Infection Rate', location, filename),
+                                      obtype = 'flow',
+                                      func = lambda tstep, tind: (self.combos(self.SPop.value(ind=tind) + self.IPop.value(ind=tind)) - self.combos(self.SPop.value(ind=tind)) - self.combos(self.IPop.value(ind=tind))) / 
+                                                          self.combos(self.SPop.value(ind=tind) + self.IPop.value(ind=tind)) * self.ContactR.value(ind=tind) * (self.SPop.value(ind=tind) + self.IPop.value(ind=tind)) * self.Infectivity.value(ind=tind),
+                                      maxval = lambda: self.SPop.value(),
+                                      minval = lambda: 0,
+                                      category = 'Health Flows'
+                                      )
+                  
+            self.mInfectR = SD_object("Measured Infection Rate",
+                                      units = 'people/day',
+                                      init_value = lambda: self.historical_data('Measured Infection Rate',  location, filename),
+                                      obtype = 'flow',
+                                      func = lambda tstep, tind: self.true_to_measured(self.InfectR, 14, 0.25),
+                                      maxval = lambda: self.SPop.value(),
+                                      minval = lambda: 0,
+                                      category = 'Health Flows'
+                                      )
+            
+            self.RR = SD_object('Recovery Rate',
+                                  units = 'people/day',
+                                  init_value = self.RecL.value() * self.IPop.value() / self.AvDur.value(),
+                                  # init_value = 1,
+                                  obtype = 'flow',
+                                  func = lambda tstep, tind: self.RecL.value(ind=tind) * self.IPop.value(ind=tind) / self.AvDur.value(ind=tind),
+                                  maxval = lambda: self.IPop.value(),
+                                  minval = lambda: 0,
+                                  category = 'Health Flows'
+                                  )
+              
+            self.MR = SD_object('Mortality Rate',
+                                  units = 'people/day',
+                                  init_value = self.MorL.value() * self.IPop.value() / self.AvDur.value(),
+                                  obtype = 'flow',
+                                  func = lambda tstep, tind: self.MorL.value(ind=tind) * self.IPop.value(ind=tind) / self.AvDur.value(ind=tind),
+                                  maxval = lambda: self.IPop.value(),
+                                  minval = lambda: 0,
+                                  category = 'Health Flows'
+                                  )
+            
+            
+            """ 5 - EQUIPMENT SUPPLIES """
+            
+            """ 6 - EQUIPMENT PARAMETERS """
+            
+            """ 7 - Mobility """
+            
+            self.nat_retail_recreation_mob = SD_object('National Retail and Recreation Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('nat_retail_recreation_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.nat_retail_recreation_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.nat_grocery__pharmacy_mob = SD_object('National Grocery and Pharmacy Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('nat_grocery__pharmacy_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.nat_grocery__pharmacy_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.nat_parks_mob = SD_object('National Parks Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('nat_parks_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.nat_parks_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.nat_transit_mob = SD_object('National Transit Stations Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('nat_transit_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.nat_transit_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.nat_workplaces_mob = SD_object('National Workplaces Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('nat_workplaces_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.nat_workplaces_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.nat_residential_mob = SD_object('National Residential Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('nat_residential_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.nat_residential_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.loc_retail_recreation_mob = SD_object('Luanda Retail and Recreation Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('loc_retail_recreation_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.loc_retail_recreation_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.loc_grocery__pharmacy_mob = SD_object('Luanda Grocery and Pharmacy Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('loc_grocery__pharmacy_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.loc_grocery__pharmacy_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.loc_parks_mob = SD_object('Luanda Parks Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('loc_parks_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.loc_parks_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.loc_transit_mob = SD_object('Luanda Transit Stations Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('loc_transit_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.loc_transit_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.loc_workplaces_mob = SD_object('Luanda Workplaces Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('loc_workplaces_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.loc_workplaces_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
+            self.loc_residential_mob = SD_object('Luanda Residential Mobility',
+                                units = 'Mobility Index',
+                                init_value = lambda: self.historical_data('loc_residential_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
+                                obtype = 'stock',
+                                func = lambda tstep, tind: self.loc_residential_mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
+                                maxval = lambda: 100,   
+                                minval = lambda: -100, 
+                                category = 'Mobility')
+            
             
             
             """ 8 - ECONOMIC """

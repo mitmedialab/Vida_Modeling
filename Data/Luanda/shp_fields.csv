@@ -1,4 +1,3 @@
 FieldName,LongName,Category,VisMin,VisMax,VisColor,Temporal
-AREA_CODE,AREA_CODE,,,,,0
-NO2C,NO2 Percent Change,,-0.25,0.25,,1
-SO2C,SO2 Percent Change,,-10,10,,1
+NO2C,NO2 Percent Change,,-0.25,0.25,RdYlGn,1
+SO2C,SO2 Percent Change,,-10,10,RdYlGn,1

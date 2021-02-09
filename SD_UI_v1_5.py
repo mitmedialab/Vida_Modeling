@@ -78,14 +78,14 @@ class SD_UI(tk.Tk):
             self.background_image = []
             self.color_range =  'Total Cases'
             self.default_graph1 = 'Measured Infected Population'
-            self.default_graph2 = "'True' Infected Population"
+            self.default_graph2 = "'Estimated' Infected Population"
             self.map_loc = [113.119473,-5.944932, 0.0004]
             self.language = 'english'
         elif self.location == 'Santiago':
             self.background_image = []
             self.color_range = 'PM10'
             self.default_graph1 = 'Measured Infected Population'
-            self.default_graph2 = "'True' Infected Population"
+            self.default_graph2 = "'Estimated' Infected Population"
             self.map_loc = [-70.738862, -33.478012, 0.0025]
             self.language = 'spanish'
         elif self.location == 'Querétaro':
@@ -97,8 +97,8 @@ class SD_UI(tk.Tk):
             self.language = 'spanish'
         elif self.location == 'Luanda':
             self.background_image = ['./Data/Luanda/Images/Landsat_Composite_Luanda.tif']
-            self.color_range = 'AREA_CODE'
-            self.default_graph1 = 'Ships in Luanda Bay'
+            self.color_range = 'NO2 Percent Change'
+            self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "Ships in Offshore Area"
             self.map_loc = [13.295026, -8.847543, 0.01]
             self.language = 'portuguese'
@@ -1467,7 +1467,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Santiago',
+                location = 'Luanda',
                 arrangment = ['Graph', 'Map'])
 
     #Run the user interface
