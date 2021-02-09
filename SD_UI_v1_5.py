@@ -61,7 +61,7 @@ class SD_UI(tk.Tk):
             self.location = 'Rio de Janeiro'
             
         if self.location == 'Rio de Janeiro':
-            self.background_image = ['./Data/Rio de Janeiro/Images/Landsat_Composite_uint8.tif']
+            self.background_image = 'Visual Composite'
             self.color_range =  'PM10'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
@@ -82,21 +82,21 @@ class SD_UI(tk.Tk):
             self.map_loc = [113.119473,-5.944932, 0.0004]
             self.language = 'english'
         elif self.location == 'Santiago':
-            self.background_image = []
+            self.background_image = 'Visual Composite'
             self.color_range = 'PM10'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'Estimated' Infected Population"
             self.map_loc = [-70.738862, -33.478012, 0.0025]
             self.language = 'spanish'
         elif self.location == 'Querétaro':
-            self.background_image = []
+            self.background_image = 'Visual Composite'
             self.color_range = 'COVID Cases per 1000 People'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = "Hospitalized Population"
             self.map_loc = [-99.866625, 20.85, 0.0028]
             self.language = 'spanish'
         elif self.location == 'Luanda':
-            self.background_image = ['./Data/Luanda/Images/Landsat_Composite_Luanda.tif']
+            self.background_image = 'Visual Composite'
             self.color_range = 'NO2 Percent Change'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "Ships in Offshore Area"
@@ -878,7 +878,10 @@ class SD_UI(tk.Tk):
         
         #Create Image Dropdown
         self.image_setting_name_list[col] = tk.StringVar()
-        self.image_setting_name_list[col].set(self.translate(image_list[0]))
+        if self.background_image:
+            self.image_setting_name_list[col].set(self.translate(self.background_image))
+        else:
+            self.image_setting_name_list[col].set(self.translate(image_list[0]))
         
         translated_image_list = []
         for entry in image_list:
