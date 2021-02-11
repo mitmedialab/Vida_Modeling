@@ -1,4 +1,4 @@
-filepath,name,VisMin,VisMax,VisColor
-./Data/Luanda/Images/Landsat_Composite_Luanda.tif,Visual Composite,,,
-./Data/Luanda/Images/Luanda_SO2_PercentChange.tif,Oct 2020 - SO2 Percent Change,-7,7,RdYlGn
-./Data/Luanda/Images/Luanda_NO2_PercentChange.tif,Oct 2020 - NO2 Percent Change,-7,7,RdYlGn
+filepath,name,VisMin,VisMax,VisColor,Temporal,Times
+./Data/Luanda/Images/Landsat_Composite_Luanda.tif,Visual Composite,,,,,
+./Data/Luanda/Images/Luanda_SO2_PercentChange.tif,Oct 2020 - SO2 Percent Change,-7,7,RdYlGn,1,"200301, 200401, 200501, 200601, 200701, 200801, 200901, 201001"
+./Data/Luanda/Images/Luanda_NO2_PercentChange.tif,Oct 2020 - NO2 Percent Change,-7,7,RdYlGn,1,"200301, 200401, 200501, 200601, 200701, 200801, 200901, 201001"

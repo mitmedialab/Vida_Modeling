@@ -20,6 +20,7 @@ import csv
 import numpy as np
 import shapefile
 import screeninfo
+import dateutil
 
 #Import custom packages
 import SDlib_v1_4 as SDlib
@@ -207,18 +208,22 @@ class SD_UI(tk.Tk):
         self.info_frame = self.make_rule_display()
         
         #Generate the map(s) and their associated dropdown menus
-        self.frame_map_list = [[],[]]
-        self.subframe_map_list = [[],[]]
-        self.color_setting_name_list = [[],[]]
-        self.color_optionlist_list = [[],[]]
-        self.image_setting_name_list = [[],[]]
-        self.image_optionlist_list = [[],[]]
-        self.MAP_list = [[],[]]
-        self.mapslider_list = [[],[]]
-        self.datefieldlist = [[],[]]
-        self.datenumlist = [[],[]]
-        self.map_temporalflag = [0,0]
-        self.date_setting_list = [[],[]]
+        self.frame_map_list = [[],[]]  #list that holds the Tk frames that the map subframes reside in. These are not deleted when the map is refreshed.
+        self.subframe_map_list = [[],[]] #list that holds the subframes that the maps reside in.
+        self.color_setting_name_list = [[],[]]  #list that holds the current longform name of the shapefile color fill setting
+        self.color_optionlist_list = [[],[]] #list that holds the map color dropdown selection menus
+        self.image_setting_name_list = [[],[]] #list that holds the current longform image setting name
+        self.image_optionlist_list = [[],[]] #list that holds the image dropdown selection menus
+        self.MAP_list = [[],[]] #list that holds the map objects
+        self.mapslider_list = [[],[]] #list that holds the slider scale objects for temporal map shading
+        self.datefieldlist = [[],[]] #list that holds all the temporal fieldname options for map shading
+        self.datenumlist = [[],[]] #list that holds all the temporal integer options for map shading
+        self.map_temporalflag = [0,0] #list that holds the flags indicating whether the map shading is temporal or not
+        self.date_setting_list = [[],[]] #list the holds the fieldnames of the current temporal map shading settings
+        self.imgslider_list = [[],[]] #list that holds the slider scale objects for temporal images
+        self.img_temporalflag = [0,0] #list that holds the flags indicating whether an image is temporal or not
+        self.img_datenumlist = [[],[]] #list that holds all the temporal integer options for images
+        self.img_date_setting_list = [[],[]] #list that holds the band index of the current temporal image settings
         
         if self.arrangment[0] == 'Map':
             self.frame_map_L, subframe_map, MAP = self.make_map_frame(0)
@@ -795,6 +800,11 @@ class SD_UI(tk.Tk):
         #check for specified visualization parameters
         testimg = self.imagenamelookup(image_title, self.image_filepath)
         img_params = testimg.vis_params
+        if testimg.temporal_flag:
+            dateindex = self.make_image_slider(frame_map, col, image_title)
+            img_params.append(dateindex)
+        else:
+            img_params.append([])
         
         #Create subframe to house the map
         subframe_map = tk.Frame(frame_map,
@@ -935,29 +945,57 @@ class SD_UI(tk.Tk):
         def __init__(self, fieldname, image_filepath, **kwargs):
             
             #Appropriately label Other field
-            with open(image_filepath) as csv_file:
+            with open(image_filepath, encoding='ISO-8859-15') as csv_file:
                csvread = csv.DictReader(csv_file)
                for row in csvread:
                    if row['name'] == fieldname:
                        self.fieldname = fieldname
                        self.vis_params = [row['VisMin'], row['VisMax'], row['VisColor']]
                        self.filepath = row['filepath']
+                       temporal_flag = row['Temporal']
+                       if temporal_flag:
+                           self.temporal_flag = int(temporal_flag)
+                       else:
+                           self.temporal_flag = 0
+                       times = row['Times']
+                       if times:
+                           times = list(times.split(","))
+                           times = [int(i) for i in times]
+                       self.times = times
     
     def mapslide(self, col, **kwargs):
         if 'factor' in kwargs:
                 factor = kwargs.pop('factor')
                 newfactor = min(self.datenumlist[col], key=lambda x:abs(x-float(factor)))
                 self.mapslider_list[col].set(newfactor)
+        elif self.mapslider_list[col]:
+            newfactor = self.mapslider_list[col].get()
         else:
-            newfactor = max(self.datenumlist)
+            newfactor = 0
             
-        dateindex = self.datenumlist[col].index(newfactor)
-        datefield = self.datefieldlist[col][dateindex]
-        self.date_setting_list[col] = datefield
+        if 'img_factor' in kwargs:
+                img_factor = kwargs.pop('img_factor')
+                img_newfactor = min(self.img_datenumlist[col], key=lambda x:abs(x-float(img_factor)))
+                # self.imgslider_list[col].set(img_newfactor)
+        elif self.imgslider_list[col]:
+            img_newfactor = self.imgslider_list[col].get()
+        else:
+            img_newfactor = 0
+            
+            
+        if self.mapslider_list[col]:
+            dateindex = self.datenumlist[col].index(newfactor)
+            datefield = self.datefieldlist[col][dateindex]
+            self.date_setting_list[col] = datefield
+            
+        if self.imgslider_list[col]:
+            img_dateindex = self.img_datenumlist[col].index(img_newfactor)
+            self.img_date_setting_list[col] = img_dateindex
         
-        self.replace_map_image(self.subframe_map_list[col],col, slideval=newfactor)
+        self.replace_map_image(self.subframe_map_list[col],col, slideval=newfactor, img_slideval=img_newfactor)
         
-        return datefield
+        return
+    
     
     def make_map_slider(self,root, col,color_range, **kwargs):
         shpfieldslist = [item[0] for item in self.shps[0].fields]
@@ -994,6 +1032,36 @@ class SD_UI(tk.Tk):
         
         return color_range
                 
+    def make_image_slider(self,root, col, image_lookup, **kwargs):
+       
+        datelist = image_lookup.times
+        self.img_datenumlist[col] = datelist
+        datemax = max(datelist)
+        datemin = min(datelist)
+        self.img_temporalflag[col] = 1
+        
+        self.imgslider_list[col] = tk.Scale(root, 
+                                             from_=datemin, to=datemax, 
+                                             orient='horizontal',
+                                             tickinterval = 0,
+                                             length = self.screenwidth*0.25
+                                             )
+        
+        if 'img_slideval' in kwargs:
+            img_slideval = kwargs.pop('img_slideval')
+        else:
+            img_slideval = datemax
+        if not img_slideval:
+            img_slideval = datemax
+            
+        self.imgslider_list[col].set(img_slideval)
+        self.imgslider_list[col].bind("<ButtonRelease-1>",  lambda e: self.mapslide(col, img_factor=self.imgslider_list[col].get()))
+        self.imgslider_list[col].grid(column=0, row=3, columnspan=4)
+        
+        dateindex = datelist.index(img_slideval)
+        self.img_date_setting_list[col] = dateindex
+        
+        return dateindex
                 
         
         
@@ -1016,6 +1084,10 @@ class SD_UI(tk.Tk):
         if fill_color_title == 'None':
             fill_color = []
             fill_color_title_input = []
+            self.mapslider_list[col] = []
+            self.datenumlist[col] = []
+            self.datefieldlist[col] = []
+            self.map_temporalflag[col] = 0
         else:
             fill_color = [self.color_field_modes[self.color_longname_modes_inverted[fill_color_title]]]
             fill_color_title_input = fill_color_title
@@ -1033,7 +1105,13 @@ class SD_UI(tk.Tk):
                     slideval = 0
                 fill_color = [self.make_map_slider(self.frame_map_list[col], col, fill_color[0], slideval=slideval)]
                 self.date_setting_list[col] = fill_color
-       
+            else:
+                self.mapslider_list[col] = []
+                self.datenumlist[col] = []
+                self.datefieldlist[col] = []
+                self.map_temporalflag[col] = 0
+ 
+            
         image_title = self.translate(self.image_setting_name_list[col].get(),
                                           input_language=self.language,
                                           output_language='english')
@@ -1044,13 +1122,35 @@ class SD_UI(tk.Tk):
             vis_params = testfield.vis_params
         else:
             vis_params = [[],[],[]]
+    
+        if self.imgslider_list[col]:
+            self.imgslider_list[col].destroy()
         
         #check for specified visualization parameters
         if image_title == 'None':
-            img_params = [[],[],[]]
+            img_params = [[],[],[], []]
+            self.imgslider_list[col] = [] 
+            self.img_temporalflag[col] = 0 
+            self.img_datenumlist[col] = [] 
+            self.img_date_setting_list[col] = [] 
         else:
             testimg = self.imagenamelookup(image_title, self.image_filepath)
             img_params = testimg.vis_params
+            if testimg.temporal_flag:
+                self.img_temporalflag[col] = testimg.temporal_flag
+                if 'img_slideval' in kwargs:
+                    img_slideval = kwargs.pop('img_slideval')
+                else:
+                    img_slideval = 0
+                img_band = self.make_image_slider(self.frame_map_list[col], col, testimg, img_slideval=img_slideval)
+                self.img_date_setting_list[col] = img_band
+                img_params.append(self.img_date_setting_list[col])
+            else:
+                self.imgslider_list[col] = []
+                self.img_temporalflag[col] = 0 
+                self.img_datenumlist[col] = [] 
+                self.img_date_setting_list[col] = [] 
+                img_params.append([])
         
         #Delete exisiting map
         self.MAP_list[col].delete("all")

@@ -1,4 +1,4 @@
-filepath,name,VisMin,VisMax,VisColor
-./Data/Querétaro/Images/Landsat_Composite.tif,Visual Composite,,,
-./Data/Querétaro/Images/DNB_meanAnomaly.tif,Nightlights Mean Anomaly,,,
-./Data/Querétaro/Images/DNB_Mosaic.tif,Nightlights,,,
+filepath,name,VisMin,VisMax,VisColor,Temporal,Times
+./Data/Querétaro/Images/Landsat_Composite.tif,Visual Composite,,,,,
+./Data/Querétaro/Images/DNB_meanAnomaly.tif,Nightlights Mean Anomaly,,,,,
+./Data/Querétaro/Images/DNB_Mosaic.tif,Nightlights,,,,,

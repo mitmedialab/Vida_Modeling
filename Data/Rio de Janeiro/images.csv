@@ -1,4 +1,4 @@
-filepath,name,VisMin,VisMax,VisColor
-./Data/Rio de Janeiro/Images/Landsat_Composite_uint8.tif,Visual Composite,,,
-./Data/Rio de Janeiro/Images/DNB_meanAnomaly.tif,Nightlights Mean Anomaly,,,
-./Data/Rio de Janeiro/Images/DNB_Mosaic.tif,Nightlights,,,
+filepath,name,VisMin,VisMax,VisColor,Temporal,Times
+./Data/Rio de Janeiro/Images/Landsat_Composite_uint8.tif,Visual Composite,,,,,
+./Data/Rio de Janeiro/Images/DNB_meanAnomaly.tif,Nightlights Mean Anomaly,,,,,
+./Data/Rio de Janeiro/Images/DNB_Mosaic.tif,Nightlights,,,,,

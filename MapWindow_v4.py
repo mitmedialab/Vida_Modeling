@@ -96,6 +96,12 @@ class Map(tk.Canvas):
                 self.image_min = float(self.image_min)
             if self.image_max:
                 self.image_max = float(self.image_max)
+            if image_params[3]:
+                self.image_band_choice = image_params[3]
+                self.image_temporal_flag = 1
+            else:
+                self.image_band_choice = 0
+                self.image_temporal_flag = 0
         else:
             self.image_min = []
             self.image_max = []
@@ -279,7 +285,7 @@ class Map(tk.Canvas):
         
         #Process Image
         if shape_count > 2: #Image is multiband
-            if image_array.shape[0] in [3,4]: #image is BGR or BGR-NIR
+            if image_array.shape[0] in [3,4] and self.image_temporal_flag == 0: #image is BGR or BGR-NIR
                 image_array = image_array[0:3] #take the BGR bands, omit the NIR band
                 image_array = np.dstack((image_array[2],image_array[1],image_array[0])) #Convert BGR to RGB
                 
@@ -298,7 +304,7 @@ class Map(tk.Canvas):
                 loaded_image = pil.Image.fromarray(image_array8)
                 
             else:
-                image_array = image_array[-1]
+                image_array = image_array[self.image_band_choice]
                 display_min = image_array.min()
                 display_max = image_array.max()
                 
@@ -310,6 +316,7 @@ class Map(tk.Canvas):
                 else:
                     image_array8 = image_array
                     
+                
                 if self.image_min:
                     image_array8[image_array8 < self.image_min] = self.image_min
                     
