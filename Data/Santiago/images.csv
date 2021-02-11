@@ -1,4 +1,4 @@
-filepath,name,VisMin,VisMax,VisColor,Temporal,Times
-./Data/Santiago/Images/Landsat_Composite_Santiago.tif,Visual Composite,,,,,
-./Data/Santiago/Images/DNB_Mosaic_Santiago.tif,Nightlights,,,,,
-./Data/Santiago/Images/DNB_meanAnomaly_Santiago.tif,Nightlights Mean Anomaly,,,,,
+filepath,name,VisMin,VisMax,VisColor,VisBrightness,Temporal,Times
+./Data/Santiago/Images/Landsat_Composite_Santiago.tif,Visual Composite,,,,,,
+./Data/Santiago/Images/DNB_Mosaic_Santiago.tif,Nightlights,,,,,,
+./Data/Santiago/Images/DNB_meanAnomaly_Santiago.tif,Nightlights Mean Anomaly,,,,,,

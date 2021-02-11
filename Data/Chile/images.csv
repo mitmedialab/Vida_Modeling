@@ -1,1 +1,2 @@
-filepath,name,VisMin,VisMax,VisColor,Temporal,Times
+filepath,name,VisMin,VisMax,VisColor,VisBrightness,Temporal,Times
+./Data/Chile/Images/Chile_Landsat_Composite.tif,Visual Composite,,,,,,

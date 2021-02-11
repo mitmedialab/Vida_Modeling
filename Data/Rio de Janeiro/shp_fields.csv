@@ -1,11 +1,4 @@
 FieldName,LongName,Category,VisMin,VisMax,VisColor,Temporal
-Rain,Rainfall,,,,,0
-Pres,Barometric Pressure,,,,,0
-SolRad,Solar Radiation,,,,,0
-Temp,Temperature,,,,,0
-Humid,Relative Humidity,,0,14,hsv,0
-WindDir,Wind Direction,,,,,0
-WindSpd,Wind Speed,,,,,0
 SO2,SO2,,,,,0
 NO2,NO2,,,,,0
 HCNM,HCNM,,,,,0

@@ -1,366 +1,380 @@
 english,spanish,portuguese
-Graph 1: ,Gráfico 1: ,Gráfico 1: 
-Graph 2: ,Gráfico 2: ,Gráfico 2: 
-Simulation,Simulación,Simulação
-History,Historia,História
 ,,
-System Dynamics Visualization,Visualización de dinámica de sistemas,Visualização da dinâmica do sistema
-English,Inglés,Inglês
-Spanish,Español,Espanhol
-Portuguese,Portugués,Português
-Languages,Idiomas,Línguas
-Exit,Salida,Saída
-Rio de Janeiro,Rio de Janeiro,Rio de Janeiro
-Chile,Chile,Chile
-Santiago,Santiago,Santiago
-Indonesia,Indonesia,Indonésia
-Locations,Ubicaciones,Localizações
-Querétaro,Querétaro,Querétaro
-Luanda,Luanda,Luanda
-,,
+TITLE & TOP BAR MENUS,TOP BAR MENUS,TOP BAR MENUS
 Arrange,Organizar,Organizar
+Chile,Chile,Chile
+English,Inglés,Inglês
+Exit,Salida,Saída
 Graphs-Graphs,Gráficos-Gráficos,Gráficos-Gráficos
 Graphs-Map,Gráficos-Mapa,Gráficos-Mapa
+Indonesia,Indonesia,Indonésia
+Languages,Idiomas,Línguas
+Locations,Ubicaciones,Localizações
+Luanda,Luanda,Luanda
 Map-Graphs,Mapa-Gráficos,Mapa-Gráficos
 Map-Map,Mapa-Mapa,Mapa-Mapa
+Portuguese,Portugués,Português
+Querétaro,Querétaro,Querétaro
+Rio de Janeiro,Rio de Janeiro,Rio de Janeiro
+Rio de Janeiro,Rio de Janeiro,Rio de Janeiro
+Santiago,Santiago,Santiago
+Spanish,Español,Espanhol
+System Dynamics Visualization,Visualización de dinámica de sistemas,Visualização da dinâmica do sistema
 ,,
-Order New Ventilators,Solicite nuevos ventiladores,Solicitar novos ventiladores
-Next Week,La próxima semana,Semana que vem
-Run Autonomously,Ejecutar de forma autónoma,Executar de forma autônoma
+STATIC GRAPH RELATED LABELS,STATIC GRAPH RELATED LABELS,STATIC GRAPH RELATED LABELS
+Graph 1: ,Gráfico 1: ,Gráfico 1: 
+Graph 2: ,Gráfico 2: ,Gráfico 2: 
+History,Historia,História
+Simulation,Simulación,Simulação
+,,
+BOTTOM LEFT COMMAND BUTTONS AND LABELS,BOTTOM LEFT COMMAND BUTTONS AND LABELS,BOTTOM LEFT COMMAND BUTTONS AND LABELS
 Clear Simulation,Reiniciar la simulación,Reiniciar Simulação
-Rules,Reglas,Regras
 Log,Registro,Registro
+Next Week,La próxima semana,Semana que vem
+Order New Ventilators,Solicite nuevos ventiladores,Solicitar novos ventiladores
+Rules,Reglas,Regras
+Run Autonomously,Ejecutar de forma autónoma,Executar de forma autônoma
 ,,
+AUTONOMOUS SIMULATION WINDOW,AUTONOMOUS SIMULATION WINDOW,AUTONOMOUS SIMULATION WINDOW
 How many days do you want the simulation to run for?,¿Cuántos días desea que se ejecute la simulación?,Por quantos dias você deseja que a simulação seja executada?
 Run Simulation,Ejecutar simulación,Executar Simulação
 ,,
+STATIC MAP RELATED LABELS,STATIC MAP RELATED LABELS,STATIC MAP RELATED LABELS
 Color,Color,Cor
 Image,Imagen,Imagem
 None,Ninguno,Nenhum
 ,,
-,,
-Days,Días,Dias
-Day,Dóa,Dia
-people,personas,pessoas
-people/day,personas por día,pessoas por dia
-unitless,sin unidad,sem unidade
-people/(day*person),personas/(día*persona),pessoas/(dia*pessoa)
-likelihood/contact,probabilidad/contacto,probabilidade/contato
-probability,probabilidad,probabilidade
-ventilator,ventilador,ventilator
-dollar/ventilator,dólar por ventilador,dólar por ventilador
-ventilator/day,ventilador por día,ventilador por dia
+UNITS,UNITS,UNITS
+%,%,%
 Celsius,Celsius,Celsius
-µg / m3,µg / m3,µg / m3
-ppm,ppm,ppm
-percent,por ciento,por cento
+Day,Dóa,Dia
+Days,Días,Dias
+dollar/ventilator,dólar por ventilador,dólar por ventilador
+likelihood/contact,probabilidad/contacto,probabilidade/contato
 Millions USD,Millones de USD,Milhões de dólares
+people,personas,pessoas
+people/(day*person),personas/(día*persona),pessoas/(dia*pessoa)
+people/day,personas por día,pessoas por dia
+percent,por ciento,por cento
 Percent Change from Baseline,Cambio porcentual desde la línea de base,Alteração percentual da linha de base
+ppm,ppm,ppm
+probability,probabilidad,probabilidade
 Stock Index,Índice bursátil,Índice de ações
 Terms Rate,Términos Tasa,Taxa de termos
-%,%,%
+unitless,sin unidad,sem unidade
+ventilator,ventilador,ventilator
+ventilator/day,ventilador por día,ventilador por dia
+µg / m3,µg / m3,µg / m3
 ,,
-Policies & Actions,Políticas y acciones,Políticas e Ações
-Closure Policy,Política de cierre,Política de Fechamento
-Social Distancing Policy,Política de distanciamiento,Política de Distanciamento
-New Ventilator Orders,Nuevos pedidos de ventiladores,Novos pedidos de ventiladores
-Curfew Policy,Política de toque de queda,Política de toque de recolher
-Lockdown,Cierre de emergencia,Confinamento
-No Closures,Sin cierres,Sem fechamentos
-No Distancing,Sin distanciamiento,Sem distanciamento
-Voluntary Social Distancing,Distanciamiento social voluntario,Distanciamento Social Voluntário
-Mandatory Social Distancing,Distanciamiento social obligatorio,Distanciamento Social Obrigatório
-No Curfew,No hay toque de queda,Sem toque de recolher
-Unenforced Curfew,Toque de queda no forzado,Toque de recolher não forçado
-Enforced Curfew,Toque de queda forzado,Toque de recolher forçado
-Closure Policy Sulawesi,Política de cierre de Sulawesi,Política de Fechamento de Sulawesi
-Closure Policy Java,Política de cierre de Java,Política de Fechamento de Java
-Social Distancing Policy Sulawesi,Política de distanciamiento de Sulawesi,Política de Distanciamento de Sulawesi
-Social Distancing Policy Java,Política de distanciamiento de Java,Política de Distanciamento de Java
-,,
-Health Parameters,Parámetros de salud,Parâmetros de Saúde
-Base Contact Rate,Tasa de contacto base,Taxa de contato básica
-Contact Rate,Tasa de contacto,Taxa de contato
-Infectivity,Infectividad,Infectividade
-Hospitalization Likelihood,Probabilidad de hospitalización,Probabilidade de hospitalização
-Unhospitalized Mortality Likelihood,Probabilidad de mortalidad no hospitalaria,Probabilidade de mortalidade não hospitalizada
-Unhospitalized Recovery Likelihood,Probabilidad de recuperación no hospitalizada,Probabilidade de recuperação não hospitalizada
-Hospitalized Recovery Likelihood,Probabilidad de recuperación hospitalizada,Probabilidade de recuperação hospitalizada
-Base Hospitalized Recovery Likelihood,Probabilidad de recuperación hospitalaria base,Probabilidade de recuperação de base hospitalizada
-Hospitalized Mortality Likelihood,Probabilidad de mortalidad hospitalaria,Probabilidade de mortalidade hospitalizada
-Recovery Likelihood,Probabilidad de recuperación,Probabilidade de recuperação
-Mortality Likelihood,Probabilidad de mortalidad,Probabilidade de mortalidade
-Average Illness Duration,Duración media de la enfermedad,Duração média da doença
-Average Hospitalization Duration,Duración media de la hospitalización,Duração Média de Hospitalização
-Contact Rate Java,Tasa de contacto de Java,Taxa de contato de Java
-Contact Rate Sulawesi,Tasa de contacto de Sulawesi,Taxa de contato de Sulawesi
-,,
-Health Populations,Poblaciones de salud,Populações de Saúde
-Susceptible Population,Población susceptible,População Susceptível
-'True' Unhospitalized Infected Population,Población infectada no hospitalizada 'verdadera',População infectada 'verdadeira' não hospitalizada
-'Estimated' Unhospitalized Infected Population,Población infectada no hospitalizada 'estimada',População infectada 'estimada' não hospitalizada
-Deaths,Fallecidos,Mortes
-Hospitalized Population,Población hospitalizada,População Hospitalizada
-Known Recovered Population,Población recuperada conocida,População Recuperada Conhecida
-Measured Unhospitalized Infected Population,Población infectada no hospitalizada medida,População infectada não hospitalizada medida
-Measured Total Infected Population,Población total infectada medida,População total infectada medida
-'True' Total Infected Population,Población total infectada 'verdadera',População total infectada 'verdadeira'
-'Estimated' Total Infected Population,Población total infectada 'estimada',População total infectada 'estimada'
-'True' Infected Population,Población infectada 'verdadera',População infectada 'verdadeira'
-'Estimated' Infected Population,Población infectada 'estimada',População infectada 'estimada'
-Measured Infected Population,Población infectada medida,População infectada medida
-'True' Infected Population Java,Población infectada 'verdadera' de Java,População infectada 'verdadeira' de Java
-'Estimated' Infected Population Java,Población infectada 'estimada' de Java,População infectada 'estimada' de Java
-'True' Infected Population Sulawesi,Población infectada 'verdadera' de Sulawesi,População infectada 'verdadeira' de Sulawesi
-'Estimated' Infected Population Sulawesi,Población infectada 'estimada' de Sulawesi,População infectada 'estimada' de Sulawesi
-Deaths Java,Fallecidos de Java,Mortes de Java
-Deaths Sulawesi,Fallecidos de Sulawesi,Mortes de Sulawesi
-Known Recovered Population Java,Población recuperada conocida de Java,População Recuperada Conhecida de Java
-Known Recovered Population Sulawesi,Población recuperada conocida de Sulawesi,População Recuperada Conhecida de Sulawesi
-Measured Infected Population Java,Población infectada medida de Java,População infectada medida de Java
-Measured Infected Population Sulawesi,Población infectada medida de Sulawesi,População infectada medida de Sulawesi
-Susceptible Population Java,Población susceptible de Java,População Susceptível de Java
-Susceptible Population Sulawesi,Población susceptible de Sulawesi,População Susceptível de Sulawesi
-National Susceptible Population,Población Nacional Susceptible,População Nacional Susceptível
-'Estimated' National Infected Population,Población nacional infectada 'estimada',População nacional infectada 'estimada'
-National Deaths,Defunciones nacionales,Mortes Nacionais
-National Known Recovered Population,Población recuperada conocida nacional,População Nacional Recuperada Conhecida
-National Measured Infected Population,Población infectada medida a nivel nacional,População nacional infectada medida
-,,
-Health Flows,Flujos de salud,Fluxos de Saúde
-'True' Infection Rate,Tasa de infección 'verdadera',Taxa de infecção 'verdadeira'
-'Estimated' Infection Rate,Tasa de infección 'estimada',Taxa de infecção 'estimada'
-Measured Infection Rate,Tasa de infección medida,Taxa de infecção medida
-Unhospitalized Recovery Rate,Tasa de recuperación no hospitalizada,Taxa de recuperação não hospitalar
-Unhospitalized Mortality Rate,Tasa de mortalidad no hospitalizada,Taxa de mortalidade não hospitalizada
-Hospital Recovery Rate,Tasa de recuperación hospitalaria,Taxa de recuperação hospitalar
-Hospital Mortaility Rate,Tasa de mortalidad hospitalaria,Taxa de mortalidade hospitalar
-Hospitalization Rate,Tasa de hospitalización,Taxa de hospitalização
-Recovery Rate,Tasa de recuperación,Taxa de recuperação
-Mortality Rate,Tasa de mortalidad,Taxa de mortalidade
-Recovery Rate Java,Tasa de recuperación de Java,Taxa de recuperação de Java
-Recovery Rate Sulawesi,Tasa de recuperación de Java,Taxa de recuperação de Sulawesi
-Mortality Rate Java,Tasa de mortalidad de Java,Taxa de mortalidade de Java
-Mortality Rate Sulawesi,Tasa de mortalidad de Sulawesi,Taxa de mortalidade de Sulawesi
-'True' Infection Rate Java,Tasa de infección 'verdadera' de Java,Taxa de infecção 'verdadeira' de Java
-'Estimated' Infection Rate Java,Tasa de infección 'estimada' de Java,Taxa de infecção 'estimada' de Java
-'True' Infection Rate Sulawesi,Tasa de infección 'verdadera' de Sulawesi,Taxa de infecção 'verdadeira' de Sulawesi
-'Estimated' Infection Rate Sulawesi,Tasa de infección 'estimada' de Sulawesi,Taxa de infecção 'estimada' de Sulawesi
-Measured Infection Rate Java,Tasa de infección medida de Java,Taxa de infecção medida de Java
-Measured Infection Rate Sulawesi,Tasa de infección medida de Sulawesi,Taxa de infecção medida de Sulawesi
-National 'Estimated' Infection Rate,Tasa de infección nacional 'estimada',Taxa nacional de infecção 'estimada'
-National Measured Infection Rate,Tasa de infección medida a nivel nacional,Taxa de infecção medida nacional
-National Recovery Rate,Tasa de recuperación nacional,Taxa de recuperação nacional
-National Mortality Rate,Tasa Nacional de Mortalidad,Taxa Nacional de Mortalidade
-,,
-,,
-,,
-,,
-Equipment Supplies,Suministros de equipos,Suprimentos de equipamentos
-Hospital Bed Capacity,Capacidad de la cama de hospital,Capacidade de leitos hospitalares
-Available Ventilators,Ventiladores disponibles,Ventiladores Disponíveis
-Ordered Ventilators,Ventiladores pedidos,Ventiladores solicitados
-Daily PCR Tests,Exámenes PCR diarios,Testes PCR diários
-,,
-Equipment Parameters,Parámetros del equipo,Parâmetros de Equipamento
-Ventilator Willingness to Pay,Disposición del ventilador a pagar,Disposição do Ventilador a Pagar
-Default Ventilator Delivery Duration,Duración predeterminada de la administración del ventilador,Duração de entrega do ventilador padrão
-Ventilator Acquisition Rate,Tasa de adquisición del ventilador,Taxa de aquisição do ventilador
-,,
-Environment,Ambiente,Meio Ambiente
-Average Temperature,Temperatura media,Temperatura média
-SO2,SO2,SO2
-NO2,NO2,NO2
-HCNM,HCNM,HCNM
-HCT,HCT,HCT
-CH4,CH4,CH4
-CO,CO,CO
-NO,NO,NO
-NOx,NOx,NOx
-O3,O3,O3
-PM10,MP10,PM10
-PM2.5,MP2.5,PM2.5
-Retail and Recreation Mobility,Movilidad minorista y recreativa,Mobilidade para varejo e recreação
-Grocery and Pharmacy Mobility,Movilidad en supermercados y farmacias,Mobilidade em supermercados e farmácias
-Parks Mobility,Movilidad de parques,Mobilidade de parques
-Transit Mobility,Movilidad de tránsito,Mobilidade de trânsito
-Workplace Mobility,Movilidad laboral,Mobilidade no local de trabalho
-Residential Mobility,Movilidad residencial,Mobilidade Residencial
-,,
-Economy,Economía,Economia
-Rio de Janeiro Unemployment Rate,Tasa de desempleo de Río de Janeiro,Taxa de desemprego do Rio de Janeiro
-Rio de Janeiro Unemployment Rate of Change,Tasa de variación del desempleo en Río de Janeiro,Taxa de variação do desemprego no Rio de Janeiro
-Brazil Unemployment Rate,Tasa de desempleo de Brasil,Taxa de desemprego no Brasil
-Brazil Unemployment Rate of Change,Tasa de variación del desempleo en Brasil,Taxa de variação do desemprego no Brasil
-Daily Flight Passengers,Pasajeros de vuelos diarios,Passageiros de voos diários
-Gross Domestic Product,Producto Interno Bruto,Produto Interno Bruto
-Rp Million,Millones de Rp,Rp milhões
-Visitor Arrivals,Llegadas de visitantes,Chegadas de visitantes
-Oil and Gas Imports,Importaciones de petróleo y gas,Importações de petróleo e gás
-Household Expenditures,Gastos del hogar,Despesas domésticas
-Consumption Expenditure LNPRT,Gasto de consumo LNPRT,Despesas de consumo LNPRT
-Government Consumption Expenditure,Gasto de consumo del gobierno,Despesas de consumo do governo
-Net Exports,Las exportaciones netas,Resultado líquido
-Manufacturing GDP,PIB manufacturero,PIB da manufatura
-Construction GDP,PIB de la construcción,PIB da construção
-Retail and Vehicle Repair GDP,PIB minorista y de reparación de vehículos,PIB de varejo e reparação de veículos
-Information and Communication GDP,PIB de información y comunicación,PIB de informação e comunicação
-Health and Social Work GDP,PIB de salud y trabajo social,PIB de saúde e serviço social
-Accommodation and Food Service GDP,PIB alojamiento y servicio de alimentos,PIB de hospedagem e alimentação
-Closing Compsite Stock Index (IDX),Cierre del índice bursátil compuesto (IDX),Índice de ações da Compsite de fechamento (IDX)
-Farmer Terms of Trade - Jakarta,Términos de intercambio de agricultores - Yakarta,Termos de comércio do agricultor - Jacarta
-Farmer Terms of Trade - West Java,Términos de intercambio de agricultores - Java Occidental,Termos de comércio do agricultor - Java do Oeste
-Farmer Terms of Trade - Central Java,Términos de intercambio de agricultores - Java Central,Termos de comércio do agricultor - Java Central
-Farmer Terms of Trade - East Java,Términos de intercambio de agricultores - Java Oriental,Termos de comércio do agricultor - Java Leste
-Farmer Terms of Trade - South Sulawesi,Términos de intercambio de agricultores - Sulawesi del Sur,Termos de comércio do agricultor - Sulawesi do Sul
-Inflation - Jakarta,Inflación - Jakarta,Inflação - Jakarta
-Inflation - West Java,Inflación - Java Occidental,Inflação - Java do Oeste
-Inflation - Central Java,Inflación - Java Central,Inflação - Java Central
-Inflation - East Java,Inflación - Java Oriental,Inflação - Java Leste
-Inflation - South Sulawesi,Inflación - Sulawesi del Sur,Inflação - Sulawesi do Sul
-Domestic Flights - Jakarta,Vuelos domésticos - Jakarta,Vôos domésticos - Jakarta
-Domestic Flights - East Java,Vuelos domésticos - Java Oriental,Vôos domésticos - Java Leste
-Domestic Flights - South Sulawesi,Vuelos domésticos - Sulawesi del Sur,Vôos domésticos - Sulawesi do Sul
-International Flights - Jakarta,Vuelos internacionales - Jakarta,Vôos internacionais - Jakarta
-International Flights - East Java,Vuelos internacionales - Java Oriental,Vôos internacionais - Java Leste
-Foreign Visitors,Visitantes extranjeros,Visitantes estrangeiros
-Hotel Occupancy - Jakarta,Ocupación hotelera - Jakarta,Ocupação do hotel - Jakarta
-Hotel Occupancy - West Java,Ocupación hotelera - Java Occidental,Ocupação do hotel - Java do Oeste
-Hotel Occupancy - Central Java,Ocupación hotelera - Central Java,Ocupação do hotel - Central Java
-Hotel Occupancy - East Java,Ocupación hotelera - Java Oriental,Ocupação do hotel - Java Leste
-Hotel Occupancy - South Sulawesi,Ocupación hotelera - Sulawesi del Sur,Ocupação do hotel - Sulawesi do Sul
-Economy - Nationwide,Economia a escala nacional,Economia em todo o país
-Economy - Regional,Economia regional,Economia regional
-Household Expenditures % Change from Q1 to Q3,Gasto de los hogares% de variación del primer trimestre al tercer trimestre,Mudança de% das despesas domésticas do primeiro ao terceiro trimestre
-Consumption Expenditure LNPRT % Change from Q1 to Q3,Gasto de consumo LNPRT% Cambio del primer trimestre al tercer trimestre,Despesas de consumo LNPRT% Mudança do primeiro ao terceiro trimestre
-Government Consumption Expenditure % Change from Q1 to Q3,Gasto de consumo del gobierno% de variación del primer trimestre al tercer trimestre,Mudança de% das despesas de consumo do governo do primeiro ao terceiro trimestre
-Net Export % Change from Q1 to Q3,Cambio de porcentaje de exportación neta del primer trimestre al tercer trimestre,% De mudança de exportação líquida do primeiro ao terceiro trimestre
-Gross Domestic Regional Expenditure % Change from Q1 to Q3,Variação% da despesa interna bruta regional del primer trimestre al tercer trimestre,Gasto Bruto Interno Regional% Variación do primeiro ao terceiro trimestre
-Inflation (September 2020),Inflación (septiembre de 2020),Inflação (setembro de 2020)
-Inflation change from September 2019 to September 2020,Variación de la inflación de septiembre de 2019 a septiembre de 2020,Alteração da inflação de setembro de 2019 a setembro de 2020
-Domestic Flights % Change from August 2019 to August 2020,% De cambio de vuelos nacionales de agosto de 2019 a agosto de 2020,% De variação de voos domésticos de agosto de 2019 a agosto de 2020
-Hotel Occupancy % Change from August 2019 to August 2020,% De cambio de ocupación hotelera de agosto de 2019 a agosto de 2020,Alteração da% de ocupação do hotel de agosto de 2019 a agosto de 2020
-,,
-,,
-,,
-Rainfall,Lluvia,Chuva
-Barometric Pressure,Presión barométrica,Pressão barométrica
-Solar Radiation,Radiación solar,Radiação solar
-Temperature,Temperatura,Temperatura
-Relative Humidity,Humedad relativa,Humidade relativa
-Wind Direction,Dirección del viento,Direção do vento
-Wind Speed,Velocidad del viento,Velocidade do vento
-,,
-Operations Mean Anomaly,Anomalía del medio de operaciones,Anomalia média de operações
-Passengers Mean Anomaly,Los pasajeros significan anomalía,Passageiros Significam Anomalia
-July Operations,Operaciones de Julio,Operações de julho
-July Passengers,Pasajeros de julio,Passageiros de julho
-Population,Población,População
-Current ICU,UCI actual,UTI atual
-Accumulative Cases,Casos acumulativos,Casos Acumulativos
-Accumulative PCR Exams,Exámenes de PCR acumulativos,Exames PCR Acumulativos
-Accumulative Deaths,Fallecidos Acumulados,Mortes acumuladas
-Status,Estado,Status
-,,
-Total Cases,Casos totales,Total de Casos
-Recovered Cases,Casos recuperados,Casos Recuperados
-Retail and Recreation Mobility % Change from Baseline (late July),Cambio porcentual de movilidad minorista y recreativa con respecto al valor inicial (finales de julio),Mudança de % de mobilidade para varejo e recreação em relação à linha de base (final de julho)
-Grocery and Pharmacy Mobility % Change from Baseline (late July),Cambio porcentual de movilidad en supermercados y farmacias con respecto al valor inicial (finales de julio),Mudança de % de mobilidade em supermercados e farmácias em relação à linha de base (final de julho)
-Parks Mobility % Change from Baseline (late July),Cambio porcentual de movilidad en parques con respecto al valor inicial (finales de julio),Mudança de % da mobilidade dos parques em relação à linha de base (final de julho)
-Transit Mobility % Change from Baseline (late July),Cambio porcentual de movilidad en tránsito con respecto al valor inicial (finales de julio),Mudança de % de mobilidade de trânsito da linha de base (final de julho)
-Workplace Mobility % Change from Baseline (late July),Cambio porcentual de movilidad en el lugar de trabajo con respecto al valor inicial (finales de julio),Mudança de % de mobilidade no local de trabalho da linha de base (final de julho)
-Household Expenditures % Change from Q1 to Q2,Cambio porcentual de gasto de los hogares del primer trimestre al segundo,Mudança de % das despesas domésticas do T1 ao T2
-Consumtion Expenditure LNPRT % Change from Q1 to Q2,Cambio porcentual de gasto de consumo LNPRT del primer trimestre al segundo,Despesa de consumo LNPRT % Mudança do primeiro trimestre do 1º ao 2º trimestre
-Government Consumption Expenditure % Change from Q1 to Q2,Cambio porcentual de gasto de consumo del gobierno del primer trimestre al segundo,Mudança de % das despesas de consumo do governo  do 1º ao 2º trimestre
-Net Export % Change from Q1 to Q2,Cambio porcentual de exportación neta del primer trimestre al segundo,Mudança de % de exportação líquida do 1º ao 2º trimestre
-Gross Domestic Regional Expenditure % Change from Q1 to Q2,Cambio porcentual de gasto bruto producto regional del primer trimestre al segundo,Mudança de % da despesa interna bruta regional do 1º ao 2º trimestre
-Residential Mobility % Change from Baseline (late July),Cambio porcentual de movilidad en residencial con respecto al valor inicial (finales de julio),Mudança de % de mobilidade de residencial da linha de base (final de julho)
-Poverty Rate (March 2020),Tasa de pobreza (marzo de 2020),Taxa de pobreza (março de 2020)
-Farmer Terms of Trade (September 2020),Términos de intercambio de agricultores (septiembre de 2020),Termos de troca do agricultor (setembro de 2020)
-,,
-Mobility,Movilidad,Mobilidade
-Mobility Index,Índice de movilidad,Índice de Mobilidade
-National Retail and Recreation Mobility,Movilidad minorista y recreativa nacional,Mobilidade Nacional para Varejo e Recreação
-National Grocery and Pharmacy Mobility,Movilidad nacional de supermercados y farmacias,Mobilidade Nacional de Mercearia e Farmácia
-National Parks Mobility,Movilidad nacional en parques,Mobilidade Nacional para parques
-National Transit Stations Mobility,Movilidad de las estaciones de tránsito nacional,Mobilidade de estações de trânsito nacional
-National Workplaces Mobility,Movilidad nacional en los lugares de trabajo,Mobilidade Nacional em locais de trabalho
-National Residential Mobility,Movilidad residencial nacional,Mobilidade Residencial Nacional
-Luanda Retail and Recreation Mobility,Movilidad minorista y recreativa en Luanda,Mobilidade para Varejo e Recreação em Luanda
-Luanda Grocery and Pharmacy Mobility,Movilidad de supermercados y farmacias en Luanda,Mobilidade de Mercearia e Farmácia em Luanda
-Luanda Parks Mobility,Movilidad en parques en Luanda,Mobilidade para parques em Luanda
-Luanda Transit Stations Mobility,Movilidad de las estaciones de tránsito en Luanda,Mobilidade de estações de trânsito em Luanda
-Luanda Workplaces Mobility,Movilidad en los lugares de trabajo en Luanda,Mobilidade em locais de trabalho em Luanda
-Luanda Residential Mobility,Movilidad residencial en Luanda,Mobilidade Residencial em Luanda
-Querétaro Retail and Recreation Mobility,Movilidad minorista y recreativa en Querétaro,Mobilidade para Varejo e Recreação em Querétaro
-Querétaro Grocery and Pharmacy Mobility,Movilidad de supermercados y farmacias en Querétaro,Mobilidade de Mercearia e Farmácia em Querétaro
-Querétaro Parks Mobility,Movilidad en parques en Querétaro,Mobilidade para parques em Querétaro
-Querétaro Transit Stations Mobility,Movilidad de las estaciones de tránsito en Querétaro,Mobilidade de estações de trânsito em Querétaro
-Querétaro Workplaces Mobility,Movilidad en los lugares de trabajo en Querétaro,Mobilidade em locais de trabalho em Querétaro
-Querétaro Residential Mobility,Movilidad residencial en Querétaro,Mobilidade Residencial em Querétaro
-,,
-Ships in Luanda Bay,Barcos en la bahía de Luanda,Navios na Baía de Luanda
-Ships in Offshore Area,Barcos en el área costa afuera,Navios na área offshore
-Ships in Lobito Bay,Barcos en Bahía de Lobito,Navios na Baía do Lobito
-ships,Barcos,Navios
-,,
-NO2 Percent Change,Cambio porcentual de NO2,Mudança percentual de NO2
-SO2 Percent Change,Cambio porcentual de SO2,Mudança percentual de SO2
-,,
-COVID Cases per 1000 People,Casos de COVID por 1000 personas,Casos COVID por 1000 pessoas
-2015 Population,Población 2015,População 2015
-COVID Deaths per 1000 People,Fallecidos COVID por 1000 personas,COVID Mortes por 1000 pessoas
-COVID Hospitalizations per 1000 People,Hospitalizaciones por COVID por 1000 personas,Hospitalizações COVID por 1000 pessoas
-,,
-Initial Closures,Cierres iniciales,Fechamentos iniciais
+POLICY OPTIONS & HISTORY,POLICY OPTIONS,POLICY OPTIONS
 Additional Closures,Cierres adicionales,Fechamentos Adicionais
+Calamity State,Estado de calamidad,Estado de calamidade
+Closure Policy,Política de cierre,Política de Fechamento
+Closure Policy Java,Política de cierre de Java,Política de Fechamento de Java
+Closure Policy Sulawesi,Política de cierre de Sulawesi,Política de Fechamento de Sulawesi
 Complete Lockdown,Cierre completo,Bloqueio completo
-Re-open Some Businesses,Reabrir algunos negocios,Reabrir algumas empresas
-Relax Mandatory Social Distancing,Relajamiento Distancia social obligatoria,Relaxe o distanciamento social obrigatório
-Order More Ventilators,Solicite más ventiladores,Peça mais ventiladores
-Pay More for Ventilators to Accelerate Delivery,Pague más por los ventiladores para acelerar la entrega,Pague mais por ventiladores para acelerar a entrega
-Implement Some Restrictions Nationwide,Implementar algunas restricciones a nivel nacional,Implementar algumas restrições em todo o país
-Implement High Restrictions Nationwide,Implementar altas restricciones a nivel nacional,Implementar restrições altas em todo o país
-Relax Some Restrictions Nationwide,Relaja algunas restricciones a nivel nacional,Relaxe algumas restrições em todo o país
-Relax Mandatory Social Distancing Nationwide,Relax obligatorio distanciamiento social a nivel nacional,Relaxe o distanciamento social obrigatório em todo o país
-Implement Some Restrictions Java - Zonal,Implementar algunas restricciones de Java - Zonal,Implementar algumas restrições de Java - Zonal
-Implement High Restrictions Java - Zonal,Implementar altas restricciones de Java - Zonal,Implementar restrições altas de Java - Zonal
-Relax Some Restrictions Java - Zonal,Relajar algunas restricciones de Java - Zonal,Relaxe algumas restrições de Java - Zonal
-Relax Mandatory Social Distancing Java - Zonal,Relax obligatorio distanciamiento social de Java - Zonal,Relaxe o distanciamento social obrigatório de Java - Zonal
-Implement Some Restrictions Sulawesi - Zonal,Implementar algunas restricciones de Sulawesi - Zonal,Implementar algumas restrições de Sulawesi - Zonal
-Implement High Restrictions Sulawesi - Zonal,Implementar altas restricciones de Sulawesi - Zonal,Implementar aestrições altas de Sulawesi - Zonal
-Relax Some Restrictions Sulawesi - Zonal,Relajar algunas restricciones de Sulawesi - Zonal,Relaxe algumas restrições de Sulawesi - Zonal
-Relax Mandatory Social Distancing Sulawesi - Zonal,Relax obligatorio distanciamiento social de Sulawesi - Zonal,Relaxe o distanciamento social obrigatório de Sulawesi - Zonal
-,,
+Conservative,Período conservador,Período conservador
+Curfew Policy,Política de toque de queda,Política de toque de recolher
+Emergency State,Estado de emergencia,Estado de emergência
+Enforced Curfew,Toque de queda forzado,Toque de recolher forçado
+Fase 1,Fase 1,Fase 1
+Fase 2,Fase 2,Fase 2
+Fase 3a,Fase 3a,Fase 3a
+Fase 3b,Fase 3b,Fase 3b
+Fase 4,Fase 4,Fase 4
+Fase 5,Fase 5,Fase 5
 Fase 6,Fase 6,Fase 6
 Fase 6a,Fase 6a,Fase 6a
 Fase 6b,Fase 6b,Fase 6b
-Fase 5,Fase 5,Fase 5
-Fase 4,Fase 4,Fase 4
-Fase 3b,Fase 3b,Fase 3b
-Fase 3a,Fase 3a,Fase 3a
-Fase 2,Fase 2,Fase 2
-Fase 1,Fase 1,Fase 1
-Conservative,Período conservador,Período conservador
+High Social Restrictions,Altas restricciones sociales,Altas restrições sociais
+High Social Restrictions - Provincial,Altas restricciones sociales - Provincial,Altas restrições sociais - Provincial
+High Social Restrictions - Zonal,Altas restricciones sociales - Zonal,Altas restrições sociais - Zonal
+Implement High Restrictions Java - Zonal,Implementar altas restricciones de Java - Zonal,Implementar restrições altas de Java - Zonal
+Implement High Restrictions Nationwide,Implementar altas restricciones a nivel nacional,Implementar restrições altas em todo o país
+Implement High Restrictions Sulawesi - Zonal,Implementar altas restricciones de Sulawesi - Zonal,Implementar aestrições altas de Sulawesi - Zonal
+Implement Some Restrictions Java - Zonal,Implementar algunas restricciones de Java - Zonal,Implementar algumas restrições de Java - Zonal
+Implement Some Restrictions Nationwide,Implementar algunas restricciones a nivel nacional,Implementar algumas restrições em todo o país
+Implement Some Restrictions Sulawesi - Zonal,Implementar algunas restricciones de Sulawesi - Zonal,Implementar algumas restrições de Sulawesi - Zonal
+Initial Closures,Cierres iniciales,Fechamentos iniciais
+Lockdown,Cierre de emergencia,Confinamento
+Mandatory Social Distancing,Distanciamiento social obligatorio,Distanciamento Social Obrigatório
+Mandatory Social Distancing - Provincial,Distanciamiento social obligatorio - Provincial,Distanciamento Social Obrigatório - Provincial
+Mandatory Social Distancing - Zonal,Distanciamiento social obligatorio - Zonal,Distanciamento Social Obrigatório - Zonal
+New Ventilator Orders,Nuevos pedidos de ventiladores,Novos pedidos de ventiladores
+No Closures,Sin cierres,Sem fechamentos
+No Curfew,No hay toque de queda,Sem toque de recolher
+No Distancing,Sin distanciamiento,Sem distanciamento
+Order More Ventilators,Solicite más ventiladores,Peça mais ventiladores
 Paso 1,Paso 1,Paso 1
 Paso 2,Paso 2,Paso 2
 Paso 3,Paso 3,Paso 3
 Paso 4,Paso 4,Paso 4
 Paso 5,Paso 5,Paso 5
-Relaxed Social Restrictions,Restricciones sociales relajadas,Restrições sociais relaxadas
-High Social Restrictions,Altas restricciones sociales,Altas restrições sociais
-Relaxed Social Restrictions - Zonal,Restricciones sociales relajadas - Zonal,Restrições sociais relaxadas - Zonal
-Relaxed Social Restrictions - Provincial,Restricciones sociales relajadas - Provincial,Restrições sociais relaxadas - Provincial
-High Social Restrictions - Zonal,Altas restricciones sociales - Zonal,Altas restrições sociais - Zonal
-High Social Restrictions - Provincial,Altas restricciones sociales - Provincial,Altas restrições sociais - Provincial
-Voluntary Social Distancing - Zonal,Distanciamiento social voluntario - Zonal,Distanciamento Social Voluntário - Zonal
-Voluntary Social Distancing - Provincial,Distanciamiento social voluntario - Provincial,Distanciamento Social Voluntário - Provincial
-Mandatory Social Distancing - Zonal,Distanciamiento social obligatorio - Zonal,Distanciamento Social Obrigatório - Zonal
-Mandatory Social Distancing - Provincial,Distanciamiento social obligatorio - Provincial,Distanciamento Social Obrigatório - Provincial
+Pay More for Ventilators to Accelerate Delivery,Pague más por los ventiladores para acelerar la entrega,Pague mais por ventiladores para acelerar a entrega
+Policies & Actions,Políticas y acciones,Políticas e Ações
 Pre-Emergency,Pre-emergencia,Pré-Emergência
-Emergency State,Estado de emergencia,Estado de emergência
-Calamity State,Estado de calamidad,Estado de calamidade
+Re-open Some Businesses,Reabrir algunos negocios,Reabrir algumas empresas
+Relax Mandatory Social Distancing,Relajamiento Distancia social obligatoria,Relaxe o distanciamento social obrigatório
+Relax Mandatory Social Distancing Java - Zonal,Relax obligatorio distanciamiento social de Java - Zonal,Relaxe o distanciamento social obrigatório de Java - Zonal
+Relax Mandatory Social Distancing Nationwide,Relax obligatorio distanciamiento social a nivel nacional,Relaxe o distanciamento social obrigatório em todo o país
+Relax Mandatory Social Distancing Sulawesi - Zonal,Relax obligatorio distanciamiento social de Sulawesi - Zonal,Relaxe o distanciamento social obrigatório de Sulawesi - Zonal
+Relax Some Restrictions Java - Zonal,Relajar algunas restricciones de Java - Zonal,Relaxe algumas restrições de Java - Zonal
+Relax Some Restrictions Nationwide,Relaja algunas restricciones a nivel nacional,Relaxe algumas restrições em todo o país
+Relax Some Restrictions Sulawesi - Zonal,Relajar algunas restricciones de Sulawesi - Zonal,Relaxe algumas restrições de Sulawesi - Zonal
+Relaxed Social Restrictions,Restricciones sociales relajadas,Restrições sociais relaxadas
+Relaxed Social Restrictions - Provincial,Restricciones sociales relajadas - Provincial,Restrições sociais relaxadas - Provincial
+Relaxed Social Restrictions - Zonal,Restricciones sociales relajadas - Zonal,Restrições sociais relaxadas - Zonal
+Social Distancing Policy,Política de distanciamiento,Política de Distanciamento
+Social Distancing Policy Java,Política de distanciamiento de Java,Política de Distanciamento de Java
+Social Distancing Policy Sulawesi,Política de distanciamiento de Sulawesi,Política de Distanciamento de Sulawesi
+Unenforced Curfew,Toque de queda no forzado,Toque de recolher não forçado
+Voluntary Social Distancing,Distanciamiento social voluntario,Distanciamento Social Voluntário
+Voluntary Social Distancing - Provincial,Distanciamiento social voluntario - Provincial,Distanciamento Social Voluntário - Provincial
+Voluntary Social Distancing - Zonal,Distanciamiento social voluntario - Zonal,Distanciamento Social Voluntário - Zonal
 ,,
-Visual Composite,Compuesto visual,Composto Visual
-Nightlights Mean Anomaly,Las luces nocturnas promedio anomalías,Luzes noturnas média anomalia
+GRAPH: HEALTH PARAMETERS CATEGORY,GRAPH: HEALTH PARAMETERS CATEGORY,GRAPH: HEALTH PARAMETERS CATEGORY
+Average Hospitalization Duration,Duración media de la hospitalización,Duração Média de Hospitalização
+Average Illness Duration,Duración media de la enfermedad,Duração média da doença
+Base Contact Rate,Tasa de contacto base,Taxa de contato básica
+Base Hospitalized Recovery Likelihood,Probabilidad de recuperación hospitalaria base,Probabilidade de recuperação de base hospitalizada
+Contact Rate,Tasa de contacto,Taxa de contato
+Contact Rate Java,Tasa de contacto de Java,Taxa de contato de Java
+Contact Rate Sulawesi,Tasa de contacto de Sulawesi,Taxa de contato de Sulawesi
+Health Parameters,Parámetros de salud,Parâmetros de Saúde
+Hospitalization Likelihood,Probabilidad de hospitalización,Probabilidade de hospitalização
+Hospitalized Mortality Likelihood,Probabilidad de mortalidad hospitalaria,Probabilidade de mortalidade hospitalizada
+Hospitalized Recovery Likelihood,Probabilidad de recuperación hospitalizada,Probabilidade de recuperação hospitalizada
+Infectivity,Infectividad,Infectividade
+Mortality Likelihood,Probabilidad de mortalidad,Probabilidade de mortalidade
+Recovery Likelihood,Probabilidad de recuperación,Probabilidade de recuperação
+Unhospitalized Mortality Likelihood,Probabilidad de mortalidad no hospitalaria,Probabilidade de mortalidade não hospitalizada
+Unhospitalized Recovery Likelihood,Probabilidad de recuperación no hospitalizada,Probabilidade de recuperação não hospitalizada
+,,
+GRAPH: HEALTH POPULATIONS CATEGORY,GRAPH: HEALTH POPULATIONS CATEGORY,GRAPH: HEALTH POPULATIONS CATEGORY
+'Estimated' Infected Population,Población infectada 'estimada',População infectada 'estimada'
+'Estimated' Infected Population Java,Población infectada 'estimada' de Java,População infectada 'estimada' de Java
+'Estimated' Infected Population Sulawesi,Población infectada 'estimada' de Sulawesi,População infectada 'estimada' de Sulawesi
+'Estimated' National Infected Population,Población nacional infectada 'estimada',População nacional infectada 'estimada'
+'Estimated' Total Infected Population,Población total infectada 'estimada',População total infectada 'estimada'
+'Estimated' Unhospitalized Infected Population,Población infectada no hospitalizada 'estimada',População infectada 'estimada' não hospitalizada
+'True' Infected Population,Población infectada 'verdadera',População infectada 'verdadeira'
+'True' Infected Population Java,Población infectada 'verdadera' de Java,População infectada 'verdadeira' de Java
+'True' Infected Population Sulawesi,Población infectada 'verdadera' de Sulawesi,População infectada 'verdadeira' de Sulawesi
+'True' Total Infected Population,Población total infectada 'verdadera',População total infectada 'verdadeira'
+'True' Unhospitalized Infected Population,Población infectada no hospitalizada 'verdadera',População infectada 'verdadeira' não hospitalizada
+Deaths,Fallecidos,Mortes
+Deaths Java,Fallecidos de Java,Mortes de Java
+Deaths Sulawesi,Fallecidos de Sulawesi,Mortes de Sulawesi
+Health Populations,Poblaciones de salud,Populações de Saúde
+Hospitalized Population,Población hospitalizada,População Hospitalizada
+Known Recovered Population,Población recuperada conocida,População Recuperada Conhecida
+Known Recovered Population Java,Población recuperada conocida de Java,População Recuperada Conhecida de Java
+Known Recovered Population Sulawesi,Población recuperada conocida de Sulawesi,População Recuperada Conhecida de Sulawesi
+Measured Infected Population,Población infectada medida,População infectada medida
+Measured Infected Population Java,Población infectada medida de Java,População infectada medida de Java
+Measured Infected Population Sulawesi,Población infectada medida de Sulawesi,População infectada medida de Sulawesi
+Measured Total Infected Population,Población total infectada medida,População total infectada medida
+Measured Unhospitalized Infected Population,Población infectada no hospitalizada medida,População infectada não hospitalizada medida
+National Deaths,Defunciones nacionales,Mortes Nacionais
+National Known Recovered Population,Población recuperada conocida nacional,População Nacional Recuperada Conhecida
+National Measured Infected Population,Población infectada medida a nivel nacional,População nacional infectada medida
+National Susceptible Population,Población Nacional Susceptible,População Nacional Susceptível
+Susceptible Population,Población susceptible,População Susceptível
+Susceptible Population Java,Población susceptible de Java,População Susceptível de Java
+Susceptible Population Sulawesi,Población susceptible de Sulawesi,População Susceptível de Sulawesi
+,,
+GRAPH: HEALTH FLOW CATEGORIES,GRAPH: HEALTH FLOW CATEGORIES,GRAPH: HEALTH FLOW CATEGORIES
+'Estimated' Infection Rate,Tasa de infección 'estimada',Taxa de infecção 'estimada'
+'Estimated' Infection Rate Java,Tasa de infección 'estimada' de Java,Taxa de infecção 'estimada' de Java
+'Estimated' Infection Rate Sulawesi,Tasa de infección 'estimada' de Sulawesi,Taxa de infecção 'estimada' de Sulawesi
+'True' Infection Rate,Tasa de infección 'verdadera',Taxa de infecção 'verdadeira'
+'True' Infection Rate Java,Tasa de infección 'verdadera' de Java,Taxa de infecção 'verdadeira' de Java
+'True' Infection Rate Sulawesi,Tasa de infección 'verdadera' de Sulawesi,Taxa de infecção 'verdadeira' de Sulawesi
+Health Flows,Flujos de salud,Fluxos de Saúde
+Hospital Mortaility Rate,Tasa de mortalidad hospitalaria,Taxa de mortalidade hospitalar
+Hospital Recovery Rate,Tasa de recuperación hospitalaria,Taxa de recuperação hospitalar
+Hospitalization Rate,Tasa de hospitalización,Taxa de hospitalização
+Measured Infection Rate,Tasa de infección medida,Taxa de infecção medida
+Measured Infection Rate Java,Tasa de infección medida de Java,Taxa de infecção medida de Java
+Measured Infection Rate Sulawesi,Tasa de infección medida de Sulawesi,Taxa de infecção medida de Sulawesi
+Mortality Rate,Tasa de mortalidad,Taxa de mortalidade
+Mortality Rate Java,Tasa de mortalidad de Java,Taxa de mortalidade de Java
+Mortality Rate Sulawesi,Tasa de mortalidad de Sulawesi,Taxa de mortalidade de Sulawesi
+National 'Estimated' Infection Rate,Tasa de infección nacional 'estimada',Taxa nacional de infecção 'estimada'
+National Measured Infection Rate,Tasa de infección medida a nivel nacional,Taxa de infecção medida nacional
+National Mortality Rate,Tasa Nacional de Mortalidad,Taxa Nacional de Mortalidade
+National Recovery Rate,Tasa de recuperación nacional,Taxa de recuperação nacional
+Recovery Rate,Tasa de recuperación,Taxa de recuperação
+Recovery Rate Java,Tasa de recuperación de Java,Taxa de recuperação de Java
+Recovery Rate Sulawesi,Tasa de recuperación de Java,Taxa de recuperação de Sulawesi
+Unhospitalized Mortality Rate,Tasa de mortalidad no hospitalizada,Taxa de mortalidade não hospitalizada
+Unhospitalized Recovery Rate,Tasa de recuperación no hospitalizada,Taxa de recuperação não hospitalar
+,,
+GRAPH: EQUIPMENT SUPPLIES CATEGORY,GRAPH: EQUIPMENT SUPPLIES CATEGORY,GRAPH: EQUIPMENT SUPPLIES CATEGORY
+Available Ventilators,Ventiladores disponibles,Ventiladores Disponíveis
+Daily PCR Tests,Exámenes PCR diarios,Testes PCR diários
+Equipment Supplies,Suministros de equipos,Suprimentos de equipamentos
+Hospital Bed Capacity,Capacidad de la cama de hospital,Capacidade de leitos hospitalares
+Ordered Ventilators,Ventiladores pedidos,Ventiladores solicitados
+,,
+GRAPH: EQUIPMENT PARAMETERS CATEGORY,GRAPH: EQUIPMENT PARAMETERS CATEGORY,GRAPH: EQUIPMENT PARAMETERS CATEGORY
+Default Ventilator Delivery Duration,Duración predeterminada de la administración del ventilador,Duração de entrega do ventilador padrão
+Equipment Parameters,Parámetros del equipo,Parâmetros de Equipamento
+Ventilator Acquisition Rate,Tasa de adquisición del ventilador,Taxa de aquisição do ventilador
+Ventilator Willingness to Pay,Disposición del ventilador a pagar,Disposição do Ventilador a Pagar
+,,
+GRAPH: ENVIRONMENT CATEGORY,GRAPH: ENVIRONMENT CATEGORY,GRAPH: ENVIRONMENT CATEGORY
+Average Temperature,Temperatura media,Temperatura média
+CH4,CH4,CH4
+CO,CO,CO
+Environment,Ambiente,Meio Ambiente
+HCNM,HCNM,HCNM
+HCT,HCT,HCT
+NO,NO,NO
+NO2,NO2,NO2
+NOx,NOx,NOx
+O3,O3,O3
+PM10,MP10,PM10
+PM2.5,MP2.5,PM2.5
+SO2,SO2,SO2
+,,
+GRAPH: ECONOMY CATEGORY,GRAPH: ECONOMY CATEGORY,GRAPH: ECONOMY CATEGORY
+Accommodation and Food Service GDP,PIB alojamiento y servicio de alimentos,PIB de hospedagem e alimentação
+Brazil Unemployment Rate,Tasa de desempleo de Brasil,Taxa de desemprego no Brasil
+Brazil Unemployment Rate of Change,Tasa de variación del desempleo en Brasil,Taxa de variação do desemprego no Brasil
+Closing Compsite Stock Index (IDX),Cierre del índice bursátil compuesto (IDX),Índice de ações da Compsite de fechamento (IDX)
+Construction GDP,PIB de la construcción,PIB da construção
+Consumption Expenditure LNPRT,Gasto de consumo LNPRT,Despesas de consumo LNPRT
+Consumption Expenditure LNPRT % Change from Q1 to Q3,Gasto de consumo LNPRT% Cambio del primer trimestre al tercer trimestre,Despesas de consumo LNPRT% Mudança do primeiro ao terceiro trimestre
+Daily Flight Passengers,Pasajeros de vuelos diarios,Passageiros de voos diários
+Domestic Flights - East Java,Vuelos domésticos - Java Oriental,Vôos domésticos - Java Leste
+Domestic Flights - Jakarta,Vuelos domésticos - Jakarta,Vôos domésticos - Jakarta
+Domestic Flights - South Sulawesi,Vuelos domésticos - Sulawesi del Sur,Vôos domésticos - Sulawesi do Sul
+Domestic Flights % Change from August 2019 to August 2020,% De cambio de vuelos nacionales de agosto de 2019 a agosto de 2020,% De variação de voos domésticos de agosto de 2019 a agosto de 2020
+Economy,Economía,Economia
+Economy - Nationwide,Economia a escala nacional,Economia em todo o país
+Economy - Regional,Economia regional,Economia regional
+Farmer Terms of Trade - Central Java,Términos de intercambio de agricultores - Java Central,Termos de comércio do agricultor - Java Central
+Farmer Terms of Trade - East Java,Términos de intercambio de agricultores - Java Oriental,Termos de comércio do agricultor - Java Leste
+Farmer Terms of Trade - Jakarta,Términos de intercambio de agricultores - Yakarta,Termos de comércio do agricultor - Jacarta
+Farmer Terms of Trade - South Sulawesi,Términos de intercambio de agricultores - Sulawesi del Sur,Termos de comércio do agricultor - Sulawesi do Sul
+Farmer Terms of Trade - West Java,Términos de intercambio de agricultores - Java Occidental,Termos de comércio do agricultor - Java do Oeste
+Foreign Visitors,Visitantes extranjeros,Visitantes estrangeiros
+Government Consumption Expenditure,Gasto de consumo del gobierno,Despesas de consumo do governo
+Government Consumption Expenditure % Change from Q1 to Q3,Gasto de consumo del gobierno% de variación del primer trimestre al tercer trimestre,Mudança de% das despesas de consumo do governo do primeiro ao terceiro trimestre
+Gross Domestic Product,Producto Interno Bruto,Produto Interno Bruto
+Gross Domestic Regional Expenditure % Change from Q1 to Q3,Variação% da despesa interna bruta regional del primer trimestre al tercer trimestre,Gasto Bruto Interno Regional% Variación do primeiro ao terceiro trimestre
+Health and Social Work GDP,PIB de salud y trabajo social,PIB de saúde e serviço social
+Hotel Occupancy - Central Java,Ocupación hotelera - Central Java,Ocupação do hotel - Central Java
+Hotel Occupancy - East Java,Ocupación hotelera - Java Oriental,Ocupação do hotel - Java Leste
+Hotel Occupancy - Jakarta,Ocupación hotelera - Jakarta,Ocupação do hotel - Jakarta
+Hotel Occupancy - South Sulawesi,Ocupación hotelera - Sulawesi del Sur,Ocupação do hotel - Sulawesi do Sul
+Hotel Occupancy - West Java,Ocupación hotelera - Java Occidental,Ocupação do hotel - Java do Oeste
+Hotel Occupancy % Change from August 2019 to August 2020,% De cambio de ocupación hotelera de agosto de 2019 a agosto de 2020,Alteração da% de ocupação do hotel de agosto de 2019 a agosto de 2020
+Household Expenditures,Gastos del hogar,Despesas domésticas
+Household Expenditures % Change from Q1 to Q3,Gasto de los hogares% de variación del primer trimestre al tercer trimestre,Mudança de% das despesas domésticas do primeiro ao terceiro trimestre
+Inflation - Central Java,Inflación - Java Central,Inflação - Java Central
+Inflation - East Java,Inflación - Java Oriental,Inflação - Java Leste
+Inflation - Jakarta,Inflación - Jakarta,Inflação - Jakarta
+Inflation - South Sulawesi,Inflación - Sulawesi del Sur,Inflação - Sulawesi do Sul
+Inflation - West Java,Inflación - Java Occidental,Inflação - Java do Oeste
+Inflation (September 2020),Inflación (septiembre de 2020),Inflação (setembro de 2020)
+Inflation change from September 2019 to September 2020,Variación de la inflación de septiembre de 2019 a septiembre de 2020,Alteração da inflação de setembro de 2019 a setembro de 2020
+Information and Communication GDP,PIB de información y comunicación,PIB de informação e comunicação
+International Flights - East Java,Vuelos internacionales - Java Oriental,Vôos internacionais - Java Leste
+International Flights - Jakarta,Vuelos internacionales - Jakarta,Vôos internacionais - Jakarta
+Manufacturing GDP,PIB manufacturero,PIB da manufatura
+Net Export % Change from Q1 to Q3,Cambio de porcentaje de exportación neta del primer trimestre al tercer trimestre,% De mudança de exportação líquida do primeiro ao terceiro trimestre
+Net Exports,Las exportaciones netas,Resultado líquido
+Oil and Gas Imports,Importaciones de petróleo y gas,Importações de petróleo e gás
+Retail and Vehicle Repair GDP,PIB minorista y de reparación de vehículos,PIB de varejo e reparação de veículos
+Rio de Janeiro Unemployment Rate,Tasa de desempleo de Río de Janeiro,Taxa de desemprego do Rio de Janeiro
+Rio de Janeiro Unemployment Rate of Change,Tasa de variación del desempleo en Río de Janeiro,Taxa de variação do desemprego no Rio de Janeiro
+Rp Million,Millones de Rp,Rp milhões
+ships,Barcos,Navios
+Ships in Lobito Bay,Barcos en Bahía de Lobito,Navios na Baía do Lobito
+Ships in Luanda Bay,Barcos en la bahía de Luanda,Navios na Baía de Luanda
+Ships in Offshore Area,Barcos en el área costa afuera,Navios na área offshore
+Visitor Arrivals,Llegadas de visitantes,Chegadas de visitantes
+,,
+GRAPH: MOBILITY CATEGORY,GRAPH: MOBILITY CATEGORY,GRAPH: MOBILITY CATEGORY
+Grocery and Pharmacy Mobility,Movilidad en supermercados y farmacias,Mobilidade em supermercados e farmácias
+Luanda Grocery and Pharmacy Mobility,Movilidad de supermercados y farmacias en Luanda,Mobilidade de Mercearia e Farmácia em Luanda
+Luanda Parks Mobility,Movilidad en parques en Luanda,Mobilidade para parques em Luanda
+Luanda Residential Mobility,Movilidad residencial en Luanda,Mobilidade Residencial em Luanda
+Luanda Retail and Recreation Mobility,Movilidad minorista y recreativa en Luanda,Mobilidade para Varejo e Recreação em Luanda
+Luanda Transit Stations Mobility,Movilidad de las estaciones de tránsito en Luanda,Mobilidade de estações de trânsito em Luanda
+Luanda Workplaces Mobility,Movilidad en los lugares de trabajo en Luanda,Mobilidade em locais de trabalho em Luanda
+Mobility,Movilidad,Mobilidade
+Mobility Index,Índice de movilidad,Índice de Mobilidade
+National Grocery and Pharmacy Mobility,Movilidad nacional de supermercados y farmacias,Mobilidade Nacional de Mercearia e Farmácia
+National Parks Mobility,Movilidad nacional en parques,Mobilidade Nacional para parques
+National Residential Mobility,Movilidad residencial nacional,Mobilidade Residencial Nacional
+National Retail and Recreation Mobility,Movilidad minorista y recreativa nacional,Mobilidade Nacional para Varejo e Recreação
+National Transit Stations Mobility,Movilidad de las estaciones de tránsito nacional,Mobilidade de estações de trânsito nacional
+National Workplaces Mobility,Movilidad nacional en los lugares de trabajo,Mobilidade Nacional em locais de trabalho
+Parks Mobility,Movilidad de parques,Mobilidade de parques
+Querétaro Grocery and Pharmacy Mobility,Movilidad de supermercados y farmacias en Querétaro,Mobilidade de Mercearia e Farmácia em Querétaro
+Querétaro Parks Mobility,Movilidad en parques en Querétaro,Mobilidade para parques em Querétaro
+Querétaro Residential Mobility,Movilidad residencial en Querétaro,Mobilidade Residencial em Querétaro
+Querétaro Retail and Recreation Mobility,Movilidad minorista y recreativa en Querétaro,Mobilidade para Varejo e Recreação em Querétaro
+Querétaro Transit Stations Mobility,Movilidad de las estaciones de tránsito en Querétaro,Mobilidade de estações de trânsito em Querétaro
+Querétaro Workplaces Mobility,Movilidad en los lugares de trabajo en Querétaro,Mobilidade em locais de trabalho em Querétaro
+Residential Mobility,Movilidad residencial,Mobilidade Residencial
+Retail and Recreation Mobility,Movilidad minorista y recreativa,Mobilidade para varejo e recreação
+Transit Mobility,Movilidad de tránsito,Mobilidade de trânsito
+Workplace Mobility,Movilidad laboral,Mobilidade no local de trabalho
+,,
+MAP: CHILE,MAP: CHILE,MAP: CHILE
+Accumulative Cases,Casos acumulativos,Casos Acumulativos
+Accumulative Deaths,Fallecidos Acumulados,Mortes acumuladas
+Accumulative PCR Exams,Exámenes de PCR acumulativos,Exames PCR Acumulativos
+Current ICU,UCI actual,UTI atual
+July Operations,Operaciones de Julio,Operações de julho
+July Passengers,Pasajeros de julio,Passageiros de julho
+Operations Mean Anomaly,Anomalía del medio de operaciones,Anomalia média de operações
+Passengers Mean Anomaly,Los pasajeros significan anomalía,Passageiros Significam Anomalia
+Population,Población,População
+Status,Estado,Status
+,,
+MAP: INDONESIA,MAP: INDONESIA,MAP: INDONESIA
+Consumtion Expenditure LNPRT % Change from Q1 to Q2,Cambio porcentual de gasto de consumo LNPRT del primer trimestre al segundo,Despesa de consumo LNPRT % Mudança do primeiro trimestre do 1º ao 2º trimestre
+Farmer Terms of Trade (September 2020),Términos de intercambio de agricultores (septiembre de 2020),Termos de troca do agricultor (setembro de 2020)
+Government Consumption Expenditure % Change from Q1 to Q2,Cambio porcentual de gasto de consumo del gobierno del primer trimestre al segundo,Mudança de % das despesas de consumo do governo  do 1º ao 2º trimestre
+Grocery and Pharmacy Mobility % Change from Baseline (late July),Cambio porcentual de movilidad en supermercados y farmacias con respecto al valor inicial (finales de julio),Mudança de % de mobilidade em supermercados e farmácias em relação à linha de base (final de julho)
+Gross Domestic Regional Expenditure % Change from Q1 to Q2,Cambio porcentual de gasto bruto producto regional del primer trimestre al segundo,Mudança de % da despesa interna bruta regional do 1º ao 2º trimestre
+Household Expenditures % Change from Q1 to Q2,Cambio porcentual de gasto de los hogares del primer trimestre al segundo,Mudança de % das despesas domésticas do T1 ao T2
+Net Export % Change from Q1 to Q2,Cambio porcentual de exportación neta del primer trimestre al segundo,Mudança de % de exportação líquida do 1º ao 2º trimestre
+Parks Mobility % Change from Baseline (late July),Cambio porcentual de movilidad en parques con respecto al valor inicial (finales de julio),Mudança de % da mobilidade dos parques em relação à linha de base (final de julho)
+Poverty Rate (March 2020),Tasa de pobreza (marzo de 2020),Taxa de pobreza (março de 2020)
+Recovered Cases,Casos recuperados,Casos Recuperados
+Residential Mobility % Change from Baseline (late July),Cambio porcentual de movilidad en residencial con respecto al valor inicial (finales de julio),Mudança de % de mobilidade de residencial da linha de base (final de julho)
+Retail and Recreation Mobility % Change from Baseline (late July),Cambio porcentual de movilidad minorista y recreativa con respecto al valor inicial (finales de julio),Mudança de % de mobilidade para varejo e recreação em relação à linha de base (final de julho)
+Total Cases,Casos totales,Total de Casos
+Transit Mobility % Change from Baseline (late July),Cambio porcentual de movilidad en tránsito con respecto al valor inicial (finales de julio),Mudança de % de mobilidade de trânsito da linha de base (final de julho)
+Workplace Mobility % Change from Baseline (late July),Cambio porcentual de movilidad en el lugar de trabajo con respecto al valor inicial (finales de julio),Mudança de % de mobilidade no local de trabalho da linha de base (final de julho)
+,,
+MAP: LUANDA,MAP: LUANDA,MAP: LUANDA
+NO2 Percent Change,Cambio porcentual de NO2,Mudança percentual de NO2
+SO2 Percent Change,Cambio porcentual de SO2,Mudança percentual de SO2
+,,
+MAP: QUERÉTARO,MAP: QUERÉTARO,MAP: QUERÉTARO
+2015 Population,Población 2015,População 2015
+COVID Cases per 1000 People,Casos de COVID por 1000 personas,Casos COVID por 1000 pessoas
+COVID Deaths per 1000 People,Fallecidos COVID por 1000 personas,COVID Mortes por 1000 pessoas
+COVID Hospitalizations per 1000 People,Hospitalizaciones por COVID por 1000 personas,Hospitalizações COVID por 1000 pessoas
+,,
+MAP: SANTIAGO,MAP: SANTIAGO,MAP: SANTIAGO
+Weekly Mobility,Movilidad semanal,Mobilidade Semanal
+,,
+MAP: RIO DE JANEIRO,MAP: RIO DE JANEIRO,MAP: RIO DE JANEIRO
+Barometric Pressure,Presión barométrica,Pressão barométrica
 Nightlights,Luces nocturnas,Luzes noturnas
+Nightlights Mean Anomaly,Las luces nocturnas promedio anomalías,Luzes noturnas média anomalia
+Rainfall,Lluvia,Chuva
+Relative Humidity,Humedad relativa,Humidade relativa
+Solar Radiation,Radiación solar,Radiação solar
+Temperature,Temperatura,Temperatura
+Visual Composite,Compuesto visual,Composto Visual
+Wind Direction,Dirección del viento,Direção do vento
+Wind Speed,Velocidad del viento,Velocidade do vento

@@ -20,7 +20,6 @@ import csv
 import numpy as np
 import shapefile
 import screeninfo
-import dateutil
 
 #Import custom packages
 import SDlib_v1_4 as SDlib
@@ -69,14 +68,14 @@ class SD_UI(tk.Tk):
             self.map_loc = [-43.487035, -22.930828, 0.01]
             self.language = 'portuguese'
         elif self.location == 'Chile':
-            self.background_image = []
+            self.background_image = 'Visual Composite'
             self.color_range =  'Population'
             self.default_graph1 = 'Measured Total Infected Population'
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-70.915467, -37.561959, 0.0001]
             self.language = 'spanish'
         elif self.location == 'Indonesia':
-            self.background_image = []
+            self.background_image = 'Visual Composite'
             self.color_range =  'Total Cases'
             self.default_graph1 = 'Measured Infected Population'
             self.default_graph2 = "'Estimated' Infected Population"
@@ -194,10 +193,9 @@ class SD_UI(tk.Tk):
         self.graph_canvas_list = [[],[]]
         self.graph_optionlist_list = [[],[]]
         self.figures = []
-
-        if self.arrangment[0] == 'Graph':
+        if self.arrangment[0] == 'Graph': #Place the left pair of graphs if releveant
             self.graph_frame_L = self.make_graph_frame(self.default_graph1, self.default_graph2, 0) #left pair of graphs
-        if self.arrangment[1] == 'Graph':
+        if self.arrangment[1] == 'Graph': #Place the right pair of graphs if relevant
             self.graph_frame_R = self.make_graph_frame(self.default_graph1, self.default_graph2, 1) #left pair of graphs
         
         #Generate the policy action controls
@@ -207,29 +205,32 @@ class SD_UI(tk.Tk):
         self.Rules = Rule_Database.make_rules(self)
         self.info_frame = self.make_rule_display()
         
-        #Generate the map(s) and their associated dropdown menus
+        #Initialize containers to hold the various map-related objects
         self.frame_map_list = [[],[]]  #list that holds the Tk frames that the map subframes reside in. These are not deleted when the map is refreshed.
         self.subframe_map_list = [[],[]] #list that holds the subframes that the maps reside in.
-        self.color_setting_name_list = [[],[]]  #list that holds the current longform name of the shapefile color fill setting
         self.color_optionlist_list = [[],[]] #list that holds the map color dropdown selection menus
-        self.image_setting_name_list = [[],[]] #list that holds the current longform image setting name
         self.image_optionlist_list = [[],[]] #list that holds the image dropdown selection menus
         self.MAP_list = [[],[]] #list that holds the map objects
         self.mapslider_list = [[],[]] #list that holds the slider scale objects for temporal map shading
+        self.imgslider_list = [[],[]] #list that holds the slider scale objects for temporal images
+       
+        #Initialize containers to hold the various map-related settings
+        self.color_setting_name_list = [[],[]]  #list that holds the current longform name of the shapefile color fill setting
+        self.image_setting_name_list = [[],[]] #list that holds the current longform image setting name
         self.datefieldlist = [[],[]] #list that holds all the temporal fieldname options for map shading
         self.datenumlist = [[],[]] #list that holds all the temporal integer options for map shading
         self.map_temporalflag = [0,0] #list that holds the flags indicating whether the map shading is temporal or not
         self.date_setting_list = [[],[]] #list the holds the fieldnames of the current temporal map shading settings
-        self.imgslider_list = [[],[]] #list that holds the slider scale objects for temporal images
-        self.img_temporalflag = [0,0] #list that holds the flags indicating whether an image is temporal or not
         self.img_datenumlist = [[],[]] #list that holds all the temporal integer options for images
+        self.img_temporalflag = [0,0] #list that holds the flags indicating whether an image is temporal or not
         self.img_date_setting_list = [[],[]] #list that holds the band index of the current temporal image settings
         
-        if self.arrangment[0] == 'Map':
+        #Generate the map(s) and their associated dropdown menus
+        if self.arrangment[0] == 'Map': #Place the left map if relevant
             self.frame_map_L, subframe_map, MAP = self.make_map_frame(0)
             self.subframe_map_list[0] = subframe_map
             self.MAP_list[0] = MAP
-        if self.arrangment[1] == 'Map':
+        if self.arrangment[1] == 'Map': #Place the right map if relevant
             self.frame_map_R, subframe_map, MAP = self.make_map_frame(1)
             self.subframe_map_list[1] = subframe_map
             self.MAP_list[1] = MAP
@@ -324,14 +325,13 @@ class SD_UI(tk.Tk):
         
         # create a pulldown menu for switching context areas, and add it to the menu bar
         context_menu = tk.Menu(menubar, tearoff=0)
-        context_menu.add_command(label=self.translate("Rio de Janeiro"), command=lambda: self.switch_context('Rio de Janeiro'))
         context_menu.add_command(label=self.translate("Chile"), command=lambda: self.switch_context('Chile'))
-        context_menu.add_command(label=self.translate("Santiago"), command=lambda: self.switch_context('Santiago'))
         context_menu.add_command(label=self.translate("Indonesia"), command=lambda: self.switch_context('Indonesia'))
-        context_menu.add_command(label=self.translate("Querétaro"), command=lambda: self.switch_context('Querétaro'))
         context_menu.add_command(label=self.translate("Luanda"), command=lambda: self.switch_context('Luanda'))
+        context_menu.add_command(label=self.translate("Querétaro"), command=lambda: self.switch_context('Querétaro'))
+        context_menu.add_command(label=self.translate("Rio de Janeiro"), command=lambda: self.switch_context('Rio de Janeiro'))
+        context_menu.add_command(label=self.translate("Santiago"), command=lambda: self.switch_context('Santiago'))
         menubar.add_cascade(label=self.translate("Locations"), menu=context_menu)
-        
         
         # create a pulldown menu for arrangment, and add it to the menu bar
         language_menu = tk.Menu(menubar, tearoff=0)
@@ -612,7 +612,6 @@ class SD_UI(tk.Tk):
         #Initialize Figure
         fig, ax1 = plt.subplots(figsize=(0.55*self.inch_width, 0.3*self.inch_height), dpi=0.75*self.dpi) # these settings work on Shea's smaller monitor
         
-        
         #Retrieve SD Object based on name
         SDob = self.SD_Map.retrieve_ob(graph_setting)
         
@@ -739,6 +738,17 @@ class SD_UI(tk.Tk):
 # %% Generate the Map Frame             
 # =============================================================================     
     def make_map_frame(self, col):
+        """GENERATE A FRAME WITH A MAP AND ASSOCIATED DROPDOWN MENUS
+        
+        Args:
+            col: index of the column that the map will appear in
+    
+        Returns:
+            frame_map: parent frame for the map and associated controls
+            subframe_map: frame for holding the map itself
+            MAP: Map object
+        """
+        
         frame_map = tk.Frame(self, #width=500, height=400,
                              # borderwidth=1, relief='groove',
                              bg=self.default_background)
@@ -767,20 +777,11 @@ class SD_UI(tk.Tk):
         #Check if this is a temporal dataset
         testfield = self.fieldnamelookup(color_range, self.shp_fields)
         self.map_temporalflag[col] = testfield.temporal_flag
-        # print(testfield.temporal_flag)
         if testfield.temporal_flag:
-            # print(type(testfield.temporal_flag))
-            #Make Zoom Label, Entry, and Button
-            # zoomlabel = tk.Label(frame_layer, text='Zoom', font=('Arial',18))
-            # zoomlabel.grid(column=4, row=0, ipadx=gridpadding)
-            # print('make map slider')
             color_range = self.make_map_slider(frame_map, col, color_range)
 
-        # print(color_range)
-
-        #Check for specified visualization parameters
+        #Check for specified map color visualization parameters
         vis_params = testfield.vis_params
-        
         
         #Make Background Image Dropdown Menu
         image_label = tk.Label(frame_map, text=self.translate('Image') +': ',
@@ -797,15 +798,18 @@ class SD_UI(tk.Tk):
                                           output_language='english')
         image_path = self.image_dict[image_title]
         
-        #check for specified visualization parameters
-        testimg = self.imagenamelookup(image_title, self.image_filepath)
-        img_params = testimg.vis_params
-        if testimg.temporal_flag:
-            dateindex = self.make_image_slider(frame_map, col, image_title)
-            img_params.append(dateindex)
+        #check for specified image visualization parameters
+        if image_title == 'None':
+           img_params = [[],[],[],[],[]]
         else:
-            img_params.append([])
-        
+            testimg = self.imagenamelookup(image_title, self.image_filepath)
+            img_params = testimg.vis_params
+            if testimg.temporal_flag:
+                dateindex = self.make_image_slider(frame_map, col, image_title)
+                img_params.append(dateindex)
+            else:
+                img_params.append([])
+            
         #Create subframe to house the map
         subframe_map = tk.Frame(frame_map,
                                 bg=self.default_background)
@@ -827,10 +831,12 @@ class SD_UI(tk.Tk):
         return frame_map, subframe_map, MAP
     
     def make_fill_list (self, root, shp, col):    
-        """CREATE UOA FILL COLOR TOGGLE
+        """CREATE MAP FILL COLOR TOGGLE
     
         Args:
             root: tk frame for the dropdown to to be situated in.
+            shp: shapefile to pull geographic data from
+            col: index of the column that the map will appear in 
                
         Returns:
             color_optionlist: the dropdown list, tk Widget
@@ -877,6 +883,7 @@ class SD_UI(tk.Tk):
     
         Args:
             root: tk frame for the dropdown to to be situated in.
+            col: index of the column that the map will appear in
                
         Returns:
             image_optionlist: the dropdown list, tk Widget
@@ -913,7 +920,15 @@ class SD_UI(tk.Tk):
     
     class fieldnamelookup:
         """FIELDNAMELOOKUP CLASS PULLS RELEVANT INFORMATION FROM A CSV FOR 
-        A SPECIFIED FIELDNAME AND STORES IT AS A STRUCTURE"""
+        A SPECIFIED FIELDNAME AND STORES IT AS A STRUCTURE
+        
+        Args:
+            fieldname: name of the shapefile record to search for
+            shp_fields: filepath of the directory csv
+               
+        Returns:
+            fieldnamelookup: the fieldnamelookup object
+            """
     
         def __init__(self, fieldname, shp_fields, **kwargs):
             
@@ -939,8 +954,14 @@ class SD_UI(tk.Tk):
                        self.temporal_flag = int(row['Temporal'])
    
     class imagenamelookup:
-        """FIELDNAMELOOKUP CLASS PULLS RELEVANT INFORMATION FROM A CSV FOR 
-        A SPECIFIED FIELDNAME AND STORES IT AS A STRUCTURE"""
+        """IMAGENAMELOOKUP CLASS PULLS RELEVANT INFORMATION FROM A CSV FOR 
+        A SPECIFIED IMAGE AND STORES IT AS A STRUCTURE
+        Args:
+            fieldname: name of the image to search for
+            image_filepath: filepath of the directory csv
+               
+        Returns:
+            imagenamelookup: the imagenamelookup object"""
     
         def __init__(self, fieldname, image_filepath, **kwargs):
             
@@ -950,7 +971,7 @@ class SD_UI(tk.Tk):
                for row in csvread:
                    if row['name'] == fieldname:
                        self.fieldname = fieldname
-                       self.vis_params = [row['VisMin'], row['VisMax'], row['VisColor']]
+                       self.vis_params = [row['VisMin'], row['VisMax'], row['VisColor'], row['VisBrightness']]
                        self.filepath = row['filepath']
                        temporal_flag = row['Temporal']
                        if temporal_flag:
@@ -964,6 +985,19 @@ class SD_UI(tk.Tk):
                        self.times = times
     
     def mapslide(self, col, **kwargs):
+        """UPDATE MAP BASED ON MAP AND IMAGE SLIDER VALUES
+    
+        Args:
+            col: index of the column that the map will appear in
+            factor: the current setting of the map slider (optional)
+            img_factor: the current setting of the image slider (optional)
+               
+        Returns:
+          
+        """
+        
+        #If the map slider was used, it will input the new factor
+        #factor needs to be rounded to closest available image
         if 'factor' in kwargs:
                 factor = kwargs.pop('factor')
                 newfactor = min(self.datenumlist[col], key=lambda x:abs(x-float(factor)))
@@ -973,40 +1007,59 @@ class SD_UI(tk.Tk):
         else:
             newfactor = 0
             
+        #If the image slider was used, it will input the new img_factor
+        #img_factor needs to be orunded to closest avaialable image
         if 'img_factor' in kwargs:
                 img_factor = kwargs.pop('img_factor')
                 img_newfactor = min(self.img_datenumlist[col], key=lambda x:abs(x-float(img_factor)))
-                # self.imgslider_list[col].set(img_newfactor)
+                self.imgslider_list[col].set(img_newfactor)
         elif self.imgslider_list[col]:
             img_newfactor = self.imgslider_list[col].get()
         else:
             img_newfactor = 0
             
-            
+        #Check if the current map is temporal and update accordingly
         if self.mapslider_list[col]:
             dateindex = self.datenumlist[col].index(newfactor)
             datefield = self.datefieldlist[col][dateindex]
             self.date_setting_list[col] = datefield
             
+        #Check if the current image is temporal and update accordingly
         if self.imgslider_list[col]:
             img_dateindex = self.img_datenumlist[col].index(img_newfactor)
             self.img_date_setting_list[col] = img_dateindex
         
+        #Update map and image
         self.replace_map_image(self.subframe_map_list[col],col, slideval=newfactor, img_slideval=img_newfactor)
         
         return
     
     
     def make_map_slider(self,root, col,color_range, **kwargs):
+        """GENERATE A TKINTER SCALE OBJECT TO CONTROL TEMPORAL MAP FILLS
+    
+        Args:
+            root: tk frame for the scale object to to be situated in.
+            col: index of the column that the map will appear in
+            color_range: name of the shapefile field to use for coloring the map
+            slideval: the setting of the scale (optional), defaults ot the maximum allowable value
+               
+        Returns:
+            color_range: the full shapefile field to use for coloring hte map
+        """
+        
+        #Identify all the temporal options for the specified fill setting
         shpfieldslist = [item[0] for item in self.shps[0].fields]
         self.datefieldlist[col] = [item for item in shpfieldslist if item.startswith(color_range)]
         datestrlist = [item[-6:] for item in self.datefieldlist[col]]
         self.datenumlist[col] = [int(item) for item in datestrlist]
+        
+        #Set bounds of scale
         datemax = max(self.datenumlist[col])
         datemin = min(self.datenumlist[col])
         self.map_temporalflag[col] = 1
         
-        
+        #Generate the scale
         self.mapslider_list[col] = tk.Scale(root, 
                                              from_=datemin, to=datemax, 
                                              orient='horizontal',
@@ -1014,17 +1067,20 @@ class SD_UI(tk.Tk):
                                              length = self.screenwidth*0.25
                                              )
         
+        #If a slideval was provided, set the scale to that value
         if 'slideval' in kwargs:
             slideval = kwargs.pop('slideval')
         else:
             slideval = datemax
         if not slideval:
             slideval = datemax
-            
         self.mapslider_list[col].set(slideval)
+        
+        #Bind controls to scale and plae on grid
         self.mapslider_list[col].bind("<ButtonRelease-1>",  lambda e: self.mapslide(col, factor=self.mapslider_list[col].get()))
         self.mapslider_list[col].grid(column=0, row=2, columnspan=4)
         
+        #Store the field setting to be used for generating the map
         dateindex = self.datenumlist[col].index(slideval)
         datefield = self.datefieldlist[col][dateindex]
         self.date_setting_list[col] = datefield
@@ -1033,13 +1089,26 @@ class SD_UI(tk.Tk):
         return color_range
                 
     def make_image_slider(self,root, col, image_lookup, **kwargs):
-       
+        """GENERATE A TKINTER SCALE OBJECT TO CONTROL TEMPORAL IMAGES
+    
+        Args:
+            root: tk frame for the scale object to to be situated in.
+            col: index of the column that the map will appear in
+            image_lookup: imagenamelookup object for the specified image
+            img_slideval: the setting of the scale (optional), defaults ot the maximum allowable value
+               
+        Returns:
+            dateindex: the band of the image to be used for plotting the image
+        """
+        
+        #Identify the different band/date options for the image
         datelist = image_lookup.times
         self.img_datenumlist[col] = datelist
         datemax = max(datelist)
         datemin = min(datelist)
         self.img_temporalflag[col] = 1
         
+        #Generate the scale object
         self.imgslider_list[col] = tk.Scale(root, 
                                              from_=datemin, to=datemax, 
                                              orient='horizontal',
@@ -1047,17 +1116,20 @@ class SD_UI(tk.Tk):
                                              length = self.screenwidth*0.25
                                              )
         
+        #if a scale setting is provided, set the scale to that value
         if 'img_slideval' in kwargs:
             img_slideval = kwargs.pop('img_slideval')
         else:
             img_slideval = datemax
         if not img_slideval:
             img_slideval = datemax
-            
         self.imgslider_list[col].set(img_slideval)
+        
+        #Bind controls to the scale and place it on the grid
         self.imgslider_list[col].bind("<ButtonRelease-1>",  lambda e: self.mapslide(col, img_factor=self.imgslider_list[col].get()))
         self.imgslider_list[col].grid(column=0, row=3, columnspan=4)
         
+        #Store the band setting to be used for generating the image
         dateindex = datelist.index(img_slideval)
         self.img_date_setting_list[col] = dateindex
         
@@ -1077,7 +1149,11 @@ class SD_UI(tk.Tk):
             N/A
         """
         
-        #Pull settings into more usable formats
+        #Destroy the existing mapslider if present
+        if self.mapslider_list[col]:
+            self.mapslider_list[col].destroy()
+        
+        #Pull the color fill settings and format them
         fill_color_title = self.translate(self.color_setting_name_list[col].get(),
                                           input_language=self.language,
                                           output_language='english')
@@ -1092,11 +1168,11 @@ class SD_UI(tk.Tk):
             fill_color = [self.color_field_modes[self.color_longname_modes_inverted[fill_color_title]]]
             fill_color_title_input = fill_color_title
             
-        if self.mapslider_list[col]:
-            self.mapslider_list[col].destroy()
-        
         if fill_color:
             testfield = self.fieldnamelookup(fill_color[0], self.shp_fields)
+            vis_params = testfield.vis_params
+            
+            #Generate a new mapslider if the field is temporal
             if testfield.temporal_flag:
                 self.map_temporalflag[col] = testfield.temporal_flag
                 if 'slideval' in kwargs:
@@ -1110,25 +1186,21 @@ class SD_UI(tk.Tk):
                 self.datenumlist[col] = []
                 self.datefieldlist[col] = []
                 self.map_temporalflag[col] = 0
- 
+        else:
+            vis_params = [[],[],[]]
             
+        #Destroy the existing imgslider if present
+        if self.imgslider_list[col]:
+            self.imgslider_list[col].destroy()
+ 
+        #Pull the image visualization settings and format them
         image_title = self.translate(self.image_setting_name_list[col].get(),
                                           input_language=self.language,
                                           output_language='english')
         image_path = self.image_dict[image_title]
         
-        #Check for specified visualization parameters
-        if fill_color:
-            vis_params = testfield.vis_params
-        else:
-            vis_params = [[],[],[]]
-    
-        if self.imgslider_list[col]:
-            self.imgslider_list[col].destroy()
-        
-        #check for specified visualization parameters
         if image_title == 'None':
-            img_params = [[],[],[], []]
+            img_params = [[],[],[], [], []]
             self.imgslider_list[col] = [] 
             self.img_temporalflag[col] = 0 
             self.img_datenumlist[col] = [] 
@@ -1136,6 +1208,8 @@ class SD_UI(tk.Tk):
         else:
             testimg = self.imagenamelookup(image_title, self.image_filepath)
             img_params = testimg.vis_params
+            
+            #Generate a new imgslider if the image is temporal
             if testimg.temporal_flag:
                 self.img_temporalflag[col] = testimg.temporal_flag
                 if 'img_slideval' in kwargs:
@@ -1161,6 +1235,7 @@ class SD_UI(tk.Tk):
         for item in griditems:
             item.destroy()
             
+        #Generate the new map
         self.MAP_list[col] = MapWindow.Map(mapframe,
                             self.shps,
                             background_image = image_path, 
@@ -1171,7 +1246,6 @@ class SD_UI(tk.Tk):
                             lat_lon_zoom = self.map_loc,
                             null_zeros=1,
                             window_dimensions = [self.screenwidth,self.screenheight])
-                
         self.MAP_list[col].configure(bg='white')
 
 # =============================================================================
@@ -1203,13 +1277,14 @@ class SD_UI(tk.Tk):
                                          bg=self.default_background)
         self.time_value_label.grid(column=1, row=0, sticky='W')
         
+        #set width of the control dropdowns
         boxwidth = 30
         
+        #Generate each of the policy control dropdowns
         index = 0 
         self.policy_option_vars = dict()
         self.option_menus = []
         for policy in self.PolicyDicts.keys():
-            
             option1_label = tk.Label(control_frame, text=self.translate(policy)+': ',
                                      bg=self.default_background)
             option1_label.grid(column=0, row=index+1)
@@ -1233,7 +1308,6 @@ class SD_UI(tk.Tk):
             
             index+=1
         
-      
         #Generate the Next Week simulation button
         run_button = tk.Button(control_frame, text=self.translate('Next Week'), 
                                command = lambda: self.increment_time(),

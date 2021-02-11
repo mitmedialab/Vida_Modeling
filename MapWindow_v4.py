@@ -12,7 +12,7 @@ from pyproj import _datadir, datadir
 import shapefile
 import shapely.geometry
 import PIL as pil
-from PIL import ImageTk, Image, ImageDraw
+from PIL import ImageTk, Image, ImageDraw, ImageEnhance
 from PIL import _tkinter_finder
 from matplotlib import cm
 import matplotlib.colors as colors
@@ -86,18 +86,21 @@ class Map(tk.Canvas):
         self.polyimages = []
         self.shapefiles = shapefiles
 
-
+        #Identify any image visualization parameters
         if 'image_params' in kwargs:
             image_params = kwargs.pop('image_params')
             self.image_min = image_params[0]
             self.image_max = image_params[1]
             self.image_choice = image_params[2]
+            self.image_brightness = image_params[3]
             if self.image_min:
                 self.image_min = float(self.image_min)
             if self.image_max:
                 self.image_max = float(self.image_max)
-            if image_params[3]:
-                self.image_band_choice = image_params[3]
+            if self.image_brightness:
+                self.image_brightness = float(self.image_brightness)
+            if image_params[4]:
+                self.image_band_choice = image_params[4]
                 self.image_temporal_flag = 1
             else:
                 self.image_band_choice = 0
@@ -106,6 +109,7 @@ class Map(tk.Canvas):
             self.image_min = []
             self.image_max = []
             self.image_choice = []
+            self.image_brightness = []
             
         #Add background image on map (if selected)
         if 'background_image' in kwargs:
@@ -141,9 +145,6 @@ class Map(tk.Canvas):
             self.color_min = []
             self.color_max = []
             self.color_choice = []
-            
-
-            
             
         #Identify if zeros should be plotted or considered invalid data
         if 'null_zeros' in kwargs:
@@ -303,7 +304,7 @@ class Map(tk.Canvas):
                     
                 loaded_image = pil.Image.fromarray(image_array8)
                 
-            else:
+            else: #image is temporal and a single band should be selected
                 image_array = image_array[self.image_band_choice]
                 display_min = image_array.min()
                 display_max = image_array.max()
@@ -313,6 +314,8 @@ class Map(tk.Canvas):
                     image_array8 = np.array(lut_display(image_array, display_min, display_max))
                 
                 else:
+                    
+                    #Clip image to specified bounds
                     if self.image_min:
                         image_min = self.image_min
                     else:
@@ -321,11 +324,10 @@ class Map(tk.Canvas):
                         image_max = self.image_max
                     else:
                         image_max = np.max(image_array)
-                    
-
                     image_array8 = display(image_array, image_min, image_max)
                 
-                if self.image_choice:
+                #apply colormap if specified
+                if self.image_choice: 
                     cm = plt.get_cmap(self.image_choice)
                     color_array = cm(image_array8)
                     loaded_image = pil.Image.fromarray((color_array[:, :, :3] * 255).astype(np.uint8))
@@ -345,7 +347,7 @@ class Map(tk.Canvas):
             else:
                 image_array8 = image_array
             
-            
+                #clip image to specified bounds
                 if self.image_min:
                     image_min = self.image_min
                 else:
@@ -354,9 +356,9 @@ class Map(tk.Canvas):
                     image_max = self.image_max
                 else:
                     image_max = np.max(image_array)
-                    
                 image_array8 = display(image_array, image_min, image_max)
-                    
+            
+            #apply colormap if specified
             if self.image_choice:
                 cm = plt.get_cmap(self.image_choice)
                 color_array = cm(image_array8)
@@ -364,6 +366,12 @@ class Map(tk.Canvas):
             else:
                 loaded_image = pil.Image.fromarray(image_array8)
 
+        
+        #Brighten image if specified
+        if self.image_brightness:
+            enhancer = pil.ImageEnhance.Brightness(loaded_image)
+            loaded_image = enhancer.enhance(self.image_brightness)
+            
         #Resize Image
         loaded_image_resized = loaded_image.resize((int(new_width), int(new_height)), Image.ANTIALIAS)
         
