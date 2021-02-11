@@ -312,18 +312,19 @@ class Map(tk.Canvas):
                 if image_array.dtype == np.dtype('uint16'):
                     image_array8 = np.array(lut_display(image_array, display_min, display_max))
                 
-                #For single band images, can be left as float64 or uint8
                 else:
-                    image_array8 = image_array
-                    
-                
-                if self.image_min:
-                    image_array8[image_array8 < self.image_min] = self.image_min
-                    
-                if self.image_max:
-                    image_array8[image_array8 > self.image_max] = self.image_max
+                    if self.image_min:
+                        image_min = self.image_min
+                    else:
+                        image_min = np.min(image_array)
+                    if self.image_max:
+                        image_max = self.image_max
+                    else:
+                        image_max = np.max(image_array)
                     
 
+                    image_array8 = display(image_array, image_min, image_max)
+                
                 if self.image_choice:
                     cm = plt.get_cmap(self.image_choice)
                     color_array = cm(image_array8)
@@ -345,11 +346,16 @@ class Map(tk.Canvas):
                 image_array8 = image_array
             
             
-            if self.image_min:
-                image_array8[image_array8 < self.image_min] = self.image_min
+                if self.image_min:
+                    image_min = self.image_min
+                else:
+                    image_min = np.min(image_array)
+                if self.image_max:
+                    image_max = self.image_max
+                else:
+                    image_max = np.max(image_array)
                     
-            if self.image_max:
-                image_array8[image_array8 > self.image_max] = self.image_max
+                image_array8 = display(image_array, image_min, image_max)
                     
             if self.image_choice:
                 cm = plt.get_cmap(self.image_choice)
