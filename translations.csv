@@ -65,6 +65,10 @@ unitless,sin unidad,sem unidade
 ventilator,ventilador,ventilator
 ventilator/day,ventilador por día,ventilador por dia
 µg / m3,µg / m3,µg / m3
+% Relative to Previous Year,% relativo al año anterior,% relação ao ano anterior
+Rp Million,Millones de Rp,Rp milhões
+ships,Barcos,Navios
+radiance,resplandor,radiação
 ,,
 POLICY OPTIONS & HISTORY,POLICY OPTIONS,POLICY OPTIONS
 Additional Closures,Cierres adicionales,Fechamentos Adicionais
@@ -237,6 +241,14 @@ O3,O3,O3
 PM10,MP10,PM10
 PM2.5,MP2.5,PM2.5
 SO2,SO2,SO2
+Nighttime Radiance in Luanda City,Resplandor nocturno en la ciudad de Luanda,Radiance noturno na cidade de Luanda
+Nighttime Radiance in ZEE,Resplandor nocturno en ZEE,Radiance noturno em ZEE
+SO2 Percent Change in Huambo City,Cambio porcentual de SO2 en la ciudad de Huambo,Mudança percentual de SO2 na cidade de Huambo
+SO2 Percent Change in Luanda City,Cambio porcentual de SO2 en la ciudad de Luanda,Variação percentual de SO2 na cidade de Luanda
+SO2 Percent Change in ZEE,Cambio porcentual de SO2 en ZEE,Mudança percentual de SO2 no ZEE
+NO2 Percent Change in Huambo City,Cambio porcentual de NO2 en la ciudad de Huambo,Variação percentual de NO2 na cidade de Huambo
+NO2 Percent Change in Luanda City,Cambio porcentual de NO2 en la ciudad de Luanda,Variação percentual de NO2 na cidade de Luanda
+NO2 Percent Change in ZEE,Cambio porcentual de NO2 en ZEE,Mudança percentual de NO2 no ZEE
 ,,
 GRAPH: ECONOMY CATEGORY,GRAPH: ECONOMY CATEGORY,GRAPH: ECONOMY CATEGORY
 Accommodation and Food Service GDP,PIB alojamiento y servicio de alimentos,PIB de hospedagem e alimentação
@@ -290,8 +302,6 @@ Oil and Gas Imports,Importaciones de petróleo y gas,Importações de petróleo e gá
 Retail and Vehicle Repair GDP,PIB minorista y de reparación de vehículos,PIB de varejo e reparação de veículos
 Rio de Janeiro Unemployment Rate,Tasa de desempleo de Río de Janeiro,Taxa de desemprego do Rio de Janeiro
 Rio de Janeiro Unemployment Rate of Change,Tasa de variación del desempleo en Río de Janeiro,Taxa de variação do desemprego no Rio de Janeiro
-Rp Million,Millones de Rp,Rp milhões
-ships,Barcos,Navios
 Ships in Lobito Bay,Barcos en Bahía de Lobito,Navios na Baía do Lobito
 Ships in Luanda Bay,Barcos en la bahía de Luanda,Navios na Baía de Luanda
 Ships in Offshore Area,Barcos en el área costa afuera,Navios na área offshore

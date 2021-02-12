@@ -2630,8 +2630,82 @@ class SD_System:
                                         minval = lambda: 0,
                                         category = 'Economy')
               
-          
-          
+            
+            
+            """ 9 - ENVIRONMENT """
+            
+            self.LC_NightRad = SD_object('Nighttime Radiance in Luanda City',
+                                        units = 'radiance',
+                                        init_value = lambda: self.historical_data('Luanda City Nighttime Radiance', location, filename),
+                                        obtype = 'stock',
+                                        func = lambda tstep, tind: self.LC_NightRad.value(),
+                                        maxval = lambda: 1000,
+                                        minval = lambda: 0,
+                                        category = 'Environment')
+            
+            self.ZEE_NightRad = SD_object('Nighttime Radiance in ZEE',
+                                        units = 'radiance',
+                                        init_value = lambda: self.historical_data('ZEE Nighttime Radiance', location, filename),
+                                        obtype = 'stock',
+                                        func = lambda tstep, tind: self.ZEE_NightRad.value(),
+                                        maxval = lambda: 1000,
+                                        minval = lambda: 0,
+                                        category = 'Environment')
+            
+            self.SO2_PerChange_Huambo = SD_object('SO2 Percent Change in Huambo City',
+                                        units = '% Change Relative to Previous Year',
+                                        init_value = lambda: self.historical_data('SO2_PercentChange_HuamboCity', location, filename),
+                                        obtype = 'stock',
+                                        func = lambda tstep, tind: self.SO2_PerChange_Huambo.value(),
+                                        maxval = lambda: 100,
+                                        minval = lambda: -100,
+                                        category = 'Environment')
+            
+            self.SO2_PerChange_Luanda = SD_object('SO2 Percent Change in Luanda City',
+                                        units = '% Change Relative to Previous Year',
+                                        init_value = lambda: self.historical_data('SO2_PercentChange_LuandaCity', location, filename),
+                                        obtype = 'stock',
+                                        func = lambda tstep, tind: self.SO2_PercentChange_LuandaCity.value(),
+                                        maxval = lambda: 100,
+                                        minval = lambda: -100,
+                                        category = 'Environment')
+            
+            self.SO2_PerChange_ZEE = SD_object('SO2 Percent Change in ZEE',
+                                        units = '% Change Relative to Previous Year',
+                                        init_value = lambda: self.historical_data('SO2_PercentChange_ZEE', location, filename),
+                                        obtype = 'stock',
+                                        func = lambda tstep, tind: self.SO2_PerChange_ZEE.value(),
+                                        maxval = lambda: 100,
+                                        minval = lambda: -100,
+                                        category = 'Environment')
+            
+            self.NO2_PerChange_Huambo = SD_object('NO2 Percent Change in Huambo City',
+                                        units = '% Change Relative to Previous Year',
+                                        init_value = lambda: self.historical_data('NO2_PercentChange_HuamboCity', location, filename),
+                                        obtype = 'stock',
+                                        func = lambda tstep, tind: self.NO2_PerChange_Huambo.value(),
+                                        maxval = lambda: 100,
+                                        minval = lambda: -100,
+                                        category = 'Environment')
+            
+            self.NO2_PerChange_Luanda = SD_object('NO2 Percent Change in Luanda City',
+                                        units = '% Change Relative to Previous Year',
+                                        init_value = lambda: self.historical_data('NO2_PercentChange_LuandaCity', location, filename),
+                                        obtype = 'stock',
+                                        func = lambda tstep, tind: self.NO2_PercentChange_LuandaCity.value(),
+                                        maxval = lambda: 100,
+                                        minval = lambda: -100,
+                                        category = 'Environment')
+            
+            self.NO2_PerChange_ZEE = SD_object('NO2 Percent Change in ZEE',
+                                        units = '% Change Relative to Previous Year',
+                                        init_value = lambda: self.historical_data('NO2_PercentChange_ZEE', location, filename),
+                                        obtype = 'stock',
+                                        func = lambda tstep, tind: self.NO2_PerChange_ZEE.value(),
+                                        maxval = lambda: 100,
+                                        minval = lambda: -100,
+                                        category = 'Environment')
+            
           
 
     # =============================================================================
