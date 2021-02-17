@@ -1979,16 +1979,6 @@ class SD_System:
                                         func = lambda tstep, tind: self.ClosureP.value(),
                                         datatype = 'stringdict',
                                         category = 'Policies & Actions')
-              
-          
-            self.SocialDisP = SD_object('Social Distancing Policy',
-                                        units = 'unitless',
-                                        #init_value = lambda: self.historical_data('Social Distancing Policy', location, filename),
-                                        init_value = 1,
-                                        obtype = 'variable',
-                                        func = lambda tstep, tind: self.SocialDisP.value(),
-                                        datatype = 'stringdict',
-                                        category = 'Policies & Actions')
           
           
             """ 2 - HEALTH PARAMETERS """
@@ -2001,9 +1991,9 @@ class SD_System:
                             )
             self.ContactR = SD_object('Contact Rate',
                                     units = 'people/(day*person)',
-                                    init_value = self.ClosureP.value() * self.SocialDisP.value() * self.BaseContactR.value(),
+                                    init_value = self.ClosureP.value() * self.BaseContactR.value(),
                                     obtype = 'variable',
-                                    func = lambda tstep, tind: self.ClosureP.value() * self.SocialDisP.value() * self.BaseContactR.value(),
+                                    func = lambda tstep, tind: self.ClosureP.value() * self.BaseContactR.value(),
                                     category = 'Health Parameters'
                                     )
             
@@ -2987,18 +2977,12 @@ class SD_System:
             
         elif location == 'Querétaro':
             PolicyDictsOut['Closure Policy'] = {'No Closures' : 1,
-                                                'Fase 6' : 0.9,
-                                                'Fase 5': 0.8,
-                                                'Fase 4' : 0.7,
-                                                'Fase 3B': 0.6,
-                                                'Fase 3A': 0.5,
-                                                'Fase 2': 0.4,
-                                                'Fase 1': 0.3,
-                                                'Lockdown': 0.2}
-
-            PolicyDictsOut['Social Distancing Policy'] = {'No Distancing' : 1,
-                                                        'Voluntary Social Distancing' : 0.6,
-                                                        'Mandatory Social Distancing' : 0.1} 
+                                                'Initial Moderate Closures' : 0.7,
+                                                'Scenario A: Remission': 0.6,
+                                                'Scenario B: Prevention': 0.5,
+                                                'Scenario C: Containment': 0.4,
+                                                'Starting to Re-Open': 0.3,
+                                                'Extraordinary Measures': 0.2} 
 
         elif location == 'Luanda':
             PolicyDictsOut['Closure Policy'] = {'Pre-Emergency' : 1,
