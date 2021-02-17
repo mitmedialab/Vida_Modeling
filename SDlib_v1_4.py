@@ -673,7 +673,7 @@ class SD_System:
                                 minval = lambda: -100, 
                                 category = 'Mobility')
             
-            self.loc_transit_mob = SD_object('Transit Stations Mobility',
+            self.loc_transit_mob = SD_object('Transit Mobility',
                                 units = 'Mobility Index',
                                 init_value = lambda: self.historical_data('transit_stations_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
                                 obtype = 'stock',
@@ -682,7 +682,7 @@ class SD_System:
                                 minval = lambda: -100, 
                                 category = 'Mobility')
             
-            self.loc_workplaces_mob = SD_object('Workplaces Mobility',
+            self.loc_workplaces_mob = SD_object('Workplace Mobility',
                                 units = 'Mobility Index',
                                 init_value = lambda: self.historical_data('workplaces_mob', location, filename), #this historical data only goes through late July, so post-late July is a placeholder value
                                 obtype = 'stock',
