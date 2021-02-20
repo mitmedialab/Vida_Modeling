@@ -965,6 +965,17 @@ class SD_UI(tk.Tk):
     
         def __init__(self, fieldname, image_filepath, **kwargs):
             
+            self.fieldname = []
+            self.vis_params = []
+            self.filepath = []
+            self.temporal_flag = 0
+            self.times = []
+            self.lat = []
+            self.lon = []
+            self.zoom = []
+            
+            
+            
             #Appropriately label Other field
             with open(image_filepath, encoding='ISO-8859-15') as csv_file:
                csvread = csv.DictReader(csv_file)
@@ -976,13 +987,21 @@ class SD_UI(tk.Tk):
                        temporal_flag = row['Temporal']
                        if temporal_flag:
                            self.temporal_flag = int(temporal_flag)
-                       else:
-                           self.temporal_flag = 0
                        times = row['Times']
                        if times:
                            times = list(times.split(","))
                            times = [int(i) for i in times]
                        self.times = times
+                       lat = row ['Latitude']
+                       if lat:
+                           self.lat = float(lat)
+                       lon = row['Longitude']
+                       if lon:
+                           self.lon = float(lon)
+                       zoom = row['Zoom']
+                       if zoom:
+                           self.zoom = float(zoom)
+                       
     
     def mapslide(self, col, **kwargs):
         """UPDATE MAP BASED ON MAP AND IMAGE SLIDER VALUES
@@ -1205,9 +1224,24 @@ class SD_UI(tk.Tk):
             self.img_temporalflag[col] = 0 
             self.img_datenumlist[col] = [] 
             self.img_date_setting_list[col] = [] 
+            new_map_loc = self.map_loc
         else:
             testimg = self.imagenamelookup(image_title, self.image_filepath)
             img_params = testimg.vis_params
+            if testimg.lat:
+                lat = testimg.lat
+            else:
+                lat = self.map_loc[0]
+            if testimg.lon:
+                lon = testimg.lon
+            else:
+                lon = self.map_loc[1]
+            if testimg.zoom:
+                zoom = testimg.zoom
+            else:
+                zoom = self.map_loc[2]
+            
+            new_map_loc = [lat,lon,zoom]
             
             #Generate a new imgslider if the image is temporal
             if testimg.temporal_flag:
@@ -1243,7 +1277,7 @@ class SD_UI(tk.Tk):
                             color_title = fill_color_title_input,
                             color_params = vis_params,
                             image_params = img_params,
-                            lat_lon_zoom = self.map_loc,
+                            lat_lon_zoom = new_map_loc,
                             null_zeros=1,
                             window_dimensions = [self.screenwidth,self.screenheight])
         self.MAP_list[col].configure(bg='white')

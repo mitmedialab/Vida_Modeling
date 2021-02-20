@@ -1,4 +1,4 @@
-filepath,name,VisMin,VisMax,VisColor,VisBrightness,Temporal,Times
-./Data/Querétaro/Images/Landsat_Composite.tif,Visual Composite,,,,,,
-./Data/Querétaro/Images/DNB_meanAnomaly.tif,Nightlights Mean Anomaly,-0.3843,0.4624,,,,
-./Data/Querétaro/Images/DNB_Mosaic.tif,Nightlights,-2.6082,4.8628,,,,
+filepath,name,VisMin,VisMax,VisColor,VisBrightness,Temporal,Times,Latitude,Longitude,Zoom
+./Data/Querétaro/Images/Landsat_Composite.tif,Visual Composite,,,,,,,,,
+./Data/Querétaro/Images/DNB_meanAnomaly.tif,Nightlights Mean Anomaly,-0.3843,0.4624,,,,,,,
+./Data/Querétaro/Images/DNB_Mosaic.tif,Nightlights,-2.6082,4.8628,,,,,,,
