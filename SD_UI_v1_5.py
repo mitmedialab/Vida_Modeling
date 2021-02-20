@@ -148,9 +148,10 @@ class SD_UI(tk.Tk):
         self.dpi = self.screenwidth/self.inch_width
         
         #Set default font and font sizes
-        fontsize = int(round(0.016575085503472222 * self.screenheight))
-        self.option_add("*Font", "helvetica " + str(fontsize))
-        self.small_font = tk.font.Font(family="helvetica", size=int(round(fontsize/2)))
+        self.default_fontsize = int(round(0.016575085503472222 * self.screenheight))
+        self.default_font = tk.font.Font(family="Helveica", size=int(round(self.default_fontsize)))
+        self.option_add("*Font", self.default_font)
+        self.small_font = tk.font.Font(family="Helveica", size=int(round(self.default_fontsize/2)))
             
         #Label the SD_Map input for easy reference
         self.SD_Map = SDlib.SD_System(tuning_flag=self.tuning_flag,
@@ -199,6 +200,7 @@ class SD_UI(tk.Tk):
             self.graph_frame_R = self.make_graph_frame(self.default_graph1, self.default_graph2, 1) #left pair of graphs
         
         #Generate the policy action controls
+        self.option1_label_list = []
         self.control_frame = self.make_control_frame()
         
         #Generate the decision rules and their associated display
@@ -299,6 +301,34 @@ class SD_UI(tk.Tk):
             print('Unable to find phrase ', phrase, "in language ", out_lang)
             
         return output_phrase
+    
+    class DynamicLabel(tk.Label):
+        """DYNAMICLABEL CLASS IS AN ALTERED LABEL CLASS THAT RESIZES TEXT TO FIT 
+        IN SPECIFIED WIDTH
+        Args:
+            textwidth: the target size of the text, as measured by font.measure()
+            *args: the standard tk.Label arguments
+            """
+            
+        def __init__(self, textwidth, *args, **kwargs):
+            tk.Label.__init__(self, *args, **kwargs)
+    
+            # clone the font, so we can dynamically change
+            # it to fit the label width
+            base_font = tk.font.nametofont(self.cget("font"))
+            self.font = tkinter.font.Font()
+            self.font.configure(**base_font.configure())
+            self.configure(font=self.font)
+            
+            #retrieve and measure 
+            text = self.cget("text")
+            size = self.font.actual("size")
+            
+            # grow the font until the text is too big,
+            while size > 1 and self.font.measure(text) > textwidth:
+                size -= 1
+                self.font.configure(size=size)
+
 
 # =============================================================================
 # %% Generate the Top Menu             
@@ -1318,10 +1348,13 @@ class SD_UI(tk.Tk):
         index = 0 
         self.policy_option_vars = dict()
         self.option_menus = []
+        fontsizelist = []
         for policy in self.PolicyDicts.keys():
-            option1_label = tk.Label(control_frame, text=self.translate(policy)+': ',
-                                     bg=self.default_background)
+            option1_label = self.DynamicLabel(400, control_frame, text=self.translate(policy)+': ',
+                                              bg=self.default_background)
             option1_label.grid(column=0, row=index+1)
+            self.option1_label_list.append(option1_label)
+            fontsizelist.append(option1_label.font.actual("size"))
             option1_list = []
             for entry in list(self.PolicyDicts[policy].keys()):
                 option1_list.append(self.translate(entry))
@@ -1341,6 +1374,13 @@ class SD_UI(tk.Tk):
             self.option_menus[-1].grid(column=1, row=index+1, columnspan=2)
             
             index+=1
+            
+        #Resize the fontsize of all the labels to match that of the smallest
+        newsize = min(fontsizelist)
+        for policylabel in self.option1_label_list:
+            policylabel.font.configure(size=newsize)
+
+        
         
         #Generate the Next Week simulation button
         run_button = tk.Button(control_frame, text=self.translate('Next Week'), 
