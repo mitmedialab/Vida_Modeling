@@ -214,7 +214,9 @@ class SD_UI(tk.Tk):
         self.image_optionlist_list = [[],[]] #list that holds the image dropdown selection menus
         self.MAP_list = [[],[]] #list that holds the map objects
         self.mapslider_list = [[],[]] #list that holds the slider scale objects for temporal map shading
+        self.mapslider_label_list = [[],[]]
         self.imgslider_list = [[],[]] #list that holds the slider scale objects for temporal images
+        self.imgslider_label_list = [[],[]]
        
         #Initialize containers to hold the various map-related settings
         self.color_setting_name_list = [[],[]]  #list that holds the current longform name of the shapefile color fill setting
@@ -312,6 +314,33 @@ class SD_UI(tk.Tk):
             
         def __init__(self, textwidth, *args, **kwargs):
             tk.Label.__init__(self, *args, **kwargs)
+    
+            # clone the font, so we can dynamically change
+            # it to fit the label width
+            base_font = tk.font.nametofont(self.cget("font"))
+            self.font = tkinter.font.Font()
+            self.font.configure(**base_font.configure())
+            self.configure(font=self.font)
+            
+            #retrieve and measure 
+            text = self.cget("text")
+            size = self.font.actual("size")
+            
+            # grow the font until the text is too big,
+            while size > 1 and self.font.measure(text) > textwidth:
+                size -= 1
+                self.font.configure(size=size)
+                
+    class DynamicButton(tk.Button):
+        """DYNAMICBUTTON CLASS IS AN ALTERED BUTTON CLASS THAT RESIZES TEXT TO FIT 
+        IN SPECIFIED WIDTH
+        Args:
+            textwidth: the target size of the text, as measured by font.measure()
+            *args: the standard tk.Button arguments
+            """
+            
+        def __init__(self, textwidth, *args, **kwargs):
+            tk.Button.__init__(self, *args, **kwargs)
     
             # clone the font, so we can dynamically change
             # it to fit the label width
@@ -1125,9 +1154,16 @@ class SD_UI(tk.Tk):
             slideval = datemax
         self.mapslider_list[col].set(slideval)
         
+        
+        #Make label
+        mapslider_label = tk.Label(root, text=self.translate('Map')+': ',
+                                              bg=self.default_background)
+        mapslider_label.grid(column=0, row=2)
+        self.mapslider_label_list[col] = (mapslider_label)
+        
         #Bind controls to scale and plae on grid
         self.mapslider_list[col].bind("<ButtonRelease-1>",  lambda e: self.mapslide(col, factor=self.mapslider_list[col].get()))
-        self.mapslider_list[col].grid(column=0, row=2, columnspan=4)
+        self.mapslider_list[col].grid(column=1, row=2, columnspan=3)
         
         #Store the field setting to be used for generating the map
         dateindex = self.datenumlist[col].index(slideval)
@@ -1174,9 +1210,15 @@ class SD_UI(tk.Tk):
             img_slideval = datemax
         self.imgslider_list[col].set(img_slideval)
         
+        #Make label
+        imgslider_label = tk.Label(root, text=self.translate('Img')+': ',
+                                              bg=self.default_background)
+        imgslider_label.grid(column=0, row=3)
+        self.imgslider_label_list[col] = (imgslider_label)
+        
         #Bind controls to the scale and place it on the grid
         self.imgslider_list[col].bind("<ButtonRelease-1>",  lambda e: self.mapslide(col, img_factor=self.imgslider_list[col].get()))
-        self.imgslider_list[col].grid(column=0, row=3, columnspan=4)
+        self.imgslider_list[col].grid(column=1, row=3, columnspan=3)
         
         #Store the band setting to be used for generating the image
         dateindex = datelist.index(img_slideval)
@@ -1201,6 +1243,7 @@ class SD_UI(tk.Tk):
         #Destroy the existing mapslider if present
         if self.mapslider_list[col]:
             self.mapslider_list[col].destroy()
+            self.mapslider_label_list[col].destroy()
         
         #Pull the color fill settings and format them
         fill_color_title = self.translate(self.color_setting_name_list[col].get(),
@@ -1241,6 +1284,7 @@ class SD_UI(tk.Tk):
         #Destroy the existing imgslider if present
         if self.imgslider_list[col]:
             self.imgslider_list[col].destroy()
+            self.imgslider_label_list[col].destroy()
  
         #Pull the image visualization settings and format them
         image_title = self.translate(self.image_setting_name_list[col].get(),
@@ -1381,27 +1425,37 @@ class SD_UI(tk.Tk):
             policylabel.font.configure(size=newsize)
 
         
+        button_font_sizes = []
         
         #Generate the Next Week simulation button
-        run_button = tk.Button(control_frame, text=self.translate('Next Week'), 
+        run_button = self.DynamicButton(300,control_frame, text=self.translate('Next Week'), 
                                command = lambda: self.increment_time(),
                                bg=self.button_color,
                                highlightbackground=self.highlight_color)
         run_button.grid(column=0, row=8, columnspan=1, sticky='E')
+        button_font_sizes.append(run_button.font.actual("size"))
         
         #Generate the Run Autonomously button
-        automatic_button = tk.Button(control_frame, text=self.translate('Run Autonomously'), 
+        automatic_button = self.DynamicButton(300,control_frame, text=self.translate('Run Autonomously'), 
                                command = lambda: self.automatic_window(),
                                bg=self.button_color,
                                highlightbackground=self.highlight_color)
         automatic_button.grid(column=1, row=8, columnspan=1)
+        button_font_sizes.append(automatic_button.font.actual("size"))
         
         #Generate the Clear Simulation Button
-        clear_button = tk.Button(control_frame, text = self.translate('Clear Simulation'),
+        clear_button = self.DynamicButton(300,control_frame, text = self.translate('Clear Simulation'),
                                  command = lambda: self.clear_simulation(),
                                  bg=self.button_color,
-                                 highlightbackground=self.highlight_color)
+                                 highlightbackground=self.highlight_color,)
         clear_button.grid(column=2, row=8, columnspan=2)
+        button_font_sizes.append(clear_button.font.actual("size"))
+        
+        #Resize all the button texts to match that of the smallest
+        new_button_font_size = min(button_font_sizes)
+        run_button.font.configure(size=new_button_font_size)
+        automatic_button.font.configure(size=new_button_font_size)
+        clear_button.font.configure(size=new_button_font_size)
         
         return control_frame
         
