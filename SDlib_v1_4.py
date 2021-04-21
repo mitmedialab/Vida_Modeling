@@ -1214,7 +1214,7 @@ class SD_System:
                                 func = lambda tstep, tind: self.Mob.value(ind=tind), #this function is a placeholder taken from Air passengers in Chile
                                 maxval = lambda: 100,   
                                 minval = lambda: -100, 
-                                category = 'Environment')
+                                category = 'Mobility')
             
             """ 8 - ECONOMIC """
         
@@ -2930,11 +2930,13 @@ class SD_System:
                                                         'Mandatory Social Distancing' : 0.1}
             
         elif location in ['Chile', 'Santiago']:
-            PolicyDictsOut['Closure Policy'] = {'Paso 5': 1,
-                            'Paso 4' : 0.7,
-                            'Paso 3': 0.5,
-                            'Paso 2': 0.4,
-                            'Paso 1': 0.2}
+            PolicyDictsOut['Closure Policy'] = {'No Closures' : 1,
+                            'Stage 5': 0.8,
+                            'Stage 4' : 0.7,
+                            'Stage 3': 0.5,
+                            'Stage 2': 0.4,
+                            'Stage 1': 0.2,
+                            'Initial Closures':0.1}
             PolicyDictsOut['Curfew Policy'] = {'No Curfew' : 1,
                                                 'Unenforced Curfew' : 0.6,
                                                 'Enforced Curfew' : 0.1}

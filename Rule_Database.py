@@ -45,24 +45,24 @@ class Conditional_Database:
         return output
     def Br_Rule2func(self, policy_input):
         output = 0
-        if self.SD_Map.mTotIPop.value() >= 100 and (policy_input['Closure Policy'] in ['No Closures', 'Fase 6', 'Fase 5', 'Fase 4', 'Fase 3B', 'Fase 3A']):
+        if self.SD_Map.mTotIPop.value() >= 100 and (policy_input['Closure Policy'] in ['No Closures', 'Conservative', 'Fase 6b', 'Fase 6a', 'Fase 5', 'Fase 4', 'Fase 3b', 'Fase 3a']):
             # print('Rule 2 Triggered')
             self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 1'] 
             output = 1
         return output
     def Br_Rule3func(self, policy_input):
         output = 0
-        if self.SD_Map.mInfectR.value() >= 100 and (policy_input['Closure Policy'] in ['No Closures', 'Fase 6', 'Fase 5', 'Fase 4', 'Fase 3B', 'Fase 3A', 'Fase 2', 'Fase 1' ]):
+        if self.SD_Map.mInfectR.value() >= 100 and (policy_input['Closure Policy'] in ['No Closures', 'Conservative', 'Fase 6b', 'Fase 6a', 'Fase 5', 'Fase 4', 'Fase 3b', 'Fase 3a', 'Fase 2', 'Fase 1' ]):
             # print('Rule 3 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Lockdown']
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Initial Closures']
             self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Mandatory Social Distancing'] 
             output = 1
         return output
     def Br_Rule4func(self,policy_input):
         output = 0
-        if self.SD_Map.mTotIPop.value() <= 500 and (policy_input['Closure Policy'] in ['Fase 2', 'Fase 1', 'Lockdown' ]):
+        if self.SD_Map.mTotIPop.value() <= 500 and (policy_input['Closure Policy'] in ['Fase 2', 'Fase 1', 'Initial Closures' ]):
             # print('Rule 4 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 3A']
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 3a']
             output = 1
         return output
     def Br_Rule5func(self, policy_input):
@@ -72,20 +72,20 @@ class Conditional_Database:
             self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Voluntary Social Distancing']   
             output = 1
         return output
-    def Br_Rule6func(self, policy_input):
-        output = 0
-        if self.SD_Map.HPop.value() > 2.5 * self.SD_Map.Vents.value():
-            # print('Rule 6 Triggered')
-            self.SD_Map.NewOVents.values[-1] = 5
-            output = 1
-        return output
-    def Br_Rule7func(self, policy_input):
-        output = 0
-        if self.SD_Map.HPop.value() > 7 * self.SD_Map.Vents.value():
-            # print('Rule 7 Triggered')
-            self.SD_Map.VWTP.values[-1] = 50000
-            output = 1
-        return output
+    # def Br_Rule6func(self, policy_input):
+    #     output = 0
+    #     if self.SD_Map.HPop.value() > 2.5 * self.SD_Map.Vents.value():
+    #         # print('Rule 6 Triggered')
+    #         self.SD_Map.NewOVents.values[-1] = 5
+    #         output = 1
+    #     return output
+    # def Br_Rule7func(self, policy_input):
+    #     output = 0
+    #     if self.SD_Map.HPop.value() > 7 * self.SD_Map.Vents.value():
+    #         # print('Rule 7 Triggered')
+    #         self.SD_Map.VWTP.values[-1] = 50000
+    #         output = 1
+    #     return output
     
 
     
@@ -264,32 +264,32 @@ class Conditional_Database:
     
     def Sa_Rule1func(self, policy_input):
         output = 0
-        if self.SD_Map.mIPop.value() >= 20 and policy_input['Closure Policy'] == 'Paso 5' and policy_input['Curfew Policy'] == 'No Curfew':
+        if self.SD_Map.mIPop.value() >= 20 and policy_input['Closure Policy'] == 'Stage 5' and policy_input['Curfew Policy'] == 'No Curfew':
             # print('Rule 1 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Paso 3']
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Stage 3']
             self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Curfew Policy']['Unenforced Curfew']
             output = 1
         return output
     def Sa_Rule2func(self, policy_input):
         output = 0
-        if self.SD_Map.mIPop.value() >= 100 and (policy_input['Closure Policy'] in ['Paso 5', 'Paso 4']):
+        if self.SD_Map.mIPop.value() >= 100 and (policy_input['Closure Policy'] in ['Stage 5', 'Stage 4']):
             # print('Rule 2 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Paso 3'] 
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Stage 3'] 
             output = 1
         return output
     def Sa_Rule3func(self, policy_input):
         output = 0
-        if self.SD_Map.mInfectR.value() >= 100 and (policy_input['Closure Policy'] in ['Paso 5', 'Paso 4', 'Paso 3', 'Paso 2']):
+        if self.SD_Map.mInfectR.value() >= 100 and (policy_input['Closure Policy'] in ['Stage 5', 'Stage 4', 'Stage 3', 'Stage 2']):
             # print('Rule 3 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Paso 1']
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Stage 1']
             self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Curfew Policy']['Enforced Curfew'] 
             output = 1
         return output
     def Sa_Rule4func(self,policy_input):
         output = 0
-        if self.SD_Map.mIPop.value() <= 500 and (policy_input['Closure Policy'] in ['Paso 2', 'Paso 1']):
+        if self.SD_Map.mIPop.value() <= 500 and (policy_input['Closure Policy'] in ['Stage 2', 'Stage 1']):
             # print('Rule 4 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Paso 3']
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Stage 3']
             output = 1
         return output
     def Sa_Rule5func(self, policy_input):
@@ -337,10 +337,10 @@ def make_rules(UI):
                              func = lambda policy_input: Conditionals.Br_Rule4func(policy_input)))
         Rules.append(SDlib.Rule('Relax Mandatory Social Distancing', 5, 
                              func = lambda policy_input: Conditionals.Br_Rule5func(policy_input)))
-        Rules.append(SDlib.Rule('Order More Ventilators', 6, 
-                             func = lambda policy_input: Conditionals.Br_Rule6func(policy_input)))
-        Rules.append(SDlib.Rule('Pay More for Ventilators to Accelerate Delivery', 7, 
-                             func = lambda policy_input: Conditionals.Br_Rule7func(policy_input)))
+        # Rules.append(SDlib.Rule('Order More Ventilators', 6, 
+        #                      func = lambda policy_input: Conditionals.Br_Rule6func(policy_input)))
+        # Rules.append(SDlib.Rule('Pay More for Ventilators to Accelerate Delivery', 7, 
+        #                      func = lambda policy_input: Conditionals.Br_Rule7func(policy_input)))
 
     elif location in ['Indonesia']:
         #National
@@ -418,10 +418,10 @@ def make_rules(UI):
                              func = lambda policy_input: Conditionals.Br_Rule4func(policy_input)))
         Rules.append(SDlib.Rule('Relax Mandatory Social Distancing', 5, 
                              func = lambda policy_input: Conditionals.Br_Rule5func(policy_input)))
-        Rules.append(SDlib.Rule('Order More Ventilators', 6, 
-                             func = lambda policy_input: Conditionals.Br_Rule6func(policy_input)))
-        Rules.append(SDlib.Rule('Pay More for Ventilators to Accelerate Delivery', 7, 
-                             func = lambda policy_input: Conditionals.Br_Rule7func(policy_input)))
+        # Rules.append(SDlib.Rule('Order More Ventilators', 6, 
+        #                      func = lambda policy_input: Conditionals.Br_Rule6func(policy_input)))
+        # Rules.append(SDlib.Rule('Pay More for Ventilators to Accelerate Delivery', 7, 
+        #                      func = lambda policy_input: Conditionals.Br_Rule7func(policy_input)))
 
     return Rules
 

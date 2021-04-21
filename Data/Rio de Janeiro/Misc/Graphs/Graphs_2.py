@@ -152,7 +152,7 @@ for entry1 in comp1:
         plt.figure(num=1, figsize=(775/my_dpi, 440/my_dpi), dpi=my_dpi)
         titlestring = './' + entry1 + '_' + entry2 + '.jpg'
         fig.savefig(titlestring, dpi=my_dpi)
-        plt.close(fig)
+        # plt.close(fig)
 
 
 

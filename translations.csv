@@ -143,6 +143,11 @@ Initial Moderate Closures,Cierres moderados iniciales,Fechamentos iniciais moder
 Scenario A: Remission,Escenario A: Remisión,Cenário A: Remissão
 Scenario B: Prevention,Escenario B: Prevención,Cenário B: Prevenção
 Scenario C: Containment,Escenario C: Contención,Cenário C: Contenção
+Stage 1,Etapa 1,Etapa 1
+Stage 2,Etapa 2,Etapa 2
+Stage 3,Etapa 3,Etapa 3
+Stage 4,Etapa 4,Etapa 4
+Stage 5,Etapa 5,Etapa 5
 ,,
 GRAPH: HEALTH PARAMETERS CATEGORY,GRAPH: HEALTH PARAMETERS CATEGORY,GRAPH: HEALTH PARAMETERS CATEGORY
 Average Hospitalization Duration,Duración media de la hospitalización,Duração Média de Hospitalização

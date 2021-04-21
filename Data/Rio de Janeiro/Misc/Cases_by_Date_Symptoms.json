@@ -1,0 +1,4566 @@
+{
+  "objectIdFieldName" : "ObjectId", 
+  "uniqueIdField" : 
+  {
+    "name" : "ObjectId", 
+    "isSystemMaintained" : true
+  }, 
+  "globalIdFieldName" : "", 
+  "fields" : [
+    {
+      "name" : "dt_inicio_sintomas", 
+      "type" : "esriFieldTypeDate", 
+      "alias" : "dt_inicio_sintomas", 
+      "sqlType" : "sqlTypeTimestamp2", 
+      "length" : 8, 
+      "domain" : null, 
+      "defaultValue" : null
+    }, 
+    {
+      "name" : "Total", 
+      "type" : "esriFieldTypeInteger", 
+      "alias" : "Total", 
+      "sqlType" : "sqlTypeInteger", 
+      "domain" : null, 
+      "defaultValue" : null
+    }, 
+    {
+      "name" : "Obito", 
+      "type" : "esriFieldTypeInteger", 
+      "alias" : "Obito", 
+      "sqlType" : "sqlTypeInteger", 
+      "domain" : null, 
+      "defaultValue" : null
+    }, 
+    {
+      "name" : "SRAG", 
+      "type" : "esriFieldTypeInteger", 
+      "alias" : "SRAG", 
+      "sqlType" : "sqlTypeInteger", 
+      "domain" : null, 
+      "defaultValue" : null
+    }, 
+    {
+      "name" : "mmtotal", 
+      "type" : "esriFieldTypeInteger", 
+      "alias" : "mmtotal", 
+      "sqlType" : "sqlTypeInteger", 
+      "domain" : null, 
+      "defaultValue" : null
+    }, 
+    {
+      "name" : "mmobito", 
+      "type" : "esriFieldTypeInteger", 
+      "alias" : "mmobito", 
+      "sqlType" : "sqlTypeInteger", 
+      "domain" : null, 
+      "defaultValue" : null
+    }, 
+    {
+      "name" : "mmsrag", 
+      "type" : "esriFieldTypeInteger", 
+      "alias" : "mmsrag", 
+      "sqlType" : "sqlTypeInteger", 
+      "domain" : null, 
+      "defaultValue" : null
+    }, 
+    {
+      "name" : "ObjectId", 
+      "type" : "esriFieldTypeOID", 
+      "alias" : "ObjectId", 
+      "sqlType" : "sqlTypeInteger", 
+      "domain" : null, 
+      "defaultValue" : null
+    }
+  ], 
+  "features" : [
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1587697200000, 
+        "Total" : 1280, 
+        "Obito" : 204, 
+        "SRAG" : 355, 
+        "mmtotal" : 1271, 
+        "mmobito" : 180, 
+        "mmsrag" : 363, 
+        "ObjectId" : 1
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1587783600000, 
+        "Total" : 1261, 
+        "Obito" : 190, 
+        "SRAG" : 372, 
+        "mmtotal" : 1296, 
+        "mmobito" : 185, 
+        "mmsrag" : 368, 
+        "ObjectId" : 2
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1587870000000, 
+        "Total" : 965, 
+        "Obito" : 189, 
+        "SRAG" : 354, 
+        "mmtotal" : 1303, 
+        "mmobito" : 189, 
+        "mmsrag" : 376, 
+        "ObjectId" : 3
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1587956400000, 
+        "Total" : 1304, 
+        "Obito" : 207, 
+        "SRAG" : 356, 
+        "mmtotal" : 1177, 
+        "mmobito" : 186, 
+        "mmsrag" : 354, 
+        "ObjectId" : 4
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1588042800000, 
+        "Total" : 3611, 
+        "Obito" : 215, 
+        "SRAG" : 386, 
+        "mmtotal" : 1549, 
+        "mmobito" : 197, 
+        "mmsrag" : 366, 
+        "ObjectId" : 5
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1588129200000, 
+        "Total" : 995, 
+        "Obito" : 162, 
+        "SRAG" : 261, 
+        "mmtotal" : 1511, 
+        "mmobito" : 193, 
+        "mmsrag" : 349, 
+        "ObjectId" : 6
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1588215600000, 
+        "Total" : 1572, 
+        "Obito" : 244, 
+        "SRAG" : 415, 
+        "mmtotal" : 1570, 
+        "mmobito" : 202, 
+        "mmsrag" : 357, 
+        "ObjectId" : 7
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1588302000000, 
+        "Total" : 2016, 
+        "Obito" : 287, 
+        "SRAG" : 568, 
+        "mmtotal" : 1675, 
+        "mmobito" : 213, 
+        "mmsrag" : 387, 
+        "ObjectId" : 8
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1588388400000, 
+        "Total" : 1061, 
+        "Obito" : 203, 
+        "SRAG" : 361, 
+        "mmtotal" : 1646, 
+        "mmobito" : 215, 
+        "mmsrag" : 386, 
+        "ObjectId" : 9
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1588474800000, 
+        "Total" : 823, 
+        "Obito" : 194, 
+        "SRAG" : 349, 
+        "mmtotal" : 1626, 
+        "mmobito" : 216, 
+        "mmsrag" : 385, 
+        "ObjectId" : 10
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1588561200000, 
+        "Total" : 1284, 
+        "Obito" : 225, 
+        "SRAG" : 372, 
+        "mmtotal" : 1623, 
+        "mmobito" : 219, 
+        "mmsrag" : 387, 
+        "ObjectId" : 11
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1588647600000, 
+        "Total" : 1606, 
+        "Obito" : 193, 
+        "SRAG" : 334, 
+        "mmtotal" : 1337, 
+        "mmobito" : 215, 
+        "mmsrag" : 380, 
+        "ObjectId" : 12
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1588734000000, 
+        "Total" : 935, 
+        "Obito" : 161, 
+        "SRAG" : 304, 
+        "mmtotal" : 1328, 
+        "mmobito" : 215, 
+        "mmsrag" : 386, 
+        "ObjectId" : 13
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1588820400000, 
+        "Total" : 893, 
+        "Obito" : 164, 
+        "SRAG" : 283, 
+        "mmtotal" : 1231, 
+        "mmobito" : 204, 
+        "mmsrag" : 367, 
+        "ObjectId" : 14
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1588906800000, 
+        "Total" : 1056, 
+        "Obito" : 177, 
+        "SRAG" : 315, 
+        "mmtotal" : 1094, 
+        "mmobito" : 188, 
+        "mmsrag" : 331, 
+        "ObjectId" : 15
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1588993200000, 
+        "Total" : 758, 
+        "Obito" : 150, 
+        "SRAG" : 266, 
+        "mmtotal" : 1051, 
+        "mmobito" : 181, 
+        "mmsrag" : 318, 
+        "ObjectId" : 16
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1589079600000, 
+        "Total" : 1483, 
+        "Obito" : 219, 
+        "SRAG" : 395, 
+        "mmtotal" : 1145, 
+        "mmobito" : 184, 
+        "mmsrag" : 324, 
+        "ObjectId" : 17
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1589166000000, 
+        "Total" : 914, 
+        "Obito" : 136, 
+        "SRAG" : 263, 
+        "mmtotal" : 1092, 
+        "mmobito" : 171, 
+        "mmsrag" : 309, 
+        "ObjectId" : 18
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1589252400000, 
+        "Total" : 817, 
+        "Obito" : 148, 
+        "SRAG" : 287, 
+        "mmtotal" : 979, 
+        "mmobito" : 165, 
+        "mmsrag" : 302, 
+        "ObjectId" : 19
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1589338800000, 
+        "Total" : 769, 
+        "Obito" : 149, 
+        "SRAG" : 265, 
+        "mmtotal" : 956, 
+        "mmobito" : 163, 
+        "mmsrag" : 296, 
+        "ObjectId" : 20
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1589425200000, 
+        "Total" : 702, 
+        "Obito" : 130, 
+        "SRAG" : 256, 
+        "mmtotal" : 928, 
+        "mmobito" : 158, 
+        "mmsrag" : 292, 
+        "ObjectId" : 21
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1589511600000, 
+        "Total" : 1128, 
+        "Obito" : 115, 
+        "SRAG" : 229, 
+        "mmtotal" : 939, 
+        "mmobito" : 150, 
+        "mmsrag" : 280, 
+        "ObjectId" : 22
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1589598000000, 
+        "Total" : 700, 
+        "Obito" : 116, 
+        "SRAG" : 224, 
+        "mmtotal" : 930, 
+        "mmobito" : 145, 
+        "mmsrag" : 274, 
+        "ObjectId" : 23
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1589684400000, 
+        "Total" : 598, 
+        "Obito" : 110, 
+        "SRAG" : 217, 
+        "mmtotal" : 804, 
+        "mmobito" : 129, 
+        "mmsrag" : 249, 
+        "ObjectId" : 24
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1589770800000, 
+        "Total" : 725, 
+        "Obito" : 104, 
+        "SRAG" : 198, 
+        "mmtotal" : 777, 
+        "mmobito" : 125, 
+        "mmsrag" : 239, 
+        "ObjectId" : 25
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1589857200000, 
+        "Total" : 646, 
+        "Obito" : 100, 
+        "SRAG" : 181, 
+        "mmtotal" : 753, 
+        "mmobito" : 118, 
+        "mmsrag" : 224, 
+        "ObjectId" : 26
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1589943600000, 
+        "Total" : 1000, 
+        "Obito" : 124, 
+        "SRAG" : 251, 
+        "mmtotal" : 786, 
+        "mmobito" : 114, 
+        "mmsrag" : 222, 
+        "ObjectId" : 27
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1590030000000, 
+        "Total" : 692, 
+        "Obito" : 90, 
+        "SRAG" : 171, 
+        "mmtotal" : 784, 
+        "mmobito" : 108, 
+        "mmsrag" : 210, 
+        "ObjectId" : 28
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1590116400000, 
+        "Total" : 790, 
+        "Obito" : 89, 
+        "SRAG" : 167, 
+        "mmtotal" : 736, 
+        "mmobito" : 105, 
+        "mmsrag" : 201, 
+        "ObjectId" : 29
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1590202800000, 
+        "Total" : 486, 
+        "Obito" : 67, 
+        "SRAG" : 138, 
+        "mmtotal" : 705, 
+        "mmobito" : 98, 
+        "mmsrag" : 189, 
+        "ObjectId" : 30
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1590289200000, 
+        "Total" : 320, 
+        "Obito" : 91, 
+        "SRAG" : 149, 
+        "mmtotal" : 666, 
+        "mmobito" : 95, 
+        "mmsrag" : 179, 
+        "ObjectId" : 31
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1590375600000, 
+        "Total" : 771, 
+        "Obito" : 96, 
+        "SRAG" : 178, 
+        "mmtotal" : 672, 
+        "mmobito" : 94, 
+        "mmsrag" : 176, 
+        "ObjectId" : 32
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1590462000000, 
+        "Total" : 574, 
+        "Obito" : 55, 
+        "SRAG" : 116, 
+        "mmtotal" : 662, 
+        "mmobito" : 87, 
+        "mmsrag" : 167, 
+        "ObjectId" : 33
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1590548400000, 
+        "Total" : 706, 
+        "Obito" : 47, 
+        "SRAG" : 101, 
+        "mmtotal" : 620, 
+        "mmobito" : 76, 
+        "mmsrag" : 146, 
+        "ObjectId" : 34
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1590634800000, 
+        "Total" : 568, 
+        "Obito" : 69, 
+        "SRAG" : 122, 
+        "mmtotal" : 602, 
+        "mmobito" : 73, 
+        "mmsrag" : 139, 
+        "ObjectId" : 35
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1590721200000, 
+        "Total" : 704, 
+        "Obito" : 54, 
+        "SRAG" : 120, 
+        "mmtotal" : 590, 
+        "mmobito" : 68, 
+        "mmsrag" : 132, 
+        "ObjectId" : 36
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1590807600000, 
+        "Total" : 451, 
+        "Obito" : 66, 
+        "SRAG" : 128, 
+        "mmtotal" : 585, 
+        "mmobito" : 68, 
+        "mmsrag" : 131, 
+        "ObjectId" : 37
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1590894000000, 
+        "Total" : 254, 
+        "Obito" : 47, 
+        "SRAG" : 89, 
+        "mmtotal" : 575, 
+        "mmobito" : 62, 
+        "mmsrag" : 122, 
+        "ObjectId" : 38
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1590980400000, 
+        "Total" : 990, 
+        "Obito" : 80, 
+        "SRAG" : 174, 
+        "mmtotal" : 607, 
+        "mmobito" : 60, 
+        "mmsrag" : 121, 
+        "ObjectId" : 39
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1591066800000, 
+        "Total" : 490, 
+        "Obito" : 49, 
+        "SRAG" : 98, 
+        "mmtotal" : 595, 
+        "mmobito" : 59, 
+        "mmsrag" : 119, 
+        "ObjectId" : 40
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1591153200000, 
+        "Total" : 564, 
+        "Obito" : 57, 
+        "SRAG" : 101, 
+        "mmtotal" : 574, 
+        "mmobito" : 60, 
+        "mmsrag" : 119, 
+        "ObjectId" : 41
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1591239600000, 
+        "Total" : 436, 
+        "Obito" : 49, 
+        "SRAG" : 99, 
+        "mmtotal" : 556, 
+        "mmobito" : 57, 
+        "mmsrag" : 116, 
+        "ObjectId" : 42
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1591326000000, 
+        "Total" : 452, 
+        "Obito" : 64, 
+        "SRAG" : 116, 
+        "mmtotal" : 520, 
+        "mmobito" : 59, 
+        "mmsrag" : 115, 
+        "ObjectId" : 43
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1591412400000, 
+        "Total" : 591, 
+        "Obito" : 53, 
+        "SRAG" : 109, 
+        "mmtotal" : 540, 
+        "mmobito" : 57, 
+        "mmsrag" : 112, 
+        "ObjectId" : 44
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1591498800000, 
+        "Total" : 296, 
+        "Obito" : 37, 
+        "SRAG" : 85, 
+        "mmtotal" : 546, 
+        "mmobito" : 56, 
+        "mmsrag" : 112, 
+        "ObjectId" : 45
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1591585200000, 
+        "Total" : 492, 
+        "Obito" : 27, 
+        "SRAG" : 82, 
+        "mmtotal" : 474, 
+        "mmobito" : 48, 
+        "mmsrag" : 99, 
+        "ObjectId" : 46
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1591671600000, 
+        "Total" : 383, 
+        "Obito" : 48, 
+        "SRAG" : 94, 
+        "mmtotal" : 459, 
+        "mmobito" : 48, 
+        "mmsrag" : 98, 
+        "ObjectId" : 47
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1591758000000, 
+        "Total" : 905, 
+        "Obito" : 50, 
+        "SRAG" : 122, 
+        "mmtotal" : 508, 
+        "mmobito" : 47, 
+        "mmsrag" : 101, 
+        "ObjectId" : 48
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1591844400000, 
+        "Total" : 265, 
+        "Obito" : 34, 
+        "SRAG" : 61, 
+        "mmtotal" : 483, 
+        "mmobito" : 45, 
+        "mmsrag" : 96, 
+        "ObjectId" : 49
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1591930800000, 
+        "Total" : 339, 
+        "Obito" : 33, 
+        "SRAG" : 75, 
+        "mmtotal" : 467, 
+        "mmobito" : 40, 
+        "mmsrag" : 90, 
+        "ObjectId" : 50
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1592017200000, 
+        "Total" : 335, 
+        "Obito" : 34, 
+        "SRAG" : 68, 
+        "mmtotal" : 431, 
+        "mmobito" : 38, 
+        "mmsrag" : 84, 
+        "ObjectId" : 51
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1592103600000, 
+        "Total" : 203, 
+        "Obito" : 44, 
+        "SRAG" : 70, 
+        "mmtotal" : 417, 
+        "mmobito" : 39, 
+        "mmsrag" : 82, 
+        "ObjectId" : 52
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1592190000000, 
+        "Total" : 627, 
+        "Obito" : 40, 
+        "SRAG" : 82, 
+        "mmtotal" : 437, 
+        "mmobito" : 40, 
+        "mmsrag" : 82, 
+        "ObjectId" : 53
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1592276400000, 
+        "Total" : 369, 
+        "Obito" : 40, 
+        "SRAG" : 87, 
+        "mmtotal" : 435, 
+        "mmobito" : 39, 
+        "mmsrag" : 81, 
+        "ObjectId" : 54
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1592362800000, 
+        "Total" : 288, 
+        "Obito" : 36, 
+        "SRAG" : 59, 
+        "mmtotal" : 347, 
+        "mmobito" : 37, 
+        "mmsrag" : 72, 
+        "ObjectId" : 55
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1592449200000, 
+        "Total" : 300, 
+        "Obito" : 20, 
+        "SRAG" : 54, 
+        "mmtotal" : 352, 
+        "mmobito" : 35, 
+        "mmsrag" : 71, 
+        "ObjectId" : 56
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1592535600000, 
+        "Total" : 332, 
+        "Obito" : 23, 
+        "SRAG" : 58, 
+        "mmtotal" : 351, 
+        "mmobito" : 34, 
+        "mmsrag" : 68, 
+        "ObjectId" : 57
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1592622000000, 
+        "Total" : 421, 
+        "Obito" : 46, 
+        "SRAG" : 95, 
+        "mmtotal" : 363, 
+        "mmobito" : 36, 
+        "mmsrag" : 72, 
+        "ObjectId" : 58
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1592708400000, 
+        "Total" : 164, 
+        "Obito" : 15, 
+        "SRAG" : 44, 
+        "mmtotal" : 357, 
+        "mmobito" : 31, 
+        "mmsrag" : 68, 
+        "ObjectId" : 59
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1592794800000, 
+        "Total" : 320, 
+        "Obito" : 32, 
+        "SRAG" : 70, 
+        "mmtotal" : 313, 
+        "mmobito" : 30, 
+        "mmsrag" : 67, 
+        "ObjectId" : 60
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1592881200000, 
+        "Total" : 306, 
+        "Obito" : 25, 
+        "SRAG" : 57, 
+        "mmtotal" : 304, 
+        "mmobito" : 28, 
+        "mmsrag" : 62, 
+        "ObjectId" : 61
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1592967600000, 
+        "Total" : 353, 
+        "Obito" : 28, 
+        "SRAG" : 54, 
+        "mmtotal" : 314, 
+        "mmobito" : 27, 
+        "mmsrag" : 62, 
+        "ObjectId" : 62
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1593054000000, 
+        "Total" : 298, 
+        "Obito" : 23, 
+        "SRAG" : 55, 
+        "mmtotal" : 313, 
+        "mmobito" : 27, 
+        "mmsrag" : 62, 
+        "ObjectId" : 63
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1593140400000, 
+        "Total" : 319, 
+        "Obito" : 35, 
+        "SRAG" : 70, 
+        "mmtotal" : 312, 
+        "mmobito" : 29, 
+        "mmsrag" : 64, 
+        "ObjectId" : 64
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1593226800000, 
+        "Total" : 212, 
+        "Obito" : 21, 
+        "SRAG" : 45, 
+        "mmtotal" : 282, 
+        "mmobito" : 26, 
+        "mmsrag" : 56, 
+        "ObjectId" : 65
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1593313200000, 
+        "Total" : 294, 
+        "Obito" : 19, 
+        "SRAG" : 48, 
+        "mmtotal" : 300, 
+        "mmobito" : 26, 
+        "mmsrag" : 57, 
+        "ObjectId" : 66
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1593399600000, 
+        "Total" : 342, 
+        "Obito" : 33, 
+        "SRAG" : 62, 
+        "mmtotal" : 303, 
+        "mmobito" : 26, 
+        "mmsrag" : 56, 
+        "ObjectId" : 67
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1593486000000, 
+        "Total" : 296, 
+        "Obito" : 21, 
+        "SRAG" : 53, 
+        "mmtotal" : 302, 
+        "mmobito" : 26, 
+        "mmsrag" : 55, 
+        "ObjectId" : 68
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1593572400000, 
+        "Total" : 733, 
+        "Obito" : 38, 
+        "SRAG" : 89, 
+        "mmtotal" : 356, 
+        "mmobito" : 27, 
+        "mmsrag" : 60, 
+        "ObjectId" : 69
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1593658800000, 
+        "Total" : 360, 
+        "Obito" : 28, 
+        "SRAG" : 59, 
+        "mmtotal" : 365, 
+        "mmobito" : 28, 
+        "mmsrag" : 61, 
+        "ObjectId" : 70
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1593745200000, 
+        "Total" : 743, 
+        "Obito" : 34, 
+        "SRAG" : 72, 
+        "mmtotal" : 426, 
+        "mmobito" : 28, 
+        "mmsrag" : 61, 
+        "ObjectId" : 71
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1593831600000, 
+        "Total" : 212, 
+        "Obito" : 27, 
+        "SRAG" : 53, 
+        "mmtotal" : 426, 
+        "mmobito" : 29, 
+        "mmsrag" : 62, 
+        "ObjectId" : 72
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1593918000000, 
+        "Total" : 321, 
+        "Obito" : 26, 
+        "SRAG" : 51, 
+        "mmtotal" : 430, 
+        "mmobito" : 30, 
+        "mmsrag" : 63, 
+        "ObjectId" : 73
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1594004400000, 
+        "Total" : 438, 
+        "Obito" : 37, 
+        "SRAG" : 69, 
+        "mmtotal" : 443, 
+        "mmobito" : 30, 
+        "mmsrag" : 64, 
+        "ObjectId" : 74
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1594090800000, 
+        "Total" : 557, 
+        "Obito" : 25, 
+        "SRAG" : 56, 
+        "mmtotal" : 481, 
+        "mmobito" : 31, 
+        "mmsrag" : 64, 
+        "ObjectId" : 75
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1594177200000, 
+        "Total" : 462, 
+        "Obito" : 33, 
+        "SRAG" : 57, 
+        "mmtotal" : 442, 
+        "mmobito" : 30, 
+        "mmsrag" : 60, 
+        "ObjectId" : 76
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1594263600000, 
+        "Total" : 307, 
+        "Obito" : 27, 
+        "SRAG" : 61, 
+        "mmtotal" : 434, 
+        "mmobito" : 30, 
+        "mmsrag" : 60, 
+        "ObjectId" : 77
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1594350000000, 
+        "Total" : 572, 
+        "Obito" : 36, 
+        "SRAG" : 79, 
+        "mmtotal" : 410, 
+        "mmobito" : 30, 
+        "mmsrag" : 61, 
+        "ObjectId" : 78
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1594436400000, 
+        "Total" : 538, 
+        "Obito" : 18, 
+        "SRAG" : 36, 
+        "mmtotal" : 456, 
+        "mmobito" : 29, 
+        "mmsrag" : 58, 
+        "ObjectId" : 79
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1594522800000, 
+        "Total" : 640, 
+        "Obito" : 26, 
+        "SRAG" : 46, 
+        "mmtotal" : 502, 
+        "mmobito" : 29, 
+        "mmsrag" : 58, 
+        "ObjectId" : 80
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1594609200000, 
+        "Total" : 393, 
+        "Obito" : 32, 
+        "SRAG" : 72, 
+        "mmtotal" : 496, 
+        "mmobito" : 28, 
+        "mmsrag" : 58, 
+        "ObjectId" : 81
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1594695600000, 
+        "Total" : 382, 
+        "Obito" : 23, 
+        "SRAG" : 53, 
+        "mmtotal" : 471, 
+        "mmobito" : 28, 
+        "mmsrag" : 58, 
+        "ObjectId" : 82
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1594782000000, 
+        "Total" : 882, 
+        "Obito" : 24, 
+        "SRAG" : 57, 
+        "mmtotal" : 531, 
+        "mmobito" : 27, 
+        "mmsrag" : 58, 
+        "ObjectId" : 83
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1594868400000, 
+        "Total" : 439, 
+        "Obito" : 25, 
+        "SRAG" : 53, 
+        "mmtotal" : 549, 
+        "mmobito" : 26, 
+        "mmsrag" : 57, 
+        "ObjectId" : 84
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1594954800000, 
+        "Total" : 897, 
+        "Obito" : 24, 
+        "SRAG" : 60, 
+        "mmtotal" : 596, 
+        "mmobito" : 25, 
+        "mmsrag" : 54, 
+        "ObjectId" : 85
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1595041200000, 
+        "Total" : 386, 
+        "Obito" : 23, 
+        "SRAG" : 56, 
+        "mmtotal" : 574, 
+        "mmobito" : 25, 
+        "mmsrag" : 57, 
+        "ObjectId" : 86
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1595127600000, 
+        "Total" : 215, 
+        "Obito" : 24, 
+        "SRAG" : 56, 
+        "mmtotal" : 513, 
+        "mmobito" : 25, 
+        "mmsrag" : 58, 
+        "ObjectId" : 87
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1595214000000, 
+        "Total" : 574, 
+        "Obito" : 40, 
+        "SRAG" : 94, 
+        "mmtotal" : 539, 
+        "mmobito" : 26, 
+        "mmsrag" : 61, 
+        "ObjectId" : 88
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1595300400000, 
+        "Total" : 593, 
+        "Obito" : 34, 
+        "SRAG" : 67, 
+        "mmtotal" : 569, 
+        "mmobito" : 28, 
+        "mmsrag" : 63, 
+        "ObjectId" : 89
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1595386800000, 
+        "Total" : 312, 
+        "Obito" : 41, 
+        "SRAG" : 67, 
+        "mmtotal" : 488, 
+        "mmobito" : 30, 
+        "mmsrag" : 65, 
+        "ObjectId" : 90
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1595473200000, 
+        "Total" : 615, 
+        "Obito" : 29, 
+        "SRAG" : 59, 
+        "mmtotal" : 513, 
+        "mmobito" : 31, 
+        "mmsrag" : 66, 
+        "ObjectId" : 91
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1595559600000, 
+        "Total" : 359, 
+        "Obito" : 36, 
+        "SRAG" : 82, 
+        "mmtotal" : 436, 
+        "mmobito" : 32, 
+        "mmsrag" : 69, 
+        "ObjectId" : 92
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1595646000000, 
+        "Total" : 535, 
+        "Obito" : 29, 
+        "SRAG" : 62, 
+        "mmtotal" : 458, 
+        "mmobito" : 33, 
+        "mmsrag" : 70, 
+        "ObjectId" : 93
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1595732400000, 
+        "Total" : 428, 
+        "Obito" : 27, 
+        "SRAG" : 64, 
+        "mmtotal" : 488, 
+        "mmobito" : 34, 
+        "mmsrag" : 71, 
+        "ObjectId" : 94
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1595818800000, 
+        "Total" : 438, 
+        "Obito" : 36, 
+        "SRAG" : 82, 
+        "mmtotal" : 469, 
+        "mmobito" : 33, 
+        "mmsrag" : 69, 
+        "ObjectId" : 95
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1595905200000, 
+        "Total" : 605, 
+        "Obito" : 29, 
+        "SRAG" : 61, 
+        "mmtotal" : 470, 
+        "mmobito" : 32, 
+        "mmsrag" : 68, 
+        "ObjectId" : 96
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1595991600000, 
+        "Total" : 490, 
+        "Obito" : 22, 
+        "SRAG" : 47, 
+        "mmtotal" : 496, 
+        "mmobito" : 30, 
+        "mmsrag" : 65, 
+        "ObjectId" : 97
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1596078000000, 
+        "Total" : 499, 
+        "Obito" : 17, 
+        "SRAG" : 50, 
+        "mmtotal" : 479, 
+        "mmobito" : 28, 
+        "mmsrag" : 64, 
+        "ObjectId" : 98
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1596164400000, 
+        "Total" : 401, 
+        "Obito" : 22, 
+        "SRAG" : 76, 
+        "mmtotal" : 485, 
+        "mmobito" : 26, 
+        "mmsrag" : 63, 
+        "ObjectId" : 99
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1596250800000, 
+        "Total" : 812, 
+        "Obito" : 41, 
+        "SRAG" : 100, 
+        "mmtotal" : 525, 
+        "mmobito" : 28, 
+        "mmsrag" : 69, 
+        "ObjectId" : 100
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1596337200000, 
+        "Total" : 253, 
+        "Obito" : 34, 
+        "SRAG" : 74, 
+        "mmtotal" : 500, 
+        "mmobito" : 29, 
+        "mmsrag" : 70, 
+        "ObjectId" : 101
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1596423600000, 
+        "Total" : 482, 
+        "Obito" : 29, 
+        "SRAG" : 81, 
+        "mmtotal" : 506, 
+        "mmobito" : 28, 
+        "mmsrag" : 70, 
+        "ObjectId" : 102
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1596510000000, 
+        "Total" : 421, 
+        "Obito" : 22, 
+        "SRAG" : 54, 
+        "mmtotal" : 480, 
+        "mmobito" : 27, 
+        "mmsrag" : 69, 
+        "ObjectId" : 103
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1596596400000, 
+        "Total" : 487, 
+        "Obito" : 23, 
+        "SRAG" : 63, 
+        "mmtotal" : 479, 
+        "mmobito" : 27, 
+        "mmsrag" : 71, 
+        "ObjectId" : 104
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1596682800000, 
+        "Total" : 596, 
+        "Obito" : 22, 
+        "SRAG" : 66, 
+        "mmtotal" : 493, 
+        "mmobito" : 28, 
+        "mmsrag" : 73, 
+        "ObjectId" : 105
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1596769200000, 
+        "Total" : 620, 
+        "Obito" : 27, 
+        "SRAG" : 70, 
+        "mmtotal" : 524, 
+        "mmobito" : 28, 
+        "mmsrag" : 73, 
+        "ObjectId" : 106
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1596855600000, 
+        "Total" : 477, 
+        "Obito" : 26, 
+        "SRAG" : 67, 
+        "mmtotal" : 477, 
+        "mmobito" : 26, 
+        "mmsrag" : 68, 
+        "ObjectId" : 107
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1596942000000, 
+        "Total" : 415, 
+        "Obito" : 29, 
+        "SRAG" : 63, 
+        "mmtotal" : 500, 
+        "mmobito" : 25, 
+        "mmsrag" : 66, 
+        "ObjectId" : 108
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1583031600000, 
+        "Total" : 44, 
+        "Obito" : 0, 
+        "SRAG" : 0, 
+        "mmtotal" : null, 
+        "mmobito" : null, 
+        "mmsrag" : null, 
+        "ObjectId" : 109
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1583118000000, 
+        "Total" : 15, 
+        "Obito" : 0, 
+        "SRAG" : 0, 
+        "mmtotal" : null, 
+        "mmobito" : null, 
+        "mmsrag" : null, 
+        "ObjectId" : 110
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1583204400000, 
+        "Total" : 9, 
+        "Obito" : 0, 
+        "SRAG" : 3, 
+        "mmtotal" : null, 
+        "mmobito" : null, 
+        "mmsrag" : null, 
+        "ObjectId" : 111
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1583290800000, 
+        "Total" : 6, 
+        "Obito" : 0, 
+        "SRAG" : 0, 
+        "mmtotal" : null, 
+        "mmobito" : null, 
+        "mmsrag" : null, 
+        "ObjectId" : 112
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1583377200000, 
+        "Total" : 17, 
+        "Obito" : 2, 
+        "SRAG" : 3, 
+        "mmtotal" : null, 
+        "mmobito" : null, 
+        "mmsrag" : null, 
+        "ObjectId" : 113
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1583463600000, 
+        "Total" : 15, 
+        "Obito" : 0, 
+        "SRAG" : 1, 
+        "mmtotal" : null, 
+        "mmobito" : null, 
+        "mmsrag" : null, 
+        "ObjectId" : 114
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1583550000000, 
+        "Total" : 14, 
+        "Obito" : 0, 
+        "SRAG" : 1, 
+        "mmtotal" : 17, 
+        "mmobito" : null, 
+        "mmsrag" : 1, 
+        "ObjectId" : 115
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1583636400000, 
+        "Total" : 13, 
+        "Obito" : 1, 
+        "SRAG" : 3, 
+        "mmtotal" : 13, 
+        "mmobito" : null, 
+        "mmsrag" : 2, 
+        "ObjectId" : 116
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1583722800000, 
+        "Total" : 29, 
+        "Obito" : 1, 
+        "SRAG" : 6, 
+        "mmtotal" : 15, 
+        "mmobito" : 1, 
+        "mmsrag" : 2, 
+        "ObjectId" : 117
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1583809200000, 
+        "Total" : 93, 
+        "Obito" : 5, 
+        "SRAG" : 16, 
+        "mmtotal" : 27, 
+        "mmobito" : 1, 
+        "mmsrag" : 4, 
+        "ObjectId" : 118
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1583895600000, 
+        "Total" : 49, 
+        "Obito" : 2, 
+        "SRAG" : 7, 
+        "mmtotal" : 33, 
+        "mmobito" : 2, 
+        "mmsrag" : 5, 
+        "ObjectId" : 119
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1583982000000, 
+        "Total" : 58, 
+        "Obito" : 6, 
+        "SRAG" : 10, 
+        "mmtotal" : 39, 
+        "mmobito" : 2, 
+        "mmsrag" : 6, 
+        "ObjectId" : 120
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1584068400000, 
+        "Total" : 85, 
+        "Obito" : 7, 
+        "SRAG" : 18, 
+        "mmtotal" : 49, 
+        "mmobito" : 3, 
+        "mmsrag" : 9, 
+        "ObjectId" : 121
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1584154800000, 
+        "Total" : 122, 
+        "Obito" : 7, 
+        "SRAG" : 15, 
+        "mmtotal" : 64, 
+        "mmobito" : 4, 
+        "mmsrag" : 11, 
+        "ObjectId" : 122
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1584241200000, 
+        "Total" : 221, 
+        "Obito" : 9, 
+        "SRAG" : 34, 
+        "mmtotal" : 94, 
+        "mmobito" : 5, 
+        "mmsrag" : 15, 
+        "ObjectId" : 123
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1584327600000, 
+        "Total" : 187, 
+        "Obito" : 9, 
+        "SRAG" : 27, 
+        "mmtotal" : 116, 
+        "mmobito" : 6, 
+        "mmsrag" : 18, 
+        "ObjectId" : 124
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1584414000000, 
+        "Total" : 153, 
+        "Obito" : 8, 
+        "SRAG" : 30, 
+        "mmtotal" : 125, 
+        "mmobito" : 7, 
+        "mmsrag" : 20, 
+        "ObjectId" : 125
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1584500400000, 
+        "Total" : 147, 
+        "Obito" : 15, 
+        "SRAG" : 38, 
+        "mmtotal" : 139, 
+        "mmobito" : 9, 
+        "mmsrag" : 25, 
+        "ObjectId" : 126
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1584586800000, 
+        "Total" : 175, 
+        "Obito" : 10, 
+        "SRAG" : 35, 
+        "mmtotal" : 156, 
+        "mmobito" : 9, 
+        "mmsrag" : 28, 
+        "ObjectId" : 127
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1584673200000, 
+        "Total" : 448, 
+        "Obito" : 23, 
+        "SRAG" : 55, 
+        "mmtotal" : 208, 
+        "mmobito" : 12, 
+        "mmsrag" : 33, 
+        "ObjectId" : 128
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1584759600000, 
+        "Total" : 268, 
+        "Obito" : 30, 
+        "SRAG" : 68, 
+        "mmtotal" : 228, 
+        "mmobito" : 15, 
+        "mmsrag" : 41, 
+        "ObjectId" : 129
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1584846000000, 
+        "Total" : 258, 
+        "Obito" : 20, 
+        "SRAG" : 42, 
+        "mmtotal" : 234, 
+        "mmobito" : 16, 
+        "mmsrag" : 42, 
+        "ObjectId" : 130
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1584932400000, 
+        "Total" : 347, 
+        "Obito" : 33, 
+        "SRAG" : 87, 
+        "mmtotal" : 257, 
+        "mmobito" : 20, 
+        "mmsrag" : 51, 
+        "ObjectId" : 131
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1585018800000, 
+        "Total" : 267, 
+        "Obito" : 19, 
+        "SRAG" : 57, 
+        "mmtotal" : 273, 
+        "mmobito" : 21, 
+        "mmsrag" : 55, 
+        "ObjectId" : 132
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1585105200000, 
+        "Total" : 401, 
+        "Obito" : 31, 
+        "SRAG" : 79, 
+        "mmtotal" : 309, 
+        "mmobito" : 24, 
+        "mmsrag" : 60, 
+        "ObjectId" : 133
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1585191600000, 
+        "Total" : 309, 
+        "Obito" : 21, 
+        "SRAG" : 56, 
+        "mmtotal" : 328, 
+        "mmobito" : 25, 
+        "mmsrag" : 63, 
+        "ObjectId" : 134
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1585278000000, 
+        "Total" : 403, 
+        "Obito" : 34, 
+        "SRAG" : 81, 
+        "mmtotal" : 322, 
+        "mmobito" : 27, 
+        "mmsrag" : 67, 
+        "ObjectId" : 135
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1585364400000, 
+        "Total" : 421, 
+        "Obito" : 40, 
+        "SRAG" : 88, 
+        "mmtotal" : 344, 
+        "mmobito" : 28, 
+        "mmsrag" : 70, 
+        "ObjectId" : 136
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1585450800000, 
+        "Total" : 398, 
+        "Obito" : 36, 
+        "SRAG" : 89, 
+        "mmtotal" : 364, 
+        "mmobito" : 31, 
+        "mmsrag" : 77, 
+        "ObjectId" : 137
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1585537200000, 
+        "Total" : 508, 
+        "Obito" : 48, 
+        "SRAG" : 109, 
+        "mmtotal" : 387, 
+        "mmobito" : 33, 
+        "mmsrag" : 80, 
+        "ObjectId" : 138
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1585623600000, 
+        "Total" : 352, 
+        "Obito" : 47, 
+        "SRAG" : 106, 
+        "mmtotal" : 399, 
+        "mmobito" : 37, 
+        "mmsrag" : 87, 
+        "ObjectId" : 139
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1585710000000, 
+        "Total" : 755, 
+        "Obito" : 70, 
+        "SRAG" : 173, 
+        "mmtotal" : 449, 
+        "mmobito" : 42, 
+        "mmsrag" : 100, 
+        "ObjectId" : 140
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1585796400000, 
+        "Total" : 611, 
+        "Obito" : 79, 
+        "SRAG" : 148, 
+        "mmtotal" : 493, 
+        "mmobito" : 51, 
+        "mmsrag" : 113, 
+        "ObjectId" : 141
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1585882800000, 
+        "Total" : 582, 
+        "Obito" : 72, 
+        "SRAG" : 148, 
+        "mmtotal" : 518, 
+        "mmobito" : 56, 
+        "mmsrag" : 123, 
+        "ObjectId" : 142
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1585969200000, 
+        "Total" : 660, 
+        "Obito" : 73, 
+        "SRAG" : 148, 
+        "mmtotal" : 552, 
+        "mmobito" : 61, 
+        "mmsrag" : 132, 
+        "ObjectId" : 143
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1586055600000, 
+        "Total" : 788, 
+        "Obito" : 85, 
+        "SRAG" : 174, 
+        "mmtotal" : 608, 
+        "mmobito" : 68, 
+        "mmsrag" : 144, 
+        "ObjectId" : 144
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1586142000000, 
+        "Total" : 656, 
+        "Obito" : 73, 
+        "SRAG" : 179, 
+        "mmtotal" : 629, 
+        "mmobito" : 71, 
+        "mmsrag" : 154, 
+        "ObjectId" : 145
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1586228400000, 
+        "Total" : 609, 
+        "Obito" : 88, 
+        "SRAG" : 192, 
+        "mmtotal" : 666, 
+        "mmobito" : 77, 
+        "mmsrag" : 166, 
+        "ObjectId" : 146
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1586314800000, 
+        "Total" : 626, 
+        "Obito" : 77, 
+        "SRAG" : 187, 
+        "mmtotal" : 647, 
+        "mmobito" : 78, 
+        "mmsrag" : 168, 
+        "ObjectId" : 147
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1586401200000, 
+        "Total" : 785, 
+        "Obito" : 89, 
+        "SRAG" : 203, 
+        "mmtotal" : 672, 
+        "mmobito" : 80, 
+        "mmsrag" : 176, 
+        "ObjectId" : 148
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1586487600000, 
+        "Total" : 1195, 
+        "Obito" : 121, 
+        "SRAG" : 266, 
+        "mmtotal" : 760, 
+        "mmobito" : 87, 
+        "mmsrag" : 193, 
+        "ObjectId" : 149
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1586574000000, 
+        "Total" : 787, 
+        "Obito" : 112, 
+        "SRAG" : 233, 
+        "mmtotal" : 778, 
+        "mmobito" : 92, 
+        "mmsrag" : 205, 
+        "ObjectId" : 150
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1586660400000, 
+        "Total" : 899, 
+        "Obito" : 134, 
+        "SRAG" : 283, 
+        "mmtotal" : 794, 
+        "mmobito" : 99, 
+        "mmsrag" : 220, 
+        "ObjectId" : 151
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1586746800000, 
+        "Total" : 1026, 
+        "Obito" : 118, 
+        "SRAG" : 271, 
+        "mmtotal" : 847, 
+        "mmobito" : 106, 
+        "mmsrag" : 234, 
+        "ObjectId" : 152
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1586833200000, 
+        "Total" : 948, 
+        "Obito" : 151, 
+        "SRAG" : 309, 
+        "mmtotal" : 895, 
+        "mmobito" : 115, 
+        "mmsrag" : 250, 
+        "ObjectId" : 153
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1586919600000, 
+        "Total" : 1182, 
+        "Obito" : 166, 
+        "SRAG" : 326, 
+        "mmtotal" : 975, 
+        "mmobito" : 127, 
+        "mmsrag" : 270, 
+        "ObjectId" : 154
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1587006000000, 
+        "Total" : 1072, 
+        "Obito" : 131, 
+        "SRAG" : 280, 
+        "mmtotal" : 1016, 
+        "mmobito" : 133, 
+        "mmsrag" : 281, 
+        "ObjectId" : 155
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1587092400000, 
+        "Total" : 1044, 
+        "Obito" : 144, 
+        "SRAG" : 299, 
+        "mmtotal" : 994, 
+        "mmobito" : 137, 
+        "mmsrag" : 286, 
+        "ObjectId" : 156
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1587178800000, 
+        "Total" : 1083, 
+        "Obito" : 156, 
+        "SRAG" : 337, 
+        "mmtotal" : 1036, 
+        "mmobito" : 143, 
+        "mmsrag" : 301, 
+        "ObjectId" : 157
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1587265200000, 
+        "Total" : 913, 
+        "Obito" : 159, 
+        "SRAG" : 299, 
+        "mmtotal" : 1038, 
+        "mmobito" : 146, 
+        "mmsrag" : 303, 
+        "ObjectId" : 158
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1587351600000, 
+        "Total" : 2187, 
+        "Obito" : 233, 
+        "SRAG" : 505, 
+        "mmtotal" : 1204, 
+        "mmobito" : 163, 
+        "mmsrag" : 336, 
+        "ObjectId" : 159
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1587438000000, 
+        "Total" : 1008, 
+        "Obito" : 135, 
+        "SRAG" : 306, 
+        "mmtotal" : 1213, 
+        "mmobito" : 161, 
+        "mmsrag" : 336, 
+        "ObjectId" : 160
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1587524400000, 
+        "Total" : 1263, 
+        "Obito" : 193, 
+        "SRAG" : 379, 
+        "mmtotal" : 1224, 
+        "mmobito" : 164, 
+        "mmsrag" : 344, 
+        "ObjectId" : 161
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1587610800000, 
+        "Total" : 1160, 
+        "Obito" : 182, 
+        "SRAG" : 358, 
+        "mmtotal" : 1237, 
+        "mmobito" : 172, 
+        "mmsrag" : 355, 
+        "ObjectId" : 162
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1597028400000, 
+        "Total" : 611, 
+        "Obito" : 53, 
+        "SRAG" : 126, 
+        "mmtotal" : 518, 
+        "mmobito" : 29, 
+        "mmsrag" : 73, 
+        "ObjectId" : 163
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1597114800000, 
+        "Total" : 412, 
+        "Obito" : 20, 
+        "SRAG" : 46, 
+        "mmtotal" : 517, 
+        "mmobito" : 29, 
+        "mmsrag" : 72, 
+        "ObjectId" : 164
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1597201200000, 
+        "Total" : 376, 
+        "Obito" : 23, 
+        "SRAG" : 62, 
+        "mmtotal" : 501, 
+        "mmobito" : 29, 
+        "mmsrag" : 71, 
+        "ObjectId" : 165
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1597287600000, 
+        "Total" : 449, 
+        "Obito" : 37, 
+        "SRAG" : 81, 
+        "mmtotal" : 480, 
+        "mmobito" : 31, 
+        "mmsrag" : 74, 
+        "ObjectId" : 166
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1597374000000, 
+        "Total" : 473, 
+        "Obito" : 37, 
+        "SRAG" : 76, 
+        "mmtotal" : 459, 
+        "mmobito" : 32, 
+        "mmsrag" : 74, 
+        "ObjectId" : 167
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1597460400000, 
+        "Total" : 420, 
+        "Obito" : 28, 
+        "SRAG" : 84, 
+        "mmtotal" : 451, 
+        "mmobito" : 32, 
+        "mmsrag" : 77, 
+        "ObjectId" : 168
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1597546800000, 
+        "Total" : 310, 
+        "Obito" : 32, 
+        "SRAG" : 84, 
+        "mmtotal" : 436, 
+        "mmobito" : 33, 
+        "mmsrag" : 80, 
+        "ObjectId" : 169
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1597633200000, 
+        "Total" : 525, 
+        "Obito" : 33, 
+        "SRAG" : 89, 
+        "mmtotal" : 424, 
+        "mmobito" : 30, 
+        "mmsrag" : 75, 
+        "ObjectId" : 170
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1597719600000, 
+        "Total" : 513, 
+        "Obito" : 32, 
+        "SRAG" : 73, 
+        "mmtotal" : 438, 
+        "mmobito" : 32, 
+        "mmsrag" : 78, 
+        "ObjectId" : 171
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1597806000000, 
+        "Total" : 395, 
+        "Obito" : 28, 
+        "SRAG" : 69, 
+        "mmtotal" : 441, 
+        "mmobito" : 32, 
+        "mmsrag" : 79, 
+        "ObjectId" : 172
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1597892400000, 
+        "Total" : 555, 
+        "Obito" : 35, 
+        "SRAG" : 94, 
+        "mmtotal" : 456, 
+        "mmobito" : 32, 
+        "mmsrag" : 81, 
+        "ObjectId" : 173
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1597978800000, 
+        "Total" : 432, 
+        "Obito" : 24, 
+        "SRAG" : 67, 
+        "mmtotal" : 450, 
+        "mmobito" : 30, 
+        "mmsrag" : 80, 
+        "ObjectId" : 174
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1598065200000, 
+        "Total" : 312, 
+        "Obito" : 33, 
+        "SRAG" : 71, 
+        "mmtotal" : 435, 
+        "mmobito" : 31, 
+        "mmsrag" : 78, 
+        "ObjectId" : 175
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1598151600000, 
+        "Total" : 343, 
+        "Obito" : 29, 
+        "SRAG" : 81, 
+        "mmtotal" : 439, 
+        "mmobito" : 31, 
+        "mmsrag" : 78, 
+        "ObjectId" : 176
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1598238000000, 
+        "Total" : 519, 
+        "Obito" : 43, 
+        "SRAG" : 94, 
+        "mmtotal" : 438, 
+        "mmobito" : 32, 
+        "mmsrag" : 78, 
+        "ObjectId" : 177
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1598324400000, 
+        "Total" : 547, 
+        "Obito" : 37, 
+        "SRAG" : 86, 
+        "mmtotal" : 443, 
+        "mmobito" : 33, 
+        "mmsrag" : 80, 
+        "ObjectId" : 178
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1598410800000, 
+        "Total" : 517, 
+        "Obito" : 43, 
+        "SRAG" : 95, 
+        "mmtotal" : 461, 
+        "mmobito" : 35, 
+        "mmsrag" : 84, 
+        "ObjectId" : 179
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1598497200000, 
+        "Total" : 441, 
+        "Obito" : 39, 
+        "SRAG" : 94, 
+        "mmtotal" : 444, 
+        "mmobito" : 35, 
+        "mmsrag" : 84, 
+        "ObjectId" : 180
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1598583600000, 
+        "Total" : 499, 
+        "Obito" : 31, 
+        "SRAG" : 106, 
+        "mmtotal" : 454, 
+        "mmobito" : 36, 
+        "mmsrag" : 90, 
+        "ObjectId" : 181
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1598670000000, 
+        "Total" : 344, 
+        "Obito" : 37, 
+        "SRAG" : 92, 
+        "mmtotal" : 459, 
+        "mmobito" : 37, 
+        "mmsrag" : 93, 
+        "ObjectId" : 182
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1598756400000, 
+        "Total" : 382, 
+        "Obito" : 29, 
+        "SRAG" : 90, 
+        "mmtotal" : 464, 
+        "mmobito" : 37, 
+        "mmsrag" : 94, 
+        "ObjectId" : 183
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1598842800000, 
+        "Total" : 579, 
+        "Obito" : 36, 
+        "SRAG" : 99, 
+        "mmtotal" : 473, 
+        "mmobito" : 36, 
+        "mmsrag" : 95, 
+        "ObjectId" : 184
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1598929200000, 
+        "Total" : 957, 
+        "Obito" : 56, 
+        "SRAG" : 145, 
+        "mmtotal" : 531, 
+        "mmobito" : 39, 
+        "mmsrag" : 103, 
+        "ObjectId" : 185
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1599015600000, 
+        "Total" : 683, 
+        "Obito" : 42, 
+        "SRAG" : 101, 
+        "mmtotal" : 555, 
+        "mmobito" : 39, 
+        "mmsrag" : 104, 
+        "ObjectId" : 186
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1599102000000, 
+        "Total" : 567, 
+        "Obito" : 42, 
+        "SRAG" : 105, 
+        "mmtotal" : 573, 
+        "mmobito" : 39, 
+        "mmsrag" : 105, 
+        "ObjectId" : 187
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1599188400000, 
+        "Total" : 464, 
+        "Obito" : 46, 
+        "SRAG" : 106, 
+        "mmtotal" : 568, 
+        "mmobito" : 41, 
+        "mmsrag" : 105, 
+        "ObjectId" : 188
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1599274800000, 
+        "Total" : 526, 
+        "Obito" : 41, 
+        "SRAG" : 100, 
+        "mmtotal" : 594, 
+        "mmobito" : 42, 
+        "mmsrag" : 107, 
+        "ObjectId" : 189
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1599361200000, 
+        "Total" : 297, 
+        "Obito" : 37, 
+        "SRAG" : 79, 
+        "mmtotal" : 582, 
+        "mmobito" : 43, 
+        "mmsrag" : 105, 
+        "ObjectId" : 190
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1599447600000, 
+        "Total" : 530, 
+        "Obito" : 37, 
+        "SRAG" : 91, 
+        "mmtotal" : 575, 
+        "mmobito" : 43, 
+        "mmsrag" : 104, 
+        "ObjectId" : 191
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1599534000000, 
+        "Total" : 643, 
+        "Obito" : 37, 
+        "SRAG" : 105, 
+        "mmtotal" : 530, 
+        "mmobito" : 40, 
+        "mmsrag" : 98, 
+        "ObjectId" : 192
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1599620400000, 
+        "Total" : 668, 
+        "Obito" : 35, 
+        "SRAG" : 97, 
+        "mmtotal" : 528, 
+        "mmobito" : 39, 
+        "mmsrag" : 98, 
+        "ObjectId" : 193
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1599706800000, 
+        "Total" : 716, 
+        "Obito" : 46, 
+        "SRAG" : 125, 
+        "mmtotal" : 549, 
+        "mmobito" : 40, 
+        "mmsrag" : 100, 
+        "ObjectId" : 194
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1599793200000, 
+        "Total" : 494, 
+        "Obito" : 35, 
+        "SRAG" : 91, 
+        "mmtotal" : 553, 
+        "mmobito" : 38, 
+        "mmsrag" : 98, 
+        "ObjectId" : 195
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1599879600000, 
+        "Total" : 366, 
+        "Obito" : 18, 
+        "SRAG" : 77, 
+        "mmtotal" : 531, 
+        "mmobito" : 35, 
+        "mmsrag" : 95, 
+        "ObjectId" : 196
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1599966000000, 
+        "Total" : 318, 
+        "Obito" : 29, 
+        "SRAG" : 95, 
+        "mmtotal" : 534, 
+        "mmobito" : 34, 
+        "mmsrag" : 97, 
+        "ObjectId" : 197
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1600052400000, 
+        "Total" : 569, 
+        "Obito" : 34, 
+        "SRAG" : 102, 
+        "mmtotal" : 539, 
+        "mmobito" : 33, 
+        "mmsrag" : 99, 
+        "ObjectId" : 198
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1600138800000, 
+        "Total" : 622, 
+        "Obito" : 38, 
+        "SRAG" : 92, 
+        "mmtotal" : 536, 
+        "mmobito" : 34, 
+        "mmsrag" : 97, 
+        "ObjectId" : 199
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1600225200000, 
+        "Total" : 495, 
+        "Obito" : 35, 
+        "SRAG" : 93, 
+        "mmtotal" : 511, 
+        "mmobito" : 34, 
+        "mmsrag" : 96, 
+        "ObjectId" : 200
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1600311600000, 
+        "Total" : 484, 
+        "Obito" : 37, 
+        "SRAG" : 83, 
+        "mmtotal" : 478, 
+        "mmobito" : 32, 
+        "mmsrag" : 90, 
+        "ObjectId" : 201
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1600398000000, 
+        "Total" : 530, 
+        "Obito" : 33, 
+        "SRAG" : 82, 
+        "mmtotal" : 483, 
+        "mmobito" : 32, 
+        "mmsrag" : 89, 
+        "ObjectId" : 202
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1600484400000, 
+        "Total" : 309, 
+        "Obito" : 33, 
+        "SRAG" : 70, 
+        "mmtotal" : 475, 
+        "mmobito" : 34, 
+        "mmsrag" : 88, 
+        "ObjectId" : 203
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1600570800000, 
+        "Total" : 373, 
+        "Obito" : 52, 
+        "SRAG" : 111, 
+        "mmtotal" : 483, 
+        "mmobito" : 37, 
+        "mmsrag" : 90, 
+        "ObjectId" : 204
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1600657200000, 
+        "Total" : 488, 
+        "Obito" : 28, 
+        "SRAG" : 79, 
+        "mmtotal" : 472, 
+        "mmobito" : 37, 
+        "mmsrag" : 87, 
+        "ObjectId" : 205
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1600743600000, 
+        "Total" : 484, 
+        "Obito" : 35, 
+        "SRAG" : 87, 
+        "mmtotal" : 452, 
+        "mmobito" : 36, 
+        "mmsrag" : 86, 
+        "ObjectId" : 206
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1600830000000, 
+        "Total" : 400, 
+        "Obito" : 35, 
+        "SRAG" : 83, 
+        "mmtotal" : 438, 
+        "mmobito" : 36, 
+        "mmsrag" : 85, 
+        "ObjectId" : 207
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1600916400000, 
+        "Total" : 471, 
+        "Obito" : 39, 
+        "SRAG" : 80, 
+        "mmtotal" : 436, 
+        "mmobito" : 36, 
+        "mmsrag" : 85, 
+        "ObjectId" : 208
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1601002800000, 
+        "Total" : 505, 
+        "Obito" : 30, 
+        "SRAG" : 92, 
+        "mmtotal" : 433, 
+        "mmobito" : 36, 
+        "mmsrag" : 86, 
+        "ObjectId" : 209
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1601089200000, 
+        "Total" : 309, 
+        "Obito" : 25, 
+        "SRAG" : 65, 
+        "mmtotal" : 433, 
+        "mmobito" : 35, 
+        "mmsrag" : 85, 
+        "ObjectId" : 210
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1601175600000, 
+        "Total" : 234, 
+        "Obito" : 24, 
+        "SRAG" : 79, 
+        "mmtotal" : 413, 
+        "mmobito" : 31, 
+        "mmsrag" : 81, 
+        "ObjectId" : 211
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1601262000000, 
+        "Total" : 485, 
+        "Obito" : 22, 
+        "SRAG" : 90, 
+        "mmtotal" : 413, 
+        "mmobito" : 30, 
+        "mmsrag" : 82, 
+        "ObjectId" : 212
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1601348400000, 
+        "Total" : 536, 
+        "Obito" : 29, 
+        "SRAG" : 88, 
+        "mmtotal" : 420, 
+        "mmobito" : 29, 
+        "mmsrag" : 82, 
+        "ObjectId" : 213
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1601434800000, 
+        "Total" : 436, 
+        "Obito" : 37, 
+        "SRAG" : 96, 
+        "mmtotal" : 425, 
+        "mmobito" : 29, 
+        "mmsrag" : 84, 
+        "ObjectId" : 214
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1601521200000, 
+        "Total" : 629, 
+        "Obito" : 42, 
+        "SRAG" : 132, 
+        "mmtotal" : 448, 
+        "mmobito" : 30, 
+        "mmsrag" : 92, 
+        "ObjectId" : 215
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1601607600000, 
+        "Total" : 482, 
+        "Obito" : 40, 
+        "SRAG" : 97, 
+        "mmtotal" : 444, 
+        "mmobito" : 31, 
+        "mmsrag" : 92, 
+        "ObjectId" : 216
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1606359600000, 
+        "Total" : 1084, 
+        "Obito" : 73, 
+        "SRAG" : 226, 
+        "mmtotal" : 1127, 
+        "mmobito" : 79, 
+        "mmsrag" : 211, 
+        "ObjectId" : 217
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1606446000000, 
+        "Total" : 1156, 
+        "Obito" : 75, 
+        "SRAG" : 192, 
+        "mmtotal" : 1109, 
+        "mmobito" : 75, 
+        "mmsrag" : 200, 
+        "ObjectId" : 218
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1606532400000, 
+        "Total" : 1022, 
+        "Obito" : 72, 
+        "SRAG" : 199, 
+        "mmtotal" : 1125, 
+        "mmobito" : 75, 
+        "mmsrag" : 202, 
+        "ObjectId" : 219
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1606618800000, 
+        "Total" : 879, 
+        "Obito" : 76, 
+        "SRAG" : 167, 
+        "mmtotal" : 1112, 
+        "mmobito" : 77, 
+        "mmsrag" : 200, 
+        "ObjectId" : 220
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1606705200000, 
+        "Total" : 1344, 
+        "Obito" : 78, 
+        "SRAG" : 206, 
+        "mmtotal" : 1117, 
+        "mmobito" : 77, 
+        "mmsrag" : 199, 
+        "ObjectId" : 221
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1606791600000, 
+        "Total" : 1500, 
+        "Obito" : 142, 
+        "SRAG" : 348, 
+        "mmtotal" : 1192, 
+        "mmobito" : 88, 
+        "mmsrag" : 225, 
+        "ObjectId" : 222
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1606878000000, 
+        "Total" : 1179, 
+        "Obito" : 97, 
+        "SRAG" : 240, 
+        "mmtotal" : 1166, 
+        "mmobito" : 88, 
+        "mmsrag" : 225, 
+        "ObjectId" : 223
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1606964400000, 
+        "Total" : 1154, 
+        "Obito" : 95, 
+        "SRAG" : 199, 
+        "mmtotal" : 1176, 
+        "mmobito" : 91, 
+        "mmsrag" : 222, 
+        "ObjectId" : 224
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1607050800000, 
+        "Total" : 1027, 
+        "Obito" : 74, 
+        "SRAG" : 181, 
+        "mmtotal" : 1158, 
+        "mmobito" : 91, 
+        "mmsrag" : 220, 
+        "ObjectId" : 225
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1607137200000, 
+        "Total" : 1103, 
+        "Obito" : 89, 
+        "SRAG" : 211, 
+        "mmtotal" : 1169, 
+        "mmobito" : 93, 
+        "mmsrag" : 222, 
+        "ObjectId" : 226
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1607223600000, 
+        "Total" : 965, 
+        "Obito" : 79, 
+        "SRAG" : 195, 
+        "mmtotal" : 1182, 
+        "mmobito" : 93, 
+        "mmsrag" : 226, 
+        "ObjectId" : 227
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1607310000000, 
+        "Total" : 1170, 
+        "Obito" : 79, 
+        "SRAG" : 205, 
+        "mmtotal" : 1157, 
+        "mmobito" : 94, 
+        "mmsrag" : 226, 
+        "ObjectId" : 228
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1607396400000, 
+        "Total" : 1015, 
+        "Obito" : 79, 
+        "SRAG" : 195, 
+        "mmtotal" : 1088, 
+        "mmobito" : 85, 
+        "mmsrag" : 204, 
+        "ObjectId" : 229
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1607482800000, 
+        "Total" : 911, 
+        "Obito" : 74, 
+        "SRAG" : 185, 
+        "mmtotal" : 1049, 
+        "mmobito" : 81, 
+        "mmsrag" : 196, 
+        "ObjectId" : 230
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1607569200000, 
+        "Total" : 1152, 
+        "Obito" : 103, 
+        "SRAG" : 243, 
+        "mmtotal" : 1049, 
+        "mmobito" : 82, 
+        "mmsrag" : 202, 
+        "ObjectId" : 231
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1607655600000, 
+        "Total" : 1011, 
+        "Obito" : 69, 
+        "SRAG" : 191, 
+        "mmtotal" : 1047, 
+        "mmobito" : 82, 
+        "mmsrag" : 204, 
+        "ObjectId" : 232
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1607742000000, 
+        "Total" : 943, 
+        "Obito" : 98, 
+        "SRAG" : 210, 
+        "mmtotal" : 1024, 
+        "mmobito" : 83, 
+        "mmsrag" : 203, 
+        "ObjectId" : 233
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1607828400000, 
+        "Total" : 755, 
+        "Obito" : 66, 
+        "SRAG" : 152, 
+        "mmtotal" : 994, 
+        "mmobito" : 81, 
+        "mmsrag" : 197, 
+        "ObjectId" : 234
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1607914800000, 
+        "Total" : 858, 
+        "Obito" : 76, 
+        "SRAG" : 177, 
+        "mmtotal" : 949, 
+        "mmobito" : 81, 
+        "mmsrag" : 193, 
+        "ObjectId" : 235
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1608001200000, 
+        "Total" : 873, 
+        "Obito" : 85, 
+        "SRAG" : 174, 
+        "mmtotal" : 929, 
+        "mmobito" : 82, 
+        "mmsrag" : 190, 
+        "ObjectId" : 236
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1608087600000, 
+        "Total" : 698, 
+        "Obito" : 71, 
+        "SRAG" : 162, 
+        "mmtotal" : 899, 
+        "mmobito" : 81, 
+        "mmsrag" : 187, 
+        "ObjectId" : 237
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1608174000000, 
+        "Total" : 713, 
+        "Obito" : 64, 
+        "SRAG" : 142, 
+        "mmtotal" : 836, 
+        "mmobito" : 76, 
+        "mmsrag" : 173, 
+        "ObjectId" : 238
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1608260400000, 
+        "Total" : 743, 
+        "Obito" : 75, 
+        "SRAG" : 182, 
+        "mmtotal" : 798, 
+        "mmobito" : 76, 
+        "mmsrag" : 171, 
+        "ObjectId" : 239
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1608346800000, 
+        "Total" : 573, 
+        "Obito" : 48, 
+        "SRAG" : 123, 
+        "mmtotal" : 745, 
+        "mmobito" : 69, 
+        "mmsrag" : 159, 
+        "ObjectId" : 240
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1608433200000, 
+        "Total" : 805, 
+        "Obito" : 90, 
+        "SRAG" : 199, 
+        "mmtotal" : 752, 
+        "mmobito" : 73, 
+        "mmsrag" : 166, 
+        "ObjectId" : 241
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1608519600000, 
+        "Total" : 776, 
+        "Obito" : 71, 
+        "SRAG" : 138, 
+        "mmtotal" : 740, 
+        "mmobito" : 72, 
+        "mmsrag" : 160, 
+        "ObjectId" : 242
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1608606000000, 
+        "Total" : 677, 
+        "Obito" : 65, 
+        "SRAG" : 132, 
+        "mmtotal" : 712, 
+        "mmobito" : 69, 
+        "mmsrag" : 154, 
+        "ObjectId" : 243
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1608692400000, 
+        "Total" : 715, 
+        "Obito" : 39, 
+        "SRAG" : 151, 
+        "mmtotal" : 715, 
+        "mmobito" : 65, 
+        "mmsrag" : 152, 
+        "ObjectId" : 244
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1608778800000, 
+        "Total" : 597, 
+        "Obito" : 48, 
+        "SRAG" : 127, 
+        "mmtotal" : 698, 
+        "mmobito" : 62, 
+        "mmsrag" : 150, 
+        "ObjectId" : 245
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1608865200000, 
+        "Total" : 838, 
+        "Obito" : 55, 
+        "SRAG" : 151, 
+        "mmtotal" : 712, 
+        "mmobito" : 59, 
+        "mmsrag" : 146, 
+        "ObjectId" : 246
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1608951600000, 
+        "Total" : 696, 
+        "Obito" : 58, 
+        "SRAG" : 133, 
+        "mmtotal" : 729, 
+        "mmobito" : 61, 
+        "mmsrag" : 147, 
+        "ObjectId" : 247
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1609038000000, 
+        "Total" : 627, 
+        "Obito" : 54, 
+        "SRAG" : 118, 
+        "mmtotal" : 704, 
+        "mmobito" : 56, 
+        "mmsrag" : 136, 
+        "ObjectId" : 248
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1609124400000, 
+        "Total" : 850, 
+        "Obito" : 69, 
+        "SRAG" : 152, 
+        "mmtotal" : 714, 
+        "mmobito" : 55, 
+        "mmsrag" : 138, 
+        "ObjectId" : 249
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1609210800000, 
+        "Total" : 587, 
+        "Obito" : 39, 
+        "SRAG" : 110, 
+        "mmtotal" : 701, 
+        "mmobito" : 52, 
+        "mmsrag" : 135, 
+        "ObjectId" : 250
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1609297200000, 
+        "Total" : 635, 
+        "Obito" : 48, 
+        "SRAG" : 123, 
+        "mmtotal" : 690, 
+        "mmobito" : 53, 
+        "mmsrag" : 131, 
+        "ObjectId" : 251
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1609383600000, 
+        "Total" : 582, 
+        "Obito" : 56, 
+        "SRAG" : 128, 
+        "mmtotal" : 688, 
+        "mmobito" : 54, 
+        "mmsrag" : 131, 
+        "ObjectId" : 252
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1609470000000, 
+        "Total" : 911, 
+        "Obito" : 82, 
+        "SRAG" : 195, 
+        "mmtotal" : 698, 
+        "mmobito" : 58, 
+        "mmsrag" : 137, 
+        "ObjectId" : 253
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1609556400000, 
+        "Total" : 716, 
+        "Obito" : 62, 
+        "SRAG" : 147, 
+        "mmtotal" : 701, 
+        "mmobito" : 59, 
+        "mmsrag" : 139, 
+        "ObjectId" : 254
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1609642800000, 
+        "Total" : 695, 
+        "Obito" : 66, 
+        "SRAG" : 147, 
+        "mmtotal" : 711, 
+        "mmobito" : 60, 
+        "mmsrag" : 143, 
+        "ObjectId" : 255
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1609729200000, 
+        "Total" : 752, 
+        "Obito" : 59, 
+        "SRAG" : 127, 
+        "mmtotal" : 697, 
+        "mmobito" : 59, 
+        "mmsrag" : 140, 
+        "ObjectId" : 256
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1609815600000, 
+        "Total" : 685, 
+        "Obito" : 78, 
+        "SRAG" : 143, 
+        "mmtotal" : 711, 
+        "mmobito" : 64, 
+        "mmsrag" : 144, 
+        "ObjectId" : 257
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1609902000000, 
+        "Total" : 528, 
+        "Obito" : 48, 
+        "SRAG" : 108, 
+        "mmtotal" : 696, 
+        "mmobito" : 64, 
+        "mmsrag" : 142, 
+        "ObjectId" : 258
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1609988400000, 
+        "Total" : 555, 
+        "Obito" : 66, 
+        "SRAG" : 136, 
+        "mmtotal" : 692, 
+        "mmobito" : 66, 
+        "mmsrag" : 143, 
+        "ObjectId" : 259
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1610074800000, 
+        "Total" : 591, 
+        "Obito" : 55, 
+        "SRAG" : 115, 
+        "mmtotal" : 646, 
+        "mmobito" : 62, 
+        "mmsrag" : 132, 
+        "ObjectId" : 260
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1610161200000, 
+        "Total" : 424, 
+        "Obito" : 46, 
+        "SRAG" : 103, 
+        "mmtotal" : 604, 
+        "mmobito" : 60, 
+        "mmsrag" : 126, 
+        "ObjectId" : 261
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1610247600000, 
+        "Total" : 608, 
+        "Obito" : 50, 
+        "SRAG" : 125, 
+        "mmtotal" : 592, 
+        "mmobito" : 57, 
+        "mmsrag" : 122, 
+        "ObjectId" : 262
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1610334000000, 
+        "Total" : 531, 
+        "Obito" : 33, 
+        "SRAG" : 86, 
+        "mmtotal" : 560, 
+        "mmobito" : 54, 
+        "mmsrag" : 117, 
+        "ObjectId" : 263
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1610420400000, 
+        "Total" : 503, 
+        "Obito" : 36, 
+        "SRAG" : 93, 
+        "mmtotal" : 534, 
+        "mmobito" : 48, 
+        "mmsrag" : 109, 
+        "ObjectId" : 264
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1610506800000, 
+        "Total" : 433, 
+        "Obito" : 35, 
+        "SRAG" : 100, 
+        "mmtotal" : 521, 
+        "mmobito" : 46, 
+        "mmsrag" : 108, 
+        "ObjectId" : 265
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1610593200000, 
+        "Total" : 392, 
+        "Obito" : 29, 
+        "SRAG" : 83, 
+        "mmtotal" : 497, 
+        "mmobito" : 41, 
+        "mmsrag" : 101, 
+        "ObjectId" : 266
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1610679600000, 
+        "Total" : 489, 
+        "Obito" : 34, 
+        "SRAG" : 102, 
+        "mmtotal" : 483, 
+        "mmobito" : 38, 
+        "mmsrag" : 99, 
+        "ObjectId" : 267
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1610766000000, 
+        "Total" : 338, 
+        "Obito" : 26, 
+        "SRAG" : 65, 
+        "mmtotal" : 471, 
+        "mmobito" : 35, 
+        "mmsrag" : 93, 
+        "ObjectId" : 268
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1610852400000, 
+        "Total" : 359, 
+        "Obito" : 26, 
+        "SRAG" : 62, 
+        "mmtotal" : 435, 
+        "mmobito" : 31, 
+        "mmsrag" : 84, 
+        "ObjectId" : 269
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1610938800000, 
+        "Total" : 453, 
+        "Obito" : 38, 
+        "SRAG" : 89, 
+        "mmtotal" : 424, 
+        "mmobito" : 32, 
+        "mmsrag" : 85, 
+        "ObjectId" : 270
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1611025200000, 
+        "Total" : 349, 
+        "Obito" : 26, 
+        "SRAG" : 63, 
+        "mmtotal" : 402, 
+        "mmobito" : 31, 
+        "mmsrag" : 81, 
+        "ObjectId" : 271
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1611111600000, 
+        "Total" : 373, 
+        "Obito" : 35, 
+        "SRAG" : 89, 
+        "mmtotal" : 393, 
+        "mmobito" : 31, 
+        "mmsrag" : 79, 
+        "ObjectId" : 272
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1611198000000, 
+        "Total" : 300, 
+        "Obito" : 12, 
+        "SRAG" : 44, 
+        "mmtotal" : 380, 
+        "mmobito" : 28, 
+        "mmsrag" : 73, 
+        "ObjectId" : 273
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1611284400000, 
+        "Total" : 341, 
+        "Obito" : 28, 
+        "SRAG" : 57, 
+        "mmtotal" : 359, 
+        "mmobito" : 27, 
+        "mmsrag" : 67, 
+        "ObjectId" : 274
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1611370800000, 
+        "Total" : 278, 
+        "Obito" : 25, 
+        "SRAG" : 62, 
+        "mmtotal" : 350, 
+        "mmobito" : 27, 
+        "mmsrag" : 67, 
+        "ObjectId" : 275
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1611457200000, 
+        "Total" : 243, 
+        "Obito" : 22, 
+        "SRAG" : 54, 
+        "mmtotal" : 334, 
+        "mmobito" : 27, 
+        "mmsrag" : 65, 
+        "ObjectId" : 276
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1611543600000, 
+        "Total" : 377, 
+        "Obito" : 28, 
+        "SRAG" : 71, 
+        "mmtotal" : 323, 
+        "mmobito" : 25, 
+        "mmsrag" : 63, 
+        "ObjectId" : 277
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1611630000000, 
+        "Total" : 293, 
+        "Obito" : 21, 
+        "SRAG" : 54, 
+        "mmtotal" : 315, 
+        "mmobito" : 24, 
+        "mmsrag" : 62, 
+        "ObjectId" : 278
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1611716400000, 
+        "Total" : 222, 
+        "Obito" : 16, 
+        "SRAG" : 45, 
+        "mmtotal" : 293, 
+        "mmobito" : 22, 
+        "mmsrag" : 55, 
+        "ObjectId" : 279
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1611802800000, 
+        "Total" : 260, 
+        "Obito" : 16, 
+        "SRAG" : 50, 
+        "mmtotal" : 288, 
+        "mmobito" : 22, 
+        "mmsrag" : 56, 
+        "ObjectId" : 280
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1611889200000, 
+        "Total" : 205, 
+        "Obito" : 16, 
+        "SRAG" : 52, 
+        "mmtotal" : 268, 
+        "mmobito" : 21, 
+        "mmsrag" : 55, 
+        "ObjectId" : 281
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1611975600000, 
+        "Total" : 155, 
+        "Obito" : 10, 
+        "SRAG" : 42, 
+        "mmtotal" : 251, 
+        "mmobito" : 18, 
+        "mmsrag" : 53, 
+        "ObjectId" : 282
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1612062000000, 
+        "Total" : 193, 
+        "Obito" : 21, 
+        "SRAG" : 57, 
+        "mmtotal" : 244, 
+        "mmobito" : 18, 
+        "mmsrag" : 53, 
+        "ObjectId" : 283
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1612148400000, 
+        "Total" : 341, 
+        "Obito" : 24, 
+        "SRAG" : 77, 
+        "mmtotal" : 238, 
+        "mmobito" : 18, 
+        "mmsrag" : 54, 
+        "ObjectId" : 284
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1612234800000, 
+        "Total" : 244, 
+        "Obito" : 23, 
+        "SRAG" : 65, 
+        "mmtotal" : 231, 
+        "mmobito" : 18, 
+        "mmsrag" : 55, 
+        "ObjectId" : 285
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1612321200000, 
+        "Total" : 207, 
+        "Obito" : 28, 
+        "SRAG" : 58, 
+        "mmtotal" : 229, 
+        "mmobito" : 20, 
+        "mmsrag" : 57, 
+        "ObjectId" : 286
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1612407600000, 
+        "Total" : 197, 
+        "Obito" : 11, 
+        "SRAG" : 35, 
+        "mmtotal" : 220, 
+        "mmobito" : 19, 
+        "mmsrag" : 55, 
+        "ObjectId" : 287
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1612494000000, 
+        "Total" : 220, 
+        "Obito" : 14, 
+        "SRAG" : 52, 
+        "mmtotal" : 222, 
+        "mmobito" : 19, 
+        "mmsrag" : 55, 
+        "ObjectId" : 288
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1612580400000, 
+        "Total" : 153, 
+        "Obito" : 11, 
+        "SRAG" : 39, 
+        "mmtotal" : 222, 
+        "mmobito" : 19, 
+        "mmsrag" : 55, 
+        "ObjectId" : 289
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1612666800000, 
+        "Total" : 171, 
+        "Obito" : 23, 
+        "SRAG" : 53, 
+        "mmtotal" : 219, 
+        "mmobito" : 19, 
+        "mmsrag" : 54, 
+        "ObjectId" : 290
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1612753200000, 
+        "Total" : 240, 
+        "Obito" : 18, 
+        "SRAG" : 59, 
+        "mmtotal" : 205, 
+        "mmobito" : 18, 
+        "mmsrag" : 52, 
+        "ObjectId" : 291
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1612839600000, 
+        "Total" : 183, 
+        "Obito" : 11, 
+        "SRAG" : 49, 
+        "mmtotal" : 196, 
+        "mmobito" : 17, 
+        "mmsrag" : 49, 
+        "ObjectId" : 292
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1612926000000, 
+        "Total" : 223, 
+        "Obito" : 7, 
+        "SRAG" : 45, 
+        "mmtotal" : 198, 
+        "mmobito" : 14, 
+        "mmsrag" : 47, 
+        "ObjectId" : 293
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1613012400000, 
+        "Total" : 183, 
+        "Obito" : 11, 
+        "SRAG" : 48, 
+        "mmtotal" : 196, 
+        "mmobito" : 14, 
+        "mmsrag" : 49, 
+        "ObjectId" : 294
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1613098800000, 
+        "Total" : 228, 
+        "Obito" : 15, 
+        "SRAG" : 41, 
+        "mmtotal" : 197, 
+        "mmobito" : 14, 
+        "mmsrag" : 48, 
+        "ObjectId" : 295
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1613185200000, 
+        "Total" : 162, 
+        "Obito" : 12, 
+        "SRAG" : 58, 
+        "mmtotal" : 199, 
+        "mmobito" : 14, 
+        "mmsrag" : 50, 
+        "ObjectId" : 296
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1613271600000, 
+        "Total" : 165, 
+        "Obito" : 7, 
+        "SRAG" : 43, 
+        "mmtotal" : 198, 
+        "mmobito" : 12, 
+        "mmsrag" : 49, 
+        "ObjectId" : 297
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1613358000000, 
+        "Total" : 267, 
+        "Obito" : 6, 
+        "SRAG" : 52, 
+        "mmtotal" : 202, 
+        "mmobito" : 10, 
+        "mmsrag" : 48, 
+        "ObjectId" : 298
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1613444400000, 
+        "Total" : 195, 
+        "Obito" : 6, 
+        "SRAG" : 38, 
+        "mmtotal" : 203, 
+        "mmobito" : 9, 
+        "mmsrag" : 46, 
+        "ObjectId" : 299
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1613530800000, 
+        "Total" : 206, 
+        "Obito" : 3, 
+        "SRAG" : 46, 
+        "mmtotal" : 201, 
+        "mmobito" : 9, 
+        "mmsrag" : 47, 
+        "ObjectId" : 300
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1613617200000, 
+        "Total" : 255, 
+        "Obito" : 6, 
+        "SRAG" : 55, 
+        "mmtotal" : 211, 
+        "mmobito" : 8, 
+        "mmsrag" : 48, 
+        "ObjectId" : 301
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1613703600000, 
+        "Total" : 247, 
+        "Obito" : 5, 
+        "SRAG" : 33, 
+        "mmtotal" : 214, 
+        "mmobito" : 6, 
+        "mmsrag" : 46, 
+        "ObjectId" : 302
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1613790000000, 
+        "Total" : 238, 
+        "Obito" : 5, 
+        "SRAG" : 40, 
+        "mmtotal" : 225, 
+        "mmobito" : 5, 
+        "mmsrag" : 44, 
+        "ObjectId" : 303
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1613876400000, 
+        "Total" : 179, 
+        "Obito" : 1, 
+        "SRAG" : 36, 
+        "mmtotal" : 227, 
+        "mmobito" : 5, 
+        "mmsrag" : 43, 
+        "ObjectId" : 304
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1613962800000, 
+        "Total" : 249, 
+        "Obito" : 3, 
+        "SRAG" : 40, 
+        "mmtotal" : 224, 
+        "mmobito" : 4, 
+        "mmsrag" : 41, 
+        "ObjectId" : 305
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1614049200000, 
+        "Total" : 217, 
+        "Obito" : 3, 
+        "SRAG" : 40, 
+        "mmtotal" : 227, 
+        "mmobito" : 4, 
+        "mmsrag" : 41, 
+        "ObjectId" : 306
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1614135600000, 
+        "Total" : 191, 
+        "Obito" : 3, 
+        "SRAG" : 30, 
+        "mmtotal" : 225, 
+        "mmobito" : 4, 
+        "mmsrag" : 39, 
+        "ObjectId" : 307
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1614222000000, 
+        "Total" : 225, 
+        "Obito" : 3, 
+        "SRAG" : 26, 
+        "mmtotal" : 221, 
+        "mmobito" : 3, 
+        "mmsrag" : 35, 
+        "ObjectId" : 308
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1614308400000, 
+        "Total" : 168, 
+        "Obito" : 3, 
+        "SRAG" : 23, 
+        "mmtotal" : 210, 
+        "mmobito" : 3, 
+        "mmsrag" : 34, 
+        "ObjectId" : 309
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1614394800000, 
+        "Total" : 141, 
+        "Obito" : 2, 
+        "SRAG" : 17, 
+        "mmtotal" : 196, 
+        "mmobito" : 3, 
+        "mmsrag" : 30, 
+        "ObjectId" : 310
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1614481200000, 
+        "Total" : 160, 
+        "Obito" : 2, 
+        "SRAG" : 23, 
+        "mmtotal" : 193, 
+        "mmobito" : 3, 
+        "mmsrag" : 28, 
+        "ObjectId" : 311
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1614567600000, 
+        "Total" : 240, 
+        "Obito" : 1, 
+        "SRAG" : 24, 
+        "mmtotal" : 192, 
+        "mmobito" : 2, 
+        "mmsrag" : 26, 
+        "ObjectId" : 312
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1614654000000, 
+        "Total" : 150, 
+        "Obito" : 2, 
+        "SRAG" : 13, 
+        "mmtotal" : 182, 
+        "mmobito" : 2, 
+        "mmsrag" : 22, 
+        "ObjectId" : 313
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1614740400000, 
+        "Total" : 126, 
+        "Obito" : 0, 
+        "SRAG" : 5, 
+        "mmtotal" : 173, 
+        "mmobito" : 2, 
+        "mmsrag" : 19, 
+        "ObjectId" : 314
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1614826800000, 
+        "Total" : 122, 
+        "Obito" : 0, 
+        "SRAG" : 9, 
+        "mmtotal" : 158, 
+        "mmobito" : 1, 
+        "mmsrag" : 16, 
+        "ObjectId" : 315
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1614913200000, 
+        "Total" : 89, 
+        "Obito" : 0, 
+        "SRAG" : 5, 
+        "mmtotal" : 147, 
+        "mmobito" : 1, 
+        "mmsrag" : 14, 
+        "ObjectId" : 316
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1614999600000, 
+        "Total" : 56, 
+        "Obito" : 0, 
+        "SRAG" : 3, 
+        "mmtotal" : 135, 
+        "mmobito" : 1, 
+        "mmsrag" : 12, 
+        "ObjectId" : 317
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1615086000000, 
+        "Total" : 39, 
+        "Obito" : 0, 
+        "SRAG" : 5, 
+        "mmtotal" : 117, 
+        "mmobito" : 0, 
+        "mmsrag" : 9, 
+        "ObjectId" : 318
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1615172400000, 
+        "Total" : 56, 
+        "Obito" : 0, 
+        "SRAG" : 0, 
+        "mmtotal" : 91, 
+        "mmobito" : 0, 
+        "mmsrag" : 6, 
+        "ObjectId" : 319
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1615258800000, 
+        "Total" : 31, 
+        "Obito" : 0, 
+        "SRAG" : 0, 
+        "mmtotal" : 74, 
+        "mmobito" : 0, 
+        "mmsrag" : 4, 
+        "ObjectId" : 320
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1601694000000, 
+        "Total" : 308, 
+        "Obito" : 28, 
+        "SRAG" : 73, 
+        "mmtotal" : 444, 
+        "mmobito" : 32, 
+        "mmsrag" : 94, 
+        "ObjectId" : 321
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1601780400000, 
+        "Total" : 302, 
+        "Obito" : 23, 
+        "SRAG" : 72, 
+        "mmtotal" : 454, 
+        "mmobito" : 32, 
+        "mmsrag" : 93, 
+        "ObjectId" : 322
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1601866800000, 
+        "Total" : 505, 
+        "Obito" : 36, 
+        "SRAG" : 86, 
+        "mmtotal" : 457, 
+        "mmobito" : 34, 
+        "mmsrag" : 92, 
+        "ObjectId" : 323
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1601953200000, 
+        "Total" : 440, 
+        "Obito" : 32, 
+        "SRAG" : 67, 
+        "mmtotal" : 443, 
+        "mmobito" : 34, 
+        "mmsrag" : 89, 
+        "ObjectId" : 324
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1602039600000, 
+        "Total" : 369, 
+        "Obito" : 36, 
+        "SRAG" : 87, 
+        "mmtotal" : 434, 
+        "mmobito" : 34, 
+        "mmsrag" : 88, 
+        "ObjectId" : 325
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1602126000000, 
+        "Total" : 413, 
+        "Obito" : 38, 
+        "SRAG" : 87, 
+        "mmtotal" : 403, 
+        "mmobito" : 33, 
+        "mmsrag" : 81, 
+        "ObjectId" : 326
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1602212400000, 
+        "Total" : 396, 
+        "Obito" : 21, 
+        "SRAG" : 65, 
+        "mmtotal" : 390, 
+        "mmobito" : 31, 
+        "mmsrag" : 77, 
+        "ObjectId" : 327
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1602298800000, 
+        "Total" : 478, 
+        "Obito" : 42, 
+        "SRAG" : 111, 
+        "mmtotal" : 415, 
+        "mmobito" : 33, 
+        "mmsrag" : 82, 
+        "ObjectId" : 328
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1602385200000, 
+        "Total" : 266, 
+        "Obito" : 25, 
+        "SRAG" : 75, 
+        "mmtotal" : 410, 
+        "mmobito" : 33, 
+        "mmsrag" : 83, 
+        "ObjectId" : 329
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1602471600000, 
+        "Total" : 306, 
+        "Obito" : 34, 
+        "SRAG" : 66, 
+        "mmtotal" : 381, 
+        "mmobito" : 33, 
+        "mmsrag" : 80, 
+        "ObjectId" : 330
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1602558000000, 
+        "Total" : 419, 
+        "Obito" : 21, 
+        "SRAG" : 66, 
+        "mmtotal" : 378, 
+        "mmobito" : 31, 
+        "mmsrag" : 80, 
+        "ObjectId" : 331
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1602644400000, 
+        "Total" : 427, 
+        "Obito" : 30, 
+        "SRAG" : 69, 
+        "mmtotal" : 386, 
+        "mmobito" : 30, 
+        "mmsrag" : 77, 
+        "ObjectId" : 332
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1602730800000, 
+        "Total" : 505, 
+        "Obito" : 36, 
+        "SRAG" : 84, 
+        "mmtotal" : 400, 
+        "mmobito" : 30, 
+        "mmsrag" : 77, 
+        "ObjectId" : 333
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1602817200000, 
+        "Total" : 459, 
+        "Obito" : 35, 
+        "SRAG" : 99, 
+        "mmtotal" : 409, 
+        "mmobito" : 32, 
+        "mmsrag" : 81, 
+        "ObjectId" : 334
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1602903600000, 
+        "Total" : 406, 
+        "Obito" : 18, 
+        "SRAG" : 60, 
+        "mmtotal" : 398, 
+        "mmobito" : 28, 
+        "mmsrag" : 74, 
+        "ObjectId" : 335
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1602990000000, 
+        "Total" : 320, 
+        "Obito" : 21, 
+        "SRAG" : 69, 
+        "mmtotal" : 406, 
+        "mmobito" : 28, 
+        "mmsrag" : 73, 
+        "ObjectId" : 336
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1603076400000, 
+        "Total" : 510, 
+        "Obito" : 24, 
+        "SRAG" : 65, 
+        "mmtotal" : 435, 
+        "mmobito" : 26, 
+        "mmsrag" : 73, 
+        "ObjectId" : 337
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1603162800000, 
+        "Total" : 684, 
+        "Obito" : 44, 
+        "SRAG" : 110, 
+        "mmtotal" : 473, 
+        "mmobito" : 30, 
+        "mmsrag" : 79, 
+        "ObjectId" : 338
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1603249200000, 
+        "Total" : 457, 
+        "Obito" : 26, 
+        "SRAG" : 80, 
+        "mmtotal" : 477, 
+        "mmobito" : 29, 
+        "mmsrag" : 81, 
+        "ObjectId" : 339
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1603335600000, 
+        "Total" : 446, 
+        "Obito" : 30, 
+        "SRAG" : 78, 
+        "mmtotal" : 469, 
+        "mmobito" : 28, 
+        "mmsrag" : 80, 
+        "ObjectId" : 340
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1603422000000, 
+        "Total" : 503, 
+        "Obito" : 28, 
+        "SRAG" : 88, 
+        "mmtotal" : 475, 
+        "mmobito" : 27, 
+        "mmsrag" : 79, 
+        "ObjectId" : 341
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1603508400000, 
+        "Total" : 355, 
+        "Obito" : 24, 
+        "SRAG" : 87, 
+        "mmtotal" : 468, 
+        "mmobito" : 28, 
+        "mmsrag" : 82, 
+        "ObjectId" : 342
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1603594800000, 
+        "Total" : 431, 
+        "Obito" : 34, 
+        "SRAG" : 92, 
+        "mmtotal" : 484, 
+        "mmobito" : 30, 
+        "mmsrag" : 86, 
+        "ObjectId" : 343
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1603681200000, 
+        "Total" : 544, 
+        "Obito" : 25, 
+        "SRAG" : 92, 
+        "mmtotal" : 489, 
+        "mmobito" : 30, 
+        "mmsrag" : 90, 
+        "ObjectId" : 344
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1603767600000, 
+        "Total" : 530, 
+        "Obito" : 23, 
+        "SRAG" : 96, 
+        "mmtotal" : 467, 
+        "mmobito" : 27, 
+        "mmsrag" : 88, 
+        "ObjectId" : 345
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1603854000000, 
+        "Total" : 570, 
+        "Obito" : 42, 
+        "SRAG" : 117, 
+        "mmtotal" : 483, 
+        "mmobito" : 29, 
+        "mmsrag" : 93, 
+        "ObjectId" : 346
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1603940400000, 
+        "Total" : 561, 
+        "Obito" : 37, 
+        "SRAG" : 130, 
+        "mmtotal" : 499, 
+        "mmobito" : 30, 
+        "mmsrag" : 100, 
+        "ObjectId" : 347
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1604026800000, 
+        "Total" : 577, 
+        "Obito" : 36, 
+        "SRAG" : 120, 
+        "mmtotal" : 510, 
+        "mmobito" : 32, 
+        "mmsrag" : 105, 
+        "ObjectId" : 348
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1604113200000, 
+        "Total" : 465, 
+        "Obito" : 34, 
+        "SRAG" : 97, 
+        "mmtotal" : 525, 
+        "mmobito" : 33, 
+        "mmsrag" : 106, 
+        "ObjectId" : 349
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1604199600000, 
+        "Total" : 717, 
+        "Obito" : 54, 
+        "SRAG" : 161, 
+        "mmtotal" : 566, 
+        "mmobito" : 36, 
+        "mmsrag" : 116, 
+        "ObjectId" : 350
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1604286000000, 
+        "Total" : 571, 
+        "Obito" : 46, 
+        "SRAG" : 126, 
+        "mmtotal" : 570, 
+        "mmobito" : 39, 
+        "mmsrag" : 121, 
+        "ObjectId" : 351
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1604372400000, 
+        "Total" : 631, 
+        "Obito" : 31, 
+        "SRAG" : 100, 
+        "mmtotal" : 585, 
+        "mmobito" : 40, 
+        "mmsrag" : 122, 
+        "ObjectId" : 352
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1604458800000, 
+        "Total" : 644, 
+        "Obito" : 34, 
+        "SRAG" : 116, 
+        "mmtotal" : 595, 
+        "mmobito" : 39, 
+        "mmsrag" : 121, 
+        "ObjectId" : 353
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1604545200000, 
+        "Total" : 743, 
+        "Obito" : 48, 
+        "SRAG" : 144, 
+        "mmtotal" : 621, 
+        "mmobito" : 40, 
+        "mmsrag" : 123, 
+        "ObjectId" : 354
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1604631600000, 
+        "Total" : 771, 
+        "Obito" : 54, 
+        "SRAG" : 149, 
+        "mmtotal" : 649, 
+        "mmobito" : 43, 
+        "mmsrag" : 128, 
+        "ObjectId" : 355
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1604718000000, 
+        "Total" : 653, 
+        "Obito" : 43, 
+        "SRAG" : 137, 
+        "mmtotal" : 676, 
+        "mmobito" : 44, 
+        "mmsrag" : 133, 
+        "ObjectId" : 356
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1604804400000, 
+        "Total" : 646, 
+        "Obito" : 45, 
+        "SRAG" : 126, 
+        "mmtotal" : 666, 
+        "mmobito" : 43, 
+        "mmsrag" : 128, 
+        "ObjectId" : 357
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1604890800000, 
+        "Total" : 877, 
+        "Obito" : 55, 
+        "SRAG" : 149, 
+        "mmtotal" : 709, 
+        "mmobito" : 44, 
+        "mmsrag" : 132, 
+        "ObjectId" : 358
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1604977200000, 
+        "Total" : 977, 
+        "Obito" : 61, 
+        "SRAG" : 171, 
+        "mmtotal" : 759, 
+        "mmobito" : 49, 
+        "mmsrag" : 142, 
+        "ObjectId" : 359
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1605063600000, 
+        "Total" : 904, 
+        "Obito" : 56, 
+        "SRAG" : 170, 
+        "mmtotal" : 796, 
+        "mmobito" : 52, 
+        "mmsrag" : 149, 
+        "ObjectId" : 360
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1605150000000, 
+        "Total" : 803, 
+        "Obito" : 39, 
+        "SRAG" : 150, 
+        "mmtotal" : 804, 
+        "mmobito" : 50, 
+        "mmsrag" : 150, 
+        "ObjectId" : 361
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1605236400000, 
+        "Total" : 901, 
+        "Obito" : 45, 
+        "SRAG" : 151, 
+        "mmtotal" : 823, 
+        "mmobito" : 49, 
+        "mmsrag" : 151, 
+        "ObjectId" : 362
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1605322800000, 
+        "Total" : 783, 
+        "Obito" : 51, 
+        "SRAG" : 160, 
+        "mmtotal" : 842, 
+        "mmobito" : 50, 
+        "mmsrag" : 154, 
+        "ObjectId" : 363
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1605409200000, 
+        "Total" : 1018, 
+        "Obito" : 58, 
+        "SRAG" : 202, 
+        "mmtotal" : 895, 
+        "mmobito" : 52, 
+        "mmsrag" : 165, 
+        "ObjectId" : 364
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1605495600000, 
+        "Total" : 1123, 
+        "Obito" : 65, 
+        "SRAG" : 185, 
+        "mmtotal" : 930, 
+        "mmobito" : 54, 
+        "mmsrag" : 170, 
+        "ObjectId" : 365
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1605582000000, 
+        "Total" : 982, 
+        "Obito" : 47, 
+        "SRAG" : 156, 
+        "mmtotal" : 931, 
+        "mmobito" : 52, 
+        "mmsrag" : 168, 
+        "ObjectId" : 366
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1605668400000, 
+        "Total" : 1061, 
+        "Obito" : 65, 
+        "SRAG" : 192, 
+        "mmtotal" : 953, 
+        "mmobito" : 53, 
+        "mmsrag" : 171, 
+        "ObjectId" : 367
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1605754800000, 
+        "Total" : 998, 
+        "Obito" : 63, 
+        "SRAG" : 202, 
+        "mmtotal" : 981, 
+        "mmobito" : 56, 
+        "mmsrag" : 178, 
+        "ObjectId" : 368
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1605841200000, 
+        "Total" : 1288, 
+        "Obito" : 102, 
+        "SRAG" : 270, 
+        "mmtotal" : 1036, 
+        "mmobito" : 64, 
+        "mmsrag" : 195, 
+        "ObjectId" : 369
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1605927600000, 
+        "Total" : 909, 
+        "Obito" : 68, 
+        "SRAG" : 182, 
+        "mmtotal" : 1054, 
+        "mmobito" : 67, 
+        "mmsrag" : 198, 
+        "ObjectId" : 370
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1606014000000, 
+        "Total" : 969, 
+        "Obito" : 64, 
+        "SRAG" : 182, 
+        "mmtotal" : 1047, 
+        "mmobito" : 68, 
+        "mmsrag" : 196, 
+        "ObjectId" : 371
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1606100400000, 
+        "Total" : 1305, 
+        "Obito" : 76, 
+        "SRAG" : 212, 
+        "mmtotal" : 1073, 
+        "mmobito" : 69, 
+        "mmsrag" : 199, 
+        "ObjectId" : 372
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1606186800000, 
+        "Total" : 979, 
+        "Obito" : 66, 
+        "SRAG" : 166, 
+        "mmtotal" : 1073, 
+        "mmobito" : 72, 
+        "mmsrag" : 201, 
+        "ObjectId" : 373
+      }
+    }, 
+    {
+      "attributes" : {
+        "dt_inicio_sintomas" : 1606273200000, 
+        "Total" : 1358, 
+        "Obito" : 102, 
+        "SRAG" : 238, 
+        "mmtotal" : 1115, 
+        "mmobito" : 77, 
+        "mmsrag" : 207, 
+        "ObjectId" : 374
+      }
+    }
+  ]
+}
