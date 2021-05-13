@@ -10,7 +10,7 @@ This project utilizes numerous different, primarily public government data sourc
 and how it is formated in this repository, see SD_UI/Data/Data_Header_Explanation.txt and SD_UI/Data/Data_Descriptions.xlsx. For information on the 
 permitted uses of this data, please see the original source for that data.
 
-The license for this code is available in the LICENSE file.
+The license for this code is available in the [LICENSE file](https://github.com/mitmedialab/Vida_Modeling/blob/master/LICENSE).
 
 SD_UI_v1_5.py is the primary python script that runs the user interface.
 SDlib_v1_v4.py is a package defining the underlying system dyanmics model.
@@ -19,4 +19,8 @@ translations.csv serves as a lookup table to translate text in the user interfac
 Context_Status_tracker.txt notes the current development status of each context area (i.e. each application location) of the user interface.
 The Data folder contains all of the data using by the user interface. See Data/Data_Header_Explanation.txt for more details.
 The Auxilary Files contains various scripts used by the developers to process data and conduct other actions. These are not directly used by SD_UI_v1_5.py.
+
+Contributing
+------------
+Contributions are welcome from all. Feel free to report issues, implement fixes/features, and participate in general. Make sure to check out the [code of conduct](https://github.com/mitmedialab/Vida_Modeling/blob/master/CODE_OF_CONDUCT.md) beforehand.
 
