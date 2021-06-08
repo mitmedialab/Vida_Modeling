@@ -39,7 +39,7 @@ class Conditional_Database:
         output = 0
         if self.SD_Map.mTotIPop.value() >= 20 and policy_input['Closure Policy'] == 'No Closures' and policy_input['Social Distancing Policy'] == 'No Distancing':
             # print('Rule 1 Triggered')
-            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 3A']
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 3a']
             self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Voluntary Social Distancing']
             output = 1
         return output
