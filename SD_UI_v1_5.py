@@ -1799,7 +1799,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Santiago',
+                location = 'Rio de Janeiro',
                 arrangment = ['Graph', 'Map'])
 
     #Run the user interface
