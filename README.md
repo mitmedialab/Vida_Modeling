@@ -22,7 +22,9 @@ The Auxilary Files contains various scripts used by the developers to process da
 
 # How to Use Vida / Installation
 There are two primary ways to use Vida. The first is to download or clone this repository and to run it in Python 3. This can be done by running:   
-  $ git clone git@github.com:your_name_here/geemap.git
+```
+  $ git clone git@github.com:your_name_here/geemap.git   
+```
 Note that various dependencies are required to run Vida in Python. These dependencies are listed in the following section.
 
 The other way is through the use of an executable. The Vida team can generate these for certain operating systems. If you are interested in an executable, please email jackreid@mit.edu to request one. Make sure to include the operating system that you use.
@@ -65,15 +67,23 @@ With that out of the way, here are the steps for contributing on Github
 1. Make a GitHub account if you don't already have one.
 2. Fork the Vida repo to your github account. This can be done by clicking the **Fork** button on the top right of this page.
 3. Clone your fork to your local computer:   
-  $ git clone git@github.com:your_name_here/Vida_Modeling.git
-4. Make a virtual environment and install Vida into it. If you have virtualenvwrapper installed, this can be done by:   
-  $ mkvirtualenv Vida_Modeling   
-  $ cd Vida_Modeling/   
-  $ python setup.py develop   
-5. Create a branch for local development:   
-  $ git checkout -b name-of-your-branch
+    ```
+    $ git clone git@github.com:your_name_here/Vida_Modeling.git
+    ```
+4. Make a virtual environment and install Vida into it. If you have virtualenvwrapper installed, this can be done by: 
+    ```  
+    $ mkvirtualenv Vida_Modeling   
+    $ cd Vida_Modeling/   
+    $ python setup.py develop 
+    ```
+5. Create a branch for local development:  
+    ``` 
+    $ git checkout -b name-of-your-branch
+    ```
 6. Once your done with your changes, commit them and push the branch back to GitHub:   
-  $ git add .   
-  $ git commit -m "Description of the changes that you made"   
-  $ git push origin name-of-your-branch   
+    ```
+    $ git add .   
+    $ git commit -m "Description of the changes that you made"   
+    $ git push origin name-of-your-branch   
+    ```
 7. Submit a pull request through the GitHub website. You can see more details on how to do this here: https://guides.github.com/activities/hello-world/
