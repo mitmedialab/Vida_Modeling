@@ -45,14 +45,14 @@ class Conditional_Database:
         return output
     def Br_Rule2func(self, policy_input):
         output = 0
-        if self.SD_Map.mTotIPop.value() >= 100 and (policy_input['Closure Policy'] in ['No Closures', 'Conservative', 'Fase 6b', 'Fase 6a', 'Fase 5', 'Fase 4', 'Fase 3b', 'Fase 3a']):
+        if self.SD_Map.mTotIPop.value() >= 3000 and (policy_input['Closure Policy'] in ['No Closures', 'Conservative', 'Fase 6b', 'Fase 6a', 'Fase 5', 'Fase 4', 'Fase 3b', 'Fase 3a']):
             # print('Rule 2 Triggered')
             self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 1'] 
             output = 1
         return output
     def Br_Rule3func(self, policy_input):
         output = 0
-        if self.SD_Map.mInfectR.value() >= 100 and (policy_input['Closure Policy'] in ['No Closures', 'Conservative', 'Fase 6b', 'Fase 6a', 'Fase 5', 'Fase 4', 'Fase 3b', 'Fase 3a', 'Fase 2', 'Fase 1' ]):
+        if self.SD_Map.mInfectR.value() >= 500 and (policy_input['Closure Policy'] in ['No Closures', 'Conservative', 'Fase 6b', 'Fase 6a', 'Fase 5', 'Fase 4', 'Fase 3b', 'Fase 3a', 'Fase 2', 'Fase 1' ]):
             # print('Rule 3 Triggered')
             self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Initial Closures']
             self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Social Distancing Policy']['Mandatory Social Distancing'] 
@@ -60,7 +60,7 @@ class Conditional_Database:
         return output
     def Br_Rule4func(self,policy_input):
         output = 0
-        if self.SD_Map.mTotIPop.value() <= 500 and (policy_input['Closure Policy'] in ['Fase 2', 'Fase 1', 'Initial Closures' ]):
+        if self.SD_Map.mTotIPop.value() <= 100 and (policy_input['Closure Policy'] in ['Fase 2', 'Fase 1', 'Initial Closures' ]):
             # print('Rule 4 Triggered')
             self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Fase 3a']
             output = 1

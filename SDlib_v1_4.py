@@ -246,7 +246,7 @@ class SD_System:
             
             self.HosL = SD_object('Hospitalization Likelihood',
                           units = 'probability',
-                          init_value = 0.39,
+                          init_value = 0.05,
                           obtype = 'variable',
                           func = lambda tstep, tind: self.HosL.value(ind=tind),
                           maxval = lambda: 1,
@@ -381,7 +381,7 @@ class SD_System:
                                 units = 'people',
                                 init_value = lambda: self.historical_data('Measured Unhospitalized Infected', location, filename),
                                 obtype = 'stock',
-                                func = lambda tstep, tind: self.true_to_measured(self.IPop, 14, 0.25),
+                                func = lambda tstep, tind: self.true_to_measured(self.IPop, 14, 0.1),
                                 maxval = lambda: 100000000,
                                 minval = lambda: 0,
                                 category = 'Health Populations')
@@ -422,7 +422,7 @@ class SD_System:
                                       units = 'people/day',
                                       init_value = lambda: self.historical_data('Measured Infection Rate',  location, filename),
                                       obtype = 'flow',
-                                      func = lambda tstep, tind: self.true_to_measured(self.InfectR, 14, 0.25),
+                                      func = lambda tstep, tind: self.true_to_measured(self.InfectR, 14, 0.1),
                                       maxval = lambda: self.SPop.value(),
                                       minval = lambda: 0,
                                       category = 'Health Flows'
@@ -2913,17 +2913,28 @@ class SD_System:
         
         PolicyDictsOut = dict()
         if location == 'Rio de Janeiro':
+            # PolicyDictsOut['Closure Policy'] = {'No Closures' : 1,
+            #                                     'Conservative' : 0.8,
+            #                                     'Fase 6b' : 0.75,
+            #                                     'Fase 6a' : 0.65,
+            #                                     'Fase 5': 0.6,
+            #                                     'Fase 4' : 0.5,
+            #                                     'Fase 3b': 0.45,
+            #                                     'Fase 3a': 0.4,
+            #                                     'Fase 2': 0.3,
+            #                                     'Fase 1': 0.2,
+            #                                     'Initial Closures': 0.1}
             PolicyDictsOut['Closure Policy'] = {'No Closures' : 1,
-                                                'Conservative' : 0.8,
-                                                'Fase 6b' : 0.75,
-                                                'Fase 6a' : 0.65,
-                                                'Fase 5': 0.6,
-                                                'Fase 4' : 0.5,
-                                                'Fase 3b': 0.45,
-                                                'Fase 3a': 0.4,
+                                                'Conservative' : 0.68,
+                                                'Fase 6b' : 0.66,
+                                                'Fase 6a' : 0.64,
+                                                'Fase 5': 0.62,
+                                                'Fase 4' : 0.6,
+                                                'Fase 3b': 0.57,
+                                                'Fase 3a': 0.55,
                                                 'Fase 2': 0.3,
-                                                'Fase 1': 0.2,
-                                                'Initial Closures': 0.1}
+                                                'Fase 1': 0.1,
+                                                'Initial Closures': 0.05}
 
             PolicyDictsOut['Social Distancing Policy'] = {'No Distancing' : 1,
                                                         'Voluntary Social Distancing' : 0.6,
