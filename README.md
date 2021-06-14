@@ -21,24 +21,25 @@ The Data folder contains all of the data using by the user interface. See Data/D
 The Auxilary Files contains various scripts used by the developers to process data and conduct other actions. These are not directly used by SD_UI_v1_5.py.
 
 # How to Use Vida / Installation
-There are two primary ways to use Vida. The first is to download or clone this repository and to run it in Python 3. This can be done by running:
-  $ git clone git@github.com:your_name_here/geemap.git
+There are two primary ways to use Vida. The first is to download or clone this repository and to run it in Python 3. This can be done by running:   
+```
+  $ git clone git@github.com:your_name_here/geemap.git   
+```
 Note that various dependencies are required to run Vida in Python. These dependencies are listed in the following section.
 
 The other way is through the use of an executable. The Vida team can generate these for certain operating systems. If you are interested in an executable, please email jackreid@mit.edu to request one. Make sure to include the operating system that you use.
 
 # Dependencies
-- array2gif
-- csv
-- gdal
-- tkinter
-- matplotlib
-- numpy
-- pillow
-- pyproj
-- pyshp
-- screeninfo
-- shapely
+- [array2gif](https://pypi.org/project/array2gif/)
+- [gdal](https://gdal.org/api/python.html)
+- [tkinter](https://docs.python.org/3/library/tkinter.html)
+- [matplotlib](https://matplotlib.org/)
+- [numpy](https://numpy.org/)
+- [pillow](https://pillow.readthedocs.io/en/stable/)
+- [pyproj](https://pypi.org/project/pyproj/)
+- [pyshp](https://pypi.org/project/pyshp/)
+- [screeninfo](https://pypi.org/project/screeninfo/)
+- [shapely](https://pypi.org/project/Shapely/)
 
 # License / Copying / Forking
 You are welcome to take this code and create your own version. Perhaps you have custom needs or you have proprietary data that don't want to make public. That's fine. See the [license page](https://github.com/mitmedialab/Vida_Modeling/blob/master/LICENSE) for more details on legality and restrictions. If you do make improvements to the code that you think would be useful to others, however, I encourage you to contribute them to the public version. You can see more details on this in the following section.
@@ -64,16 +65,24 @@ With that out of the way, here are the steps for contributing on Github
 
 1. Make a GitHub account if you don't already have one.
 2. Fork the Vida repo to your github account. This can be done by clicking the **Fork** button on the top right of this page.
-3. Clone your fork to your local computer:
-  $ git clone git@github.com:your_name_here/Vida_Modeling.git
-4. Make a virtual environment and install Vida into it. If you have virtualenvwrapper installed, this can be done by:
-  $ mkvirtualenv Vida_Modeling
-  $ cd Vida_Modeling/
-  $ python setup.py develop
-5. Create a branch for local development
-  $ git checkout -b name-of-your-branch
-6. Once your done with your changes, commit them and push the branch back to GitHub:
-  $ git add .
-  $ git commit -m "Description of the changes that you made"
-  $ git push origin name-of-your-branch
+3. Clone your fork to your local computer:   
+    ```
+    $ git clone git@github.com:your_name_here/Vida_Modeling.git
+    ```
+4. Make a virtual environment and install Vida into it. If you have virtualenvwrapper installed, this can be done by: 
+    ```  
+    $ mkvirtualenv Vida_Modeling   
+    $ cd Vida_Modeling/   
+    $ python setup.py develop 
+    ```
+5. Create a branch for local development:  
+    ``` 
+    $ git checkout -b name-of-your-branch
+    ```
+6. Once your done with your changes, commit them and push the branch back to GitHub:   
+    ```
+    $ git add .   
+    $ git commit -m "Description of the changes that you made"   
+    $ git push origin name-of-your-branch   
+    ```
 7. Submit a pull request through the GitHub website. You can see more details on how to do this here: https://guides.github.com/activities/hello-world/
