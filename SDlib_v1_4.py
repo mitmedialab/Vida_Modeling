@@ -2998,9 +2998,10 @@ class SD_System:
                                                 'Extraordinary Measures': 0.2} 
 
         elif location == 'Luanda':
-            PolicyDictsOut['Closure Policy'] = {'Pre-Emergency' : 1,
-                                    'Emergency State' : 0.6,
-                                    'Calamity State': 0.2}
+            PolicyDictsOut['Closure Policy'] = {'No Closures': 1,
+                                                'Pre-Emergency' : 0.8,
+                                                'Emergency State' : 0.6,
+                                                'Calamity State': 0.2}
                                                                      
         return PolicyDictsOut
     

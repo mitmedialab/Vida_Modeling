@@ -67,13 +67,13 @@ class SD_UI(tk.Tk):
             self.default_graph2 = 'Hospitalized Population'
             self.map_loc = [-43.487035, -22.930828, 0.01]
             self.language = 'portuguese'
-        elif self.location == 'Chile':
-            self.background_image = 'Visual Composite'
-            self.color_range =  'Population'
-            self.default_graph1 = 'Measured Total Infected Population'
-            self.default_graph2 = 'Hospitalized Population'
-            self.map_loc = [-70.915467, -37.561959, 0.0001]
-            self.language = 'spanish'
+        # elif self.location == 'Chile':
+        #     self.background_image = 'Visual Composite'
+        #     self.color_range =  'Population'
+        #     self.default_graph1 = 'Measured Total Infected Population'
+        #     self.default_graph2 = 'Hospitalized Population'
+        #     self.map_loc = [-70.915467, -37.561959, 0.0001]
+        #     self.language = 'spanish'
         elif self.location == 'Indonesia':
             self.background_image = 'Visual Composite'
             self.color_range =  'Total Cases'
@@ -384,7 +384,7 @@ class SD_UI(tk.Tk):
         
         # create a pulldown menu for switching context areas, and add it to the menu bar
         context_menu = tk.Menu(menubar, tearoff=0)
-        context_menu.add_command(label=self.translate("Chile"), command=lambda: self.switch_context('Chile'))
+        # context_menu.add_command(label=self.translate("Chile"), command=lambda: self.switch_context('Chile'))
         context_menu.add_command(label=self.translate("Indonesia"), command=lambda: self.switch_context('Indonesia'))
         context_menu.add_command(label=self.translate("Luanda"), command=lambda: self.switch_context('Luanda'))
         context_menu.add_command(label=self.translate("Querétaro"), command=lambda: self.switch_context('Querétaro'))
@@ -1799,7 +1799,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Rio de Janeiro',
+                location = 'Indonesia',
                 arrangment = ['Graph', 'Map'])
 
     #Run the user interface
