@@ -264,7 +264,7 @@ class Conditional_Database:
     
     def Sa_Rule1func(self, policy_input):
         output = 0
-        if self.SD_Map.mIPop.value() >= 20 and policy_input['Closure Policy'] == 'Stage 5' and policy_input['Curfew Policy'] == 'No Curfew':
+        if self.SD_Map.mIPop.value() >= 20 and (policy_input['Closure Policy'] in ['No Closures','Stage 5']) and policy_input['Curfew Policy'] == 'No Curfew':
             # print('Rule 1 Triggered')
             self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Stage 3']
             self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Curfew Policy']['Unenforced Curfew']
@@ -272,14 +272,14 @@ class Conditional_Database:
         return output
     def Sa_Rule2func(self, policy_input):
         output = 0
-        if self.SD_Map.mIPop.value() >= 100 and (policy_input['Closure Policy'] in ['Stage 5', 'Stage 4']):
+        if self.SD_Map.mIPop.value() >= 100 and (policy_input['Closure Policy'] in ['No Closures', 'Stage 5', 'Stage 4']):
             # print('Rule 2 Triggered')
             self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Stage 3'] 
             output = 1
         return output
     def Sa_Rule3func(self, policy_input):
         output = 0
-        if self.SD_Map.mInfectR.value() >= 100 and (policy_input['Closure Policy'] in ['Stage 5', 'Stage 4', 'Stage 3', 'Stage 2']):
+        if self.SD_Map.mInfectR.value() >= 100 and (policy_input['Closure Policy'] in ['No Closures', 'Stage 5', 'Stage 4', 'Stage 3', 'Stage 2']):
             # print('Rule 3 Triggered')
             self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Stage 1']
             self.SD_Map.SocialDisP.values[-1] = self.PolicyDicts['Curfew Policy']['Enforced Curfew'] 
@@ -300,6 +300,38 @@ class Conditional_Database:
             output = 1
         return output
     
+    # =============================================================================
+    # %% QUERÉTARO RULES            
+    # =============================================================================
+    
+    def Qu_Rule1func(self, policy_input):
+        output = 0
+        if self.SD_Map.mIPop.value() >= 20 and (policy_input['Closure Policy'] in ['No Closures', 'Initial Moderate Closures']):
+            # print('Rule 1 Triggered')
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Scenario B: Prevention']
+            output = 1
+        return output
+    def Qu_Rule2func(self, policy_input):
+        output = 0
+        if self.SD_Map.mIPop.value() >= 100 and (policy_input['Closure Policy'] in ['No Closures', 'Initial Moderate Closures', 'Scenario A: Remission']):
+            # print('Rule 2 Triggered')
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Scenario B: Prevention'] 
+            output = 1
+        return output
+    def Qu_Rule3func(self, policy_input):
+        output = 0
+        if self.SD_Map.mInfectR.value() >= 100 and (policy_input['Closure Policy'] in ['No Closures', 'Initial Moderate Closures', 'Scenario A: Remission', 'Scenario B: Prevention', 'Scenario C: Containment']):
+            # print('Rule 3 Triggered')
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Starting to Re-Open']
+            output = 1
+        return output
+    def Qu_Rule4func(self,policy_input):
+        output = 0
+        if self.SD_Map.mIPop.value() <= 500 and (policy_input['Closure Policy'] in ['Starting to Re-Open', 'Extraordinary Measures', 'Scenario C: Containment']):
+            # print('Rule 4 Triggered')
+            self.SD_Map.ClosureP.values[-1] = self.PolicyDicts['Closure Policy']['Scenario B: Prevention']
+            output = 1
+        return output
 
        
     
@@ -407,21 +439,16 @@ def make_rules(UI):
     if location in ['Querétaro']:
 
         Rules.append(SDlib.Rule('Initial Closures', 1, 
-                             func = lambda policy_input: Conditionals.Br_Rule1func(policy_input)))
+                             func = lambda policy_input: Conditionals.Qu_Rule1func(policy_input)))
         Rules.append(SDlib.Rule('Additional Closures', 2, 
-                             func = lambda policy_input: Conditionals.Br_Rule2func(policy_input)))
+                             func = lambda policy_input: Conditionals.Qu_Rule2func(policy_input)))
         
         Rules.append(SDlib.Rule('Complete Lockdown', 3, 
-                             func = lambda policy_input: Conditionals.Br_Rule3func(policy_input)))
+                             func = lambda policy_input: Conditionals.Qu_Rule3func(policy_input)))
         
         Rules.append(SDlib.Rule('Re-open Some Businesses', 4, 
-                             func = lambda policy_input: Conditionals.Br_Rule4func(policy_input)))
-        Rules.append(SDlib.Rule('Relax Mandatory Social Distancing', 5, 
-                             func = lambda policy_input: Conditionals.Br_Rule5func(policy_input)))
-        # Rules.append(SDlib.Rule('Order More Ventilators', 6, 
-        #                      func = lambda policy_input: Conditionals.Br_Rule6func(policy_input)))
-        # Rules.append(SDlib.Rule('Pay More for Ventilators to Accelerate Delivery', 7, 
-        #                      func = lambda policy_input: Conditionals.Br_Rule7func(policy_input)))
+                             func = lambda policy_input: Conditionals.Qu_Rule4func(policy_input)))
+          
 
     return Rules
 

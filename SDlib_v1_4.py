@@ -2712,7 +2712,7 @@ class SD_System:
                                         units = '% Change Relative to Previous Year',
                                         init_value = lambda: self.historical_data('SO2_PercentChange_LuandaCity', location, filename),
                                         obtype = 'stock',
-                                        func = lambda tstep, tind: self.SO2_PercentChange_LuandaCity.value(),
+                                        func = lambda tstep, tind: self.SO2_PerChange_Luanda.value(),
                                         maxval = lambda: 100,
                                         minval = lambda: -100,
                                         category = 'Environment')
@@ -2739,7 +2739,7 @@ class SD_System:
                                         units = '% Change Relative to Previous Year',
                                         init_value = lambda: self.historical_data('NO2_PercentChange_LuandaCity', location, filename),
                                         obtype = 'stock',
-                                        func = lambda tstep, tind: self.NO2_PercentChange_LuandaCity.value(),
+                                        func = lambda tstep, tind: self.NO2_PerChange_Luanda.value(),
                                         maxval = lambda: 100,
                                         minval = lambda: -100,
                                         category = 'Environment')
@@ -2991,11 +2991,11 @@ class SD_System:
         elif location == 'Querétaro':
             PolicyDictsOut['Closure Policy'] = {'No Closures' : 1,
                                                 'Initial Moderate Closures' : 0.7,
-                                                'Scenario A: Remission': 0.6,
-                                                'Scenario B: Prevention': 0.5,
-                                                'Scenario C: Containment': 0.4,
-                                                'Starting to Re-Open': 0.3,
-                                                'Extraordinary Measures': 0.2} 
+                                                'Scenario A: Remission': 0.5,
+                                                'Scenario B: Prevention': 0.3,
+                                                'Scenario C: Containment': 0.2,
+                                                'Starting to Re-Open': 0.1,
+                                                'Extraordinary Measures': 0.05} 
 
         elif location == 'Luanda':
             PolicyDictsOut['Closure Policy'] = {'No Closures': 1,

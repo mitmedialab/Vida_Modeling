@@ -61,12 +61,27 @@ class SD_UI(tk.Tk):
             self.location = 'Rio de Janeiro'
             
         if self.location == 'Rio de Janeiro':
+            
+            #Set default background image by name
             self.background_image = 'Visual Composite'
+            
+            #Set default choropleth variable
             self.color_range =  'PM10'
+            
+            #Set default top-left graph variable
             self.default_graph1 = 'Measured Total Infected Population'
+            
+            #Set default bottom-left graph variable
             self.default_graph2 = 'Hospitalized Population'
+            
+            #Set latitude, longitude, and zoom level of the map. For zoom, larger numbers are more zoomed in,
+            #smaller numbers are more zoomed out. 0.01 is appropriate for a municipality, 0.001 for a province,
+            #and 0.0001 for a medium-large country.
             self.map_loc = [-43.487035, -22.930828, 0.01]
+            
+            #Set default language
             self.language = 'portuguese'
+            
         # elif self.location == 'Chile':
         #     self.background_image = 'Visual Composite'
         #     self.color_range =  'Population'
@@ -124,7 +139,7 @@ class SD_UI(tk.Tk):
             self.arrangment = ['Graph', 'Map']
             
         #Set geometry and other parameters of the window
-        self.title(self.translate('System Dynamics Visualization'))       
+        self.title(self.translate('Vida Decision Support System'))       
         pad=3
         self._geom='200x200+0+0'
         self.geometry("{0}x{1}+0+0".format(
@@ -1778,6 +1793,7 @@ class SD_UI(tk.Tk):
         #Add scrollbar to the rule log display
         self.scrollbar = tk.Scrollbar(info_frame, orient='vertical',
                                           command=self.list_info_boxes['Log'].yview)
+
         self.scrollbar.grid(column=1, row=0, sticky='ns')
         self.list_info_boxes['Log'].config(yscrollcommand=self.scrollbar.set)
         
@@ -1799,7 +1815,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Indonesia',
+                location = 'Querétaro',
                 arrangment = ['Graph', 'Map'])
 
     #Run the user interface
