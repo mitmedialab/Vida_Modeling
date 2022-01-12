@@ -22,6 +22,7 @@ import matplotlib.pyplot as plt
 from osgeo import gdal,ogr,osr
 import array2gif
 import numpy as np
+import math
 
 
 class Map(tk.Canvas):
@@ -89,18 +90,19 @@ class Map(tk.Canvas):
         #Identify any image visualization parameters
         if 'image_params' in kwargs:
             image_params = kwargs.pop('image_params')
-            self.image_min = image_params[0]
-            self.image_max = image_params[1]
-            self.image_choice = image_params[2]
-            self.image_brightness = image_params[3]
+            self.image_min = image_params['VisMin']
+            self.image_max = image_params['VisMax']
+            self.image_choice = image_params['VisColor']
+            self.image_brightness = image_params['VisBrightness']
+            self.image_scale = image_params['VisScale']
             if self.image_min:
                 self.image_min = float(self.image_min)
             if self.image_max:
                 self.image_max = float(self.image_max)
             if self.image_brightness:
                 self.image_brightness = float(self.image_brightness)
-            if image_params[4]:
-                self.image_band_choice = image_params[4]
+            if image_params['DateSetting']:
+                self.image_band_choice = image_params['DateSetting']
                 self.image_temporal_flag = 1
             else:
                 self.image_band_choice = 0
@@ -257,6 +259,8 @@ class Map(tk.Canvas):
             image = np.array(image)
             image.clip(display_min, display_max, out=image)
             image -= display_min
+
+            
             np.floor_divide(image, (display_max - display_min + 1) / 256,
                             out=image, casting='unsafe')
             return image.astype(np.uint8)
@@ -275,8 +279,32 @@ class Map(tk.Canvas):
             lut = np.arange(2**16, dtype='uint16')
             lut = display(lut, display_min, display_max)
             return np.take(lut, image)
-
-
+                    
+        def logTransform(c, f):
+            g = c * math.log(float(1 + f),10);
+            return g;
+                
+        # Apply logarithmic transformation for an image  
+        def logTransformImage(img, outputMax = 255, inputMax=255):
+            c = outputMax/math.log(inputMax+1,10);
+            # Read pixels and apply logarithmic transformation
+            for i in range(0, img.size[0]-1):
+                for j in range(0, img.size[1]-1):
+                    # Get pixel value at (x,y) position of the image
+                    f = img.getpixel((i,j));
+                    # Do log transformation of the pixel
+                    if type(f) is not int:
+                        redPixel    = round(logTransform(c, f[0]));
+                        greenPixel  = round(logTransform(c, f[1]));
+                        bluePixel   = round(logTransform(c, f[2]));
+                        # Modify the image with the transformed pixel values
+                        img.putpixel((i,j),(redPixel, greenPixel, bluePixel));
+                    else:
+                        redPixel = round(logTransform(c, f));
+                        img.putpixel((i,j),redPixel);
+            
+            return img;
+        
         #Load Image
         image_array = np.array(gdal.Open(imagename).ReadAsArray())
         
@@ -304,10 +332,16 @@ class Map(tk.Canvas):
                     
                 loaded_image = pil.Image.fromarray(image_array8)
                 
+                if self.image_scale:
+                    if self.image_scale == 'log':
+                        print('LOG-RGB-MULTI')
+                        loaded_image = logTransformImage(loaded_image) 
+                
             else: #image is temporal and a single band should be selected
                 image_array = image_array[self.image_band_choice]
                 display_min = image_array.min()
                 display_max = image_array.max()
+
                 
                 #Convert from uint16 to uint8 if needed
                 if image_array.dtype == np.dtype('uint16'):
@@ -333,11 +367,24 @@ class Map(tk.Canvas):
                     loaded_image = pil.Image.fromarray((color_array[:, :, :3] * 255).astype(np.uint8))
                 else:
                     loaded_image = pil.Image.fromarray(image_array8)
+
+                if self.image_scale:
+                    if self.image_scale == 'log':
+                        print('LOG-RGB-SINGLE')
+                        loaded_image = logTransformImage(loaded_image) 
                    
             
         else: #Image is single band
-            display_min = image_array.min()
-            display_max = image_array.max()
+            # display_min = image_array.min()
+            # display_max = image_array.max()
+            display_min = np.nanmin(image_array)
+            display_max = np.nanmax(image_array)
+            if self.image_scale == 'log':
+                nan_replace = -5
+            else:
+                nan_replace = 0
+            image_array = np.nan_to_num(image_array, nan=nan_replace)
+
             
             #Convert from uint16 to uint8 if needed
             if image_array.dtype == np.dtype('uint16'):
@@ -366,7 +413,11 @@ class Map(tk.Canvas):
             else:
                 loaded_image = pil.Image.fromarray(image_array8)
 
-        
+            if self.image_scale:
+                if self.image_scale == 'log':
+                    print('LOG-SINGLE')
+                    loaded_image = logTransformImage(loaded_image) 
+                    
         #Brighten image if specified
         if self.image_brightness:
             enhancer = pil.ImageEnhance.Brightness(loaded_image)

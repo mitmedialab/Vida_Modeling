@@ -874,15 +874,21 @@ class SD_UI(tk.Tk):
         
         #check for specified image visualization parameters
         if image_title == 'None':
-           img_params = [[],[],[],[],[]]
+           img_params = {'VisMin' : [],
+                         'VisMax' : [],
+                         'VisColor' : [],
+                         'VisBrightness' : [],
+                         'VisScale' : [],
+                         'DateSetting' : []
+                         }
         else:
             testimg = self.imagenamelookup(image_title, self.image_filepath)
             img_params = testimg.vis_params
             if testimg.temporal_flag:
                 dateindex = self.make_image_slider(frame_map, col, image_title)
-                img_params.append(dateindex)
+                img_params['DateSetting'] = dateindex
             else:
-                img_params.append([])
+                img_params['DateSetting'] = []
             
         #Create subframe to house the map
         subframe_map = tk.Frame(frame_map,
@@ -1040,7 +1046,7 @@ class SD_UI(tk.Tk):
         def __init__(self, fieldname, image_filepath, **kwargs):
             
             self.fieldname = []
-            self.vis_params = []
+            self.vis_params = dict()
             self.filepath = []
             self.temporal_flag = 0
             self.times = []
@@ -1056,7 +1062,12 @@ class SD_UI(tk.Tk):
                for row in csvread:
                    if row['name'] == fieldname:
                        self.fieldname = fieldname
-                       self.vis_params = [row['VisMin'], row['VisMax'], row['VisColor'], row['VisBrightness']]
+                       self.vis_params = {'VisMin' : row['VisMin'],
+                                          'VisMax' : row['VisMax'],
+                                          'VisColor' : row['VisColor'],
+                                          'VisBrightness' : row['VisBrightness'],
+                                          'VisScale' : row['VisScale']
+                                          }
                        self.filepath = row['filepath']
                        temporal_flag = row['Temporal']
                        if temporal_flag:
@@ -1308,7 +1319,13 @@ class SD_UI(tk.Tk):
         image_path = self.image_dict[image_title]
         
         if image_title == 'None':
-            img_params = [[],[],[], [], []]
+            img_params = {'VisMin' : [],
+                          'VisMax' : [],
+                          'VisColor' : [],
+                          'VisBrightness' : [],
+                          'VisScale' : [],
+                          'DateSetting' : []
+                          }
             self.imgslider_list[col] = [] 
             self.img_temporalflag[col] = 0 
             self.img_datenumlist[col] = [] 
@@ -1341,13 +1358,13 @@ class SD_UI(tk.Tk):
                     img_slideval = 0
                 img_band = self.make_image_slider(self.frame_map_list[col], col, testimg, img_slideval=img_slideval)
                 self.img_date_setting_list[col] = img_band
-                img_params.append(self.img_date_setting_list[col])
+                img_params['DateSetting'] = (self.img_date_setting_list[col])
             else:
                 self.imgslider_list[col] = []
                 self.img_temporalflag[col] = 0 
                 self.img_datenumlist[col] = [] 
                 self.img_date_setting_list[col] = [] 
-                img_params.append([])
+                img_params['DateSetting'] = []
         
         #Delete exisiting map
         self.MAP_list[col].delete("all")
@@ -1815,7 +1832,7 @@ if str.__eq__(__name__, '__main__'):
 
     #Generate user interface
     UI = SD_UI(tuning = 0,
-                location = 'Querétaro',
+                location = 'Luanda',
                 arrangment = ['Graph', 'Map'])
 
     #Run the user interface

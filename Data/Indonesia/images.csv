@@ -1,2 +1,2 @@
-filepath,name,VisMin,VisMax,VisColor,VisBrightness,Temporal,Times,Latitude,Longitude,Zoom
-./Data/Indonesia/Images/Indonesia_Landsat_Composite.tif,Visual Composite,,,,2,,,,,
+filepath,name,VisMin,VisMax,VisColor,VisBrightness,VisScale,Temporal,Times,Latitude,Longitude,Zoom
+./Data/Indonesia/Images/Indonesia_Landsat_Composite.tif,Visual Composite,,,,2,,,,,,
